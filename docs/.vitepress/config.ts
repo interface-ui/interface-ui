@@ -5,6 +5,8 @@ import { head, nav, sidebar, vite } from './configuration'
 
 export default defineConfig({
   title: 'Fusion Ui',
+  outDir: './dist',
+
   description:
     'A Vue.js prebuilt component library based on Preline design draft',
   head,
