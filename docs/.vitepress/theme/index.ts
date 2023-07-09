@@ -1,11 +1,13 @@
 import { h, onMounted } from 'vue'
 import theme from 'vitepress/theme'
-import * as components from '../../../packages/fusion-ui/components/index.ts'
+// import * as components from '../../../packages/fusion-ui/components/index.ts'
+import * as components from 'fusion-ui-vue'
 import DemoBlock from '../components/demo-block'
 import TeamMember from '../components/team-member'
 import 'uno.css'
 import './main.css'
-import '../../../packages/fusion-ui/dist/styles/index.css'
+// import '../../../packages/fusion-ui/dist/styles/index.css'
+import 'fusion-ui-vue/dist/styles/index.css'
 
 export default {
   ...theme,
