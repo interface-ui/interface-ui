@@ -1,0 +1,34 @@
+{
+  "name": "fusion-ui-vue",
+  "version": "1.0.2",
+  "description": "A Component Library for Vue 3",
+  "author": "tsinghua-lau",
+  "license": "MIT",
+  "sideEffects": [
+    "dist/**/*.css",
+    "*.css"
+  ],
+  "main": "dist/lib/index.js",
+  "module": "dist/es/index.mjs",
+  "types": "dist/es/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "style": "dist/styles/index.css",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "rimraf dist && vue-tsc && gulp --require @esbuild-kit/cjs-loader -f gulpfile.ts"
+  },
+  "peerDependencies": {
+    "vue": "^3.2.45"
+  },
+  "dependencies": {
+    "vue": "^3.2.45"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "fusion-ui"
+  ]
+}

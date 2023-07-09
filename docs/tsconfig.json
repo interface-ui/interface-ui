@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "guide": ["./guide/*"]
+    }
+  },
+  "exclude": ["**/dist/**"],
+  "include": ["**/*.ts", "**/*.d.ts", "**/*.vue", ".vitepress/env.d.ts"]
+}

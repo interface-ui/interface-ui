@@ -1,0 +1,14 @@
+#!/usr/bin/env sh
+
+# # 获取当前的分支名称
+# branch="$(git rev-parse --abbrev-ref HEAD)"
+# # 判断当前分支是否为禁止提交的分支名， 如果是则给出相关提示，并终止commit
+# if [ "$branch" = "master" ]; then
+#   echo "master分支不支持提交操作, You can't commit to master branch"
+#   exit 1
+# fi
+
+. "$(dirname -- "$0")/_/husky.sh"
+
+pnpm run lint
+pnpm run typecheck

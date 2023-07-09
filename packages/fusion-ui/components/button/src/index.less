@@ -1,0 +1,174 @@
+[data-theme='light'] .fn-button,
+.fn-button[data-theme='light'] {
+  --fn-white-text-color: #374151;
+  --fn-white-text-hover-color: #374151;
+  --fn-white-border-color: #e5e7eb;
+  --fn-white-hover-color: #f9fafb;
+  font-size: 14px;
+}
+
+[data-theme='dark'] .fn-button,
+.fn-button[data-theme='dark'] {
+  --fn-white-text-color: #9ca3af;
+  --fn-white-text-hover-color: white;
+  --fn-white-border-color: #374151;
+  --fn-white-hover-color: #1e293b;
+  font-size: 14px;
+}
+
+.fn-button {
+  &--info {
+    --fn-button-color: var(--fn-blue-500);
+    --fn-button-hover-color: var(--fn-blue-600);
+  }
+
+  &--success {
+    --fn-button-color: var(--fn-green-500);
+    --fn-button-hover-color: var(--fn-green-600);
+  }
+
+  &--warning {
+    --fn-button-color: var(--fn-orange-500);
+    --fn-button-hover-color: var(--fn-orange-600);
+  }
+
+  &--danger {
+    --fn-button-color: var(--fn-red-500);
+    --fn-button-hover-color: var(--fn-red-600);
+  }
+
+  &--mini {
+    --fn-button-size: 0px 2px;
+    --fn-button-size-y: 8px;
+  }
+
+  &--small {
+    --fn-button-size: 1px 6px;
+    --fn-button-size-y: 10px;
+  }
+
+  &--medium {
+    --fn-button-size: 2px 8px;
+    --fn-button-size-y: 12px;
+  }
+
+  &--large {
+    --fn-button-size: 6px 15px;
+    --fn-button-size-y: 14px;
+  }
+
+  &--rounded {
+    --fn-border-radius: 3px;
+  }
+
+  &--pilled {
+    --fn-border-radius: 999px;
+  }
+
+  &--circle {
+    padding: calc(var(--fn-button-size-y) / 2);
+    aspect-ratio: 1/1;
+    --fn-border-radius: 50%;
+  }
+
+  &--plain {
+    --fn-border-radius: 0;
+  }
+
+  &--solid {
+    --fn-button-text-color: white;
+    --fn-button-text-hover-color: white;
+    --fn-button-border-color: var(--fn-button-color);
+    --fn-button-border-hover-color: var(--fn-button-hover-color);
+    --fn-button-bg-color: var(--fn-button-color);
+    --fn-button-bg-hover-color: var(--fn-button-hover-color);
+    --fn-button-disabled-text-color: white;
+    --fn-button-disabled-bg-color:  var(--fn-button-color);
+    --fn-button-disabled-border-color:  var(--fn-button-color);
+    --fn-button-border-style: solid;
+  }
+
+  &--outline {
+    --fn-button-text-color: var(--fn-button-color);
+    --fn-button-text-hover-color: white;
+    --fn-button-border-color: var(--fn-button-color);
+    --fn-button-border-hover-color: var(--fn-button-hover-color);
+    --fn-button-bg-color: transparent;
+    --fn-button-bg-hover-color: var(--fn-button-hover-color);
+    --fn-button-disabled-text-color: var(--fn-button-color);
+    --fn-button-disabled-border-color:  var(--fn-button-color);
+    --fn-button-disabled-bg-color:  transparent;
+    --fn-button-border-style: solid;
+  }
+
+  &--ghost {
+    --fn-button-text-color: var(--fn-button-color);
+    --fn-button-text-hover-color: white;
+    --fn-button-border-color: transparent;
+    --fn-button-border-hover-color: var(--fn-button-hover-color);
+    --fn-button-bg-color: transparent;
+    --fn-button-bg-hover-color: var(--fn-button-hover-color);
+    --fn-button-border-style: none;
+    --fn-button-disabled-text-color:  var(--fn-button-color);
+    --fn-button-disabled-bg-color:  transparent;
+    --fn-button-disabled-border-color:  transparent;
+  }
+
+  &--link {
+    --fn-button-text-color: var(--fn-button-color);
+    --fn-button-text-hover-color: var(--fn-button-hover-color);
+    --fn-button-border-color: transparent;
+    --fn-button-border-hover-color: transparent;
+    --fn-button-bg-color: transparent;
+    --fn-button-bg-hover-color: transparent;
+    --fn-button-border-style: none;
+    --fn-button-disabled-text-color: var(--fn-button-color);
+    --fn-button-disabled-bg-color:  transparent;
+    --fn-button-disabled-border-color:  transparent;
+  }
+
+  &--white {
+    --fn-button-text-color: var(--fn-white-text-color);
+    --fn-button-text-hover-color: var(--fn-white-text-hover-color);
+    --fn-button-border-color: var(--fn-white-border-color);
+    --fn-button-border-hover-color: var(--fn-white-border-color);
+    --fn-button-bg-color: var(--fn-white-bg-color);
+    --fn-button-bg-hover-color: var(--fn-white-hover-color);
+  }
+
+
+ 
+
+  &--dashed {
+    --fn-button-text-color: var(--fn-button-color);
+    --fn-button-text-hover-color: var(--fn-button-hover-color);
+    --fn-button-border-color: var(--fn-button-color);
+    --fn-button-border-hover-color: var(--fn-button-hover-color);
+    --fn-button-border-style: dashed !important;
+    --fn-button-border-width: 2px !important;
+    --fn-button-disabled-text-color: var(--fn-button-color);
+    --fn-button-disabled-bg-color:  transparent;
+    --fn-button-disabled-border-color: var(--fn-button-color);
+  }
+
+}
+
+.fn-button {
+  display: inline-block;
+  border-width: 1px;
+  border-style: solid;
+  margin-left: 5px;
+  font-size: 16px;
+  padding: var(--fn-button-size);
+  border-radius: var(--fn-border-radius);
+  color: var(--fn-button-text-color);
+  border-color: var(--fn-button-border-color);
+  background-color: var(--fn-button-bg-color);
+  border-style: var(--fn-button-border-style);
+
+  &:hover {
+    color: var(--fn-button-text-hover-color);
+    border-color: var(--fn-button-border-hover-color);
+    background-color: var(--fn-button-bg-hover-color);
+  }
+}
