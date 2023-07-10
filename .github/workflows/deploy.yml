@@ -1,26 +1,29 @@
 name: Deploy
 
 on:
-  push:
+push:
     branches:
-      - master
+    - master
 
 jobs:
-  deploy:
+deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+    - uses: actions/checkout@v3
         with:
-          node-version: 16
-          
-      - name: Install pnpm
-          run: npm i -g pnpm
-      - name: install & Build
-          run: pnpm i && pnpm docs:build
+        fetch-depth: 0
+    - uses: actions/setup-node@v3
+        with:
+        node-version: 16
 
-      - name: Deploy
+    - name: Install pnpm
+        run: npm i -g pnpm
+    - name: install & Build
+        run: pnpm i && pnpm docs:build
+
+    - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: docs/.vitepress/dist
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: docs/.vitepress/dist
+        # cname: example.com # if wanna deploy to custom domain
