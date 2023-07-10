@@ -5,15 +5,13 @@ import { head, nav, sidebar, vite } from './configuration'
 
 export default defineConfig({
   title: 'Fusion Ui',
-  outDir: './dist',
-
   description:
     'A Vue.js prebuilt component library based on Preline design draft',
   head,
   themeConfig: {
     logo: '/logo.png',
     editLink: {
-      pattern: 'https://github.com/tsinghua-lau/Fusion-Ui/edit/main/docs/:path',
+      pattern: 'https://github.com/tsinghua-lau/Fusion-Ui/edit/master/docs/:path',
       text: 'Suggest changes to this page',
     },
     nav,
