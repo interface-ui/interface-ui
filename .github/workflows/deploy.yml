@@ -13,12 +13,12 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16.x
-          cache: pnpm
-      - name: Install PNPM
-+         run: npm i -g pnpm
+          cache: yarn
+      - name: Install yarn
++         run: npm i -g yarn
 
       - name: Build
-        run: pnpm docs:build
+        run: yarn docs:build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
