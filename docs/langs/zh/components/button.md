@@ -43,7 +43,7 @@ lang: zh
 
 | 属性名      | 可选值                                               | 默认值    | 描述             |
 | ----------- | ---------------------------------------------------- | --------- | ---------------- |
-| type        | `solid` \| `white` \| `outline` \| `ghost` \| `link` \| `dashed` | `solid`   | 设置按钮类型     |
+| type        | `solid` \| `white` \| `outline` \| `ghost` \| `link` \| `dashed` \| `diplonema`  | `solid`   | 设置按钮类型     |
 | native-type | `button` \| `reset` \| `submit`                      | `button`  | 设置按钮原生类型 |
 | shape       | `rounded` \| `pilled` \| `circle` \| `plain`         | `rounded` | 设置按钮形状     |
 | size        | `small` \| `medium` \| `large`                       | `medium`  | 设置按钮尺寸     |

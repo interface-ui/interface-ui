@@ -16,6 +16,9 @@
       <fn-button type="dashed">
         dashed
       </fn-button>
+      <fn-button type="diplonema">
+        diplonema
+      </fn-button>
     </div>
   </div>
 </template>

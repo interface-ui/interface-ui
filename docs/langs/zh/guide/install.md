@@ -6,13 +6,13 @@
 
 ```shell
 # npm
-npm i fusion-ui
+npm i fusion-ui-vue
 
 # yarn
-yarn add fusion-ui
+yarn add fusion-ui-vue
 
 # pnpm
-pnpm add fusion-ui
+pnpm add fusion-ui-vue
 ```
 
 ## 按需引入
@@ -29,7 +29,7 @@ npm install -D unplugin-vue-components
 // vite.config.ts
 import { defineConfig } from 'vite'
 import Components from 'unplugin-vue-components/vite'
-import { PlayResolver } from 'fusion-ui/dist/lib/resolver'
+import { PlayResolver } from 'fusion-ui-vue/dist/lib/resolver'
 
 export default defineConfig({
   // ...

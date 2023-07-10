@@ -6,13 +6,13 @@ This section explains how to properly install and use an Fusion Ui.
 
 ```shell
 # npm
-npm i fusion-ui
+npm i fusion-ui-vue
 
 # yarn
-yarn add fusion-ui
+yarn add fusion-ui-vue
 
 # pnpm
-pnpm add fusion-ui
+pnpm add fusion-ui-vue
 ```
 
 ## On-demand Import
@@ -31,7 +31,7 @@ Then add the code below into your Vite config file.
 // vite.config.ts
 import { defineConfig } from 'vite'
 import Components from 'unplugin-vue-components/vite'
-import { PlayResolver } from 'fusion-ui/dist/lib/resolver'
+import { PlayResolver } from 'fusion-ui-vue/dist/lib/resolver'
 
 export default defineConfig({
   // ...

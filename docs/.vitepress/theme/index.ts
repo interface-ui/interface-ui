@@ -6,7 +6,9 @@ import DemoBlock from '../components/demo-block'
 import TeamMember from '../components/team-member'
 import 'uno.css'
 import './main.css'
+import './style/var.css'
 // import '../../../packages/fusion-ui/dist/styles/index.css'
+// import '../../../packages/fusion-ui/components/button/src/index.less'
 import 'fusion-ui-vue/dist/styles/index.css'
 
 export default {

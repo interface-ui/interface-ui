@@ -1,5 +1,5 @@
 <template>
-  <div space-y-2>
+  <div space-y-20>
     <div fscw gap-2>
       <fn-button disabled type="solid">
         solid

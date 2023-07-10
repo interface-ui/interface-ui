@@ -12,10 +12,10 @@ export const enComponents = [
 
 export const zhComponents = [
   {
-    collapsible: false,
     text: '基础组件',
     items: [
       {
+        collapsible: false,
         text: 'Button',
         link: '/langs/zh/components/button',
       },

@@ -9,7 +9,10 @@ Fusion Ui 是一个 Vue3 组件库，简洁、优雅、美观，帮助你快速�
 - 🌈 组件设计-提供整洁和美丽的精心制作的 UI 组件。
 - 🔥 按需引入-提供解析器以自动导入仅使用过的组件。
 - 🎉 支持 TypeScript-支持类型脚本和类型检查及类型推断。
-- 🍬 预制多主题 - 预制丰富漂亮的主题风格（WIP）。
+- 🏆 全面基于 Vite，速度够快
+- 📃 详细的中/英文档
+- 🛠  More...
+
 
   <!-- - 💡 Cli Build - Easy to create repo with Play Cli. -->
   <!-- - ⚙️ Theme Config - Support theme config to customize theme. -->
