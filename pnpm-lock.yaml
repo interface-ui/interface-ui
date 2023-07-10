@@ -153,13 +153,13 @@ importers:
 
   docs:
     dependencies:
+      fusion-ui-vue:
+        specifier: ^1.0.2
+        version: link:../packages/fusion-ui
       markdown-it:
         specifier: ^13.0.1
         version: 13.0.1
     devDependencies:
-      '@fusion-ui/docs':
-        specifier: workspace:*
-        version: 'link:'
       '@types/markdown-it':
         specifier: ^12.2.3
         version: 12.2.3

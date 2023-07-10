@@ -17,7 +17,6 @@ export default {
       const htmlEl = document.querySelector('html') as HTMLHtmlElement
 
       htmlEl.setAttribute('data-theme', theme() !== 'dark' ? 'light' : 'dark')
-      console.log(document.querySelector('.VPSwitch'))
 
       document.querySelector('.VPSwitch')?.addEventListener('click', () => {
         if (theme() !== 'dark')

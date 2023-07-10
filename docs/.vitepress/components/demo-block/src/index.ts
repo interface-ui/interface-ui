@@ -1,38 +1,38 @@
-import type { ExtractPropTypes } from "vue";
+import type { ExtractPropTypes } from 'vue'
 
 export const demoProps = {
   github: {
     type: String,
-    default: "https://github.com/tsinghua-lau/Fusion-Ui",
+    default: 'https://github.com/tsinghua-lau/Fusion-Ui',
   },
   codeSandBox: {
     type: String,
-    default: "https://codesandbox.io/",
+    default: 'https://codesandbox.io/',
   },
   highlightedCode: {
     type: String,
-    default: "",
+    default: '',
   },
   code: {
     type: String,
-    default: "",
+    default: '',
   },
   title: {
     type: String,
-    default: "",
+    default: '',
   },
   desc: {
     type: String,
-    default: "",
+    default: '',
   },
   lang: {
     type: String,
-    default: "vue",
+    default: 'vue',
   },
   expand: {
     type: Boolean,
     default: false,
   },
-} as const;
+} as const
 
-export type ODemoProps = ExtractPropTypes<typeof demoProps>;
+export type ODemoProps = ExtractPropTypes<typeof demoProps>

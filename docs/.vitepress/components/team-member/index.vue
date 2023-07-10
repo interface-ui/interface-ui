@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import { VPTeamMembers } from "vitepress/theme";
+import { VPTeamMembers } from 'vitepress/theme'
 
 const teamMembers = [
   {
-    avatar: "https://www.github.com/tsinghua-lau.png",
-    name: "tsinghua-lau",
-    title: "Author of PusionUI",
-    links: [{ icon: "github", link: "https://github.com/tsinghua-lau" }],
+    avatar: 'https://www.github.com/tsinghua-lau.png',
+    name: 'tsinghua-lau',
+    title: 'Author of PusionUI',
+    links: [{ icon: 'github', link: 'https://github.com/tsinghua-lau' }],
   },
-];
+]
 </script>
 
 <template>
