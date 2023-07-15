@@ -5,5 +5,5 @@ export const enGuides = [
 
 export const zhGuides = [
   { text: '快速开始', link: '/langs/zh/guide/quick-start' },
-  { text: '安装', link: '/langs/zh/guide/install' },
+  { text: '安装使用', link: '/langs/zh/guide/install' },
 ]

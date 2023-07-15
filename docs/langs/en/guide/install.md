@@ -1,6 +1,6 @@
-# Installation
+# Installation & Usage
 
-This section explains how to properly install and use an Fusion Ui.
+ how to properly install and use an Fusion Ui.
 
 ## Install Package
 
@@ -17,7 +17,15 @@ pnpm add fusion-ui-vue
 
 ## On-demand Import
 
-You need to use an additional plugin to import components you used. First you need to install [unplugin-vue-components](https://www.npmjs.com/package/unplugin-vue-components) and [unplugin-auto-import](https://www.npmjs.com/package/unplugin-auto-import).
+You can choose one of the ways to introduce FusionUI components on demand.
+
+* You can use the import statement to import the components you use.
+  
+  ```ts
+  import { FnButton } from 'fusion-ui-vue'
+  ```
+
+* You need to use an additional plugin to import components you used. First you need to install [unplugin-vue-components](https://www.npmjs.com/package/unplugin-vue-components) and [unplugin-auto-import](https://www.npmjs.com/package/unplugin-auto-import).
 
 ```shell
 npm install -D unplugin-vue-components
@@ -27,8 +35,8 @@ npm install -D unplugin-vue-components
 
 Then add the code below into your Vite config file.
 
+```vite.config.ts```
 ```ts
-// vite.config.ts
 import { defineConfig } from 'vite'
 import Components from 'unplugin-vue-components/vite'
 import { PlayResolver } from 'fusion-ui-vue/dist/lib/resolver'
@@ -44,16 +52,17 @@ export default defineConfig({
 })
 ```
 
-<!-- ## Get Volar Typescript support
+```main.ts```
 
-You can add the `OnuUI` global component type definition to `compilerOptions.types` in your project's `tsconfig.json`. Then [volar](https://github.com/johnsoncodehk/volar) will help you have a better experience while developing.
+```ts
+import { createApp } from 'vue'
+import fusionUi from 'fusion-ui-vue'
+import 'fusion-ui-vue/dist/styles/index.css'
+import App from './App.vue'
 
-```json
-// tsconfig.json
-{
-  "compilerOptions": {
-    // ...
-    "types": ["onu-ui/volar"]
-  }
-}
-``` -->
+const app = createApp(App)
+
+app.use(fusionUi)
+app.mount('#app')
+  ```
+Now you can start the project. Please check the document for the specific usage of each component.
