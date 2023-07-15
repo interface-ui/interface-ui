@@ -5,7 +5,7 @@ const teamMembers = [
   {
     avatar: 'https://www.github.com/tsinghua-lau.png',
     name: 'tsinghua-lau',
-    title: 'Author of PusionUI',
+    title: 'Author of FusionUI',
     links: [{ icon: 'github', link: 'https://github.com/tsinghua-lau' }],
   },
 ]
