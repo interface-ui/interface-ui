@@ -7,7 +7,6 @@ lang: zh
 
 集成了```Iconify```上千个常用的图标。
 
-# 使用图标
 
 * 如果你想像用例一样直接使用，你需要简单操作一下，才能够直接在项目里使用。
 
@@ -26,8 +25,9 @@ $ pnpm install fusion-ui-iconify
 
 # 注册图标
 您需要从 ```fusion-ui-iconify``` 中导入图标并进行全局注册。
-```
-// main.ts
+
+```main.ts```
+```ts
 
 import Icon form 'fusion-ui-iconify'
 
@@ -45,3 +45,10 @@ app.use(Icon)
 
 <demo src="../../../example/icon/size.vue"></demo>
 
+## 属性
+
+| 属性名      | 类型                                               | 默认值    | 描述             |
+| ----------- | ---------------------------------------------------- | --------- | ---------------- |
+| icon        | `String` | ``                                         | 选择icon图标名     |
+| size        | `Number`                                             | `14`  | 设置图标大小 |
+| color       | `String`                                             | `` | 设置图标颜色     |

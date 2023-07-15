@@ -55,7 +55,7 @@ lang: zh
 | size        | `small` \| `medium` \| `large`                       | `medium`  | 设置按钮尺寸     |
 | state       | `info` \| `success` \| `warning` \| `danger`         | `info`    | 设置按钮状态     |
 | disabled    | `boolean`                                            | `false`   | 设置按钮禁用状态 |
-| disabled    | `icon`                                            | `' '`   | 设置按钮图标 |
+| icon        | `样式名`                                               | `' '`   | 设置按钮图标 |
 
 ## 插槽
 
