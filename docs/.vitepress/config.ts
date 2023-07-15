@@ -21,9 +21,11 @@ export default defineConfig({
     ],
     sidebar,
     algolia: {
-      appId: '8MY90XETI9',
-      apiKey: '636f709b1d37514bd8893154430045c0',
+      appId: 'GA7O5T77G8',
+      apiKey: '72bff662ff8ae89b474533380c73890c',
       indexName: 'fusion-ui',
+      container: '### REPLACE ME WITH A CONTAINER (e.g. div) ###',
+      debug: false, // Set debug to true if you want to inspect the modal
     },
     footer: {
       message: 'MIT Licensed',
@@ -52,6 +54,6 @@ export default defineConfig({
       link: '/langs/zh/',
     },
   },
-  lastUpdated: true,
+  // lastUpdated: true,
   vite,
 } as UserConfig)

@@ -16,8 +16,13 @@ export const zhComponents = [
     items: [
       {
         collapsible: false,
-        text: 'Button',
+        text: 'Button 按钮',
         link: '/langs/zh/components/button',
+      },
+      {
+        collapsible: false,
+        text: 'Icon 图标',
+        link: '/langs/zh/components/icon',
       },
     ],
   },

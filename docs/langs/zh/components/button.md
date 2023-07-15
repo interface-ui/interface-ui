@@ -39,16 +39,23 @@ lang: zh
 
 <demo src="../../../example/button/disabled.vue"></demo>
 
+### icon
+
+带有图标的按钮。
+
+<demo src="../../../example/button/icon.vue"></demo>
+
 ## 属性
 
 | 属性名      | 可选值                                               | 默认值    | 描述             |
 | ----------- | ---------------------------------------------------- | --------- | ---------------- |
 | type        | `solid` \| `white` \| `outline` \| `ghost` \| `link` \| `dashed` \| `diplonema`  | `solid`   | 设置按钮类型     |
 | native-type | `button` \| `reset` \| `submit`                      | `button`  | 设置按钮原生类型 |
-| shape       | `rounded` \| `pilled` \| `circle` \| `plain`         | `rounded` | 设置按钮形状     |
+| shape       | `round` \| `pill` \| `circle` \| `plain`         | `round` | 设置按钮形状     |
 | size        | `small` \| `medium` \| `large`                       | `medium`  | 设置按钮尺寸     |
 | state       | `info` \| `success` \| `warning` \| `danger`         | `info`    | 设置按钮状态     |
 | disabled    | `boolean`                                            | `false`   | 设置按钮禁用状态 |
+| disabled    | `icon`                                            | `' '`   | 设置按钮图标 |
 
 ## 插槽
 

@@ -1,15 +1,15 @@
 import { h, onMounted } from 'vue'
 import theme from 'vitepress/theme'
-// import * as components from '../../../packages/fusion-ui/components/index.ts'
-import * as components from 'fusion-ui-vue'
+import Icon from 'fusion-ui-iconify'
+import FusionUi from '../../../packages/fusion-ui/components/index.ts'
+import '../../../packages/fusion-ui/dist/styles/index.css'
+// import FusionUi from 'fusion-ui-vue'
+// import 'fusion-ui-vue/dist/styles/index.css'
 import DemoBlock from '../components/demo-block'
 import TeamMember from '../components/team-member'
 import 'uno.css'
 import './main.css'
 import './style/var.css'
-// import '../../../packages/fusion-ui/dist/styles/index.css'
-// import '../../../packages/fusion-ui/components/button/src/index.less'
-import 'fusion-ui-vue/dist/styles/index.css'
 
 export default {
   ...theme,
@@ -28,11 +28,12 @@ export default {
     })
   },
   enhanceApp({ app }) {
-    for (const name of Object.keys(components)) {
-      if (name.startsWith('Fn'))
-        app.component(name, components[name])
-    }
-
+    // for (const name of Object.keys(components)) {
+    //   if (name.startsWith('Fn'))
+    //     app.component(name, components[name])
+    // }
+    app.use(FusionUi)
+    app.use(Icon)
     app.component('Demo', DemoBlock)
     app.component('TeamMember', TeamMember)
   },

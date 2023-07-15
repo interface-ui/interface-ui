@@ -39,16 +39,24 @@ You can use the disabled attribute to define whether the button is disabled.
 
 <demo src="../../../example/button/disabled.vue"></demo>
 
+
+### icon
+
+Button with icon.
+
+<demo src="../../../example/button/icon.vue"></demo>
+
 ## Props
 
 | Name        | Type                                                 | Default   | Description                |
 | ----------- | ---------------------------------------------------- | --------- | -------------------------- |
 | type        | `solid` \| `white` \| `outline` \| `ghost` \| `link`\| `diplonema` | `solid`   | Set custom type attribute. |
 | native-type | `button` \| `reset` \| `submit`                      | `button`  | Set native type attribute. |
-| shape       | `rounded` \| `pilled` \| `circle` \| `plain`         | `rounded` | Set button shape.          |
+| shape       | `round` \| `pill` \| `circle` \| `plain`         | `round` | Set button shape.          |
 | size        | `small` \| `medium` \| `large`                       | `medium`  | Set button size.           |
 | state       | `info` \| `success` \| `warning` \| `danger`         | `info`    | Set button state.          |
 | disabled    | `boolean`                                            | `false`   | Disable the button.        |
+| disabled    | `icon`                                            | `' '`   | Set the button icon |
 
 ## Slots
 

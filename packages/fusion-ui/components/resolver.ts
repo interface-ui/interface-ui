@@ -35,19 +35,19 @@ function getSideEffects(
     return
 
   if (importStyle === 'less')
-    return ['fusion-ui/styles/base.less', `fusion-ui/components/${dirName}/src/index.less`]
+    return ['fusion-ui-vue/styles/base.less', `fusion-ui-vue/components/${dirName}/src/index.less`]
 
-  return [`fusion-ui/dist/styles/${dirName}/src/index.js`]
+  return [`fusion-ui-vue/dist/styles/${dirName}/src/index.js`]
 }
 
 export function PlayResolver(
   options: PlayResolverOptions = {},
 ): ComponentResolver {
-  const { from = 'fusion-ui' } = options
+  const { from = 'fusion-ui-vue' } = options
   return {
     type: 'component',
     resolve: (name: string) => {
-      if (name.startsWith('Pl')) {
+      if (name.startsWith('Fn')) {
         const partialName = name.slice(2)
         return {
           name,

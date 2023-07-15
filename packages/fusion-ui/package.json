@@ -1,6 +1,6 @@
 {
   "name": "fusion-ui-vue",
-  "version": "1.0.21",
+  "version": "1.0.45",
   "description": "A Component Library for Vue 3",
   "author": "tsinghua-lau",
   "license": "MIT",
@@ -28,7 +28,8 @@
     "vue": "^3.2.45"
   },
   "dependencies": {
+    "vite-plugin-progress": "^0.0.7",
+    "fusion-ui-iconify": "^1.0.21",
     "vue": "^3.2.45"
-  },
-  "devDependencies": {}
+  }
 }

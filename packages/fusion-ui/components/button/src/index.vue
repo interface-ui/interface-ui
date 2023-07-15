@@ -27,6 +27,9 @@ defineExpose({
     ]"
     @click="$emit('click')"
   >
+    <span v-if="icon" :style="$slots.default ? 'margin-right: 3px;' : ''">
+      <fn-icon :icon="icon" color="color" size="13" />
+    </span>
     <span>
       <slot />
     </span>

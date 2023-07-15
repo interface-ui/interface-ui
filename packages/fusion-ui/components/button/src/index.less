@@ -57,11 +57,11 @@
     --fn-button-size-y: 14px;
   }
 
-  &--rounded {
+  &--round {
     --fn-border-radius: 3px;
   }
 
-  &--pilled {
+  &--pill {
     --fn-border-radius: 999px;
   }
 
@@ -153,7 +153,7 @@
     --fn-button-disabled-bg-color: transparent;
     --fn-button-disabled-border-color: var(--fn-button-color);
     --fn-button-text-hover-color: var(--fn-button-hover-color);
-
+    --fn-button-text-color: var(--fn-orange-50);
     transition: all 0.3s ease;
     position: relative;
     display: inline-block;
@@ -187,7 +187,8 @@
 }
 
 .fn-button {
-  display: inline-block;
+  display: flex;
+  align-items: center;
   border-width: 1px;
   border-style: solid;
   margin-left: 5px;

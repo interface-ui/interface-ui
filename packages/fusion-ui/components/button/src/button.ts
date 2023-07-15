@@ -2,7 +2,7 @@ import type { ExtractPropTypes, PropType } from 'vue'
 import type { ComponentState } from '../../type'
 
 export type ButtonNativeType = 'button' | 'reset' | 'submit'
-export type ButtonShape = 'rounded' | 'pilled' | 'circle' | 'plain'
+export type ButtonShape = 'round' | 'pill' | 'circle' | 'plain'
 export type ButtonSize = 'mini' | 'small' | 'medium' | 'large'
 export type ButtonType =
   | 'solid'
@@ -22,7 +22,7 @@ export const buttonProps = {
   },
   shape: {
     type: String as PropType<ButtonShape>,
-    default: 'rounded',
+    default: 'round',
   },
   state: {
     type: String as PropType<ComponentState>,
@@ -31,6 +31,14 @@ export const buttonProps = {
   size: {
     type: String as PropType<ButtonSize>,
     default: 'medium',
+  },
+  icon: {
+    type: String,
+    default: '',
+  },
+  color: {
+    type: String,
+    default: '',
   },
   disabled: Boolean,
 }
