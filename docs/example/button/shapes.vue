@@ -10,7 +10,9 @@
       <fn-button shape="plain">
         plain
       </fn-button>
-      <fn-button shape="circle" icon="carbon:breaking-change" />
+      <fn-button shape="circle">
+        Ui
+      </fn-button>
     </div>
   </div>
 </template>

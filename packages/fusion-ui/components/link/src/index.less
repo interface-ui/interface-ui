@@ -1,0 +1,54 @@
+[data-theme="light"] .fn-link,
+.fn-link[data-theme="light"] {
+  --fn-default-text-color: #374151;
+  font-size: 14px;
+}
+
+[data-theme="dark"] .fn-link,
+.fn-link[data-theme="dark"] {
+  --fn-default-text-color: #9ca3af;
+  font-size: 14px;
+}
+
+.fn-link {
+   &--default {
+    --fn-link-color: var(--fn-default-text-color);
+    --fn-link-hover-color: var(--fn-blue-600);
+  }
+
+  &--primary{
+    --fn-link-color: var(--fn-blue-500);
+    --fn-link-hover-color: var(--fn-blue-600);
+  }
+
+  &--info {
+    --fn-link-color: var(--fn-slate-400);
+    --fn-link-hover-color: var(--fn-blue-600);
+  }
+
+  &--success {
+    --fn-link-color: var(--fn-green-500);
+    --fn-link-hover-color: var(--fn-green-600);
+  }
+
+  &--warning {
+    --fn-link-color: var(--fn-orange-500);
+    --fn-link-hover-color: var(--fn-orange-600);
+  }
+
+  &--danger {
+    --fn-link-color: var(--fn-red-500);
+    --fn-link-hover-color: var(--fn-red-600);
+  }
+}
+
+.fn-link {
+  display: flex;
+  align-items: center;
+  margin-left: 5px;
+  font-size: 16px;
+  color: var(--fn-link-color) !important;
+  &:hover {
+    cursor: pointer;
+  }
+}

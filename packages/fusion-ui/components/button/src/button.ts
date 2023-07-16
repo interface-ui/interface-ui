@@ -8,7 +8,7 @@ export type ButtonType =
   | 'solid'
   | 'outline'
   | 'ghost'
-  | 'white'
+  | 'diplonema'
   | 'link'
 
 export const buttonProps = {

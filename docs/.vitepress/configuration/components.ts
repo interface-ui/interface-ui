@@ -24,6 +24,11 @@ export const zhComponents = [
         text: 'Icon 图标',
         link: '/langs/zh/components/icon',
       },
+      {
+        collapsible: false,
+        text: 'Link 链接',
+        link: '/langs/zh/components/link',
+      },
     ],
   },
 ]

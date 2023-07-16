@@ -19,6 +19,7 @@
       <fn-button type="diplonema" icon="devicon:vuejs">
         diplonema
       </fn-button>
+      <fn-button shape="circle" icon="carbon:breaking-change" />
     </div>
   </div>
 </template>

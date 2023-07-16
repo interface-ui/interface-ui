@@ -1,5 +1,7 @@
 .is-disabled {
   opacity: 0.8;
+  cursor: not-allowed !important;
+  text-decoration: none !important;
   &:hover {
     cursor: not-allowed !important;
     background-image: none !important;
@@ -8,7 +10,11 @@
     background-color: var(--fn-button-disabled-bg-color) !important;
   }
 }
-
+.is-underline{
+  &:hover {
+    text-decoration: none !important;
+  }
+}
 .is-hidden {
   // display: none;
 }
