@@ -6,7 +6,7 @@
 
 [data-theme="dark"] .fn-link,
 .fn-link[data-theme="dark"] {
-  --fn-default-text-color: #9ca3af;
+  --fn-default-text-color: #afbdd5;
   font-size: 14px;
 }
 
@@ -14,31 +14,37 @@
    &--default {
     --fn-link-color: var(--fn-default-text-color);
     --fn-link-hover-color: var(--fn-blue-600);
+    --fn-link-disabled-text-color: var(--fn-default-text-color);
   }
 
   &--primary{
     --fn-link-color: var(--fn-blue-500);
     --fn-link-hover-color: var(--fn-blue-600);
+    --fn-link-disabled-text-color: var(--fn-blue-500);
   }
 
   &--info {
     --fn-link-color: var(--fn-slate-400);
     --fn-link-hover-color: var(--fn-blue-600);
+    --fn-link-disabled-text-color: var(--fn-slate-400);
   }
 
   &--success {
     --fn-link-color: var(--fn-green-500);
     --fn-link-hover-color: var(--fn-green-600);
+    --fn-link-disabled-text-color: var(--fn-green-500);
   }
 
   &--warning {
     --fn-link-color: var(--fn-orange-500);
     --fn-link-hover-color: var(--fn-orange-600);
+    --fn-link-disabled-text-color: var(--fn-orange-500);
   }
 
   &--danger {
     --fn-link-color: var(--fn-red-500);
     --fn-link-hover-color: var(--fn-red-600);
+    --fn-link-disabled-text-color: var(--fn-red-500);
   }
 }
 
@@ -48,7 +54,15 @@
   margin-left: 5px;
   font-size: 16px;
   color: var(--fn-link-color) !important;
+  > span{
+    display: flex;
+    align-items: center;
+    > i{
+      margin-left: 3px;
+    }
+  }
   &:hover {
     cursor: pointer;
+    color: #000;
   }
 }

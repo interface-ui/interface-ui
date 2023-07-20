@@ -17,7 +17,8 @@ export const linkProps = {
   },
   underline: {
     type: Boolean,
-    required: true,
+    default: true,
+    required: false,
   },
   href: {
     type: String,

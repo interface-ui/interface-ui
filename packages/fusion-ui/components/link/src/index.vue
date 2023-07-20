@@ -15,14 +15,16 @@ function handleClick(event: MouseEvent) {
     class="fn-link"
     :class="[
       `fn-link--${type}`,
-      disabled && 'is-disabled',
-      !underline ? '' : 'is-underline',
+      disabled && 'is-disabled-link',
+      underline ? '' : 'is-underline',
     ]"
     :href="disabled || !href ? undefined : href"
     @click="handleClick"
   >
-    <fn-icon v-if="icon" :icon="icon" />
-    <span v-if="$slots.default">
+    <span v-if="icon">
+      <fn-icon :icon="icon" :style="$slots.default ? 'margin-right: 3px;' : ''" />
+    </span>
+    <span>
       <slot />
     </span>
   </a>
