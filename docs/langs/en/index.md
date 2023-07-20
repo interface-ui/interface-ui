@@ -27,22 +27,13 @@ hero:
       link: https://github.com/tsinghua-lau/Fusion-Ui
 
 features:
-  - icon: 🌈
+  - icon: 🧜
     title: Components Design
     details: Fusion UI provides neat & beautiful crafted UI components.
-  - icon: 🔥
+  - icon: 🎡
     title: Introduce on demand
     details: Provide resolver to automatically import only used components.
-  - icon: 🎉
+  - icon: 💪
     title: TS Supported
     details: Support TypeScript & type checked & type inference.
-  # - icon: 💡
-  #   title: Cli Build
-  #   details: Easy to create repo with Onu Cli.
-  # - icon: 🍬
-  #   title: CSS Preset
-  #   details: Has UnoCSS preset package to use, rendered UI easily.
-  # - icon: ⚙️
-  #   title: Theme Config
-  #   details: Use attribute mode like unocss to design. Support theme config to customize theme.
 ---

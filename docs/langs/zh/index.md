@@ -27,13 +27,13 @@ hero:
       link: https://github.com/tsinghua-lau/Fusion-Ui
 
 features:
-  - icon: 🌈
+  - icon: 🧜 
     title: 组件设计
     details: Fusion Ui 提供了整洁和美丽的 UI 组件。
-  - icon: 🔥
+  - icon: 🎡 
     title: 按需加载
     details: 提供解析器以自动只导入使用过的组件。
-  - icon: 🎉
+  - icon: 💪
     title: TS 支持
     details: 支持TypeScript、类型检查和类型推断。
   # - icon: 💡

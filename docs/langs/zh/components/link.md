@@ -25,6 +25,10 @@ lang: zh
 
 <demo src="../../../example/link/underline.vue"></demo>
 
+# 图标
+带图标的文字链接可增强辨识度。
+
+<demo src="../../../example/link/iconlink.vue"></demo>
 
 # 属性
 

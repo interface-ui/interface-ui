@@ -1,19 +1,18 @@
 ---
-title: Button
-lang: zh
+title: Icon
+lang: en
 ---
 
 # Icon
 
-It integrates thousands of commonly used icons. `Iconify`.
+Integration of thousands of commonly used icons from Iconify.
 
+* If you want to use it directly like a use case, you need to perform a simple operation to use it directly in your project.
 
-* If you want to use it directly like a use case, you need to operate it simply before you can use it directly in the project.
-
-# Install
+## Installation
 
 ```
-# Choose a package manager you like.
+# Choose your favorite package manager
 
 # NPM
 $ npm install fusion-ui-iconify
@@ -21,13 +20,14 @@ $ npm install fusion-ui-iconify
 $ yarn add fusion-ui-iconify
 # pnpm
 $ pnpm install fusion-ui-iconify
+
 ```
 
-# Registration icon
-You need to import icons from ```fusion-ui-iconify``` and register globally.
+## Register Icons
+
+You need to import icons from fusion-ui-iconify and register them globally.
 
 ```main.ts```
-
 ```ts
 
 import Icon form 'fusion-ui-iconify'
@@ -35,21 +35,29 @@ import Icon form 'fusion-ui-iconify'
 app.use(Icon)
 ```
 
-## Icon Usage
+## Using Icons
 
-* You can use the icon anywhere, just add the icon name to the label.
+* You can use icons anywhere by simply adding the icon name in the tag.
 
 
 <demo src="../../../example/icon/icon.vue"></demo>
 
-## Default size
+## Size
+
+The default size of the icon is ```16```, and you can set the icon size using the size attribute.
 
 <demo src="../../../example/icon/size.vue"></demo>
 
-## Props
+## Color
 
-| Name      | Type                                               | Default    | Description             |
+You can set the color of the icon using the color attribute.
+
+<demo src="../../../example/icon/color.vue"></demo>
+
+## Attributes
+
+| Name      | Type                                               | Default    | Description            |
 | ----------- | ---------------------------------------------------- | --------- | ---------------- |
-| icon        | `String` | ``                                         | 选Select the icon name     |
-| size        | `Number`                                             | `14`  | Set the icon size |
+| icon        | `String` | ``                                         | Choose the icon name     |
+| size        | `Number`                                             | `16`  | Set the icon size |
 | color       | `String`                                             | `` | Set the icon color     |

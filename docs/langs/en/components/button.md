@@ -11,7 +11,7 @@ Common operation buttons.
 
 ### type
 
-The most commonly used button styles.
+You can use the type, plain, round, and circle attributes to define the style of the button.
 
 <demo src="../../../example/button/types.vue"></demo>
 
@@ -23,9 +23,6 @@ Buttons stacked small to large sizes.
 
 ### state
 
-Predefined button state.
-
-<demo src="../../../example/button/states.vue"></demo>
 
 ### shape
 
