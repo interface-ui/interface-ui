@@ -1,0 +1,108 @@
+[data-theme="light"]  {
+  --fn-message-bg-color: var(--fn-slate-100);
+  --fn-message-text-color:var(--fn-black-100);
+  font-size: 14px;
+}
+
+[data-theme="dark"] {
+  --fn-message-bg-color:var(--fn-slate-800);
+  --fn-message-text-color: var(--fn-slate-100);
+}
+
+.fn-message{
+  box-shadow: 0 3px 6px -4px #0000001f, 0 6px 16px #00000014, 0 9px 28px 8px #0000000d;
+  transform: translate(-50%);
+  max-width: 50%;
+  z-index: 99;
+  font-size: 13px;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  border-radius: 0.25rem;
+  --un-bg-opacity: 1;
+  background-color: rgba(255,255,255,var(--un-bg-opacity));
+  color: var(--fn-message-text-color);
+  transition-property: all;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  transition-duration: .3s;
+  border: 1px solid var(--fn-message-border-color);
+  padding: 3px 10px 3px 15px;
+}
+.is-success,.is-info,.is-warning,.is-danger,.is-error{
+  background-color: var(--fn-message-bg-color)
+}
+.is-success{
+  color: #1fbd53;;
+  --fn-message-border-color: #1fbd53;
+}
+.is-info{
+  color: var(--fn-message-text-color);
+  --fn-message-border-color: #857d7d;
+
+}
+.is-warning{
+  color: #f86816;
+  --fn-message-border-color: #f86816;
+
+}
+.is-danger{
+  color: red;
+  --fn-message-border-color: red;
+}
+
+.close-btn{
+  margin-left: 5px;
+  &:hover{
+    cursor: pointer;
+    color: var(--fn-message-text-color)
+  }
+}
+
+@font-face {
+  font-display: block;
+  font-family: "bootstrap-icons";
+  src: url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/fonts/bootstrap-icons.woff2?24e3eb84d0bcaf83d77f904c78ac1f47") format("woff2"),
+    url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/fonts/bootstrap-icons.woff?24e3eb84d0bcaf83d77f904c78ac1f47") format("woff");
+}
+
+.fm-message-fade-enter-from,
+.fm-message-fade-leave-to {
+  transform: translate(-50%, -100%);
+  opacity:0;
+}
+
+.icon::before,
+[class^="icon-"]::before,
+[class*="icon-"]::before {
+  display: inline-block;
+  font-family: bootstrap-icons !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: -0.125em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.icon-info-circle::before {
+  content: "\f431";
+  color: var(--fn-stone-1000);
+}
+.icon-check-circle::before {
+  content: "\f26b";
+  color: var(--fn-green-1000);
+
+}
+.icon-exclamation-triangle::before {
+  content: "\f33b";
+  color: var(--fn-orange-600);
+}
+.icon-x-circle::before {
+  content: "\f623";
+  color: var(--fn-red-1000);
+}
