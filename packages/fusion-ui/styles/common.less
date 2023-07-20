@@ -1,4 +1,4 @@
-.is-disabled {
+.is-disabled,.is-disabled-link {
   opacity: 0.8;
   cursor: not-allowed !important;
   text-decoration: none !important;
@@ -8,6 +8,11 @@
     color: var(--fn-button-disabled-text-color) !important;
     border-color: var(--fn-button-disabled-border-color) !important;
     background-color: var(--fn-button-disabled-bg-color) !important;
+  }
+}
+.is-disabled-link{
+  &:hover {
+    color: var(--fn-link-disabled-text-color) !important;
   }
 }
 .is-underline{
