@@ -9,6 +9,7 @@ export default defineConfig({
   description:
     'A Vue.js prebuilt component library based on Preline design draft',
   head,
+  // darkMode: true,
   themeConfig: {
     logo: '/logo.png',
     editLink: {

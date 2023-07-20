@@ -16,10 +16,10 @@
       <fn-button type="dashed" icon="svg-spinners:pulse-rings-3">
         dashed
       </fn-button>
-      <fn-button type="diplonema" icon="devicon:vuejs">
+      <fn-button type="diplonema" icon="ri:ie-line">
         diplonema
       </fn-button>
-      <fn-button shape="circle" icon="carbon:breaking-change" />
+      <fn-button shape="circle" icon="logos:chrome" />
     </div>
   </div>
 </template>

@@ -27,13 +27,13 @@ hero:
       link: https://github.com/tsinghua-lau/Fusion-Ui
 
 features:
-  - icon: 🌈
+  - icon: 🧜
     title: Components Design
     details: Fusion UI provides neat & beautiful crafted UI components.
-  - icon: 🔥
+  - icon: 🎡
     title: Introduce on demand
     details: Provide resolver to automatically import only used components.
-  - icon: 🎉
+  - icon: 💪
     title: TS Supported
     details: Support TypeScript & type checked & type inference.
 

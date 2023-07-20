@@ -4,6 +4,7 @@ import Icon from 'fusion-ui-iconify'
 import FusionUi from '../../../packages/fusion-ui/components/index.ts'
 import '../../../packages/fusion-ui/dist/styles/index.css'
 import '../../../packages/fusion-ui/components/link/src/index.less'
+import '../../../packages/fusion-ui/components/message/src/index.less'
 // import FusionUi from 'fusion-ui-vue'
 // import 'fusion-ui-vue/dist/styles/index.css'
 import DemoBlock from '../components/demo-block'
@@ -16,15 +17,24 @@ export default {
   ...theme,
   setup() {
     onMounted(() => {
-      const theme = () => localStorage.getItem('vitepress-theme-appearance')
-      const htmlEl = document.querySelector('html') as HTMLHtmlElement
+      const html = document.documentElement
+      const toggleTheme = () => {
+        if (html.classList.contains('dark'))
+          html.setAttribute('data-theme', 'dark')
+        else html.setAttribute('data-theme', 'light')
+      }
 
-      htmlEl.setAttribute('data-theme', theme() !== 'dark' ? 'light' : 'dark')
+      toggleTheme()
 
-      document.querySelector('.VPSwitch')?.addEventListener('click', () => {
-        if (theme() !== 'dark')
-          return htmlEl.setAttribute('data-theme', 'light')
-        return htmlEl.setAttribute('data-theme', 'dark')
+      const observer = new MutationObserver(() => {
+        toggleTheme()
+        observer.takeRecords()
+      })
+
+      observer.observe(html, {
+        attributes: true,
+        childList: false,
+        subtree: false,
       })
     })
   },
