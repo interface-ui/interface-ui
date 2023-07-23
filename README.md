@@ -20,13 +20,13 @@
 
 ```
 # pnpm
-$ pnpm add fusion-ui-vue-vue
+$ pnpm add fusion-ui-vue
 
 # npm
-$ npm install fusion-ui-vue-vue
+$ npm install fusion-ui-vue
 
 # yarn
-$ yarn add fusion-ui-vue-vue
+$ yarn add fusion-ui-vue
 
 
 ```
