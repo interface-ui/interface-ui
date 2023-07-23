@@ -178,9 +178,6 @@ importers:
       fusion-ui-iconify:
         specifier: ^1.0.21
         version: 1.0.21(less@3.13.1)(webpack@4.46.0)
-      fusion-ui-vue:
-        specifier: workspace:^
-        version: 'link:'
       vite-plugin-progress:
         specifier: ^0.0.7
         version: 0.0.7(vite@4.4.3)
