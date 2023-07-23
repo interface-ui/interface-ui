@@ -16,7 +16,6 @@ const CK = {
   install(App: any) {
     component.forEach((item) => {
       App.component(item.name, item)
-      console.log(item.name)
     })
   },
 }

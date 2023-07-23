@@ -27,23 +27,24 @@ Fusion Ui 是一个 Vue3 组件库，简洁、优雅、美观，帮助你快速�
 
 ## 最新版本
 
-[![release version](https://img.shields.io/github/v/release/tsinghua-lau/Fusion-Ui?display_name=tag)](https://www.npmjs.com/package/fusion-ui)
+[![release version](https://img.shields.io/npm/v/fusion-ui-vue.svg?label=FusionUi&color=blue)](https://www.npmjs.com/package/fusion-ui-vue)
 
-您可以订阅此提要以获取新版本通知: https://github.com/tsinghua-lau/Fusion-Ui/releases
+
+您可以订阅此提要以获取新版本通知: https://github.com/tsinghua-lau/fusion-ui/releases
 
 ## 问题
 
-如果你发现了 bug, 希望您能打开一个 [issue](https://github.com/tsinghua-lau/Fusion-Ui/issues), 谢谢。
+如果你发现了 bug, 希望您能打开一个 [issue](https://github.com/tsinghua-lau/fusion-ui/issues), 谢谢。
 
 ## 一起来玩！
 
 如果你对这个项目感兴趣，欢迎加入。
 
-- [Code of Conduct](https://github.com/tsinghua-lau/Fusion-Ui/blob/main/CODE_OF_CONDUCT.md)
-- [Contributing Guide](https://github.com/tsinghua-lau/Fusion-Ui/blob/main/CONTRIBUTING.md).
+- [Code of Conduct](https://github.com/tsinghua-lau/fusion-ui/blob/main/CODE_OF_CONDUCT.md)
+- [Contributing Guide](https://github.com/tsinghua-lau/fusion-ui/blob/main/CONTRIBUTING.md).
 
 ## 贡献者
 
-<a href="https://github.com/tsinghua-lau/Fusion-Ui/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=tsinghua-lau/Fusion-Ui" />
+<a href="https://github.com/tsinghua-lau/fusion-ui/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=tsinghua-lau/fusion-ui" />
 </a>

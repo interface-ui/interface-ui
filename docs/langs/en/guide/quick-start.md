@@ -20,23 +20,23 @@ All components supported in modern browsers, support of neerly two or three vers
 
 ## Latest Version
 
-[![release version](https://img.shields.io/github/v/release/tsinghua-lau/Fusion-Ui?display_name=tag)](https://www.npmjs.com/package/fusion-ui)
+[![release version](https://img.shields.io/github/v/release/tsinghua-lau/fusion-ui?display_name=tag)](https://www.npmjs.com/package/fusion-ui)
 
-You can subscribe to this feed for new version notifications: https://github.com/tsinghua-lau/Fusion-Ui/releases
+You can subscribe to this feed for new version notifications: https://github.com/tsinghua-lau/fusion-ui/releases
 
 ## Issue
 
-If you find a bug, I hope you open an [issue](https://github.com/tsinghua-lau/Fusion-Ui/issues), Thanks.
+If you find a bug, I hope you open an [issue](https://github.com/tsinghua-lau/fusion-ui/issues), Thanks.
 
 ## Join
 
 If you are interested in this project, welcome to join us.
 
-- [Code of Conduct](https://github.com/tsinghua-lau/Fusion-Ui/blob/main/CODE_OF_CONDUCT.md)
-- [Contributing Guide](https://github.com/tsinghua-lau/Fusion-Ui/blob/main/CONTRIBUTING.md).
+- [Code of Conduct](https://github.com/tsinghua-lau/fusion-ui/blob/main/CODE_OF_CONDUCT.md)
+- [Contributing Guide](https://github.com/tsinghua-lau/fusion-ui/blob/main/CONTRIBUTING.md).
 
 ## Contributors
 
-<a href="https://github.com/tsinghua-lau/Fusion-Ui/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=tsinghua-lau/Fusion-Ui" />
+<a href="https://github.com/tsinghua-lau/fusion-ui/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=tsinghua-lau/fusion-ui" />
 </a>

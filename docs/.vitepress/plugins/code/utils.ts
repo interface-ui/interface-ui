@@ -17,7 +17,7 @@ export function getDemoComponent(
 ) {
   const componentName = `DemoComponent${index++}`
   path = normalizePath(path)
-  const github = `https://github.com/tsinghua-lau/Fusion-Ui/tree/main/${path
+  const github = `https://github.com/tsinghua-lau/fusion-ui/tree/main/${path
     .split('/')
     .slice(-4)
     .join('/')}`

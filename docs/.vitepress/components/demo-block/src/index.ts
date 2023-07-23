@@ -3,7 +3,7 @@ import type { ExtractPropTypes } from 'vue'
 export const demoProps = {
   github: {
     type: String,
-    default: 'https://github.com/tsinghua-lau/Fusion-Ui',
+    default: 'https://github.com/tsinghua-lau/fusion-ui',
   },
   codeSandBox: {
     type: String,

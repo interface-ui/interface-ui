@@ -20,11 +20,11 @@ Every significant change is documented in the changelog file.
 
 ## Reporting Issues
 
-We use [Github issues](https://github.com/tsinghua-lau/Fusion-Ui/issues) for bug reports and feature requests. Before reporting an issue, please make sure you have searched for similar [issues](https://github.com/tsinghua-lau/Fusion-Ui/issues) as they may have been already answered or being fixed. For bug reporting, please include the minimum code that can be used to reproduce the problem. For feature request,
+We use [Github issues](https://github.com/tsinghua-lau/fusion-ui/issues) for bug reports and feature requests. Before reporting an issue, please make sure you have searched for similar [issues](https://github.com/tsinghua-lau/fusion-ui/issues) as they may have been already answered or being fixed. For bug reporting, please include the minimum code that can be used to reproduce the problem. For feature request,
 
 ## Sending a pull request
 
-1. Fork [the repository](https://github.com/tsinghua-lau/Fusion-Ui)，and create your branch from `main`. For new feature, please submit your changes directly to the `feature` branch. Other changes should go against `main` branch.
+1. Fork [the repository](https://github.com/tsinghua-lau/fusion-ui)，and create your branch from `main`. For new feature, please submit your changes directly to the `feature` branch. Other changes should go against `main` branch.
 2. Use `pnpm install` install the dependencies
 3. Use `pnpm run dev` start project,RUN `pnpm run play` start the `playground`,RUN `pnpm run docs` to write docs。
 4. Make changes to the codebase. Please add tests if applicable.

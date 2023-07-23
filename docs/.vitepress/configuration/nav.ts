@@ -11,7 +11,7 @@ export const nav = {
       items: [
         {
           text: 'Release Notes',
-          link: 'https://github.com/tsinghua-lau/Fusion-Ui/releases',
+          link: 'https://github.com/tsinghua-lau/fusion-ui/releases',
         },
       ],
     },
@@ -24,7 +24,7 @@ export const nav = {
       items: [
         {
           text: '发布说明',
-          link: 'https://github.com/tsinghua-lau/Fusion-Ui/releases',
+          link: 'https://github.com/tsinghua-lau/fusion-ui/releases',
         },
       ],
     },

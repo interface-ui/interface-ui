@@ -18,11 +18,11 @@
 
 ## 报告 Issues
 
-我们使用 [Github issues](https://github.com/tsinghua-lau/Fusion-Ui/issues) 进行 bug 报告和新 feature 建议。在报告 bug 之前，请确保已经搜索过类似的 [问题](https://github.com/tsinghua-lau/Fusion-Ui/issues)，因为它们可能已经得到解答或正在被修复。对于 bug 报告，请包含可用于重现问题的代码。对于新 feature 建议，请指出你想要的更改以及期望的行为。
+我们使用 [Github issues](https://github.com/tsinghua-lau/fusion-ui/issues) 进行 bug 报告和新 feature 建议。在报告 bug 之前，请确保已经搜索过类似的 [问题](https://github.com/tsinghua-lau/fusion-ui/issues)，因为它们可能已经得到解答或正在被修复。对于 bug 报告，请包含可用于重现问题的代码。对于新 feature 建议，请指出你想要的更改以及期望的行为。
 
 ## 提交 Pull Request
 
-1. Fork [此仓库](https://github.com/tsinghua-lau/Fusion-Ui)，从 `main` 创建分支。新功能实现请发 pull request 到 `feature` 分支。其他更改发到 `main` 分支。
+1. Fork [此仓库](https://github.com/tsinghua-lau/fusion-ui)，从 `main` 创建分支。新功能实现请发 pull request 到 `feature` 分支。其他更改发到 `main` 分支。
 2. 使用 `pnpm install` 安装依赖。
 3. 使用 `pnpm run dev` 启动项目，并运行 `pnpm run example` 查看示例，运行 `pnpm run docs` 查看文档站点。
 4. 对代码库进行更改。如果适用的话，请确保写了相应的测试。
