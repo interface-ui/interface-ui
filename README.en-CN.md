@@ -1,4 +1,4 @@
-简体中文 | [English](./README.en-CN.md)
+English| [简体中文](./README.md)
 
 <p align="center">
 <svg width="156px" height="221px" viewBox="0 0 256 221" version="1.1" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid">
@@ -11,20 +11,20 @@
     </g>
 </svg>
 <h1 align="center">Fusion UI</h1>
-<p align="center">Fusion Ui /ˈfjuːʒ(ə)n/ 是一个 Vue3 组件库，简洁、优雅、美观，帮助你快速构建网站。</p>
+<p align="center"> Fusion /ˈfjuːʒ(ə)n/ UI is a Vue3 component library that provides simplicity, elegance, and aesthetic appeal, enabling you to build websites quickly.</p>
 </p>
 
 
-## 特性
+## Features
 
-- 🧜 组件设计-提供整洁和美丽的精心制作的 UI 组件。
-- 🎡 按需引入-提供解析器以自动导入仅使用过的组件。
-- 💪 支持 TypeScript-支持类型脚本和类型检查及类型推断。
-- ⚡️ 全面基于 Vite，速度够快
-- 📃 详细的中/英文档
-- 🛠  More...
+- 🧜 Component Design - Provides meticulously crafted UI components with a clean and beautiful design.
+- 🎡 On-Demand Import - Provides a parser to automatically import only the components that are used.
+- 💪 TypeScript Support - Supports TypeScript for type checking and type inference.
+- ⚡️ Powered by Vite for Faster Performance
+- 📃 Detailed Chinese/English Documentation
+- 🛠 More ...
 
-## 安装
+## Installation
 
 ```
 # pnpm
@@ -39,38 +39,38 @@ $ yarn add fusion-ui-vue
 
 ```
 
-## 文档
+## Documentation
 
 - [DOCS](https://tsinghua-lau.github.io/fusion-ui/#/)
 
-## 兼容性
+## Compatibility
 
-现代浏览器支持所有组件，只支持两到三个版本。
+All components are supported in modern browsers and the last two versions of IE / Edge, Firefox, Chrome, Safari, and Opera.
 
 | [![IE / Edge](https://cdn.nlark.com/yuque/0/2023/png/785653/1676598386595-58e6efd6-bd29-4671-bf28-e289dc8911e2.png)](http://godban.github.io/browsers-support-badges/) IE / Edge | [![Firefox](https://cdn.nlark.com/yuque/0/2023/png/785653/1676598386577-a25d20a4-c8e3-4c57-86bc-a1c853264457.png)](http://godban.github.io/browsers-support-badges/) Firefox | [![Chrome](https://cdn.nlark.com/yuque/0/2023/png/785653/1676598386568-5c1d71d1-732d-41b6-a20c-9900d1bcaa7a.png)](http://godban.github.io/browsers-support-badges/) Chrome | [![Safari](https://cdn.nlark.com/yuque/0/2023/png/785653/1676598386580-1a0870a7-0483-4c92-84ee-5afcd1da92d6.png)](http://godban.github.io/browsers-support-badges/) Safari | [![Opera](https://cdn.nlark.com/yuque/0/2023/png/785653/1676598386571-49e31a0f-d0e4-4efc-8808-a5eedd4101fe.png)](http://godban.github.io/browsers-support-badges/) Opera | [![Electron](https://cdn.nlark.com/yuque/0/2023/png/785653/1676598389214-b4742a92-cfe7-4730-aefb-f2fb5fd046f3.png)](http://godban.github.io/browsers-support-badges/) Electron |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | last 2 versions                                                                                                                                                                  | last 2 versions                                                                                                                                                              | last 2 versions                                                                                                                                                            | last 2 versions                                                                                                                                                            | last 2 versions                                                                                                                                                          | last 2 versions                                                                                                                                                                |
 
-## 版本
+## Version
 
 
 
 [![release version](https://img.shields.io/npm/v/fusion-ui-vue.svg?label=FusionUi&color=blue)](https://www.npmjs.com/package/fusion-ui-vue)
 
 
-您可以订阅此提要以获取新版本通知: https://github.com/tsinghua-lau/fusion-ui/releases
+You can subscribe to this feed to get notifications about new versions:  https://github.com/tsinghua-lau/fusion-ui/releases
 
-## 问题
+## Issues
 
-如果有建议欢迎 [issue](https://github.com/tsinghua-lau/fusion-ui/issues)。
+If you have any suggestions, please feel free to create an  [issue](https://github.com/tsinghua-lau/fusion-ui/issues)。
 
-## 提交
+## Contributions
 
-如果你对这个项目感兴趣，欢迎加入。
+If you are interested in this project, you are welcome to contribute.
 
-- [贡献指南](https://github.com/tsinghua-lau/fusion-ui/blob/master/CONTRIBUTING.md)
+- [Contribution Guide](https://github.com/tsinghua-lau/fusion-ui/blob/master/CONTRIBUTING.md)
 
-## 贡献者
+## Contributors
 
 <a href="https://github.com/tsinghua-lau/fusion-ui/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=tsinghua-lau/fusion-ui" />
