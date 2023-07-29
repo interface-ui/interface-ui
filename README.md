@@ -3,7 +3,7 @@
 <p align="center">
 <img src="https://img-blog.csdnimg.cn/7faabbe14bd244a5a639b32398bd2f09.png" style="width:100px;" />
 <h1 align="center">Fusion UI</h1>
-<p align="center">Fusion Ui 是一个 Vue3 组件库，简洁、优雅、美观，帮助你快速构建网站。</p>
+<p align="center">Fusion Ui /ˈfjuːʒ(ə)n/ 是一个 Vue3 组件库，简洁、优雅、美观，帮助你快速构建网站。</p>
 </p>
 
 
