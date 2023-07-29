@@ -6,4 +6,5 @@ export interface LMessageProps {
   timeout?: number
   offset?: number
   closeBtn?: boolean
+  showIcon?: boolean
 }

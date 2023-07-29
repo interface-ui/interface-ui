@@ -1,10 +1,13 @@
-[data-theme="light"]  {
+[data-theme="light"] .fn-message,
+.fn-message[data-theme="light"]  {
   --fn-message-bg-color: var(--fn-slate-100);
   --fn-message-text-color:var(--fn-black-100);
   font-size: 14px;
 }
 
-[data-theme="dark"] {
+
+[data-theme="dark"] .fn-message,
+.fn-message[data-theme="dark"] {
   --fn-message-bg-color:var(--fn-slate-800);
   --fn-message-text-color: var(--fn-slate-100);
 }
@@ -29,27 +32,35 @@
   transition-duration: .3s;
   border: 1px solid var(--fn-message-border-color);
   padding: 3px 10px 3px 15px;
+
+  > .message-content{
+    display: flex;
+    > i{
+      margin: auto;
+      margin-right: 10px;
+    }
+  }
 }
 .is-success,.is-info,.is-warning,.is-danger,.is-error{
   background-color: var(--fn-message-bg-color)
 }
 .is-success{
-  color: #1fbd53;;
-  --fn-message-border-color: #1fbd53;
+  color: var(--fn-success);
+  --fn-message-border-color:var(--fn-bright-50);
 }
 .is-info{
   color: var(--fn-message-text-color);
-  --fn-message-border-color: #857d7d;
+  --fn-message-border-color: var(--fn-stone-1000);
 
 }
 .is-warning{
-  color: #f86816;
-  --fn-message-border-color: #f86816;
+  color: var(--fn-warning);
+  --fn-message-border-color: var(--fn-warning);
 
 }
 .is-danger{
-  color: red;
-  --fn-message-border-color: red;
+  color: var(--fn-rose-500);
+  --fn-message-border-color: var(--fn-rose-500);
 }
 
 .close-btn{
@@ -60,49 +71,10 @@
   }
 }
 
-@font-face {
-  font-display: block;
-  font-family: "bootstrap-icons";
-  src: url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/fonts/bootstrap-icons.woff2?24e3eb84d0bcaf83d77f904c78ac1f47") format("woff2"),
-    url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/fonts/bootstrap-icons.woff?24e3eb84d0bcaf83d77f904c78ac1f47") format("woff");
-}
+
 
 .fm-message-fade-enter-from,
 .fm-message-fade-leave-to {
   transform: translate(-50%, -100%);
   opacity:0;
-}
-
-.icon::before,
-[class^="icon-"]::before,
-[class*="icon-"]::before {
-  display: inline-block;
-  font-family: bootstrap-icons !important;
-  font-style: normal;
-  font-weight: normal !important;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  vertical-align: -0.125em;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-
-.icon-info-circle::before {
-  content: "\f431";
-  color: var(--fn-stone-1000);
-}
-.icon-check-circle::before {
-  content: "\f26b";
-  color: var(--fn-green-1000);
-
-}
-.icon-exclamation-triangle::before {
-  content: "\f33b";
-  color: var(--fn-orange-600);
-}
-.icon-x-circle::before {
-  content: "\f623";
-  color: var(--fn-red-1000);
 }

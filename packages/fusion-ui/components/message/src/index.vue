@@ -1,13 +1,14 @@
 <script lang="ts" setup>
 import { noop, useResizeObserver, useTimeoutFn } from '@vueuse/core'
 import { computed, onMounted, ref } from 'vue'
-import { getLastOffset } from './message'
+import { getLastOffset, getSvgIncon } from './message'
 import type { MessageType } from './types'
 const props = withDefaults(
   defineProps<{
     message: string
     timeout: number
     id: string
+    showIcon: boolean
     offset: number
     closeBtn: boolean
     type: MessageType
@@ -17,6 +18,7 @@ const props = withDefaults(
     timeout: 2000,
     offset: 20,
     closeBtn: false,
+    showIcon: true,
   },
 )
 defineEmits(['destroy'])
@@ -45,15 +47,6 @@ useResizeObserver(elRef as any, () => {
 })
 const lastOffset = computed(() => getLastOffset(props.id) + props.offset)
 const bottom = computed((): number => height.value + lastOffset.value)
-const icon = computed(() => {
-  const icons = {
-    info: 'info-circle',
-    success: 'check-circle',
-    warning: 'exclamation-triangle',
-    danger: 'x-circle',
-  }
-  return icons[props.type]
-})
 
 defineExpose({ bottom, lastOffset, visible })
 </script>
@@ -71,7 +64,7 @@ defineExpose({ bottom, lastOffset, visible })
       @mouseleave="startTimer"
     >
       <div class="message-content">
-        <i :class="`icon-${icon}`" style="margin-right: 3px;" />
+        <i v-if="props.showIcon" v-html="getSvgIncon(props.type)" />
         {{ message }}
       </div>
       <div v-if="closeBtn" class="close-btn" @click="visible = false">
