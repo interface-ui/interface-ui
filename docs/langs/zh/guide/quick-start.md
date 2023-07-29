@@ -37,7 +37,7 @@ Fusion Ui 是一个 Vue3 组件库，简洁、优雅、美观，帮助你快速�
 
 如果你发现了 bug, 希望您能打开一个 [issue](https://github.com/tsinghua-lau/fusion-ui/issues), 谢谢。
 
-## 一起来玩！
+## 参与
 
 如果你对这个项目感兴趣，欢迎加入。
 
