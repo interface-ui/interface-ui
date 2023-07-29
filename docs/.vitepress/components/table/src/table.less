@@ -1,0 +1,195 @@
+.bp-table {
+  position: relative;
+  width: 100%;
+  margin-bottom: 14px;
+  overflow-x: auto;
+
+  .bp-table-inner {
+    font-feature-settings: "tnum";
+    position: relative;
+    clear: both;
+    transition: all 0.2s ease;
+
+    .text-left {
+      text-align: left;
+    }
+    .text-center {
+      text-align: center;
+    }
+    .text-right {
+      text-align: right;
+    }
+
+    .bp-table-header,
+    .bp-table-body {
+      width: 100%;
+      border: none;
+      border-spacing: 0;
+      background-color: @gary-1;
+      table-layout: fixed;
+      transition: all 0.2s ease;
+
+      .bp-table-header-thead {
+        display: table-header-group;
+        width: 100%;
+        -moz-user-select: none;
+        -o-user-select: none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+        tr {
+          display: table-row;
+          vertical-align: inherit;
+          border-color: inherit;
+          background: none;
+          border: none;
+
+          th {
+            overflow-wrap: break-word;
+            display: table-cell;
+            padding: 12px 10px;
+            font-size: 13px;
+            font-weight: 500;
+            color: @gary-7;
+            border-left: none;
+            border-right: none;
+            border-top: none;
+            border-bottom: 1px solid @gary-3;
+            background: none;
+
+            &:first-child {
+              border-top-left-radius: 4px;
+            }
+
+            &:last-child {
+              border-top-right-radius: 4px;
+            }
+          }
+        }
+      }
+
+      .bp-table-body-tbody {
+        td {
+          font-size: 13px;
+          color: @gary-7;
+          font-weight: 400;
+          padding: 8px 10px;
+          word-break: break-all;
+          border-bottom: 1px solid @gary-3;
+        }
+
+        .bp-table-empty-tr {
+          text-align: center;
+
+          td {
+            color: @gary-5;
+          }
+        }
+      }
+    }
+
+    .bp-table-header {
+      height: 46px;
+      max-height: 46px;
+    }
+  }
+
+  // 带边框表格
+  .bp-table-border {
+    .bp-table-header {
+      .bp-table-header-thead {
+        tr {
+          background: none;
+          th {
+            border-top: 1px solid @gary-3;
+            border-left: 1px solid @gary-3;
+
+            &:last-child {
+              border-right: 1px solid @gary-3;
+            }
+          }
+        }
+      }
+    }
+
+    .bp-table-body {
+      .bp-table-body-tbody {
+        tr {
+          background: none;
+          td {
+            border-left: 1px solid @gary-3;
+
+            &:last-child {
+              border-right: 1px solid @gary-3;
+            }
+          }
+
+          &:last-child {
+            td {
+              border-bottom: 1px solid @gary-3;
+
+              &:first-child {
+                border-bottom-left-radius: 4px;
+              }
+
+              &:last-child {
+                border-bottom-right-radius: 4px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // 斑马纹样式
+  .bp-table-stripe {
+    .bp-table-body {
+      .bp-table-body-tbody {
+        tr {
+          &:nth-child(2n + 2) {
+            td {
+              background-color: @gary-1;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // 固定表头
+  .bp-table-fixed-header {
+    .bp-table-header {
+      z-index: 500;
+    }
+
+    .bp-table-body {
+      z-index: 499;
+    }
+  }
+}
+
+.scrollbar {
+  width: 30px;
+  margin: 0 auto;
+}
+
+.bp-table-body-area::-webkit-scrollbar {
+  width: 4px;
+  height: 0;
+}
+
+.bp-table-body-area::-webkit-scrollbar-thumb {
+  background-color: @gary-4;
+  transition: all 0.2s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0px !important;
+}
+
+.bp-table-body-area::-webkit-scrollbar-track {
+  background: @gary-3;
+}

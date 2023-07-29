@@ -3,6 +3,11 @@ title: Button
 lang: zh
 ---
 
+<script setup lang="ts">
+  import props from "../../../example/button/description/zh-props.ts";
+  import slots from "../../../example/button/description/zh-slots.ts";
+</script>
+
 # Button
 
 常见的操作按钮。
@@ -47,18 +52,8 @@ lang: zh
 
 ## 属性
 
-| 属性名      | 可选值                                               | 默认值    | 描述             |
-| ----------- | ---------------------------------------------------- | --------- | ---------------- |
-| type        | `solid` \| `white` \| `outline` \| `ghost` \| `link` \| `dashed` \| `diplonema`  | `solid`   | 设置按钮类型     |
-| native-type | `button` \| `reset` \| `submit`                      | `button`  | 设置按钮原生类型 |
-| shape       | `round` \| `pill` \| `circle` \| `plain`         | `round` | 设置按钮形状     |
-| size        | `small` \| `medium` \| `large`                       | `medium`  | 设置按钮尺寸     |
-| state       | `info` \| `success` \| `warning` \| `danger`         | `info`    | 设置按钮状态     |
-| disabled    | `boolean`                                            | `false`   | 设置按钮禁用状态 |
-| icon        | `样式名`                                               | `' '`   | 设置按钮图标 |
+<table-block type="propsZh" :data="props"></table-block>
 
 ## 插槽
 
-| 插槽名  | 参数 | 描述           |
-| ------- | ---- | -------------- |
-| default | `()` | 自定义默认内容 |
+<table-block type="slotsZh" :data="slots"></table-block>

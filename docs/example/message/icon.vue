@@ -3,7 +3,7 @@ import FnMessage from '../../../packages/fusion-ui/components/message/index'
 </script>
 
 <template>
-  <FnButton @click="FnMessage({ message: '显示关闭按钮', type: 'success', timeout: 0, closeBtn: true })">
-    显示关闭按钮
+  <FnButton @click="FnMessage({ message: '一条消息', showIcon: false })">
+    关闭 logo
   </FnButton>
 </template>

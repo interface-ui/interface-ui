@@ -3,6 +3,10 @@ title: Icon
 lang: en
 ---
 
+<script setup lang="ts">
+  import props from "../../../example/icon/description/en-props.ts";
+</script>
+
 # Icon
 
 Integration of thousands of commonly used icons from Iconify.
@@ -56,8 +60,5 @@ You can set the color of the icon using the color attribute.
 
 ## Attributes
 
-| Name      | Type                                               | Default    | Description            |
-| ----------- | ---------------------------------------------------- | --------- | ---------------- |
-| icon        | `String` | ``                                         | Choose the icon name     |
-| size        | `Number`                                             | `16`  | Set the icon size |
-| color       | `String`                                             | `` | Set the icon color     |
+<table-block type="propsEn" :data="props"></table-block>
+

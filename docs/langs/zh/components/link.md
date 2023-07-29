@@ -3,6 +3,12 @@ title: Link
 lang: zh
 ---
 
+<script setup lang="ts">
+  import props from "../../../example/link/description/zh-props.ts";
+  import slots from "../../../example/link/description/zh-slots.ts";
+</script>
+
+
 # Link 链接
 
 文字超链接
@@ -32,11 +38,4 @@ lang: zh
 
 # 属性
 
-| 属性名      | 可选值                                               | 默认值    | 描述             |
-| ----------- | ---------------------------------------------------- | --------- | ---------------- |
-| type        | `primary`  \| `success`  \| `warning`  \| `danger`  \| `info`  \| `default`   | `default`     |设置链接类型
-| disabled | `true` \| `false`                      | `false`  | 设置链接禁用 |
-| href       |  `String`         | `---` | 原生 href 属性     |
-| icon        | `String`                       | `---`  | 图标组件     |
-| underline       | `true` \| `false`                      | `false`  | 隐藏下划线 |
-
+<table-block type="propsZh" :data="props"></table-block>

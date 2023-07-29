@@ -11,7 +11,7 @@ export default defineConfig({
   head,
   // darkMode: true,
   themeConfig: {
-    logo: '/logo.png',
+    logo: '/logo.svg',
     editLink: {
       pattern: 'https://github.com/tsinghua-lau/fusion-ui/edit/master/docs/:path',
       text: 'Suggest changes to this page',

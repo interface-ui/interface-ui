@@ -14,6 +14,25 @@ export const enComponents = [
         text: 'Link',
         link: '/langs/en/components/link',
       },
+      {
+        text: 'Dialog',
+        link: '/langs/en/components/dialog',
+      },
+    ],
+  },
+  {
+    text: 'Feedback',
+    items: [
+      {
+        collapsible: false,
+        text: 'Message',
+        link: '/langs/en/components/message',
+      },
+      {
+        collapsible: false,
+        text: 'Dialog',
+        link: '/langs/en/components/dialog',
+      },
     ],
   },
 ]
@@ -46,6 +65,11 @@ export const zhComponents = [
         collapsible: false,
         text: 'Message 消息',
         link: '/langs/zh/components/message',
+      },
+      {
+        collapsible: false,
+        text: 'Dialog 对话框',
+        link: '/langs/zh/components/dialog',
       },
     ],
   },

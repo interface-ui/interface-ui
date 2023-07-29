@@ -3,6 +3,11 @@ title: Button
 lang: en-US
 ---
 
+<script setup lang="ts">
+  import props from "../../../example/button/description/en-props.ts";
+  import slots from "../../../example/button/description/en-slots.ts";
+</script>
+
 # Button
 
 Common operation buttons.
@@ -45,18 +50,9 @@ Button with icon.
 
 ## Props
 
-| Name        | Type                                                 | Default   | Description                |
-| ----------- | ---------------------------------------------------- | --------- | -------------------------- |
-| type        | `solid` \| `white` \| `outline` \| `ghost` \| `link`\| `diplonema` | `solid`   | Set custom type attribute. |
-| native-type | `button` \| `reset` \| `submit`                      | `button`  | Set native type attribute. |
-| shape       | `round` \| `pill` \| `circle` \| `plain`         | `round` | Set button shape.          |
-| size        | `small` \| `medium` \| `large`                       | `medium`  | Set button size.           |
-| state       | `info` \| `success` \| `warning` \| `danger`         | `info`    | Set button state.          |
-| disabled    | `boolean`                                            | `false`   | Disable the button.        |
-| disabled    | `icon`                                            | `' '`   | Set the button icon |
+<table-block type="propsEn" :data="props"></table-block>
+
 
 ## Slots
 
-| Name    | Parameters | Description                |
-| ------- | ---------- | -------------------------- |
-| default | `()`       | Customize default content. |
+<table-block type="slotsEn" :data="slots"></table-block>

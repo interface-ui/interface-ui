@@ -3,6 +3,10 @@ title: Icon
 lang: zh
 ---
 
+<script setup lang="ts">
+  import props from "../../../example/icon/description/zh-props.ts";
+</script>
+
 # Icon 图标
 
 集成了```Iconify```上千个常用的图标。
@@ -53,10 +57,6 @@ app.use(Icon)
 
 <demo src="../../../example/icon/color.vue"></demo>
 
-# 属性
+## 属性
 
-| 属性名      | 类型                                               | 默认值    | 描述             |
-| ----------- | ---------------------------------------------------- | --------- | ---------------- |
-| icon        | `String` | ``                                         | 选择icon图标名     |
-| size        | `Number`                                             | `14`  | 设置图标大小 |
-| color       | `String`                                             | `` | 设置图标颜色     |
+<table-block type="propsZh" :data="props"></table-block>

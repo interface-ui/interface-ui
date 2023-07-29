@@ -36,13 +36,4 @@ features:
   - icon: 💪
     title: TS 支持
     details: 支持TypeScript、类型检查和类型推断。
-  # - icon: 💡
-  #   title: Cli Build
-  #   details: Easy to create repo with Onu Cli.
-  # - icon: 🍬
-  #   title: CSS Preset
-  #   details: Has UnoCSS preset package to use, rendered UI easily.
-  # - icon: ⚙️
-  #   title: Theme Config
-  #   details: Use attribute mode like unocss to design. Support theme config to customize theme.
 ---
