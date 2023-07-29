@@ -1,0 +1,68 @@
+[data-theme="light"] .dialog,
+.dialog[data-theme="light"] {
+  --fn-dialog-bg-color: var(--fn-bd-light-bg);
+  font-size: 14px;
+}
+
+[data-theme="dark"] .dialog,
+.dialog[data-theme="dark"] {
+  --fn-dialog-bg-color:var(--fn-stone-1400);
+  font-size: 14px;
+}
+
+.dialog {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+  z-index: 100;
+  > .fn-overlay{
+    width: var(--fn-dialog-width);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: var(--fn-dialog-top) !important;
+    z-index: 200;
+    background-color: var(--fn-dialog-bg-color) !important;
+  
+    > .header{
+      padding: 20px;
+      justify-content: space-between;
+      display: flex;
+      > span{
+        > .fn-button{
+          &:hover{
+            color: var(--fn-rose-600);
+            background-color: transparent;
+          }
+        }
+      }
+    }
+
+    >.dialog__content{
+      padding: 20px;
+    }
+ 
+    > .footer{
+      >.dialog-footer{
+      padding: 20px;
+      justify-content: flex-end;
+      width: 100%;
+      display: flex;
+      text-align: right;
+      }
+    }
+  }
+  > .is-fullscreen{
+    left: 0;
+    top: 0;
+    transform: translate(0, 0);
+    height: 100%;
+    width: 100%;
+  }
+  .is-align-center {
+    top: 50% !important;
+  }
+}
