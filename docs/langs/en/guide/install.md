@@ -15,17 +15,34 @@ yarn add fusion-ui-vue
 pnpm add fusion-ui-vue
 ```
 
-## On-demand Import
+## Full Import
 
-You can choose one of the ways to introduce FusionUI components on demand.
+By fully importing FusionUI components, the package size will increase.
+
+```main.ts```
+```ts
+import { createApp } from 'vue'
+import fusionUi from 'fusion-ui-vue'
+import 'fusion-ui-vue/dist/styles/index.css'
+import App from './App.vue'
+
+const app = createApp(App)
+app.use(fusionUi)
+app.mount('#app')
+```
+
+## On-demand Import
 
 * You can use the import statement to import the components you use.
   
-  ```ts
-  import { FnButton } from 'fusion-ui-vue'
-  ```
+```ts
+import { FnButton } from 'fusion-ui-vue'
+import 'fusion-ui-vue/dist/styles/base.css'
+import 'fusion-ui-vue/dist/styles/button/src/index.css'
+```
 
-* You need to use an additional plugin to import components you used. First you need to install [unplugin-vue-components](https://www.npmjs.com/package/unplugin-vue-components) and [unplugin-auto-import](https://www.npmjs.com/package/unplugin-auto-import).
+### Auto import
+* You need to use an additional plugin to import components you used. First you need to install [unplugin-vue-components](https://www.npmjs.com/package/unplugin-vue-components).
 
 ```shell
 npm install -D unplugin-vue-components
@@ -51,18 +68,4 @@ export default defineConfig({
   ],
 })
 ```
-
-```main.ts```
-
-```ts
-import { createApp } from 'vue'
-import fusionUi from 'fusion-ui-vue'
-import 'fusion-ui-vue/dist/styles/index.css'
-import App from './App.vue'
-
-const app = createApp(App)
-
-app.use(fusionUi)
-app.mount('#app')
-  ```
 Now you can start the project. Please check the document for the specific usage of each component.
