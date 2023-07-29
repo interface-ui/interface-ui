@@ -1,4 +1,4 @@
-> English | [简体中文](./CONTRIBUTING.zh-CN.md)
+English | [简体中文](./CONTRIBUTING.zh-CN.md)
 
 # Contributing
 
@@ -26,12 +26,11 @@ We use [Github issues](https://github.com/tsinghua-lau/fusion-ui/issues) for bug
 
 1. Fork [the repository](https://github.com/tsinghua-lau/fusion-ui)，and create your branch from `main`. For new feature, please submit your changes directly to the `feature` branch. Other changes should go against `main` branch.
 2. Use `pnpm install` install the dependencies
-3. Use `pnpm run dev` start project,RUN `pnpm run play` start the `playground`,RUN `pnpm run docs` to write docs。
-4. Make changes to the codebase. Please add tests if applicable.
-5. Make sure the test suite passes with `pnpm run test`.
-6. Use `pnpm run test:ci` to RUN `CI` tests before you commit your code.
-7. Commit your changes, adhering to the [Commit Guidelines](#commit-guidelines).
-8. Open a new pull request,[referencing corresponding issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword) if available.
+3. RUN `pnpm run docs:dev` to write docs。
+4. Make changes to the codebase. Please add tests if applicable.(No test for the time being.)
+5. Make sure the test suite passes with `pnpm run test`.(No test for the time being.)
+6. Commit your changes, adhering to the [Commit Guidelines](#commit-guidelines).
+7. Open a new pull request,[referencing corresponding issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword) if available.
 
 ## Commit Guidelines
 
