@@ -1,65 +1,63 @@
-> English | [简体中文](./CONTRIBUTING.zh-CN.md)
+> [English](./CONTRIBUTING.md) | 简体中文
 
-# Contributing
+# 贡献指南
 
-Thank you for taking your time to contribute and make this project better! Here are some guidelines to help you get started. Please make sure to take a moment and read through them before submitting your contributions.
+感谢你的宝贵时间。你的贡献将使这个项目变得更好！在提交贡献之前，请务必花点时间阅读下面的入门指南。
 
-## Code of Conduct
+## 行为准则
 
-This project is governed by the [Contributor Covenant Code of Conduct](./CODE_OF_CONDUCT.md). By participating, you are expected to adhere to it.
+该项目有一份 [行为准则](./CODE_OF_CONDUCT.md)，希望参与项目的贡献者都能严格遵守。
 
-## Open Development
+## 透明的开发
 
-All work happens directly on `GitHub`. Both core team members and external contributors send pull requests which go through the same `code review` process.
+所有工作都直接透明地在 `GitHub` 上进行。核心团队成员和外部贡献者的 `pull requests` 都需要经过相同的 `code review` 流程。
 
-## Semantic Versioning
+## 语义化版本
 
-This project follows semantic versioning. We release patch versions for bug fixes or other changes that do not change the behavior of the API, minor versions for new features that are backward-compatible, and major versions for any breaking changes.
+该项目遵循语义化版本。我们对重要的漏洞修复发布修订号，对新特性或不重要的变更发布次版本号，对重大且不兼容的变更发布主版本号。
 
-Every significant change is documented in the changelog file.
+## 报告 Issues
 
-## Reporting Issues
+我们使用 [Github issues](https://github.com/tsinghua-lau/fusion-ui/issues) 进行 bug 报告和新 feature 建议。在报告 bug 之前，请确保已经搜索过类似的 [问题](https://github.com/tsinghua-lau/fusion-ui/issues)，因为它们可能已经得到解答或正在被修复。对于 bug 报告，请包含可用于重现问题的代码。对于新 feature 建议，请指出你想要的更改以及期望的行为。
 
-We use [Github issues](https://github.com/tsinghua-lau/fusion-ui/issues) for bug reports and feature requests. Before reporting an issue, please make sure you have searched for similar [issues](https://github.com/tsinghua-lau/fusion-ui/issues) as they may have been already answered or being fixed. For bug reporting, please include the minimum code that can be used to reproduce the problem. For feature request,
+## 提交 Pull Request
 
-## Sending a pull request
+1. Fork [此仓库](https://github.com/tsinghua-lau/fusion-ui)，从 `main` 创建分支。新功能实现请发 pull request 到 `feature` 分支。其他更改发到 `main` 分支。
+2. 使用 `pnpm install` 安装依赖。
+3. 使用 `pnpm run dev` 启动项目，并运行 `pnpm run example` 查看示例，运行 `pnpm run docs` 查看文档站点。
+4. 对代码库进行更改。如果适用的话，请确保写了相应的测试。
+5. 确认执行 `pnpm run test` 后所有的测试都是通过的。
+6. 提交代码前使用 `pnpm run test:ci` 进行构建 `CI` 测试。
+7. 提交 git commit, 请同时遵守 [Commit 规范](#commit-指南)。
+8. 提交 pull request, 如果有对应的 issue，请进行[关联](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword)。
 
-1. Fork [the repository](https://github.com/tsinghua-lau/fusion-ui)，and create your branch from `main`. For new feature, please submit your changes directly to the `feature` branch. Other changes should go against `main` branch.
-2. Use `pnpm install` install the dependencies
-3. Use `pnpm run dev` start project,RUN `pnpm run play` start the `playground`,RUN `pnpm run docs` to write docs。
-4. Make changes to the codebase. Please add tests if applicable.
-5. Make sure the test suite passes with `pnpm run test`.
-6. Use `pnpm run test:ci` to RUN `CI` tests before you commit your code.
-7. Commit your changes, adhering to the [Commit Guidelines](#commit-guidelines).
-8. Open a new pull request,[referencing corresponding issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword) if available.
+## Commit 指南
 
-## Commit Guidelines
-
-Commit messages are required to follow the [conventional-changelog standard](https://www.conventionalcommits.org/en/v1.0.0/):
+Commit messages 请遵循[conventional-changelog 标准](https://www.conventionalcommits.org/en/v1.0.0/)：
 
 ```bash
-<type>[optional scope]: <description>
+<类型>[可选 范围]: <描述>
 
-[optional body]
+[可选 正文]
 
-[optional footer(s)]
+[可选 脚注]
 ```
 
 👉 [Commit example](https://github.com/unocss/unocss/releases/tag/v0.39.0)
 
-### Commit types
+### Commit 类型
 
-The following is a list of commit types:
+以下是 commit 类型列表:
 
-- feat: A new feature or functionality
-- fix: A bug fix
-- docs: Documentation only changes
-- style: Code formatting or component style changes
-- refactor: Code changes that neither fixes a bug nor adds a feature.
-- perf: Improve performance.
-- test: Add missing or correct existing tests.
-- chore: Other commits that don’t modify src or test files.
+- feat: 新特性或功能
+- fix: 缺陷修复
+- docs: 文档更新
+- style: 代码风格或者组件样式更新
+- refactor: 代码重构，不引入新功能和缺陷修复
+- perf: 性能优化
+- test: 单元测试
+- chore: 其他不修改 src 或测试文件的提交
 
 ## License
 
-By contributing your code to the repository, you agree to license your contribution under the [MIT license](./LICENSE).
+[MIT 协议](./LICENSE).
