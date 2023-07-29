@@ -2,8 +2,9 @@
 .fn-button[data-theme="light"] {
   --fn-white-text-color: #374151;
   --fn-white-text-hover-color: #374151;
-  --fn-white-border-color: #e5e7eb;
+  --fn-white-border-color: hsl(220, 13%, 91%);
   --fn-white-hover-color: #f9fafb;
+  --fn-button-border-color-outline: #c6e2ff;
   font-size: 14px;
 }
 
@@ -13,6 +14,7 @@
   --fn-white-text-hover-color: white;
   --fn-white-border-color: #374151;
   --fn-white-hover-color: #1e293b;
+  --fn-button-border-color-outline: #4C4D4F;
   font-size: 14px;
 }
 
@@ -89,14 +91,14 @@
   }
 
   &--outline {
-    --fn-button-text-color: var(--fn-button-color);
-    --fn-button-text-hover-color: white;
-    --fn-button-border-color: var(--fn-button-color);
-    --fn-button-border-hover-color: var(--fn-button-hover-color);
+    --fn-button-text-color:var(--fn-white-text-color);
+    --fn-button-text-hover-color: var(--fn-button-color);
+    --fn-button-border-color:var(--fn-button-border-color-outline);
+    --fn-button-border-hover-color:var(--fn-button-border-color-outline);
     --fn-button-bg-color: transparent;
-    --fn-button-bg-hover-color: var(--fn-button-hover-color);
-    --fn-button-disabled-text-color: var(--fn-button-color);
-    --fn-button-disabled-border-color: var(--fn-button-color);
+    --fn-button-bg-hover-color: var(--fn-white-hover-color);
+    --fn-button-disabled-text-color: var(--fn-white-text-color);
+    --fn-button-disabled-border-color: var(--fn-button-border-color-outline);
     --fn-button-disabled-bg-color: transparent;
     --fn-button-border-style: solid;
   }
@@ -125,15 +127,6 @@
     --fn-button-disabled-text-color: var(--fn-button-color);
     --fn-button-disabled-bg-color: transparent;
     --fn-button-disabled-border-color: transparent;
-  }
-
-  &--white {
-    --fn-button-text-color: var(--fn-white-text-color);
-    --fn-button-text-hover-color: var(--fn-white-text-hover-color);
-    --fn-button-border-color: var(--fn-white-border-color);
-    --fn-button-border-hover-color: var(--fn-white-border-color);
-    --fn-button-bg-color: var(--fn-white-bg-color);
-    --fn-button-bg-hover-color: var(--fn-white-hover-color);
   }
 
   &--dashed {
