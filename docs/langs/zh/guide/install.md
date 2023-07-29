@@ -15,19 +15,36 @@ yarn add fusion-ui-vue
 pnpm add fusion-ui-vue
 ```
 
-## 按需引入
+## 完整引入
 
-您可以选择其中一种方式来按需引入 FusionUI 组件。
+完整导入 FusionUI 组件，包的体积会增大。
+
+```main.ts```
+```ts
+import { createApp } from 'vue'
+import fusionUi from 'fusion-ui-vue'
+import 'fusion-ui-vue/dist/styles/index.css'
+import App from './App.vue'
+
+const app = createApp(App)
+app.use(fusionUi)
+app.mount('#app')
+```
+
+
+## 按需引入
 
 * 您可以使用 `import` 语句来导入您使用的组件。
 
 
 ```ts
 import { FnButton } from 'fusion-ui-vue'
+import 'fusion-ui-vue/dist/styles/base.css'
+import 'fusion-ui-vue/dist/styles/button/src/index.css'
 ```
 
-
-* 您需可以使用一个额外的插件来导入您使用的组件。首先你需要安装 [unplugin-vue-components](https://www.npmjs.com/package/unplugin-vue-components)。
+### 自动导入
+* 您也可以使用一个额外的插件来自动导入您使用的组件，首先你需要安装 [unplugin-vue-components](https://www.npmjs.com/package/unplugin-vue-components)。
 
 ```shell
 npm install -D unplugin-vue-components
@@ -51,19 +68,5 @@ export default defineConfig({
   ],
 })
 ```
-
-```main.ts```
-  
-  ```ts
-import { createApp } from 'vue'
-import fusionUi from 'fusion-ui-vue'
-import 'fusion-ui-vue/dist/styles/index.css'
-import App from './App.vue'
-
-const app = createApp(App)
-
-app.use(fusionUi)
-app.mount('#app')
-```
-现在你可以启动项目了。 具体每个组件的使用方法,请查看文档。
+现在你可以启动项目了，具体每个组件的使用方法，请查看文档。
 
