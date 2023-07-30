@@ -44,10 +44,6 @@ export default {
     })
   },
   enhanceApp({ app }) {
-    // for (const name of Object.keys(components)) {
-    //   if (name.startsWith('Fn'))
-    //     app.component(name, components[name])
-    // }
     app.use(FusionUi)
     app.use(Icon)
     app.component('Demo', DemoBlock)
