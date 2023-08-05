@@ -1,0 +1,10 @@
+import { createApp } from 'vue'
+import './style.css'
+import Icon from 'fusion-ui-iconify'
+import fusionUi from '../../fusion-ui/components/index'
+import '../../fusion-ui/dist/styles/index.css'
+import '../../fusion-ui/components/input/src/index.less'
+import App from './App.vue'
+import 'virtual:uno.css'
+import 'uno.css'
+createApp(App).use(fusionUi).use(Icon).mount('#app')
