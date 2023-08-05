@@ -9,12 +9,8 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    PlAlert: typeof import('fusion-ui')['PlAlert']
-    PlBadge: typeof import('fusion-ui')['PlBadge']
-    PlButton: typeof import('fusion-ui/components/index')['PlButton']
-    PlButtonGroup: typeof import('fusion-ui/components/index')['PlButtonGroup']
-    PlIcon: typeof import('fusion-ui/components/index')['PlIcon']
-    PlModal: typeof import('fusion-ui')['PlModal']
-    PlTag: typeof import('fusion-ui')['PlTag']
+    FnButton: typeof import('fusion-ui-vue/components/index')['FnButton']
+    FnInput: typeof import('fusion-ui-vue/components/index')['FnInput']
+    FnDialog: typeof import('fusion-ui-vue/components/index')['FnDialog']
   }
 }
