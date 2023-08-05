@@ -14,10 +14,15 @@ export const propHeaderEn = [
 ]
 
 /** Event 表头 */
-export const eventHeader = [
-  { label: '名称', scope: { customRender: 'name' }, width: '140' },
+export const eventHeaderZh = [
+  { label: '事件名', scope: { customRender: 'name' }, width: '140' },
   { label: '说明', scope: { customRender: 'remark' } },
-  { label: '参数', scope: { customRender: 'params' } },
+  { label: '类型', scope: { customRender: 'type' } },
+]
+export const eventHeaderEn = [
+  { label: 'Name', scope: { customRender: 'name' }, width: '140' },
+  { label: 'Description', scope: { customRender: 'remark' } },
+  { label: 'Type', scope: { customRender: 'type' } },
 ]
 
 /** Method 表头 */
@@ -45,7 +50,8 @@ export const slotHeaderEn = [
 export const header = {
   propsZh: propHeaderZh,
   propsEn: propHeaderEn,
-  events: eventHeader,
+  eventsZh: eventHeaderZh,
+  eventsEn: eventHeaderEn,
   methods: methodHeader,
   slotsZh: slotHeaderZh,
   slotsEn: slotHeaderEn,
@@ -77,6 +83,8 @@ export interface EventTableItem {
   name: string
   /** 说明 */
   remark: string
+  /** 类型 */
+  type?: string
   /** 参数 */
   params?: string
   /** 版本号 */
