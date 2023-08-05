@@ -4,6 +4,7 @@
   "packageManager": "pnpm@7.5.2",
   "scripts": {
     "docs:dev": "pnpm -C docs run dev",
+    "dev": "pnpm -C packages/playground run dev",
     "docs:build": "pnpm run build && pnpm -C docs run build",
     "build": "pnpm run -C packages/fusion-ui build",
     "test": "vitest",
