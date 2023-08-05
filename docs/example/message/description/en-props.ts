@@ -8,10 +8,10 @@ const list: PropTableItem[] = [
     default: 'info',
   },
   {
-    name: 'timeout',
+    name: 'duration',
     remark: 'delay in closing',
     type: 'Number',
-    default: '3s',
+    default: '2s',
   },
   {
     name: 'closeBtn',

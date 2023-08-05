@@ -7,14 +7,14 @@
       <fn-button disabled type="outline">
         outline
       </fn-button>
+      <fn-button disabled type="dashed">
+        dashed
+      </fn-button>
       <fn-button disabled type="ghost">
         ghost
       </fn-button>
       <fn-button disabled type="link">
         link
-      </fn-button>
-      <fn-button disabled type="dashed">
-        dashed
       </fn-button>
     </div>
   </div>

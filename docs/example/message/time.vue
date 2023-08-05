@@ -4,14 +4,14 @@ import FnMessage from '../../../packages/fusion-ui/components/message/index'
 
 <template>
   <div class="container">
-    <FnButton @click="FnMessage({ message: '默认时长', type: 'success' })">
-      默认延迟2s
+    <FnButton @click="FnMessage({ message: 'Default delay 2s', type: 'success' })">
+      Default delay 2s
     </FnButton>
-    <FnButton @click="FnMessage({ message: '3秒时长', type: 'success', timeout: 3000 })">
-      延迟3s
+    <FnButton @click="FnMessage({ message: 'Delay 3s', type: 'success', duration: 3000 })">
+      Delay 3s
     </FnButton>
-    <FnButton @click="FnMessage({ message: '一直显示', type: 'success', timeout: 0, closeBtn: true })">
-      一直显示
+    <FnButton @click="FnMessage({ message: 'It keeps showing', type: 'success', duration: 0, closeBtn: true })">
+      It keeps showing
     </FnButton>
   </div>
 </template>

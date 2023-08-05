@@ -16,9 +16,9 @@ const dialogVisible = ref(false)
       <span>This is a message</span>
       <template #footer>
         <span class="dialog-footer">
-          <fn-button type="outline" @click="dialogVisible = false">取消</fn-button>
+          <fn-button type="outline" @click="dialogVisible = false">Cancel</fn-button>
           <fn-button @click="dialogVisible = false">
-            确定
+            Confirm
           </fn-button></span>
       </template>
     </fn-dialog>

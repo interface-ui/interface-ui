@@ -4,8 +4,8 @@ import FnMessage from '../../../packages/fusion-ui/components/message/index'
 
 <template>
   <div class="container">
-    <FnButton @click="FnMessage({ message: '一条消息' })">
-      一条消息
+    <FnButton @click="FnMessage({ message: 'this is a message.' })">
+      Show message
     </FnButton>
   </div>
 </template>

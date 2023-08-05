@@ -4,17 +4,17 @@ import FnMessage from '../../../packages/fusion-ui/components/message/index'
 
 <template>
   <div class="container">
-    <FnButton @click="FnMessage({ message: '默认' })">
-      默认
+    <FnButton @click="FnMessage({ message: 'Default' })">
+      Default
     </FnButton>
-    <FnButton state="success" @click="FnMessage({ message: '成功', type: 'success' })">
-      成功
+    <FnButton state="success" @click="FnMessage({ message: 'Congrats, this is a success message.', type: 'success' })">
+      Success
     </FnButton>
-    <FnButton state="warning" @click="FnMessage({ message: '警告', type: 'warning' })">
-      警告
+    <FnButton state="warning" @click="FnMessage({ message: 'Warning, this is a warning message.', type: 'warning' })">
+      Warning
     </FnButton>
-    <FnButton state="danger" @click="FnMessage({ message: '错误', type: 'danger' })">
-      错误
+    <FnButton state="danger" @click="FnMessage({ message: 'Oops, this is a error message.', type: 'danger' })">
+      Error
     </FnButton>
   </div>
 </template>
