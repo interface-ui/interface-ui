@@ -37,25 +37,6 @@ export const useDialog = (
     return style
   })
 
-  function afterEnter() {
-    emit('opened')
-  }
-
-  function beforeLeave() {
-    emit('close')
-  }
-
-  //   function open() {
-  //     closeTimer?.()
-  //     openTimer?.()
-
-  //     if (props.openDelay && props.openDelay > 0)
-  //       ({ stop: openTimer } = useTimeoutFn(() => doOpen(), props.openDelay))
-
-  //     else
-  //       doOpen()
-  //   }
-
   function close() {
     doClose()
   }
@@ -88,21 +69,11 @@ export const useDialog = (
     emit(UPDATE_MODEL_EVENT, false)
   }
 
-  function onFocusoutPrevented(event: CustomEvent) {
-    if (event.detail?.focusReason === 'pointer')
-      event.preventDefault()
-  }
-
   watch(
     () => props.modelValue,
     (val) => {
       if (val) {
         doOpen()
-        // nextTick(() => {
-        //   emit('open')
-        //   if (targetRef.value)
-        //     targetRef.value.scrollTop = 0
-        // })
       }
       else {
         if (visible.value)
@@ -132,13 +103,10 @@ export const useDialog = (
   })
 
   return {
-    afterEnter,
-    beforeLeave,
     handleClose,
     onModalClick,
     close,
     doClose,
-    onFocusoutPrevented,
     overlayDialogStyle,
     visible,
   }

@@ -1,4 +1,4 @@
-import type { ExtractPropTypes, PropType } from 'vue'
+import type { PropType } from 'vue'
 import type { ComponentState } from '../../type'
 
 export type ButtonNativeType = 'button' | 'reset' | 'submit'
@@ -10,6 +10,7 @@ export type ButtonType =
   | 'ghost'
   | 'diplonema'
   | 'link'
+  | 'dashed'
 
 export const buttonProps = {
   type: {
@@ -43,4 +44,4 @@ export const buttonProps = {
   disabled: Boolean,
 }
 
-export type ButtonProps = ExtractPropTypes<typeof buttonProps>
+// export type ButtonProps = ExtractPropTypes<typeof buttonProps>

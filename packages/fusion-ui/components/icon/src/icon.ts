@@ -7,6 +7,7 @@ export const iconProps = {
   },
   size: {
     type: String,
+    default: '16',
     required: false,
   },
   color: {

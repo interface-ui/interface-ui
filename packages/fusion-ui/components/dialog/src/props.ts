@@ -1,9 +1,3 @@
-export interface LMessageProps {
-  message: string
-  timeout?: number
-  offset?: number
-  closeBtn?: boolean
-}
 export const dialogProps = {
   modelValue: Boolean,
   title: String,

@@ -6,7 +6,7 @@ import type { MessageType } from './types'
 const props = withDefaults(
   defineProps<{
     message: string
-    timeout: number
+    duration: number
     id: string
     showIcon: boolean
     offset: number
@@ -15,7 +15,7 @@ const props = withDefaults(
   }>(),
   {
     type: 'info',
-    timeout: 2000,
+    duration: 2000,
     offset: 20,
     closeBtn: false,
     showIcon: true,
@@ -29,12 +29,12 @@ const elRef = ref<HTMLDivElement>()
 let clearTimer = noop
 
 function startTimer() {
-  if (props.timeout === 0)
+  if (props.duration === 0)
     return
   ;({ stop: clearTimer } = useTimeoutFn(() => {
     visible.value = false
     clearTimer = noop
-  }, props.timeout))
+  }, props.duration))
 }
 
 onMounted(() => {
