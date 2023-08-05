@@ -1,11 +1,12 @@
 {
   "name": "fusion-ui-vue",
-  "version": "1.0.72",
+  "version": "1.0.73",
   "description": "A Component Library for Vue 3",
   "author": "tsinghua-lau",
   "license": "MIT",
   "keywords": [
-    "fusion-ui"
+    "fusion-ui-vue",
+    "vue3"
   ],
   "sideEffects": [
     "dist/**/*.css",
@@ -13,7 +14,7 @@
   ],
   "main": "dist/lib/index.js",
   "module": "dist/es/index.mjs",
-  "types": "dist/es/index.d.ts",
+  "types": "dist/types/components/index.d.ts",
   "files": [
     "dist"
   ],
