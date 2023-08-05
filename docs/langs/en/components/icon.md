@@ -9,9 +9,9 @@ lang: en
 
 # Icon
 
-Integration of thousands of commonly used icons from Iconify.
+Integration of thousands of commonly used icons from Iconify. [```Iconify```](https://iconify.design/) https://iconify.design/
 
-* If you want to use it directly like a use case, you need to perform a simple operation to use it directly in your project.
+If you want to use it directly like a use case, you need to perform a simple operation to use it directly in your project.
 
 ## Installation
 

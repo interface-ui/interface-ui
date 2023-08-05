@@ -27,7 +27,7 @@ lang: zh
 
 ## 宽度与位置
 
- ```width``` ```top``` 来控制 Dialog 的宽度和距离上面的距离，```center``` 可以让 Dialog 居中显示。
+ ```width``` 、```top``` 来控制 Dialog 的宽度和距离上面的距离，```center``` 可以让 Dialog 居中显示。
 
 <demo src="../../../example/dialog/size-positon.vue"></demo>
 

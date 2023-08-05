@@ -15,8 +15,8 @@ export const enComponents = [
         link: '/langs/en/components/link',
       },
       {
-        text: 'Dialog',
-        link: '/langs/en/components/dialog',
+        text: 'input',
+        link: '/langs/en/components/input',
       },
     ],
   },
@@ -55,6 +55,11 @@ export const zhComponents = [
         collapsible: false,
         text: 'Link 链接',
         link: '/langs/zh/components/link',
+      },
+      {
+        collapsible: false,
+        text: 'Input 输入框',
+        link: '/langs/zh/components/input',
       },
     ],
   },

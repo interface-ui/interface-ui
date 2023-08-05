@@ -1,9 +1,10 @@
 import { h, onMounted } from 'vue'
 import theme from 'vitepress/theme'
 import Icon from 'fusion-ui-iconify'
-import FusionUi from '../../../packages/fusion-ui/components/index.ts'
+import FusionUi from '../../../packages/fusion-ui/components/index'
 import '../../../packages/fusion-ui/dist/styles/index.css'
 import '../../../packages/fusion-ui/components/dialog/src/index.less'
+import '../../../packages/fusion-ui/components/input/src/index.less'
 
 // import '../../../packages/fusion-ui/components/link/src/index.less'
 // import '../../../packages/fusion-ui/components/message/src/index.less'

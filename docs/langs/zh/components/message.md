@@ -9,9 +9,11 @@ lang: zh
 </script>
 
 # Message 消息提示
-常用于主动操作后的反馈提示。
+常用于主动操作后的反馈提示，鼠标悬停时消息不消失，鼠标移出后开始倒计时，倒计时结束后消息自动消失。
 
 ## 基础用法
+
+调用 ```FnMessage``` 方法，传入 ```message``` 参数即可。
 <demo src="../../../example/message/base.vue"></demo>
 
 ## 不同状态

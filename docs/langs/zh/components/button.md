@@ -14,7 +14,7 @@ lang: zh
 
 # 基础用法
 
-使用 type、plain、round 和 circle 来定义按钮的样式。
+使用 `type`、`plain`、`round` 、`circle` 、`dashed` 和 `diplonema` 来定义按钮的样式。
 
 <demo src="../../../example/button/types.vue"></demo>
 
@@ -22,7 +22,7 @@ lang: zh
 
 除了默认的大小，按钮组件还提供了几种额外的尺寸可供选择，以便适配不同的场景。
 
-使用 size 属性额外配置尺寸，可使用 minid、small、medium 和large四种值。
+使用 size 属性额外配置尺寸，可使用 `minid`、`small`、`medium` 和 `large` 四种值。
 
 <demo src="../../../example/button/sizes.vue"></demo>
 
