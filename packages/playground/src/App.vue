@@ -18,10 +18,17 @@ const changTheme = () => {
   }
 }
 const aa = ref('')
+const ccc = ref(2)
+const ccc1 = ref(1)
 
 const vvv = (a: any) => {
   consola.log('@', a)
 }
+const optionList = [
+  { value: 0, label: '选项一' },
+  { value: 1, label: '选项二' },
+  { value: 3, label: '选项二' },
+]
 </script>
 
 <template>
@@ -32,12 +39,11 @@ const vvv = (a: any) => {
         {{ button }}
       </fn-button>
       <br>
-      <fn-input v-model="aa" clearable type="text" @focus="vvv" />
-      ---{{ aa }}
-      <fn-input v-model="aa" placeholder="123" clearable type="text" prefix-icon="material-symbols:10k-rounded" suffix-icon="ri:mv-line" />
-      ---
-      <br>
-      <fn-input v-model="aa" type="textarea" clearable placeholder="请输入" width="400" />
+      <fn-radio v-model="ccc1" :value="ccc">
+        Radio
+      </fn-radio>
+
+      <fn-radio v-model="ccc1" :option-list="optionList" />
     </div>
   </div>
 </template>

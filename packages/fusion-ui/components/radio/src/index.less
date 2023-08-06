@@ -1,11 +1,43 @@
 [data-theme="light"] .fn-radio,
 .fn-radio[data-theme="light"] {
-  --fn-default-text-color: #374151;
+  --fn-label-text-color: #374151;
   font-size: 14px;
 }
 
 [data-theme="dark"] .fn-radio,
 .fn-radio[data-theme="dark"] {
-  --fn-default-text-color: #afbdd5;
+  --fn-label-text-color: #afbdd5;
   font-size: 14px;
+}
+
+.fn-radio{
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  transition: all 0.2s;
+  >.fn-radio-inner{
+    display: none;
+  }
+  >.fn-radio-check{
+    display: inline-block;
+    border: 1px solid var(--fn-label-text-color);
+    border-radius: 50%;
+    width: 13px;
+    height: 13px;
+    margin: 0;
+  }
+  >.fn-radio-is-check{
+    border: 5px solid #409eff;
+  }
+  >.fn-radio-label{
+    color: var(--fn-label-text-color);
+    margin-left: 5px;
+  }
+}
+
+.fn-radio-group{
+  display: flex;
+  > div:not(:last-child) {
+    margin-right: 10px;
+  }
 }

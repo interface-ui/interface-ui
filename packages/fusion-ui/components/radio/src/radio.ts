@@ -1,35 +1,39 @@
-import type { ExtractPropTypes } from 'vue'
-export type linkType =
+// import type {  } from 'vue'
+import { UPDATE_MODEL_EVENT } from '../../../constans/event'
+
+export type arr =
   | 'default'
   | 'primary'
   | 'success'
   | 'warning'
   | 'danger'
   | 'info'
-export const linkProps = {
-  type: {
-    type: String as () => linkType,
-    default: 'default',
+interface MyObject {
+  label: string
+  value: string | number
+  // 其他属性...
+}
+export const radioProps = {
+  modelValue: {
+    type: [String, Number],
+    default: '',
+  },
+  value: {
+    type: [String, Number],
+    default: '',
+  },
+  optionList: {
+    type: Array<MyObject>,
+    default: () => [],
   },
   disabled: {
     type: Boolean,
     required: false,
   },
-  underline: {
-    type: Boolean,
-    default: true,
-    required: false,
-  },
-  href: {
-    type: String,
-    required: false,
-  },
-  icon: {
-    type: String,
-    required: false,
-  },
 }
-export const linkEmits = {
+const isString = (data: any): boolean => typeof data === 'string'
+
+export const radioEmits = {
+  [UPDATE_MODEL_EVENT]: (value: string) => true,
   click: (evt: MouseEvent) => evt instanceof MouseEvent,
 }
-export type LlinkProps = ExtractPropTypes<typeof linkProps>
