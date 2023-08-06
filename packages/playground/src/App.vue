@@ -27,13 +27,14 @@ const vvv = (a: any) => {
 <template>
   <div class=" flex w-100% justify-between">
     <div class="content">
+      111
       <fn-button @click="changTheme">
         {{ button }}
       </fn-button>
       <br>
       <fn-input v-model="aa" clearable type="text" @focus="vvv" />
       ---{{ aa }}
-      <fn-input v-model="aa" placeholder="123" disabled clearable type="text" prefix-icon="material-symbols:10k-rounded" suffix-icon="ri:mv-line" />
+      <fn-input v-model="aa" placeholder="123" clearable type="text" prefix-icon="material-symbols:10k-rounded" suffix-icon="ri:mv-line" />
       ---
       <br>
       <fn-input v-model="aa" type="textarea" clearable placeholder="请输入" width="400" />
