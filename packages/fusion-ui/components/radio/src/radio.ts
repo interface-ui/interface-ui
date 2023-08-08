@@ -24,7 +24,7 @@ export const radioProps = {
     default: true,
   },
   optionList: {
-    type: Array<OptionType>,
+    type: Array as () => OptionType[],
     default: () => [],
   },
   disabled: {
