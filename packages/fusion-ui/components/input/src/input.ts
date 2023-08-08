@@ -1,7 +1,7 @@
 import type { ExtractPropTypes, PropType } from 'vue'
 import { UPDATE_MODEL_EVENT } from '../../../constans/event'
 
-export type InputType = 'text' | 'textarea' | 'password'
+export type InputType = 'text' | 'textarea' | 'password' | 'number'
 export type value = string | number
 export type InputHeight = string | number
 
