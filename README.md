@@ -4,9 +4,14 @@
 <img  width="120px" height="100px"  src="https://img-blog.csdnimg.cn/99f1d53fa0b244809eee1a8a359e3261.png#pic_center" >
 </p>
 <h1 align="center">Fusion UI</h1>
-<p align="center">Fusion Ui /ˈfjuːʒ(ə)n/ 是一个 Vue3 组件库，简洁、优雅、美观，帮助你快速构建网站。</p>
+<p align="center">Fusion Ui /ˈfjuːʒ(ə)n/ 是一个 Vue3 组件库，简洁、优雅、美观</p>
 </p>
 
+## 简介
+
+由于它刚起步，还在慢慢完善中，因此不建议用于``生产``环境中
+
+如果想学习Vue3+Ts+Vite组件库的搭建，那么它会是一个不错的选择。
 
 ## 特性
 
@@ -29,12 +34,90 @@ $ npm install fusion-ui-vue
 # yarn
 $ yarn add fusion-ui-vue
 
+```
+
+## 使用
+
+```
+import { createApp } from 'vue'
+import fusionUi from 'fusion-ui-vue'
+import 'fusion-ui-vue/dist/styles/index.css'
+import App from './App.vue'
+
+const app = createApp(App)
+app.use(fusionUi).mount('#app')
 
 ```
 
-## 文档
+## 配套文档
 
 - [DOCS](https://tsinghua-lau.github.io/fusion-ui/#/)
+
+## 仓库目录
+```bash
+
+├─ .github                  # 模块化配置
+│  ├─ workflows             # 工作流 github actions
+├─ .husky                   # 提交规则 git hooks
+├─ .vscode                  # vscode 配置
+├─ docs                     # 组件库文档
+│  ├─ .vitepress            # 文档配置
+│       ├─ components       # 组件库文档组件
+│       ├─ configuration    # 文档页面结构
+│       ├─ dist             # 文档打包后的文件
+│       ├─ plugins          # 文档插件
+│       ├─ theme            # 文档主题
+│       ├─ config.ts        # VitePress 配置
+│  ├─ examples              # 组件库示例代码
+│  ├─ langs                 # 文档多语言
+│  ├─ components.d          # 文档组件类型声明
+│  ├─ package.json          # package.json
+│  ├─ tsconfig.json         # tsconfig 配置
+├─ ├─ unocss.config.ts      # unocss 配置
+│
+├─ packages                 # 组件库代码
+│  ├─ fusion-ui             # 组件库发布包
+│     ├─ build              # 构建配置
+│     ├─ components         # 组件库核心代码
+│     ├─ constans           # 常量
+│     ├─ styles             # 通用样式
+│     ├─ utils              # 通用方法
+│     ├─ package.json       # package.json
+│     ├─ vite.config.ts     # vite 配置
+│  ├─ playground            # 组件库演练场
+├─ scripts                  # 脚本
+├─ .gitignore               # git 忽略
+├─ CODE_OF_CONDUCT          # 行为公约
+├─ CONTRIBUTING             # 贡献指南
+├─ LICENSE                  # 开源协议
+├─ package.json             # package.json
+├─ README.md                # 介绍
+├─ tsconfig.base.json       # tsconfig 配置
+├─ tsconfig.json            # tsconfig 配置
+├─ vitest.config.ts         # vitest 测试配置
+
+```
+
+## 启动
+  - 进入根目录
+
+  ```
+    pnpm i
+  ```
+ 
+  - 进入 `packages/fusion-ui` 目录
+   ```
+    pnpm i
+  ```
+  - 根目录启动组件库
+  ```
+    pnpm run docs:dev
+  ```
+  - 根目录启动组件库演练场
+  ```
+    pnpm run play:dev
+  ```
+
 
 ## 兼容性
 
