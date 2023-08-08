@@ -12,5 +12,6 @@ declare module '@vue/runtime-core' {
     FnButton: typeof import('fusion-ui-vue/components/index')['FnButton']
     FnInput: typeof import('fusion-ui-vue/components/index')['FnInput']
     FnDialog: typeof import('fusion-ui-vue/components/index')['FnDialog']
+    FnRadio: typeof import('fusion-ui-vue/components/index')['FnRadio']
   }
 }

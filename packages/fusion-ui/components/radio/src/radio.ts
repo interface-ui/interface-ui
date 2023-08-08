@@ -1,17 +1,10 @@
-// import type {  } from 'vue'
+import type { ExtractPropTypes } from 'vue'
 import { UPDATE_MODEL_EVENT } from '../../../constans/event'
 
-export type arr =
-  | 'default'
-  | 'primary'
-  | 'success'
-  | 'warning'
-  | 'danger'
-  | 'info'
 interface MyObject {
   label: string
   value: string | number
-  // 其他属性...
+  disabled?: boolean
 }
 export const radioProps = {
   modelValue: {
@@ -21,6 +14,14 @@ export const radioProps = {
   value: {
     type: [String, Number],
     default: '',
+  },
+  color: {
+    type: String,
+    default: '',
+  },
+  horizontal: {
+    type: Boolean,
+    default: true,
   },
   optionList: {
     type: Array<MyObject>,
@@ -34,6 +35,10 @@ export const radioProps = {
 const isString = (data: any): boolean => typeof data === 'string'
 
 export const radioEmits = {
-  [UPDATE_MODEL_EVENT]: (value: string) => true,
+  [UPDATE_MODEL_EVENT]: (value: string) => isString(value),
   click: (evt: MouseEvent) => evt instanceof MouseEvent,
+  change: (value: string) => false,
 }
+
+/** RadioProps 组件 props 类型 */
+export type RadioProps = ExtractPropTypes<typeof radioProps>

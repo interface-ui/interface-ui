@@ -5,6 +5,7 @@ import FnMessage from './message'
 import FnDialog from './dialog'
 import FnInput from './input'
 import FnRadio from './radio'
+export * from './_hooks'
 export * from './button'
 export * from './icon'
 export * from './link'
@@ -22,7 +23,6 @@ const CK = {
   install(App: any) {
     component.forEach((item) => {
       console.log(item.name)
-
       App.component(item.name, item)
     })
   },

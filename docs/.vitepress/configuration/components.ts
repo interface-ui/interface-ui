@@ -18,6 +18,10 @@ export const enComponents = [
         text: 'input',
         link: '/langs/en/components/input',
       },
+      {
+        text: 'radio',
+        link: '/langs/en/components/radio',
+      },
     ],
   },
   {
@@ -60,6 +64,11 @@ export const zhComponents = [
         collapsible: false,
         text: 'Input 输入框',
         link: '/langs/zh/components/input',
+      },
+      {
+        collapsible: false,
+        text: 'Radio 单选框',
+        link: '/langs/zh/components/radio',
       },
     ],
   },

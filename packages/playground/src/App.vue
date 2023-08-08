@@ -27,8 +27,11 @@ const vvv = (a: any) => {
 const optionList = [
   { value: 0, label: '选项一' },
   { value: 1, label: '选项二' },
-  { value: 3, label: '选项二' },
+  { value: 3, label: '选项二', disabled: true },
 ]
+const pp = (p: any) => {
+  console.log(p)
+}
 </script>
 
 <template>
@@ -39,11 +42,11 @@ const optionList = [
         {{ button }}
       </fn-button>
       <br>
-      <fn-radio v-model="ccc1" :value="ccc">
+      <fn-radio v-model="ccc1" color="red" :value="ccc" @change="pp">
         Radio
       </fn-radio>
 
-      <fn-radio v-model="ccc1" :option-list="optionList" />
+      <fn-radio v-model="ccc1" :horizontal="true" :option-list="optionList" @change="pp" />
     </div>
   </div>
 </template>

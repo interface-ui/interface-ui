@@ -2,7 +2,11 @@
 
 ## 介绍
 
-Fusion Ui 是一个 Vue3 组件库，简洁、优雅、美观，帮助你快速构建网站。
+Fusion Ui 是一个 Vue3 组件库，简洁、优雅、美观
+
+由于它刚起步，还在慢慢完善中，因此不建议用于生产环境中
+
+如果想学习Vue3+Ts+Vite组件库的搭建，那么它会是一个不错的选择。
 
 ## 特性
 
@@ -14,9 +18,6 @@ Fusion Ui 是一个 Vue3 组件库，简洁、优雅、美观，帮助你快速�
 - 📃 详细的中/英文档
 - 🛠  More...
 
-
-  <!-- - 💡 Cli Build - Easy to create repo with Play Cli. -->
-  <!-- - ⚙️ Theme Config - Support theme config to customize theme. -->
 
 ## 兼容性
 
