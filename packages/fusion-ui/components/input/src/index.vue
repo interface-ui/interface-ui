@@ -65,7 +65,7 @@ const handleFocus = (event: Event) => {
  */
 const handleChange = (event: Event) => {
   const { value } = event.target as TargetElement
-  emit('focus', value)
+  emit('change', value)
 }
 </script>
 
