@@ -1,4 +1,4 @@
-import type { ComputedRef,CSSProperties } from 'vue'
+import type { ComputedRef } from 'vue'
 import { computed } from 'vue'
 import type { RadioProps } from '../../radio/src/radio'
 

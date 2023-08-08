@@ -6,7 +6,7 @@ import type { RadioProps } from '../../radio/src/radio'
 export type ClassList = (string | Record<string, unknown>)[]
 
 /**
- * useButton 返回值类型接口
+ * useRadio 返回值类型接口
  *
  * @param { Object } classList 类名列表
  * @param { Object } styleList 样式列表
@@ -14,6 +14,16 @@ export type ClassList = (string | Record<string, unknown>)[]
 export interface UseRadioReturn {
   classList: ComputedRef<ClassList>
   styleList: ComputedRef<CSSProperties>
+}
+
+/**
+ * useRadioGroup 返回值类型接口
+ *
+ * @param { Object } classList 类名列表
+ * @param { Object } styleList 样式列表
+ */
+export interface UseRadioGroupReturn {
+  classList: ComputedRef<ClassList>
 }
 
 /**
@@ -59,7 +69,7 @@ export const useRadio = (prop: RadioProps): UseRadioReturn => {
  * @param prop
  * @returns
  */
-export const useRadioGroup = (prop: RadioProps): UseRadioReturn => {
+export const useRadioGroup = (prop: RadioProps): UseRadioGroupReturn => {
   /** 类名列表 */
   const classList = computed((): ClassList => {
     return [

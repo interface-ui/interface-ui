@@ -1,7 +1,7 @@
 import type { ExtractPropTypes } from 'vue'
 import { UPDATE_MODEL_EVENT } from '../../../constans/event'
 
-interface MyObject {
+interface OptionType {
   label: string
   value: string | number
   disabled?: boolean
@@ -24,7 +24,7 @@ export const radioProps = {
     default: true,
   },
   optionList: {
-    type: Array<MyObject>,
+    type: Array<OptionType>,
     default: () => [],
   },
   disabled: {

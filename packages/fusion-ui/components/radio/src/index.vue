@@ -39,7 +39,7 @@ const isChecked = computed(() => {
   </div>
 
   <div v-else :class="classListGrpup">
-    <template v-for="(it, idx) in props.optionList" :key="idx">
+    <template v-for="it in props.optionList" :key="it">
       <div :class="[classList, it.disabled ? 'is-disabled' : '']" @click="handleGroupInput(it)">
         <input type="radio" class="fn-radio-inner">
         <span class="fn-radio-check" :style="styleList" :class="{ 'is-checked': props.modelValue === it.value }" />
