@@ -39,6 +39,27 @@ Get an input box that can switch the hidden password through the ```type``` attr
 
 <demo src="../../../example/input/password.vue"></demo>
 
+## Number
+
+Get an input box that can only input number through the ```number``` attribute.
+
+<demo src="../../../example/input/number.vue"></demo>
+
+## Textarea
+
+Get an textarea input box use  ```textarea``` attribute.
+
+textarea don't have ```clearable``` 、 ```prefixIcon``` and ```suffixIcon``` attribute
+
+<demo src="../../../example/input/textarea.vue"></demo>
+
+## Textarea Disabled
+
+Use ```disabled``` attribute to disabled textarea input box.
+
+<demo src="../../../example/input/disabled-textarea.vue"></demo>
+
+
 ## Attributes
 <table-block type="propsEn" :data="props"></table-block>
 

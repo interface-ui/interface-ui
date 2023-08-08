@@ -35,7 +35,7 @@ const list: PropTableItem[] = [
     name: 'type',
     remark: 'Type of input box',
     type: 'Enum',
-    optional: ['text', 'password'],
+    optional: ['text', 'password', 'textarea', 'number'],
     default: 'text',
   },
 ]

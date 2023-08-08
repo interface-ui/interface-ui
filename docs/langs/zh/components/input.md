@@ -40,6 +40,13 @@ lang: zh
 
 <demo src="../../../example/input/password.vue"></demo>
 
+
+## 数字框
+
+通过 ```number``` 属性得到一个可以只允许输入数字的输入框
+
+<demo src="../../../example/input/number.vue"></demo>
+
 ## 文本框
 
 通过 ```textarea``` 属性将输入框变为文本域
