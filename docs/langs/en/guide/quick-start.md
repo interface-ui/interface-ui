@@ -2,7 +2,11 @@
 
 ## Introduction
 
-Fusion Ui is a Vue3 component library, which is simple, elegant and beautiful to help you build your website quickly.
+Fusion Ui is a Vue3 component library that is simple, elegant, and aesthetically pleasing
+
+Due to its initial development and gradual improvement, it is not recommended for use in production environments
+
+If you want to learn how to build the Vue3+Ts+Vite component library, it will be a good choice
 
 ## Features
 

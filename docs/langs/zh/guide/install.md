@@ -1,6 +1,8 @@
 # 安装使用
 
-正确安装和使用 FusionUI。
+正确安装和使用 FusionUI
+
+ 推荐使用 ``自动导入`` 的方式来引入组件，简单快速。
 
 ## 获取安装包
 
@@ -39,7 +41,6 @@ app.mount('#app')
 
 ```ts
 import { FnButton } from 'fusion-ui-vue'
-import 'fusion-ui-vue/dist/styles/base.css'
 import 'fusion-ui-vue/dist/styles/button/src/index.css'
 ```
 

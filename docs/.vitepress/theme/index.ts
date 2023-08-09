@@ -1,16 +1,22 @@
 import { h, onMounted } from 'vue'
 import theme from 'vitepress/theme'
-import Icon from 'fusion-ui-iconify'
+// import Icon from 'fusion-ui-iconify'
 import FusionUi from '../../../packages/fusion-ui/components/index'
-// import '../../../packages/fusion-ui/dist/styles/index.css'
-import '../../../packages/fusion-ui/components/dialog/src/index.less'
-import '../../../packages/fusion-ui/components/input/src/index.less'
-import '../../../packages/fusion-ui/components/radio/src/index.less'
 
-// import '../../../packages/fusion-ui/components/link/src/index.less'
-// import '../../../packages/fusion-ui/components/message/src/index.less'
+// 导入本地全量打包样式--测试
+import '../../../packages/fusion-ui/dist/styles/index.css'
+
+// 导入本地源码样式--测试
+// import '../../../packages/fusion-ui/styles/base.less' // 基础样式
+// import '../../../packages/fusion-ui/components/dialog/src/index.less'
+// import '../../../packages/fusion-ui/components/input/src/index.less'
+// import '../../../packages/fusion-ui/components/radio/src/index.less'
+// import '../../../packages/fusion-ui/components/button/src/index.less'
+
+// 导入 npm 包
 // import FusionUi from 'fusion-ui-vue'
 // import 'fusion-ui-vue/dist/styles/index.css'
+
 import DemoBlock from '../components/demo-block'
 import TableBlock from '../components/table-block'
 import TeamMember from '../components/team-member'
@@ -28,7 +34,7 @@ export default {
       const toggleTheme = () => {
         if (html.classList.contains('dark'))
           html.setAttribute('data-theme', 'dark')
-        else html.setAttribute('data-theme', 'light')
+        else html.removeAttribute ('data-theme')
       }
 
       toggleTheme()
@@ -47,7 +53,7 @@ export default {
   },
   enhanceApp({ app }) {
     app.use(FusionUi)
-    app.use(Icon)
+    // app.use(Icon)
     app.component('Demo', DemoBlock)
     app.component('BpTable', BpTable)
     app.component('TableBlock', TableBlock)

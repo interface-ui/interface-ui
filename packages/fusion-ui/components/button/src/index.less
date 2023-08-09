@@ -1,10 +1,13 @@
+@import "../../../styles/base.less";
 [data-theme="light"] .fn-button,
-.fn-button[data-theme="light"] {
+.fn-button[data-theme="light"],
+.fn-button {
   --fn-white-text-color: #374151;
   --fn-white-text-hover-color: #374151;
   --fn-white-border-color: hsl(220, 13%, 91%);
-  --fn-white-hover-color: #f9fafb;
+  --fn-white-hover-color: #ecf5ff;
   --fn-button-border-color-outline: #c6e2ff;
+  --fn-button-bg-color-outline: #fff;
   font-size: 14px;
 }
 
@@ -15,6 +18,7 @@
   --fn-white-border-color: #374151;
   --fn-white-hover-color: #1e293b;
   --fn-button-border-color-outline: #4C4D4F;
+  --fn-button-bg-color-outline: transparent;
   font-size: 14px;
 }
 
@@ -95,7 +99,7 @@
     --fn-button-text-hover-color: var(--fn-button-color);
     --fn-button-border-color:var(--fn-button-border-color-outline);
     --fn-button-border-hover-color:var(--fn-button-border-color-outline);
-    --fn-button-bg-color: transparent;
+    --fn-button-bg-color: var(--fn-button-bg-color-outline);
     --fn-button-bg-hover-color: var(--fn-white-hover-color);
     --fn-button-disabled-text-color: var(--fn-white-text-color);
     --fn-button-disabled-border-color: var(--fn-button-border-color-outline);
@@ -130,15 +134,17 @@
   }
 
   &--dashed {
-    --fn-button-text-color: var(--fn-button-color);
-    --fn-button-text-hover-color: var(--fn-button-hover-color);
-    --fn-button-border-color: var(--fn-button-color);
-    --fn-button-border-hover-color: var(--fn-button-hover-color);
-    --fn-button-border-style: dashed !important;
-    --fn-button-border-width: 2px !important;
-    --fn-button-disabled-text-color: var(--fn-button-color);
+    --fn-button-text-color:var(--fn-white-text-color);
+    --fn-button-text-hover-color: var(--fn-button-color);
+    --fn-button-border-color:var(--fn-button-border-color-outline);
+    --fn-button-border-hover-color:var(--fn-button-border-color-outline);
+    --fn-button-bg-color: var(--fn-button-bg-color-outline);
+    --fn-button-bg-hover-color: var(--fn-white-hover-color);
+    --fn-button-disabled-text-color: var(--fn-white-text-color);
+    --fn-button-disabled-border-color: var(--fn-button-border-color-outline);
     --fn-button-disabled-bg-color: transparent;
-    --fn-button-disabled-border-color: var(--fn-button-color);
+    --fn-button-border-width: 2px !important;
+    --fn-button-border-style: dashed !important;
   }
 
   &--diplonema{
@@ -190,12 +196,12 @@
   border-radius: var(--fn-border-radius);
   color: var(--fn-button-text-color);
   border-color: var(--fn-button-border-color);
-  background-color: var(--fn-button-bg-color);
+  background-color: var(--fn-button-bg-color) !important;
   border-style: var(--fn-button-border-style);
 
   &:hover {
     color: var(--fn-button-text-hover-color);
     border-color: var(--fn-button-border-hover-color);
-    background-color: var(--fn-button-bg-hover-color);
+    background-color: var(--fn-button-bg-hover-color)  !important;
   }
 }

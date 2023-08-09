@@ -1,6 +1,8 @@
+@import "../../../styles/base.less";
 [data-theme="light"] .fn-radio,
-.fn-radio[data-theme="light"] {
-  --fn-label-text-color: #374151;
+.fn-radio[data-theme="light"],
+.fn-radio {
+  --fn-label-text-color: #606266;
   font-size: 14px;
 }
 
@@ -54,16 +56,16 @@
   cursor:not-allowed;
 }
 
-// .fn-radio-group{
-//   > div:not(:last-child) {
-//     margin-bottom: 5px;
-//     margin-right: 10px;
-//   }
-// }
+.fn-radio-group{
+  > div:not(:last-child) {
+    margin-bottom: 5px;
+  }
+}
 .is-horizontal{
   display: flex;
   align-items: center;
   > div:not(:last-child) {
     margin-right: 10px;
+    margin-bottom: 0;
   }
 }

@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import { FnMessage } from 'fusion-ui-vue'
+import { Icon } from 'fusion-ui-iconify'
 const button = ref('晚上')
 
 const changTheme = () => {
@@ -21,9 +23,6 @@ const aa = ref('')
 const ccc = ref(2)
 const ccc1 = ref(1)
 
-const vvv = (a: any) => {
-  consola.log('@', a)
-}
 const optionList = [
   { value: 0, label: '选项一' },
   { value: 1, label: '选项二' },
@@ -32,11 +31,35 @@ const optionList = [
 const pp = (p: any) => {
   console.log(p)
 }
+const dialogVisible = ref(false)
 </script>
 
 <template>
   <div class=" flex w-100% justify-between">
+    123
+    <Icon icon="ei:pointer" size="28px" color="red" />
+    222
+    <fn-input v-model="aa" placeholder="Please input" prefix-icon="twemoji:calendar" />
     <div class="content">
+      <FnButton @click="FnMessage({ message: 'this is a message.' })">
+        Show message
+      </FnButton>
+      <fn-button type="outline" @click=" dialogVisible = true">
+        open Dialog
+      </fn-button>
+      <fn-dialog
+        v-model="dialogVisible"
+        title="Tips"
+      >
+        <span>This is a message</span>
+        <template #footer>
+          <span class="dialog-footer">
+            <fn-button type="outline" @click="dialogVisible = false">Cancel</fn-button>
+            <fn-button @click="dialogVisible = false">
+              Confirm
+            </fn-button></span>
+        </template>
+      </fn-dialog>
       111
       <fn-button @click="changTheme">
         {{ button }}

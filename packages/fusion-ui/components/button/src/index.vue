@@ -13,6 +13,12 @@ defineExpose({
 })
 </script>
 
+<script lang="ts">
+export default {
+  name: 'FnButton',
+}
+</script>
+
 <template>
   <button
     ref="buttonEl"

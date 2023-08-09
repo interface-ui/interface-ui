@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed, ref, toRefs } from 'vue'
+import { Icon } from 'fusion-ui-iconify/dist/dist.mjs'
 import { getSvgIncon, inputEmits, inputProps } from '../src/input'
 import { useInput } from '../src/use-input'
 import { UPDATE_MODEL_EVENT } from '../../../constans/event'
@@ -73,7 +74,7 @@ const handleChange = (event: Event) => {
   <div v-if="type === 'text' || type === 'password' || type === 'number' " ref="inputRef" class="fn-input" :style="overlayInputStyle" :class="[disabled && 'input-disabled']">
     <!-- 前部图标 -->
     <span v-if="prefixIcon" class="prefix-icon">
-      <fn-icon :icon="prefixIcon" color="pink" />
+      <Icon :icon="prefixIcon" color="pink" />
     </span>
 
     <!-- 输入框 -->
@@ -90,7 +91,7 @@ const handleChange = (event: Event) => {
     >
     <!-- 后部图标 -->
     <span v-if="suffixIcon" class="suffix-icon">
-      <fn-icon :icon="suffixIcon" color="#4e80ee" />
+      <Icon :icon="suffixIcon" color="#4e80ee" />
     </span>
 
     <!-- 眼睛图标 -->

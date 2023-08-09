@@ -1,12 +1,16 @@
+@import "../../../styles/base.less";
 [data-theme="light"] .dialog,
-.dialog[data-theme="light"] {
+.dialog[data-theme="light"],
+.dialog{
   --fn-dialog-bg-color: var(--fn-bd-light-bg);
+  --fn-dialog-text-color: var(--fn-slate-800);
   font-size: 14px;
 }
 
 [data-theme="dark"] .dialog,
 .dialog[data-theme="dark"] {
   --fn-dialog-bg-color:var(--fn-stone-1400);
+  --fn-dialog-text-color: var(--fn-slate-50);
   font-size: 14px;
 }
 
@@ -18,6 +22,7 @@
   left: 0;
   overflow: auto;
   z-index: 100;
+  background: rgba(0, 0, 0, .5);
   > .fn-overlay{
     width: var(--fn-dialog-width);
     position: absolute;
@@ -25,6 +30,7 @@
     left: 50%;
     top: var(--fn-dialog-top) !important;
     z-index: 200;
+    color: var(--fn-dialog-text-color);
     background-color: var(--fn-dialog-bg-color) !important;
   
     > .header{
