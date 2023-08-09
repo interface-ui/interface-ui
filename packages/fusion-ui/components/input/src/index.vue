@@ -70,7 +70,7 @@ const handleChange = (event: Event) => {
 </script>
 
 <template>
-  <div v-if="type === 'text' || type === 'password'" ref="inputRef" class="fn-input" :style="overlayInputStyle" :class="[disabled && 'input-disabled']">
+  <div v-if="type === 'text' || type === 'password' || type === 'number' " ref="inputRef" class="fn-input" :style="overlayInputStyle" :class="[disabled && 'input-disabled']">
     <!-- 前部图标 -->
     <span v-if="prefixIcon" class="prefix-icon">
       <fn-icon :icon="prefixIcon" color="pink" />
