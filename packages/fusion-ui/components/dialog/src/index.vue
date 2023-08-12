@@ -8,14 +8,15 @@ const props = defineProps(dialogProps)
 const emit = defineEmits(dialogkEmits)
 const { showClose } = toRefs(props)
 
-const containerRef = ref(null)
+const containerRef = ref<HTMLElement>()
 const targetDivRef = ref(null)
 const dialogRef = ref<HTMLElement>()
 const {
   visible,
   handleClose,
   overlayDialogStyle,
-} = useDialog(props, dialogRef)
+} = useDialog(props, containerRef)
+
 provide(dialogInjectionKey, {
   dialogRef,
 })
@@ -49,6 +50,7 @@ function handleClick(event: MouseEvent) {
           </span>
         </div>
         <div class="dialog__content">
+          --{{ dialogRef }}--
           <slot />
         </div>
         <div class="footer">
