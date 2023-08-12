@@ -52,7 +52,7 @@ const getIconColor = computed(() => {
     return ''
   return statusColor.get(props.status)
 })
-const { classList, styleList, styleListCircle } = UseProgress(props)
+const { styleList, styleListCircle } = UseProgress(props)
 </script>
 
 <template>
@@ -80,7 +80,7 @@ const { classList, styleList, styleListCircle } = UseProgress(props)
 
   <!-- circle -->
   <div v-if="props.type === 'circle'" class="fn-progress circle-progress" :style="styleListCircle">
-    <div class="circle-main-box" style="width: 120px;height: 120px;">
+    <div class="circle-content" style="width: 120px;height: 120px;">
       <svg width="120" :height="120" class="circle">
         <circle
           :r="radius"
