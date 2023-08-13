@@ -11,9 +11,9 @@ export const switchProps = {
     type: [String, Number],
     default: '',
   },
-  value: {
+  width: {
     type: [String, Number],
-    default: '',
+    default: '50px',
   },
   color: {
     type: String,
@@ -53,7 +53,7 @@ const isString = (data: any): boolean => typeof data === 'string'
 export const switchEmits = {
   [UPDATE_MODEL_EVENT]: (value: string) => isString(value),
   click: (evt: MouseEvent) => evt instanceof MouseEvent,
-  change: (value: string) => false,
+  change: (value: string) => true,
 }
 
 /** SwitchProps 组件 props 类型 */

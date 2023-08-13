@@ -1,7 +1,5 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { FnMessage } from 'fusion-ui-vue'
-import { Icon } from 'fusion-ui-iconify'
 const button = ref('晚上')
 
 const changTheme = () => {
@@ -28,16 +26,56 @@ const optionList = [
   { value: 1, label: '选项二' },
   { value: 3, label: '选项二', disabled: true },
 ]
+const yyy = ref(true)
 const pp = (p: any) => {
   console.log(p)
 }
+const xxx = ref('1234')
+const process = ref(10)
+// const time = setInterval(() => {
+//   process.value += 1
+//   if (process.value === 100)
+//     clearInterval(time)
+// }, 100)
 const dialogVisible = ref(false)
 </script>
 
 <template>
+  <div style="width: 900px;height: 700px;border: 1px solid transparent">
+    <fn-progress :percentage="process" color="red" height="10" background="red" />
+    <br>
+
+    <fn-progress :percentage="process" type="circle" color="red" height="10">
+      <template #default>
+        <div>
+          <fn-icon icon="twemoji:calendar" />
+        </div>
+      </template>
+    </fn-progress>
+    <br>
+    <div>
+      <fn-progress :percentage="process" type="circle" background="#fff" color="pink" height="10">
+        123
+      </fn-progress>
+    </div>
+
+    <br>
+    <!-- <fn-progress :percentage="70" background="yellow" status="danger" />
+    <br>
+
+    <fn-progress :percentage="70" background="yellow" status="success" />
+    <br>
+
+    <fn-progress :percentage="70" background="yellow" status="warning" /> -->
+  </div>
+  <fn-badge :value="xxx" flashing color="blue">
+    <fn-input v-model="xxx" placeholder="Please input" prefix-icon="twemoji:calendar" />
+  </fn-badge>
   <div class=" flex w-100% justify-between">
-    123
-    <Icon icon="ei:pointer" size="28px" color="red" />
+    <fn-progerss v-model="xxx" />
+
+    <FnSwtich v-model="yyy" checked-text="dfa" un-checked-text="dfa" un-checked-icon="ri:alarm-line" />
+    <FnSwtich v-model="yyy" checked-icon="mdi:check-outline" un-checked-icon="mdi:close-outline" color="#62c553" checked-icon-color="red" un-checked-icon-color="red" />
     222
     <fn-input v-model="aa" placeholder="Please input" prefix-icon="twemoji:calendar" />
     <div class="content">

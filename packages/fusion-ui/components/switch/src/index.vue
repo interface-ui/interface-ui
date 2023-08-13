@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { nextTick } from 'vue'
 import { UPDATE_MODEL_EVENT } from '../../../constans/event'
 import { useSwitch, useSwitchInner } from '../../_hooks'
 import { switchEmits, switchProps } from '../src/switch'
@@ -11,6 +12,9 @@ const handleChange = (event: MouseEvent) => {
   if (props.disabled)
     return
   emit(UPDATE_MODEL_EVENT, !props.modelValue as any)
+  nextTick(() => {
+    emit('change', props.modelValue as any)
+  })
 }
 </script>
 
@@ -33,10 +37,10 @@ const handleChange = (event: MouseEvent) => {
 
       <!-- icon -->
       <div v-show="props.checkedIcon || props.unCheckedIcon" class="fn-switch__core">
-        <span v-show="props.modelValue">
+        <span v-show="props.modelValue" class="icon">
           <fn-icon :icon="props.checkedIcon" :color="props.checkedIconColor" size="13" />
         </span>
-        <span v-show="!props.modelValue">
+        <span v-show="!props.modelValue" class="icon">
           <fn-icon :icon="props.unCheckedIcon" :color="props.unCheckedIconColor" size="13" />
         </span>
       </div>

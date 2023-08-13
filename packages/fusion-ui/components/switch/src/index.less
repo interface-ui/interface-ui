@@ -15,7 +15,7 @@
 @buttonSize:15px;
 
 .fn-switch{
-  width: 200px;
+  width: 50px;
   height: 20px;
   border-radius: 9999px;
   transition: all .3s;
@@ -38,17 +38,22 @@
       align-items: center;
       justify-content: center;
       float: var(--switch-float);
-      span:nth-child(1){
+      color: #fff;
+     
+      span{
+        width: calc(100% - 0px);
+        height: 100%;
         display: inline-block;
-        width: calc(100% - @buttonSize);
-        height: 100%;
-        display: contents;
+        user-select: none;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        text-align: center;
       }
-      span:nth-child(2){
-        float: right;
-        width: calc(100% - @buttonSize);
-        height: 100%;
-        display: contents;
+      .icon span{
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
     }
 

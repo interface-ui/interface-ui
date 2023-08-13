@@ -1,5 +1,6 @@
 import type { CSSProperties, ComputedRef } from 'vue'
 import { computed } from 'vue'
+import { addUnit } from '../../../utils/style'
 import type { SwitchProps } from '../../switch/src/switch'
 
 /** class 类名集合类型 */
@@ -52,12 +53,13 @@ export const useSwitchInner = (prop: SwitchProps): UseSwitchInnerReturn => {
     //   '--leftEnd': '0',
     //   'float': 'left',
     // } as CSSProperties
-    if (prop.checkedIcon || prop.unCheckedIcon) {
-      if (prop.modelValue)
-        style['--switch-float'] = 'left'
+    style.width = addUnit(prop.width)
+    // if (prop.checkedIcon || prop.unCheckedIcon) {
+    if (prop.modelValue)
+      style['--switch-float'] = 'left'
 
-      else style['--switch-float'] = 'right'
-    }
+    else style['--switch-float'] = 'right'
+    // }
 
     if (prop.color) {
       if (prop.modelValue)

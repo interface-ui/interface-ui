@@ -12,6 +12,8 @@ import '../../../packages/fusion-ui/dist/styles/index.css'
 // import '../../../packages/fusion-ui/components/input/src/index.less'
 // import '../../../packages/fusion-ui/components/radio/src/index.less'
 // import '../../../packages/fusion-ui/components/button/src/index.less'
+import '../../../packages/fusion-ui/components/switch/src/index.less'
+import '../../../packages/fusion-ui/components/progress/src/index.less'
 
 // 导入 npm 包
 // import FusionUi from 'fusion-ui-vue'

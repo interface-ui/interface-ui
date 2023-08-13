@@ -26,7 +26,6 @@ const component = [FnButton, FnIcon, FnLink, FnMessage, FnDialog, FnInput, FnRad
 const CK = {
   install(App: any) {
     component.forEach((item) => {
-      console.log(item.name)
       App.component(item.name, item)
     })
   },

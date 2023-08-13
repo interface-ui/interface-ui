@@ -7,8 +7,7 @@
 }
 
 [data-theme="dark"] .fn-progress,
-.fn-progress[data-theme="dark"],
-.fn-progress{
+.fn-progress[data-theme="dark"]{
   --fn-text-color: #fff;
   font-size: 14px;
 }
@@ -27,7 +26,12 @@
     background-color: var(--progress-bar-out-bg);
     display: flex;
     justify-content: space-between;
-
+    position: relative;
+    overflow: hidden;
+    
+    .bar-intermediate{
+      animation: indeterminate var(--bar-duration) infinite;
+    }
     .fn-progress{
       position: relative;
       &-bar{
@@ -35,14 +39,20 @@
         width: var(--progress-bar-width); 
         transition: all 1s;
         border-radius: 999px;
-        background-color: #3894ff;
+        background-color: var(--progress-bar-inner-bg);
+        position: absolute;
       }
+    
       &-text-inner{
-        display: inline-block;
-        vertical-align: middle;
-        color: #fff;
+        color: #333;
         font-size: 12px;
         margin: 0 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        right: 0;
+    
       }
     }
      
@@ -55,7 +65,7 @@
   &-text-out{
     margin-left: 5px;
     vertical-align: middle;
-        color: #fff;
+        color: var(--fn-text-color);
         font-size: 12px;
         margin: 0 5px;
   }
@@ -65,11 +75,11 @@
 
 
 
-.circle-progress{
+.fn-progress{
   .circle-content {
     position: relative;
     display: block;
-    margin: 0 auto;
+    // margin: 0 auto;
     .circle {
       transform: rotate(-90deg);
     }
@@ -83,13 +93,22 @@
       align-items: center;
       justify-content: center;
       display: flex;
-      font-size: 30px;
       color: #333;
       user-select: none;
       span{
+        font-size: 25px;
         color: var(--fn-text-color);
       }
     }
     
+  }
+}
+
+@keyframes indeterminate {
+  0%{
+    left: -100%;
+  }
+  100%{
+    left: 100%;
   }
 }

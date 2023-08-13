@@ -37,6 +37,16 @@ export const enComponents = [
         text: 'Dialog',
         link: '/langs/en/components/dialog',
       },
+      {
+        collapsible: false,
+        text: 'Switch',
+        link: '/langs/en/components/switch',
+      },
+      {
+        collapsible: false,
+        text: 'Progress',
+        link: '/langs/en/components/progress',
+      },
     ],
   },
 ]
@@ -84,6 +94,16 @@ export const zhComponents = [
         collapsible: false,
         text: 'Dialog 对话框',
         link: '/langs/zh/components/dialog',
+      },
+      {
+        collapsible: false,
+        text: 'Switch 开关',
+        link: '/langs/zh/components/switch',
+      },
+      {
+        collapsible: false,
+        text: 'Progress 进度条',
+        link: '/langs/zh/components/progress',
       },
     ],
   },

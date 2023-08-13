@@ -9,16 +9,22 @@ const progerssValue = computed(() => {
   return props.percentage > 100 ? 100 : props.percentage < 0 ? 0 : props.percentage
 })
 
+const circleSize = props.width || 120
+
 const radius = computed(() => {
-  return (120 - 10) / 2
+  return (circleSize - props.strokeWidth) / 2
 })
 const name = 'fn-progress'
 
-const cx = 120 / 2
-const cy = 120 / 2
+const cx = circleSize / 2
+const cy = circleSize / 2
 const circumference = 2 * Math.PI * radius.value
+
+/**
+ * @description: circle progress
+ * 获取角度
+ */
 const cirCleprogress = computed(() => {
-  debugger
   if (typeof props.percentage !== 'number') {
     return 0
   }
@@ -34,6 +40,12 @@ const status = new Map([
   ['warning', 'jam:triangle-danger-f'],
   ['info', 'info'],
 ])
+
+const isKnown = computed(() => {
+  if (props.intermediate)
+    return 'bar-intermediate'
+  return ''
+})
 
 const statusColor = new Map([
   ['success', '#67c23a'],
@@ -60,7 +72,7 @@ const { styleList, styleListCircle } = UseProgress(props)
   <div v-if="props.type === 'line'" :class="`${name} ${name}-line`" :style="styleList">
     <!-- text-inner -->
     <div :class="`${name}-bar-out`">
-      <div :class="`${name}-bar`" />
+      <div :class="[`${name}-bar ${isKnown}`]" />
       <div v-show="props.textInside" :class="`${name}-text-inner`">
         {{ progerssValue }}%
       </div>
@@ -68,7 +80,7 @@ const { styleList, styleListCircle } = UseProgress(props)
 
     <!-- text-out -->
     <div v-show="!props.textInside" :class="`${name}-text`">
-      <span v-show="!props.status" :class="`${name}-text-out`">
+      <span v-show="!props.status && !props.intermediate" :class="`${name}-text-out`">
         {{ progerssValue }}%
       </span>
 
@@ -80,8 +92,8 @@ const { styleList, styleListCircle } = UseProgress(props)
 
   <!-- circle -->
   <div v-if="props.type === 'circle'" class="fn-progress circle-progress" :style="styleListCircle">
-    <div class="circle-content" style="width: 120px;height: 120px;">
-      <svg width="120" :height="120" class="circle">
+    <div class="circle-content" :style="`width:${circleSize}px;height: ${circleSize}px;`">
+      <svg width="circleSize" :height="circleSize" class="circle">
         <circle
           :r="radius"
           :cx="cx"
@@ -102,12 +114,12 @@ const { styleList, styleListCircle } = UseProgress(props)
           :stroke-dashoffset="cirCleprogress"
         />
       </svg>
-      <span class="count-num" :style="[{ 'font-size': `${120 * .3}px` }]">
+      <span class="count-num" :style="[{ 'font-size': `${circleSize * .3}px` }]">
         <span v-if="$slots.default">
           <slot />
         </span>
         <span v-else>
-          {{ cirCleprogress }}%
+          {{ props.percentage }}%
         </span>
       </span>
     </div>

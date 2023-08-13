@@ -46,7 +46,11 @@ export const UseProgress = (prop: ProgressProps): UseProgressReturn => {
 
     style.height = addUnit(prop.height)
 
+    style['--progress-bar-inner-bg'] = prop.barColor
+
     style['--progress-bar-out-bg'] = prop.background
+
+    style['--bar-duration'] = prop.duration ? `${prop.duration}s` : '2s'
 
     style['--progress-bar-bg'] = prop.color
 
