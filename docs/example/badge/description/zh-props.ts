@@ -1,31 +1,29 @@
 import type { PropTableItem } from '../../../.vitepress/components/table-block/src/table'
 const list: PropTableItem[] = [
   {
-    name: 'type',
-    remark: '链接类型',
-    type: 'Enum',
-    optional: ['primary', 'success', 'warning', 'danger', 'info', 'default'],
-    default: 'default',
+    name: 'value',
+    remark: '显示的值',
+    type: 'String/Number',
+    default: '---',
   },
   {
-    name: 'disabled',
-    remark: '设置链接禁用',
+    name: 'max',
+    remark: '显示的最大值，value超过max时，显示max+',
+    type: '---',
+    default: 'false',
+  },
+  {
+    name: 'dot',
+    remark: '显示小圆点',
     type: 'Boolean',
     default: 'false',
   },
   {
-    name: 'href',
-    remark: '原生 href 属性',
-    type: 'String',
-    default: '---',
+    name: 'flashing',
+    remark: '闪烁',
+    type: 'Boolean',
+    default: 'false',
   },
-  {
-    name: 'icon',
-    remark: '图标按钮',
-    type: 'String',
-    default: '---',
-  },
-  { name: 'underline', remark: '下划线', type: 'Boolean', default: 'false' },
 ]
 
 export default list

@@ -1,6 +1,5 @@
 import { h, onMounted } from 'vue'
 import theme from 'vitepress/theme'
-// import Icon from 'fusion-ui-iconify'
 import FusionUi from '../../../packages/fusion-ui/components/index'
 
 // 导入本地全量打包样式--测试
@@ -12,8 +11,8 @@ import '../../../packages/fusion-ui/dist/styles/index.css'
 // import '../../../packages/fusion-ui/components/input/src/index.less'
 // import '../../../packages/fusion-ui/components/radio/src/index.less'
 // import '../../../packages/fusion-ui/components/button/src/index.less'
-import '../../../packages/fusion-ui/components/switch/src/index.less'
-import '../../../packages/fusion-ui/components/progress/src/index.less'
+// import '../../../packages/fusion-ui/components/switch/src/index.less'
+// import '../../../packages/fusion-ui/components/progress/src/index.less'
 
 // 导入 npm 包
 // import FusionUi from 'fusion-ui-vue'
@@ -55,7 +54,6 @@ export default {
   },
   enhanceApp({ app }) {
     app.use(FusionUi)
-    // app.use(Icon)
     app.component('Demo', DemoBlock)
     app.component('BpTable', BpTable)
     app.component('TableBlock', TableBlock)

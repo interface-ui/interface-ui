@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, defineProps } from 'vue'
+import { computed } from 'vue'
 import { UPDATE_MODEL_EVENT } from '../../../constans/event'
 import { radioEmits, radioProps } from '../src/radio'
 import { useRadio, useRadioGroup } from '../../_hooks'

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { computed, defineProps } from 'vue'
+import { computed } from 'vue'
 import { UseBadge } from '../../_hooks'
 import { badgeProps } from './badge'
 const props = defineProps(badgeProps)
@@ -22,6 +22,6 @@ const supValue = computed<string>(() => {
 <template>
   <div :class="classList" :style="styleList">
     <slot />
-      <sup class="badge__content" v-text="supValue" />
+    <sup class="badge__content" v-text="supValue" />
   </div>
 </template>

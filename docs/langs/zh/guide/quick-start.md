@@ -43,7 +43,7 @@ Fusion Ui 是一个 Vue3 组件库，简洁、优雅、美观
 如果你对这个项目感兴趣，欢迎加入。
 
 - [行为公约](https://github.com/tsinghua-lau/fusion-ui/blob/master/CODE_OF_CONDUCT.md)
-- [贡献指南](https://github.com/tsinghua-lau/fusion-ui/blob/master/CONTRIBUTING.zh-CN.md).
+- [贡献指南](https://github.com/tsinghua-lau/fusion-ui/blob/master/CONTRIBUTING.zh-CN.md)
 
 ## 贡献者
 

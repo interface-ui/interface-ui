@@ -1,31 +1,29 @@
 import type { PropTableItem } from '../../../.vitepress/components/table-block/src/table'
 const list: PropTableItem[] = [
   {
-    name: 'type',
-    remark: 'Set the link type',
-    type: 'Enum',
-    optional: ['primary', 'success', 'warning', 'danger', 'info', 'default'],
-    default: 'default',
+    name: 'value',
+    remark: 'display value.',
+    type: 'String/Number',
+    default: '---',
   },
   {
-    name: 'disabled',
-    remark: 'Set the link as disabled',
+    name: 'max',
+    remark: 'The maximum value displayed, when the value exceeds max, display max+',
+    type: '---',
+    default: 'false',
+  },
+  {
+    name: 'dot',
+    remark: 'Show small dots',
     type: 'Boolean',
     default: 'false',
   },
   {
-    name: 'href',
-    remark: 'Native href attribute',
-    type: 'String',
-    default: '---',
+    name: 'flashing',
+    remark: 'Flashing',
+    type: 'Boolean',
+    default: 'false',
   },
-  {
-    name: 'icon',
-    remark: 'Icon component',
-    type: 'String',
-    default: '---',
-  },
-  { name: 'underline', remark: 'underline', type: 'Boolean', default: 'false' },
 ]
 
 export default list

@@ -1,50 +1,47 @@
 ---
-title: Radio
+title: Badge
 lang: en
 ---
 
 <script setup lang="ts">
-  import props from "../../../example/radio/description/en-props.ts";
-  import events from "../../../example/radio/description/en-events.ts";
+  import props from "../../../example/badge/description/en-props.ts";
 </script>
 
 
-## Radio
+## Badge
 
-Perform selection operations
+Numbers or status markers on buttons and icons.
 
+## Basic usage
 
-# Basic usage
-
-<demo src="../../../example/radio/base.vue"></demo>
-
-
-## Disabled state
-
-Disable the radio box through the ```disabled``` property
-
-<demo src="../../../example/radio/disabled.vue"></demo>
+```value``` is used to display the number of new messages, ```color```` is used to set the background color.
+<demo src="../../../example/badge/base.vue"></demo>
 
 
-## Single box group
+## Max
 
- Generate a set of vertically arranged radio boxes through ```option-list```
+The custom maximum value is defined by the ```max``` property and accepts the Number value.
+<demo src="../../../example/badge/max.vue"></demo>
 
-<demo src="../../../example/radio/option-list-horizontal.vue"></demo>
 
- Generate a set of vertically arranged radio boxes through ```horizontal = false```
+## Customizations
 
-<demo src="../../../example/radio/option-list.vue"></demo>
+When ```value``` is ```String```, custom text can be displayed.
 
-## Customize the color of buttons
+<demo src="../../../example/badge/custom.vue"></demo>
 
-Customize the color of the button through the ```color``` attribute
+## Dot
 
-<demo src="../../../example/radio/color.vue"></demo>
+The ```dot``` attribute is used to display small dots, but the value attribute is invalid.
+<demo src="../../../example/badge/dot.vue"></demo>
 
+## Flashing
+
+The ```flashing``` property is used to set the flashing effect, which is a ```Boolean``` value.
+
+<demo src="../../../example/badge/flashing.vue"></demo>
+
+## Attribute
 <table-block type="propsZh" :data="props"></table-block>
 
 
-## Events
-
-<table-block type="eventsZh" :data="events"></table-block>

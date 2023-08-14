@@ -7,6 +7,10 @@ export const enComponents = [
         link: '/langs/en/components/button',
       },
       {
+        text: 'Badge',
+        link: '/langs/en/components/badge',
+      },
+      {
         text: 'Icon',
         link: '/langs/en/components/icon',
       },
@@ -59,6 +63,10 @@ export const zhComponents = [
         collapsible: false,
         text: 'Button 按钮',
         link: '/langs/zh/components/button',
+      },
+      {
+        text: 'Badge 徽章',
+        link: '/langs/zh/components/badge',
       },
       {
         collapsible: false,

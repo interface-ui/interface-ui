@@ -1,45 +1,46 @@
-> English | [简体中文](./CONTRIBUTING.zh-CN.md)
+> [English](./CONTRIBUTING.md) | 简体中文
 
-# Contributing Guide
+# 贡献指南
 
-Thank you for your valuable time. Your contribution will make this project better! Before submitting your contribution, please make sure to take some time to read the Getting Started Guide below.
+感谢你的宝贵时间。你的贡献将使这个项目变得更好！在提交贡献之前，请务必花点时间阅读下面的入门指南。
 
 
-## Pull Request
+## 提交 Pull Request
 
-1. Fork [this](https://github.com/tsinghua-lau/fusion-ui)
-2. Enter the local project root directory and use ```pnpm i``` to install dependencies.
-3. Enter the ```docs``` directory and use ```pnpm i``` to install dependencies.
-4. Use ```pnpm run docs:dev``` to start the project and view the document.
-5. Please ```git pull``` the latest code before submitting to avoid file conflicts.
-6. Submit git commit, Please abide by it at the same time. [Commit Standard](#Commit)。
-7. Submit Pull Request。
+1. Fork [此仓库](https://github.com/tsinghua-lau/fusion-ui)
+2. 进入本地项目根目录，使用 `pnpm i` 安装依赖。
+3. 进入```docs```目录，使用```pnpm i```安装依赖。
+4. 使用 `pnpm run docs:dev` 启动项目， 查看文档。
+5. 提交前请先```git pull``` 拉取最新代码，以免提交文件冲突。
+6. 提交 ```git commit```, 请同时遵守 [Commit 规范](#Commit-指南)。
+7. 提交 Pull Request。
 
-### Commit
+### Commit 指南
 
-The following is a list of commit types:
+以下是 commit 类型列表:
 
-- feat: New features or functions
-- fix: Defect repair
-- docs: Document updates
-- style: Code style or component style update
-- refactor: Code refactoring without introducing new functions and defect fixes
-- perf: performance optimization
-- test: unit testing 
-- chore: Submission of other unmodified src or test files
+- feat: 新特性或功能
+- fix: 缺陷修复
+- docs: 文档更新
+- style: 代码风格或者组件样式更新
+- refactor: 代码重构，不引入新功能和缺陷修复
+- perf: 性能优化
+- test: 单元测试
+- chore: 其他不修改 src 或测试文件的提交
 
-Take for example:
+例如：
 ```
 git commit -m 'fix: xxxxx'
 git commit -m 'feat: add xxxxx'
 git commit -m 'docs: update xxxxx'
 ```
-If you haven't submitted pr on github, it doesn't matter. You can refer to it.[Here](https://blog.csdn.net/gentleman_hua/article/details/123816150?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522169199126416800188573391%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fblog.%2522%257D&request_id=169199126416800188573391&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~blog~first_rank_ecpm_v1~rank_v31_ecpm-1-123816150-null-null.268^v1^koosearch&utm_term=pr&spm=1018.2226.3001.4450)。
+如果在github还没有提交过pr，也没有关系可以参考一下[这里](https://blog.csdn.net/gentleman_hua/article/details/123816150?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522169199126416800188573391%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fblog.%2522%257D&request_id=169199126416800188573391&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~blog~first_rank_ecpm_v1~rank_v31_ecpm-1-123816150-null-null.268^v1^koosearch&utm_term=pr&spm=1018.2226.3001.4450)。
 
-## Code of conduct
 
-There is a copy of the project [Code of conduct](./CODE_OF_CONDUCT.md)，I hope that all contributors to the project can strictly abide by it.
+## 行为准则
+
+该项目有一份 [行为准则](./CODE_OF_CONDUCT.md)，希望参与项目的贡献者都能严格遵守。
 
 ## License
 
-[MIT Negotiate](./LICENSE).
+[MIT 协议](./LICENSE).

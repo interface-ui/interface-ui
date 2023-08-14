@@ -1,18 +1,18 @@
 import type { ExtractPropTypes, PropType } from 'vue'
-export type InputType = String | Number
+export type BadgeType = String | Number
 
 export const badgeProps = {
   value: {
-    type: [String, Number] as PropType<InputType>,
+    type: [String, Number] as PropType<BadgeType>,
     default: '',
   },
   max: {
-    type: [String, Number],
+    type: [String, Number] as PropType<BadgeType>,
     default: '',
   },
   color: {
     type: String,
-    default: '',
+    default: '#3894ff',
   },
   dot: {
     type: Boolean,

@@ -6,7 +6,6 @@ import autoprefixer from 'gulp-autoprefixer'
 import cleanCSS from 'gulp-clean-css'
 import { outputFileSync, readFileSync } from 'fs-extra'
 import { buildOutput, componentsRoot, stylesRoot } from '../path'
-
 export async function buildStyle() {
   const stylePath = resolve(buildOutput, 'styles')
 
@@ -38,12 +37,14 @@ function genStyleEntry(cssInfo: CssInfo) {
 
     const importReg = /import .* from '(.*).vue'/g
 
-    const importCommon = 'import \'../../base.css\'\nimport \'./index.css\'\n'
+    const indexCss = `./${compName}/src/index.css`
+
+    const importCommon = `@import './base.css';\n@import '${indexCss}';\n`
 
     const importContent = (readFileSync(resolve(componentsRoot, compName, 'src/index.vue'), 'utf-8').match(importReg) || [])
       .filter(path => noStyleComps.every(comp => !path.includes(comp)))
       .reduce((prev, curr) => prev += curr.replace(importReg, 'import \'$1.css\'\n'), importCommon)
 
-    outputFileSync(resolve(buildOutput, 'styles', `${cssInfo.name.split('.')[0].slice(1)}.js`), importContent)
+    outputFileSync(resolve(buildOutput, 'styles', `${compName}.css`), importContent)
   }
 }
