@@ -51,7 +51,7 @@ app.use(fusionUi).mount('#app')
 
 ## 配套文档
 
-- [DOCS](https://fusion-ui-vue.github.io/fusion-ui/)
+- [DOCS](https://tsinghua-lau.github.io/fusion-ui/)
 
 ## 仓库目录
 ```bash
