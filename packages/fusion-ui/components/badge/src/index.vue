@@ -22,8 +22,6 @@ const supValue = computed<string>(() => {
 <template>
   <div :class="classList" :style="styleList">
     <slot />
-    <transition>
       <sup class="badge__content" v-text="supValue" />
-    </transition>
   </div>
 </template>
