@@ -51,6 +51,14 @@ export const progressProps = {
     default: '',
     values: ['', 'success', 'danger', 'warning'],
   },
+  striped: {
+    type: Boolean,
+    default: false,
+  },
+  stripedFlow: {
+    type: Boolean,
+    default: false,
+  },
 
 }
 export type ProgressProps = ExtractPropTypes<typeof progressProps>
