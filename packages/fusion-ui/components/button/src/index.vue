@@ -4,9 +4,15 @@ import { buttonProps } from '../src/button'
 
 defineProps(buttonProps)
 
-defineEmits(['click'])
+const emits = defineEmits<{
+  (e: 'click', event: MouseEvent): void
+}>()
 
 const buttonEl = ref<HTMLButtonElement>()
+
+const handleClick = (event: MouseEvent) => {
+  emits('click', event)
+}
 
 defineExpose({
   el: buttonEl,
@@ -31,7 +37,7 @@ export default {
       `fn-button--${size}`,
       disabled && 'is-disabled',
     ]"
-    @click="$emit('click')"
+    @click="handleClick"
   >
     <span v-if="icon" :style="$slots.default ? 'margin-right: 3px;' : ''">
       <fn-icon :icon="icon" color="color" size="13" />
