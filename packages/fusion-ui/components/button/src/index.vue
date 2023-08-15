@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { buttonProps } from '../src/button'
-
-defineProps(buttonProps)
-
+import { UseButton } from '../../_hooks'
+const props = defineProps(buttonProps)
 const emits = defineEmits<{
   (e: 'click', event: MouseEvent): void
 }>()
+
+const { classList, styleList } = UseButton(props)
 
 const buttonEl = ref<HTMLButtonElement>()
 
@@ -29,14 +30,8 @@ export default {
   <button
     ref="buttonEl"
     :type="nativeType"
-    class="fn-button"
-    :class="[
-      `fn-button--${type}`,
-      `fn-button--${state}`,
-      `fn-button--${shape}`,
-      `fn-button--${size}`,
-      disabled && 'is-disabled',
-    ]"
+    :class="classList"
+    :style="styleList"
     @click="handleClick"
   >
     <span v-if="icon" :style="$slots.default ? 'margin-right: 3px;' : ''">

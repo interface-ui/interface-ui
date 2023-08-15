@@ -4,7 +4,7 @@ const list: PropTableItem[] = [
     name: 'type',
     remark: '按钮类型',
     type: 'Enum',
-    optional: ['solid', 'white', 'outline', 'ghost', 'link', 'dashed', 'diplonema'],
+    optional: ['default', 'primary', 'dashed'],
     default: 'normal',
   },
   {
@@ -27,6 +27,18 @@ const list: PropTableItem[] = [
     type: 'Enum',
     optional: ['info', 'success', 'warning', 'danger'],
     default: 'info',
+  },
+  {
+    name: 'color',
+    remark: '自定义按钮颜色',
+    type: 'String',
+    default: '---',
+  },
+  {
+    name: 'background',
+    remark: '自定义按钮背景色',
+    type: 'String',
+    default: '---',
   },
   { name: 'disabled', remark: '是否禁用', type: 'Boolean', default: 'false' },
   { name: 'icon', remark: '按钮图标', type: 'String', default: '' },

@@ -59,6 +59,12 @@ Progress组件 ```percentage``` 属性控制当前进度的百分比。
 <demo src="../../../example/progress/intermediate.vue"></demo>
 
 
+## 条纹进度条
+
+```striped``` 属性获取条纹进度条，可以使用 ```striped-flow``` 属性来使条纹流动起来，```duration``` 属性控制流动的速度。
+
+<demo src="../../../example/progress/striped.vue"></demo>
+
 
  ## 属性
 

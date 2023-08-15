@@ -37,7 +37,7 @@ If you find a bug, I hope you open an [issue](https://github.com/tsinghua-lau/fu
 If you are interested in this project, welcome to join us.
 
 - [Code of Conduct](https://github.com/tsinghua-lau/fusion-ui/blob/master/CODE_OF_CONDUCT.md)
-- [Contributing Guide](https://github.com/tsinghua-lau/fusion-ui/blob/master/CONTRIBUTING.md).
+- [Contributing Guide](https://github.com/tsinghua-lau/fusion-ui/blob/master/CONTRIBUTING.md)
 
 ## Contributors
 
