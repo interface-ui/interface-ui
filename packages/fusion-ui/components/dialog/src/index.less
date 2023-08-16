@@ -14,6 +14,29 @@
   font-size: 14px;
 }
 
+.dialog-fade-enter-active{
+  animation: dialog-fade-in .3s;
+}
+.dialog-fade-leave-active {
+  animation: dialog-fade-out .3s;
+}
+@keyframes dialog-fade-in{
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes dialog-fade-out{
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .dialog {
   position: fixed;
   top: 0;

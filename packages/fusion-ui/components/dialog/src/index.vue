@@ -33,7 +33,8 @@ function handleClick(event: MouseEvent) {
 
 <template>
   <Teleport to="body">
-    <div
+    <transition name='dialog-fade'>
+      <div
       v-show="visible"
       ref="containerRef"
       class="dialog"
@@ -58,5 +59,8 @@ function handleClick(event: MouseEvent) {
         </div>
       </div>
     </div>
+    </transition>
+    
   </Teleport>
 </template>
+
