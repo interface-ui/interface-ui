@@ -75,6 +75,18 @@ const list: PropTableItem[] = [
     type: 'Number',
     default: '2s',
   },
+  {
+    name: 'striped',
+    remark: 'stripe over the progress bar\'s color',
+    type: 'Boolean',
+    default: 'false',
+  },
+  {
+    name: 'striped-flow',
+    remark: 'get the stripes to flow',
+    type: 'Boolean',
+    default: 'false',
+  },
 ]
 
 export default list

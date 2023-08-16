@@ -12,13 +12,13 @@ lang: zh
 
 常见的操作按钮。
 
-# 基础用法
+##  基础用法
 
-使用 `type`、`plain`、`round` 、`circle` 、`dashed` 和 `diplonema` 来定义按钮的样式。
+使用 `type`、`state` 来定义按钮的样式。
 
 <demo src="../../../example/button/types.vue"></demo>
 
-# 调整尺寸
+##  调整尺寸
 
 除了默认的大小，按钮组件还提供了几种额外的尺寸可供选择，以便适配不同的场景。
 
@@ -28,13 +28,22 @@ lang: zh
 
 
 
-# 按钮形状
-使用 ```shape``` 属性来定义按钮的形状。
+##  按钮形状
 
+使用 ```shape``` 属性来定义按钮的形状。
 
 <demo src="../../../example/button/shapes.vue"></demo>
 
-# 禁用状态
+## 自定义颜色
+
+您可以自定义按钮的颜色，```state``` 属性将失效。
+
+通过 ```color``` 属性来定义按钮的颜色，```background``` 属性来定义按钮的背景颜色。
+
+<demo src="../../../example/button/custom.vue"></demo>
+
+
+##  禁用状态
 
 你可以使用  ```disabled``` 属性来定义按钮是否被禁用。
 
@@ -42,7 +51,7 @@ lang: zh
 
 <demo src="../../../example/button/disabled.vue"></demo>
 
-# 图标按钮
+##  图标按钮
 
 使用图标为按钮添加更多的含义。 你也可以单独使用图标不添加文字来节省显示区域占用。
 

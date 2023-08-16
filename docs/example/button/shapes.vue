@@ -1,17 +1,17 @@
 <template>
   <div space-y-2>
     <div fscw gap-2>
-      <fn-button shape="round">
-        round
+      <fn-button type="primary" shape="round">
+        Round
       </fn-button>
-      <fn-button shape="pill">
-        pill
+      <fn-button type="primary" shape="pill">
+        Pill
       </fn-button>
-      <fn-button shape="plain">
-        plain
+      <fn-button type="primary" shape="plain">
+        Plain
       </fn-button>
-      <fn-button shape="circle">
-        Ui
+      <fn-button type="primary" shape="circle">
+        C
       </fn-button>
     </div>
   </div>

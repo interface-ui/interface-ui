@@ -58,6 +58,11 @@ Use the ```intermediate``` property to set the uncertain progress, and ```durati
 <demo src="../../../example/progress/intermediate.vue"></demo>
 
 
+## Striped progress
+
+The ```striped``` attribute gets the fringe progress bar. You can use the ```striped-flow``` attribute to make the stripe flow, and the ```duration``` attribute controls the speed of the flow.
+
+<demo src="../../../example/progress/striped.vue"></demo>
 
  ## Attribute
 

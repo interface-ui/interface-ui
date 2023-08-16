@@ -34,6 +34,7 @@
     }
     .fn-progress{
       position: relative;
+
       &-bar{
         height: 100%;
         width: var(--progress-bar-width); 
@@ -41,6 +42,13 @@
         border-radius: 999px;
         background-color: var(--progress-bar-inner-bg);
         position: absolute;
+      }
+      &-bar-striped{
+        background-size: 1.25em 1.25em;
+        background-image: linear-gradient(45deg,rgba(0,0,0,.1) 25%,transparent 25%,transparent 50%,rgba(0,0,0,.1) 50%,rgba(0,0,0,.1) 75%,transparent 75%,transparent);
+      }
+      &-bar-is-flow{
+        animation: striped-flow var(--bar-duration) linear infinite;
       }
     
       &-text-inner{
@@ -110,5 +118,14 @@
   }
   100%{
     left: 100%;
+  }
+}
+
+@keyframes striped-flow {
+  0%{
+    background-position: -100%;
+  }
+  100%{
+    background-position: 100%;
   }
 }

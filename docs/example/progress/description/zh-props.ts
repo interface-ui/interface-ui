@@ -75,6 +75,18 @@ const list: PropTableItem[] = [
     type: 'Number',
     default: '2s',
   },
+  {
+    name: 'striped',
+    remark: '在进度条上增加条纹',
+    type: 'Boolean',
+    default: 'false',
+  },
+  {
+    name: 'striped-flow',
+    remark: '让进度条上的条纹流动起来',
+    type: 'Boolean',
+    default: 'false',
+  },
 ]
 
 export default list

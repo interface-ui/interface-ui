@@ -2,17 +2,17 @@
   <div space-y-2>
     <div fscw gap-10>
       <fn-badge dot>
-        <FnButton type="outline">
+        <FnButton>
           Hello
         </FnButton>
       </fn-badge>
       <fn-badge dot color="purple">
-        <FnButton type="outline">
+        <FnButton>
           Hello
         </FnButton>
       </fn-badge>
       <fn-badge dot color="deeppink">
-        <FnButton type="outline">
+        <FnButton>
           Hello
         </FnButton>
       </fn-badge>

@@ -9,17 +9,17 @@ const value3 = ref('30')
   <div space-y-2>
     <div fscw gap-10>
       <fn-badge :value="value1">
-        <FnButton type="outline">
+        <FnButton>
           Hello
         </FnButton>
       </fn-badge>
       <fn-badge :value="value2" color="purple">
-        <FnButton type="outline">
+        <FnButton>
           Hello
         </FnButton>
       </fn-badge>
       <fn-badge :value="value3" color="deeppink">
-        <FnButton type="outline">
+        <FnButton>
           Hello
         </FnButton>
       </fn-badge>

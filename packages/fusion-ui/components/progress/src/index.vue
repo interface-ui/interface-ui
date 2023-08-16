@@ -41,10 +41,20 @@ const status = new Map([
   ['info', 'info'],
 ])
 
-const isKnown = computed(() => {
+const isKnown = computed((): string => {
   if (props.intermediate)
     return 'bar-intermediate'
   return ''
+})
+
+const isStriped = computed((): string => {
+  let stripedClass = ''
+  if (props.striped) {
+    stripedClass += 'fn-progress-bar-striped '
+    if (props.stripedFlow)
+      stripedClass += 'fn-progress-bar-is-flow'
+  }
+  return stripedClass
 })
 
 const statusColor = new Map([
@@ -72,7 +82,7 @@ const { styleList, styleListCircle } = UseProgress(props)
   <div v-if="props.type === 'line'" :class="`${name} ${name}-line`" :style="styleList">
     <!-- text-inner -->
     <div :class="`${name}-bar-out`">
-      <div :class="[`${name}-bar ${isKnown}`]" />
+      <div :class="[`${name}-bar ${isKnown} ${isStriped}`]" />
       <div v-show="props.textInside" :class="`${name}-text-inner`">
         {{ progerssValue }}%
       </div>

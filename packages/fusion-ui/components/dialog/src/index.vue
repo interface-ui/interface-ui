@@ -46,7 +46,7 @@ function handleClick(event: MouseEvent) {
             {{ props.title }}
           </span>
           <span v-if="!showClose" @click="handleClose">
-            <fn-button shape="circle" type="ghost" icon="material-symbols:close" />
+            <fn-icon name="material-symbols:close" />
           </span>
         </div>
         <div class="dialog__content">

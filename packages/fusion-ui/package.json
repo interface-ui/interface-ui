@@ -36,6 +36,7 @@
   },
   "dependencies": {
     "fusion-ui-iconify": "^1.0.35",
+    "tinycolor@3.4.1": "link:ctrl/tinycolor@3.4.1",
     "vite-plugin-progress": "^0.0.7",
     "vue": "^3.2.45"
   }

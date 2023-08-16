@@ -1,17 +1,17 @@
 <template>
   <div space-y-2>
     <div fscw gap-2>
-      <fn-button type="solid" size="mini">
-        mini
+      <fn-button type="primary" size="mini">
+        Mini
       </fn-button>
-      <fn-button type="solid" size="small">
-        small
+      <fn-button type="primary" size="small">
+        Small
       </fn-button>
-      <fn-button type="solid" size="medium">
-        medium
+      <fn-button type="primary" size="medium">
+        Medium
       </fn-button>
-      <fn-button type="solid" size="large">
-        large
+      <fn-button type="primary" size="large">
+        Large
       </fn-button>
     </div>
   </div>

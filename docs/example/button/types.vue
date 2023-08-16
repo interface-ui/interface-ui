@@ -1,38 +1,28 @@
 <template>
   <div space-y-2>
     <div fscw gap-2>
-      <fn-button type="outline">
-        outline
-      </fn-button>
-      <fn-button type="solid">
-        solid
+      <fn-button>
+        Default
       </fn-button>
       <fn-button type="dashed">
-        dashed
+        Dashed
       </fn-button>
-      <fn-button type="ghost">
-        ghost
+      <fn-button type="primary">
+        Primary
       </fn-button>
-      <fn-button type="link">
-        link
-      </fn-button>
-      <fn-button type="diplonema">
-        diplonema
-      </fn-button>
-    </div>
-    <div fscw gap-2>
       <fn-button state="info">
-        info
+        Info
       </fn-button>
       <fn-button state="success">
-        success
+        Success
       </fn-button>
       <fn-button state="warning">
-        warning
+        Warning
       </fn-button>
       <fn-button state="danger">
-        danger
+        Danger
       </fn-button>
     </div>
+    <div fscw gap-2 />
   </div>
 </template>

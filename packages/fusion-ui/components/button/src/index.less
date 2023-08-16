@@ -3,44 +3,92 @@
 .fn-button[data-theme="light"],
 .fn-button {
   --fn-white-text-color: #374151;
-  --fn-white-text-hover-color: #374151;
-  --fn-white-border-color: hsl(220, 13%, 91%);
   --fn-white-hover-color: #ecf5ff;
-  --fn-button-border-color-outline: #c6e2ff;
-  --fn-button-bg-color-outline: #fff;
+  --fn-button-border-color-default: #c6e2ff;
+  --fn-button-hover-color:#dcdfe6;
   font-size: 14px;
 }
 
 [data-theme="dark"] .fn-button,
 .fn-button[data-theme="dark"] {
-  --fn-white-text-color: #9ca3af;
-  --fn-white-text-hover-color: white;
-  --fn-white-border-color: #374151;
+  --fn-white-text-color: #fff;
+  --fn-button-hover-color: #4C4D4F;
   --fn-white-hover-color: #1e293b;
-  --fn-button-border-color-outline: #4C4D4F;
-  --fn-button-bg-color-outline: transparent;
+  --fn-button-border-color-default: #4C4D4F;
   font-size: 14px;
+}
+
+.fn-button{
+  --fn-button-text-color: var(--fn-white-text-color);
+  --fn-button-border-color: var(--fn-button-hover-color);
+  --fn-button-bg-color: transparent;
+  --fn-button-border-style: solid;
+  
+  --fn-button-text-hover-color: var(--fn-sky-1000);
+  --fn-button-border-hover-color: var(--fn-button-hover-color);
+  --fn-button-bg-hover-color: var(--fn-white-hover-color);
+
+  --fn-button-disabled-text-color:  var(--fn-white-text-color);;
+  --fn-button-disabled-bg-color: transparent;
+  --fn-button-disabled-border-color:  var(--fn-button-hover-color);
 }
 
 .fn-button {
   &--info {
-    --fn-button-color: var(--fn-blue-500);
-    --fn-button-hover-color: var(--fn-blue-400);
+    --fn-button-bg-color:#85888e;
+    --fn-button-text-color: #fff;
+    --fn-button-border-color:#909399;
+    
+    --fn-button-hover-color: var(--fn-slate-400);
+    --fn-button-bg-hover-color:var(--fn-button-hover-color);
+    --fn-button-text-hover-color:#fff;
+
+    --fn-button-disabled-text-color:#fff;
+    --fn-button-disabled-bg-color:  #85888e;
+    --fn-button-disabled-border-color: #909399;;
   }
 
   &--success {
-    --fn-button-color: var(--fn-green-500);
-    --fn-button-hover-color: var(--fn-green-600);
+    --fn-button-bg-color: var(--fn-green-500);
+    --fn-button-border-color:#67c23a;
+    --fn-button-text-color: #fff;
+
+    --fn-button-text-hover-color: white;
+    --fn-button-border-hover-color: #4e8e2f;
+    --fn-button-bg-hover-color:#458329;
+
+    --fn-button-disabled-text-color: #fff;
+    --fn-button-disabled-bg-color: var(--fn-green-500);
+    --fn-button-disabled-border-color: #67c23a;
   }
 
   &--warning {
-    --fn-button-color: var(--fn-orange-500);
-    --fn-button-hover-color: var(--fn-orange-600);
+    --fn-button-bg-color: #e6a23c;
+    --fn-button-border-color:#e6a23c;
+    --fn-button-text-color: #fff;
+
+    --fn-button-text-hover-color: white;
+    --fn-button-border-hover-color: #a77730;
+    --fn-button-bg-hover-color:#a77730;
+
+    --fn-button-disabled-text-color: #fff;
+    --fn-button-disabled-bg-color: #e6a23c;
+    --fn-button-disabled-border-color: #e6a23c;
   }
 
   &--danger {
-    --fn-button-color: var(--fn-red-500);
-    --fn-button-hover-color: var(--fn-red-600);
+    --fn-button-bg-color: #f56c6c;
+    --fn-button-border-color:#f56c6c;
+    --fn-button-text-color: #fff;
+
+
+    --fn-button-text-hover-color: white;
+    --fn-button-border-hover-color: #b25252;
+    --fn-button-bg-hover-color:#a94848;
+
+    --fn-button-disabled-text-color: #fff;
+    --fn-button-disabled-bg-color:  #f56c6c;
+    --fn-button-disabled-border-color: #f56c6c;
   }
 
   &--mini {
@@ -81,107 +129,39 @@
     --fn-border-radius: 0;
   }
 
-  &--solid {
+  &--primary {
     --fn-button-text-color: white;
-    --fn-button-text-hover-color: white;
+    --fn-button-color:#3894ff;
     --fn-button-border-color: var(--fn-button-color);
-    --fn-button-border-hover-color: var(--fn-button-hover-color);
     --fn-button-bg-color: var(--fn-button-color);
-    --fn-button-bg-hover-color: var(--fn-button-hover-color);
+    --fn-button-border-style: solid;
+
+    --fn-button-text-hover-color: white;
+    --fn-button-border-hover-color: #2d6ab0;
+    --fn-button-bg-hover-color:#2d6ab0;
+
+
     --fn-button-disabled-text-color: white;
     --fn-button-disabled-bg-color: var(--fn-button-color);
     --fn-button-disabled-border-color: var(--fn-button-color);
-    --fn-button-border-style: solid;
-  }
-
-  &--outline {
-    --fn-button-text-color:var(--fn-white-text-color);
-    --fn-button-text-hover-color: var(--fn-button-color);
-    --fn-button-border-color:var(--fn-button-border-color-outline);
-    --fn-button-border-hover-color:var(--fn-button-border-color-outline);
-    --fn-button-bg-color: var(--fn-button-bg-color-outline);
-    --fn-button-bg-hover-color: var(--fn-white-hover-color);
-    --fn-button-disabled-text-color: var(--fn-white-text-color);
-    --fn-button-disabled-border-color: var(--fn-button-border-color-outline);
-    --fn-button-disabled-bg-color: transparent;
-    --fn-button-border-style: solid;
-  }
-
-  &--ghost {
-    --fn-button-text-color: var(--fn-button-color);
-    --fn-button-text-hover-color: white;
-    --fn-button-border-color: transparent;
-    --fn-button-border-hover-color: var(--fn-button-hover-color);
-    --fn-button-bg-color: transparent;
-    --fn-button-bg-hover-color: var(--fn-button-hover-color);
-    --fn-button-border-style: none;
-    --fn-button-disabled-text-color: var(--fn-button-color);
-    --fn-button-disabled-bg-color: transparent;
-    --fn-button-disabled-border-color: transparent;
-  }
-
-  &--link {
-    --fn-button-text-color: var(--fn-button-color);
-    --fn-button-text-hover-color: var(--fn-button-hover-color);
-    --fn-button-border-color: transparent;
-    --fn-button-border-hover-color: transparent;
-    --fn-button-bg-color: transparent;
-    --fn-button-bg-hover-color: transparent;
-    --fn-button-border-style: none;
-    --fn-button-disabled-text-color: var(--fn-button-color);
-    --fn-button-disabled-bg-color: transparent;
-    --fn-button-disabled-border-color: transparent;
+    
   }
 
   &--dashed {
+    
+    --fn-button-hover-color: var(--fn-blue-400);
     --fn-button-text-color:var(--fn-white-text-color);
-    --fn-button-text-hover-color: var(--fn-button-color);
-    --fn-button-border-color:var(--fn-button-border-color-outline);
-    --fn-button-border-hover-color:var(--fn-button-border-color-outline);
-    --fn-button-bg-color: var(--fn-button-bg-color-outline);
+
+    --fn-button-text-hover-color: var(--fn-sky-1000);
+    --fn-button-border-hover-color:var(--fn-button-border-color-default);
     --fn-button-bg-hover-color: var(--fn-white-hover-color);
+
     --fn-button-disabled-text-color: var(--fn-white-text-color);
-    --fn-button-disabled-border-color: var(--fn-button-border-color-outline);
+    --fn-button-disabled-border-color: var(--fn-button-border-color-default);
     --fn-button-disabled-bg-color: transparent;
+    
     --fn-button-border-width: 2px !important;
     --fn-button-border-style: dashed !important;
-  }
-
-  &--diplonema{
-    --fn-button-disabled-text-color: var(--fn-button-color);
-    --fn-button-disabled-bg-color: transparent;
-    --fn-button-disabled-border-color: var(--fn-button-color);
-    --fn-button-text-hover-color: var(--fn-button-hover-color);
-    --fn-button-text-color: var(--fn-white-text-color);
-    transition: all 0.3s ease;
-    position: relative;
-    display: inline-block;
-   
-    &:after {
-      right: inherit;
-      top: inherit;
-      left: 0;
-      bottom: 0;
-    }
-    &:before,
-    &:after {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      height: 2px;
-      width: 0;
-      background: var(--fn-button-color);
-      transition: 400ms ease all;
-    }
-    &:after {
-      top: 100%;
-    }
-    &:hover:before,
-    &:hover:after {
-      width: 100%;
-      transition: 800ms ease all;
-    }
   }
 }
 
@@ -191,17 +171,17 @@
   border-width: 1px;
   border-style: solid;
   margin-left: 5px;
-  font-size: 16px;
   padding: var(--fn-button-size);
   border-radius: var(--fn-border-radius);
   color: var(--fn-button-text-color);
   border-color: var(--fn-button-border-color);
-  background-color: var(--fn-button-bg-color) !important;
+  background-color: var(--fn-button-bg-color) ;
   border-style: var(--fn-button-border-style);
 
   &:hover {
     color: var(--fn-button-text-hover-color);
-    border-color: var(--fn-button-border-hover-color);
-    background-color: var(--fn-button-bg-hover-color)  !important;
+    border-color: var(--fn-button-border-color);
+    border-style: var(--fn-button-border-style);
+    background-color: var(--fn-button-bg-hover-color);
   }
 }
