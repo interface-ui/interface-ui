@@ -1,3 +1,4 @@
+export { UseAlert } from './use-alert'
 export { UseButton } from './use-button'
 export { useRadio, useRadioGroup } from './use-radio'
 export { useSwitchInner, useSwitch } from './use-switch'
