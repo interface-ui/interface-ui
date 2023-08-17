@@ -34,7 +34,7 @@ $ yarn add fusion-ui-vue
 
 ## Documentation
 
-- [DOCS](https://tsinghua-lau.github.io/fusion-ui/#/)
+- [DOCS](https://fusion-ui-vue.github.io/fusion-ui/)
 
 ## Compatibility
 

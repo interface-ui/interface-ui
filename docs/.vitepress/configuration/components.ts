@@ -7,6 +7,10 @@ export const enComponents = [
         link: '/langs/en/components/button',
       },
       {
+        text: 'Badge',
+        link: '/langs/en/components/badge',
+      },
+      {
         text: 'Icon',
         link: '/langs/en/components/icon',
       },
@@ -42,6 +46,16 @@ export const enComponents = [
         text: 'Dialog',
         link: '/langs/en/components/dialog',
       },
+      {
+        collapsible: false,
+        text: 'Switch',
+        link: '/langs/en/components/switch',
+      },
+      {
+        collapsible: false,
+        text: 'Progress',
+        link: '/langs/en/components/progress',
+      },
     ],
   },
 ]
@@ -54,6 +68,10 @@ export const zhComponents = [
         collapsible: false,
         text: 'Button 按钮',
         link: '/langs/zh/components/button',
+      },
+      {
+        text: 'Badge 徽章',
+        link: '/langs/zh/components/badge',
       },
       {
         collapsible: false,
@@ -94,6 +112,16 @@ export const zhComponents = [
         collapsible: false,
         text: 'Dialog 对话框',
         link: '/langs/zh/components/dialog',
+      },
+      {
+        collapsible: false,
+        text: 'Switch 开关',
+        link: '/langs/zh/components/switch',
+      },
+      {
+        collapsible: false,
+        text: 'Progress 进度条',
+        link: '/langs/zh/components/progress',
       },
     ],
   },

@@ -1,0 +1,131 @@
+@import "../../../styles/base.less";
+[data-theme="light"] .fn-progress,
+.fn-progress[data-theme="light"],
+.fn-progress {
+  --fn-text-color: #000;
+  font-size: 14px;
+}
+
+[data-theme="dark"] .fn-progress,
+.fn-progress[data-theme="dark"]{
+  --fn-text-color: #fff;
+  font-size: 14px;
+}
+
+.fn-progress {
+  display: flex;
+  align-items: center;
+  width: 350px;
+  height: 6px;
+  position: relative;
+  
+  &-bar-out{
+    width: 100%;
+    height: 100%;
+    border-radius: 999px;
+    background-color: var(--progress-bar-out-bg);
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    
+    .bar-intermediate{
+      animation: indeterminate var(--bar-duration) infinite;
+    }
+    .fn-progress{
+      position: relative;
+
+      &-bar{
+        height: 100%;
+        width: var(--progress-bar-width); 
+        transition: all 1s;
+        border-radius: 999px;
+        background-color: var(--progress-bar-inner-bg);
+        position: absolute;
+      }
+      &-bar-striped{
+        background-size: 1.25em 1.25em;
+        background-image: linear-gradient(45deg,rgba(0,0,0,.1) 25%,transparent 25%,transparent 50%,rgba(0,0,0,.1) 50%,rgba(0,0,0,.1) 75%,transparent 75%,transparent);
+      }
+      &-bar-is-flow{
+        animation: striped-flow var(--bar-duration) linear infinite;
+      }
+    
+      &-text-inner{
+        color: #333;
+        font-size: 12px;
+        margin: 0 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        right: 0;
+    
+      }
+    }
+     
+  }
+
+  &-text{
+    display: flex;
+  }
+
+  &-text-out{
+    margin-left: 5px;
+    vertical-align: middle;
+        color: var(--fn-text-color);
+        font-size: 12px;
+        margin: 0 5px;
+  }
+}
+
+
+
+
+
+.fn-progress{
+  .circle-content {
+    position: relative;
+    display: block;
+    // margin: 0 auto;
+    .circle {
+      transform: rotate(-90deg);
+    }
+    .count-num {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      color: #333;
+      user-select: none;
+      span{
+        font-size: 25px;
+        color: var(--fn-text-color);
+      }
+    }
+    
+  }
+}
+
+@keyframes indeterminate {
+  0%{
+    left: -100%;
+  }
+  100%{
+    left: 100%;
+  }
+}
+
+@keyframes striped-flow {
+  0%{
+    background-position: -100%;
+  }
+  100%{
+    background-position: 100%;
+  }
+}

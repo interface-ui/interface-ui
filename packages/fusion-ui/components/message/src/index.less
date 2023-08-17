@@ -1,5 +1,7 @@
+@import "../../../styles/base.less";
 [data-theme="light"] .fn-message,
-.fn-message[data-theme="light"]  {
+.fn-message[data-theme="light"],
+.fn-message  {
   --fn-message-bg-color: var(--fn-slate-100);
   --fn-message-text-color:var(--fn-black-100);
   font-size: 14px;
@@ -71,10 +73,8 @@
   }
 }
 
-
-
-.fm-message-fade-enter-from,
-.fm-message-fade-leave-to {
+.fn-message-fade-enter-from,
+.fn-message-fade-leave-to {
   transform: translate(-50%, -100%);
   opacity:0;
 }

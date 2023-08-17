@@ -1,0 +1,112 @@
+@import "../../../styles/base.less";
+[data-theme="light"] .fn-switch,
+.fn-switch[data-theme="light"],
+.fn-switch {
+  --fn-label-text-color: #606266;
+  font-size: 14px;
+}
+
+[data-theme="dark"] .fn-switch,
+.fn-switch[data-theme="dark"] {
+  --fn-label-text-color: #afbdd5;
+  font-size: 14px;
+}
+
+@buttonSize:15px;
+
+.fn-switch{
+  width: 50px;
+  height: 20px;
+  border-radius: 9999px;
+  transition: all .3s;
+  background-color: var(--switch-background);
+
+  cursor: pointer;
+  >.fn-switch__inner{
+    width: calc(100% - 5px);
+    margin-left: 2.5px;
+    height: 100%;
+    border-radius: 99999px;
+    position: relative;
+    overflow: hidden;
+
+    >.fn-switch__core{
+      width: calc(100% - @buttonSize);
+      height: 100%;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      float: var(--switch-float);
+      color: #fff;
+     
+      span{
+        width: calc(100% - 0px);
+        height: 100%;
+        display: inline-block;
+        user-select: none;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        text-align: center;
+      }
+      .icon span{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    >.fn-switch__button{
+      width:@buttonSize;
+      height:@buttonSize;
+      background-color: #fff;
+      border-radius: 99999px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    > .is-checked{
+      animation: switch-checked  .2s linear forwards;
+    }
+    > .no-checked{
+      animation: switch-no-checked  .2s linear forwards;
+    }
+  }
+}
+@keyframes switch-checked {
+  0% {
+    width:@buttonSize;
+    left: var(--leftStart);
+  }
+  10% {
+    width: 40px;
+  }
+  90% {
+    width: 40px;
+  }
+  100% {
+    width:@buttonSize;
+    left: calc(var(--leftEnd) - @buttonSize) ;
+  }
+}
+@keyframes switch-no-checked {
+  0% {
+    width:@buttonSize;
+    right:  0;
+  }
+  10% {
+    width: 40px;
+  }
+  90% {
+    width: 40px;
+  }
+  100% {
+    width:@buttonSize;
+    right: calc(var(--leftStart) - @buttonSize);
+  }
+}
+
+.switch-is-disabled{
+  cursor:not-allowed ;
+}

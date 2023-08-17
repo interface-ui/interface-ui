@@ -11,7 +11,7 @@
 
 由于它刚起步，还在慢慢完善中，因此不建议用于``生产``环境中
 
-如果想学习Vue3+Ts+Vite组件库的搭建，那么它会是一个不错的选择。
+如果想学习Vue3+Ts+Vite组件库的搭建，那么它会是一个不错的选择
 
 ## 特性
 
@@ -51,7 +51,7 @@ app.use(fusionUi).mount('#app')
 
 ## 配套文档
 
-- [DOCS](https://tsinghua-lau.github.io/fusion-ui/#/)
+- [DOCS](https://tsinghua-lau.github.io/fusion-ui/)
 
 ## 仓库目录
 ```bash

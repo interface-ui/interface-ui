@@ -1,12 +1,18 @@
 {
   "name": "fusion-ui-vue",
-  "version": "1.0.8",
+  "version": "1.0.91",
   "description": "A Component Library for Vue 3",
   "author": "tsinghua-lau",
   "license": "MIT",
+  "homepage": "https://tsinghua-lau.github.io/fusion-ui/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsinghua-lau/fusion-ui.git"
+  },
   "keywords": [
     "fusion-ui-vue",
-    "vue3"
+    "Vue3",
+    "TypeScript"
   ],
   "sideEffects": [
     "dist/**/*.css",
@@ -29,7 +35,8 @@
     "vue": "^3.2.45"
   },
   "dependencies": {
-    "fusion-ui-iconify": "^1.0.21",
+    "fusion-ui-iconify": "^1.0.35",
+    "tinycolor@3.4.1": "link:ctrl/tinycolor@3.4.1",
     "vite-plugin-progress": "^0.0.7",
     "vue": "^3.2.45"
   }

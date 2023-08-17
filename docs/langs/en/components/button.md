@@ -16,7 +16,7 @@ Common operation buttons.
 
 ### type
 
-You can use the type, plain, round, and circle attributes to define the style of the button.
+Use ```type``` and ```state``` to define the style of the button.
 
 <demo src="../../../example/button/types.vue"></demo>
 
@@ -34,6 +34,14 @@ Buttons stacked small to large sizes.
 Predefined the shape of the button.
 
 <demo src="../../../example/button/shapes.vue"></demo>
+
+## Custom color
+
+You can customize the color of the button, and the ```state``` attribute will be invalid.
+
+The color of the button is defined by the ```color``` attribute, and the background color of the button is defined by the ```background``` attribute.
+
+<demo src="../../../example/button/custom.vue"></demo>
 
 ### disabled
 

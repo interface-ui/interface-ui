@@ -1,5 +1,7 @@
+@import "../../../styles/base.less";
 [data-theme="light"] .fn-link,
-.fn-link[data-theme="light"] {
+.fn-link[data-theme="light"],
+.fn-link {
   --fn-default-text-color: #374151;
   font-size: 14px;
 }
@@ -63,6 +65,6 @@
   }
   &:hover {
     cursor: pointer;
-    color: #000;
+    text-decoration:underline;
   }
 }

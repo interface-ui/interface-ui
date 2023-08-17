@@ -1,13 +1,40 @@
+@import "../../../styles/base.less";
 [data-theme="light"] .dialog,
-.dialog[data-theme="light"] {
+.dialog[data-theme="light"],
+.dialog{
   --fn-dialog-bg-color: var(--fn-bd-light-bg);
+  --fn-dialog-text-color: var(--fn-slate-800);
   font-size: 14px;
 }
 
 [data-theme="dark"] .dialog,
 .dialog[data-theme="dark"] {
   --fn-dialog-bg-color:var(--fn-stone-1400);
+  --fn-dialog-text-color: var(--fn-slate-50);
   font-size: 14px;
+}
+
+.dialog-fade-enter-active{
+  animation: dialog-fade-in .3s;
+}
+.dialog-fade-leave-active {
+  animation: dialog-fade-out .3s;
+}
+@keyframes dialog-fade-in{
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes dialog-fade-out{
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .dialog {
@@ -18,6 +45,7 @@
   left: 0;
   overflow: auto;
   z-index: 100;
+  background: rgba(0, 0, 0, .5);
   > .fn-overlay{
     width: var(--fn-dialog-width);
     position: absolute;
@@ -25,19 +53,15 @@
     left: 50%;
     top: var(--fn-dialog-top) !important;
     z-index: 200;
+    color: var(--fn-dialog-text-color);
     background-color: var(--fn-dialog-bg-color) !important;
   
     > .header{
       padding: 20px;
       justify-content: space-between;
       display: flex;
-      > span{
-        > .fn-button{
-          &:hover{
-            color: var(--fn-rose-600);
-            background-color: transparent;
-          }
-        }
+       span:hover{
+          cursor: pointer;
       }
     }
 

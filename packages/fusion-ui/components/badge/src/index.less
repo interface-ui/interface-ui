@@ -1,0 +1,55 @@
+@import "../../../styles/base.less";
+[data-theme="light"] .fn-badge,
+.fn-badge[data-theme="light"],
+.fn-badge {
+  font-size: 14px;
+}
+
+[data-theme="dark"] .fn-badge,
+.fn-badge[data-theme="dark"] {
+  font-size: 14px;
+}
+
+.fn-badge,.badge-is-dot {
+  width: fit-content;
+  display: inline-block;
+  position: relative;
+  .badge__content{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9999px;
+    color: #ffff;
+    background-color: var(--sup-bg-color);
+    padding: 0 6px;
+    word-spacing: normal;
+    transform: translate(50%,-50%);
+  }
+}
+.badge-is-dot{
+  >.badge__content{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    padding: 0;
+    overflow: hidden;
+  }
+}
+.badge-is-flashing{
+  >.badge__content{
+    animation: flickerAnimation 1s linear infinite alternate;
+  }
+}
+
+@keyframes flickerAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

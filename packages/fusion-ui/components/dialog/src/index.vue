@@ -8,14 +8,15 @@ const props = defineProps(dialogProps)
 const emit = defineEmits(dialogkEmits)
 const { showClose } = toRefs(props)
 
-const containerRef = ref(null)
+const containerRef = ref<HTMLElement>()
 const targetDivRef = ref(null)
 const dialogRef = ref<HTMLElement>()
 const {
   visible,
   handleClose,
   overlayDialogStyle,
-} = useDialog(props, dialogRef)
+} = useDialog(props, containerRef)
+
 provide(dialogInjectionKey, {
   dialogRef,
 })
@@ -32,7 +33,8 @@ function handleClick(event: MouseEvent) {
 
 <template>
   <Teleport to="body">
-    <div
+    <transition name='dialog-fade'>
+      <div
       v-show="visible"
       ref="containerRef"
       class="dialog"
@@ -45,10 +47,11 @@ function handleClick(event: MouseEvent) {
             {{ props.title }}
           </span>
           <span v-if="!showClose" @click="handleClose">
-            <fn-button shape="circle" type="ghost" icon="material-symbols:close" />
+            <fn-icon name="material-symbols:close" />
           </span>
         </div>
         <div class="dialog__content">
+          --{{ dialogRef }}--
           <slot />
         </div>
         <div class="footer">
@@ -56,5 +59,8 @@ function handleClick(event: MouseEvent) {
         </div>
       </div>
     </div>
+    </transition>
+    
   </Teleport>
 </template>
+

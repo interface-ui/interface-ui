@@ -16,6 +16,7 @@ lang: zh
 
 # 基础用法
 
+只需要设置 ```v-model``` 绑定变量，```value``` 为选中值
 <demo src="../../../example/radio/base.vue"></demo>
 
 

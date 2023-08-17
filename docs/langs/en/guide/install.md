@@ -1,6 +1,8 @@
 # Installation & Usage
 
- how to properly install and use an Fusion Ui.
+ how to properly install and use an Fusion Ui
+
+It is recommended to use ```automatic import``` to import components, which is simple and fast.
 
 ## Install Package
 
@@ -37,7 +39,6 @@ app.mount('#app')
   
 ```ts
 import { FnButton } from 'fusion-ui-vue'
-import 'fusion-ui-vue/dist/styles/base.css'
 import 'fusion-ui-vue/dist/styles/button/src/index.css'
 ```
 

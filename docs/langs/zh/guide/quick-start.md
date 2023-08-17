@@ -6,7 +6,7 @@ Fusion Ui 是一个 Vue3 组件库，简洁、优雅、美观
 
 由于它刚起步，还在慢慢完善中，因此不建议用于生产环境中
 
-如果想学习Vue3+Ts+Vite组件库的搭建，那么它会是一个不错的选择。
+如果想学习Vue3+Ts+Vite组件库的搭建，那么它会是一个不错的选择
 
 ## 特性
 
@@ -43,7 +43,7 @@ Fusion Ui 是一个 Vue3 组件库，简洁、优雅、美观
 如果你对这个项目感兴趣，欢迎加入。
 
 - [行为公约](https://github.com/tsinghua-lau/fusion-ui/blob/master/CODE_OF_CONDUCT.md)
-- [贡献指南](https://github.com/tsinghua-lau/fusion-ui/blob/master/CONTRIBUTING.zh-CN.md).
+- [贡献指南](https://github.com/tsinghua-lau/fusion-ui/blob/master/CONTRIBUTING.zh-CN.md)
 
 ## 贡献者
 
