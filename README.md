@@ -118,6 +118,13 @@ app.use(fusionUi).mount('#app')
     pnpm run play:dev
   ```
 
+## 特别感谢
+
+❤️ 感谢所有为 ```FusionUI``` 做出 [贡献的人](https://github.com/tsinghua-lau/fusion-ui/graphs/contributors)！
+
+<a href="https://github.com/tsinghua-lau/fusion-ui/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=tsinghua-lau/fusion-ui" />
+</a>
 
 ## 兼容性
 
@@ -144,10 +151,4 @@ app.use(fusionUi).mount('#app')
 
 如果你对这个项目感兴趣，欢迎加入。
 
-- [贡献指南](https://github.com/tsinghua-lau/fusion-ui/blob/master/CONTRIBUTING.md)
-
-## 贡献者
-
-<a href="https://github.com/tsinghua-lau/fusion-ui/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=tsinghua-lau/fusion-ui" />
-</a>
+- [贡献指南](https://github.com/tsinghua-lau/fusion-ui/blob/master/CONTRIBUTING.zh-CN.md)

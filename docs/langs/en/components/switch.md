@@ -23,13 +23,13 @@ Bind the 'v model' to a variable of type 'Boolean' to use it.
 
 # Switch color
 
-```color``` 属性可以设置开关的颜色
+The ```color``` attribute can set the color of the switch.
 
 <demo src="../../../example/switch/color.vue"></demo>
 
 # Text description
 
-``` checked-text``` ```un-checked-text``` 设置开关的文字描述，超出长度会被隐藏
+``` checked-text``` ```un-checked-text``` Set the text description of the switch. If it exceeds the length, it will be hidden.
 
 <demo src="../../../example/switch/text.vue"></demo>
 
