@@ -22,6 +22,11 @@ export const enComponents = [
         text: 'radio',
         link: '/langs/en/components/radio',
       },
+      {
+        collapsible: false,
+        text: 'Card',
+        link: '/langs/en/components/card',
+      },
     ],
   },
   {
@@ -69,6 +74,11 @@ export const zhComponents = [
         collapsible: false,
         text: 'Radio 单选框',
         link: '/langs/zh/components/radio',
+      },
+      {
+        collapsible: false,
+        text: 'Card 按钮',
+        link: '/langs/zh/components/card',
       },
     ],
   },

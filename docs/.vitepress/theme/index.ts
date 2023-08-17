@@ -6,6 +6,7 @@ import FusionUi from '../../../packages/fusion-ui/components/index'
 import '../../../packages/fusion-ui/components/dialog/src/index.less'
 import '../../../packages/fusion-ui/components/input/src/index.less'
 import '../../../packages/fusion-ui/components/radio/src/index.less'
+import '../../../packages/fusion-ui/components/card/src/index.less'
 
 // import '../../../packages/fusion-ui/components/link/src/index.less'
 // import '../../../packages/fusion-ui/components/message/src/index.less'

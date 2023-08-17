@@ -5,6 +5,7 @@ import FnMessage from './message'
 import FnDialog from './dialog'
 import FnInput from './input'
 import FnRadio from './radio'
+import FnCard from './card'
 export * from './_hooks'
 export * from './button'
 export * from './icon'
@@ -13,11 +14,12 @@ export * from './message'
 export * from './dialog'
 export * from './input'
 export * from './radio'
+export * from './card'
 // export default {
 //   Button,
 //   Icon,
 // }
-const component = [FnButton, FnIcon, FnLink, FnMessage, FnDialog, FnInput, FnRadio]
+const component = [FnButton, FnIcon, FnLink, FnMessage, FnDialog, FnInput, FnRadio, FnCard]
 
 const CK = {
   install(App: any) {
