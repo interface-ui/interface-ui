@@ -1,26 +1,26 @@
-export const cardProps =  {
+export const cardProps = {
   title: {
     type: String,
-    default: 'card-header'
+    default: 'card-header',
   },
   border: {
     type: Boolean,
-    default: true
+    default: true,
   },
   hover: {
     type: Boolean,
-    default: false
+    default: false,
   },
   separate: {
     type: Boolean,
-    default: false
+    default: false,
   },
   width: {
     type: Number,
-    default: 300
+    default: 300,
   },
   background: {
     type: String,
-    default: ''
-  }
+    default: '',
+  },
 }

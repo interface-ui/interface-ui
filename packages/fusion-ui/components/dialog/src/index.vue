@@ -33,34 +33,32 @@ function handleClick(event: MouseEvent) {
 
 <template>
   <Teleport to="body">
-    <transition name='dialog-fade'>
+    <transition name="dialog-fade">
       <div
-      v-show="visible"
-      ref="containerRef"
-      class="dialog"
-      role="dialog"
-      @click.stop="handleClick"
-    >
-      <div ref="targetDivRef" class="fn-overlay " :style="overlayDialogStyle" :class="{ 'is-align-center': (props.center && !props.fullscreen), 'is-fullscreen': props.fullscreen }">
-        <div v-show="props.title" class="header">
-          <span>
-            {{ props.title }}
-          </span>
-          <span v-if="!showClose" @click="handleClose">
-            <fn-icon name="material-symbols:close" />
-          </span>
-        </div>
-        <div class="dialog__content">
-          --{{ dialogRef }}--
-          <slot />
-        </div>
-        <div class="footer">
-          <slot name="footer" />
+        v-show="visible"
+        ref="containerRef"
+        class="dialog"
+        role="dialog"
+        @click.stop="handleClick"
+      >
+        <div ref="targetDivRef" class="fn-overlay " :style="overlayDialogStyle" :class="{ 'is-align-center': (props.center && !props.fullscreen), 'is-fullscreen': props.fullscreen }">
+          <div v-show="props.title" class="header">
+            <span>
+              {{ props.title }}
+            </span>
+            <span v-if="!showClose" @click="handleClose">
+              <fn-icon name="material-symbols:close" />
+            </span>
+          </div>
+          <div class="dialog__content">
+            --{{ dialogRef }}--
+            <slot />
+          </div>
+          <div class="footer">
+            <slot name="footer" />
+          </div>
         </div>
       </div>
-    </div>
     </transition>
-    
   </Teleport>
 </template>
-

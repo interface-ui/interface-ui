@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed } from 'vue'
 import { cardProps } from './card'
 
 const props = defineProps(cardProps)
@@ -10,17 +10,19 @@ const classList = computed(() => {
   return [
     {
       'has-border': border,
-      'has-hover': hover
-    }
+      'has-hover': hover,
+    },
   ]
 })
 </script>
 
 <template>
-  <div class="fn-card" :class="classList" :style="{
-    backgroundColor: props.background,
-    width: `${props.width}px`}"
-    >
+  <div
+    class="fn-card" :class="classList" :style="{
+      backgroundColor: props.background,
+      width: `${props.width}px`,
+    }"
+  >
     <div class="fn-card--title">
       <span>
         <slot name="header">

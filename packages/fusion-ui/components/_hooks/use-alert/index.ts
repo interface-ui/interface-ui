@@ -39,7 +39,6 @@ export const UseAlert = (prop: AlertProps): UseAlertReturn => {
       style['--bar-width'] = 'calc(100% - 20px)'
     else
       style['--bar-width'] = '100%'
-    debugger
     if (prop.duration)
       style['--bar-duration'] = prop.duration ? `${prop.duration}s` : '2s'
     return style

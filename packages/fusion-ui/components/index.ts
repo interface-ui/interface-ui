@@ -23,8 +23,7 @@ export * from './switch'
 export * from './badge'
 export * from './progress'
 export * from './card'
-const component = [FnButton, FnAlert, FnIcon, FnLink, FnMessage, FnDialog, FnInput, FnRadio, FnSwitch, FnBadge, FnProgress， FnCard]
-
+const component = [FnButton, FnAlert, FnIcon, FnLink, FnMessage, FnDialog, FnInput, FnRadio, FnSwitch, FnBadge, FnProgress, FnCard]
 
 const CK = {
   install(App: any) {

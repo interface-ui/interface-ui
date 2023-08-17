@@ -19,11 +19,11 @@ export const enComponents = [
         link: '/langs/en/components/link',
       },
       {
-        text: 'input',
+        text: 'Input',
         link: '/langs/en/components/input',
       },
       {
-        text: 'radio',
+        text: 'Radio',
         link: '/langs/en/components/radio',
       },
       {

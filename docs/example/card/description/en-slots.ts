@@ -2,7 +2,7 @@ import type { SlotTableItem } from '../../../.vitepress/components/table-block/s
 
 const list: SlotTableItem[] = [
   { name: 'default', remark: 'card content' },
-  { name: 'header', remark: 'card header' }
+  { name: 'header', remark: 'card header' },
 ]
 
 export default list
