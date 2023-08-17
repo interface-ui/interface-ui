@@ -14,6 +14,7 @@ English| [简体中文](./README.md)
 - 🎡 On-Demand Import - Provides a parser to automatically import only the components that are used.
 - 💪 TypeScript Support - Supports TypeScript for type checking and type inference.
 - ⚡️ Powered by Vite for Faster Performance
+- 🧪 Vitest unit testing 
 - 📃 Detailed Chinese/English Documentation
 - 🛠 More ...
 
