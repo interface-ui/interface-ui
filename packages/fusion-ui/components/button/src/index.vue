@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, toRefs } from 'vue'
 import { buttonProps } from '../src/button'
 import { UseButton } from '../../_hooks'
 const props = defineProps(buttonProps)
@@ -12,6 +12,18 @@ const { classList, styleList } = UseButton(props)
 const buttonEl = ref<HTMLButtonElement>()
 
 const handleClick = (event: MouseEvent) => {
+  const { disabled } = toRefs(props)
+  /** 禁用则返回 */
+  if (disabled.value) {
+    /**
+       * 阻止默认行为
+       *
+       * @see event.preventDefault https://developer.mozilla.org/zh-CN/docs/Web/API/Event/preventDefault
+       */
+    event.preventDefault()
+    return
+  }
+
   emits('click', event)
 }
 

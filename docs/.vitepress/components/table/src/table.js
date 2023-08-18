@@ -80,7 +80,15 @@ export const useTable = (props) => {
      * 如果小于，则重新设置各个值并重新计算自适应宽度
      */
     if (_min_width_list.length) {
-      _min_width_list.map((item, index) => {
+      // _min_width_list.map((item, index) => {
+      //   if (adapt_width > item) {
+      //     _fixed_width += item
+      //     _remainder_col--
+      //     _min_width_list.splice(index, 1)
+      //     adapt_width = getAdaptWidth()
+      //   }
+      // })
+      _min_width_list.forEach((item, index) => {
         if (adapt_width > item) {
           _fixed_width += item
           _remainder_col--
@@ -94,10 +102,12 @@ export const useTable = (props) => {
       const { width, minWidth } = cols[i]
 
       // 设置成固定宽度
+      // eslint-disable-next-line max-statements-per-line
       if (width) { width_list.push(width); continue }
 
       // 是否设置成最小宽度：当含有最小宽度属性并且最小宽度大于计算得出的最大列宽
       const hasMinWidth = minWidth && minWidth > adapt_width
+      // eslint-disable-next-line max-statements-per-line
       if (hasMinWidth) { width_list.push(minWidth); continue }
 
       // 如果没有定义宽度和最小宽，则设置成自适应宽度或者最小预设宽度
@@ -115,7 +125,9 @@ export const useTable = (props) => {
     return Number(width).toFixed(2)
   }
 
-  watch(() => props.cols, () => { initColumns() })
+  watch(() => props.cols, () => {
+    initColumns()
+  })
 
   onMounted(() => {
     nextTick(() => {

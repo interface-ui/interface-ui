@@ -1,4 +1,7 @@
-import type { ExtractPropTypes } from 'vue'
+import type { ExtractPropTypes, PropType } from 'vue'
+export const status = ['success', 'danger', 'warning'] as const
+export type progressStatus = typeof status[number]
+export type ComponentState = 'info' | 'success' | 'warning' | 'danger'
 
 export const progressProps = {
   percentage: {
@@ -47,9 +50,9 @@ export const progressProps = {
     default: '#4987f8',
   },
   status: {
-    type: String,
+    type: String as PropType<progressStatus>,
     default: '',
-    values: ['', 'success', 'danger', 'warning'],
+
   },
   striped: {
     type: Boolean,

@@ -1,16 +1,18 @@
 import FnButton from './button'
+import FnAlert from './alert'
 import FnIcon from './icon'
 import FnLink from './link'
 import FnMessage from './message'
 import FnDialog from './dialog'
 import FnInput from './input'
 import FnRadio from './radio'
+import FnCard from './card'
 import FnSwitch from './switch'
 import FnBadge from './badge'
 import FnProgress from './progress'
-
 export * from './_hooks'
 export * from './button'
+export * from './alert'
 export * from './icon'
 export * from './link'
 export * from './message'
@@ -20,8 +22,8 @@ export * from './radio'
 export * from './switch'
 export * from './badge'
 export * from './progress'
-
-const component = [FnButton, FnIcon, FnLink, FnMessage, FnDialog, FnInput, FnRadio, FnSwitch, FnBadge, FnProgress]
+export * from './card'
+const component = [FnButton, FnAlert, FnIcon, FnLink, FnMessage, FnDialog, FnInput, FnRadio, FnSwitch, FnBadge, FnProgress, FnCard]
 
 const CK = {
   install(App: any) {

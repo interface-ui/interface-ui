@@ -16,30 +16,30 @@ lang: zh
 
 # 基础用法
 
-只需要设置 ```v-model``` 绑定变量，```value``` 为选中值
+只需要设置 ```v-model``` 绑定变量，```value``` 为选中值。
 <demo src="../../../example/radio/base.vue"></demo>
 
 
 ## 禁用状态
 
-通过 ```disabled``` 属性禁用单选框
+通过 ```disabled``` 属性禁用单选框。
 
 <demo src="../../../example/radio/disabled.vue"></demo>
 
 
 ## 单选框组
 
- 传入```option-list```属性，可以生成一组单选框
+ 传入```option-list```属性，可以生成一组单选框。
 <demo src="../../../example/radio/option-list-horizontal.vue"></demo>
 
 
- 通过 ```horizontal = false``` 生成一组垂直排列的单选框
+ 通过 ```horizontal = false``` 生成一组垂直排列的单选框。
 
 <demo src="../../../example/radio/option-list.vue"></demo>
 
 ## 自定义按钮颜色
 
- 通过 ```color``` 属性自定义按钮颜色
+ 通过 ```color``` 属性自定义按钮颜色。
 <demo src="../../../example/radio/color.vue"></demo>
 
 

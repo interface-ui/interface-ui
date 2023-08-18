@@ -75,7 +75,7 @@ watch(
       <template #type="{ row }">
         <div v-clickOutside="() => onClickoutside(row)" class="type-area">
           <template v-if="typeof row.type === 'object'">
-            <span v-for="v in row.type" class="type-area-inner">
+            <span v-for="(v, i) in row.type" :key="i" class="type-area-inner">
               {{ v }}
             </span>
           </template>

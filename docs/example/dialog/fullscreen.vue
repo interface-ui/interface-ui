@@ -4,7 +4,7 @@ const dialogVisible = ref(false)
 </script>
 
 <template>
-  <fn-button  @click=" dialogVisible = true">
+  <fn-button @click=" dialogVisible = true">
     fullscreen
   </fn-button>
   <fn-dialog
@@ -16,7 +16,7 @@ const dialogVisible = ref(false)
     <span>This is a message</span>
     <template #footer>
       <span class="dialog-footer">
-        <fn-button  @click="dialogVisible = false">Cancel</fn-button>
+        <fn-button @click="dialogVisible = false">Cancel</fn-button>
         <fn-button @click="dialogVisible = false">
           Confirm
         </fn-button></span>

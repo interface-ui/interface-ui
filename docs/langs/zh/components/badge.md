@@ -14,7 +14,7 @@ lang: zh
 
 ## 基础用法
 
-```value``` 用来展示新消息的数量, ```color``` 用来设置背景色
+```value``` 用来展示新消息的数量, ```color``` 用来设置背景色。
 <demo src="../../../example/badge/base.vue"></demo>
 
 

@@ -175,12 +175,12 @@ importers:
 
   packages/fusion-ui:
     dependencies:
+      '@ctrl/tinycolor':
+        specifier: ^3.4.1
+        version: 3.6.0
       fusion-ui-iconify:
         specifier: ^1.0.35
         version: 1.0.35(less@3.13.1)(webpack@4.46.0)
-      tinycolor@3.4.1:
-        specifier: link:ctrl/tinycolor@3.4.1
-        version: link:ctrl/tinycolor@3.4.1
       vite-plugin-progress:
         specifier: ^0.0.7
         version: 0.0.7(vite@4.4.9)

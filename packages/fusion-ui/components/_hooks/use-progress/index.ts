@@ -14,28 +14,16 @@ export type ClassList = (string | Record<string, unknown>)[]
  * @param { Object } styleList 样式列表
  */
 export interface UseProgressReturn {
-  classList: ComputedRef<ClassList>
   styleList: ComputedRef<CSSProperties>
   styleListCircle: ComputedRef<CSSProperties>
 }
 
 /**
- * 返回Badge组件的类名列表
+ * 返回Progress组件的类名列表
  * @param prop
  * @returns
  */
 export const UseProgress = (prop: ProgressProps): UseProgressReturn => {
-  /** 类名列表 */
-  const classList = computed((): ClassList => {
-    return [
-      'fn-badge',
-      {
-        'badge-is-dot': true,
-        'badge-is-flashing': true,
-      },
-    ]
-  })
-
   /** 样式列表 */
   const styleList = computed((): CSSProperties => {
     const style: CSSProperties = {}
@@ -70,7 +58,6 @@ export const UseProgress = (prop: ProgressProps): UseProgressReturn => {
 
   return {
     styleList,
-    classList,
     styleListCircle,
   }
 }
