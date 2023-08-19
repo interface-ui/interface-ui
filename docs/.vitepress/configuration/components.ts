@@ -27,7 +27,6 @@ export const enComponents = [
         link: '/langs/en/components/radio',
       },
       {
-        collapsible: false,
         text: 'Card',
         link: '/langs/en/components/card',
       },
@@ -37,22 +36,24 @@ export const enComponents = [
     text: 'Feedback',
     items: [
       {
-        collapsible: false,
+
+        text: 'Alert',
+        link: '/langs/en/components/alert',
+      },
+      {
         text: 'Message',
         link: '/langs/en/components/message',
       },
       {
-        collapsible: false,
         text: 'Dialog',
         link: '/langs/en/components/dialog',
       },
       {
-        collapsible: false,
+
         text: 'Switch',
         link: '/langs/en/components/switch',
       },
       {
-        collapsible: false,
         text: 'Progress',
         link: '/langs/en/components/progress',
       },
@@ -65,7 +66,6 @@ export const zhComponents = [
     text: '基础组件',
     items: [
       {
-        collapsible: false,
         text: 'Button 按钮',
         link: '/langs/zh/components/button',
       },
@@ -74,27 +74,23 @@ export const zhComponents = [
         link: '/langs/zh/components/badge',
       },
       {
-        collapsible: false,
         text: 'Icon 图标',
         link: '/langs/zh/components/icon',
       },
       {
-        collapsible: false,
+
         text: 'Link 链接',
         link: '/langs/zh/components/link',
       },
       {
-        collapsible: false,
         text: 'Input 输入框',
         link: '/langs/zh/components/input',
       },
       {
-        collapsible: false,
         text: 'Radio 单选框',
         link: '/langs/zh/components/radio',
       },
       {
-        collapsible: false,
         text: 'Card 按钮',
         link: '/langs/zh/components/card',
       },
@@ -104,22 +100,22 @@ export const zhComponents = [
     text: '反馈组件',
     items: [
       {
-        collapsible: false,
+        text: 'Alert 提示',
+        link: '/langs/zh/components/alert',
+      },
+      {
         text: 'Message 消息',
         link: '/langs/zh/components/message',
       },
       {
-        collapsible: false,
         text: 'Dialog 对话框',
         link: '/langs/zh/components/dialog',
       },
       {
-        collapsible: false,
         text: 'Switch 开关',
         link: '/langs/zh/components/switch',
       },
       {
-        collapsible: false,
         text: 'Progress 进度条',
         link: '/langs/zh/components/progress',
       },

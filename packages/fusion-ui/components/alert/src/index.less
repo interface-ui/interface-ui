@@ -11,11 +11,10 @@
 }
 
 .fn-alert{
-  width: 300px;
-  height: auto; 
-  line-height: 30px;
   padding: 0 10px;
   position: relative;
+  border-radius: 5px;
+  padding: 5px;
   
   &-info{
     background-color: #85888e;
@@ -33,24 +32,37 @@
   &-content{
     overflow: hidden;
     width: 100%;
+    height: 100%;
     display: flex;
+    align-items: center;
+    > .fixed-tip{
+      margin-right: 5px;
+      font-weight: 700;
+      color: #fff;
+    }
     > .scroll-area{
       width: 100%;
       height: 100%;
-      display: flex;
       overflow: hidden;
       > .bar{
-        width: var(--bar-width);
         height: 100%;
         color:#fff;
-        position: relative;
+        >.box{
+          .title{
+            line-height: initial;
+            font-size: 13px;
+            font-weight: 700;
+          }
+          .description{
+            line-height: initial;
+            font-size: 12px;
+          }
+        }
       }
     }
 
     > .close{
       cursor: pointer;
-      display: flex;
-      align-items: center;
     }
     
     > .slots{
@@ -60,7 +72,8 @@
     }
 
     .bar-scroll{
-      animation: barScroll var(--bar-duration) linear infinite;
+      position: relative;
+      animation: var(--direction) var(--bar-duration) linear infinite;
       &:hover{
         animation-play-state: paused;
       }
@@ -68,11 +81,26 @@
   }
 }
 
-@keyframes barScroll {
+
+@keyframes barScrollToTop {
+  0%{
+    bottom: var(--scroll-start);
+  }
+  20%{
+    bottom: 0;
+  }
+  80%{
+    bottom: 0;
+  }
+  100%{
+    bottom: var(--scroll-end);
+  }
+}
+
+@keyframes barScrollToLeft {
   0%{
     left: 101%;
   }
- 
   100%{
     left: -101%;
   }
