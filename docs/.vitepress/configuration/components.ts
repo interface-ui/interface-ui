@@ -30,6 +30,11 @@ export const enComponents = [
         text: 'Card',
         link: '/langs/en/components/card',
       },
+      {
+        collapsible: false,
+        text: 'Tag',
+        link: '/langs/en/components/tag',
+      },
     ],
   },
   {
@@ -93,6 +98,11 @@ export const zhComponents = [
       {
         text: 'Card 按钮',
         link: '/langs/zh/components/card',
+      },
+      {
+        collapsible: false,
+        text: 'Tag 标签',
+        link: '/langs/zh/components/tag',
       },
     ],
   },

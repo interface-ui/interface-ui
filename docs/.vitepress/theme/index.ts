@@ -17,6 +17,7 @@ import '../../../packages/fusion-ui/components/alert/src/index.less'
 // import '../../../packages/fusion-ui/components/switch/src/index.less'
 // import '../../../packages/fusion-ui/components/progress/src/index.less'
 // import '../../../packages/fusion-ui/components/card/src/index.less'
+import '../../../packages/fusion-ui/components/tag/src/index.less'
 
 // 导入 npm 包
 // import FusionUi from 'fusion-ui-vue'
