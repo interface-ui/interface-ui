@@ -1,0 +1,66 @@
+@import "../../../styles/base.less";
+
+.fn-tag {
+  --fn-tag-bg-color: #ecf5ff;
+  --fn-tag-text-color: #409eff;
+  --fn-tag-border-color: #d9ecff;
+  --fn-tag-height: 24px;
+  --fn-tag-padding: 0 9px;
+  --fn-tag-border-radius: 4px;
+}
+
+.fn-tag {
+  &--info {
+    --fn-tag-bg-color: #f4f4f5;
+    --fn-tag-text-color: #909399;
+    --fn-tag-border-color: #e9e9eb;
+  }
+  &--success {
+    --fn-tag-bg-color: #f0f9eb;
+    --fn-tag-text-color: #67c23a;
+    --fn-tag-border-color: #e1f3d8;
+  }
+  &--warning {
+    --fn-tag-bg-color: #fdf6ec;
+    --fn-tag-text-color: #e6a23c;
+    --fn-tag-border-color: #faecd8;
+  }
+  &--danger {
+    --fn-tag-bg-color: #fef0f0;
+    --fn-tag-text-color: #f56c6c;
+    --fn-tag-border-color: #fde2e2;
+  }
+  &--small {
+    --fn-tag-height: 20px;
+    --fn-tag-padding: 0 7px;
+  }
+  &--large {
+    --fn-tag-height: 32px;
+    --fn-tag-padding: 0 11px;
+  }
+}
+
+.is-round{
+  --fn-tag-border-radius:9999px;
+}
+
+.fn-tag {
+  display: flex;
+  align-items: center;
+  height: var(--fn-tag-height);
+  width: fit-content;
+  padding: var(--fn-tag-padding);
+  border-radius: var(--fn-tag-border-radius);
+  background-color: var(--fn-tag-bg-color);
+  color: var(--fn-tag-text-color);
+  border-color: var(--fn-tag-border-color);
+  border-style: solid;
+  border-width: 2px;
+}
+
+.close-btn {
+  margin-left: 5px;
+  &:hover {
+    cursor: pointer;
+  }
+}
