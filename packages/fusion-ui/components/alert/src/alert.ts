@@ -2,10 +2,23 @@ import type { ExtractPropTypes, PropType } from 'vue'
 export type BadgeType = String | Number
 
 export const alertProps = {
-  text: {
+  title: {
     type: [String, Number] as PropType<BadgeType>,
     default: '',
   },
+  description: {
+    type: [String, Number] as PropType<BadgeType>,
+    default: '',
+  },
+  fixedTip: {
+    type: Boolean,
+    default: false,
+  },
+  direction: {
+    type: String as PropType<'left' | 'top'>,
+    default: 'left',
+  },
+
   closable: {
     type: Boolean,
     default: false,

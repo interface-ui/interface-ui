@@ -11,20 +11,36 @@ const visible = ref(true)
 const isScroll = computed(() => (props.scrollable ? 'bar bar-scroll' : 'bar'))
 
 const handClose = (evt: MouseEvent) => {
-  visible.value = false
   emit('close', evt)
   visible.value = false
 }
+const box = ref<HTMLElement | null>(null)
 </script>
 
 <template>
   <transition name="alert-fade">
     <div v-show="visible" :class="classList" :style="styleList">
       <div class="fn-alert-content">
+        <div v-if="$slots.fixedArea" class="fixed-tip">
+          <slot name="fixedArea" />
+        </div>
         <div class="scroll-area">
           <div :class="isScroll">
-            <span>{{ props.text }}</span>
-            <slot name="textArea" />
+            <div
+              ref="box" class="box"
+              :style="props.center ? 'text-align:center;' : ''"
+            >
+              <div class="title">
+                {{ props.title }}
+              </div>
+              <div
+                v-if="props.description"
+                class="description"
+                :style="props.title ? 'margin-top:5px' : ''"
+              >
+                {{ props.description }}
+              </div>
+            </div>
           </div>
         </div>
         <div v-if="props.closable" class="close" @click="handClose">
