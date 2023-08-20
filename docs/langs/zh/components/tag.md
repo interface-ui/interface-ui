@@ -25,6 +25,11 @@ lang: zh
 
 <demo src="../../../example/tag/closable.vue"></demo>
 
+##  动态编辑标签
+
+动态编辑标签可以通过点击标签关闭按钮后触发的 close 事件来实现。
+
+<demo src="../../../example/tag/edit.vue"></demo>
 ##  调整尺寸
 
 Tag 组件提供三种尺寸，可以在不同场景下选择合适的按钮尺寸。

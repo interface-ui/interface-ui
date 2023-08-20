@@ -25,6 +25,12 @@ Setting the closable property can define whether a label can be removed. It acce
 
 <demo src="../../../example/tag/closable.vue"></demo>
 
+## Edit Dynamically
+
+You can use the close event to add and remove tag dynamically.
+
+<demo src="../../../example/tag/edit.vue"></demo>
+
 ##  Sizes
 
 Tag component provides three additional sizes for you to choose among different scenarios.
