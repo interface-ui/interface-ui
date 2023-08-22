@@ -47,8 +47,6 @@ const tdClass = (v) => {
 
 <template>
   <div ref="bpTable" class="bp-table">
-    <!-- <bp-spin :spinning="loading"></bp-spin> -->
-
     <div :class="innerClass">
       <TableHeader :header-list="columns" :width="_table_width" />
 

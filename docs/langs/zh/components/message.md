@@ -17,20 +17,23 @@ lang: zh
 <demo src="../../../example/message/base.vue"></demo>
 
 ## 不同状态
-用来显示「成功、警告、消息、危险(错误)」类的操作反馈。
+
+```state``` 用来显示「成功、警告、消息、危险(错误)」类的操作反馈。
 <demo src="../../../example/message/type.vue"></demo>
 
 ## 关闭时间
-自动关闭的延时，单位毫秒，不关闭可以写 0。
+
+```duration``` 属性自动关闭的延时，单位毫秒，不关闭设置为 ```0```。
 <demo src="../../../example/message/time.vue"></demo>
 
 ## 手动关闭
 
-显示关闭按钮
+显示关闭按钮。
 <demo src="../../../example/message/close.vue"></demo>
 
 ## 关闭logo
 
+```showIcon=false``` 不显示logo图标
 <demo src="../../../example/message/icon.vue"></demo>
 
 ## 属性

@@ -14,6 +14,7 @@ English| [简体中文](./README.md)
 - 🎡 On-Demand Import - Provides a parser to automatically import only the components that are used.
 - 💪 TypeScript Support - Supports TypeScript for type checking and type inference.
 - ⚡️ Powered by Vite for Faster Performance
+- 🧪 Vitest unit testing 
 - 📃 Detailed Chinese/English Documentation
 - 🛠 More ...
 
@@ -35,6 +36,59 @@ $ yarn add fusion-ui-vue
 ## Documentation
 
 - [DOCS](https://fusion-ui-vue.github.io/fusion-ui/)
+
+## Warehouse directory
+```bash
+
+├─ .github                  # Modular configuration
+│  ├─ workflows             # github actions
+├─ .husky                   # git hooks
+├─ .vscode                  # vscode config
+├─ docs                     # Component Library Document
+│  ├─ .vitepress            # Document Configuration
+│       ├─ components       # Component Library Document Component
+│       ├─ configuration    # Document Page Structure
+│       ├─ dist             # Document packaged file
+│       ├─ plugins          # Document plugin
+│       ├─ theme            # Document Theme
+│       ├─ config.ts        # VitePress config
+│  ├─ examples              # Sample code for component library
+│  ├─ langs                 # Document Multilingual
+│  ├─ components.d          # Document Component Type Declaration
+│  ├─ package.json          # package.json
+│  ├─ tsconfig.json         # tsconfig config
+├─ ├─ unocss.config.ts      # unocss config
+│
+├─ packages                 # Component library code
+│  ├─ fusion-ui             # Component Library Publishing Package
+│     ├─ build              # Build Configuration
+│     ├─ components         # Component library core code
+│     ├─ constans           # Constans
+│     ├─ styles             # styles
+│     ├─ utils              # General methods
+│     ├─ package.json       # package.json
+│     ├─ vite.config.ts     # vite config
+│  ├─ playground            # Component Library Exercise Field
+├─ scripts                  # script
+├─ .gitignore               # gitignore
+├─ CODE_OF_CONDUCT          # Convention on Conduct
+├─ CONTRIBUTING             # Contribution Guidelines
+├─ LICENSE                  # Open source protocol
+├─ package.json             # package.json
+├─ README.md                # README
+├─ tsconfig.base.json       # tsconfig config
+├─ tsconfig.json            # tsconfig config
+├─ vitest.config.ts         # vitest config
+
+```
+
+## Special Thanks
+
+❤️ Thanks to [everyone](https://github.com/tsinghua-lau/fusion-ui/graphs/contributors)  who has already contributed to ```Fusion Ui```!
+
+<a href="https://github.com/tsinghua-lau/fusion-ui/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=tsinghua-lau/fusion-ui" />
+</a>
 
 ## Compatibility
 

@@ -1,6 +1,6 @@
 ---
-title: Link
-lang: zh
+title: Input
+lang: en
 ---
 
 <script setup lang="ts">

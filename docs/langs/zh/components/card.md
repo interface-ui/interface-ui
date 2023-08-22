@@ -17,17 +17,17 @@ lang: zh
 <demo src="../../../example/card/base.vue"></demo>
 
 ## 无边框卡片
-使用 `border`属性来定义卡片是否有边框
+使用 `border`属性来定义卡片是否有边框。
 
 <demo src="../../../example/card/border.vue"></demo>
 
 ## 卡片悬浮效果
-使用 `hover`属性来定义卡片是否有边框
+使用 `hover`属性来定义卡片是否有边框。
 
 <demo src="../../../example/card/hover.vue"></demo>
 
 ## 带有背景颜色的卡片
-使用 `background`属性来定义卡片背景颜色
+使用 `background`属性来定义卡片背景颜色。
 
 <demo src="../../../example/card/background.vue"></demo>
 

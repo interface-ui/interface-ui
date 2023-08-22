@@ -6,8 +6,10 @@ import FusionUi from '../../../packages/fusion-ui/components/index'
 import '../../../packages/fusion-ui/dist/styles/index.css'
 
 // 导入本地源码样式--测试
-// import '../../../packages/fusion-ui/styles/base.less' // 基础样式
+import '../../../packages/fusion-ui/styles/base.less' // 基础样式
 import '../../../packages/fusion-ui/components/button/src/index.less'
+import '../../../packages/fusion-ui/components/button/src/index.less'
+import '../../../packages/fusion-ui/components/alert/src/index.less'
 // import '../../../packages/fusion-ui/components/dialog/src/index.less'
 // import '../../../packages/fusion-ui/components/input/src/index.less'
 // import '../../../packages/fusion-ui/components/radio/src/index.less'
@@ -15,6 +17,7 @@ import '../../../packages/fusion-ui/components/button/src/index.less'
 // import '../../../packages/fusion-ui/components/switch/src/index.less'
 // import '../../../packages/fusion-ui/components/progress/src/index.less'
 // import '../../../packages/fusion-ui/components/card/src/index.less'
+import '../../../packages/fusion-ui/components/tag/src/index.less'
 
 // 导入 npm 包
 // import FusionUi from 'fusion-ui-vue'
