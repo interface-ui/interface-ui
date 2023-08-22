@@ -16,19 +16,25 @@ const handleMouseDown = (event: MouseEvent) => {
   ripplesArr.push({ x, y, size })
 }
 
+const clear = () => {
+  if (bounce) {
+    clearTimeout(bounce)
+    bounce = null
+  }
+}
+
 watchEffect(() => {
   if (ripplesArr.length > 0) {
-    bounce && clearTimeout(bounce)
+    clear()
 
     bounce = setTimeout(() => {
       ripplesArr.length = 0
-      bounce && clearTimeout(bounce)
-      bounce = null
+      clear()
     }, 600 * 4)
   }
 })
 
-onUnmounted(() => bounce && clearTimeout(bounce))
+onUnmounted(clear)
 </script>
 
 <script lang="ts">
