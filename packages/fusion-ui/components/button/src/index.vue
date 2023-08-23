@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import { ref, toRefs } from 'vue'
-import { buttonProps } from '../src/button'
-import { UseButton } from '../../_hooks'
+import { ref, toRefs } from "vue"
+import { buttonProps } from "../src/button"
+import { UseButton } from "../../_hooks"
+import FnRipple from "../../ripple"
 const props = defineProps(buttonProps)
 const emits = defineEmits<{
-  (e: 'click', event: MouseEvent): void
+  (e: "click", event: MouseEvent): void
 }>()
 
 const { classList, styleList } = UseButton(props)
@@ -16,15 +17,15 @@ const handleClick = (event: MouseEvent) => {
   /** 禁用则返回 */
   if (disabled.value) {
     /**
-       * 阻止默认行为
-       *
-       * @see event.preventDefault https://developer.mozilla.org/zh-CN/docs/Web/API/Event/preventDefault
-       */
+     * 阻止默认行为
+     *
+     * @see event.preventDefault https://developer.mozilla.org/zh-CN/docs/Web/API/Event/preventDefault
+     */
     event.preventDefault()
     return
   }
 
-  emits('click', event)
+  emits("click", event)
 }
 
 defineExpose({
@@ -34,7 +35,7 @@ defineExpose({
 
 <script lang="ts">
 export default {
-  name: 'FnButton',
+  name: "FnButton",
 }
 </script>
 
@@ -52,5 +53,6 @@ export default {
     <span>
       <slot />
     </span>
+    <FnRipple v-if="props.enableRipple && !props.disabled" />
   </button>
 </template>

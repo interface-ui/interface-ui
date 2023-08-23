@@ -5,57 +5,58 @@
   --fn-white-text-color: #374151;
   --fn-white-hover-color: #ecf5ff;
   --fn-button-border-color-default: #c6e2ff;
-  --fn-button-hover-color:#dcdfe6;
+  --fn-button-hover-color: #dcdfe6;
   font-size: 14px;
 }
 
 [data-theme="dark"] .fn-button,
 .fn-button[data-theme="dark"] {
   --fn-white-text-color: #fff;
-  --fn-button-hover-color: #4C4D4F;
+  --fn-button-hover-color: #4c4d4f;
   --fn-white-hover-color: #1e293b;
-  --fn-button-border-color-default: #4C4D4F;
+  --fn-button-border-color-default: #4c4d4f;
   font-size: 14px;
 }
 
-.fn-button{
+.fn-button {
+  position: relative;
   --fn-button-text-color: var(--fn-white-text-color);
   --fn-button-border-color: var(--fn-button-hover-color);
   --fn-button-bg-color: transparent;
   --fn-button-border-style: solid;
-  
+
   --fn-button-text-hover-color: var(--fn-sky-1000);
   --fn-button-border-hover-color: var(--fn-button-hover-color);
   --fn-button-bg-hover-color: var(--fn-white-hover-color);
 
-  --fn-button-disabled-text-color:  var(--fn-white-text-color);;
+  --fn-button-disabled-text-color: var(--fn-white-text-color);
   --fn-button-disabled-bg-color: transparent;
-  --fn-button-disabled-border-color:  var(--fn-button-hover-color);
+  --fn-button-disabled-border-color: var(--fn-button-hover-color);
 }
 
 .fn-button {
   &--info {
-    --fn-button-bg-color:#85888e;
+    --fn-button-bg-color: #85888e;
     --fn-button-text-color: #fff;
-    --fn-button-border-color:#909399;
-    
-    --fn-button-hover-color: var(--fn-slate-400);
-    --fn-button-bg-hover-color:var(--fn-button-hover-color);
-    --fn-button-text-hover-color:#fff;
+    --fn-button-border-color: #909399;
 
-    --fn-button-disabled-text-color:#fff;
-    --fn-button-disabled-bg-color:  #85888e;
-    --fn-button-disabled-border-color: #909399;;
+    --fn-button-hover-color: var(--fn-slate-400);
+    --fn-button-bg-hover-color: var(--fn-button-hover-color);
+    --fn-button-text-hover-color: #fff;
+
+    --fn-button-disabled-text-color: #fff;
+    --fn-button-disabled-bg-color: #85888e;
+    --fn-button-disabled-border-color: #909399;
   }
 
   &--success {
     --fn-button-bg-color: var(--fn-green-500);
-    --fn-button-border-color:#67c23a;
+    --fn-button-border-color: #67c23a;
     --fn-button-text-color: #fff;
 
     --fn-button-text-hover-color: white;
     --fn-button-border-hover-color: #4e8e2f;
-    --fn-button-bg-hover-color:#458329;
+    --fn-button-bg-hover-color: #458329;
 
     --fn-button-disabled-text-color: #fff;
     --fn-button-disabled-bg-color: var(--fn-green-500);
@@ -64,12 +65,12 @@
 
   &--warning {
     --fn-button-bg-color: #e6a23c;
-    --fn-button-border-color:#e6a23c;
+    --fn-button-border-color: #e6a23c;
     --fn-button-text-color: #fff;
 
     --fn-button-text-hover-color: white;
     --fn-button-border-hover-color: #a77730;
-    --fn-button-bg-hover-color:#a77730;
+    --fn-button-bg-hover-color: #a77730;
 
     --fn-button-disabled-text-color: #fff;
     --fn-button-disabled-bg-color: #e6a23c;
@@ -78,16 +79,15 @@
 
   &--danger {
     --fn-button-bg-color: #f56c6c;
-    --fn-button-border-color:#f56c6c;
+    --fn-button-border-color: #f56c6c;
     --fn-button-text-color: #fff;
-
 
     --fn-button-text-hover-color: white;
     --fn-button-border-hover-color: #b25252;
-    --fn-button-bg-hover-color:#a94848;
+    --fn-button-bg-hover-color: #a94848;
 
     --fn-button-disabled-text-color: #fff;
-    --fn-button-disabled-bg-color:  #f56c6c;
+    --fn-button-disabled-bg-color: #f56c6c;
     --fn-button-disabled-border-color: #f56c6c;
   }
 
@@ -131,35 +131,32 @@
 
   &--primary {
     --fn-button-text-color: white;
-    --fn-button-color:#3894ff;
+    --fn-button-color: #3894ff;
     --fn-button-border-color: var(--fn-button-color);
     --fn-button-bg-color: var(--fn-button-color);
     --fn-button-border-style: solid;
 
     --fn-button-text-hover-color: white;
     --fn-button-border-hover-color: #2d6ab0;
-    --fn-button-bg-hover-color:#2d6ab0;
-
+    --fn-button-bg-hover-color: #2d6ab0;
 
     --fn-button-disabled-text-color: white;
     --fn-button-disabled-bg-color: var(--fn-button-color);
     --fn-button-disabled-border-color: var(--fn-button-color);
-    
   }
 
   &--dashed {
-    
     --fn-button-hover-color: var(--fn-blue-400);
-    --fn-button-text-color:var(--fn-white-text-color);
+    --fn-button-text-color: var(--fn-white-text-color);
 
     --fn-button-text-hover-color: var(--fn-sky-1000);
-    --fn-button-border-hover-color:var(--fn-button-border-color-default);
+    --fn-button-border-hover-color: var(--fn-button-border-color-default);
     --fn-button-bg-hover-color: var(--fn-white-hover-color);
 
     --fn-button-disabled-text-color: var(--fn-white-text-color);
     --fn-button-disabled-border-color: var(--fn-button-border-color-default);
     --fn-button-disabled-bg-color: transparent;
-    
+
     --fn-button-border-width: 2px !important;
     --fn-button-border-style: dashed !important;
   }
@@ -175,7 +172,7 @@
   border-radius: var(--fn-border-radius);
   color: var(--fn-button-text-color);
   border-color: var(--fn-button-border-color);
-  background-color: var(--fn-button-bg-color) ;
+  background-color: var(--fn-button-bg-color);
   border-style: var(--fn-button-border-style);
 
   &:hover {
