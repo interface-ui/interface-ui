@@ -1,26 +1,26 @@
 @import "../../../styles/base.less";
 
-.ripple-root {
+.fn-ripple-root {
   overflow: hidden;
   position: absolute;
   z-index: 0;
   inset: 0px;
   border-radius: inherit;
 
-  .ripple {
+  .fn-ripple {
     position: absolute;
     transform: scale(0);
     border-radius: 100%;
     opacity: 0.4;
     background-color: #fff;
-    animation-name: ripple;
+    animation-name: ripple-effect;
     animation-duration: 600ms;
   }
 }
 
-@keyframes ripple {
+@keyframes ripple-effect {
   to {
     opacity: 0;
-    transform: scale(2);
+    transform: scale(3);
   }
 }

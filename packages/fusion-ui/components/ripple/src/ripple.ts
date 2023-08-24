@@ -1,1 +1,1 @@
-export type RippleLocate = { x: number; y: number; size: number }
+export type RippleStyle = { x: number; y: number; size: number }

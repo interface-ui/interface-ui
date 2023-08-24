@@ -43,7 +43,7 @@ export default {
   <button
     ref="buttonEl"
     :type="nativeType"
-    :class="classList"
+    :class="[...classList, 'fn-rippleBase-root']"
     :style="styleList"
     @click="handleClick"
   >

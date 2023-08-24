@@ -1,8 +1,9 @@
 <script lang="ts" setup>
-import { reactive, watchEffect, onUnmounted } from "vue"
-import { RippleLocate } from "./ripple"
+import { reactive, watchEffect, onUnmounted, ref } from "vue"
+import { RippleStyle } from "./ripple"
 
-const ripplesArr = reactive<RippleLocate[]>([])
+const ripplesArr = reactive<RippleStyle[]>([])
+const duration = ref<number>(600)
 let bounce: NodeJS.Timeout | null = null
 
 const handleMouseDown = (event: MouseEvent) => {
@@ -30,7 +31,7 @@ watchEffect(() => {
     bounce = setTimeout(() => {
       ripplesArr.length = 0
       clear()
-    }, 600 * 4)
+    }, duration.value * 4)
   }
 })
 
@@ -44,7 +45,7 @@ export default {
 </script>
 
 <template>
-  <span class="ripple-root" @mousedown="handleMouseDown">
+  <span class="fn-ripple-root" @mousedown="handleMouseDown">
     <span
       v-for="(ripple, index) of ripplesArr"
       :key="`ripple_${index}`"
@@ -54,7 +55,7 @@ export default {
         width: `${ripple.size}px`,
         height: `${ripple.size}px`,
       }"
-      class="ripple"
+      class="fn-ripple"
     ></span>
   </span>
 </template>
