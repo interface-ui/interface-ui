@@ -74,7 +74,8 @@ export const useNamespace = (
     return name && state ? `${statePrefix}${name}` : ''
   }
 
-  const cssVar2 = (object: Record<string, string>) => {
+  // css in style
+  const cssStyle = (object: Record<string, string>) => {
     const styles: Record<string, string> = {}
     for (const key in object) {
       if (object[key])
@@ -123,7 +124,7 @@ export const useNamespace = (
     is,
     // css
     cssVar,
-    cssVar2,
+    cssStyle,
     cssVarName,
     cssVarBlock,
     cssVarBlockName,

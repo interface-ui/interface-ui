@@ -16,13 +16,13 @@ export const avatarProps = buildProps({
     validator: (val: unknown): val is number => isNumber(val),
   },
   width: {
-    type: String,
-    default: '24',
+    type: Number,
+    default: 24,
     validator: (val: unknown): val is number => isNumber(val),
   },
   height: {
-    type: String,
-    default: '24',
+    type: Number,
+    default: 24,
     validator: (val: unknown): val is number => isNumber(val),
   },
 

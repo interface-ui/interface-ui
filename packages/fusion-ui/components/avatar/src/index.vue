@@ -32,15 +32,11 @@ const sizeStyle = computed(() => {
     }) as CSSProperties
     return style
   }
-  // if (isNumber(size)) {
-  const style = ns.cssVar2({
+  const style = ns.cssStyle({
     width: `${props.width}px`,
     height: `${props.height}px`,
   }) as CSSProperties
   return style
-  // }
-
-  // else { return {} }
 })
 
 const bgColorStyle = computed(() => {
@@ -49,8 +45,6 @@ const bgColorStyle = computed(() => {
     const style = ns.cssVarBlock({
       'background-color': props.background as string,
       'text-color': props.color,
-      // 'bg-color': ns.getCssVarBlock(props.type, 'color'),
-      // 'test': ns.getCssVarBlock('1', '2'),
     }) as CSSProperties
     return style
   }
