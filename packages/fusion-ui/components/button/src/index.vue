@@ -53,6 +53,6 @@ export default {
     <span>
       <slot />
     </span>
-    <FnRipple v-if="props.enableRipple && !props.disabled" />
+    <fn-ripple v-if="props.enableRipple && !props.disabled" />
   </button>
 </template>
