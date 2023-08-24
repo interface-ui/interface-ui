@@ -15,8 +15,10 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@vue/shared": "^3.2.47",
     "@vueuse/core": "^9.1.1",
     "fusion-ui": "workspace:*",
+    "lodash-unified": "^1.0.3",
     "vue": "^3.2.45"
   },
   "devDependencies": {

@@ -8,12 +8,18 @@ importers:
 
   .:
     dependencies:
+      '@vue/shared':
+        specifier: ^3.2.47
+        version: 3.2.47
       '@vueuse/core':
         specifier: ^9.1.1
         version: 9.1.1(vue@3.2.45)
       fusion-ui:
         specifier: workspace:*
         version: 'link:'
+      lodash-unified:
+        specifier: ^1.0.3
+        version: 1.0.3(@types/lodash-es@4.17.8)(lodash-es@4.17.21)(lodash@4.17.21)
       vue:
         specifier: ^3.2.45
         version: 3.2.45
@@ -178,6 +184,9 @@ importers:
       '@ctrl/tinycolor':
         specifier: ^3.4.1
         version: 3.5.0
+      csstype:
+        specifier: ^3.1.2
+        version: 3.1.2
       fusion-ui-iconify:
         specifier: ^1.0.35
         version: 1.0.35(less@3.13.1)(webpack@4.46.0)
@@ -3373,7 +3382,6 @@ packages:
 
   /@vue/shared@3.2.47:
     resolution: {integrity: sha512-BHGyyGN3Q97EZx0taMQ+OLNuZcW3d37ZEVmEAyeoA9ERdGvm9Irc/0Fua8SNyOtV1w6BS4q25wbMzJujO9HIfQ==}
-    dev: true
 
   /@vue/shared@3.3.4:
     resolution: {integrity: sha512-7OjdcV8vQ74eiz1TZLzZP4JwqM5fA94K6yntPS5Z25r9HDuGNzaGdgvwKYq6S+MxwF0TFRwe50fIR/MYnakdkQ==}

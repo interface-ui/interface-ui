@@ -3,7 +3,7 @@ import {
   onMounted,
 } from 'vue'
 import type { CSSProperties, Ref } from 'vue'
-import { addUnit } from '../../../utils/style'
+import { addUnit } from '../../../utils/dom/style'
 
 export const useInput = (
   props: any,

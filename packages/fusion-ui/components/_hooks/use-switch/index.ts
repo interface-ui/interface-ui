@@ -1,6 +1,6 @@
 import type { CSSProperties, ComputedRef } from 'vue'
 import { computed } from 'vue'
-import { addUnit } from '../../../utils/style'
+import { addUnit } from '../../../utils/dom/style'
 import type { SwitchProps } from '../../switch/src/switch'
 
 /** class 类名集合类型 */

@@ -7,7 +7,7 @@ import {
 } from 'vue'
 import type { CSSProperties, Ref, SetupContext } from 'vue'
 import { UPDATE_MODEL_EVENT } from '../../../constans/event'
-import { addUnit } from '../../../utils/style'
+import { addUnit } from '../../../utils/dom/style'
 import type { DialogEmits } from './dialog'
 
 export const useDialog = (
