@@ -1,4 +1,5 @@
-.is-disabled,.is-disabled-link {
+.is-disabled,
+.is-disabled-link {
   opacity: 0.8;
   cursor: not-allowed !important;
   text-decoration: none !important;
@@ -10,15 +11,18 @@
     background-color: var(--fn-button-disabled-bg-color) !important;
   }
 }
-.is-disabled-link{
+.is-disabled-link {
   &:hover {
     color: var(--fn-link-disabled-text-color) !important;
   }
 }
-.is-underline{
+.is-underline {
   &:hover {
     text-decoration: none !important;
   }
+}
+.fn-rippleBase-root {
+  position: relative;
 }
 .is-hidden {
   // display: none;

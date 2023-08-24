@@ -43,7 +43,7 @@ export default {
   <button
     ref="buttonEl"
     :type="nativeType"
-    :class="classList"
+    :class="[...classList, 'fn-rippleBase-root']"
     :style="styleList"
     @click="handleClick"
   >
@@ -53,6 +53,6 @@ export default {
     <span>
       <slot />
     </span>
-    <FnRipple v-if="props.enableRipple && !props.disabled" />
+    <fn-ripple v-if="props.enableRipple && !props.disabled" />
   </button>
 </template>
