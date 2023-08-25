@@ -16,6 +16,16 @@ Checkboxes allow the user to select one or more items from a set.
 
 ### Basic checkboxs
 
-Use ```type``` and ```state``` to define the style of the button.
-
 <demo src="../../../example/checkbox/basic.vue"></demo>
+
+### Color
+
+<demo src="../../../example/checkbox/color.vue" />
+
+### Size
+
+<demo src="../../../example/checkbox/size.vue" />
+
+### Icon
+
+<demo src="../../../example/checkbox/icon.vue" />
