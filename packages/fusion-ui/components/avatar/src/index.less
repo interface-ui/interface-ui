@@ -5,6 +5,7 @@
 };
 
 .fn-avatar {
+  position: relative;
   &--small{
     width: @avatar-size[small] ;
     height: @avatar-size[small] ;
@@ -17,12 +18,21 @@
     width: @avatar-size[large] ;
     height: @avatar-size[large] ;
   }
+
+  &--circle {
+    border-radius: 50%;
+  }
+  &--square {
+    border-radius: 0;
+  }
+  &--rounded {
+    border-radius: 4px;
+  }
     display: inline-flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
     user-select: none;
-    border-radius: 50%;
     color: var(--fn-avatar-text-color);
     background-color: var(--fn-avatar-background-color);
 }

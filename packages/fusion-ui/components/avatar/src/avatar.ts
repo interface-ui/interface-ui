@@ -12,24 +12,16 @@ export const avatarProps = buildProps({
   size: {
     type: [Number, String],
     values: componentSizes,
-    default: 'default',
+    default: '',
     validator: (val: unknown): val is number => isNumber(val),
   },
   width: {
-    type: Number,
-    default: 24,
-    validator: (val: unknown): val is number => isNumber(val),
+    type: [Number, String],
+    default: 40,
   },
   height: {
-    type: Number,
-    default: 24,
-    validator: (val: unknown): val is number => isNumber(val),
-  },
-
-  shape: {
-    type: String,
-    values: ['circle', 'square'],
-    default: 'circle',
+    type: [Number, String],
+    default: 40,
   },
 
   type: {
@@ -39,7 +31,13 @@ export const avatarProps = buildProps({
     validator: value =>
       ['primary', 'error', 'secondary', 'tertiary'].includes(value),
   },
-
+  shape: {
+    type: String,
+    default: 'circle',
+    values: ['circle', 'square', 'rounded'],
+    validator: value =>
+      ['circle', 'square', 'rounded'].includes(value),
+  },
   src: {
     type: String,
     default: '',

@@ -6,10 +6,7 @@ export const enComponents = [
         text: 'Button',
         link: '/langs/en/components/button',
       },
-      {
-        text: 'Badge',
-        link: '/langs/en/components/badge',
-      },
+
       {
         text: 'Icon',
         link: '/langs/en/components/icon',
@@ -26,9 +23,27 @@ export const enComponents = [
         text: 'Radio',
         link: '/langs/en/components/radio',
       },
+
+    ],
+  },
+  {
+    text: 'Data',
+    items: [
+      {
+        text: 'Avatar',
+        link: '/langs/en/components/avatar',
+      },
+      {
+        text: 'Badge',
+        link: '/langs/en/components/badge',
+      },
       {
         text: 'Card',
         link: '/langs/en/components/card',
+      },
+      {
+        text: 'Progress',
+        link: '/langs/en/components/progress',
       },
       {
         collapsible: false,
@@ -74,10 +89,7 @@ export const zhComponents = [
         text: 'Button 按钮',
         link: '/langs/zh/components/button',
       },
-      {
-        text: 'Badge 徽章',
-        link: '/langs/zh/components/badge',
-      },
+
       {
         text: 'Icon 图标',
         link: '/langs/zh/components/icon',
@@ -95,15 +107,34 @@ export const zhComponents = [
         text: 'Radio 单选框',
         link: '/langs/zh/components/radio',
       },
+
+    ],
+  },
+  {
+    text: 'Data 数据展示',
+    items: [
       {
-        text: 'Card 按钮',
+        text: 'Avatar 头像',
+        link: '/langs/zh/components/avatar',
+      },
+      {
+        text: 'Badge 徽章',
+        link: '/langs/zh/components/badge',
+      },
+      {
+        text: 'Card 卡片',
         link: '/langs/zh/components/card',
+      },
+      {
+        text: 'Progress 进度条',
+        link: '/langs/zh/components/progress',
       },
       {
         collapsible: false,
         text: 'Tag 标签',
         link: '/langs/zh/components/tag',
       },
+
     ],
   },
   {
@@ -125,10 +156,7 @@ export const zhComponents = [
         text: 'Switch 开关',
         link: '/langs/zh/components/switch',
       },
-      {
-        text: 'Progress 进度条',
-        link: '/langs/zh/components/progress',
-      },
+
     ],
   },
 ]
