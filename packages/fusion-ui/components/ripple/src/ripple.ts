@@ -6,7 +6,6 @@ export const rippleProps = {
   color: {
     type: String,
     default: '#fff',
-    required: true,
   },
   center: {
     type: Boolean,
