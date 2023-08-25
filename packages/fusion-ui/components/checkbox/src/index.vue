@@ -7,7 +7,7 @@ import {
 } from '../src/checkbox'
 import { UseCheckbox } from '../../_hooks'
 import FnRipple from '../../ripple'
-import { computed, ref } from 'vue'
+import { computed, ref, watchEffect } from 'vue'
 const props = defineProps(checkboxProps)
 const emits = defineEmits<{ (e: 'update:modelValue', v: boolean): void }>()
 
@@ -15,8 +15,11 @@ const { classList, styleList } = UseCheckbox(props)
 
 const checked = ref<boolean>(props.modelValue ?? false)
 const status = computed<CheckboxStatus>(() =>
-  checked.value || props.modelValue ? 'checked' : 'blank'
+  checked.value ? 'checked' : 'blank'
 )
+watchEffect(() => {
+  checked.value = props.modelValue
+})
 
 const toggle = () => {
   checked.value = !checked.value
