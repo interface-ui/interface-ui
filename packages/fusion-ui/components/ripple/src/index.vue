@@ -1,6 +1,7 @@
 <script lang="ts" setup>
-import { reactive, watchEffect, onUnmounted, ref } from "vue"
-import { RippleStyle } from "./ripple"
+import { reactive, watchEffect, onUnmounted, ref } from 'vue'
+import { RippleStyle, rippleProps } from './ripple'
+const props = defineProps(rippleProps)
 
 const ripplesArr = reactive<RippleStyle[]>([])
 const duration = ref<number>(600)
@@ -12,8 +13,8 @@ const handleMouseDown = (event: MouseEvent) => {
   const size = Math.max(target.clientWidth, target.clientHeight)
   const radius = size / 2
 
-  const x = event.clientX - rect.left - radius
-  const y = event.clientY - rect.top - radius
+  const x = props.center ? 0 : event.clientX - rect.left - radius
+  const y = props.center ? 0 : event.clientY - rect.top - radius
   ripplesArr.push({ x, y, size })
 }
 
@@ -40,7 +41,7 @@ onUnmounted(clear)
 
 <script lang="ts">
 export default {
-  name: "FuRipple",
+  name: 'FuRipple',
 }
 </script>
 
@@ -54,12 +55,9 @@ export default {
         left: `${ripple.x}px`,
         width: `${ripple.size}px`,
         height: `${ripple.size}px`,
+        '--fn-ripple-color': props.color,
       }"
       class="fn-ripple"
     ></span>
   </span>
 </template>
-
-<style lang="less">
-@import "./index.less";
-</style>
