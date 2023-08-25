@@ -23,6 +23,10 @@ export const enComponents = [
         link: '/langs/en/components/input',
       },
       {
+        text: 'Checkbox',
+        link: '/langs/en/components/checkbox',
+      },
+      {
         text: 'Radio',
         link: '/langs/en/components/radio',
       },
@@ -41,7 +45,6 @@ export const enComponents = [
     text: 'Feedback',
     items: [
       {
-
         text: 'Alert',
         link: '/langs/en/components/alert',
       },
@@ -54,7 +57,6 @@ export const enComponents = [
         link: '/langs/en/components/dialog',
       },
       {
-
         text: 'Switch',
         link: '/langs/en/components/switch',
       },
@@ -83,7 +85,6 @@ export const zhComponents = [
         link: '/langs/zh/components/icon',
       },
       {
-
         text: 'Link 链接',
         link: '/langs/zh/components/link',
       },
