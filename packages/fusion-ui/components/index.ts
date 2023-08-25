@@ -11,6 +11,7 @@ import FnSwitch from './switch'
 import FnBadge from './badge'
 import FnProgress from './progress'
 import FnAvatar from './avatar'
+import FnAvatarGroup from './avatarGroup'
 import FnTag from './tag'
 import FnCheckbox from './checkbox'
 export * from './_hooks'
@@ -28,6 +29,7 @@ export * from './progress'
 export * from './card'
 export * from './tag'
 export * from './avatar'
+export * from './avatarGroup'
 const component = [
   FnButton,
   FnAlert,
@@ -43,6 +45,7 @@ const component = [
   FnCard,
   FnTag,
   FnAvatar,
+  FnAvatarGroup,
   FnCheckbox,
 ]
 

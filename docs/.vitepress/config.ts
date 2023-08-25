@@ -57,4 +57,4 @@ export default defineConfig({
   },
   // lastUpdated: true,
   vite,
-} as UserConfig)
+} as any as UserConfig)
