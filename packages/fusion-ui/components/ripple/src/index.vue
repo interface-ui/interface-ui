@@ -1,13 +1,27 @@
 <script lang="ts" setup>
-import { reactive, watchEffect, onUnmounted, ref } from 'vue'
+import {
+  reactive,
+  watchEffect,
+  onUnmounted,
+  ref,
+  getCurrentInstance,
+  onMounted,
+  computed,
+} from 'vue'
 import { RippleStyle, rippleProps } from './ripple'
+import { addUnit } from '../../../utils/dom'
+import { TinyColor } from '@ctrl/tinycolor'
 const props = defineProps(rippleProps)
 
 const ripplesArr = reactive<RippleStyle[]>([])
 const duration = ref<number>(600)
+const parent = getCurrentInstance()?.parent
 let bounce: NodeJS.Timeout | null = null
+let listener: EventListener | null = null
 
-const handleMouseDown = (event: MouseEvent) => {
+const color = computed(() => new TinyColor(props.color).tint(70).toString())
+
+const addRipple = (event: MouseEvent) => {
   const target = <HTMLElement>event.currentTarget
   const rect = target.getBoundingClientRect()
   const size = Math.max(target.clientWidth, target.clientHeight)
@@ -36,7 +50,19 @@ watchEffect(() => {
   }
 })
 
-onUnmounted(clear)
+onMounted(() => {
+  if (parent) {
+    listener = parent.proxy?.$el.addEventListener('mousedown', addRipple)
+  }
+})
+onUnmounted(() => {
+  clear()
+  if (listener) {
+    parent?.proxy?.$el.removeEventListener(listener)
+    listener = null
+  }
+})
+defineExpose({ addRipple })
 </script>
 
 <script lang="ts">
@@ -46,16 +72,16 @@ export default {
 </script>
 
 <template>
-  <span class="fn-ripple-root" @mousedown="handleMouseDown">
+  <span class="fn-ripple-root">
     <span
       v-for="(ripple, index) of ripplesArr"
       :key="`ripple_${index}`"
       :style="{
-        top: `${ripple.y}px`,
-        left: `${ripple.x}px`,
-        width: `${ripple.size}px`,
-        height: `${ripple.size}px`,
-        '--fn-ripple-color': props.color,
+        top: addUnit(ripple.y),
+        left: addUnit(ripple.x),
+        width: addUnit(ripple.size),
+        height: addUnit(ripple.size),
+        '--fn-ripple-color': color,
       }"
       class="fn-ripple"
     ></span>

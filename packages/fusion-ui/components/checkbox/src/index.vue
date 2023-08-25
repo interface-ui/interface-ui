@@ -1,17 +1,27 @@
 <script lang="ts" setup>
-import { checkboxProps, CheckboxSize } from '../src/checkbox'
+import {
+  checkboxProps,
+  CheckboxStatus,
+  iconType,
+  iconSize,
+} from '../src/checkbox'
 import { UseCheckbox } from '../../_hooks'
-import { reactive } from 'vue'
 import FnRipple from '../../ripple'
+import { computed, ref } from 'vue'
 const props = defineProps(checkboxProps)
+const emits = defineEmits<{ (e: 'update:modelValue', v: boolean): void }>()
 
-const { classList } = UseCheckbox(props)
+const { classList, styleList } = UseCheckbox(props)
 
-const iconSize = reactive<Record<CheckboxSize, number>>({
-  small: 20,
-  medium: 24,
-  large: 28,
-})
+const checked = ref<boolean>(props.modelValue ?? false)
+const status = computed<CheckboxStatus>(() =>
+  checked.value || props.modelValue ? 'checked' : 'blank'
+)
+
+const toggle = () => {
+  checked.value = !checked.value
+  emits('update:modelValue', checked.value)
+}
 </script>
 
 <script lang="ts">
@@ -21,16 +31,19 @@ export default {
 </script>
 
 <template>
-  <span :class="classList.root">
-    <slot>
+  <span :class="classList.root" :style="styleList" @click="toggle">
+    <slot
+      :icon="{ checked, size: iconSize[props.size], color: props.color }"
+      name="icon"
+    >
       <fn-icon
-        icon="ic:baseline-check-box"
+        :color="props.color"
+        :name="iconType[status]"
         :class="classList.icon"
-        color="#3894ff"
         :size="iconSize[props.size]"
       />
     </slot>
     <input type="checkbox" v-bind="$attrs" :class="classList.input" />
-    <fn-ripple />
+    <fn-ripple :color="props.color" center />
   </span>
 </template>

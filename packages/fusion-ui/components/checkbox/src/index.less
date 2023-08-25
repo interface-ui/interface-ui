@@ -1,6 +1,6 @@
 @import '../../../styles/base.less';
 
-.fn-checkbox-root {
+.fn-checkbox-icon-root {
   display: inline-flex;
   -webkit-box-align: center;
   align-items: center;
@@ -20,6 +20,9 @@
   text-decoration: none;
   padding: 8px;
   border-radius: 50%;
+  &:hover {
+    background-color: var(--fn-checkbox-hover-background);
+  }
 
   .fn-checkbox-input {
     cursor: inherit;
