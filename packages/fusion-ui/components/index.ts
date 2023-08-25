@@ -13,6 +13,7 @@ import FnProgress from './progress'
 import FnAvatar from './avatar'
 import FnAvatarGroup from './avatarGroup'
 import FnTag from './tag'
+import FnCheckbox from './checkbox'
 export * from './_hooks'
 export * from './button'
 export * from './alert'
@@ -29,9 +30,24 @@ export * from './card'
 export * from './tag'
 export * from './avatar'
 export * from './avatarGroup'
-const component = [FnButton,
-  FnAlert, FnIcon, FnLink, FnMessage, FnDialog, FnInput, FnRadio,
-  FnSwitch, FnBadge, FnProgress, FnCard, FnTag, FnAvatar, FnAvatarGroup]
+const component = [
+  FnButton,
+  FnAlert,
+  FnIcon,
+  FnLink,
+  FnMessage,
+  FnDialog,
+  FnInput,
+  FnRadio,
+  FnSwitch,
+  FnBadge,
+  FnProgress,
+  FnCard,
+  FnTag,
+  FnAvatar,
+  FnAvatarGroup,
+  FnCheckbox,
+]
 
 const CK = {
   install(App: any) {

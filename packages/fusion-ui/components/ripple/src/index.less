@@ -1,4 +1,4 @@
-@import "../../../styles/base.less";
+@import '../../../styles/base.less';
 
 .fn-ripple-root {
   overflow: hidden;
@@ -6,13 +6,14 @@
   z-index: 0;
   inset: 0px;
   border-radius: inherit;
+  pointer-events: none;
 
   .fn-ripple {
     position: absolute;
     transform: scale(0);
     border-radius: 100%;
     opacity: 0.4;
-    background-color: #fff;
+    background-color: var(--fn-ripple-color);
     animation-name: ripple-effect;
     animation-duration: 600ms;
   }
