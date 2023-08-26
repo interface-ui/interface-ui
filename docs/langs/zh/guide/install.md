@@ -1,6 +1,6 @@
 # 安装使用
 
-正确安装和使用 FusionUI
+正确安装和使用 FusionUi
 
  推荐使用 ``自动导入`` 的方式来引入组件，简单快速。
 
@@ -19,7 +19,7 @@ pnpm add fusion-ui-vue
 
 ## 完整引入
 
-完整导入 FusionUI 组件，包的体积会增大。
+完整导入 FusionUi 组件，包的体积会增大。
 
 ```main.ts```
 ```ts

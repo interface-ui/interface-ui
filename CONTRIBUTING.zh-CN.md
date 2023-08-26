@@ -9,11 +9,10 @@
 
 1. Fork [此仓库](https://github.com/tsinghua-lau/fusion-ui)
 2. 进入本地项目根目录，使用 `pnpm i` 安装依赖。
-3. 进入```docs```目录，使用```pnpm i```安装依赖。
-4. 使用 `pnpm run docs:dev` 启动项目， 查看文档。
-5. 提交前请先```git pull``` 拉取最新代码，以免提交文件冲突。
-6. 提交 ```git commit```, 请同时遵守 [Commit 规范](#Commit-指南)。
-7. 提交 Pull Request。
+3. 使用 `pnpm run docs:dev` 启动项目， 查看文档。
+4. 提交前请先```git pull``` 拉取最新代码，以免提交文件冲突。
+5. 提交 ```git commit```, 请同时遵守 [Commit 规范](#Commit-指南)。
+6. 提交 Pull Request。
 
 ### Commit 指南
 

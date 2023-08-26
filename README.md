@@ -105,11 +105,7 @@ app.use(fusionUi).mount('#app')
   ```
     pnpm i
   ```
- 
-  - 进入 `packages/fusion-ui` 目录
-   ```
-    pnpm i
-  ```
+
   - 根目录启动组件库
   ```
     pnpm run docs:dev
@@ -121,7 +117,7 @@ app.use(fusionUi).mount('#app')
 
 ## 特别感谢
 
-❤️ 感谢所有为 ```FusionUI``` 做出 [贡献的人](https://github.com/tsinghua-lau/fusion-ui/graphs/contributors)！
+❤️ 感谢所有为 ```FusionUi``` 做出 [贡献的人](https://github.com/tsinghua-lau/fusion-ui/graphs/contributors)！
 
 <a href="https://github.com/tsinghua-lau/fusion-ui/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=tsinghua-lau/fusion-ui" />

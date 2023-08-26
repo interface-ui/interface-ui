@@ -19,7 +19,7 @@ pnpm add fusion-ui-vue
 
 ## Full Import
 
-By fully importing FusionUI components, the package size will increase.
+By fully importing FusionUi components, the package size will increase.
 
 ```main.ts```
 ```ts
