@@ -31,7 +31,7 @@ export default defineConfig({
     footer: {
       message: 'MIT Licensed',
       copyright:
-        'Copyright © 2023-present tsinghua-lau & Fusion UI Contributors',
+        'Copyright © 2023-present tsinghua-lau & Fusion Ui Contributors',
     },
   },
   markdown: {

@@ -2,16 +2,16 @@
 layout: home
 sidebar: false
 
-title: Fusion UI
+title: Fusion Ui
 titleTemplate: Beautiful, Easy To Use
 
 hero:
-  name: Fusion UI
+  name: Fusion Ui
   text: Beautiful,Popular and Easy To Use
   tagline: Fusion Ui is a Vue3 component library, which is simple, elegant and beautiful to help you build your website quickly.
   image:
     src: /logo.svg
-    alt: Fusion-UI
+    alt: Fusion-Ui
 
   actions:
     - theme: brand

@@ -1,13 +1,35 @@
 <script setup lang="ts">
+import TableRender from './components/table.vue'
 import { ref } from 'vue'
 const button = ref('晚上')
-
+const tableData =ref( [
+  {
+    date: '2016-05-03',
+    name: 'Tom1',
+    address: 'No. 189, Grove St, Los Angeles',
+  },
+  {
+    date: '2016-05-02',
+    name: 'Tom2',
+    address: 'No. 189, Grove St, Los Angeles',
+  },
+  {
+    date: '2016-05-04',
+    name: 'Tom3',
+    address: 'No. 189, Grove St, Los Angeles',
+  },
+  {
+    date: '2016-05-01',
+    name: 'Tom4',
+    address: 'No. 189, Grove St, Los Angeles',
+  },
+]
+)
 const changTheme = () => {
   const html = document.documentElement
   if (html.classList.contains('dark')) {
     button.value = '白天'
     html.classList.remove('dark')
-    // html.classList.add('light')
     html.setAttribute('data-theme', 'light')
   }
   else {
@@ -17,99 +39,67 @@ const changTheme = () => {
     html.setAttribute('data-theme', 'dark')
   }
 }
-const aa = ref('')
-const ccc = ref(2)
-const ccc1 = ref(1)
 
-const optionList = [
-  { value: 0, label: '选项一' },
-  { value: 1, label: '选项二' },
-  { value: 3, label: '选项二', disabled: true },
-]
-const yyy = ref(true)
-const pp = (p: any) => {
-  console.log(p)
-}
-const xxx = ref('1234')
-const process = ref(10)
-// const time = setInterval(() => {
-//   process.value += 1
-//   if (process.value === 100)
-//     clearInterval(time)
-// }, 100)
-const dialogVisible = ref(false)
+
 </script>
 
 <template>
-  <div style="width: 900px;height: 700px;border: 1px solid transparent">
-    <fn-progress :percentage="process" color="red" height="10" background="red" />
-    <br>
+    <fn-avatar-group total="30" max="3">
+     
+      <fnAvatar
+        alt="Remy Sharp"
+        src="https://mui.com/static/images/avatar/1.jpg"
+      />
+      <fnAvatar
+        alt="Remy Sharp"
+        src="https://mui.com/static/images/avatar/2.jpg"
+      />
+      <fnAvatar
+        alt="Remy Sharp"
+        src="https://mui.com/static/images/avatar/3.jpg"
+      />
+      <fnAvatar
+        alt="Remy Sharp"
+        src="https://mui.com/static/images/avatar/4.jpg"
+      />
+      <fnAvatar
+        alt="Remy Sharp"
+        src="https://mui.com/static/images/avatar/5.jpg"
+      />
+    </fn-avatar-group>
+  <br>
+<!-- <fnAvatar
+        alt="Remy Sharp"
+        src="https://mui.com/static/images/avatar/3.jpg"
+      />
+      <fnAvatar
+        alt="Remy Sharp"
+        src="https://mui.com/static/images/avatar/4.jpg"
+      />
+      <fnAvatar
+        alt="Remy Sharp"
+        src="https://mui.com/static/images/avatar/5.jpg"
+      /> -->
+   <fn-avatar
+        src="https://img1.baidu.com/it/u=909111604,4171820012&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=659"
+        size="small"
+      />
+      <fn-avatar
+        src="https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png"
+        size="default"
+      />
+      <fn-avatar
+        src="https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png"
+        size="large"
+      />
 
-    <fn-progress :percentage="process" type="circle" color="red" height="10">
-      <template #default>
-        <div>
-          <fn-icon icon="twemoji:calendar" />
-        </div>
-      </template>
-    </fn-progress>
-    <br>
-    <div>
-      <fn-progress :percentage="process" type="circle" background="#fff" color="pink" height="10">
-        123
-      </fn-progress>
-    </div>
-
-    <br>
-    <!-- <fn-progress :percentage="70" background="yellow" status="danger" />
-    <br>
-
-    <fn-progress :percentage="70" background="yellow" status="success" />
-    <br>
-
-    <fn-progress :percentage="70" background="yellow" status="warning" /> -->
-  </div>
-  <fn-badge :value="xxx" flashing color="blue">
-    <fn-input v-model="xxx" placeholder="Please input" prefix-icon="twemoji:calendar" />
-  </fn-badge>
-  <div class=" flex w-100% justify-between">
-    <fn-progerss v-model="xxx" />
-
-    <FnSwtich v-model="yyy" checked-text="dfa" un-checked-text="dfa" un-checked-icon="ri:alarm-line" />
-    <FnSwtich v-model="yyy" checked-icon="mdi:check-outline" un-checked-icon="mdi:close-outline" color="#62c553" checked-icon-color="red" un-checked-icon-color="red" />
-    222
-    <fn-input v-model="aa" placeholder="Please input" prefix-icon="twemoji:calendar" />
-    <div class="content">
-      <FnButton @click="FnMessage({ message: 'this is a message.' })">
-        Show message
-      </FnButton>
-      <fn-button type="outline" @click=" dialogVisible = true">
-        open Dialog
-      </fn-button>
-      <fn-dialog
-        v-model="dialogVisible"
-        title="Tips"
-      >
-        <span>This is a message</span>
-        <template #footer>
-          <span class="dialog-footer">
-            <fn-button type="outline" @click="dialogVisible = false">Cancel</fn-button>
-            <fn-button @click="dialogVisible = false">
-              Confirm
-            </fn-button></span>
-        </template>
-      </fn-dialog>
-      111
+       
+      <fn-avatar type="primary"   width="100"  height="100" background="red" color="blue"> A </fn-avatar>
+  <br>
       <fn-button @click="changTheme">
         {{ button }}
       </fn-button>
-      <br>
-      <fn-radio v-model="ccc1" color="red" :value="ccc" @change="pp">
-        Radio
-      </fn-radio>
-
-      <fn-radio v-model="ccc1" :horizontal="true" :option-list="optionList" @change="pp" />
-    </div>
-  </div>
+     
 </template>
 
 <style scoped>

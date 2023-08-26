@@ -3,7 +3,7 @@ English| [简体中文](./README.md)
 <p align="center">
 <img  width="120px" height="100px"  src="https://img-blog.csdnimg.cn/99f1d53fa0b244809eee1a8a359e3261.png#pic_center" >
 </p>
-<h1 align="center">Fusion UI</h1>
+<h1 align="center">Fusion Ui</h1>
 <p align="center"> Fusion /ˈfjuːʒ(ə)n/ UI is a Vue3 component library that provides simplicity, elegance, and aesthetic appeal, enabling you to build websites quickly.</p>
 </p>
 
