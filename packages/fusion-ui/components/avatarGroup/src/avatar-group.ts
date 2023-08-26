@@ -6,12 +6,12 @@ import {
 
 export const avatarGroupProps = buildProps({
   max: {
-    type: String,
-    default: '0',
+    type: String || Number,
+    default: '5',
   },
   total: {
-    type: String,
-    default: '',
+    type: String || Number,
+    default: '0',
   },
 } as const)
 

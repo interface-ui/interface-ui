@@ -44,6 +44,18 @@ const list: PropTableItem[] = [
     optional: ['circle', 'square', 'rounded'],
     default: 'circle',
   },
+  {
+    name: 'max',
+    remark: '限制头像的数量',
+    type: 'String/Number',
+    default: '5',
+  },
+  {
+    name: 'total',
+    remark: '控制未显示头像的数量',
+    type: 'String/Number',
+    default: '0',
+  },
 ]
 
 export default list

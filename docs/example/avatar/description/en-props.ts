@@ -44,6 +44,18 @@ const list: PropTableItem[] = [
     optional: ['circle', 'square', 'rounded'],
     default: 'circle',
   },
+  {
+    name: 'max',
+    remark: 'Limit the number of avatars',
+    type: 'String/Number',
+    default: '5',
+  },
+  {
+    name: 'total',
+    remark: 'Control the number of avatars that are not displayed',
+    type: 'String/Number',
+    default: '0',
+  },
 ]
 
 export default list

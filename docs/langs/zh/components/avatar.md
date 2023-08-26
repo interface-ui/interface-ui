@@ -42,7 +42,11 @@ Avatar 组件可以用来代表人物或对象, 支持图片文字或者图标�
 
 ## 头像组
 
-待开发...
+使用 ```avatar-group``` 将多个头像组合在一起， ```max``` 属性来限制显示的头像个数。
+<demo src="../../../example/avatar/group.vue"></demo>
+
+ ```total``` 属性来显示头像的总数。
+<demo src="../../../example/avatar/total.vue"></demo>
 
 ## 属性
 <table-block type="propsZh" :data="props"></table-block>

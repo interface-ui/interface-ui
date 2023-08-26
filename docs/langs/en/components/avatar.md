@@ -42,7 +42,11 @@ Avatars in three shapes are provided, namely ```circle```, ```square``` and ```r
 
 ## Avatar Group
 
-To be developed...
+Use ```avatar-group``` to combine multiple avatars together, and the ```max``` attribute to limit the number of avatars displayed.
+<demo src="../../../example/avatar/group.vue"></demo>
+
+The ```total``` attribute shows the total number of avatars.
+<demo src="../../../example/avatar/total.vue"></demo>
 
 ## Attributes
 <table-block type="propsZh" :data="props"></table-block>

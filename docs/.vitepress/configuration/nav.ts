@@ -8,7 +8,7 @@ export const nav = {
     { text: 'Components', items: enComponents },
     {
       text: `v${version}`,
-      tems: [
+      items: [
         {
           text: 'Release Notes',
           link: 'https://github.com/tsinghua-lau/fusion-ui/releases',
