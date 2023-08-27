@@ -1,11 +1,11 @@
 import type { ExtractPropTypes } from 'vue'
+import { definePropType } from '../../../utils/vue/props/runtime'
 import type { StandardLonghandProperties } from 'csstype'
 import { componentSizes } from '../../../constans/size'
 import { isNumber } from '../../../utils/types'
 
 import {
   buildProps,
-  definePropType,
 } from '../../../utils/vue/props'
 
 export const avatarProps = buildProps({
@@ -54,7 +54,7 @@ export const avatarProps = buildProps({
     default: 'cover',
   },
 } as const)
-
+// type: definePropType<StandardLonghandProperties['objectFit']>(String),
 export type AvatarProps = ExtractPropTypes<typeof avatarProps>
 
 export const avatarEmits = {

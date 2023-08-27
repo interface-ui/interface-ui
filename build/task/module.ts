@@ -7,13 +7,13 @@ import esbuild from 'rollup-plugin-esbuild'
 import consola from 'consola'
 import { excludeFiles } from '../utils'
 import { modulesOutputConfig } from '../config'
-import { componentsRoot ,componentsRoot2} from '../path'
+import { componentsRoot ,componentsComponents} from '../path'
 
 export async function buildModule() {
   consola.info('Start building modules...')
   const input = excludeFiles(
     await glob('**/*.{js,ts,vue}', {
-      cwd: componentsRoot2,
+      cwd: componentsComponents,
       absolute: true,
       onlyFiles: true,
     }),

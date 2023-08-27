@@ -10,6 +10,7 @@ export async function buildType() {
   
   // Ensure the types directory exists
   await fs.promises.mkdir(src, { recursive: true });  // Add this line
+  consola.info('src👌', src)
   
   // Copy to 'es' and 'lib' directories
   await Promise.all(

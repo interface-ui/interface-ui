@@ -7,7 +7,7 @@ import cleanCSS from 'gulp-clean-css'
 import consola from 'consola'
 
 import { outputFileSync, readFileSync } from 'fs-extra'
-import { buildOutput, componentsRoot,componentsRoot2,componentsRoot3, stylesRoot } from '../path'
+import { buildOutput, componentsRoot,componentsComponents,componentsStyles, stylesRoot } from '../path'
 
 let generatedCssInfoList: CssInfo[] = [];
 
@@ -17,8 +17,8 @@ export async function buildStyle() {
 
   return src([
     resolve(stylesRoot, '**/*.less'),
-    resolve(componentsRoot2, '**/*.less'),
-    resolve(componentsRoot3, '**/*.less'),
+    resolve(componentsComponents, '**/*.less'),
+    resolve(componentsStyles, '**/*.less'),
   ])
     .pipe(gulpImportLess())
     .pipe(gulpLess())
@@ -57,7 +57,7 @@ function genStyleEntry(cssInfo: CssInfo) {
   consola.info('🔥',cssInfo.path)
   consola.info('👌',componentsRoot)
 
-  if (cssInfo.path.includes(componentsRoot2)) {
+  if (cssInfo.path.includes(componentsComponents)) {
     const noStyleComps = ['on-click-outside']
 
     generatedCssInfoList.push(cssInfo);
@@ -70,7 +70,7 @@ function genStyleEntry(cssInfo: CssInfo) {
 
     const importCommon = `@import './base.css';\n@import '${indexCss}';\n`
 
-    const importContent = (readFileSync(resolve(componentsRoot2, compName, 'src/index.vue'), 'utf-8').match(importReg) || [])
+    const importContent = (readFileSync(resolve(componentsComponents, compName, 'src/index.vue'), 'utf-8').match(importReg) || [])
       .filter(path => noStyleComps.every(comp => !path.includes(comp)))
       .reduce((prev, curr) => prev += curr.replace(importReg, 'import \'$1.css\'\n'), importCommon)
       // consola.info('🚀🚀🚀🚀----------',`${compName}.css`)

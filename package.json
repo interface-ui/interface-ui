@@ -8,7 +8,7 @@
     "docs"
   ],
   "scripts": {
-    "build": " gulp --require @esbuild-kit/cjs-loader -f gulpfile.ts",
+    "build": "pnpm run -C packages build",
     "docs:dev": "pnpm -C docs run dev",
     "docs:build": "pnpm run build && pnpm -C docs run build",
     "test": "vitest",
