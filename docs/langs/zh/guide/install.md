@@ -57,7 +57,7 @@ npm install -D unplugin-vue-components
 ```ts
 import { defineConfig } from 'vite'
 import Components from 'unplugin-vue-components/vite'
-import { PlayResolver } from 'fusion-ui-vue/dist/lib/resolver'
+import { PlayResolver } from 'fusion-ui-vue/dist/lib/components/resolver'
 
 export default defineConfig({
   // ...

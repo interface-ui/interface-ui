@@ -1,24 +1,12 @@
 import { h, onMounted } from 'vue'
 import theme from 'vitepress/theme'
-import FusionUi from '../../../packages/fusion-ui/components/index'
-
-// 导入本地全量打包样式--测试
-import '../../../packages/fusion-ui/dist/styles/index.css'
+import FusionUi from '../../../packages/components/index'
 
 // 导入本地源码样式--测试
-import '../../../packages/fusion-ui/styles/base.less' // 基础样式
-import '../../../packages/fusion-ui/components/button/src/index.less'
-import '../../../packages/fusion-ui/components/alert/src/index.less'
-import '../../../packages/fusion-ui/components/ripple/src/index.less'
-// import '../../../packages/fusion-ui/components/dialog/src/index.less'
-// import '../../../packages/fusion-ui/components/input/src/index.less'
-// import '../../../packages/fusion-ui/components/radio/src/index.less'
-// import '../../../packages/fusion-ui/components/button/src/index.less'
-// import '../../../packages/fusion-ui/components/switch/src/index.less'
-// import '../../../packages/fusion-ui/components/progress/src/index.less'
-// import '../../../packages/fusion-ui/components/card/src/index.less'
-import '../../../packages/fusion-ui/components/tag/src/index.less'
-import '../../../packages/fusion-ui/components/checkbox/src/index.less'
+import '../../../dist/styles/index.css' //全部样式
+
+import '../../../packages/components/button/src/index.less' //单文件样式
+
 
 // 导入 npm 包
 // import FusionUi from 'fusion-ui-vue'

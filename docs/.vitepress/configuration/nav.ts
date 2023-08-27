@@ -1,4 +1,4 @@
-import { version } from '../../../packages/fusion-ui/package.json'
+import { version } from '../../../packages/package.json'
 import { enComponents, zhComponents } from './components'
 import { enGuides, zhGuides } from './guides'
 

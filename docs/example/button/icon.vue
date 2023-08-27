@@ -1,7 +1,7 @@
 <template>
   <div space-y-2>
     <div fscw gap-2>
-      <fn-button shape="circle" icon="logos:chrome" />
+      <fn-button shape="circle" name="logos:chrome" />
       <fn-button icon="eos-icons:bubble-loading">
         Default
       </fn-button>

@@ -57,7 +57,7 @@ Then add the code below into your Vite config file.
 ```ts
 import { defineConfig } from 'vite'
 import Components from 'unplugin-vue-components/vite'
-import { PlayResolver } from 'fusion-ui-vue/dist/lib/resolver'
+import { PlayResolver } from 'fusion-ui-vue/dist/lib/components/resolver'
 
 export default defineConfig({
   // ...

@@ -2,11 +2,15 @@
   "name": "fusion-ui",
   "private": false,
   "packageManager": "pnpm@7.5.2",
+  "workspaces": [
+    "packages/*",
+    "example",
+    "docs"
+  ],
   "scripts": {
+    "build": " gulp --require @esbuild-kit/cjs-loader -f gulpfile.ts",
     "docs:dev": "pnpm -C docs run dev",
-    "play:dev": "pnpm -C packages/playground run dev",
     "docs:build": "pnpm run build && pnpm -C docs run build",
-    "build": "pnpm run -C packages/fusion-ui build",
     "test": "vitest",
     "deploy": "pnpm run docs:build",
     "lint": "eslint .",
@@ -17,7 +21,6 @@
   "dependencies": {
     "@vue/shared": "^3.2.47",
     "@vueuse/core": "^9.1.1",
-    "fusion-ui": "workspace:*",
     "lodash-unified": "^1.0.3",
     "vue": "^3.2.45"
   },
@@ -58,6 +61,7 @@
     "rimraf": "^3.0.2",
     "rollup": "^3.15.0",
     "rollup-plugin-esbuild": "^5.0.0",
+    "sucrase": "^3.34.0",
     "typescript": "^4.9.3",
     "unocss": "^0.50.0",
     "unplugin-auto-import": "^0.15.0",
