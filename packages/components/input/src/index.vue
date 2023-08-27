@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, ref, toRefs } from 'vue'
-import { Icon } from 'fusion-ui-iconify'
+import { Icon } from 'fusion-ui-iconify/dist/dist.mjs'
 import { getSvgIncon, inputEmits, inputProps } from '../src/input'
 import { useInput } from '../src/use-input'
 import { UPDATE_MODEL_EVENT } from '../../../constans/event'
