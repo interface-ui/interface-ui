@@ -56,7 +56,7 @@
 ## 组件的书写推荐
 我们推荐使用```命名空间```的方式书写组件，例如：
 
-![推荐](./public/image/W.png)
+![推荐](./public/image/w.png)
 
 当然，你也可以使用```hooks```的方式书写组件
 
@@ -69,17 +69,23 @@
 2. 在 ```docs/.vuepress/config.ts``` 中导入样式
 
 打包生成Docs 依赖的 dist/styles/index.css
- ```
+
+```
 pnpm run build   
 ```
+
 3. 书写```example``` 实例
+
 ![example](./public/image/example.png)
 
-4. 书写```md``` 组件描述
+
+1. 书写```md``` 组件描述
+  
 ![example](./public/image/md.png)
 
 
 5. 配置 Docs 文档路由链接 md 文件生成为html页面
+
 ![example](./public/image/link.png)
 
 ## 启动文档
