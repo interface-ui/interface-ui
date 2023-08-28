@@ -1,6 +1,6 @@
 import type { ExtractPropTypes } from 'vue'
-import { definePropType } from '../../../utils/vue/props/runtime'
 import type { StandardLonghandProperties } from 'csstype'
+import { definePropType } from '../../../utils/vue/props/runtime'
 import { componentSizes } from '../../../constans/size'
 import { isNumber } from '../../../utils/types'
 

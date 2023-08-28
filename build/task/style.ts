@@ -7,12 +7,11 @@ import cleanCSS from 'gulp-clean-css'
 import consola from 'consola'
 
 import { outputFileSync, readFileSync } from 'fs-extra'
-import { buildOutput, componentsRoot,componentsComponents,componentsStyles, stylesRoot } from '../path'
+import { buildOutput, componentsComponents, componentsRoot, componentsStyles, stylesRoot } from '../path'
 
-let generatedCssInfoList: CssInfo[] = [];
+const generatedCssInfoList: CssInfo[] = []
 
 export async function buildStyle() {
-
   const stylePath = resolve(buildOutput, 'styles')
 
   return src([
@@ -28,8 +27,8 @@ export async function buildStyle() {
         const cssInfo = {
           path: details.name,
           name: details.name.replace('.css', ''),
-        };
-        generatedCssInfoList.push(cssInfo);
+        }
+        generatedCssInfoList.push(cssInfo)
         genStyleEntry(details)
       }),
     )
@@ -37,7 +36,7 @@ export async function buildStyle() {
     .on('end', () => {
       // consola.info('🚀🚀🚀🚀----------',`index.css`)
       // generateIndexCss(generatedCssInfoList);
-    });
+    })
 }
 
 interface CssInfo {
@@ -48,19 +47,19 @@ interface CssInfo {
 function generateIndexCss(cssInfoList: CssInfo[]) {
   const indexCssContent = cssInfoList
     .map(cssInfo => `@import '.${cssInfo.name}.css';`)
-    .join('\n');
+    .join('\n')
 
-  outputFileSync(resolve(buildOutput, 'styles', 'index.css'), indexCssContent);
+  outputFileSync(resolve(buildOutput, 'styles', 'index.css'), indexCssContent)
 }
 
 function genStyleEntry(cssInfo: CssInfo) {
-  consola.info('🔥',cssInfo.path)
-  consola.info('👌',componentsRoot)
+  consola.info('🔥', cssInfo.path)
+  consola.info('👌', componentsRoot)
 
   if (cssInfo.path.includes(componentsComponents)) {
     const noStyleComps = ['on-click-outside']
 
-    generatedCssInfoList.push(cssInfo);
+    generatedCssInfoList.push(cssInfo)
 
     const compName = cssInfo.name.split(/\\|\//)[1]
 

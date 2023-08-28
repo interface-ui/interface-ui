@@ -58,5 +58,4 @@ const CK = {
   },
 }
 
-// export default Icon;
 export default CK

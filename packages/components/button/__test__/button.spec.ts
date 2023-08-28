@@ -2,7 +2,7 @@ import { describe, expect, it, test } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { FnButton } from '../index'
 import type { ButtonShape, ButtonSize } from '../src/button'
-import type { ComponentState } from '../../type'
+import type { ComponentState } from '../../../constans/state'
 
 describe('FnButton', () => {
   it('class', () => {

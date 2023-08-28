@@ -1,5 +1,10 @@
-import type { App, Component } from 'vue'
-import type { SFCInstallWithContext, SFCWithInstall } from './type'
+import type { App, AppContext, Component, Plugin } from 'vue'
+
+export type SFCWithInstall<T> = T & Plugin
+
+export type SFCInstallWithContext<T> = SFCWithInstall<T> & {
+  _context: AppContext | null
+}
 // export type SFCWithInstall<T> = T & Plugin
 
 export function withInstall<T extends Component>(comp: T, name: string) {

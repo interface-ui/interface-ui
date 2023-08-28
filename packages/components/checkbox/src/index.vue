@@ -1,13 +1,13 @@
 <script lang="ts" setup>
+import { computed, ref, watchEffect } from 'vue'
+import type { CheckboxStatus } from '../src/checkbox'
 import {
   checkboxProps,
-  CheckboxStatus,
-  iconType,
   iconSize,
+  iconType,
 } from '../src/checkbox'
 import { UseCheckbox } from '../../../_hooks'
 import FnRipple from '../../ripple'
-import { computed, ref, watchEffect } from 'vue'
 const props = defineProps(checkboxProps)
 const emits = defineEmits<{ (e: 'update:modelValue', v: boolean): void }>()
 
@@ -15,7 +15,7 @@ const { classList, styleList } = UseCheckbox(props)
 
 const checked = ref<boolean>(props.modelValue ?? false)
 const status = computed<CheckboxStatus>(() =>
-  checked.value ? 'checked' : 'blank'
+  checked.value ? 'checked' : 'blank',
 )
 watchEffect(() => {
   checked.value = props.modelValue
@@ -46,7 +46,7 @@ export default {
         :size="iconSize[props.size]"
       />
     </slot>
-    <input type="checkbox" v-bind="$attrs" :class="classList.input" />
-    <fn-ripple :color="props.color" center />
+    <input type="checkbox" v-bind="$attrs" :class="classList.input">
+    <FnRipple :color="props.color" center />
   </span>
 </template>

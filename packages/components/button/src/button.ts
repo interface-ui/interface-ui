@@ -1,44 +1,44 @@
-import type { ExtractPropTypes, PropType } from "vue"
+import type { ExtractPropTypes, PropType } from 'vue'
 
-import type { ComponentState } from "../../type"
+import type { ComponentState } from '../../../constans/state'
 
-export type ButtonNativeType = "button" | "reset" | "submit"
-export type ButtonShape = "round" | "pill" | "circle" | "plain"
-export type ButtonSize = "mini" | "small" | "medium" | "large"
-export type ButtonType = "default" | "primary" | "link" | "dashed"
+export type ButtonNativeType = 'button' | 'reset' | 'submit'
+export type ButtonShape = 'round' | 'pill' | 'circle' | 'plain'
+export type ButtonSize = 'mini' | 'small' | 'medium' | 'large'
+export type ButtonType = 'default' | 'primary' | 'link' | 'dashed'
 
 export const buttonProps = {
   type: {
     type: String as PropType<ButtonType>,
-    default: "",
+    default: '',
   },
   nativeType: {
     type: String as PropType<ButtonNativeType>,
-    default: "button",
+    default: 'button',
   },
   shape: {
     type: String as PropType<ButtonShape>,
-    default: "round",
+    default: 'round',
   },
   state: {
     type: String as PropType<ComponentState>,
-    default: "",
+    default: '',
   },
   size: {
     type: String as PropType<ButtonSize>,
-    default: "medium",
+    default: 'medium',
   },
   icon: {
     type: String,
-    default: "",
+    default: '',
   },
   color: {
     type: String,
-    default: "",
+    default: '',
   },
   background: {
     type: String,
-    default: "",
+    default: '',
   },
   disabled: Boolean,
   enableRipple: {

@@ -7,7 +7,7 @@ import esbuild from 'rollup-plugin-esbuild'
 import consola from 'consola'
 import { excludeFiles } from '../utils'
 import { modulesOutputConfig } from '../config'
-import { componentsRoot ,componentsComponents} from '../path'
+import { componentsComponents } from '../path'
 
 export async function buildModule() {
   consola.info('Start building modules...')
