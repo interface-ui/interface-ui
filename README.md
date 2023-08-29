@@ -61,14 +61,16 @@ app.use(fusionUi).mount('#app')
 │  ├─ workflows             # 工作流 github actions
 ├─ .husky                   # 提交规则 git hooks
 ├─ .vscode                  # vscode 配置
+├─ build                    # gulp打包 配置
+│
 ├─ docs                     # 组件库文档
 │  ├─ .vitepress            # 文档配置
-│       ├─ components       # 组件库文档组件
-│       ├─ configuration    # 文档页面结构
-│       ├─ dist             # 文档打包后的文件
-│       ├─ plugins          # 文档插件
-│       ├─ theme            # 文档主题
-│       ├─ config.ts        # VitePress 配置
+│      ├─ components       # 组件库文档组件
+│      ├─ configuration    # 文档页面结构
+│      ├─ dist             # 文档打包后的文件
+│      ├─ plugins          # 文档插件
+│      ├─ theme            # 文档主题
+│      ├─ config.ts        # VitePress 配置
 │  ├─ examples              # 组件库示例代码
 │  ├─ langs                 # 文档多语言
 │  ├─ components.d          # 文档组件类型声明
@@ -77,15 +79,14 @@ app.use(fusionUi).mount('#app')
 ├─ ├─ unocss.config.ts      # unocss 配置
 │
 ├─ packages                 # 组件库代码
-│  ├─ fusion-ui             # 组件库发布包
-│     ├─ build              # 构建配置
-│     ├─ components         # 组件库核心代码
-│     ├─ constans           # 常量
-│     ├─ styles             # 通用样式
-│     ├─ utils              # 通用方法
-│     ├─ package.json       # package.json
-│     ├─ vite.config.ts     # vite 配置
-│  ├─ playground            # 组件库演练场
+│  ├─ components            # 组件库全部组件
+│  ├─ _hooks                # 组件库全部组件
+│  ├─ constans              # 常量
+│  ├─ styles                # 通用样式
+│  ├─ utils                 # 通用工具
+│
+│─ playground              # 组件库演练场
+│
 ├─ scripts                  # 脚本
 ├─ .gitignore               # git 忽略
 ├─ CODE_OF_CONDUCT          # 行为公约

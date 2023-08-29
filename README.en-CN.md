@@ -39,48 +39,50 @@ $ yarn add fusion-ui-vue
 
 ## Warehouse directory
 ```bash
-
 ├─ .github                  # Modular configuration
 │  ├─ workflows             # github actions
 ├─ .husky                   # git hooks
 ├─ .vscode                  # vscode config
+├─ build                    # gulp config
+│
 ├─ docs                     # Component Library Document
 │  ├─ .vitepress            # Document Configuration
-│       ├─ components       # Component Library Document Component
-│       ├─ configuration    # Document Page Structure
-│       ├─ dist             # Document packaged file
-│       ├─ plugins          # Document plugin
-│       ├─ theme            # Document Theme
-│       ├─ config.ts        # VitePress config
+│      ├─ components        # Component Library Document Component
+│      ├─ configuration     # Document Page Structure
+│      ├─ dist              # Document packaged file
+│      ├─ plugins           # plugins
+│      ├─ theme             # theme
+│      ├─ config.ts         # VitePress 配置
 │  ├─ examples              # Sample code for component library
 │  ├─ langs                 # Document Multilingual
 │  ├─ components.d          # Document Component Type Declaration
 │  ├─ package.json          # package.json
-│  ├─ tsconfig.json         # tsconfig config
+│  ├─ tsconfig.json         # tsconfig 
 ├─ ├─ unocss.config.ts      # unocss config
 │
 ├─ packages                 # Component library code
-│  ├─ fusion-ui             # Component Library Publishing Package
-│     ├─ build              # Build Configuration
-│     ├─ components         # Component library core code
-│     ├─ constans           # Constans
-│     ├─ styles             # styles
-│     ├─ utils              # General methods
-│     ├─ package.json       # package.json
-│     ├─ vite.config.ts     # vite config
-│  ├─ playground            # Component Library Exercise Field
-├─ scripts                  # script
-├─ .gitignore               # gitignore
+│  ├─ components            # All components in the component library
+│  ├─ _hooks                # _hooks
+│  ├─ constans              # constans
+│  ├─ styles                # styles
+│  ├─ utils                 # utils
+│
+│─ playground               # playground
+│
+├─ scripts                  # scripts
+├─ .gitignore               # gitignore 
 ├─ CODE_OF_CONDUCT          # Convention on Conduct
 ├─ CONTRIBUTING             # Contribution Guidelines
 ├─ LICENSE                  # Open source protocol
 ├─ package.json             # package.json
-├─ README.md                # README
-├─ tsconfig.base.json       # tsconfig config
-├─ tsconfig.json            # tsconfig config
-├─ vitest.config.ts         # vitest config
+├─ README.md                # 介绍
+├─ tsconfig.base.json       # tsconfig 
+├─ tsconfig.json            # tsconfig 
+├─ vitest.config.ts         # vitest 
 
 ```
+
+
 
 ## Special Thanks
 
