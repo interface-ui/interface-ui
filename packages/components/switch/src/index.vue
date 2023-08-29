@@ -38,10 +38,10 @@ const handleChange = (event: MouseEvent) => {
       <!-- icon -->
       <div v-show="props.checkedIcon || props.unCheckedIcon" class="fn-switch__core">
         <span v-show="props.modelValue" class="icon">
-          <fn-icon :icon="props.checkedIcon" :color="props.checkedIconColor" size="13" />
+          <fn-icon :name="props.checkedIcon" :color="props.checkedIconColor" size="13" />
         </span>
         <span v-show="!props.modelValue" class="icon">
-          <fn-icon :icon="props.unCheckedIcon" :color="props.unCheckedIconColor" size="13" />
+          <fn-icon :name="props.unCheckedIcon" :color="props.unCheckedIconColor" size="13" />
         </span>
       </div>
       <div class="fn-switch__button" :class="classList" />

@@ -11,7 +11,7 @@ export const alertProps = {
     default: '',
   },
   fixedTip: {
-    type: Boolean,
+    type: String,
     default: false,
   },
   direction: {
@@ -36,7 +36,7 @@ export const alertProps = {
     default: 2,
   },
   state: {
-    type: String as PropType<'success' | 'warning' | 'error' | 'info'>,
+    type: String as PropType<'success' | 'warning' | 'danger' | 'info'>,
     default: 'info',
   },
 }

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import { FnAlert,FnRadio} from '../../packages/components';
 const button = ref('深色')
 
 const changTheme = () => {
@@ -16,6 +17,8 @@ const changTheme = () => {
 }
 
 const yyy = ref(true)
+const value1 = ref(1)
+const value2 = ref(2)
 </script>
 
 <template>
@@ -31,6 +34,89 @@ const yyy = ref(true)
 
 <div class="content">
   <FnSwtich v-model="yyy" checked-text="dfa" un-checked-text="dfa" un-checked-icon="ri:alarm-line" />
+  <br>
+  <FnAlert center v-model="yyy" checked-text="dfa" title="123" un-checked-text="dfa" un-checked-icon="ri:alarm-line" />
+  <br>
+  <fn-alert
+      state="info"
+      fixed-tip="Message："
+      description="Use flexTip to add front fixed content to the description."
+    >
+      <template #fixedArea>
+        <fn-icon icon="twemoji:1st-place-medal" size="20" />
+      </template>
+    </fn-alert>
+    <fn-alert
+     state="danger"
+      fixed-tip="Message："
+      description="Use flexTip to add front fixed content to the description."
+    >
+      <template #fixedArea>
+        <fn-icon icon="twemoji:1st-place-medal" size="20" />
+      </template>
+    </fn-alert>
+    <fn-alert
+      title="This is a title."
+      description="This is a description."
+      state="info"
+      closable
+    />
+    <fn-alert
+      state="warning"
+      title="This is a title."
+      description="Use flexTip to add front fixed content to the description."
+      closable
+    >
+      <template #fixedArea>
+        Message:
+      </template>
+    </fn-alert>
+
+    <fn-alert
+      state="info"
+      scrollable
+      duration="10"
+      description="By default, scrolling to the left is enabled using the 'scrollable' attribute, and the duration of the scrollbar can also be defined through the 'duration' attribute."
+    />
+
+    <fn-alert
+      state="success"
+      fixed-tip="Message："
+      scrollable
+      duration="8"
+      description="By default, scrolling to the left is enabled using the 'scrollable' attribute, and the duration of the scrollbar can also be defined through the 'duration' attribute."
+      closable
+    />
+
+    <fn-alert
+      state="warning"
+      scrollable
+      direction="top"
+      description="By default, scrolling to the left is enabled using the 'scrollable' attribute, and the duration of the scrollbar can also be defined through the 'duration' attribute."
+      closable
+    >
+      <template #fixedArea>
+        Message:
+      </template>
+    </fn-alert>
+
+    <fn-alert
+      state="danger"
+      scrollable
+      direction="top"
+      title="This is a title"
+      :duration="5"
+      description="By default, scrolling to the left is enabled using the 'scrollable' attribute, and the duration of the scrollbar can also be defined through the 'duration' attribute."
+      closable
+    >
+      <template #fixedArea>
+        Message:
+      </template>
+    </fn-alert>
+
+  <!-- <fn-radio v-model="value1" :value="value2">
+    Radio
+  </fn-radio> -->
 </div>
   
 </template>
@@ -42,8 +128,8 @@ header{
 .content{
   width: 100%;
   height: 100%;
-  display: flex;
-  text-align: center;
-  justify-content: center;
+  /* display: flex; */
+  /* text-align: center;
+  justify-content: center; */
 }
 </style>

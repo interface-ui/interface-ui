@@ -1,15 +1,24 @@
 {
   "name": "fusion-ui-vue",
-  "version": "1.0.95",
+  "version": "1.0.99",
   "description": "A Component Library for Vue 3",
   "author": "tsinghua-lau",
-  "license": "ISC",
+  "license": "MIT",
+  "homepage": "https://tsinghua-lau.github.io/fusion-ui/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsinghua-lau/fusion-ui.git"
+  },
   "keywords": [
     "fusion-ui-vue",
     "vue",
     "vue3",
     "component",
     "library"
+  ],
+  "sideEffects": [
+    "dist/**/*.css",
+    "*.css"
   ],
   "main": "dist/lib/components/index.js",
   "module": "dist/es/components/index.mjs",

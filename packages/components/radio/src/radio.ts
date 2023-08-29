@@ -33,11 +33,12 @@ export const radioProps = {
   },
 }
 const isString = (data: any): boolean => typeof data === 'string'
+const isNumber = (data: any): boolean => typeof data === 'number'
 
 export const radioEmits = {
-  [UPDATE_MODEL_EVENT]: (value: string) => isString(value),
+  [UPDATE_MODEL_EVENT]: (value: string) => isString(value) || isNumber(value),
   click: (evt: MouseEvent) => evt instanceof MouseEvent,
-  change: (value: string) => false,
+  change: (value: string) => true,
 }
 
 /** RadioProps 组件 props 类型 */

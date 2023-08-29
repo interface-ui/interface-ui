@@ -9,7 +9,6 @@
   },
   "dependencies": {
     "fusion-ui-iconify": "^1.0.35",
-    "fusion-ui-vue": "workspace:^",
     "vue": "^3.3.4"
   },
   "devDependencies": {

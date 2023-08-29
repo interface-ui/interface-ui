@@ -22,9 +22,10 @@ export default defineConfig({
     ],
     sidebar,
     algolia: {
-      appId: 'GA7O5T77G8',
-      apiKey: '72bff662ff8ae89b474533380c73890c',
-      indexName: 'fusion-ui',
+      appId: 'G9YJQIU3F0',
+      apiKey: '96c916e6c501fac0386b67e9e8d1dda4',
+      indexName: 'fusion-ui2',
+      insights: true,
       container: '### REPLACE ME WITH A CONTAINER (e.g. div) ###',
       debug: false, // Set debug to true if you want to inspect the modal
     },

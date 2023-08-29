@@ -1,4 +1,4 @@
-import type { PropTableItem } from '../../../.vitepress/components/table-block/src/table'
+import type { PropTableItem } from '../../../../.vitepress/components/table-block/src/table'
 const list: PropTableItem[] = [
   {
     name: 'type',

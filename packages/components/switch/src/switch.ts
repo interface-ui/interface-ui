@@ -8,7 +8,7 @@ export interface OptionType {
 }
 export const switchProps = {
   modelValue: {
-    type: [String, Number],
+    type: Boolean,
     default: '',
   },
   width: {
@@ -48,10 +48,10 @@ export const switchProps = {
     default: '',
   },
 }
-const isString = (data: any): boolean => typeof data === 'string'
+const isBoolean = (data: any): boolean => typeof data === 'boolean'
 
 export const switchEmits = {
-  [UPDATE_MODEL_EVENT]: (value: string) => isString(value),
+  [UPDATE_MODEL_EVENT]: (value: string) => isBoolean(value),
   click: (evt: MouseEvent) => evt instanceof MouseEvent,
   change: (value: string) => true,
 }

@@ -34,10 +34,11 @@ function getSideEffects(
   if (noStyleComps.includes(dirName))
     return
 
-  if (importStyle === 'less')
-    return ['fusion-ui-vue/styles/base.less', `fusion-ui-vue/components/${dirName}/src/index.less`]
+  if (importStyle)
+    return ['fusion-ui-vue/dist/styles/base.css', `fusion-ui-vue/dist/styles/${dirName}/src/index.css`]
 
-  return [`fusion-ui-vue/dist/styles/${dirName}/src/index.js`]
+  return [`fusion-ui-vue/dist/lib/components/${dirName}/index.js`]
+  // return [`fusion-ui-vue/dist/styles/${dirName}/src/index.js`]
 }
 
 export function PlayResolver(

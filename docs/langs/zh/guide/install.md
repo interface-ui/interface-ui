@@ -4,7 +4,7 @@
 
  推荐使用 ``自动导入`` 的方式来引入组件，简单快速。
 
-## 获取安装包
+## 安装
 
 ```shell
 # npm
@@ -19,15 +19,16 @@ pnpm add fusion-ui-vue
 
 ## 完整引入
 
-完整导入 FusionUi 组件，包的体积会增大。
+完整导入 ```FusionUi``` 组件。
 
 ```main.ts```
 ```ts
 import { createApp } from 'vue'
+
 import fusionUi from 'fusion-ui-vue'
 import 'fusion-ui-vue/dist/styles/index.css'
-import App from './App.vue'
 
+import App from './App.vue'
 const app = createApp(App)
 app.use(fusionUi)
 app.mount('#app')
@@ -41,7 +42,7 @@ app.mount('#app')
 
 ```ts
 import { FnButton } from 'fusion-ui-vue'
-import 'fusion-ui-vue/dist/styles/button/src/index.css'
+import 'fusion-ui-vue/dist/styles/button.css'
 ```
 
 ### 自动导入

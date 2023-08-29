@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { computed, ref } from 'vue'
+import { FnIcon } from '../../icon'
 import { UseAlert } from '../../../_hooks'
 import { alertEmits, alertProps } from './alert'
 const props = defineProps(alertProps)
@@ -30,7 +31,7 @@ const box = ref<HTMLElement | null>(null)
               ref="box" class="box"
               :style="props.center ? 'text-align:center;' : ''"
             >
-              <div class="title">
+              <div v-if="props.title" class="title">
                 {{ props.title }}
               </div>
               <div
@@ -44,7 +45,7 @@ const box = ref<HTMLElement | null>(null)
           </div>
         </div>
         <div v-if="props.closable" class="close" @click="handClose">
-          <fn-icon name="mdi:close" color="#bfc2c8" />
+          <FnIcon name="mdi:close" color="#bfc2c8" />
         </div>
         <div class="slots" @click="handClose">
           <slot name="closeArea" />

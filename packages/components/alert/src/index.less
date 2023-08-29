@@ -11,10 +11,11 @@
 }
 
 .fn-alert{
-  padding: 0 10px;
   position: relative;
   border-radius: 5px;
-  padding: 5px;
+  // height: 48px;
+  line-height: 1.43;
+  padding: 6px 16px;
   
   &-info{
     background-color: #85888e;
@@ -43,19 +44,19 @@
     > .scroll-area{
       width: 100%;
       height: 100%;
+      padding: 4px;
       overflow: hidden;
       > .bar{
         height: 100%;
         color:#fff;
         >.box{
+          height: 100%;
+          display: grid;
+          align-items: center;
+          font-size: 14px;
           .title{
-            line-height: initial;
-            font-size: 13px;
-            font-weight: 700;
           }
           .description{
-            line-height: initial;
-            font-size: 12px;
           }
         }
       }
