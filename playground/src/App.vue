@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { FnAlert,FnRadio} from '../../packages/components';
+import { FnAlert} from '../../packages/components';
 const button = ref('深色')
 
 const changTheme = () => {
@@ -17,8 +17,7 @@ const changTheme = () => {
 }
 
 const yyy = ref(true)
-const value1 = ref(1)
-const value2 = ref(2)
+
 </script>
 
 <template>
@@ -75,7 +74,7 @@ const value2 = ref(2)
     <fn-alert
       state="info"
       scrollable
-      duration="10"
+      :duration="10"
       description="By default, scrolling to the left is enabled using the 'scrollable' attribute, and the duration of the scrollbar can also be defined through the 'duration' attribute."
     />
 
@@ -83,7 +82,7 @@ const value2 = ref(2)
       state="success"
       fixed-tip="Message："
       scrollable
-      duration="8"
+      :duration="8"
       description="By default, scrolling to the left is enabled using the 'scrollable' attribute, and the duration of the scrollbar can also be defined through the 'duration' attribute."
       closable
     />
@@ -114,9 +113,7 @@ const value2 = ref(2)
       </template>
     </fn-alert>
 
-  <!-- <fn-radio v-model="value1" :value="value2">
-    Radio
-  </fn-radio> -->
+ 
 </div>
   
 </template>
