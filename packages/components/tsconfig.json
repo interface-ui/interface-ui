@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "jsx": "preserve",
+    "allowJs": true,
+    "baseUrl": "./"
+  },
+
+  "exclude": [
+    "node_modules",
+    "build",
+    "dist",
+    "test",
+    "docs",
+    "playground",
+    "gulpfile.ts",
+    "**__/test/__**/*",
+    "**/style/**/*",
+    "**/*.md"
+  ]
+}

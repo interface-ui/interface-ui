@@ -1,0 +1,10 @@
+{
+  "name": "@fusion-ui/utils",
+  "private": true,
+  "license": "MIT",
+  "main": "index.ts",
+  "types": "./dist/types/packages/utils/index.d.ts",
+  "peerDependencies": {
+    "vue": "^3.2.45"
+  }
+}

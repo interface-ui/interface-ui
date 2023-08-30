@@ -1,0 +1,12 @@
+{
+  "name": "@fusion-ui/hooks",
+  "version": "0.0.1",
+  "description": "Fusion-Ui hooks",
+  "license": "MIT",
+  "main": "index.ts",
+  "module": "index.ts",
+  "types": "./dist/types/packages/hook/index.d.ts",
+  "peerDependencies": {
+    "vue": "^3.2.45"
+  }
+}

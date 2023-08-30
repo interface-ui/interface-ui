@@ -1,0 +1,12 @@
+{
+  "name": "@fusion-ui/components",
+  "version": "0.0.1",
+  "description": "all components are settled here",
+  "sideEffects": false,
+  "main": "index.ts",
+  "module": "index.ts",
+  "types": "./dist/types/packages/components/index.d.ts",
+  "peerDependencies": {
+    "vue": "^3.2.45"
+  }
+}
