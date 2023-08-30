@@ -1,7 +1,8 @@
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { UseProgress } from '../../../_hooks'
+import { UseProgress } from '../../../hooks'
 import { progressProps } from '../src/progress'
+import FnIcon from '../../icon'
 const props = defineProps(progressProps)
 const progerssValue = computed(() => {
   if (typeof props.percentage !== 'number')
@@ -95,7 +96,7 @@ const { styleList, styleListCircle } = UseProgress(props)
       </span>
 
       <span v-show="props.status" style="margin-left: 5px;">
-        <fn-icon :icon="getIcon" :color="getIconColor" />
+        <FnIcon :icon="getIcon" :color="getIconColor" />
       </span>
     </div>
   </div>

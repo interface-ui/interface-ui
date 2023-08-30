@@ -23,7 +23,7 @@ export async function buildStyle() {
     .pipe(gulpLess())
     .pipe(autoprefixer({ cascade: false }))
     .pipe(
-      cleanCSS({}, (details) => {
+      cleanCSS({}, (details: any) => {
         const cssInfo = {
           path: details.name,
           name: details.name.replace('.css', ''),

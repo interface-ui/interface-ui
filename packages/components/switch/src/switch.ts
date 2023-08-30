@@ -32,11 +32,11 @@ export const switchProps = {
     default: '',
   },
   checkedIcon: {
-    type: [String, Number],
+    type: [String],
     default: '',
   },
   unCheckedIcon: {
-    type: [String, Number],
+    type: [String],
     default: '',
   },
   checkedIconColor: {

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { FnMessage } from 'fusion-ui-vue/components'
+import { FnMessage } from 'fusion-ui-vue'
 </script>
 
 <template>

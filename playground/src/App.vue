@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { FnAlert} from '../../packages/components';
 const button = ref('深色')
 
 const changTheme = () => {
@@ -17,7 +16,7 @@ const changTheme = () => {
 }
 
 const yyy = ref(true)
-
+const value1 = ref(10)
 </script>
 
 <template>
@@ -32,6 +31,7 @@ const yyy = ref(true)
 <!-- -------------------新组建开发调试------------------- -->
 
 <div class="content">
+  <fn-progress :percentage="value1" />
   <FnSwtich v-model="yyy" checked-text="dfa" un-checked-text="dfa" un-checked-icon="ri:alarm-line" />
   <br>
   <FnAlert center v-model="yyy" checked-text="dfa" title="123" un-checked-text="dfa" un-checked-icon="ri:alarm-line" />

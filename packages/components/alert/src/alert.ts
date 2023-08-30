@@ -12,7 +12,7 @@ export const alertProps = {
   },
   fixedTip: {
     type: String,
-    default: false,
+    default: '',
   },
   direction: {
     type: String as PropType<'left' | 'top'>,

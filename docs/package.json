@@ -18,7 +18,6 @@
 
   "dependencies": {
     "fusion-ui-iconify": "^1.0.35",
-    "fusion-ui-vue": "workspace:^",
     "markdown-it": "^13.0.1",
     "vite-plugin-progress": "^0.0.7"
   },

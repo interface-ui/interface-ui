@@ -1,15 +1,13 @@
 import { h, onMounted } from 'vue'
 import theme from 'vitepress/theme'
-import FusionUi from '../../../packages/components/index'
 
 // 导入本地源码样式--测试
-import '../../../packages/dist/styles/index.css' // 全部样式
-
-import '../../../packages/components/button/src/index.less' // 单文件样式
+import '../../../dist/styles/index.css' // 全部样式
+import '@fusion-ui/components/button/src/index.less'
+// import '../../../packages/components/button/src/index.less' // 单文件样式
 
 // 导入 npm 包
-// import FusionUi from 'fusion-ui-vue'
-// import 'fusion-ui-vue/dist/styles/index.css'
+import FusionUi from 'fusion-ui-vue'
 
 import DemoBlock from '../components/demo-block'
 import TableBlock from '../components/table-block'

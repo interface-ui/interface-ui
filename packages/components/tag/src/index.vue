@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { tagProps } from "../src/tag"
-import {UseTag} from '../../../_hooks'
+import {UseTag} from '../../../hooks'
 
 const props = defineProps(tagProps)
 const emits = defineEmits<{

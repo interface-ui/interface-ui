@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { ref, toRefs } from "vue"
-import { buttonProps } from "../src/button"
-import { UseButton } from "../../../_hooks"
-import FnRipple from "../../ripple"
+import { ref, toRefs } from 'vue'
+import { buttonProps } from '../src/button'
+import { UseButton } from '../../../hooks'
+import FnRipple from '../../ripple'
 const props = defineProps(buttonProps)
 const emits = defineEmits<{
-  (e: "click", event: MouseEvent): void
+  (e: 'click', event: MouseEvent): void
 }>()
 
 const { classList, styleList } = UseButton(props)
@@ -25,7 +25,7 @@ const handleClick = (event: MouseEvent) => {
     return
   }
 
-  emits("click", event)
+  emits('click', event)
 }
 
 defineExpose({
@@ -35,7 +35,7 @@ defineExpose({
 
 <script lang="ts">
 export default {
-  name: "FnButton",
+  name: 'FnButton',
 }
 </script>
 
@@ -43,7 +43,7 @@ export default {
   <button
     ref="buttonEl"
     :type="nativeType"
-    :class="[...classList, 'fn-rippleBase-root']"
+    class="fn-rippleBase-root" :class="[...classList]"
     :style="styleList"
     @click="handleClick"
   >
@@ -53,6 +53,6 @@ export default {
     <span>
       <slot />
     </span>
-    <fn-ripple v-if="props.enableRipple && !props.disabled" />
+    <FnRipple v-if="props.enableRipple && !props.disabled" />
   </button>
 </template>

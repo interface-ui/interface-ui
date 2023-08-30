@@ -62,7 +62,7 @@ $ yarn add fusion-ui-vue
 │
 ├─ packages                 # Component library code
 │  ├─ components            # All components in the component library
-│  ├─ _hooks                # _hooks
+│  ├─ hooks                 # hooks
 │  ├─ constans              # constans
 │  ├─ styles                # styles
 │  ├─ utils                 # utils

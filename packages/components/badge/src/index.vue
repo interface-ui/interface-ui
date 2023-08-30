@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { UseBadge } from '../../../_hooks'
+import { UseBadge } from '../../../hooks'
 import { badgeProps } from './badge'
 const props = defineProps(badgeProps)
 const { classList, styleList } = UseBadge(props)

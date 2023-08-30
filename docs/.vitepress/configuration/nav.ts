@@ -1,4 +1,4 @@
-import { version } from '../../../packages/package.json'
+import { version } from '../../../package.json'
 import { enComponents, zhComponents } from './components'
 import { enGuides, zhGuides } from './guides'
 

@@ -7,8 +7,9 @@
 
 ## 2. 注册组件
 
+-  将你的组件注册到```packages/index  .ts```中
+
 ```main.ts：``` 
--  将你的组件注册到```packages/index.ts```中
 
 -  导入```packages/components```下的组件样式
 

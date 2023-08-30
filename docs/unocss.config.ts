@@ -45,4 +45,4 @@ export default defineConfig({
       'overview_body_title': 'mb-2 flex items-center gap-2 !text-lg font-bold',
     },
   ],
-})
+}) as any

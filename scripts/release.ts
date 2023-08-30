@@ -3,7 +3,6 @@
 import consola from 'consola'
 import chalk from 'chalk'
 import { execCommand, getCurrentGitBranch, hasGitTag } from './git'
-import { updatePkgVersion } from './update-version'
 
 async function main() {
   try {
@@ -11,15 +10,13 @@ async function main() {
     const currentBranch = await getCurrentGitBranch()
     const hasVersion = await hasGitTag(version)
 
-    if (currentBranch !== 'main')
+    if (currentBranch !== 'master')
       return consola.error(`Branch ${currentBranch} can not release!`)
 
     if (hasVersion)
       return consola.error(`Version ${version} already exists!`)
 
     await excuteRelease(version, notes)
-
-    await updatePkgVersion(version)
 
     consola.success(chalk.green('release success!'))
   }

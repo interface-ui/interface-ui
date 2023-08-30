@@ -1,7 +1,7 @@
 import type { ExtractPropTypes } from 'vue'
 
 export const iconProps = {
-  name: {
+  icon: {
     type: String,
     required: true,
   },

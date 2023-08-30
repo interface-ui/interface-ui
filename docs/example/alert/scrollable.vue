@@ -3,7 +3,7 @@
     <fn-alert
       state="info"
       scrollable
-      duration="10"
+      :duration="10"
       description="By default, scrolling to the left is enabled using the 'scrollable' attribute, and the duration of the scrollbar can also be defined through the 'duration' attribute."
     />
 
@@ -11,7 +11,7 @@
       state="success"
       fixed-tip="Message："
       scrollable
-      duration="8"
+      :duration="8"
       description="By default, scrolling to the left is enabled using the 'scrollable' attribute, and the duration of the scrollbar can also be defined through the 'duration' attribute."
       closable
     />
@@ -33,7 +33,7 @@
       scrollable
       direction="top"
       title="This is a title"
-      duration="5"
+      :duration="5"
       description="By default, scrolling to the left is enabled using the 'scrollable' attribute, and the duration of the scrollbar can also be defined through the 'duration' attribute."
       closable
     >

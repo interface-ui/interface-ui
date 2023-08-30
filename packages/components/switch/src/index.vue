@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { nextTick } from 'vue'
 import { UPDATE_MODEL_EVENT } from '../../../constans/event'
-import { useSwitch, useSwitchInner } from '../../../_hooks'
+import { useSwitch, useSwitchInner } from '../../../hooks'
+import FnIcon from '../../icon'
 import { switchEmits, switchProps } from '../src/switch'
 
 const props = defineProps(switchProps)
@@ -38,10 +39,10 @@ const handleChange = (event: MouseEvent) => {
       <!-- icon -->
       <div v-show="props.checkedIcon || props.unCheckedIcon" class="fn-switch__core">
         <span v-show="props.modelValue" class="icon">
-          <fn-icon :name="props.checkedIcon" :color="props.checkedIconColor" size="13" />
+          <FnIcon :icon="props.checkedIcon" :color="props.checkedIconColor" size="13" />
         </span>
         <span v-show="!props.modelValue" class="icon">
-          <fn-icon :name="props.unCheckedIcon" :color="props.unCheckedIconColor" size="13" />
+          <FnIcon :icon="props.unCheckedIcon" :color="props.unCheckedIconColor" size="13" />
         </span>
       </div>
       <div class="fn-switch__button" :class="classList" />

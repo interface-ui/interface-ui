@@ -6,7 +6,7 @@ import {
   iconSize,
   iconType,
 } from '../src/checkbox'
-import { UseCheckbox } from '../../../_hooks'
+import { UseCheckbox } from '../../../hooks'
 import FnRipple from '../../ripple'
 const props = defineProps(checkboxProps)
 const emits = defineEmits<{ (e: 'update:modelValue', v: boolean): void }>()
@@ -41,7 +41,7 @@ export default {
     >
       <fn-icon
         :color="props.color"
-        :name="iconType[status]"
+        :icon="iconType[status]"
         :class="classList.icon"
         :size="iconSize[props.size]"
       />

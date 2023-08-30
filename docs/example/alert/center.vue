@@ -1,7 +1,5 @@
 <script lang="ts" setup>
-const handleClose = (evt: MouseEvent) => {
-  alert('close')
-}
+
 </script>
 
 <template>

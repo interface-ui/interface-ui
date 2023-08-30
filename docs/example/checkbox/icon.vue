@@ -4,32 +4,32 @@
       <fn-checkbox color="#6366f1">
         <template #icon="{ icon }">
           <fn-icon
+            v-show="icon.checked"
             :size="icon.size"
             :color="icon.color"
-            name="material-symbols:star"
-            v-show="icon.checked"
+            icon="material-symbols:star"
           />
           <fn-icon
+            v-show="!icon.checked"
             :size="icon.size"
             :color="icon.color"
-            name="material-symbols:star-outline"
-            v-show="!icon.checked"
+            icon="material-symbols:star-outline"
           />
         </template>
       </fn-checkbox>
       <fn-checkbox color="#f59e0b">
         <template #icon="{ icon }">
           <fn-icon
+            v-show="icon.checked"
             :size="icon.size"
             :color="icon.color"
-            name="material-symbols:bedtime"
-            v-show="icon.checked"
+            icon="material-symbols:bedtime"
           />
           <fn-icon
+            v-show="!icon.checked"
             :size="icon.size"
             :color="icon.color"
-            name="material-symbols:bedtime-outline"
-            v-show="!icon.checked"
+            icon="material-symbols:bedtime-outline"
           />
         </template>
       </fn-checkbox>

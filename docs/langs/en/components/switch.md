@@ -16,7 +16,7 @@ Indicates the switching between two opposing states
 
 # Basic usage
 
-Bind the 'v model' to a variable of type 'Boolean' to use it.
+Bind the ```v-model``` to a variable of type ```Boolean``` to use it.
 
 <demo src="../../../example/switch/base.vue"></demo>
 
@@ -36,7 +36,7 @@ The ```color``` attribute can set the color of the switch.
 
 # Show custom icons
 
-Use the ```checked-icon``` and ```un-checked-icon```` properties to add icons. ```checkedIconColor``` and ```unCheckedIconColor``` can set the color of the icon
+Use the ```checked-icon``` and ```un-checked-icon``` properties to add icons. ```checkedIconColor``` and ```unCheckedIconColor``` can set the color of the icon
 
 <demo src="../../../example/switch/icon.vue"></demo>
 

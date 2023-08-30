@@ -3,7 +3,7 @@ import Vue from '@vitejs/plugin-vue'
 import VueJsx from '@vitejs/plugin-vue-jsx'
 
 export default defineConfig({
-  plugins: [Vue(), VueJsx()],
+  plugins: [Vue() as any, VueJsx() as any],
   optimizeDeps: {
     disabled: true,
   },

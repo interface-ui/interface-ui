@@ -65,12 +65,12 @@ app.use(fusionUi).mount('#app')
 │
 ├─ docs                     # 组件库文档
 │  ├─ .vitepress            # 文档配置
-│      ├─ components       # 组件库文档组件
-│      ├─ configuration    # 文档页面结构
-│      ├─ dist             # 文档打包后的文件
-│      ├─ plugins          # 文档插件
-│      ├─ theme            # 文档主题
-│      ├─ config.ts        # VitePress 配置
+│      ├─ components        # 组件库文档组件
+│      ├─ configuration     # 文档页面结构
+│      ├─ dist              # 文档打包后的文件
+│      ├─ plugins           # 文档插件
+│      ├─ theme             # 文档主题
+│      ├─ config.ts         # VitePress 配置
 │  ├─ examples              # 组件库示例代码
 │  ├─ langs                 # 文档多语言
 │  ├─ components.d          # 文档组件类型声明
@@ -80,12 +80,12 @@ app.use(fusionUi).mount('#app')
 │
 ├─ packages                 # 组件库代码
 │  ├─ components            # 组件库全部组件
-│  ├─ _hooks                # 组件库全部组件
+│  ├─ hooks                 # 组件库hooks
 │  ├─ constans              # 常量
 │  ├─ styles                # 通用样式
 │  ├─ utils                 # 通用工具
 │
-│─ playground              # 组件库演练场
+│─ playground               # 组件测试场
 │
 ├─ scripts                  # 脚本
 ├─ .gitignore               # git 忽略

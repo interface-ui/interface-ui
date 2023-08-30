@@ -82,7 +82,7 @@ const handleChange = (event: Event) => {
       :value="modelValue"
       :type="inputType"
       :class="[disabled && 'disabled']"
-      :placeholder="placeholder"
+      placeholder="placeholder"
       :readonly="readonly"
       :maxlength="maxLength"
       @input="handleInput"
@@ -110,7 +110,7 @@ const handleChange = (event: Event) => {
     <textarea
       :value="modelValue"
       :readonly="readonly"
-      :placeholder="placeholder"
+      placeholder="placeholder"
       :class="[disabled && 'disabled']"
       @input="handleInput"
       @focus="handleFocus"

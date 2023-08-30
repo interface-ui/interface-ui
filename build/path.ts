@@ -10,4 +10,4 @@ export const pluginsRoot = resolve(projectRoot, 'plugins')
 export const stylesRoot = resolve(projectRoot, 'styles')
 export const utilsRoot = resolve(projectRoot, 'utils')
 
-export const buildOutput = resolve(projectPackages, 'dist')
+export const buildOutput = resolve(projectPackages, '../packages/fusion-ui/dist')

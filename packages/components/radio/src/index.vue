@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 import { UPDATE_MODEL_EVENT } from '../../../constans/event'
 import { radioEmits, radioProps } from '../src/radio'
-import { useRadio, useRadioGroup } from '../../../_hooks'
+import { useRadio, useRadioGroup } from '../../../hooks'
 const props = defineProps(radioProps)
 
 const emit = defineEmits(radioEmits)
