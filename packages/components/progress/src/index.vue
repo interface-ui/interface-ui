@@ -1,13 +1,16 @@
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { UseProgress } from '../../../hooks'
+import { UseProgress } from '@fusion-ui/hooks'
 import { progressProps } from '../src/progress'
 import FnIcon from '../../icon'
 const props = defineProps(progressProps)
 const progerssValue = computed(() => {
-  if (typeof props.percentage !== 'number')
-    return 0
-  return props.percentage > 100 ? 100 : props.percentage < 0 ? 0 : props.percentage
+  if (typeof props.percentage !== 'number') return 0
+  return props.percentage > 100
+    ? 100
+    : props.percentage < 0
+    ? 0
+    : props.percentage
 })
 
 const circleSize = props.width || 120
@@ -28,10 +31,10 @@ const circumference = 2 * Math.PI * radius.value
 const cirCleprogress = computed(() => {
   if (typeof props.percentage !== 'number') {
     return 0
-  }
-  else {
-    const value = props.percentage > 100 ? 100 : props.percentage < 0 ? 0 : props.percentage
-    return (1 - (Number(value)) / 100) * circumference
+  } else {
+    const value =
+      props.percentage > 100 ? 100 : props.percentage < 0 ? 0 : props.percentage
+    return (1 - Number(value) / 100) * circumference
   }
 })
 
@@ -43,8 +46,7 @@ const status = new Map([
 ])
 
 const isKnown = computed((): string => {
-  if (props.intermediate)
-    return 'bar-intermediate'
+  if (props.intermediate) return 'bar-intermediate'
   return ''
 })
 
@@ -52,8 +54,7 @@ const isStriped = computed((): string => {
   let stripedClass = ''
   if (props.striped) {
     stripedClass += 'fn-progress-bar-striped '
-    if (props.stripedFlow)
-      stripedClass += 'fn-progress-bar-is-flow'
+    if (props.stripedFlow) stripedClass += 'fn-progress-bar-is-flow'
   }
   return stripedClass
 })
@@ -66,13 +67,11 @@ const statusColor = new Map([
 ])
 
 const getIcon = computed(() => {
-  if (!props.status)
-    return ''
+  if (!props.status) return ''
   return status.get(props.status)
 })
 const getIconColor = computed(() => {
-  if (!props.status)
-    return ''
+  if (!props.status) return ''
   return statusColor.get(props.status)
 })
 const { styleList, styleListCircle } = UseProgress(props)
@@ -80,7 +79,11 @@ const { styleList, styleListCircle } = UseProgress(props)
 
 <template>
   <!-- line -->
-  <div v-if="props.type === 'line'" :class="`${name} ${name}-line`" :style="styleList">
+  <div
+    v-if="props.type === 'line'"
+    :class="`${name} ${name}-line`"
+    :style="styleList"
+  >
     <!-- text-inner -->
     <div :class="`${name}-bar-out`">
       <div :class="[`${name}-bar ${isKnown} ${isStriped}`]" />
@@ -91,19 +94,29 @@ const { styleList, styleListCircle } = UseProgress(props)
 
     <!-- text-out -->
     <div v-show="!props.textInside" :class="`${name}-text`">
-      <span v-show="!props.status && !props.intermediate" :class="`${name}-text-out`">
+      <span
+        v-show="!props.status && !props.intermediate"
+        :class="`${name}-text-out`"
+      >
         {{ progerssValue }}%
       </span>
 
-      <span v-show="props.status" style="margin-left: 5px;">
+      <span v-show="props.status" style="margin-left: 5px">
         <FnIcon :icon="getIcon" :color="getIconColor" />
       </span>
     </div>
   </div>
 
   <!-- circle -->
-  <div v-if="props.type === 'circle'" class="fn-progress circle-progress" :style="styleListCircle">
-    <div class="circle-content" :style="`width:${circleSize}px;height: ${circleSize}px;`">
+  <div
+    v-if="props.type === 'circle'"
+    class="fn-progress circle-progress"
+    :style="styleListCircle"
+  >
+    <div
+      class="circle-content"
+      :style="`width:${circleSize}px;height: ${circleSize}px;`"
+    >
       <svg width="circleSize" :height="circleSize" class="circle">
         <circle
           :r="radius"
@@ -125,13 +138,14 @@ const { styleList, styleListCircle } = UseProgress(props)
           :stroke-dashoffset="cirCleprogress"
         />
       </svg>
-      <span class="count-num" :style="[{ 'font-size': `${circleSize * .3}px` }]">
+      <span
+        class="count-num"
+        :style="[{ 'font-size': `${circleSize * 0.3}px` }]"
+      >
         <span v-if="$slots.default">
           <slot />
         </span>
-        <span v-else>
-          {{ props.percentage }}%
-        </span>
+        <span v-else> {{ props.percentage }}% </span>
       </span>
     </div>
   </div>

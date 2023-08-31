@@ -36,7 +36,7 @@
   "scripts": {
     "docs:dev": "pnpm -C docs run dev",
     "docs:build": "pnpm run build && pnpm -C docs run build",
-    "build": "rimraf dist  && gulp --require @esbuild-kit/cjs-loader -f gulpfile.ts",
+    "build": "rimraf dist && vue-tsc && gulp --require @esbuild-kit/cjs-loader -f gulpfile.ts",
     "test": "vitest",
     "deploy": "pnpm run docs:build",
     "lint": "eslint .",

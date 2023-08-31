@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, toRefs } from 'vue'
+import { UseButton } from '@fusion-ui/hooks'
 import { buttonProps } from '../src/button'
-import { UseButton } from '../../../hooks'
 import FnRipple from '../../ripple'
 const props = defineProps(buttonProps)
 const emits = defineEmits<{
@@ -43,7 +43,8 @@ export default {
   <button
     ref="buttonEl"
     :type="nativeType"
-    class="fn-rippleBase-root" :class="[...classList]"
+    class="fn-rippleBase-root"
+    :class="[...classList]"
     :style="styleList"
     @click="handleClick"
   >

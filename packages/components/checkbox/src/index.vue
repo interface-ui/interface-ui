@@ -1,12 +1,8 @@
 <script lang="ts" setup>
 import { computed, ref, watchEffect } from 'vue'
+import { UseCheckbox } from '@fusion-ui/hooks'
 import type { CheckboxStatus } from '../src/checkbox'
-import {
-  checkboxProps,
-  iconSize,
-  iconType,
-} from '../src/checkbox'
-import { UseCheckbox } from '../../../hooks'
+import { checkboxProps, iconSize, iconType } from '../src/checkbox'
 import FnRipple from '../../ripple'
 const props = defineProps(checkboxProps)
 const emits = defineEmits<{ (e: 'update:modelValue', v: boolean): void }>()
@@ -15,7 +11,8 @@ const { classList, styleList } = UseCheckbox(props)
 
 const checked = ref<boolean>(props.modelValue ?? false)
 const status = computed<CheckboxStatus>(() =>
-  checked.value ? 'checked' : 'blank',
+  // eslint-disable-next-line @typescript-eslint/comma-dangle
+  checked.value ? 'checked' : 'blank'
 )
 watchEffect(() => {
   checked.value = props.modelValue
@@ -45,8 +42,10 @@ export default {
         :class="classList.icon"
         :size="iconSize[props.size]"
       />
+      {{ checked }}
     </slot>
-    <input type="checkbox" v-bind="$attrs" :class="classList.input">
+    <!-- eslint-disable vue/html-self-closing -->
+    <input type="checkbox" v-bind="$attrs" :class="classList.input" />
     <FnRipple :color="props.color" center />
   </span>
 </template>
