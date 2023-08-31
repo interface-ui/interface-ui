@@ -101,12 +101,17 @@ app.use(fusionUi).mount('#app')
 ```
 
 ## 启动
-  - 进入根目录
+
+  - 进入根目录安装依赖
 
   ```
     pnpm i
   ```
-
+  - 生成 ```pakages/fusion-ui/dist```
+  
+  ```
+    pnpm run build
+  ```
   - 根目录启动组件库
   ```
     pnpm run docs:dev

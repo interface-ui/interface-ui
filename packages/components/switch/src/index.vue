@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { nextTick } from 'vue'
-import { UPDATE_MODEL_EVENT } from '../../../constans/event'
 import { useSwitch, useSwitchInner } from '@fusion-ui/hooks'
+import { UPDATE_MODEL_EVENT } from '../../../constans/event'
 import FnIcon from '../../icon'
 import { switchEmits, switchProps } from '../src/switch'
 
@@ -10,7 +10,8 @@ const emit = defineEmits(switchEmits)
 const { styleList, classList } = useSwitchInner(props)
 const { fnClassList } = useSwitch(props)
 const handleChange = (event: MouseEvent) => {
-  if (props.disabled) return
+  if (props.disabled)
+    return
   emit(UPDATE_MODEL_EVENT, !props.modelValue as any)
   nextTick(() => {
     emit('change', props.modelValue as any)

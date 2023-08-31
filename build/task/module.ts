@@ -18,12 +18,13 @@ export async function buildModule() {
       onlyFiles: true,
     }),
   )
+  consola.info('🐮', input)
   const bundle = await rollup({
     input,
     plugins: [
       vue({
         isProduction: false,
-      }),
+      }) as any,
       nodeResolve({
         extensions: ['.mjs', '.js', '.json', '.ts'],
       }),

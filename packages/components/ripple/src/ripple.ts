@@ -1,6 +1,6 @@
-import { ExtractPropTypes } from 'vue'
+import type { ExtractPropTypes } from 'vue'
 
-export type RippleStyle = { x: number; y: number; size: number }
+export interface RippleStyle { x: number; y: number; size: number }
 
 export const rippleProps = {
   color: {

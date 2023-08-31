@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { computed, ref } from 'vue'
-import { FnIcon } from '../../icon'
 import { UseAlert } from '@fusion-ui/hooks'
+import { FnIcon } from '../../icon'
 import { alertEmits, alertProps } from './alert'
 const props = defineProps(alertProps)
 const emit = defineEmits(alertEmits)

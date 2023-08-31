@@ -1,15 +1,8 @@
 {
-  "name": "fusion-ui-vue2",
+  "name": "fusion-ui",
   "version": "1.1.3",
   "packageManager": "pnpm@7.5.2",
-  "description": "A Component Library for Vue 3",
-  "author": "tsinghua-lau",
   "license": "MIT",
-  "homepage": "https://tsinghua-lau.github.io/fusion-ui/",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tsinghua-lau/fusion-ui.git"
-  },
   "keywords": [
     "fusion-ui-vue",
     "vue",
@@ -22,21 +15,12 @@
     "example",
     "docs"
   ],
-  "sideEffects": [
-    "dist/**/*.css",
-    "*.css"
-  ],
-  "main": "dist/lib/components/index.js",
-  "module": "dist/es/components/index.mjs",
-  "types": "dist/types/packages/index.d.ts",
-  "style": "dist/styles/index.css",
-  "files": [
-    "dist"
-  ],
+
   "scripts": {
     "docs:dev": "pnpm -C docs run dev",
+    "play:dev": "pnpm -C playground run dev",
     "docs:build": "pnpm run build && pnpm -C docs run build",
-    "build": "rimraf dist && vue-tsc && gulp --require @esbuild-kit/cjs-loader -f gulpfile.ts",
+    "build": "rimraf dist && gulp --require @esbuild-kit/cjs-loader -f gulpfile.ts",
     "test": "vitest",
     "deploy": "pnpm run docs:build",
     "lint": "eslint .",

@@ -2,7 +2,7 @@ import { h, onMounted } from 'vue'
 import theme from 'vitepress/theme'
 
 // 导入本地源码样式--测试
-import '../../../packages/fusion-ui/dist/styles/index.css' // 全部样式
+import 'fusion-ui-vue/dist/styles/index.css' // 全部样式
 import '@fusion-ui/components/button/src/index.less'
 // import '../../../packages/components/button/src/index.less' // 单文件样式
 

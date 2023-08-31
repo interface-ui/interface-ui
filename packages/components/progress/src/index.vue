@@ -5,12 +5,13 @@ import { progressProps } from '../src/progress'
 import FnIcon from '../../icon'
 const props = defineProps(progressProps)
 const progerssValue = computed(() => {
-  if (typeof props.percentage !== 'number') return 0
+  if (typeof props.percentage !== 'number')
+    return 0
   return props.percentage > 100
     ? 100
     : props.percentage < 0
-    ? 0
-    : props.percentage
+      ? 0
+      : props.percentage
 })
 
 const circleSize = props.width || 120
@@ -31,9 +32,10 @@ const circumference = 2 * Math.PI * radius.value
 const cirCleprogress = computed(() => {
   if (typeof props.percentage !== 'number') {
     return 0
-  } else {
-    const value =
-      props.percentage > 100 ? 100 : props.percentage < 0 ? 0 : props.percentage
+  }
+  else {
+    const value
+      = props.percentage > 100 ? 100 : props.percentage < 0 ? 0 : props.percentage
     return (1 - Number(value) / 100) * circumference
   }
 })
@@ -46,7 +48,8 @@ const status = new Map([
 ])
 
 const isKnown = computed((): string => {
-  if (props.intermediate) return 'bar-intermediate'
+  if (props.intermediate)
+    return 'bar-intermediate'
   return ''
 })
 
@@ -54,7 +57,8 @@ const isStriped = computed((): string => {
   let stripedClass = ''
   if (props.striped) {
     stripedClass += 'fn-progress-bar-striped '
-    if (props.stripedFlow) stripedClass += 'fn-progress-bar-is-flow'
+    if (props.stripedFlow)
+      stripedClass += 'fn-progress-bar-is-flow'
   }
   return stripedClass
 })
@@ -67,11 +71,13 @@ const statusColor = new Map([
 ])
 
 const getIcon = computed(() => {
-  if (!props.status) return ''
+  if (!props.status)
+    return ''
   return status.get(props.status)
 })
 const getIconColor = computed(() => {
-  if (!props.status) return ''
+  if (!props.status)
+    return ''
   return statusColor.get(props.status)
 })
 const { styleList, styleListCircle } = UseProgress(props)

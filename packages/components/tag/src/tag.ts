@@ -1,7 +1,7 @@
 import type { ExtractPropTypes, PropType } from 'vue'
 
-export type TagType = 'success' | 'info' | 'warning'|'danger'|'';
-export type SizeType = 'large' | 'small';
+export type TagType = 'success' | 'info' | 'warning' | 'danger' | ''
+export type SizeType = 'large' | 'small'
 
 export const tagProps = {
   type: {

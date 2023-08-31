@@ -1,3 +1,20 @@
+import FnButton from './button'
+import FnAlert from './alert'
+import FnIcon from './icon'
+import FnLink from './link'
+import FnMessage from './message'
+import FnDialog from './dialog'
+import FnInput from './input'
+import FnRadio from './radio'
+import FnCard from './card'
+import FnSwitch from './switch'
+import FnBadge from './badge'
+import FnProgress from './progress'
+import FnAvatar from './avatar'
+import FnAvatarGroup from './avatarGroup'
+import FnTag from './tag'
+import FnCheckbox from './checkbox'
+export * from './avatarGroup'
 export * from './button'
 export * from './alert'
 export * from './icon'
@@ -12,50 +29,32 @@ export * from './progress'
 export * from './card'
 export * from './tag'
 export * from './avatar'
-export {}
-// export * from './avatarGroup'
-// import FnButton from './button'
-// import FnAlert from './alert'
-// import FnIcon from './icon'
-// import FnLink from './link'
-// import FnMessage from './message'
-// import FnDialog from './dialog'
-// import FnInput from './input'
-// import FnRadio from './radio'
-// import FnCard from './card'
-// import FnSwitch from './switch'
-// import FnBadge from './badge'
-// import FnProgress from './progress'
-// import FnAvatar from './avatar'
-// import FnAvatarGroup from './avatarGroup'
-// import FnTag from './tag'
-// import FnCheckbox from './checkbox'
 
-// export const component = [
-//   FnButton,
-//   FnAlert,
-//   FnIcon,
-//   FnLink,
-//   FnMessage,
-//   FnDialog,
-//   FnInput,
-//   FnRadio,
-//   FnSwitch,
-//   FnBadge,
-//   FnProgress,
-//   FnCard,
-//   FnTag,
-//   FnAvatar,
-//   FnAvatarGroup,
-//   FnCheckbox,
-// ]
+export const component = [
+  FnButton,
+  FnAlert,
+  FnIcon,
+  FnLink,
+  FnMessage,
+  FnDialog,
+  FnInput,
+  FnRadio,
+  FnSwitch,
+  FnBadge,
+  FnProgress,
+  FnCard,
+  FnTag,
+  FnAvatar,
+  FnAvatarGroup,
+  FnCheckbox,
+]
 
-// const CK = {
-//   install(App: any) {
-//     component.forEach((item) => {
-//       App.component(item.name, item)
-//     })
-//   },
-// }
+const CK = {
+  install(App: any) {
+    component.forEach((item) => {
+      App.component(item.name, item)
+    })
+  },
+}
 
-// export default CK
+export default CK

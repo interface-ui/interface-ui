@@ -33,4 +33,4 @@ export default [
   FnAvatar,
   FnAvatarGroup,
   FnCheckbox,
-] as const
+] as any
