@@ -10,11 +10,9 @@ const props = defineProps(inputProps)
 
 const emit = defineEmits(inputEmits)
 
-const { modelValue, disabled, maxLength, clearable, type, placeholder } = toRefs(props)
+const { modelValue, disabled, maxLength, clearable, type } = toRefs(props)
 const inputRef = ref<HTMLElement>()
-const {
-  overlayInputStyle,
-} = useInput(props, inputRef)
+const { overlayInputStyle } = useInput(props, inputRef)
 
 const clear = () => {
   emit(UPDATE_MODEL_EVENT, '')
@@ -24,7 +22,9 @@ const readonly = computed(() => {
 })
 
 const showClear = computed(() => {
-  return !disabled.value && clearable.value && modelValue.value.toString().length > 0
+  return (
+    !disabled.value && clearable.value && modelValue.value.toString().length > 0
+  )
 })
 const showEye = computed(() => {
   return type.value === 'password' && modelValue.value.toString().length > 0
@@ -36,10 +36,8 @@ const inputType = ref(type.value)
 
 const changeEyeIcon = () => {
   inputType.value = inputType.value === 'password' ? 'text' : 'password'
-  if (inputType.value === 'password')
-    inintIcon.value = 'eye-slash'
-  else
-    inintIcon.value = 'eye'
+  if (inputType.value === 'password') inintIcon.value = 'eye-slash'
+  else inintIcon.value = 'eye'
 }
 
 /**
@@ -71,7 +69,13 @@ const handleChange = (event: Event) => {
 </script>
 
 <template>
-  <div v-if="type === 'text' || type === 'password' || type === 'number' " ref="inputRef" class="fn-input" :style="overlayInputStyle" :class="[disabled && 'input-disabled']">
+  <div
+    v-if="type === 'text' || type === 'password' || type === 'number'"
+    ref="inputRef"
+    class="fn-input"
+    :style="overlayInputStyle"
+    :class="[disabled && 'input-disabled']"
+  >
     <!-- 前部图标 -->
     <span v-if="prefixIcon" class="prefix-icon">
       <Icon :icon="prefixIcon" color="pink" />
@@ -88,7 +92,7 @@ const handleChange = (event: Event) => {
       @input="handleInput"
       @focus="handleFocus"
       @change="handleChange"
-    >
+    />
     <!-- 后部图标 -->
     <span v-if="suffixIcon" class="suffix-icon">
       <Icon :icon="suffixIcon" color="#4e80ee" />
@@ -96,17 +100,38 @@ const handleChange = (event: Event) => {
 
     <!-- 眼睛图标 -->
     <!-- //@ts-ignore -->
-    <i v-if="showEye" class="eye" @click="changeEyeIcon" v-html="getSvgIncon(inintIcon)" />
+    <i
+      v-if="showEye"
+      class="eye"
+      @click="changeEyeIcon"
+      v-html="getSvgIncon(inintIcon)"
+    />
 
     <!-- 清除图标 -->
     <span v-show="showClear" class="clear" @click="clear">
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
-        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        fill="currentColor"
+        class="bi bi-x-circle"
+        viewBox="0 0 16 16"
+      >
+        <path
+          d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+        />
+        <path
+          d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+        />
       </svg>
     </span>
   </div>
-  <div v-if="type === 'textarea'" class="fn-textarea" :class="[disabled && 'input-disabled']" :style="overlayInputStyle">
+  <div
+    v-if="type === 'textarea'"
+    class="fn-textarea"
+    :class="[disabled && 'input-disabled']"
+    :style="overlayInputStyle"
+  >
     <textarea
       :value="modelValue"
       :readonly="readonly"

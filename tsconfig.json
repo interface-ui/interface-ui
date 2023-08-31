@@ -1,14 +1,11 @@
 {
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "isolatedModules": true,
     "jsx": "preserve",
     "allowJs": true,
     "declaration": true,
     "baseUrl": "./",
-    "types": [
-      "node"
-    ]
+    "types": ["node"]
   },
 
   "exclude": [

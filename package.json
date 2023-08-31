@@ -20,7 +20,7 @@
     "docs:dev": "pnpm -C docs run dev",
     "play:dev": "pnpm -C playground run dev",
     "docs:build": "pnpm run build && pnpm -C docs run build",
-    "build": "rimraf dist && gulp --require @esbuild-kit/cjs-loader -f gulpfile.ts",
+    "build": "rimraf dist && vue-tsc --noEmit && gulp --require @esbuild-kit/cjs-loader -f gulpfile.ts",
     "test": "vitest",
     "deploy": "pnpm run docs:build",
     "lint": "eslint .",
