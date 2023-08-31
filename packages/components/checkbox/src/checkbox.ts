@@ -26,6 +26,7 @@ export const iconType: Record<CheckboxStatus, string> = {
   checked: 'ic:baseline-check-box',
   // indeterminate: 'ic:baseline-indeterminate-check-box',
 }
+
 export const iconSize: Record<CheckboxSize, string> = {
   small: '20',
   medium: '24',
