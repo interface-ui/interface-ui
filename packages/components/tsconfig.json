@@ -5,10 +5,9 @@
     "allowJs": true,
     "declaration": true,
     "declarationDir": ".",
+    "emitDeclarationOnly": true,
     "baseUrl": "../fusion-ui/dist/types",
-    "types": [
-      "node"
-    ]
+    "types": ["node"]
   },
 
   "exclude": [

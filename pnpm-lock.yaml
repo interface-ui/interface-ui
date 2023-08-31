@@ -196,6 +196,9 @@ importers:
 
   packages/components:
     dependencies:
+      csstype:
+        specifier: ^3.1.2
+        version: 3.1.2
       fusion-ui-iconify:
         specifier: ^1.0.35
         version: 1.0.35(less@3.13.1)(webpack@4.46.0)
@@ -212,10 +215,10 @@ importers:
         version: github.com/pnpm/types/e85ce6c0831cc56f7dd94c74eaba08101a50efdd
       '@vue/shared':
         specifier: ^3.2.47
-        version: 3.2.47
+        version: 3.3.4
       '@vueuse/core':
         specifier: ^9.1.1
-        version: 9.1.1(vue@3.3.4)
+        version: 9.13.0(vue@3.3.4)
       fusion-ui-iconify:
         specifier: ^1.0.21
         version: 1.0.35(less@3.13.1)(webpack@4.46.0)
@@ -2974,18 +2977,6 @@ packages:
       - '@vue/composition-api'
       - vue
 
-  /@vueuse/core@9.1.1(vue@3.3.4):
-    resolution: {integrity: sha512-QfuaNWRDMQcCUwXylCyYhPC3ScS9Tiiz4J0chdwr3vOemBwRToSywq8MP+ZegKYFnbETzRY8G/5zC+ca30wrRQ==}
-    dependencies:
-      '@types/web-bluetooth': 0.0.15
-      '@vueuse/metadata': 9.1.1
-      '@vueuse/shared': 9.1.1(vue@3.3.4)
-      vue-demi: 0.14.5(vue@3.3.4)
-    transitivePeerDependencies:
-      - '@vue/composition-api'
-      - vue
-    dev: false
-
   /@vueuse/core@9.13.0(vue@3.3.4):
     resolution: {integrity: sha512-pujnclbeHWxxPRqXWmdkKV5OX4Wk4YeK7wusHqRwU0Q7EFusHoqNA/aPhB6KCh9hEqJkLAJo7bb0Lh9b+OIVzw==}
     dependencies:
@@ -3010,15 +3001,6 @@ packages:
     transitivePeerDependencies:
       - '@vue/composition-api'
       - vue
-
-  /@vueuse/shared@9.1.1(vue@3.3.4):
-    resolution: {integrity: sha512-c+IfcOYmHiHqoEa3ED1Tbpue5GHmoUmTp8PtO4YbczthtY155Rt6DmWhjxMLXBF1Bcidagxljmp/7xtAzEHXLw==}
-    dependencies:
-      vue-demi: 0.14.5(vue@3.3.4)
-    transitivePeerDependencies:
-      - '@vue/composition-api'
-      - vue
-    dev: false
 
   /@vueuse/shared@9.13.0(vue@3.3.4):
     resolution: {integrity: sha512-UrnhU+Cnufu4S6JLCPZnkWh0WwZGUp72ktOF2DFptMlOs3TOdVv8xJN53zhHGARmVOsz5KqOls09+J1NR6sBKw==}

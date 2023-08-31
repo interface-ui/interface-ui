@@ -9,5 +9,8 @@
   "peerDependencies": {
     "fusion-ui-iconify": "^1.0.35",
     "vue": "^3.2.45"
+  },
+  "dependencies": {
+    "csstype": "^3.1.2"
   }
 }
