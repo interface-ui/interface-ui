@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { computed, ref } from 'vue'
 import { FnIcon } from '../../icon'
-import { UseAlert } from '../../../hooks'
+import { UseAlert } from '@fusion-ui/hooks'
 import { alertEmits, alertProps } from './alert'
 const props = defineProps(alertProps)
 const emit = defineEmits(alertEmits)
@@ -28,7 +28,8 @@ const box = ref<HTMLElement | null>(null)
         <div class="scroll-area">
           <div :class="isScroll">
             <div
-              ref="box" class="box"
+              ref="box"
+              class="box"
               :style="props.center ? 'text-align:center;' : ''"
             >
               <div v-if="props.title" class="title">

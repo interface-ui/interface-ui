@@ -5,7 +5,7 @@
   "sideEffects": false,
   "main": "index.ts",
   "module": "index.ts",
-  "types": "./dist/types/packages/components/index.d.ts",
+  "types": "index.d.ts",
   "peerDependencies": {
     "vue": "^3.2.45"
   }

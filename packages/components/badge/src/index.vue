@@ -1,18 +1,17 @@
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { UseBadge } from '../../../hooks'
+import { UseBadge } from '@fusion-ui/hooks'
 import { badgeProps } from './badge'
 const props = defineProps(badgeProps)
 const { classList, styleList } = UseBadge(props)
 
 const supValue = computed<string>(() => {
-  if (props.dot)
-    return ''
+  if (props.dot) return ''
   // 如果大于显示最大值+，否则显示当前值
   const displayValue = Number(props.max)
-    ? (
-        Number(props.max) < Number(props.value) ? `${props.max}+` : props.value
-      )
+    ? Number(props.max) < Number(props.value)
+      ? `${props.max}+`
+      : props.value
     : props.value
 
   return `${displayValue}`
