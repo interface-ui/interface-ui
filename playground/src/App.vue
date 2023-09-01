@@ -30,6 +30,10 @@ const value1 = ref(10)
   <!-- -------------------新组建开发调试------------------- -->
 
   <div class="content">
+    <fnAvatar
+      alt="Remy Sharp"
+      src="https://mui.com/static/images/avatar/1.jpg"
+    />
     <fn-checkbox></fn-checkbox>
     <fn-progress :percentage="value1" />
     <FnSwtich
