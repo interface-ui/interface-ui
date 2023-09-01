@@ -41,14 +41,14 @@ const handleChange = (event: MouseEvent) => {
         class="fn-switch__core"
       >
         <span v-show="props.modelValue" class="icon">
-          <FnIcon
+          <fn-icon
             :icon="props.checkedIcon"
             :color="props.checkedIconColor"
             size="13"
           />
         </span>
         <span v-show="!props.modelValue" class="icon">
-          <FnIcon
+          <fn-icon
             :icon="props.unCheckedIcon"
             :color="props.unCheckedIconColor"
             size="13"

@@ -1,23 +1,27 @@
 <script setup lang="ts">
 import { computed } from 'vue'
+import { useRadio, useRadioGroup } from '@fusion-ui/hooks'
 import { UPDATE_MODEL_EVENT } from '../../../constans/event'
 import { radioEmits, radioProps } from '../src/radio'
-import { useRadio, useRadioGroup } from '@fusion-ui/hooks'
 const props = defineProps(radioProps)
 
 const emit = defineEmits(radioEmits)
 const { classList, styleList } = useRadio(props)
 const { classList: classListGrpup } = useRadioGroup(props)
 const handleInput = (event: MouseEvent) => {
-  if (props.disabled) return
+  if (props.disabled)
+    return
   emit(UPDATE_MODEL_EVENT, props.value as any)
-  if (props.modelValue !== props.value) emit('change', props.value as any)
+  if (props.modelValue !== props.value)
+    emit('change', props.value as any)
 }
 
 const handleGroupInput = (it: any) => {
-  if (it.disabled) return
+  if (it.disabled)
+    return
   emit(UPDATE_MODEL_EVENT, it.value)
-  if (props.modelValue !== it.value) emit('change', it.value as any)
+  if (props.modelValue !== it.value)
+    emit('change', it.value as any)
 }
 
 const isChecked = computed(() => {
@@ -27,7 +31,7 @@ const isChecked = computed(() => {
 
 <template>
   <div v-if="!props.optionList.length" :class="classList" @click="handleInput">
-    <input type="radio" class="fn-radio-inner" />
+    <input type="radio" class="fn-radio-inner">
     <span
       class="fn-radio-check"
       :style="styleList"
@@ -44,7 +48,7 @@ const isChecked = computed(() => {
         :class="[classList, it.disabled ? 'is-disabled' : '']"
         @click="handleGroupInput(it)"
       >
-        <input type="radio" class="fn-radio-inner" />
+        <input type="radio" class="fn-radio-inner">
         <span
           class="fn-radio-check"
           :style="styleList"

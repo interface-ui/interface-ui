@@ -15,12 +15,11 @@
     "example",
     "docs"
   ],
-
   "scripts": {
     "docs:dev": "pnpm -C docs run dev",
     "play:dev": "pnpm -C playground run dev",
     "docs:build": "pnpm run build && pnpm -C docs run build",
-    "build": "rimraf dist && vue-tsc --noEmit && gulp --require @esbuild-kit/cjs-loader -f gulpfile.ts",
+    "build": "rimraf dist && gulp --require @esbuild-kit/cjs-loader -f gulpfile.ts && vue-tsc",
     "test": "vitest",
     "deploy": "pnpm run docs:build",
     "lint": "eslint .",
@@ -38,7 +37,7 @@
     "@vueuse/core": "^9.1.1",
     "fusion-ui-vue": "workspace:^",
     "lodash-unified": "^1.0.3",
-    "vue": "^3.2.45"
+    "vue": "~3.2.45"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.35.3",

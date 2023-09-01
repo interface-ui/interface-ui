@@ -7,6 +7,6 @@
   "module": "index.ts",
   "types": "./dist/types/packages/hook/index.d.ts",
   "peerDependencies": {
-    "vue": "^3.2.45"
+    "vue": "~3.2.45"
   }
 }

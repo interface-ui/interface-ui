@@ -6,7 +6,8 @@ const props = defineProps(badgeProps)
 const { classList, styleList } = UseBadge(props)
 
 const supValue = computed<string>(() => {
-  if (props.dot) return ''
+  if (props.dot)
+    return ''
   // 如果大于显示最大值+，否则显示当前值
   const displayValue = Number(props.max)
     ? Number(props.max) < Number(props.value)

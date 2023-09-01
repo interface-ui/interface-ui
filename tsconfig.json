@@ -3,8 +3,10 @@
   "compilerOptions": {
     "jsx": "preserve",
     "allowJs": true,
-    "declaration": true,
     "baseUrl": "./",
+    "emitDeclarationOnly": true,
+    "declaration": true,
+    "declarationDir": "./packages/fusion-ui/dist/types",
     "types": ["node"]
   },
 

@@ -36,7 +36,8 @@ const inputType = ref(type.value)
 
 const changeEyeIcon = () => {
   inputType.value = inputType.value === 'password' ? 'text' : 'password'
-  if (inputType.value === 'password') inintIcon.value = 'eye-slash'
+  if (inputType.value === 'password')
+    inintIcon.value = 'eye-slash'
   else inintIcon.value = 'eye'
 }
 
@@ -78,7 +79,7 @@ const handleChange = (event: Event) => {
   >
     <!-- 前部图标 -->
     <span v-if="prefixIcon" class="prefix-icon">
-      <Icon :icon="prefixIcon" color="pink" />
+      <icon :icon="prefixIcon" color="pink" />
     </span>
 
     <!-- 输入框 -->
@@ -92,10 +93,10 @@ const handleChange = (event: Event) => {
       @input="handleInput"
       @focus="handleFocus"
       @change="handleChange"
-    />
+    >
     <!-- 后部图标 -->
     <span v-if="suffixIcon" class="suffix-icon">
-      <Icon :icon="suffixIcon" color="#4e80ee" />
+      <icon :icon="suffixIcon" color="#4e80ee" />
     </span>
 
     <!-- 眼睛图标 -->

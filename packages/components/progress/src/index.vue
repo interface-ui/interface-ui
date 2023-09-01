@@ -108,7 +108,7 @@ const { styleList, styleListCircle } = UseProgress(props)
       </span>
 
       <span v-show="props.status" style="margin-left: 5px">
-        <FnIcon :icon="getIcon" :color="getIconColor" />
+        <fn-icon :icon="getIcon" :color="getIconColor" />
       </span>
     </div>
   </div>

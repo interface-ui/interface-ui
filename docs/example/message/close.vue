@@ -3,7 +3,7 @@ import { FnButton } from 'fusion-ui-vue'
 </script>
 
 <template>
-  <FnButton @click="FnMessage({ message: 'Show Close Button', type: 'success', duration: 0, closeBtn: true })">
+  <fn-button @click="FnMessage({ message: 'Show Close Button', type: 'success', duration: 0, closeBtn: true })">
     Show Close Button
-  </FnButton>
+  </fn-button>
 </template>

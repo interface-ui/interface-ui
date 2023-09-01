@@ -1,9 +1,10 @@
-import { computed, ComputedRef, CSSProperties } from 'vue'
-import { CheckboxProps } from '../../components/checkbox/src/checkbox'
+import type { CSSProperties, ComputedRef } from 'vue'
+import { computed } from 'vue'
 import { TinyColor } from '@ctrl/tinycolor'
+import type { CheckboxProps } from '../../components/checkbox/src/checkbox'
 
 /** class 类名集合类型 */
-export type ClassList<T = (string | Record<string, unknown>)[]> = {
+export interface ClassList<T = (string | Record<string, unknown>)[]> {
   root: T
   input: T
   icon: T

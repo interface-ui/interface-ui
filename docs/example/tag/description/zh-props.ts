@@ -4,14 +4,14 @@ const list: PropTableItem[] = [
     name: 'type',
     remark: '标签类型',
     type: 'Enum',
-    optional: ['success', 'info', 'warning','danger'],
+    optional: ['success', 'info', 'warning', 'danger'],
     default: '',
   },
   {
     name: 'size',
     remark: '标签尺寸',
     type: 'Enum',
-    optional: [ 'small', 'large'],
+    optional: ['small', 'large'],
     default: '',
   },
   {
