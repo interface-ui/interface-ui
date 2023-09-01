@@ -1,0 +1,11 @@
+{
+  "name": "@fusion-ui/theme",
+  "version": "0.0.1",
+  "description": "Fusion-Ui Theme",
+  "license": "MIT",
+  "main": "index.ts",
+  "module": "index.ts",
+  "dependencies": {
+    "@material/material-color-utilities": "^0.2.7"
+  }
+}

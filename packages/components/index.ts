@@ -29,6 +29,7 @@ export * from './progress'
 export * from './card'
 export * from './tag'
 export * from './avatar'
+export * from './checkbox'
 
 export const component = [
   FnButton,

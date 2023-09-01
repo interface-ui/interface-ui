@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import '@fusion-ui/theme'
+import { FnButton, FnCheckbox } from '@fusion-ui/components'
 import { ref } from 'vue'
 const button = ref('深色')
 
@@ -15,8 +17,8 @@ const changTheme = () => {
   }
 }
 
-const yyy = ref(true)
-const value1 = ref(10)
+// const yyy = ref(true)
+// const value1 = ref(10)
 </script>
 
 <template>
@@ -30,7 +32,8 @@ const value1 = ref(10)
   <!-- -------------------新组建开发调试------------------- -->
 
   <div class="content">
-    <fnAvatar
+    <fn-checkbox></fn-checkbox>
+    <!-- <fnAvatar
       alt="Remy Sharp"
       src="https://mui.com/static/images/avatar/1.jpg"
     />
@@ -121,7 +124,7 @@ const value1 = ref(10)
       closable
     >
       <template #fixedArea> Message: </template>
-    </fn-alert>
+    </fn-alert> -->
   </div>
 </template>
 
