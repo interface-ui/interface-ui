@@ -24,7 +24,7 @@
   "main": "dist/lib/components/index.js",
   "module": "dist/es/components/index.mjs",
   "style": "dist/styles/index.css",
-  "types": "dist/types/components/index.d.ts",
+  "types": "dist/types/packages/components/index.d.ts",
   "files": [
     "dist"
   ],
