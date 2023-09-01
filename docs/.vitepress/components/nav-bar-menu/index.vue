@@ -13,8 +13,8 @@ const langNav = computed(() => theme.value.nav[lang.value])
   <nav aria-labelledby="main-nav-aria-label" class="VPNavBarMenu">
     <span id="main-nav-aria-label" class="visually-hidden">Main Navigation</span>
     <template v-for="item in langNav" :key="item.text">
-      <VPNavBarMenuLink v-if="'link' in item" :item="item" />
-      <VPNavBarMenuGroup v-else :item="item" />
+      <v-p-nav-bar-menu-link v-if="'link' in item" :item="item" />
+      <v-p-nav-bar-menu-group v-else :item="item" />
     </template>
   </nav>
 </template>

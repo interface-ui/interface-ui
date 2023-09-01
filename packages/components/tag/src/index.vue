@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { tagProps } from '../src/tag'
 import { UseTag } from '@fusion-ui/hooks'
+import { tagProps } from '../src/tag'
 
 const props = defineProps(tagProps)
 const emits = defineEmits<{

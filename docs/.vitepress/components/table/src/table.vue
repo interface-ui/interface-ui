@@ -48,16 +48,16 @@ const tdClass = (v) => {
 <template>
   <div ref="bpTable" class="bp-table">
     <div :class="innerClass">
-      <TableHeader :header-list="columns" :width="_table_width" />
+      <table-header :header-list="columns" :width="_table_width" />
 
       <div class="bp-table-body-area" :style="bodyAreaStyle">
         <div class="scrollbar" />
 
         <table class="bp-table-body" :style="`width:${_table_width}px`">
-          <ColGroup :cols="columns" />
+          <col-group :cols="columns" />
 
           <tbody class="bp-table-body-tbody">
-            <TableEmpty v-if="isEmpty" :colspan="columns.length" />
+            <table-empty v-if="isEmpty" :colspan="columns.length" />
 
             <template v-else>
               <tr v-for="(item, index) in dataSource" :key="`bp-table-tbody-tr-${index}`">

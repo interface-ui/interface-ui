@@ -46,7 +46,7 @@ const box = ref<HTMLElement | null>(null)
           </div>
         </div>
         <div v-if="props.closable" class="close" @click="handClose">
-          <FnIcon icon="mdi:close" color="#bfc2c8" />
+          <fn-icon icon="mdi:close" color="#bfc2c8" />
         </div>
         <div class="slots" @click="handClose">
           <slot name="closeArea" />

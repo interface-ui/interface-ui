@@ -35,7 +35,6 @@ export const UseAlert = (prop: AlertProps): UseAlertReturn => {
 
   const boxElHeight = ref(0)
 
-
   /** 样式列表 */
   const styleList = computed((): CSSProperties => {
     const style: CSSProperties = {}

@@ -50,7 +50,7 @@ const teamMembers = [
           </h2>
         </div>
         <div p-10>
-          <VPTeamMembers size="small" :members="teamMembers" />
+          <v-p-team-members size="small" :members="teamMembers" />
         </div>
       </main>
     </div>

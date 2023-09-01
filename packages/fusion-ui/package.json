@@ -17,12 +17,10 @@
     "component",
     "library"
   ],
-
   "sideEffects": [
     "dist/**/*.css",
     "*.css"
   ],
-
   "main": "dist/lib/components/index.js",
   "module": "dist/es/components/index.mjs",
   "style": "dist/styles/index.css",
@@ -30,7 +28,6 @@
   "files": [
     "dist"
   ],
-
   "dependencies": {
     "@pnpm/types": "github:pnpm/types",
     "@vue/shared": "^3.2.47",
@@ -38,7 +35,6 @@
     "fusion-ui-iconify": "^1.0.21",
     "lodash-unified": "^1.0.3",
     "vite-plugin-progress": "^0.0.7",
-    "vue": "^3.2.45"
+    "vue": "~3.2.45"
   }
-
 }

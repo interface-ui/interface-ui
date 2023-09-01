@@ -52,6 +52,6 @@ export default {
       type="checkbox"
       :class="classList.input"
     />
-    <FnRipple :color="props.color" center />
+    <fn-ripple :color="props.color" center />
   </span>
 </template>

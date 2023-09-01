@@ -16,7 +16,7 @@ const thClass = (item) => {
 
 <template>
   <table class="bp-table-header" :style="`width:${width}px`">
-    <ColGroup :cols="headerList" />
+    <col-group :cols="headerList" />
 
     <thead class="bp-table-header-thead">
       <tr>
