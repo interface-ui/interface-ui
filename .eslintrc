@@ -8,6 +8,8 @@
     "no-console": ["error", { "allow": ["error"] }],
     "vue/component-name-in-template-casing": ["error", "kebab-case"],
     "comma-dangle": "off",
-    "@typescript-eslint/comma-dangle": "off"
+    "@typescript-eslint/comma-dangle": "off",
+    "brace-style": "off",
+    "@typescript-eslint/brace-style": "off"
   }
 }

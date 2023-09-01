@@ -5,6 +5,7 @@ import { UPDATE_MODEL_EVENT } from '@fusion-ui/constants'
 import type { CheckboxStatus } from '../src/checkbox'
 import { checkboxProps, iconSize, iconType } from '../src/checkbox'
 import FnRipple from '../../ripple'
+import FnIcon from '../../icon'
 const props = defineProps(checkboxProps)
 const emits = defineEmits<{ (e: 'update:modelValue', v: boolean): void }>()
 
