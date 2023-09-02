@@ -1,5 +1,5 @@
-import paletteCSS from '../css/palette.less'
-import type { Palette } from './theme'
+import paletteCSS from '../../css/palette.less'
+import type { Palette } from './palette'
 
 const match = paletteCSS.matchAll(
   /--\b(md|fn)\b-ref-palette-([a-z]+)(-variant)?([0-9]*): (#[0-9a-z]{6});/g
