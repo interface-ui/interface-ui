@@ -1,7 +1,11 @@
 import type { CSSProperties, ComputedRef } from 'vue'
 import { computed } from 'vue'
 import { TinyColor } from '@ctrl/tinycolor'
-import type { CheckboxProps } from '../../components/checkbox/src/checkbox'
+import jss from 'jss'
+import preset from 'jss-preset-default'
+import type { CheckboxProps } from '@fusion-ui/components/checkbox/src/checkbox'
+
+jss.setup(preset())
 
 /** class 类名集合类型 */
 export interface ClassList<T = (string | Record<string, unknown>)[]> {

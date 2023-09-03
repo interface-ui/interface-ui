@@ -1,6 +1,7 @@
+import type { ComponentSize } from '@fusion-ui/constants'
 import type { ExtractPropTypes, PropType } from 'vue'
 
-export type CheckboxSize = 'small' | 'medium' | 'large'
+export type CheckboxSize = ComponentSize
 export type CheckboxStatus = 'blank' | 'checked'
 
 export const checkboxProps = {
@@ -9,7 +10,6 @@ export const checkboxProps = {
   },
   color: {
     type: String,
-    default: '#3894ff',
   },
   size: {
     type: String as PropType<CheckboxSize>,
