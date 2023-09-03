@@ -1,7 +1,12 @@
-import './css/baseline.less'
-// import { createTheme } from './src/themeRelate'
+import theme from './src/themeRelate'
+import './styles/baseline.less'
 
-export { default as palette } from './src/palette'
+// Check if the user has dark mode turned on
+// const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+
+// Apply the theme to the body by updating custom properties for material tokens
+// applyTheme(dTheme, { target: document.body, dark: systemDark })
+export default theme
 
 // const curTheme = createTheme({
 //   palette: {

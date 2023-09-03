@@ -8,7 +8,9 @@
   "types": "index.d.ts",
   "peerDependencies": {
     "fusion-ui-iconify": "^1.0.35",
-    "vue": "~3.2.45"
+    "vue": "~3.2.45",
+    "jss": "^10.10.0",
+    "jss-preset-default": "^10.10.0"
   },
   "dependencies": {
     "csstype": "^3.1.2"

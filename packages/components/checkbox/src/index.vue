@@ -9,7 +9,10 @@ import FnIcon from '../../icon'
 const props = defineProps(checkboxProps)
 const emits = defineEmits<{ (e: 'update:modelValue', v: boolean): void }>()
 
-const { classList, styleList } = UseCheckbox(props)
+const classes = UseCheckbox()
+// eslint-disable-next-line no-console
+console.log(classes)
+
 const { modelValue } = props
 
 const getCheckedStatus = (checked: boolean): CheckboxStatus =>
@@ -34,15 +37,14 @@ export default {
 </script>
 
 <template>
-  <span :class="classList.root" :style="styleList">
+  <span class="fn-checkbox-icon-root" :class="classes['fn-checkbox-icon-root']">
     <slot
       :icon="{ checked, size: iconSize[props.size], color: props.color }"
       name="icon"
     >
       <fn-icon
-        :color="props.color"
+        class="fn-checkbox-icon"
         :icon="iconType[status]"
-        :class="classList.icon"
         :size="iconSize[props.size]"
       />
     </slot>
@@ -50,8 +52,8 @@ export default {
     <input
       v-bind="$attrs"
       v-model="checked"
+      class="fn-checkbox-input"
       type="checkbox"
-      :class="classList.input"
     />
     <fn-ripple :color="props.color" center />
   </span>

@@ -9,7 +9,6 @@ export const checkboxProps = {
   },
   color: {
     type: String,
-    default: '#3894ff',
   },
   size: {
     type: String as PropType<CheckboxSize>,
