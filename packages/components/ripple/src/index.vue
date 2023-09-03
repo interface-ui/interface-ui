@@ -1,28 +1,25 @@
 <script lang="ts" setup>
 import {
-  reactive,
-  watchEffect,
-  onUnmounted,
-  ref,
   getCurrentInstance,
   onMounted,
-  computed,
+  onUnmounted,
+  reactive,
+  ref,
+  watchEffect,
 } from 'vue'
-import { RippleStyle, rippleProps } from './ripple'
-import { addUnit } from '../../../utils/dom'
-import { TinyColor } from '@ctrl/tinycolor'
-const props = defineProps(rippleProps)
+import { addUnit } from '@fusion-ui/utils/dom'
+import type { RippleStyle } from './ripple'
+import { rippleProps } from './ripple'
 
+const props = defineProps(rippleProps)
 const ripplesArr = reactive<RippleStyle[]>([])
 const duration = ref<number>(600)
 const parent = getCurrentInstance()?.parent
 let bounce: NodeJS.Timeout | null = null
 let listener: EventListener | null = null
 
-const color = computed(() => new TinyColor(props.color).tint(70).toString())
-
 const addRipple = (event: MouseEvent) => {
-  const target = <HTMLElement>event.currentTarget
+  const target = event.currentTarget as HTMLElement
   const rect = target.getBoundingClientRect()
   const size = Math.max(target.clientWidth, target.clientHeight)
   const radius = size / 2
@@ -51,9 +48,8 @@ watchEffect(() => {
 })
 
 onMounted(() => {
-  if (parent) {
+  if (parent)
     listener = parent.proxy?.$el.addEventListener('mousedown', addRipple)
-  }
 })
 onUnmounted(() => {
   clear()
@@ -77,13 +73,13 @@ export default {
       v-for="(ripple, index) of ripplesArr"
       :key="`ripple_${index}`"
       :style="{
+        backgroundColor: props.color,
         top: addUnit(ripple.y),
         left: addUnit(ripple.x),
         width: addUnit(ripple.size),
         height: addUnit(ripple.size),
-        '--fn-ripple-color': color,
       }"
-      class="fn-ripple"
-    ></span>
+      class="fn-ripple pressed-state-layer"
+    />
   </span>
 </template>
