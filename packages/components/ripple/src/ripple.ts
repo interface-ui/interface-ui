@@ -10,7 +10,7 @@ export interface RippleStyle {
 export const rippleProps = {
   color: {
     type: String,
-    default: theme.palette.white,
+    default: theme.color.white,
   },
   center: {
     type: Boolean,
