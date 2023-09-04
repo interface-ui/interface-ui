@@ -6,6 +6,7 @@ import {
   themeFromSourceColor,
 } from '@material/material-color-utilities'
 import state from '../state'
+import color from '../color'
 import type FnTheme from './theme'
 import type { Palette } from './theme'
 
@@ -43,6 +44,7 @@ const theme: FnTheme = {
   palette: systemDark
     ? parseShceme(dynamicTheme.schemes.dark)
     : parseShceme(dynamicTheme.schemes.light),
+  color,
   state,
 }
 // eslint-disable-next-line no-console

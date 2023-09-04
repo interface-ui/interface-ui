@@ -1,4 +1,4 @@
-import stateCss from '../../styles/state.less'
+import stateCss from '../../styles/state.less?inline'
 import type { State } from './state'
 
 const match = stateCss.matchAll(
