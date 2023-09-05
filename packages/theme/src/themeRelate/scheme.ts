@@ -7,7 +7,7 @@ import {
 import type { Palette } from './theme'
 
 const dynamicTheme = themeFromSourceColor(argbFromHex('#3894ff'))
-const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+const systemDark = globalThis.window.matchMedia('(prefers-color-scheme: dark)').matches
 
 export const parseShceme = (scheme: Scheme) => {
   const palette: Palette = {} as any
