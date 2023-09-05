@@ -7,7 +7,7 @@ import '@fusion-ui/components/button/src/index.less'
 // import '../../../packages/components/button/src/index.less' // 单文件样式
 
 // 导入 npm 包
-import FusionUi from 'fusion-ui-vue'
+import FusionUi from '@fusion-ui/components'
 
 import DemoBlock from '../components/demo-block'
 import TableBlock from '../components/table-block'
