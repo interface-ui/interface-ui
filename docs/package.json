@@ -12,7 +12,6 @@
   ],
   "scripts": {
     "dev": "vitepress dev --port 3147 --host",
-    "build": "vitepress build",
     "serve": "vitepress serve"
   },
 
