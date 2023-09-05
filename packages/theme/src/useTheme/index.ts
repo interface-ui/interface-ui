@@ -33,7 +33,8 @@ const parseShceme = (scheme: Scheme) => {
 const useTheme = (source = '#3894ff'): FnTheme => {
   const dynamicTheme = themeFromSourceColor(argbFromHex(source))
   const theme = reactive<FnTheme>({ color, state } as FnTheme)
-
+  // eslint-disable-next-line no-console
+  console.log('useTheme')
   onBeforeMount(() => {
     const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches
     const { palette, styles } = systemDark
@@ -46,6 +47,8 @@ const useTheme = (source = '#3894ff'): FnTheme => {
       '@global': { ':root': styles },
     }
     jss.createStyleSheet(cssStyles).attach()
+    // eslint-disable-next-line no-console
+    console.log('useTheme - onBeforeMount')
   })
 
   return theme
