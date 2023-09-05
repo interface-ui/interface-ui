@@ -7,6 +7,7 @@ import '@fusion-ui/components/button/src/index.less' // 单文件样式
 
 // 注册本地组件
 import FusionUi from '@fusion-ui/components'
+import useTheme from '@fusion-ui/theme'
 
 import DemoBlock from '../components/demo-block'
 import TableBlock from '../components/table-block'
@@ -20,6 +21,7 @@ import './style/table-block.less'
 export default {
   ...theme,
   setup() {
+    useTheme()
     onMounted(() => {
       const html = document.documentElement
       const toggleTheme = () => {
