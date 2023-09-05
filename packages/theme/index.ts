@@ -1,5 +1,5 @@
 import theme from './src/themeRelate'
-import './styles/baseline.less?inline'
+import '@fusion-ui/theme/styles/baseline.less?inline'
 
 // Check if the user has dark mode turned on
 // const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches

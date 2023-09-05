@@ -10,6 +10,13 @@ const teamMembers = [
     links: [{ icon: 'github', link: 'https://github.com/tsinghua-lau' }],
   },
   {
+    avatar: 'https://www.github.com/sxiong5.png',
+    name: 'sxiong5',
+    title: 'An open source developer',
+    desc: 'Team member of FusionUi',
+    links: [{ icon: 'github', link: 'https://github.com/sxiong5' }],
+  },
+  {
     avatar: 'https://www.github.com/windlil.png',
     name: 'windlil',
     title: 'An open source developer',
