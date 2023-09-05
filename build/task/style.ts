@@ -4,10 +4,9 @@ import gulpLess from 'gulp-less'
 import gulpImportLess from 'gulp-import-less'
 import autoprefixer from 'gulp-autoprefixer'
 import cleanCSS from 'gulp-clean-css'
-import consola from 'consola'
 
 import { outputFileSync, readFileSync } from 'fs-extra'
-import { buildOutput, componentsComponents, componentsRoot, componentsStyles, stylesRoot } from '../path'
+import { buildOutput, componentsComponents, componentsStyles, stylesRoot } from '../path'
 
 const generatedCssInfoList: CssInfo[] = []
 
@@ -53,9 +52,6 @@ function generateIndexCss(cssInfoList: CssInfo[]) {
 }
 
 function genStyleEntry(cssInfo: CssInfo) {
-  consola.info('🔥', cssInfo.path)
-  consola.info('👌', componentsRoot)
-
   if (cssInfo.path.includes(componentsComponents)) {
     const noStyleComps = ['on-click-outside']
 
@@ -72,7 +68,6 @@ function genStyleEntry(cssInfo: CssInfo) {
     const importContent = (readFileSync(resolve(componentsComponents, compName, 'src/index.vue'), 'utf-8').match(importReg) || [])
       .filter(path => noStyleComps.every(comp => !path.includes(comp)))
       .reduce((prev, curr) => prev += curr.replace(importReg, 'import \'$1.css\'\n'), importCommon)
-      // consola.info('🚀🚀🚀🚀----------',`${compName}.css`)
     outputFileSync(resolve(buildOutput, 'styles', `${compName}.css`), importContent)
   }
 }

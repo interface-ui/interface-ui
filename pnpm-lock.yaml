@@ -293,8 +293,8 @@ importers:
         specifier: ^0.50.0
         version: 0.50.0(rollup@3.15.0)(vite@4.4.5)
       unplugin-vue-components:
-        specifier: ^0.24.1
-        version: 0.24.1(rollup@3.15.0)(vue@3.2.45)
+        specifier: ^0.24.0
+        version: 0.24.0(rollup@3.15.0)(vue@3.2.45)
       vite:
         specifier: ^4.4.5
         version: 4.4.5(@types/node@18.11.18)(less@3.13.1)
@@ -10179,39 +10179,10 @@ packages:
       '@rollup/pluginutils': 5.0.4(rollup@3.15.0)
       chokidar: 3.5.3
       debug: 4.3.4
-      fast-glob: 3.2.12
+      fast-glob: 3.3.1
       local-pkg: 0.4.3
       magic-string: 0.29.0
       minimatch: 6.2.0
-      resolve: 1.22.4
-      unplugin: 1.4.0
-      vue: 3.2.45
-    transitivePeerDependencies:
-      - rollup
-      - supports-color
-    dev: true
-
-  /unplugin-vue-components@0.24.1(rollup@3.15.0)(vue@3.2.45):
-    resolution: {integrity: sha512-T3A8HkZoIE1Cja95xNqolwza0yD5IVlgZZ1PVAGvVCx8xthmjsv38xWRCtHtwl+rvZyL9uif42SRkDGw9aCfMA==}
-    engines: {node: '>=14'}
-    peerDependencies:
-      '@babel/parser': ^7.15.8
-      '@nuxt/kit': ^3.2.2
-      vue: 2 || 3
-    peerDependenciesMeta:
-      '@babel/parser':
-        optional: true
-      '@nuxt/kit':
-        optional: true
-    dependencies:
-      '@antfu/utils': 0.7.6
-      '@rollup/pluginutils': 5.0.4(rollup@3.15.0)
-      chokidar: 3.5.3
-      debug: 4.3.4
-      fast-glob: 3.3.1
-      local-pkg: 0.4.3
-      magic-string: 0.30.3
-      minimatch: 7.4.6
       resolve: 1.22.4
       unplugin: 1.4.0
       vue: 3.2.45
