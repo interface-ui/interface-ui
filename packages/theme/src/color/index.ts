@@ -1,4 +1,4 @@
-import colorCSS from '../../styles/palette.less'
+import colorCSS from '../../styles/palette.less?inline'
 import type { Colors } from './color'
 
 const match = colorCSS.matchAll(
