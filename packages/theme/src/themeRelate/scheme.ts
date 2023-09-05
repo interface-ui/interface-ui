@@ -7,7 +7,15 @@ import {
 import type { Palette } from './theme'
 
 const dynamicTheme = themeFromSourceColor(argbFromHex('#3894ff'))
-const systemDark = globalThis.window.matchMedia('(prefers-color-scheme: dark)').matches
+
+let systemDark = true
+
+if (typeof window !== 'undefined') {
+  // browser code
+  systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+} else {
+  // server code TODPO
+}
 
 export const parseShceme = (scheme: Scheme) => {
   const palette: Palette = {} as any
