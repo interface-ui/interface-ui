@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import {
+  computed,
   getCurrentInstance,
   onMounted,
   onUnmounted,
@@ -8,6 +9,7 @@ import {
   watchEffect,
 } from 'vue'
 import { addUnit } from '@fusion-ui/utils/dom'
+import useTheme from '@fusion-ui/theme'
 import type { RippleStyle } from './ripple'
 import { rippleProps } from './ripple'
 
@@ -17,6 +19,7 @@ const duration = ref<number>(600)
 const parent = getCurrentInstance()?.parent
 let bounce: NodeJS.Timeout | null = null
 let listener: EventListener | null = null
+const theme = useTheme()
 
 const addRipple = (event: MouseEvent) => {
   const target = event.currentTarget as HTMLElement
@@ -47,6 +50,11 @@ watchEffect(() => {
   }
 })
 
+const backgroundColor = computed(() => {
+  const { color } = props
+  return typeof color === 'function' ? color(theme) : color
+})
+
 onMounted(() => {
   if (parent)
     listener = parent.proxy?.$el.addEventListener('mousedown', addRipple)
@@ -73,7 +81,7 @@ export default {
       v-for="(ripple, index) of ripplesArr"
       :key="`ripple_${index}`"
       :style="{
-        backgroundColor: props.color,
+        backgroundColor,
         top: addUnit(ripple.y),
         left: addUnit(ripple.x),
         width: addUnit(ripple.size),

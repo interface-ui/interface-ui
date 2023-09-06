@@ -9,8 +9,10 @@ import {
 } from '@material/material-color-utilities'
 import color from '../color'
 import state from '../state'
-import type FnTheme from './theme'
+import type Theme from './theme'
 import type { Palette } from './theme'
+
+const theme = reactive<Theme>({ color, state } as Theme)
 
 const parseShceme = (scheme: Scheme) => {
   const palette: Palette = {} as any
@@ -18,7 +20,7 @@ const parseShceme = (scheme: Scheme) => {
   for (const [key, value] of Object.entries(scheme.toJSON())) {
     const token = key.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase()
     const color = hexFromArgb(value)
-    palette[key as keyof Scheme] = color
+    palette[key as keyof Palette] = color
     styles[`--md-sys-color-${token}`] = color
   }
 
@@ -28,18 +30,21 @@ const parseShceme = (scheme: Scheme) => {
 /**
  * The hook to create the theme
  * @param {string} source The source color of the theme, the value should be "Hex"
- * @returns {FnTheme} Theme object
+ * @param {Partial<Palette>} scheme The object to customize the current theme
+ * @returns {Theme} Theme object
  */
-const useTheme = (source = '#3894ff'): FnTheme => {
+export const createTheme = (
+  source = '#3894ff',
+  scheme: Partial<Palette> = {}
+): Theme => {
   const dynamicTheme = themeFromSourceColor(argbFromHex(source))
-  const theme = reactive<FnTheme>({ color, state } as FnTheme)
 
   onBeforeMount(() => {
     const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches
     const { palette, styles } = systemDark
       ? parseShceme(dynamicTheme.schemes.dark)
       : parseShceme(dynamicTheme.schemes.light)
-    theme.palette = palette
+    theme.palette = { ...palette, ...scheme }
 
     jss.setup(preset())
     const cssStyles = {
@@ -48,6 +53,24 @@ const useTheme = (source = '#3894ff'): FnTheme => {
     jss.createStyleSheet(cssStyles).attach()
   })
 
+  return theme
+}
+
+/**
+ * @param {Partial<Palette>} scheme The object to customize the current theme
+ * @returns {Theme} Theme object
+ */
+export const customizeTheme = (scheme: Partial<Palette>) => {
+  theme.palette = { ...theme.palette, ...scheme }
+
+  return theme
+}
+
+/**
+ * Get the current theme object
+ * @returns {Theme} Theme object
+ */
+const useTheme = (): Theme => {
   return theme
 }
 
