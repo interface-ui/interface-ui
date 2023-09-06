@@ -1,10 +1,8 @@
 <script setup lang="ts">
-import { createTheme } from '@fusion-ui/theme'
 import { FnButton, FnCheckbox } from '@fusion-ui/components'
 import { ref } from 'vue'
 const button = ref('深色')
 
-createTheme()
 const changTheme = () => {
   const html = document.documentElement as HTMLElement
   if (html.classList.contains('dark')) {

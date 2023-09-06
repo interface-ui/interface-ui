@@ -8,7 +8,7 @@ export const checkboxProps = {
     type: Boolean,
   },
   color: {
-    type: String,
+    type: [String, Function],
   },
   size: {
     type: String as PropType<CheckboxSize>,

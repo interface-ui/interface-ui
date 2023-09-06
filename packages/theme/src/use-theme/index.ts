@@ -1,6 +1,6 @@
 import jss from 'jss'
 import preset from 'jss-preset-default'
-import { onBeforeMount, reactive } from 'vue'
+import { reactive } from 'vue'
 import type { Scheme } from '@material/material-color-utilities'
 import {
   argbFromHex,
@@ -39,21 +39,18 @@ export const createTheme = (
 ): Theme => {
   const dynamicTheme = themeFromSourceColor(argbFromHex(source))
 
-  onBeforeMount(() => {
-    const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-    const { palette, styles } = systemDark
-      ? parseShceme(dynamicTheme.schemes.dark)
-      : parseShceme(dynamicTheme.schemes.light)
-    theme.palette = { ...palette, ...scheme }
+  const { palette, styles } = parseShceme(dynamicTheme.schemes.light)
+  theme.palette = { ...palette, ...scheme }
 
+  if (typeof window !== 'undefined') {
     jss.setup(preset())
     const cssStyles = {
       '@global': { ':root': styles },
     }
     jss.createStyleSheet(cssStyles).attach()
-  })
+  }
 
-  return JSON.parse(JSON.stringify(theme))
+  return theme
 }
 
 /**
@@ -63,7 +60,7 @@ export const createTheme = (
 export const customizeTheme = (scheme: Partial<Palette>) => {
   theme.palette = { ...theme.palette, ...scheme }
 
-  return JSON.parse(JSON.stringify(theme))
+  return theme
 }
 
 /**
@@ -71,7 +68,7 @@ export const customizeTheme = (scheme: Partial<Palette>) => {
  * @returns {Theme} Theme object
  */
 const useTheme = (): Theme => {
-  return JSON.parse(JSON.stringify(theme))
+  return theme
 }
 
 export default useTheme
