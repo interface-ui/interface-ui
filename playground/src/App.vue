@@ -126,18 +126,6 @@ const changTheme = () => {
     >
       <template #fixedArea> Message: </template>
     </fn-alert> -->
-    <fn-breadcrumb separator="!">
-        <fn-breadcrumb-item>
-                vue
-        </fn-breadcrumb-item>
-        <fn-breadcrumb-item >
-            <a href="/">promotion management</a>
-        </fn-breadcrumb-item>
-        <fn-breadcrumb-item :to="{ path: '/user' }">
-            element
-        </fn-breadcrumb-item>
-  </fn-breadcrumb>
-  <router-view></router-view>
   </div>
 </template>
 

@@ -53,7 +53,7 @@ export const createTheme = (
     jss.createStyleSheet(cssStyles).attach()
   })
 
-  return theme
+  return JSON.parse(JSON.stringify(theme))
 }
 
 /**
@@ -63,7 +63,7 @@ export const createTheme = (
 export const customizeTheme = (scheme: Partial<Palette>) => {
   theme.palette = { ...theme.palette, ...scheme }
 
-  return theme
+  return JSON.parse(JSON.stringify(theme))
 }
 
 /**
@@ -71,7 +71,7 @@ export const customizeTheme = (scheme: Partial<Palette>) => {
  * @returns {Theme} Theme object
  */
 const useTheme = (): Theme => {
-  return theme
+  return JSON.parse(JSON.stringify(theme))
 }
 
 export default useTheme
