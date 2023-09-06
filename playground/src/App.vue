@@ -1,10 +1,8 @@
 <script setup lang="ts">
-import { createTheme } from '@fusion-ui/theme'
 import { FnButton, FnCheckbox } from '@fusion-ui/components'
 import { ref } from 'vue'
 const button = ref('深色')
 
-createTheme()
 const changTheme = () => {
   const html = document.documentElement as HTMLElement
   if (html.classList.contains('dark')) {
@@ -126,18 +124,6 @@ const changTheme = () => {
     >
       <template #fixedArea> Message: </template>
     </fn-alert> -->
-    <fn-breadcrumb separator="!">
-        <fn-breadcrumb-item>
-                vue
-        </fn-breadcrumb-item>
-        <fn-breadcrumb-item >
-            <a href="/">promotion management</a>
-        </fn-breadcrumb-item>
-        <fn-breadcrumb-item :to="{ path: '/user' }">
-            element
-        </fn-breadcrumb-item>
-  </fn-breadcrumb>
-  <router-view></router-view>
   </div>
 </template>
 

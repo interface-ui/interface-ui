@@ -20,8 +20,18 @@
   text-decoration: none;
   padding: 8px;
   border-radius: 50%;
-  &:hover {
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    z-index: -1;
+  }
+
+  &:hover::after {
     background-color: var(--md-sys-color-primary);
+    opacity: var(--md-sys-state-hover-state-layer-opacity);
   }
 
   .fn-checkbox-icon {

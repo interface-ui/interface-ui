@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import { computed, ref } from 'vue'
-import { UseCheckbox } from '@fusion-ui/hooks'
 import { UPDATE_MODEL_EVENT } from '@fusion-ui/constants'
 import type { CheckboxStatus } from '../src/checkbox'
 import { checkboxProps, iconSize, iconType } from '../src/checkbox'
@@ -8,10 +7,6 @@ import FnRipple from '../../ripple'
 import FnIcon from '../../icon'
 const props = defineProps(checkboxProps)
 const emits = defineEmits<{ (e: 'update:modelValue', v: boolean): void }>()
-
-const classes = UseCheckbox()
-// eslint-disable-next-line no-console
-console.log(classes)
 
 const { modelValue } = props
 
@@ -37,7 +32,7 @@ export default {
 </script>
 
 <template>
-  <span class="fn-checkbox-icon-root" :class="classes['fn-checkbox-icon-root']">
+  <span class="fn-checkbox-icon-root">
     <slot
       :icon="{ checked, size: iconSize[props.size], color: props.color }"
       name="icon"

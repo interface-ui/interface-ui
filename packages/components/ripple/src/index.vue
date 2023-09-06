@@ -5,8 +5,8 @@ import {
   onMounted,
   onUnmounted,
   reactive,
-  ref,
-  watchEffect,
+  // ref,
+  // watchEffect,
 } from 'vue'
 import { addUnit } from '@fusion-ui/utils/dom'
 import useTheme from '@fusion-ui/theme'
@@ -15,7 +15,7 @@ import { rippleProps } from './ripple'
 
 const props = defineProps(rippleProps)
 const ripplesArr = reactive<RippleStyle[]>([])
-const duration = ref<number>(600)
+// const duration = ref<number>(600)
 const parent = getCurrentInstance()?.parent
 let bounce: NodeJS.Timeout | null = null
 let listener: EventListener | null = null
@@ -39,20 +39,30 @@ const clear = () => {
   }
 }
 
-watchEffect(() => {
-  if (ripplesArr.length > 0) {
-    clear()
+// watchEffect(() => {
+//   if (ripplesArr.length > 0) {
+//     clear()
 
-    bounce = setTimeout(() => {
-      ripplesArr.length = 0
-      clear()
-    }, duration.value * 4)
-  }
-})
+//     bounce = setTimeout(() => {
+//       ripplesArr.length = 0
+//       clear()
+//     }, duration.value * 4)
+//   }
+// })
 
 const backgroundColor = computed(() => {
   const { color } = props
-  return typeof color === 'function' ? color(theme) : color
+  if (color) {
+    // eslint-disable-next-line no-console
+    console.log(1)
+
+    return typeof color === 'function' ? color(theme) : color
+  } else {
+    // eslint-disable-next-line no-console
+    console.log(2)
+
+    return null
+  }
 })
 
 onMounted(() => {
@@ -81,7 +91,7 @@ export default {
       v-for="(ripple, index) of ripplesArr"
       :key="`ripple_${index}`"
       :style="{
-        backgroundColor,
+        backgroundColor: backgroundColor ?? 'var(--md-sys-color-primary)',
         top: addUnit(ripple.y),
         left: addUnit(ripple.x),
         width: addUnit(ripple.size),

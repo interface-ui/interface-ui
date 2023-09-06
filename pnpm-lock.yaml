@@ -223,6 +223,9 @@ importers:
       vue:
         specifier: ~3.2.45
         version: 3.2.45
+      vue-router:
+        specifier: '4'
+        version: 4.0.0(vue@3.2.45)
 
   packages/constans: {}
 
@@ -10698,7 +10701,6 @@ packages:
       vue: ^3.0.0
     dependencies:
       vue: 3.2.45
-    dev: true
 
   /vue-template-compiler@2.7.14:
     resolution: {integrity: sha512-zyA5Y3ArvVG0NacJDkkzJuPQDF8RFeRlzV2vLeSnhSpieO6LK2OVbdLPi5MPPs09Ii+gMO8nY4S3iKQxBxDmWQ==}
