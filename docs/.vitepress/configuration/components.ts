@@ -81,6 +81,15 @@ export const enComponents = [
       },
     ],
   },
+  {
+    text: 'Navigation',
+    items: [
+      {
+        text: 'Breadcrumb',
+        link: '/langs/zh/components/breadcrumb',
+      },
+    ],
+  },
 ]
 
 export const zhComponents = [
@@ -139,7 +148,7 @@ export const zhComponents = [
     ],
   },
   {
-    text: '反馈组件',
+    text: 'Feedback 反馈组件',
     items: [
       {
         text: 'Alert 提示',
@@ -158,6 +167,15 @@ export const zhComponents = [
         link: '/langs/zh/components/switch',
       },
 
+    ],
+  },
+  {
+    text: 'Navigation 导航',
+    items: [
+      {
+        text: 'Breadcrumb 面包屑',
+        link: '/langs/zh/components/breadcrumb',
+      },
     ],
   },
 ]
