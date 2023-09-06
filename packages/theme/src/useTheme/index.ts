@@ -20,7 +20,7 @@ const parseShceme = (scheme: Scheme) => {
   for (const [key, value] of Object.entries(scheme.toJSON())) {
     const token = key.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase()
     const color = hexFromArgb(value)
-    palette[key as keyof Scheme] = color
+    palette[key as keyof Palette] = color
     styles[`--md-sys-color-${token}`] = color
   }
 
