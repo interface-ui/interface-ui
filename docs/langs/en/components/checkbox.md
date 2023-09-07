@@ -29,3 +29,7 @@ Checkboxes allow the user to select one or more items from a set.
 ### Icon
 
 <demo src="../../../example/checkbox/icon.vue" />
+
+## Use with array
+
+<demo src="../../../example/checkbox/multiple.vue" />
