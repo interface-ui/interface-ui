@@ -52,17 +52,16 @@ watchEffect(() => {
 
 const backgroundColor = computed(() => {
   const { color } = props
-  if (color) {
-    // eslint-disable-next-line no-console
-    console.log(1)
-
-    return typeof color === 'function' ? color(theme) : color
-  } else {
-    // eslint-disable-next-line no-console
-    console.log(2)
-
+  if (!color) {
     return null
   }
+  if (typeof color === 'function') {
+    return color(theme)
+  }
+  if (['primary', 'secondary', 'tertiary', 'error'].includes(color)) {
+    return `var(--md-sys-color-${color})`
+  }
+  return color
 })
 
 onMounted(() => {

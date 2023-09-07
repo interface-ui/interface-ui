@@ -1,6 +1,5 @@
 import jss from 'jss'
 import preset from 'jss-preset-default'
-import { reactive } from 'vue'
 import type { Scheme } from '@material/material-color-utilities'
 import {
   argbFromHex,
@@ -10,9 +9,11 @@ import {
 import color from '../color'
 import state from '../state'
 import type Theme from './theme'
-import type { Palette } from './theme'
+import type { Palette, ParsedScheme } from './theme'
 
-const theme = reactive<Theme>({ color, state } as Theme)
+const theme: Theme = { color, state } as Theme
+let lightPalette: ParsedScheme | null = null
+let darkPalette: ParsedScheme | null = null
 
 const parseShceme = (scheme: Scheme) => {
   const palette: Palette = {} as any
@@ -39,15 +40,33 @@ export const createTheme = (
 ): Theme => {
   const dynamicTheme = themeFromSourceColor(argbFromHex(source))
 
-  const { palette, styles } = parseShceme(dynamicTheme.schemes.light)
-  theme.palette = { ...palette, ...scheme }
+  lightPalette = parseShceme(dynamicTheme.schemes.light)
+  darkPalette = parseShceme(dynamicTheme.schemes.dark)
 
   if (typeof window !== 'undefined') {
+    const themeMatch = window.matchMedia('(prefers-color-scheme: dark)')
+    const onThemeChange = () => {
+      const { palette } = themeMatch.matches ? darkPalette! : lightPalette!
+      theme.palette = { ...palette, ...scheme }
+    }
     jss.setup(preset())
     const cssStyles = {
-      '@global': { ':root': styles },
+      '@media (prefers-color-scheme: light)': {
+        '@global': {
+          ':root': lightPalette?.styles,
+          ':root[data-theme="dark"]': darkPalette?.styles,
+        },
+      },
+      '@media (prefers-color-scheme: dark)': {
+        '@global': {
+          ':root': lightPalette?.styles,
+          ':root[data-theme="dark"]': darkPalette?.styles,
+        },
+      },
     }
     jss.createStyleSheet(cssStyles).attach()
+    onThemeChange()
+    themeMatch.addEventListener('change', onThemeChange)
   }
 
   return theme
