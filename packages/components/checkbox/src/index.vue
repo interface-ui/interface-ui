@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { computed, ref } from 'vue'
+import { computed, useAttrs } from 'vue'
 import { UPDATE_MODEL_EVENT } from '@fusion-ui/constants'
 import { useCheckbox } from '@fusion-ui/hooks'
 import type { CheckboxStatus } from '../src/checkbox'
@@ -9,20 +9,21 @@ import FnIcon from '../../icon'
 
 const props = defineProps(checkboxProps)
 const emits = defineEmits<{ (e: 'update:modelValue', v: boolean): void }>()
-
-const { modelValue } = props
 const { classes } = useCheckbox(props)
+const attrs = useAttrs()
 
-const getCheckedStatus = (checked: boolean): CheckboxStatus =>
-  checked ? 'checked' : 'blank'
-const status = ref<CheckboxStatus>(getCheckedStatus(modelValue))
-
+const status = computed<CheckboxStatus>(() => {
+  if (typeof checked.value === 'boolean') {
+    return checked.value ? 'checked' : 'blank'
+  } else {
+    return (checked.value as any[]).includes(attrs.value) ? 'checked' : 'blank'
+  }
+})
 const checked = computed<boolean>({
   get() {
-    return modelValue
+    return props.modelValue as any
   },
   set(newVal) {
-    status.value = getCheckedStatus(newVal)
     emits(UPDATE_MODEL_EVENT, newVal)
   },
 })
