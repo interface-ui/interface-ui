@@ -1,6 +1,10 @@
+import type {
+  ThemeCallBack,
+  ThemePaletteColor,
+} from '@fusion-ui/theme/src/use-theme/theme'
+import type { ComponentSize } from '@fusion-ui/constants'
 import type { ExtractPropTypes, PropType } from 'vue'
 
-export type CheckboxSize = 'small' | 'medium' | 'large'
 export type CheckboxStatus = 'blank' | 'checked'
 
 export const checkboxProps = {
@@ -8,10 +12,13 @@ export const checkboxProps = {
     type: Boolean,
   },
   color: {
-    type: [String, Function],
+    type: [String, Function] as PropType<
+      ThemeCallBack | ThemePaletteColor | string
+    >,
+    default: 'primary',
   },
   size: {
-    type: String as PropType<CheckboxSize>,
+    type: String as PropType<ComponentSize>,
     default: 'medium',
   },
   enableRipple: {
@@ -26,7 +33,7 @@ export const iconType: Record<CheckboxStatus, string> = {
   // indeterminate: 'ic:baseline-indeterminate-check-box',
 }
 
-export const iconSize: Record<CheckboxSize, string> = {
+export const iconSize: Record<ComponentSize, string> = {
   small: '20',
   medium: '24',
   large: '28',

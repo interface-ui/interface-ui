@@ -1,5 +1,11 @@
-import type { ExtractPropTypes } from 'vue'
+import type { ExtractPropTypes, PropType } from 'vue'
+import useTheme from '@fusion-ui/theme'
+import type {
+  ThemeCallBack,
+  ThemePaletteColor,
+} from 'packages/theme/src/use-theme/theme'
 
+const theme = useTheme()
 export interface RippleStyle {
   x: number
   y: number
@@ -8,7 +14,10 @@ export interface RippleStyle {
 
 export const rippleProps = {
   color: {
-    type: [String, Function],
+    type: [String, Function] as PropType<
+      ThemeCallBack | ThemePaletteColor | string
+    >,
+    default: theme.color.white,
   },
   center: {
     type: Boolean,
