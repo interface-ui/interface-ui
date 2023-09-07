@@ -9,7 +9,7 @@ export type CheckboxStatus = 'blank' | 'checked'
 
 export const checkboxProps = {
   modelValue: {
-    type: Boolean,
+    type: [Boolean, Array] as PropType<boolean | string[]>,
   },
   color: {
     type: [String, Function] as PropType<
