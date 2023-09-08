@@ -34,7 +34,7 @@ const checkedNames = ref([])
 
   <div class="content">
     <fn-checkbox v-model="checked" size="small"></fn-checkbox>
-    <fn-checkbox v-model="checked"></fn-checkbox>
+    <fn-checkbox v-model="checked" disabled></fn-checkbox>
     <fn-checkbox size="large" v-model="checked"></fn-checkbox>
 
     <fn-checkbox color="#6366f1" v-model="checked">

@@ -21,6 +21,14 @@
   padding: 8px;
   border-radius: 50%;
 
+  &:is([disabled]) {
+    cursor: default;
+  }
+
+  &:is([disabled]) .fn-checkbox-icon {
+    color: var(--fn-sys-color-disabled-0) !important;
+  }
+
   &::after {
     content: '';
     position: absolute;
