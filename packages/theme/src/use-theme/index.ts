@@ -54,14 +54,34 @@ export const createTheme = (
     const cssStyles = {
       '@media (prefers-color-scheme: light)': {
         '@global': {
-          ':root': lightPalette?.styles,
-          ':root[data-theme="dark"]': darkPalette?.styles,
+          ':root': {
+            ...lightPalette?.styles,
+            '--fn-sys-color-disabled-0':
+              'rgba(0, 0, 0, var(--md-sys-state-disabled-state-layer-opacity))',
+            '--fn-sys-color-disabled-1': 'rgba(0, 0, 0, 0.15)',
+          },
+          ':root[data-theme="dark"]': {
+            ...darkPalette?.styles,
+            '--fn-sys-color-disabled-0':
+              'rgba(255, 255, 255, var(--md-sys-state-disabled-state-layer-opacity))',
+            '--fn-sys-color-disabled-1': 'rgba(255, 255, 255, 0.15)',
+          },
         },
       },
       '@media (prefers-color-scheme: dark)': {
         '@global': {
-          ':root': lightPalette?.styles,
-          ':root[data-theme="dark"]': darkPalette?.styles,
+          ':root': {
+            ...lightPalette?.styles,
+            '--fn-sys-color-disabled-0':
+              'rgba(0, 0, 0, var(--md-sys-state-disabled-state-layer-opacity))',
+            '--fn-sys-color-disabled-1': 'rgba(0, 0, 0, 0.15)',
+          },
+          ':root[data-theme="dark"]': {
+            ...darkPalette?.styles,
+            '--fn-sys-color-disabled-0':
+              'rgba(255, 255, 255, var(--md-sys-state-disabled-state-layer-opacity))',
+            '--fn-sys-color-disabled-1': 'rgba(255, 255, 255, 0.15)',
+          },
         },
       },
     }
