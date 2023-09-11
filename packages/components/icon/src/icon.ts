@@ -1,4 +1,8 @@
-import type { ExtractPropTypes } from 'vue'
+import type {
+  ThemeCallBack,
+  ThemePaletteColor,
+} from 'packages/theme/src/use-theme/theme'
+import type { ExtractPropTypes, PropType } from 'vue'
 
 export const iconProps = {
   icon: {
@@ -8,11 +12,11 @@ export const iconProps = {
   size: {
     type: String,
     default: '16',
-    required: false,
   },
   color: {
-    type: String,
-    required: false,
+    type: [String, Function] as PropType<
+      ThemeCallBack | ThemePaletteColor | string
+    >,
   },
 }
 
