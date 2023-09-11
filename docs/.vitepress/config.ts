@@ -23,7 +23,7 @@ export default defineConfig({
     sidebar,
     algolia: {
       appId: 'G9YJQIU3F0',
-      apiKey: '96c916e6c501fac0386b67e9e8d1dda4',
+      apiKey: '648079ba68cded490d9b86ac10ef5691',
       indexName: 'fusion-ui2',
       insights: true,
       container: '### REPLACE ME WITH A CONTAINER (e.g. div) ###',

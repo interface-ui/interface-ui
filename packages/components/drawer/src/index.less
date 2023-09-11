@@ -1,0 +1,57 @@
+.fn-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2000;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  overflow: auto;
+  > .fn-drawer{
+    position: absolute;
+    box-sizing: border-box;
+    background-color: #353535;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: all .3s;
+    header{
+      color: #72767b;
+      display: flex;
+      margin-bottom: 32px;
+      padding: 20px;
+      padding-bottom: 0;
+      >.drawer-title{
+        flex:1;
+      }
+      > .drawer-close{
+        cursor: pointer;
+      }
+    }
+    > .drawer-body{
+      padding: 20px;
+      overflow: auto;
+    }
+    &--top{
+      top: 0;
+      width: 100%;
+      height: 30%;
+    }
+    &--left{
+      left: 0;
+      width: 30%;
+      height: 100%;
+    }
+    &--right{
+      right: 0;
+      width: 30%;
+      height: 100%;
+    }
+    &--bottom{
+      bottom: 0;
+      width: 100%;
+      height: 30%;
+    }
+  }
+}
