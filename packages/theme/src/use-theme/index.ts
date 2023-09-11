@@ -59,12 +59,14 @@ export const createTheme = (
             '--fn-sys-color-disabled-0':
               'rgba(0, 0, 0, var(--md-sys-state-disabled-state-layer-opacity))',
             '--fn-sys-color-disabled-1': 'rgba(0, 0, 0, 0.15)',
+            '--fn-sys-color-ripple': '#ffffff',
           },
           ':root[data-theme="dark"]': {
             ...darkPalette?.styles,
             '--fn-sys-color-disabled-0':
               'rgba(255, 255, 255, var(--md-sys-state-disabled-state-layer-opacity))',
             '--fn-sys-color-disabled-1': 'rgba(255, 255, 255, 0.15)',
+            '--fn-sys-color-ripple': '#000000',
           },
         },
       },
@@ -75,12 +77,14 @@ export const createTheme = (
             '--fn-sys-color-disabled-0':
               'rgba(0, 0, 0, var(--md-sys-state-disabled-state-layer-opacity))',
             '--fn-sys-color-disabled-1': 'rgba(0, 0, 0, 0.15)',
+            '--fn-sys-color-ripple': '#ffffff',
           },
           ':root[data-theme="dark"]': {
             ...darkPalette?.styles,
             '--fn-sys-color-disabled-0':
               'rgba(255, 255, 255, var(--md-sys-state-disabled-state-layer-opacity))',
             '--fn-sys-color-disabled-1': 'rgba(255, 255, 255, 0.15)',
+            '--fn-sys-color-ripple': '#000000',
           },
         },
       },
