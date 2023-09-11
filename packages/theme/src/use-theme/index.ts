@@ -6,12 +6,13 @@ import {
   hexFromArgb,
   themeFromSourceColor,
 } from '@material/material-color-utilities'
+import { reactive } from 'vue'
 import color from '../color'
 import state from '../state'
 import type Theme from './theme'
 import type { Palette, ParsedScheme } from './theme'
 
-const theme: Theme = { color, state } as Theme
+const theme = reactive<Theme>({ color, state } as Theme)
 let lightPalette: ParsedScheme | null = null
 let darkPalette: ParsedScheme | null = null
 

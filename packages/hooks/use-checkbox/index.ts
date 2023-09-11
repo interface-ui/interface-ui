@@ -1,25 +1,11 @@
-import type { CheckboxProps } from '@fusion-ui/components/checkbox/src/checkbox'
-import useTheme from '@fusion-ui/theme'
-import { computed } from 'vue'
+import type { CheckboxProps } from '@fusion-ui/components/checkbox'
+import { useColor } from '@fusion-ui/theme'
 import { useJSS } from '../use-jss'
 
-const theme = useTheme()
 const jss = useJSS()
 
 export const useCheckbox = (props: CheckboxProps) => {
-  const $color = computed(() => {
-    const { color } = props
-    if (!color) {
-      return null
-    }
-    if (typeof color === 'function') {
-      return color(theme)
-    }
-    if (['primary', 'secondary', 'tertiary', 'error'].includes(color)) {
-      return `var(--md-sys-color-${color})`
-    }
-    return color
-  })
+  const $color = useColor(props.color)
 
   const styles = {
     'fn-checkbox-icon-root': {

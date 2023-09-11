@@ -16,6 +16,7 @@ import FnTag from './tag'
 import FnCheckbox from './checkbox'
 import FnBreadcrumb from './breadcrumb'
 import FnBreadcrumbItem from './breadcrumb-item'
+import FnRipple from './ripple'
 export * from './avatarGroup'
 export * from './button'
 export * from './alert'
@@ -53,7 +54,8 @@ export const component = [
   FnAvatarGroup,
   FnCheckbox,
   FnBreadcrumb,
-  FnBreadcrumbItem
+  FnBreadcrumbItem,
+  FnRipple,
 ]
 
 const CK = {

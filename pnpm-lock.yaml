@@ -270,6 +270,9 @@ importers:
       '@material/material-color-utilities':
         specifier: ^0.2.7
         version: 0.2.7
+      vue:
+        specifier: ~3.2.45
+        version: 3.2.47
 
   packages/utils:
     dependencies:
