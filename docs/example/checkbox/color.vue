@@ -11,6 +11,10 @@ const checked = ref<boolean>(false)
       <fn-checkbox v-model="checked" color="secondary" />
       <fn-checkbox v-model="checked" color="tertiary" />
       <fn-checkbox v-model="checked" color="error" />
+      <fn-checkbox
+        v-model="checked"
+        :color="(theme) => theme.color.cyan[400]"
+      />
       <fn-checkbox v-model="checked" color="#2E7D32" />
     </div>
   </div>

@@ -6,8 +6,8 @@ const checkedNames = ref<string[]>([])
 
 <template>
   <div space-y-2>
+    <div>{{ checkedNames }}</div>
     <div fscw gap-2>
-      <div>{{ checkedNames }}</div>
       <fn-checkbox id="jack" v-model="checkedNames" value="Jack" />
       <label for="jack">Jack</label>
 
