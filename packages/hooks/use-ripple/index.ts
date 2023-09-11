@@ -5,7 +5,7 @@ import { useJSS } from '../use-jss'
 const jss = useJSS()
 
 export const useRipple = (props: RippleProps) => {
-  const $color = useColor(props.color)
+  const $color = useColor(props.color, 'var(--fn-sys-color-ripple)')
 
   const styles = {
     'fn-ripple': {
