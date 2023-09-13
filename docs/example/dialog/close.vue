@@ -10,7 +10,7 @@ const dialogVisible = ref(false)
   <fn-dialog
     v-model="dialogVisible"
     title="Tips"
-    show-close="false"
+    :show-close="false"
   >
     <span>This is a message</span>
     <template #footer>
