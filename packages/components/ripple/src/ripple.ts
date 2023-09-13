@@ -17,7 +17,7 @@ export const rippleProps = {
     type: [String, Function] as PropType<
       ThemeCallBack | ThemePaletteColor | string
     >,
-    default: theme.color.white,
+    default: theme.colors.white,
   },
   center: {
     type: Boolean,
