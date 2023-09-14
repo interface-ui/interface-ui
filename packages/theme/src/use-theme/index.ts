@@ -10,10 +10,16 @@ import { reactive } from 'vue'
 import colors from '../color'
 import states from '../state'
 import elevations from '../elevation'
+import typography from '../typography'
 import type Theme from './theme'
 import type { Palette, ParsedScheme } from './theme'
 
-const theme = reactive<Theme>({ colors, states, elevations } as Theme)
+const theme = reactive<Theme>({
+  colors,
+  states,
+  elevations,
+  typography,
+} as Theme)
 let lightPalette: ParsedScheme | null = null
 let darkPalette: ParsedScheme | null = null
 

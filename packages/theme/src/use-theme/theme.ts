@@ -2,6 +2,7 @@ import type { Scheme } from '@material/material-color-utilities'
 import type { States } from '../state/state'
 import type { Colors } from '../color/color'
 import type { Elevations } from '../elevation/elevation'
+import type { Typography } from '../typography/typography'
 
 export type Palette = Omit<Record<keyof Scheme, string>, 'toJSON'>
 
@@ -21,4 +22,5 @@ export default interface Theme {
   readonly colors: Colors
   readonly states: States
   readonly elevations: Elevations
+  readonly typography: Typography
 }
