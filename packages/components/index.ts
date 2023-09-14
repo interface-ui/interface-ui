@@ -18,6 +18,8 @@ import FnBreadcrumb from './breadcrumb'
 import FnBreadcrumbItem from './breadcrumb-item'
 import FnRipple from './ripple'
 import FnDrawer from './drawer'
+import FnFormLabel from './form-label'
+import FnTypography from './typography'
 export * from './avatarGroup'
 export * from './button'
 export * from './alert'
@@ -37,6 +39,8 @@ export * from './checkbox'
 export * from './breadcrumb'
 export * from './breadcrumb-item'
 export * from './drawer'
+export * from './form-label'
+export * from './typography'
 
 export const component = [
   FnButton,
@@ -59,6 +63,8 @@ export const component = [
   FnBreadcrumbItem,
   FnRipple,
   FnDrawer,
+  FnFormLabel,
+  FnTypography,
 ]
 
 const CK = {

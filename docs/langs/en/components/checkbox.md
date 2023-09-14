@@ -51,6 +51,18 @@ Use the data from the slot to make the icon more compatible.
 
 <demo src="../../../example/checkbox/icon.vue" />
 
+### Lable
+
+You can provide a label to the `Checkbox` thanks to the `FormLabel` component.
+
+<demo src="../../../example/checkbox/label.vue"></demo>
+
+### Label Placement
+
+`label-placement` prop provide the ability to change the placement of the label
+
+<demo src="../../../example/checkbox/label-placement.vue"></demo>
+
 ## Use with array
 
 Also, `v-model` accept `array` to implement the function like `CheckboxGroup`

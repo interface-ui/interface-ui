@@ -1,0 +1,26 @@
+.fn-form-label {
+  display: inline-flex;
+  user-select: none;
+  flex-wrap: nowrap;
+  align-items: center;
+  cursor: pointer;
+
+  &--top {
+    flex-direction: column-reverse;
+  }
+  &--bottom {
+    flex-direction: column;
+  }
+  &--left {
+    flex-direction: row-reverse;
+  }
+  &--right {
+    flex-direction: row;
+  }
+
+  &:is([required])::after {
+    content: '*';
+    color: var(--md-sys-color-error);
+    margin-left: 4px;
+  }
+}
