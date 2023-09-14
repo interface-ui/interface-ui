@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { FnButton, FnCheckbox } from '@fusion-ui/components'
+import { FnButton, FnCheckbox, FnFormLabel } from '@fusion-ui/components'
 import { ref } from 'vue'
 const button = ref('深色')
 const checked = ref(true)
@@ -33,50 +33,19 @@ const changTheme = () => {
   <!-- -------------------新组建开发调试------------------- -->
 
   <div class="content">
-    <!-- <fn-checkbox v-model="checked" size="small"></fn-checkbox>
-    <fn-checkbox v-model="checked" disabled></fn-checkbox>
-    <fn-checkbox size="large" v-model="checked"></fn-checkbox> -->
+    <FnFormLabel label="Right" required>
+      <fn-checkbox v-model="checked" size="small" />
+    </FnFormLabel>
+    <FnFormLabel label="Left" label-placement="left">
+      <fn-checkbox v-model="checked" size="small" />
+    </FnFormLabel>
+    <FnFormLabel label="Top" label-placement="top">
+      <fn-checkbox v-model="checked" size="small" />
+    </FnFormLabel>
+    <FnFormLabel label="Bottom" label-placement="bottom">
+      <fn-checkbox v-model="checked" size="small" />
+    </FnFormLabel>
 
-    <fn-checkbox color="#6366f1" v-model="checked">
-      <template #icon="{ icon }">
-        <fn-icon
-          :size="icon.size"
-          :color="icon.color"
-          :icon="
-            icon.checked
-              ? 'material-symbols:star'
-              : 'material-symbols:star-outline'
-          "
-        />
-      </template>
-    </fn-checkbox>
-    <fn-checkbox color="primary" v-model="checked">
-      <template #icon="{ icon }">
-        <fn-icon
-          :size="icon.size"
-          :color="icon.color"
-          :icon="
-            icon.checked
-              ? 'material-symbols:star'
-              : 'material-symbols:star-outline'
-          "
-        />
-      </template>
-    </fn-checkbox>
-
-    <!-- <div>
-      {{ checkedNames }}
-    </div>
-    <div>
-      <fn-checkbox id="jack" value="Jack" v-model="checkedNames" />
-      <label for="jack">Jack</label>
-
-      <fn-checkbox id="john" value="John" v-model="checkedNames" />
-      <label for="john">John</label>
-
-      <fn-checkbox id="mike" value="Mike" v-model="checkedNames" />
-      <label for="mike">Mike</label>
-    </div> -->
     <!-- <fnAvatar
       alt="Remy Sharp"
       src="https://mui.com/static/images/avatar/1.jpg"
