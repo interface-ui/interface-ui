@@ -1,8 +1,12 @@
 <script setup lang="ts">
 import { FnButton, FnCheckbox, FnFormLabel } from '@fusion-ui/components'
-import { ref } from 'vue'
+import { ref, watchEffect } from 'vue'
 const button = ref('深色')
 const checked = ref(true)
+
+watchEffect(() => {
+  console.log(checked.value)
+})
 
 const changTheme = () => {
   const html = document.documentElement as HTMLElement
@@ -33,18 +37,23 @@ const changTheme = () => {
   <!-- -------------------新组建开发调试------------------- -->
 
   <div class="content">
-    <FnFormLabel label="Right" required>
+    <fn-form-label
+      :control="FnCheckbox"
+      label="Right"
+      v-model="checked"
+      required
+      disabled
+    >
+    </fn-form-label>
+    <!-- <fn-form-label label="Left" label-placement="left">
       <fn-checkbox v-model="checked" size="small" />
-    </FnFormLabel>
-    <FnFormLabel label="Left" label-placement="left">
+    </fn-form-label>
+    <fn-form-label label="Top" label-placement="top">
       <fn-checkbox v-model="checked" size="small" />
-    </FnFormLabel>
-    <FnFormLabel label="Top" label-placement="top">
+    </fn-form-label>
+    <fn-form-label label="Bottom" label-placement="bottom">
       <fn-checkbox v-model="checked" size="small" />
-    </FnFormLabel>
-    <FnFormLabel label="Bottom" label-placement="bottom">
-      <fn-checkbox v-model="checked" size="small" />
-    </FnFormLabel>
+    </fn-form-label> -->
 
     <!-- <fnAvatar
       alt="Remy Sharp"

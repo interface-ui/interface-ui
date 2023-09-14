@@ -7,14 +7,12 @@ import { formLabelProps } from './form-label'
 
 const props = defineProps(formLabelProps)
 const ns = useNamespace('form-label')
+
 const classList = computed(() => {
-  const { labelPlacement, required } = props
+  const { labelPlacement } = props
   const classList = [ns.b()]
   if (isString(labelPlacement)) {
     classList.push(ns.m(labelPlacement))
-  }
-  if (required) {
-    classList.push(ns.m('required'))
   }
   return classList
 })
@@ -28,7 +26,7 @@ export default {
 
 <template>
   <label :class="classList">
-    <slot />
+    <component :is="props.control" v-bind="$attrs" />
     <fn-typography>
       {{ props.label }}
     </fn-typography>

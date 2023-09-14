@@ -6,14 +6,13 @@ export const formLabelProps = {
     type: String,
     required: true,
   },
+  control: {
+    required: true,
+  },
   labelPlacement: {
     type: String,
     values: componentDirection,
     default: 'right',
-  },
-  required: {
-    type: Boolean,
-    default: false,
   },
 }
 

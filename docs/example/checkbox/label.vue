@@ -6,15 +6,9 @@ const checked = ref<boolean>(true)
 <template>
   <div space-y-2>
     <div fscw gap-2>
-      <FnFormLabel label="Label">
-        <fn-checkbox v-model="checked" />
-      </FnFormLabel>
-      <FnFormLabel label="Required" required>
-        <fn-checkbox v-model="checked" />
-      </FnFormLabel>
-      <FnFormLabel label="Disabled" disabled>
-        <fn-checkbox v-model="checked" />
-      </FnFormLabel>
+      <fn-form-label v-model="checked" label="Label" />
+      <fn-form-label v-model="checked" label="Label" required />
+      <fn-form-label v-model="checked" label="Label" disabled />
     </div>
   </div>
 </template>

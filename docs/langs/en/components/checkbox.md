@@ -53,7 +53,7 @@ Use the data from the slot to make the icon more compatible.
 
 ### Lable
 
-You can provide a label to the `Checkbox` by the help of `FormLabel` component.
+You can provide a label to the `Checkbox` thanks to the `FormLabel` component.
 
 <demo src="../../../example/checkbox/label.vue"></demo>
 
