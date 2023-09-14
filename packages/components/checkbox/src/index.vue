@@ -2,6 +2,7 @@
 import { computed, useAttrs } from 'vue'
 import { UPDATE_MODEL_EVENT } from '@fusion-ui/constants'
 import { useCheckbox } from '@fusion-ui/hooks'
+import { useNamespace } from '@fusion-ui/utils/useNamespace'
 import type { CheckboxStatus } from '../src/checkbox'
 import { checkboxProps, iconSize, iconType } from '../src/checkbox'
 import FnRipple from '../../ripple'
@@ -9,7 +10,8 @@ import FnIcon from '../../icon'
 
 const props = defineProps(checkboxProps)
 const emits = defineEmits<{ (e: 'update:modelValue', v: boolean): void }>()
-const { classes } = useCheckbox(props)
+const ns = useNamespace('checkbox')
+const { classes } = useCheckbox(props, ns)
 const attrs = useAttrs()
 
 const status = computed<CheckboxStatus>(() => {
@@ -36,14 +38,13 @@ export default {
 </script>
 
 <template>
-  <span class="fn-checkbox-icon-root" :class="classes['fn-checkbox-icon-root']">
+  <span :class="[ns.b(), ns.m(props.size), classes[ns.b()]]">
     <slot
       :icon="{ checked, size: iconSize[props.size], color: props.color }"
       name="icon"
     >
       <fn-icon
-        class="fn-checkbox-icon"
-        :class="classes['fn-checkbox-icon']"
+        :class="[ns.e('icon'), classes[ns.e('icon')]]"
         :icon="iconType[status]"
         :size="iconSize[props.size]"
       />
@@ -52,7 +53,7 @@ export default {
     <input
       v-bind="$attrs"
       v-model="checked"
-      class="fn-checkbox-input"
+      :class="[ns.e('input')]"
       type="checkbox"
     />
     <fn-ripple :color="props.color" center />

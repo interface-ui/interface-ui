@@ -9,6 +9,7 @@ import {
 } from 'vue'
 import { addUnit } from '@fusion-ui/utils/dom'
 import { useRipple } from '@fusion-ui/hooks'
+import { useNamespace } from '@fusion-ui/utils/useNamespace'
 import type { RippleStyle } from './ripple'
 import { rippleProps } from './ripple'
 
@@ -16,7 +17,8 @@ const props = defineProps(rippleProps)
 const ripplesArr = reactive<RippleStyle[]>([])
 const duration = ref<number>(600)
 const parent = getCurrentInstance()?.parent
-const { classes } = useRipple(props)
+const ns = useNamespace('ripple')
+const { classes } = useRipple(props, ns)
 let bounce: NodeJS.Timeout | null = null
 let listener: EventListener | null = null
 
@@ -70,7 +72,7 @@ export default {
 </script>
 
 <template>
-  <span class="fn-ripple-root">
+  <span :class="[ns.b()]">
     <span
       v-for="(ripple, index) of ripplesArr"
       :key="`ripple_${index}`"
@@ -80,8 +82,8 @@ export default {
         width: addUnit(ripple.size),
         height: addUnit(ripple.size),
       }"
-      :class="classes['fn-ripple']"
-      class="fn-ripple pressed-state-layer"
+      :class="[ns.e('span'), classes[ns.e('span')]]"
+      class="pressed-state-layer"
     />
   </span>
 </template>
