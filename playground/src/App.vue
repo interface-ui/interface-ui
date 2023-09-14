@@ -42,7 +42,6 @@ const changTheme = () => {
       label="Right"
       v-model="checked"
       required
-      disabled
     >
     </fn-form-label>
     <!-- <fn-form-label label="Left" label-placement="left">
