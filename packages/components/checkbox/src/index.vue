@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { computed, useAttrs } from 'vue'
+import { computed, defineComponent, useAttrs } from 'vue'
 import { UPDATE_MODEL_EVENT } from '@fusion-ui/constants'
 import { useCheckbox } from '@fusion-ui/hooks'
 import type { CheckboxStatus } from '../src/checkbox'
@@ -30,9 +30,10 @@ const checked = computed<boolean>({
 </script>
 
 <script lang="ts">
-export default {
+export default defineComponent({
   name: 'FnCheckbox',
-}
+  inheritAttrs: false,
+})
 </script>
 
 <template>

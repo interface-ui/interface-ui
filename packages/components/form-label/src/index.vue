@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { computed } from 'vue'
+import { computed, defineComponent } from 'vue'
 import { useNamespace } from '@fusion-ui/utils/useNamespace'
 import { isString } from '@fusion-ui/utils/types'
 import FnTypography from '../../typography'
@@ -19,9 +19,10 @@ const classList = computed(() => {
 </script>
 
 <script lang="ts">
-export default {
+export default defineComponent({
   name: 'FnFormLabel',
-}
+  inheritAttrs: false,
+})
 </script>
 
 <template>
