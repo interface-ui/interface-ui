@@ -4,8 +4,8 @@ import {
   onMounted,
   onUnmounted,
   reactive,
-  ref,
-  watchEffect,
+  // ref,
+  // watchEffect,
 } from 'vue'
 import { addUnit } from '@fusion-ui/utils/dom'
 import { useRipple } from '@fusion-ui/hooks'
@@ -15,7 +15,7 @@ import { rippleProps } from './ripple'
 
 const props = defineProps(rippleProps)
 const ripplesArr = reactive<RippleStyle[]>([])
-const duration = ref<number>(600)
+// const duration = ref<number>(600)
 const parent = getCurrentInstance()?.parent
 const ns = useNamespace('ripple')
 const { classes } = useRipple(props, ns)
@@ -40,16 +40,16 @@ const clear = () => {
   }
 }
 
-watchEffect(() => {
-  if (ripplesArr.length > 0) {
-    clear()
+// watchEffect(() => {
+//   if (ripplesArr.length > 0) {
+//     clear()
 
-    bounce = setTimeout(() => {
-      ripplesArr.length = 0
-      clear()
-    }, duration.value * 4)
-  }
-})
+//     bounce = setTimeout(() => {
+//       ripplesArr.length = 0
+//       clear()
+//     }, duration.value * 4)
+//   }
+// })
 
 onMounted(() => {
   if (parent)

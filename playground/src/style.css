@@ -31,6 +31,9 @@ h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
+.fn-button + .fn-button {
+  margin-left: 10px;
+}
 
 button {
   border-radius: 8px;

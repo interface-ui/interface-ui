@@ -7,7 +7,7 @@ import './style.css'
 // import 'fusion-ui-vue/dist/styles/index.css' // 打包后的全量样式
 import '@fusion-ui/components/checkbox/src/index.less' // 开发调试的样式
 import '@fusion-ui/components/ripple/src/index.less' // 开发调试的样式
-import '@fusion-ui/components/form-label/src/index.less' // 开发调试的样式
+import '@fusion-ui/components/button/src/index.less' // 开发调试的样式
 
 // import RouterView from './RouterHello.vue'
 

@@ -1,49 +1,44 @@
+import type {
+  ThemeCallBack,
+  ThemePaletteColor,
+} from '@fusion-ui/theme/src/use-theme/theme'
 import type { ExtractPropTypes, PropType } from 'vue'
+import { type ComponentSize, componentSizes } from '@fusion-ui/constants'
 
-import type { ComponentState } from '../../../constans/state'
-
-export type ButtonNativeType = 'button' | 'reset' | 'submit'
-export type ButtonShape = 'round' | 'pill' | 'circle' | 'plain'
-export type ButtonSize = 'mini' | 'small' | 'medium' | 'large'
-export type ButtonType = 'default' | 'primary' | 'link' | 'dashed'
+export const buttonVariants = ['text', 'filled', 'outline'] as const
+export type ButtonVariant = typeof buttonVariants[number]
+export const buttonShapes = ['rounded', 'fullRounded', 'square'] as const
+export type ButtonShape = typeof buttonShapes[number]
 
 export const buttonProps = {
-  type: {
-    type: String as PropType<ButtonType>,
-    default: '',
-  },
-  nativeType: {
-    type: String as PropType<ButtonNativeType>,
-    default: 'button',
+  variant: {
+    type: String as PropType<ButtonVariant>,
+    value: buttonVariants,
+    default: 'filled',
   },
   shape: {
     type: String as PropType<ButtonShape>,
-    default: 'round',
-  },
-  state: {
-    type: String as PropType<ComponentState>,
-    default: '',
+    value: buttonShapes,
+    default: 'rounded',
   },
   size: {
-    type: String as PropType<ButtonSize>,
+    type: String as PropType<ComponentSize>,
+    value: componentSizes,
     default: 'medium',
   },
-  icon: {
-    type: String,
-    default: '',
-  },
   color: {
-    type: String,
-    default: '',
+    type: [String, Function] as PropType<
+      ThemeCallBack | ThemePaletteColor | string
+    >,
+    default: 'primary',
   },
-  background: {
-    type: String,
-    default: '',
-  },
-  disabled: Boolean,
-  enableRipple: {
+  disableRipple: {
     type: Boolean,
-    default: true,
+    default: false,
+  },
+  disableElevation: {
+    type: Boolean,
+    default: false,
   },
 }
 

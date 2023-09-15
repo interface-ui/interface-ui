@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { FnButton } from '@fusion-ui/components'
+import { FnButton, FnCheckbox } from '@fusion-ui/components'
 import { ref } from 'vue'
 const button = ref('深色')
 
@@ -17,7 +17,7 @@ const changTheme = () => {
 }
 // const checkedNames = ref([])
 
-// const yyy = ref(true)
+const yyy = ref(true)
 // const value1 = ref(10)
 </script>
 
@@ -32,25 +32,22 @@ const changTheme = () => {
   <!-- -------------------新组建开发调试------------------- -->
 
   <div class="content">
-    <div class="label-small">Label-small</div>
-    <div class="label-medium">Label-medium</div>
-    <div class="label-large">Label-large</div>
-
-    <div class="body-small">Body-small</div>
-    <div class="body-medium">Body-medium</div>
-    <div class="body-large">Body-large</div>
-
-    <div class="title-small">Title-small</div>
-    <div class="title-medium">Title-medium</div>
-    <div class="title-large">Title-large</div>
-
-    <h6 class="headline-small">Headline-small</h6>
-    <h5 class="headline-medium">Headline-medium</h5>
-    <h4 class="headline-large">Headline-large</h4>
-
-    <h3 class="display-small">Display-small</h3>
-    <h2 class="display-medium">Display-medium</h2>
-    <h1 class="display-large">Display-large</h1>
+    <fn-checkbox v-model="yyy"></fn-checkbox>
+    <div>
+      <fn-button size="small" variant="text">text</fn-button>
+      <fn-button size="small">Filled</fn-button>
+      <fn-button size="small" variant="outline">outline</fn-button>
+    </div>
+    <div style="margin-top: 10px">
+      <fn-button variant="text">text</fn-button>
+      <fn-button>Filled</fn-button>
+      <fn-button variant="outline">outline</fn-button>
+    </div>
+    <div style="margin-top: 10px">
+      <fn-button size="large" variant="text">text</fn-button>
+      <fn-button size="large">Filled</fn-button>
+      <fn-button size="large" variant="outline">outline</fn-button>
+    </div>
     <!-- <fn-form-label label="Left" label-placement="left">
       <fn-checkbox v-model="checked" size="small" />
     </fn-form-label>

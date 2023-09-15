@@ -4,6 +4,7 @@ import type {
 } from '@fusion-ui/theme/src/use-theme/theme'
 import useTheme from '@fusion-ui/theme/src/use-theme'
 import { computed } from 'vue'
+import { argbFromHex, rgbaFromArgb } from '@material/material-color-utilities'
 
 /**
  * The function to compute color from props
@@ -15,18 +16,25 @@ import { computed } from 'vue'
  */
 const useColor = (
   color: ThemePaletteColor | string | ThemeCallBack,
-  defaultVal?: string
+  rgb = false
 ) => {
   const theme = useTheme()
   return computed(() => {
     if (!color) {
-      return defaultVal ?? null
+      return null
     }
     if (typeof color === 'function') {
+      if (rgb) {
+        const argb = argbFromHex(color(theme))
+        const { r, g, b } = rgbaFromArgb(argb)
+        return `${r}, ${g}, ${b}`
+      }
       return color(theme)
     }
     if (['primary', 'secondary', 'tertiary', 'error'].includes(color)) {
-      return `var(--md-sys-color-${color})`
+      return rgb
+        ? `var(--md-sys-color-${color}-rgb)`
+        : `var(--md-sys-color-${color})`
     }
     return color
   })

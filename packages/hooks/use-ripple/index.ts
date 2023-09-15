@@ -6,7 +6,7 @@ import { useJSS } from '../use-jss'
 const jss = useJSS()
 
 export const useRipple = (props: RippleProps, ns: UseNamespaceReturn) => {
-  const $color = useColor(props.color, 'var(--fn-sys-color-ripple)')
+  const $color = useColor(props.color)
 
   const styles = {
     [ns.e('span')]: {
