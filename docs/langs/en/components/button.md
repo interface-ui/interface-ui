@@ -14,9 +14,9 @@ Common operation buttons.
 
 ## Usage
 
-### type
+### Basic button
 
-Use ```type``` and ```state``` to define the style of the button.
+The `Button` comes with three variants: text, filled (default), and outlined
 
 <demo src="../../../example/button/types.vue"></demo>
 

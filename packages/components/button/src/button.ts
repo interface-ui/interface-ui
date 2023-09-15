@@ -5,7 +5,7 @@ import type {
 import type { ExtractPropTypes, PropType } from 'vue'
 import { type ComponentSize, componentSizes } from '@fusion-ui/constants'
 
-export const buttonVariants = ['text', 'filled', 'outline'] as const
+export const buttonVariants = ['text', 'filled', 'outlined'] as const
 export type ButtonVariant = typeof buttonVariants[number]
 export const buttonShapes = ['rounded', 'fullRounded', 'square'] as const
 export type ButtonShape = typeof buttonShapes[number]

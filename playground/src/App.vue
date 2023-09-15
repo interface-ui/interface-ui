@@ -36,17 +36,17 @@ const yyy = ref(true)
     <div>
       <fn-button size="small" variant="text">text</fn-button>
       <fn-button size="small">Filled</fn-button>
-      <fn-button size="small" variant="outline">outline</fn-button>
+      <fn-button size="small" variant="outlined">outlined</fn-button>
     </div>
     <div style="margin-top: 10px">
       <fn-button variant="text">text</fn-button>
       <fn-button>Filled</fn-button>
-      <fn-button variant="outline">outline</fn-button>
+      <fn-button variant="outlined">outlined</fn-button>
     </div>
     <div style="margin-top: 10px">
       <fn-button size="large" variant="text">text</fn-button>
       <fn-button size="large">Filled</fn-button>
-      <fn-button size="large" variant="outline">outline</fn-button>
+      <fn-button size="large" variant="outlined">outlined</fn-button>
     </div>
     <!-- <fn-form-label label="Left" label-placement="left">
       <fn-checkbox v-model="checked" size="small" />
