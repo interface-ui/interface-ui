@@ -2,16 +2,17 @@
 import { computed, ref } from 'vue'
 import { useNamespace } from '@fusion-ui/utils/useNamespace'
 import { isString } from '@fusion-ui/utils/types'
+import { useDrawer } from '@fusion-ui/hooks'
 import { FnIcon } from '../../icon'
-import { avatarProps } from './drawer'
-
-const props = defineProps(avatarProps)
+import { drawerProps } from './drawer'
+const props = defineProps(drawerProps)
+const { visible, doClose } = useDrawer(props)
 
 const targetDivRef = ref(null)
 
 const ns = useNamespace('drawer')
 
-const avatarClassList = computed(() => {
+const drawerClassList = computed(() => {
   const { direction } = props
   const classList = [ns.b()]
   if (isString(direction))
@@ -19,12 +20,11 @@ const avatarClassList = computed(() => {
   return classList
 })
 
-const visible = ref(true)
-
 const handleClose = (event: MouseEvent) => {
   const targetDiv = targetDivRef.value as HTMLElement | null
-  if (!targetDiv?.contains(event.target as HTMLElement))
-    visible.value = false
+  if (!targetDiv?.contains(event.target as HTMLElement)) {
+    doClose()
+  }
 }
 </script>
 
@@ -35,14 +35,20 @@ export default {
 </script>
 
 <template>
-  <Transition name="fn-drawer">
+  <teleport to="body">
     <div
-      v-show="visible"
+      v-if="visible"
       ref="elRef"
       class="fn-overlay"
+      :class="`slide-fade-${props.direction}`"
       @click="handleClose"
-    >
-      <div ref="targetDivRef" :class="avatarClassList">
+    />
+
+    <transition :name="`slide-fade-${props.direction}`">
+      <div
+        v-show="visible" ref="targetDivRef"
+        :class="drawerClassList"
+      >
         <header>
           <span class="drawer-title">
             Title
@@ -55,6 +61,6 @@ export default {
           <slot />
         </div>
       </div>
-    </div>
-  </Transition>
+    </transition>
+  </teleport>
 </template>

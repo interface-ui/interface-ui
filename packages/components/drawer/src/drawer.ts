@@ -2,31 +2,21 @@ import type { ExtractPropTypes } from 'vue'
 import {
   buildProps,
 } from '@fusion-ui/utils/vue/props'
-import { componentDirection, componentSizes } from '@fusion-ui/constants'
+import { UPDATE_MODEL_EVENT, componentDirection } from '@fusion-ui/constants'
+import { isBoolean } from '@fusion-ui/utils/types'
 
-export const avatarProps = buildProps({
-  size: {
-    type: [Number,],
-    values: componentSizes,
-    default: '',
-  },
+export const drawerProps = buildProps({
+  modelValue: Boolean,
   direction: {
     type: String,
     values: componentDirection,
     default: 'left',
   },
-  type: {
-    type: String,
-    default: 'secondary',
-    values: ['primary', 'error', 'secondary', 'tertiary'],
-    validator: value =>
-      ['primary', 'error', 'secondary', 'tertiary'].includes(value),
-  },
 
 } as const)
-// type: definePropType<StandardLonghandProperties['objectFit']>(String),
-export type AvatarProps = ExtractPropTypes<typeof avatarProps>
 
-export const avatarEmits = {
-  error: (evt: Event) => evt instanceof Event,
+export type DrawerProps = ExtractPropTypes<typeof drawerProps>
+export const drawerEmits = {
+  [UPDATE_MODEL_EVENT]: (value: boolean) => isBoolean(value),
 }
+export type DrawerEmits = typeof drawerEmits
