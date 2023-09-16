@@ -53,7 +53,7 @@ export default {
           <span class="drawer-title">
             Title
           </span>
-          <span class="drawer-close" @click="visible = false">
+          <span class="drawer-close" @click="doClose">
             <fn-icon icon="ic:round-close" size="25" />
           </span>
         </header>

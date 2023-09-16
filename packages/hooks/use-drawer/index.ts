@@ -14,7 +14,13 @@ export const useDrawer = (
   const instance = getCurrentInstance()!
   const emit = instance.emit as SetupContext<DrawerEmits>['emit']
   const visible = ref(false)
+  function doOpen() {
+    document.body.style.overflow = 'hidden'
+    visible.value = true
+    emit(UPDATE_MODEL_EVENT, true)
+  }
   function doClose() {
+    document.body.style.overflow = ''
     visible.value = false
     emit(UPDATE_MODEL_EVENT, false)
   }
@@ -23,7 +29,7 @@ export const useDrawer = (
     () => props.modelValue,
     (val) => {
       if (val) {
-        visible.value = true
+        doOpen()
       }
       else {
         if (visible.value)
@@ -34,10 +40,11 @@ export const useDrawer = (
 
   onMounted(() => {
     if (props.modelValue)
-      visible.value = true
+      doOpen()
   })
 
   return {
+    doOpen,
     doClose,
     visible
   }
