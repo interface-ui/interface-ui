@@ -7,6 +7,5 @@
       <fn-button :color="(theme) => theme.colors.cyan[400]"> custom </fn-button>
       <fn-button color="#2E7D32">custom</fn-button>
     </div>
-    <div fscw gap-2 />
   </div>
 </template>
