@@ -18,41 +18,53 @@ Common operation buttons.
 
 The `Button` comes with three variants: text, filled (default), and outlined
 
-<demo src="../../../example/button/types.vue"></demo>
+<demo src="../../../example/button/basic.vue"></demo>
+
+### Text button
+
+Text buttons are used for the lowest priority actions, especially when presenting multiple options.
+
+<demo src="../../../example/button/text.vue"></demo>
+
+### Filled button
+
+Filled buttons have the most visual impact after the FAB, and should be used for important, final actions that complete a flow, like Save, Join now, or Confirm.
+
+<demo src="../../../example/button/filled.vue"></demo>
+
+Use `disable-elevation` prop to remove the elevation.
+
+<demo src="../../../example/button/no-elevation.vue"></demo>
+
+
+### Outlined button
+
+Outlined buttons are medium-emphasis buttons. They contain actions that are important, but aren’t the primary action in an app.
+
+<demo src="../../../example/button/outlined.vue"></demo>
 
 ### size
 
-Buttons stacked small to large sizes.
+Buttons stacked small to large sizes, use `size` prop to change the size.
 
 <demo src="../../../example/button/sizes.vue"></demo>
 
-### state
+### color
 
+The `color` prop makes you can customize the color of component.
+
+<demo src="../../../example/button/color.vue"></demo>
 
 ### shape
 
-Predefined the shape of the button.
+There three shapes can be used: rounded (default), square, and fullRounded
 
 <demo src="../../../example/button/shapes.vue"></demo>
 
-## Custom color
 
-You can customize the color of the button, and the ```state``` attribute will be invalid.
+### Use with icon
 
-The color of the button is defined by the ```color``` attribute, and the background color of the button is defined by the ```background``` attribute.
-
-<demo src="../../../example/button/custom.vue"></demo>
-
-### disabled
-
-You can use the disabled attribute to define whether the button is disabled.
-
-<demo src="../../../example/button/disabled.vue"></demo>
-
-
-### icon
-
-Button with icon.
+Button with icon and label
 
 <demo src="../../../example/button/icon.vue"></demo>
 
