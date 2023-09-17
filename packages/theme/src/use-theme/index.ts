@@ -4,6 +4,7 @@ import type { Scheme } from '@material/material-color-utilities'
 import {
   argbFromHex,
   hexFromArgb,
+  rgbaFromArgb,
   themeFromSourceColor,
 } from '@material/material-color-utilities'
 import { reactive } from 'vue'
@@ -29,8 +30,10 @@ const parseShceme = (scheme: Scheme) => {
   for (const [key, value] of Object.entries(scheme.toJSON())) {
     const token = key.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase()
     const color = hexFromArgb(value)
+    const { r, g, b } = rgbaFromArgb(value)
     palette[key as keyof Palette] = color
     styles[`--md-sys-color-${token}`] = color
+    styles[`--md-sys-color-${token}-rgb`] = `${r}, ${g}, ${b}`
   }
 
   return { palette, styles }
@@ -61,38 +64,14 @@ export const createTheme = (
     const cssStyles = {
       '@media (prefers-color-scheme: light)': {
         '@global': {
-          ':root': {
-            ...lightPalette?.styles,
-            '--fn-sys-color-disabled-0':
-              'rgba(0, 0, 0, var(--md-sys-state-disabled-state-layer-opacity))',
-            '--fn-sys-color-disabled-1': 'rgba(0, 0, 0, 0.15)',
-            '--fn-sys-color-ripple': '#ffffff',
-          },
-          ':root[data-theme="dark"]': {
-            ...darkPalette?.styles,
-            '--fn-sys-color-disabled-0':
-              'rgba(255, 255, 255, var(--md-sys-state-disabled-state-layer-opacity))',
-            '--fn-sys-color-disabled-1': 'rgba(255, 255, 255, 0.15)',
-            '--fn-sys-color-ripple': '#000000',
-          },
+          ':root': lightPalette?.styles,
+          ':root[data-theme="dark"]': darkPalette?.styles,
         },
       },
       '@media (prefers-color-scheme: dark)': {
         '@global': {
-          ':root': {
-            ...lightPalette?.styles,
-            '--fn-sys-color-disabled-0':
-              'rgba(0, 0, 0, var(--md-sys-state-disabled-state-layer-opacity))',
-            '--fn-sys-color-disabled-1': 'rgba(0, 0, 0, 0.15)',
-            '--fn-sys-color-ripple': '#ffffff',
-          },
-          ':root[data-theme="dark"]': {
-            ...darkPalette?.styles,
-            '--fn-sys-color-disabled-0':
-              'rgba(255, 255, 255, var(--md-sys-state-disabled-state-layer-opacity))',
-            '--fn-sys-color-disabled-1': 'rgba(255, 255, 255, 0.15)',
-            '--fn-sys-color-ripple': '#000000',
-          },
+          ':root': lightPalette?.styles,
+          ':root[data-theme="dark"]': darkPalette?.styles,
         },
       },
     }

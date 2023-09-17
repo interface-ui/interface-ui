@@ -1,3 +1,4 @@
+/* eslint-disable quote-props */
 import {
   defineConfig,
   presetAttributify,
@@ -29,9 +30,9 @@ export default defineConfig({
   transformers: [transformerVariantGroup(), transformerDirectives()],
   shortcuts: [
     {
-      'fscw': 'flex justify-start items-center flex-wrap w-full',
+      fscw: 'flex justify-start items-center flex-wrap w-full',
       'o-demo_wrapper':
-        'p-8 text-#282f38  border border-solid border-light-700 rounded-md dark:bg-dark-700 dark:border-#4C4D4F flex [&:o-button-base]:!c-context',
+        'p-8 text-#282f38  border border-solid border-light-700 rounded-md dark:bg-dark-700 dark:border-#4C4D4F flex [&:o-button-base]:!c-context justify-center',
       'o-demo_actions': 'flex justify-end pt-3 gap-2',
       'o-demo_action_item':
         'relative outline-none flex justify-center items-center w-7 h-7 p-0 rounded-full border border-solid border-light-900 dark:border-dark-900 bg-white dark:bg-#38383A cursor-pointer hover:bg-#E5E6EB dark:hover:bg-dark:300',
@@ -42,7 +43,7 @@ export default defineConfig({
         'flex flex-col  items-center space-x-3 p-4 rounded border border-light-500 hover:bg-#F2F2F2 hover:-translate-y-2 !duration-400 dark:border-#4C4D4F dark:hover:bg-dark-300 !transition-all',
       'o-overview_cover': 'children-w-full children-aspect-video',
       'o-overview_body': 'flex p-4 !text-base flex-1 flex-col gap-2',
-      'overview_body_title': 'mb-2 flex items-center gap-2 !text-lg font-bold',
+      overview_body_title: 'mb-2 flex items-center gap-2 !text-lg font-bold',
     },
   ],
 }) as any

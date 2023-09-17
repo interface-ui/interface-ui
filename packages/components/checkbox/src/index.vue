@@ -1,10 +1,10 @@
 <script lang="ts" setup>
 import { computed, useAttrs } from 'vue'
-import { UPDATE_MODEL_EVENT } from '@fusion-ui/constants'
+import { UPDATE_MODEL_EVENT, iconSize } from '@fusion-ui/constants'
 import { useCheckbox } from '@fusion-ui/hooks'
 import { useNamespace } from '@fusion-ui/utils/useNamespace'
 import type { CheckboxStatus } from '../src/checkbox'
-import { checkboxProps, iconSize, iconType } from '../src/checkbox'
+import { checkboxProps, iconType } from '../src/checkbox'
 import FnRipple from '../../ripple'
 import FnIcon from '../../icon'
 
@@ -40,7 +40,7 @@ export default {
 <template>
   <span :class="[ns.b(), ns.m(props.size), classes[ns.b()]]">
     <slot
-      :icon="{ checked, size: iconSize[props.size], color: props.color }"
+      v-bind="{ checked, size: iconSize[props.size], color: props.color }"
       name="icon"
     >
       <fn-icon

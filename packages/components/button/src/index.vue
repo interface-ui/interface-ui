@@ -1,35 +1,20 @@
-<script setup lang="ts">
-import { ref, toRefs } from 'vue'
-import { UseButton } from '@fusion-ui/hooks'
-import { buttonProps } from '../src/button'
+<script lang="ts" setup>
+import { useNamespace } from '@fusion-ui/utils/useNamespace'
+import { computed } from 'vue'
+import { useButton } from '@fusion-ui/hooks'
+import { iconSize } from '@fusion-ui/constants'
 import FnRipple from '../../ripple'
+import { buttonProps } from './button'
+
 const props = defineProps(buttonProps)
-const emits = defineEmits<{
-  (e: 'click', event: MouseEvent): void
-}>()
+const ns = useNamespace('button')
+const { classes } = useButton(props, ns)
 
-const { classList, styleList } = UseButton(props)
-
-const buttonEl = ref<HTMLButtonElement>()
-
-const handleClick = (event: MouseEvent) => {
-  const { disabled } = toRefs(props)
-  /** 禁用则返回 */
-  if (disabled.value) {
-    /**
-     * 阻止默认行为
-     *
-     * @see event.preventDefault https://developer.mozilla.org/zh-CN/docs/Web/API/Event/preventDefault
-     */
-    event.preventDefault()
-    return
-  }
-
-  emits('click', event)
-}
-
-defineExpose({
-  el: buttonEl,
+const classList = computed(() => {
+  const { variant, shape, size, disableElevation } = props
+  const classList = [ns.b(), ns.m(size), ns.m(shape), ns.m(variant)]
+  disableElevation && classList.push(ns.m('no-elevation'))
+  return classList
 })
 </script>
 
@@ -41,19 +26,25 @@ export default {
 
 <template>
   <button
-    ref="buttonEl"
-    :type="nativeType"
-    class="fn-rippleBase-root"
-    :class="[...classList]"
-    :style="styleList"
-    @click="handleClick"
+    :class="[
+      ...classList,
+      `title-${props.size}`,
+      classes[ns.b()],
+      classes[ns.m(props.variant)],
+    ]"
   >
-    <span v-if="icon" :style="$slots.default ? 'margin-right: 3px;' : ''">
-      <fn-icon :icon="icon" color="color" size="13" />
-    </span>
-    <span>
-      <slot />
-    </span>
-    <fn-ripple v-if="props.enableRipple && !props.disabled" />
+    <slot
+      name="startIcon"
+      v-bind="{ size: iconSize[props.size], class: ns.em('icon', 'start') }"
+    />
+    <slot />
+    <slot
+      name="endIcon"
+      v-bind="{ size: iconSize[props.size], class: ns.em('icon', 'end') }"
+    />
+    <fn-ripple
+      v-if="!props.disableRipple"
+      :color="props.variant === 'filled' ? undefined : props.color"
+    />
   </button>
 </template>

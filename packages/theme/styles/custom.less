@@ -1,0 +1,23 @@
+:root {
+  /* The var that will switch between different theme mode */
+  --fn-sys-color-switch: var(--fn-ref-palette-white);
+  --fn-sys-color-switch-reverse: var(--fn-ref-palette-black);
+  --fn-sys-color-disabled-level-0: color-mix(
+    in srgb,
+    var(--fn-sys-color-switch-reverse)
+      var(--md-sys-state-disabled-state-layer-opacity-percentage),
+    var(--fn-sys-color-switch) 0%
+  );
+  --fn-sys-color-disabled-level-1: color-mix(
+    in srgb,
+    var(--fn-sys-color-switch-reverse) 10%,
+    var(--fn-sys-color-switch) 0%
+  );
+  --fn-sys-color-ripple: var(--fn-sys-color-switch);
+}
+
+:root[data-theme='dark'] {
+  /* The var that will switch between different theme mode */
+  --fn-sys-color-switch: var(--fn-ref-palette-black);
+  --fn-sys-color-switch-reverse: var(--fn-ref-palette-white);
+}

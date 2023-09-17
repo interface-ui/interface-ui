@@ -8,12 +8,11 @@ const checked = ref<boolean>(false)
   <div space-y-2>
     <div fscw gap-2>
       <fn-checkbox v-model="checked" color="#6366f1">
-        <template #icon="{ icon }">
+        <template #icon="icon">
           <fn-icon
-            :size="icon.size"
-            :color="icon.color"
+            v-bind="icon"
             :icon="
-              icon.checked
+              checked
                 ? 'material-symbols:star'
                 : 'material-symbols:star-outline'
             "
@@ -21,12 +20,11 @@ const checked = ref<boolean>(false)
         </template>
       </fn-checkbox>
       <fn-checkbox v-model="checked" color="#f59e0b">
-        <template #icon="{ icon }">
+        <template #icon="icon">
           <fn-icon
-            :size="icon.size"
-            :color="icon.color"
+            v-bind="icon"
             :icon="
-              icon.checked
+              checked
                 ? 'material-symbols:bedtime'
                 : 'material-symbols:bedtime-outline'
             "
