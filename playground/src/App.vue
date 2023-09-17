@@ -32,16 +32,16 @@ const yyy = ref(true)
   <!-- -------------------新组建开发调试------------------- -->
 
   <div class="content">
-    <fn-checkbox v-model="yyy"></fn-checkbox>
+    <fn-checkbox disabled v-model="yyy"></fn-checkbox>
     <div>
       <fn-button size="small" variant="text">text</fn-button>
       <fn-button size="small">Filled</fn-button>
       <fn-button size="small" variant="outlined">outlined</fn-button>
     </div>
     <div style="margin-top: 10px">
-      <fn-button variant="text">text</fn-button>
-      <fn-button>Filled</fn-button>
-      <fn-button variant="outlined">outlined</fn-button>
+      <fn-button disabled variant="text">text</fn-button>
+      <fn-button disabled>Filled</fn-button>
+      <fn-button disabled variant="outlined">outlined</fn-button>
     </div>
     <div style="margin-top: 10px">
       <fn-button size="large" variant="text">text</fn-button>

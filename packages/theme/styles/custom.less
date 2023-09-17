@@ -2,21 +2,16 @@
   /* The var that will switch between different theme mode */
   --fn-sys-color-switch: var(--fn-ref-palette-white);
   --fn-sys-color-switch-reverse: var(--fn-ref-palette-black);
-  // --fn-sys-color-disabled-0: rgba(
-  //   var(--fn-sys-color-switch-reverse),
-  //   var(--md-sys-state-disabled-state-layer-opacity)
-  // );
-  // --fn-sys-color-disabled-1: rgba(var(--fn-sys-color-switch-reverse), 0.15);
-  --fn-sys-color-disabled-0: color-mix(
-    in srg,
+  --fn-sys-color-disabled-level-0: color-mix(
+    in srgb,
     var(--fn-sys-color-switch-reverse)
       var(--md-sys-state-disabled-state-layer-opacity-percentage),
-    white 0%
+    var(--fn-sys-color-switch) 0%
   );
-  --fn-sys-color-disabled-1: color-mix(
-    in srg,
-    var(--fn-sys-color-switch-reverse) 15%,
-    white 0%
+  --fn-sys-color-disabled-level-1: color-mix(
+    in srgb,
+    var(--fn-sys-color-switch-reverse) 10%,
+    var(--fn-sys-color-switch) 0%
   );
   --fn-sys-color-ripple: var(--fn-sys-color-switch);
 }
