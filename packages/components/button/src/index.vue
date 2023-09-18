@@ -33,15 +33,7 @@ export default {
       classes[ns.m(props.variant)],
     ]"
   >
-    <slot
-      name="startIcon"
-      v-bind="{ size: iconSize[props.size], class: ns.em('icon', 'start') }"
-    />
-    <slot />
-    <slot
-      name="endIcon"
-      v-bind="{ size: iconSize[props.size], class: ns.em('icon', 'end') }"
-    />
+    <slot v-bind="{ size: iconSize[props.size] }" />
     <fn-ripple
       v-if="!props.disableRipple"
       :color="props.variant === 'filled' ? undefined : props.color"
