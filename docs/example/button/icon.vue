@@ -2,14 +2,14 @@
   <div space-y-2>
     <div fscw gap-2>
       <fn-button variant="outlined">
-        <template #startIcon="icon">
+        <template #default="icon">
           <fn-icon icon="mdi:delete" v-bind="icon" />
+          delete
         </template>
-        delete
       </fn-button>
       <fn-button>
-        save
-        <template #endIcon="icon">
+        <template #default="icon">
+          save
           <fn-icon icon="mdi:content-save" v-bind="icon" />
         </template>
       </fn-button>

@@ -13,17 +13,17 @@ export type ButtonShape = typeof buttonShapes[number]
 export const buttonProps = {
   variant: {
     type: String as PropType<ButtonVariant>,
-    value: buttonVariants,
+    values: buttonVariants,
     default: 'filled',
   },
   shape: {
     type: String as PropType<ButtonShape>,
-    value: buttonShapes,
+    values: buttonShapes,
     default: 'rounded',
   },
   size: {
     type: String as PropType<ComponentSize>,
-    value: componentSizes,
+    values: componentSizes,
     default: 'medium',
   },
   color: {

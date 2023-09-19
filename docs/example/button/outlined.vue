@@ -4,6 +4,5 @@
       <fn-button variant="outlined">outlined</fn-button>
       <fn-button variant="outlined" disabled>disabled</fn-button>
     </div>
-    <div fscw gap-2 />
   </div>
 </template>

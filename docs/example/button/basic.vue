@@ -5,6 +5,5 @@
       <fn-button>filled</fn-button>
       <fn-button variant="outlined">outlined</fn-button>
     </div>
-    <div fscw gap-2 />
   </div>
 </template>

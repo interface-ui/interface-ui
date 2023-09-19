@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { FnButton, FnCheckbox } from '@fusion-ui/components'
+import { FnButton } from '@fusion-ui/components'
 import { ref } from 'vue'
 const button = ref('深色')
 
@@ -15,9 +15,8 @@ const changTheme = () => {
     button.value = '深色'
   }
 }
-// const checkedNames = ref([])
+const checked = ref(false)
 
-const yyy = ref(true)
 // const value1 = ref(10)
 </script>
 
@@ -32,31 +31,29 @@ const yyy = ref(true)
   <!-- -------------------新组建开发调试------------------- -->
 
   <div class="content">
-    <fn-checkbox disabled v-model="yyy"></fn-checkbox>
-    <div>
-      <fn-button size="small" variant="text">text</fn-button>
-      <fn-button size="small">Filled</fn-button>
-      <fn-button size="small" variant="outlined">outlined</fn-button>
-    </div>
-    <div style="margin-top: 10px">
-      <fn-button disabled variant="text">text</fn-button>
-      <fn-button disabled>Filled</fn-button>
-      <fn-button disabled variant="outlined">outlined</fn-button>
-    </div>
-    <div style="margin-top: 10px">
-      <fn-button size="large" variant="text">text</fn-button>
-      <fn-button size="large">Filled</fn-button>
-      <fn-button size="large" variant="outlined">outlined</fn-button>
-    </div>
-    <!-- <fn-form-label label="Left" label-placement="left">
-      <fn-checkbox v-model="checked" size="small" />
-    </fn-form-label>
-    <fn-form-label label="Top" label-placement="top">
-      <fn-checkbox v-model="checked" size="small" />
-    </fn-form-label>
-    <fn-form-label label="Bottom" label-placement="bottom">
-      <fn-checkbox v-model="checked" size="small" />
-    </fn-form-label> -->
+    <fn-checkbox v-model="checked" color="#6366f1">
+      <template #default="icon">
+        <fn-icon
+          v-bind="icon"
+          :icon="
+            checked ? 'material-symbols:star' : 'material-symbols:star-outline'
+          "
+        />
+      </template>
+    </fn-checkbox>
+    <fn-button variant="outlined"> delete </fn-button>
+    <fn-button variant="outlined">
+      <template #default="icon">
+        <fn-icon icon="mdi:delete" v-bind="icon" />
+        delete
+      </template>
+    </fn-button>
+    <fn-button>
+      <template #default="icon">
+        save
+        <fn-icon icon="mdi:content-save" v-bind="icon" />
+      </template>
+    </fn-button>
 
     <!-- <fnAvatar
       alt="Remy Sharp"
