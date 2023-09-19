@@ -11,17 +11,9 @@ const ns = useNamespace('button')
 const { classes } = useButton(props, ns)
 
 const classList = computed(() => {
-  const { variant, shape, size, disableElevation } = props
-  const classList = [ns.b(), ns.m(size), ns.m(shape), ns.m(variant)]
-  disableElevation && classList.push(ns.m('no-elevation'))
-  return classList
+  const { variant, shape, size } = props
+  return [ns.b(), ns.m(size), ns.m(shape), ns.m(variant)]
 })
-</script>
-
-<script lang="ts">
-export default {
-  name: 'FnButton',
-}
 </script>
 
 <template>

@@ -4,6 +4,5 @@
       <fn-button variant="text">text</fn-button>
       <fn-button variant="text" disabled>disabled</fn-button>
     </div>
-    <div fscw gap-2 />
   </div>
 </template>
