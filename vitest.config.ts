@@ -1,7 +1,7 @@
+import { resolve } from 'node:path'
 import { defineConfig } from 'vitest/config'
 import Vue from '@vitejs/plugin-vue'
 import VueJsx from '@vitejs/plugin-vue-jsx'
-
 export default defineConfig({
   plugins: [Vue() as any, VueJsx() as any],
   optimizeDeps: {
@@ -14,5 +14,12 @@ export default defineConfig({
     transformMode: {
       web: [/\.[jt]sx$/],
     },
+
+    include: ['packages/components/**/__test__/*.spec.ts'],
+    deps: {
+      inline: ['@vue', '@vueuse', 'vue-demi', '@vue/composition-api'],
+    },
+    setupFiles: [resolve(__dirname, './vitestSetup.ts')],
+    reporters: 'dot',
   },
 })
