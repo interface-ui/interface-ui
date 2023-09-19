@@ -1,4 +1,4 @@
-.fn-overlay {
+.fn-drawer--overlay {
   position: fixed;
   top: 0;
   right: 0;
@@ -9,14 +9,14 @@
   overflow: hidden;
   background-color: rgba(0, 0, 0, .5);
   overflow: auto;
-
+  transition: all .3s;
 }
 
 .fn-drawer {
   position: fixed;
   z-index: 2001;
   box-sizing: border-box;
-  background-color: #353535;
+  background-color: var(--fn-sys-color-switch);
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -24,7 +24,6 @@
   header {
     color: #72767b;
     display: flex;
-    margin-bottom: 32px;
     padding: 20px;
     padding-bottom: 0;
 
@@ -45,28 +44,27 @@
   &--top {
     top: 0;
     width: 100%;
-    height: 30%;
-    // animation: slideInFromTop .3s ease-in-out;
+    height: auto;
   }
 
   &--left {
     left: 0;
     top: 0;
-    width: 30%;
+    width: 250px;
     height: 100%;
   }
 
   &--right {
     right: 0;
     top: 0;
-    width: 30%;
+    width: 250px;
     height: 100%;
   }
 
   &--bottom {
     bottom: 0;
     width: 100%;
-    height: 30%;
+    height: auto;
   }
 }
 
@@ -80,7 +78,7 @@
 
 .slide-fade {
   each(@direction, .(@v) {
-      &-@{v} {
+      &--@{v} {
         &-enter-active,
         &-leave-active {
           transition: all .3s;
@@ -100,30 +98,30 @@
       }
 
       & when (@v =top) {
-        &-@{v}-enter-from,
-        &-@{v}-leave-to {
+        &--@{v}-enter-from,
+        &--@{v}-leave-to {
           transform:translateY(-100%) !important;
         }
       }
 
       & when (@v =left) {
-        &-@{v}-enter-from,
-        &-@{v}-leave-to {
+        &--@{v}-enter-from,
+        &--@{v}-leave-to {
           transform:translateX(-100%) !important;
         }
       }
 
       & when (@v =right) {
-        &-@{v}-enter-from,
-        &-@{v}-leave-to {
+        &--@{v}-enter-from,
+        &--@{v}-leave-to {
           transform:translateX(100%) !important;
         }
       }
 
       & when (@v =bottom) {
 
-        &-@{v}-enter-from,
-        &-@{v}-leave-to {
+        &--@{v}-enter-from,
+        &--@{v}-leave-to {
           transform:translateY(100%) !important;
         }
       }

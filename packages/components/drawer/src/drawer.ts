@@ -2,14 +2,14 @@ import type { ExtractPropTypes } from 'vue'
 import {
   buildProps,
 } from '@fusion-ui/utils/vue/props'
-import { UPDATE_MODEL_EVENT, componentDirection } from '@fusion-ui/constants'
+import { UPDATE_MODEL_EVENT } from '@fusion-ui/constants'
 import { isBoolean } from '@fusion-ui/utils/types'
-
 export const drawerProps = buildProps({
   modelValue: Boolean,
+  title: String,
   direction: {
     type: String,
-    values: componentDirection,
+    values: ['left', 'right', 'top', 'bottom'],
     default: 'left',
   },
 

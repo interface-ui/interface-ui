@@ -85,6 +85,10 @@ export const enComponents = [
     text: 'Navigation',
     items: [
       {
+        text: 'Drawer',
+        link: '/langs/en/components/drawer',
+      },
+      {
         text: 'Breadcrumb',
         link: '/langs/zh/components/breadcrumb',
       },
