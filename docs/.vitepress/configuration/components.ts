@@ -115,6 +115,10 @@ export const zhComponents = [
         link: '/langs/zh/components/input',
       },
       {
+        text: 'Checkbox 多选框',
+        link: '/langs/en/components/checkbox',
+      },
+      {
         text: 'Radio 单选框',
         link: '/langs/zh/components/radio',
       },
@@ -173,6 +177,10 @@ export const zhComponents = [
   {
     text: 'Navigation 导航',
     items: [
+      {
+        text: 'Drawer',
+        link: '/langs/zh/components/drawer',
+      },
       {
         text: 'Breadcrumb 面包屑',
         link: '/langs/zh/components/breadcrumb',
