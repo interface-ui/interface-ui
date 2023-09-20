@@ -1,5 +1,5 @@
 ---
-title: Tag
+title: Drawer
 lang: en
 ---
 
@@ -12,12 +12,11 @@ lang: en
 This is a drawer that can slide out of the page from ```left``` | ```right``` | ```top``` or ```bottom```.
 
 
-##  基础用法
+## Basic usage
 
-```model-value``` 属性来控制 ```Drawer``` 的显示与隐藏状态
+```model-value``` attribute to control the display and hidden state of ```Drawer```
 
 <demo src="../../../example/drawer/base.vue"></demo>
-
 
 
 
