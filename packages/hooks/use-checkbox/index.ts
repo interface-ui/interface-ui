@@ -10,9 +10,7 @@ export const useCheckbox = (props: CheckboxProps, ns: UseNamespaceReturn) => {
 
   const styles = {
     [ns.b()]: {
-      '&:not([disabled]):hover::after': {
-        backgroundColor: $color.value ?? 'var(--md-sys-color-primary)',
-      },
+      '--fn-checkbox-color': $color.value ?? 'var(--md-sys-color-primary)',
     },
     [ns.e('icon')]: {
       color: $color.value ?? 'var(--md-sys-color-primary)',

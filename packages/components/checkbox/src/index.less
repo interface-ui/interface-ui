@@ -1,5 +1,3 @@
-@import '../../../styles/base.less';
-
 .fn-checkbox {
   display: inline-flex;
   -webkit-box-align: center;
@@ -32,9 +30,9 @@
   &:not([disabled]):hover {
     background-color: color-mix(
       in srgb,
-      var(--md-sys-color-primary)
+      var(--fn-checkbox-color)
         var(--md-sys-state-hover-state-layer-opacity-percentage),
-      var(--fn-sys-color-switch) 0%
+      var(--fn-sys-color-switch) var(--fn-zero-percentage)
     );
   }
 
