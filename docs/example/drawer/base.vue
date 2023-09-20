@@ -24,7 +24,7 @@ const direction = ref('left')
     title="Drawer Title"
     :direction="direction"
   >
-    <div class="p-5">
+    <div>
       <p>Some contents...</p>
       <p>Some contents...</p>
       <p>Some contents...</p>

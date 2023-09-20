@@ -45,10 +45,7 @@ export const enComponents = [
         text: 'Card',
         link: '/langs/en/components/card',
       },
-      {
-        text: 'Progress',
-        link: '/langs/en/components/progress',
-      },
+
       {
         collapsible: false,
         text: 'Tag',
@@ -90,7 +87,7 @@ export const enComponents = [
       },
       {
         text: 'Breadcrumb',
-        link: '/langs/zh/components/breadcrumb',
+        link: '/langs/en/components/breadcrumb',
       },
     ],
   },
