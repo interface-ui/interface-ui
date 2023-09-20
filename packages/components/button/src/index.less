@@ -10,10 +10,16 @@
   text-transform: uppercase !important;
   border: none;
   gap: 8px;
+  vertical-align: middle;
+  cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
     color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+
+  &:is([disabled]) {
+    cursor: default;
+  }
 
   &--filled {
     background-color: var(--fn-button-color);
@@ -27,7 +33,6 @@
       );
     }
     &:is([disabled]) {
-      cursor: default;
       background-color: var(--fn-sys-color-disabled-level-1) !important;
       color: var(--fn-sys-color-disabled-level-0) !important;
       box-shadow: var(--md-sys-elevation-level-0);
@@ -35,6 +40,7 @@
   }
   &--text {
     color: var(--fn-button-color);
+    background-color: transparent;
     &:not([disabled]):hover {
       background-color: color-mix(
         in srgb,
@@ -44,12 +50,12 @@
       );
     }
     &:is([disabled]) {
-      cursor: default;
       color: var(--fn-sys-color-disabled-level-0) !important;
     }
   }
   &--outlined {
     color: var(--fn-button-color);
+    background-color: transparent;
     border-width: 1px;
     border-style: solid;
     border-color: color-mix(
@@ -67,7 +73,6 @@
       );
     }
     &:is([disabled]) {
-      cursor: default;
       color: var(--fn-sys-color-disabled-level-0) !important;
       border-color: var(--fn-sys-color-disabled-level-1) !important;
     }
