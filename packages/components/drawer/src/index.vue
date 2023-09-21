@@ -11,7 +11,9 @@ const { visible, doClose } = useDrawer(props)
 const targetDivRef = ref(null)
 
 const ns = useNamespace('drawer')
-
+const drawerOverlay = computed(() => {
+  return `${ns.b()}--overlay`
+})
 const drawerClassList = computed(() => {
   const { direction } = props
   const classList = [ns.b()]
@@ -39,19 +41,18 @@ export default {
     <div
       v-if="visible"
       ref="elRef"
-      class="fn-overlay"
-      :class="`slide-fade-${props.direction}`"
+      :class="drawerOverlay"
       @click="handleClose"
     />
 
-    <transition :name="`slide-fade-${props.direction}`">
+    <transition :name="`slide-fade--${props.direction}`">
       <div
         v-show="visible" ref="targetDivRef"
         :class="drawerClassList"
       >
         <header>
           <span class="drawer-title">
-            Title
+            {{ props.title }}
           </span>
           <span class="drawer-close" @click="doClose">
             <fn-icon icon="ic:round-close" size="25" />

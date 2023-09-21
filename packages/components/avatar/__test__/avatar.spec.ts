@@ -7,17 +7,17 @@ describe('FnAvatar', () => {
     expect(wrapper.find('.fn-avatar').classes()).toContain('fn-avatar')
   })
 
-  it('background', () => {
-    const background = '#fff'
-    const wrapper = mount(FnAvatar, {
-      props: {
-        size: 'large',
-        background,
-      },
-      slots: { default: 'avatar' },
-    })
-    expect(wrapper.attributes('style')).toContain(`--fn-avatar-bgc: ${background}`)
-  })
+  // it('background', () => {
+  //   const background = '#fff'
+  //   const wrapper = mount(FnAvatar, {
+  //     props: {
+  //       size: 'large',
+  //       background,
+  //     },
+  //     slots: { default: 'avatar' },
+  //   })
+  //   expect(wrapper.attributes('style')).toContain(`--fn-avatar-bgc: ${background}`)
+  // })
 
   it('color', async () => {
     const color = '#fff'

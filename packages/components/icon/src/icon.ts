@@ -11,7 +11,7 @@ export const iconProps = {
   },
   size: {
     type: String,
-    default: '16',
+    default: '24',
   },
   color: {
     type: [String, Function] as PropType<

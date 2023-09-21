@@ -45,10 +45,7 @@ export const enComponents = [
         text: 'Card',
         link: '/langs/en/components/card',
       },
-      {
-        text: 'Progress',
-        link: '/langs/en/components/progress',
-      },
+
       {
         collapsible: false,
         text: 'Tag',
@@ -85,8 +82,12 @@ export const enComponents = [
     text: 'Navigation',
     items: [
       {
+        text: 'Drawer',
+        link: '/langs/en/components/drawer',
+      },
+      {
         text: 'Breadcrumb',
-        link: '/langs/zh/components/breadcrumb',
+        link: '/langs/en/components/breadcrumb',
       },
     ],
   },
@@ -112,6 +113,10 @@ export const zhComponents = [
       {
         text: 'Input 输入框',
         link: '/langs/zh/components/input',
+      },
+      {
+        text: 'Checkbox 多选框',
+        link: '/langs/en/components/checkbox',
       },
       {
         text: 'Radio 单选框',
@@ -172,6 +177,10 @@ export const zhComponents = [
   {
     text: 'Navigation 导航',
     items: [
+      {
+        text: 'Drawer',
+        link: '/langs/zh/components/drawer',
+      },
       {
         text: 'Breadcrumb 面包屑',
         link: '/langs/zh/components/breadcrumb',

@@ -16,11 +16,13 @@ export const useDrawer = (
   const visible = ref(false)
   function doOpen() {
     document.body.style.overflow = 'hidden'
+    document.body.style.width = 'calc(100% - 6px)'
     visible.value = true
     emit(UPDATE_MODEL_EVENT, true)
   }
   function doClose() {
     document.body.style.overflow = ''
+    document.body.style.width = ''
     visible.value = false
     emit(UPDATE_MODEL_EVENT, false)
   }

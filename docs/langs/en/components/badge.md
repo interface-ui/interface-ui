@@ -14,7 +14,7 @@ Numbers or status markers on buttons and icons.
 
 ## Basic usage
 
-```value``` is used to display the number of new messages, ```color```` is used to set the background color.
+```value``` is used to display the number of new messages, ```color``` is used to set the background color.
 <demo src="../../../example/badge/base.vue"></demo>
 
 
