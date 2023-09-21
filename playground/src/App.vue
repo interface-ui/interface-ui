@@ -15,7 +15,7 @@ const changTheme = () => {
     button.value = '深色'
   }
 }
-const checked = ref(false)
+// const checked = ref(false)
 </script>
 
 <template>
@@ -27,30 +27,26 @@ const checked = ref(false)
   </header>
 
   <!-- -------------------新组建开发调试------------------- -->
-
-  <fn-checkbox v-model="checked" color="#6366f1">
-    <template #default="icon">
-      <fn-icon
-        v-bind="icon"
-        :icon="
-          checked ? 'material-symbols:star' : 'material-symbols:star-outline'
-        "
-      />
-    </template>
-  </fn-checkbox>
   <div class="content">
-    <fn-button variant="outlined"> button </fn-button>
-    <fn-button variant="outlined">
-      <template #default="icon">
-        <fn-icon icon="mdi:delete" v-bind="icon" />
-        delete
-      </template>
-    </fn-button>
-    <fn-button>
-      <template #default="icon">
-        save
-        <fn-icon icon="mdi:content-save" v-bind="icon" />
-      </template>
-    </fn-button>
+    <fn-icon-button size="small" #default="icon">
+      <fn-icon icon="mdi:cake-layered" v-bind="icon" />
+    </fn-icon-button>
+    <fn-icon-button #default="icon">
+      <fn-icon icon="mdi:cake-layered" v-bind="icon" />
+    </fn-icon-button>
+    <fn-icon-button size="large" #default="icon">
+      <fn-icon icon="mdi:cake-layered" v-bind="icon" />
+    </fn-icon-button>
+  </div>
+  <div class="content">
+    <fn-icon-button color="error" #default="icon">
+      <fn-icon icon="mdi:cake-layered" v-bind="icon" />
+    </fn-icon-button>
+    <fn-icon-button #default="icon">
+      <fn-icon icon="mdi:cake-layered" v-bind="icon" />
+    </fn-icon-button>
+    <fn-icon-button #default="icon">
+      <fn-icon icon="mdi:cake-layered" v-bind="icon" />
+    </fn-icon-button>
   </div>
 </template>
