@@ -12,7 +12,13 @@ const { classes } = useIconButton(props, ns)
 
 <template>
   <button :class="[ns.b(), classes[ns.b()]]">
-    <slot v-bind="{ size: iconSize[props.size], color: props.color }" />
+    <slot
+      v-bind="{
+        size: iconSize[props.size],
+        color: props.color,
+        class: [ns.e('icon')],
+      }"
+    />
     <fn-ripple :color="props.color" />
   </button>
 </template>
