@@ -39,7 +39,14 @@ export default {
 
 <template>
   <span :class="[ns.b(), ns.m(props.size), classes[ns.b()]]">
-    <slot v-bind="{ checked, size: iconSize[props.size], color: props.color }">
+    <slot
+      v-bind="{
+        checked,
+        size: iconSize[props.size],
+        color: props.color,
+        class: [ns.e('icon'), classes[ns.e('icon')]],
+      }"
+    >
       <fn-icon
         :class="[ns.e('icon'), classes[ns.e('icon')]]"
         :icon="iconType[status]"

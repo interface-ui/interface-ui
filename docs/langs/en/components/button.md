@@ -76,3 +76,19 @@ Button with icon and label
 ## Slots
 
 <table-block type="slotsEn" :data="slots"></table-block>
+
+## Icon Button
+
+Icons are also appropriate for toggle buttons that allow a single choice to be selected or deselected, such as adding or removing a star to an item.
+
+<demo src="../../../example/icon-button/basic.vue"></demo>
+
+### Size
+
+There are three size provided: small, medium (default), and large
+
+<demo src="../../../example/icon-button/size.vue"></demo>
+
+### color
+
+<demo src="../../../example/icon-button/color.vue"></demo>

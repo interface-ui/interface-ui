@@ -267,6 +267,9 @@ importers:
 
   packages/theme:
     dependencies:
+      '@fontsource/roboto':
+        specifier: ^5.0.8
+        version: 5.0.8
       '@material/material-color-utilities':
         specifier: ^0.2.7
         version: 0.2.7
@@ -1534,6 +1537,10 @@ packages:
 
   /@floating-ui/utils@0.1.1:
     resolution: {integrity: sha512-m0G6wlnhm/AX0H12IOWtK8gASEMffnX08RtKkCgTdHb9JpHKGloI7icFfLg9ZmQeavcvR0PKmzxClyuFPSjKWw==}
+    dev: false
+
+  /@fontsource/roboto@5.0.8:
+    resolution: {integrity: sha512-XxPltXs5R31D6UZeLIV1td3wTXU3jzd3f2DLsXI8tytMGBkIsGcc9sIyiupRtA8y73HAhuSCeweOoBqf6DbWCA==}
     dev: false
 
   /@humanwhocodes/config-array@0.9.5:

@@ -1,4 +1,5 @@
 :root {
+  --fn-zero-percentage: 0%;
   /* The var that will switch between different theme mode */
   --fn-sys-color-switch: var(--fn-ref-palette-white);
   --fn-sys-color-switch-reverse: var(--fn-ref-palette-black);
@@ -6,12 +7,12 @@
     in srgb,
     var(--fn-sys-color-switch-reverse)
       var(--md-sys-state-disabled-state-layer-opacity-percentage),
-    var(--fn-sys-color-switch) 0%
+    var(--fn-sys-color-switch) var(--fn-zero-percentage)
   );
   --fn-sys-color-disabled-level-1: color-mix(
     in srgb,
     var(--fn-sys-color-switch-reverse) 10%,
-    var(--fn-sys-color-switch) 0%
+    var(--fn-sys-color-switch) var(--fn-zero-percentage)
   );
   --fn-sys-color-ripple: var(--fn-sys-color-switch);
 }

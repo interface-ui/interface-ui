@@ -1,4 +1,5 @@
 import FnButton from './button'
+import IconButton from './icon-button'
 import FnAlert from './alert'
 import FnIcon from './icon'
 import FnLink from './link'
@@ -22,6 +23,7 @@ import FnFormLabel from './form-label'
 import FnTypography from './typography'
 export * from './avatarGroup'
 export * from './button'
+export * from './icon-button'
 export * from './alert'
 export * from './icon'
 export * from './link'
@@ -44,6 +46,7 @@ export * from './typography'
 
 export const component = [
   FnButton,
+  IconButton,
   FnAlert,
   FnIcon,
   FnLink,

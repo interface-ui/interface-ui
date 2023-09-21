@@ -15,9 +15,7 @@ const changTheme = () => {
     button.value = '深色'
   }
 }
-const checked = ref(false)
-
-// const value1 = ref(10)
+// const checked = ref(false)
 </script>
 
 <template>
@@ -29,136 +27,26 @@ const checked = ref(false)
   </header>
 
   <!-- -------------------新组建开发调试------------------- -->
-
   <div class="content">
-    <fn-checkbox v-model="checked" color="#6366f1">
-      <template #default="icon">
-        <fn-icon
-          v-bind="icon"
-          :icon="
-            checked ? 'material-symbols:star' : 'material-symbols:star-outline'
-          "
-        />
-      </template>
-    </fn-checkbox>
-    <fn-button variant="outlined"> delete </fn-button>
-    <fn-button variant="outlined">
-      <template #default="icon">
-        <fn-icon icon="mdi:delete" v-bind="icon" />
-        delete
-      </template>
-    </fn-button>
-    <fn-button>
-      <template #default="icon">
-        save
-        <fn-icon icon="mdi:content-save" v-bind="icon" />
-      </template>
-    </fn-button>
-
-    <!-- <fnAvatar
-      alt="Remy Sharp"
-      src="https://mui.com/static/images/avatar/1.jpg"
-    />
-    <fn-checkbox></fn-checkbox>
-    <fn-progress :percentage="value1" />
-    <FnSwtich
-      v-model="yyy"
-      checked-text="dfa"
-      un-checked-text="dfa"
-      un-checked-icon="ri:alarm-line"
-    />
-    <br />
-    <FnAlert
-      center
-      v-model="yyy"
-      checked-text="dfa"
-      title="123"
-      un-checked-text="dfa"
-      un-checked-icon="ri:alarm-line"
-    />
-    <br />
-    <fn-alert
-      state="info"
-      fixed-tip="Message："
-      description="Use flexTip to add front fixed content to the description."
-    >
-      <template #fixedArea>
-        <fn-icon icon="twemoji:1st-place-medal" size="20" />
-      </template>
-    </fn-alert>
-    <fn-alert
-      state="danger"
-      fixed-tip="Message："
-      description="Use flexTip to add front fixed content to the description."
-    >
-      <template #fixedArea>
-        <fn-icon icon="twemoji:1st-place-medal" size="20" />
-      </template>
-    </fn-alert>
-    <fn-alert
-      title="This is a title."
-      description="This is a description."
-      state="info"
-      closable
-    />
-    <fn-alert
-      state="warning"
-      title="This is a title."
-      description="Use flexTip to add front fixed content to the description."
-      closable
-    >
-      <template #fixedArea> Message: </template>
-    </fn-alert>
-
-    <fn-alert
-      state="info"
-      scrollable
-      :duration="10"
-      description="By default, scrolling to the left is enabled using the 'scrollable' attribute, and the duration of the scrollbar can also be defined through the 'duration' attribute."
-    />
-
-    <fn-alert
-      state="success"
-      fixed-tip="Message："
-      scrollable
-      :duration="8"
-      description="By default, scrolling to the left is enabled using the 'scrollable' attribute, and the duration of the scrollbar can also be defined through the 'duration' attribute."
-      closable
-    />
-
-    <fn-alert
-      state="warning"
-      scrollable
-      direction="top"
-      description="By default, scrolling to the left is enabled using the 'scrollable' attribute, and the duration of the scrollbar can also be defined through the 'duration' attribute."
-      closable
-    >
-      <template #fixedArea> Message: </template>
-    </fn-alert>
-
-    <fn-alert
-      state="danger"
-      scrollable
-      direction="top"
-      title="This is a title"
-      :duration="5"
-      description="By default, scrolling to the left is enabled using the 'scrollable' attribute, and the duration of the scrollbar can also be defined through the 'duration' attribute."
-      closable
-    >
-      <template #fixedArea> Message: </template>
-    </fn-alert> -->
+    <fn-icon-button size="small" #default="icon">
+      <fn-icon icon="mdi:cake-layered" v-bind="icon" />
+    </fn-icon-button>
+    <fn-icon-button #default="icon">
+      <fn-icon icon="mdi:cake-layered" v-bind="icon" />
+    </fn-icon-button>
+    <fn-icon-button size="large" #default="icon">
+      <fn-icon icon="mdi:cake-layered" v-bind="icon" />
+    </fn-icon-button>
+  </div>
+  <div class="content">
+    <fn-icon-button color="error" #default="icon">
+      <fn-icon icon="mdi:cake-layered" v-bind="icon" />
+    </fn-icon-button>
+    <fn-icon-button #default="icon">
+      <fn-icon icon="mdi:cake-layered" v-bind="icon" />
+    </fn-icon-button>
+    <fn-icon-button #default="icon">
+      <fn-icon icon="mdi:cake-layered" v-bind="icon" />
+    </fn-icon-button>
   </div>
 </template>
-
-<style scoped>
-header {
-  float: right;
-}
-.content {
-  width: 100%;
-  height: 100%;
-  /* display: flex; */
-  /* text-align: center;
-  justify-content: center; */
-}
-</style>
