@@ -9,11 +9,11 @@ lang: en
   import slots from "../../../example/avatar/description/en-slots.ts";
 </script>
 
-## Avatar
+# Avatar
 
 Avatar components can be used to represent people or objects, supporting image text or icons.
 
-# Basic usage
+## Basic usage
 
 <demo src="../../../example/avatar/base.vue"></demo>
 

@@ -8,7 +8,7 @@ lang: en
 </script>
 
 
-## Badge
+# Badge
 
 Numbers or status markers on buttons and icons.
 

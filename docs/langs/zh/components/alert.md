@@ -9,11 +9,11 @@ lang: zh
   import slots from "../../../example/alert/description/zh-slots.ts";
 </script>
 
-## Alert 提示
+# Alert 提示
 
 用于页面中展示重要的提示信息。
 
-# 基础用法
+## 基础用法
 
 ```Alert``` 组件提供四种类型，由 ```type``` 属性指定，默认值为 ```info```
 <demo src="../../../example/alert/base.vue"></demo>

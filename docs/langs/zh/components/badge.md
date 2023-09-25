@@ -8,7 +8,7 @@ lang: zh
 </script>
 
 
-## Badge
+# Badge
 
 按钮和图标上的数字或状态标记。
 

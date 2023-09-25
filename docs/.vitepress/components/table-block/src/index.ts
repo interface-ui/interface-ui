@@ -1,12 +1,18 @@
 export const vClickOutside = {
+
   mounted(el: any, binding: any) {
+    let isClickOutside = false
     function eventHandler(e: { target: any }) {
       if (el.contains(e.target))
         return false
 
       // 如果绑定的参数是函数，正常情况也应该是函数，执行
-      if (binding.value && typeof binding.value === 'function')
+      if (!isClickOutside && binding.value && typeof binding.value === 'function') {
+        console.log('🤣')
+
         binding.value(e)
+        isClickOutside = true
+      }
     }
     // 用于销毁前注销事件监听
     el.__click_outside__ = eventHandler

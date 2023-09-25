@@ -9,12 +9,12 @@ lang: zh
 </script>
 
 
-## Input 输入框
+# Input 输入框
 
 通过键盘输入字符
 
 
-# 基础用法
+## 基础用法
 
 <demo src="../../../example/input/base.vue"></demo>
 

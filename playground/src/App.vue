@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { FnButton } from '@fusion-ui/components'
+import { FnButton,FnLink } from '@fusion-ui/components'
 import { ref } from 'vue'
 const button = ref('深色')
 
@@ -28,6 +28,9 @@ const changTheme = () => {
 
   <!-- -------------------新组建开发调试------------------- -->
   <div class="content">
+    <fn-link type="success">
+        sucess
+      </fn-link>
     <fn-icon-button size="small" #default="icon">
       <fn-icon icon="mdi:cake-layered" v-bind="icon" />
     </fn-icon-button>

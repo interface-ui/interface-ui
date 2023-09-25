@@ -9,11 +9,11 @@ lang: zh
   import slots from "../../../example/avatar/description/zh-slots.ts";
 </script>
 
-## Avatar 图片头像
+# Avatar 图片头像
 
 Avatar 组件可以用来代表人物或对象, 支持图片文字或者图标。
 
-# 基础用法
+## 基础用法
 
 <demo src="../../../example/avatar/base.vue"></demo>
 

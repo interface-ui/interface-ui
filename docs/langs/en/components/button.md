@@ -92,3 +92,12 @@ There are three size provided: small, medium (default), and large
 ### color
 
 <demo src="../../../example/icon-button/color.vue"></demo>
+
+
+## Attributes
+
+<table-block type="propsEn" :data="props"></table-block>
+
+## Slots
+
+<table-block type="slotsEn" :data="slots"></table-block>

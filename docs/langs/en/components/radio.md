@@ -9,12 +9,12 @@ lang: en
 </script>
 
 
-## Radio
+# Radio
 
 Perform selection operations
 
 
-# Basic usage
+## Basic usage
 
 You only need to set the ```v-model``` binding variable, and ```value``` as the selected value.
 <demo src="../../../example/radio/base.vue"></demo>

@@ -66,8 +66,8 @@ lang: zh
 
 ## 属性
 
-<table-block type="propsZn" :data="props"></table-block>
+<table-block type="propsZh" :data="props"></table-block>
 
 ## 插槽
 
-<table-block type="slotsZn" :data="slots"></table-block>
+<table-block type="slotsZh" :data="slots"></table-block>

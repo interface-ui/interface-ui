@@ -21,7 +21,7 @@ Integration of thousands of commonly used icons from Iconify. [```Iconify```](ht
 
 ## Size
 
-The default size of the icon is ```16```, and you can set the icon size using the size attribute.
+The default size of the icon is ```24```, and you can set the icon size using the size attribute.
 
 <demo src="../../../example/icon/size.vue"></demo>
 

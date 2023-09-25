@@ -9,12 +9,12 @@ lang: zh
 </script>
 
 
-## Switch 开关
+# Switch 开关
 
 表示两种相互对立的状态间的切换
 
 
-# 基础用法
+## 基础用法
 
 绑定 `v-model` 到一个 `Boolean` 类型的变量，即可使用。
 

@@ -1,6 +1,6 @@
 <script setup lang="ts" name="table-block">
-import type { PropType } from 'vue'
 import { ref, watch } from 'vue'
+import type { PropType } from 'vue'
 import type { EventTableItem, MethodTableItem, PropTableItem, SlotTableItem } from './table'
 import { header } from './table'
 import { vClickOutside } from './index'
@@ -19,7 +19,9 @@ const handleRowTipShow = (row: any) => {
   for (let i = 0; i < list.value.length; i++)
     list.value[i].name !== row.name && (list.value[i].showTip = false)
 
-  row.showTip = !row.showTip
+  setTimeout(() => {
+    row.showTip = !row.showTip
+  }, 0)
 }
 
 const onClickoutside = (row: any) => {
