@@ -29,7 +29,7 @@
     </fn-alert>
 
     <fn-alert
-      state="danger"
+      state="error"
       scrollable
       direction="top"
       title="This is a title"

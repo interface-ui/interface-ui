@@ -1,7 +1,7 @@
 import type { MessageType } from './types'
 
 export interface LMessageProps {
-  type?: MessageType
+  severity?: MessageType
   message: string
   duration?: number
   offset?: number

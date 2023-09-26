@@ -29,7 +29,7 @@ export const UseAlert = (prop: AlertProps): UseAlertReturn => {
   const classList = computed((): ClassList => {
     return [
       'fn-alert',
-      `fn-alert-${prop.state}`,
+      `${prop.state}-container`
     ]
   })
 

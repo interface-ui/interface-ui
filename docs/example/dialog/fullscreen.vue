@@ -16,8 +16,8 @@ const dialogVisible = ref(false)
     <span>This is a message</span>
     <template #footer>
       <span class="dialog-footer">
-        <fn-button @click="dialogVisible = false">Cancel</fn-button>
-        <fn-button @click="dialogVisible = false">
+        <fn-button variant="text" @click="dialogVisible = false">Cancel</fn-button>
+        <fn-button variant="text" @click="dialogVisible = false">
           Confirm
         </fn-button></span>
     </template>

@@ -10,11 +10,11 @@ lang: en
 </script>
 
 
-## Alert
+# Alert
 
 Used to display important prompt information on the page.
 
-# Basic usage
+## Basic usage
 
 The ```Alert``` component provides four types, specified by the ```type``` attribute, with a default value of ```info```
 <demo src="../../../example/alert/base.vue"></demo>

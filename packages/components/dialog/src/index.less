@@ -1,16 +1,6 @@
-@import "../../../styles/base.less";
-[data-theme="light"] .dialog,
-.dialog[data-theme="light"],
-.dialog{
-  --fn-dialog-bg-color: var(--fn-bd-light-bg);
-  --fn-dialog-text-color: var(--fn-slate-800);
-  font-size: 14px;
-}
 
-[data-theme="dark"] .dialog,
-.dialog[data-theme="dark"] {
-  --fn-dialog-bg-color:var(--fn-stone-1400);
-  --fn-dialog-text-color: var(--fn-slate-50);
+.dialog{
+  --fn-dialog-bg-color:var(--fn-sys-color-switch);
   font-size: 14px;
 }
 
@@ -54,7 +44,6 @@
     left: 50%;
     top: var(--fn-dialog-top) !important;
     z-index: 200;
-    color: var(--fn-dialog-text-color);
     background-color: var(--fn-dialog-bg-color) !important;
   
     > .header{

@@ -1,9 +1,13 @@
 <script lang="ts" setup>
-import { FnButton } from 'fusion-ui-vue'
+import { FnMessage } from 'fusion-ui-vue'
 </script>
 
 <template>
-  <fn-button @click="FnMessage({ message: 'Show Close Button', type: 'success', duration: 0, closeBtn: true })">
-    Show Close Button
-  </fn-button>
+  <div space-y-2>
+    <div fscw gap-2>
+      <fn-button variant="outlined" @click="FnMessage({ message: 'Show Close Button', type: 'success', duration: 0, closeBtn: true })">
+        Show Close Button
+      </fn-button>
+    </div>
+  </div>
 </template>

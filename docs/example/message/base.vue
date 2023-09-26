@@ -3,16 +3,11 @@ import { FnMessage } from 'fusion-ui-vue'
 </script>
 
 <template>
-  <div class="container">
-    <FnButton @click="FnMessage({ message: 'this is a message.' })">
-      Show message
-    </FnButton>
+  <div space-y-2>
+    <div fscw gap-2>
+      <FnButton @click="FnMessage({ message: 'this is a message.' })">
+        Show message
+      </FnButton>
+    </div>
   </div>
 </template>
-
-<style scoped>
-.container {
-  display: flex;
-  gap: 20px;
-}
-</style>

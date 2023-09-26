@@ -25,7 +25,7 @@
     </fn-alert>
 
     <fn-alert
-      state="danger"
+      state="error"
       center
       description="This is a description."
     >

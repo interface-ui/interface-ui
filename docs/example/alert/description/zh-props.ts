@@ -10,7 +10,7 @@ const list: PropTableItem[] = [
     name: 'type',
     remark: 'Alert 类型',
     type: 'Enum',
-    optional: ['info', 'success', 'danger', 'warning'],
+    optional: ['info', 'success', 'error', 'warning'],
     default: 'info',
   },
   {

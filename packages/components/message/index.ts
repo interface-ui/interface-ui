@@ -2,6 +2,7 @@ import { withInstallFunction } from '../install'
 import { closeAll, createMessage, createSubHandler } from './src/message'
 import type { Message } from './src/types'
 import { messageTypes } from './src/types'
+
 // import './style.scss'
 
 const message = createMessage as Message

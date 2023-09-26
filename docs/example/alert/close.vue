@@ -19,7 +19,7 @@ const handleClose = (evt: MouseEvent) => {
     />
 
     <fn-alert
-      state="danger"
+      state="error"
       description="This is a description."
 
       @close="handleClose"

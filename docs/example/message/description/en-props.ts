@@ -4,7 +4,7 @@ const list: PropTableItem[] = [
     name: 'state',
     remark: 'message status',
     type: 'Enum',
-    optional: ['info', 'success', 'warning', 'danger'],
+    optional: ['info', 'success', 'warning', 'error'],
     default: 'info',
   },
   {

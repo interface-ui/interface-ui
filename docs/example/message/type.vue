@@ -3,25 +3,20 @@ import { FnMessage } from 'fusion-ui-vue'
 </script>
 
 <template>
-  <div class="container">
-    <FnButton @click="FnMessage({ message: 'Default' })">
-      Default
-    </FnButton>
-    <FnButton state="success" @click="FnMessage({ message: 'Congrats, this is a success message.', type: 'success' })">
-      Success
-    </FnButton>
-    <FnButton state="warning" @click="FnMessage({ message: 'Warning, this is a warning message.', type: 'warning' })">
-      Warning
-    </FnButton>
-    <FnButton state="danger" @click="FnMessage({ message: 'Oops, this is a error message.', type: 'danger' })">
-      Error
-    </FnButton>
+  <div space-y-2>
+    <div fscw gap-2>
+      <FnButton color="rgb(56, 142, 60)" @click="FnMessage({ message: 'Congrats, this is a success message.', severity: 'success' })">
+        Success
+      </FnButton>
+      <FnButton color="rgb(237, 108, 2)" @click="FnMessage({ message: 'Warning, this is a warning message.', severity: 'warning' })">
+        Warning
+      </FnButton>
+      <FnButton @click="FnMessage({ message: 'Warning, this is a warning message.', severity: 'error' })">
+        Error
+      </FnButton>
+      <FnButton color="rgb(2, 136, 209);" @click="FnMessage({ message: 'Oops, this is a error message.', severity: 'info' })">
+        Info
+      </FnButton>
+    </div>
   </div>
 </template>
-
-<style scoped>
-.container {
-  display: flex;
-  gap: 20px;
-}
-</style>

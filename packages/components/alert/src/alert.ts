@@ -36,7 +36,7 @@ export const alertProps = {
     default: 2,
   },
   state: {
-    type: String as PropType<'success' | 'warning' | 'danger' | 'info'>,
+    type: String as PropType<'success' | 'warning' | 'error' | 'info'>,
     default: 'info',
   },
 }

@@ -10,7 +10,7 @@
       description="This is a description." closable
     />
     <fn-alert
-      state="danger"
+      state="error"
       description="This is a description." closable
     />
     <fn-alert

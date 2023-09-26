@@ -9,7 +9,7 @@ export interface MessageInstance {
   close: Function
 }
 
-export const messageTypes = ['info', 'success', 'warning', 'danger'] as const
+export const messageTypes = ['error', 'success', 'warning', 'info'] as const
 
 export type MessageType = (typeof messageTypes)[number]
 

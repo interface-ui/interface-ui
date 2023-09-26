@@ -37,6 +37,8 @@ Show the close button
 
 ## Close the logo
 
+The `showIcon` attribute controls the visibility of the logo icon.
+  
 <demo src="../../../example/message/icon.vue"></demo>
 
 ## Attributes

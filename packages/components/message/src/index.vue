@@ -1,20 +1,21 @@
 <script lang="ts" setup>
 import { noop, useResizeObserver, useTimeoutFn } from '@vueuse/core'
 import { computed, onMounted, ref } from 'vue'
+import FnIcon from '../../icon/src/index.vue'
 import { getLastOffset, getSvgIncon } from './message'
 import type { MessageType } from './types'
 const props = withDefaults(
   defineProps<{
     message: string
-    duration: number
+    duration?: number
     id: string
-    showIcon: boolean
-    offset: number
-    closeBtn: boolean
-    type: MessageType
+    showIcon?: boolean
+    offset?: number
+    closeBtn?: boolean
+    severity?: MessageType
   }>(),
   {
-    type: 'info',
+    severity: 'info',
     duration: 2000,
     offset: 20,
     closeBtn: false,
@@ -58,17 +59,17 @@ defineExpose({ bottom, lastOffset, visible })
       :id="id"
       ref="elRef"
       class="fn-message"
-      :class="[`is-${type}`]"
+      :class="[`${severity}-container`]"
       :style="{ top: `${lastOffset}px` }"
       @mouseenter="clearTimer"
       @mouseleave="startTimer"
     >
       <div class="message-content">
-        <i v-if="props.showIcon" v-html="getSvgIncon(props.type)" />
+        <i v-if="props.showIcon" v-html="getSvgIncon(props.severity)" />
         {{ message }}
       </div>
       <div v-if="closeBtn" class="close-btn" @click="visible = false">
-        ×
+        <fn-icon icon="material-symbols:close" size="18px" />
       </div>
     </div>
   </Transition>

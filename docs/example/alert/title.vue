@@ -16,7 +16,7 @@
 
     <fn-alert
       title="This is a title."
-      state="danger"
+      state="error"
       description="This is a description."
       closable
     />

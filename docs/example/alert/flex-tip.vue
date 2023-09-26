@@ -21,7 +21,7 @@
     </fn-alert>
 
     <fn-alert
-      state="danger"
+      state="error"
       title="This is a title."
       description="Use flexTip to add front fixed content to the description."
       closable
