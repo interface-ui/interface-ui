@@ -1,24 +1,24 @@
 <script setup lang="ts">
+import { useLink } from '@fusion-ui/hooks'
+import { useNamespace } from '@fusion-ui/utils/useNamespace'
 import { linkEmits, linkProps } from '../src/link'
-
 const props = defineProps(linkProps)
-const emit = defineEmits(linkEmits)
 
+const emit = defineEmits(linkEmits)
+const ns = useNamespace('link')
+const { classes } = useLink(props, ns)
 function handleClick(event: MouseEvent) {
-  if (!props.disabled)
-    emit('click', event)
+  emit('click', event)
 }
 </script>
 
 <template>
   <a
-    class="fn-link"
     :class="[
-      `fn-link--${type}`,
-      disabled && 'is-disabled-link',
-      underline ? '' : 'is-underline',
+      ns.b(),
+      classes[ns.b()],
     ]"
-    :href="disabled || !href ? undefined : href"
+    :href="!href ? undefined : href"
     @click="handleClick"
   >
     <span v-if="icon">

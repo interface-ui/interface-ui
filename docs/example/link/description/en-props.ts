@@ -1,17 +1,18 @@
 import type { PropTableItem } from '../../../.vitepress/components/table-block/src/table'
 const list: PropTableItem[] = [
   {
-    name: 'type',
-    remark: 'Set the link type',
+    name: 'color',
+    remark: 'color',
+    default: '--',
     type: 'Enum',
-    optional: ['primary', 'success', 'warning', 'danger', 'info', 'default'],
-    default: 'default',
+    optional: ['ThemePaletteColor', 'ThemeCallBack', 'String'],
   },
   {
-    name: 'disabled',
-    remark: 'Set the link as disabled',
-    type: 'Boolean',
-    default: 'false',
+    name: 'underline',
+    remark: 'underline',
+    default: 'hover',
+    type: 'Enum',
+    optional: ['hover', 'none', 'always'],
   },
   {
     name: 'href',

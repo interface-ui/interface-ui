@@ -116,7 +116,7 @@ export const zhComponents = [
       },
       {
         text: 'Checkbox 多选框',
-        link: '/langs/en/components/checkbox',
+        link: '/langs/zh/components/checkbox',
       },
       {
         text: 'Radio 单选框',

@@ -18,12 +18,11 @@ Basic usage of text links.
 
 <demo src="../../../example/link/base.vue"></demo>
 
-## Disabled State 
+## Color
 
-Disabled state of text links.
+Text links with different colors.
 
-<demo src="../../../example/link/disabled.vue"></demo>
-
+<demo src="../../../example/link/color.vue"></demo>
 
 ## Underline 
 

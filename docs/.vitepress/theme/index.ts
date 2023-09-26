@@ -5,6 +5,7 @@ import theme from 'vitepress/theme'
 import 'fusion-ui-vue/dist/styles/index.css' // 全部样式
 import '@fusion-ui/components/button/src/index.less' // 单文件样式
 import '@fusion-ui/components/drawer/src/index.less' // 单文件样式
+import '@fusion-ui/components/link/src/index.less' // 单文件样式
 
 // 注册本地组件
 import FusionUi from '@fusion-ui/components'

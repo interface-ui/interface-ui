@@ -1,26 +1,17 @@
 import type { ExtractPropTypes } from 'vue'
-export type linkType =
-  | 'default'
-  | 'primary'
-  | 'success'
-  | 'warning'
-  | 'danger'
-  | 'info'
+
 export const linkProps = {
-  type: {
-    type: String as () => linkType,
-    default: 'default',
-  },
-  disabled: {
-    type: Boolean,
-    required: false,
-  },
   underline: {
-    type: Boolean,
-    default: true,
+    type: String,
+    values: ['none', 'hover', 'always'] as const,
+    default: 'hover',
     required: false,
   },
   href: {
+    type: String,
+    required: false,
+  },
+  color: {
     type: String,
     required: false,
   },

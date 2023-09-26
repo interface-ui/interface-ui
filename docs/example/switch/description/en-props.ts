@@ -1,18 +1,6 @@
 import type { PropTableItem } from '../../../.vitepress/components/table-block/src/table'
 const list: PropTableItem[] = [
-  {
-    name: 'type',
-    remark: 'Set the link type',
-    type: 'Enum',
-    optional: ['primary', 'success', 'warning', 'danger', 'info', 'default'],
-    default: 'default',
-  },
-  {
-    name: 'disabled',
-    remark: 'Set the link as disabled',
-    type: 'Boolean',
-    default: 'false',
-  },
+
   {
     name: 'color',
     remark: 'Activation status color',

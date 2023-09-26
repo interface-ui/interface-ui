@@ -1,54 +1,3 @@
-@import "../../../styles/base.less";
-[data-theme="light"] .fn-link,
-.fn-link[data-theme="light"],
-.fn-link {
-  --fn-default-text-color: #374151;
-  font-size: 14px;
-}
-
-[data-theme="dark"] .fn-link,
-.fn-link[data-theme="dark"] {
-  --fn-default-text-color: #afbdd5;
-  font-size: 14px;
-}
-
-.fn-link {
-   &--default {
-    --fn-link-color: var(--fn-default-text-color);
-    --fn-link-hover-color: var(--fn-blue-600);
-    --fn-link-disabled-text-color: var(--fn-default-text-color);
-  }
-
-  &--primary{
-    --fn-link-color: var(--fn-blue-500);
-    --fn-link-hover-color: var(--fn-blue-600);
-    --fn-link-disabled-text-color: var(--fn-blue-500);
-  }
-
-  &--info {
-    --fn-link-color: var(--fn-slate-400);
-    --fn-link-hover-color: var(--fn-blue-600);
-    --fn-link-disabled-text-color: var(--fn-slate-400);
-  }
-
-  &--success {
-    --fn-link-color: var(--fn-green-500);
-    --fn-link-hover-color: var(--fn-green-600);
-    --fn-link-disabled-text-color: var(--fn-green-500);
-  }
-
-  &--warning {
-    --fn-link-color: var(--fn-orange-500);
-    --fn-link-hover-color: var(--fn-orange-600);
-    --fn-link-disabled-text-color: var(--fn-orange-500);
-  }
-
-  &--danger {
-    --fn-link-color: var(--fn-red-500);
-    --fn-link-hover-color: var(--fn-red-600);
-    --fn-link-disabled-text-color: var(--fn-red-500);
-  }
-}
 
 .fn-link {
   display: flex;
@@ -59,12 +8,17 @@
   > span{
     display: flex;
     align-items: center;
+      text-decoration: var(--fn-link__underline--status);
     > i{
       margin-left: 3px;
     }
+    &:hover {
+      cursor: pointer;
+      text-decoration: var(--fn-link__underline--hover) ;
+    }
   }
-  &:hover {
-    cursor: pointer;
-    text-decoration:underline;
-  }
+}
+
+a{
+  text-decoration: none !important;
 }
