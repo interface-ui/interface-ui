@@ -24,13 +24,15 @@
   &--filled {
     background-color: var(--fn-button-color);
     color: var(--md-sys-color-on-primary);
-    &:not([disabled]):hover {
-      background-color: color-mix(
-        in srgb,
-        var(--fn-button-color),
-        var(--fn-sys-color-switch-reverse)
-          var(--md-sys-state-hover-state-layer-opacity-percentage)
-      );
+    @media (any-hover: hover) {
+      &:not([disabled]):hover {
+        background-color: color-mix(
+          in srgb,
+          var(--fn-button-color),
+          var(--fn-sys-color-switch-reverse)
+            var(--md-sys-state-hover-state-layer-opacity-percentage)
+        );
+      }
     }
     &:is([disabled]) {
       background-color: var(--fn-sys-color-disabled-level-1) !important;
@@ -41,13 +43,15 @@
   &--text {
     color: var(--fn-button-color);
     background-color: transparent;
-    &:not([disabled]):hover {
-      background-color: color-mix(
-        in srgb,
-        var(--fn-button-color)
-          var(--md-sys-state-hover-state-layer-opacity-percentage),
-        var(--fn-sys-color-switch) 0%
-      );
+    @media (any-hover: hover) {
+      &:not([disabled]):hover {
+        background-color: color-mix(
+          in srgb,
+          var(--fn-button-color)
+            var(--md-sys-state-hover-state-layer-opacity-percentage),
+          var(--fn-sys-color-switch) 0%
+        );
+      }
     }
     &:is([disabled]) {
       color: var(--fn-sys-color-disabled-level-0) !important;
@@ -63,14 +67,16 @@
       var(--fn-button-color) 60%,
       var(--fn-sys-color-switch) 0%
     );
-    &:not([disabled]):hover {
-      border-color: var(--fn-button-color);
-      background-color: color-mix(
-        in srgb,
-        var(--fn-button-color)
-          var(--md-sys-state-hover-state-layer-opacity-percentage),
-        var(--fn-sys-color-switch) 0%
-      );
+    @media (any-hover: hover) {
+      &:not([disabled]):hover {
+        border-color: var(--fn-button-color);
+        background-color: color-mix(
+          in srgb,
+          var(--fn-button-color)
+            var(--md-sys-state-hover-state-layer-opacity-percentage),
+          var(--fn-sys-color-switch) 0%
+        );
+      }
     }
     &:is([disabled]) {
       color: var(--fn-sys-color-disabled-level-0) !important;

@@ -27,13 +27,15 @@
     color: var(--fn-sys-color-disabled-level-0) !important;
   }
 
-  &:not([disabled]):hover {
-    background-color: color-mix(
-      in srgb,
-      var(--fn-checkbox-color)
-        var(--md-sys-state-hover-state-layer-opacity-percentage),
-      var(--fn-sys-color-switch) var(--fn-zero-percentage)
-    );
+  @media (any-hover: hover) {
+    &:not([disabled]):hover {
+      background-color: color-mix(
+        in srgb,
+        var(--fn-checkbox-color)
+          var(--md-sys-state-hover-state-layer-opacity-percentage),
+        var(--fn-sys-color-switch) var(--fn-zero-percentage)
+      );
+    }
   }
 
   &__input {
