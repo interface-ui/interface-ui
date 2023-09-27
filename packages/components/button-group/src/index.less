@@ -11,12 +11,17 @@
   }
 
   &--filled {
-    --border-color: color-mix(
-      in srgb,
-      var(--fn-button-group-color),
-      var(--fn-sys-color-switch-reverse)
-        var(--md-sys-state-focus-state-layer-opacity-percentage)
-    );
+    &:not([disabled]) {
+      --border-color: color-mix(
+        in srgb,
+        var(--fn-button-group-color),
+        var(--fn-sys-color-switch-reverse)
+          var(--md-sys-state-focus-state-layer-opacity-percentage)
+      );
+    }
+    &:is([disabled]) {
+      --border-color: var(--fn-sys-color-disabled-level-1) !important;
+    }
     box-shadow: var(--md-sys-elevation-level-2);
     &.fn-button-group--horizontal .fn-button {
       &:not(:first-child) {
@@ -30,11 +35,16 @@
     }
   }
   &--outlined {
-    --border-color: color-mix(
-      in srgb,
-      var(--fn-button-group-color) 60%,
-      var(--fn-sys-color-switch) 0%
-    );
+    &:not([disabled]) {
+      --border-color: color-mix(
+        in srgb,
+        var(--fn-button-group-color) 60%,
+        var(--fn-sys-color-switch) 0%
+      );
+    }
+    &:is([disabled]) {
+      --border-color: var(--fn-sys-color-disabled-level-1) !important;
+    }
     border-width: 1px;
     border-style: solid;
     border-color: var(--border-color);
@@ -52,11 +62,16 @@
     }
   }
   &--text {
-    --border-color: color-mix(
-      in srgb,
-      var(--fn-button-group-color) 60%,
-      var(--fn-sys-color-switch) 0%
-    );
+    &:not([disabled]) {
+      --border-color: color-mix(
+        in srgb,
+        var(--fn-button-group-color) 60%,
+        var(--fn-sys-color-switch) 0%
+      );
+    }
+    &:is([disabled]) {
+      --border-color: var(--fn-sys-color-disabled-level-1) !important;
+    }
     &.fn-button-group--horizontal .fn-button {
       &:not(:first-child) {
         border-left: 1px solid var(--border-color);

@@ -6,7 +6,7 @@ import { buttonGroupProps } from './button-group'
 
 export default {
   props: buttonGroupProps,
-  setup(props, { slots }) {
+  setup(props, { slots, attrs }) {
     const ns = useNamespace('button-group')
     const { orientation, ...buttonProps } = props
     const { classes } = useButtonGroup(props, ns)
@@ -23,7 +23,9 @@ export default {
     })
 
     const slotsVNodes = slots?.default?.() ?? []
-    slotsVNodes.forEach(vnode => (vnode.props = buttonProps))
+    slotsVNodes.forEach(vnode => {
+      vnode.props = { ...buttonProps, ...attrs }
+    })
 
     return () => {
       return createElementVNode('div', { class: classList.value }, slotsVNodes)
