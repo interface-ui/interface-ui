@@ -1,6 +1,6 @@
 export { useJSS } from './use-jss'
 export { UseAlert } from './use-alert'
-export { useButton, useIconButton } from './use-button'
+export * from './use-button'
 export { useRadio, useRadioGroup } from './use-radio'
 export { useSwitchInner, useSwitch } from './use-switch'
 export { UseBadge } from './use-badge'

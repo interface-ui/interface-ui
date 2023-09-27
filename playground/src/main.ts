@@ -10,6 +10,7 @@ import '@fusion-ui/components/ripple/src/index.less' // 开发调试的样式
 import '@fusion-ui/components/button/src/index.less' // 开发调试的样式
 import '@fusion-ui/components/icon-button/src/index.less' // 开发调试的样式
 import '@fusion-ui/components/link/src/index.less' // 开发调试的样式
+import '@fusion-ui/components/button-group/src/index.less' // 开发调试的样式
 
 // import RouterView from './RouterHello.vue'
 

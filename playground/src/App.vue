@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { FnButton,FnLink } from '@fusion-ui/components'
+import { FnButton, FnButtonGroup } from '@fusion-ui/components'
 import { ref } from 'vue'
 const button = ref('深色')
 
@@ -28,28 +28,37 @@ const changTheme = () => {
 
   <!-- -------------------新组建开发调试------------------- -->
   <div class="content">
-    <fn-link type="success">
-        sucess
-      </fn-link>
-    <fn-icon-button size="small" #default="icon">
-      <fn-icon icon="mdi:cake-layered" v-bind="icon" />
-    </fn-icon-button>
-    <fn-icon-button #default="icon">
-      <fn-icon icon="mdi:cake-layered" v-bind="icon" />
-    </fn-icon-button>
-    <fn-icon-button size="large" #default="icon">
-      <fn-icon icon="mdi:cake-layered" v-bind="icon" />
-    </fn-icon-button>
+    <fn-button-group>
+      <fn-button>one</fn-button>
+      <fn-button>two</fn-button>
+      <fn-button>three</fn-button>
+    </fn-button-group>
+    <fn-button-group variant="outlined">
+      <fn-button>one</fn-button>
+      <fn-button>two</fn-button>
+      <fn-button>three</fn-button>
+    </fn-button-group>
+    <fn-button-group variant="text">
+      <fn-button>one</fn-button>
+      <fn-button>two</fn-button>
+      <fn-button>three</fn-button>
+    </fn-button-group>
   </div>
   <div class="content">
-    <fn-icon-button color="error" #default="icon">
-      <fn-icon icon="mdi:cake-layered" v-bind="icon" />
-    </fn-icon-button>
-    <fn-icon-button #default="icon">
-      <fn-icon icon="mdi:cake-layered" v-bind="icon" />
-    </fn-icon-button>
-    <fn-icon-button #default="icon">
-      <fn-icon icon="mdi:cake-layered" v-bind="icon" />
-    </fn-icon-button>
+    <fn-button-group orientation="vertical">
+      <fn-button>one</fn-button>
+      <fn-button>two</fn-button>
+      <fn-button>three</fn-button>
+    </fn-button-group>
+    <fn-button-group variant="outlined" orientation="vertical">
+      <fn-button>one</fn-button>
+      <fn-button>two</fn-button>
+      <fn-button>three</fn-button>
+    </fn-button-group>
+    <fn-button-group variant="text" orientation="vertical">
+      <fn-button>one</fn-button>
+      <fn-button>two</fn-button>
+      <fn-button>three</fn-button>
+    </fn-button-group>
   </div>
 </template>
