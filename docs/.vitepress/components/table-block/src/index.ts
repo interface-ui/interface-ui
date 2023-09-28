@@ -8,8 +8,6 @@ export const vClickOutside = {
 
       // 如果绑定的参数是函数，正常情况也应该是函数，执行
       if (!isClickOutside && binding.value && typeof binding.value === 'function') {
-        console.log('🤣')
-
         binding.value(e)
         isClickOutside = true
       }
