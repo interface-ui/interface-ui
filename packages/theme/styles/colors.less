@@ -100,22 +100,6 @@
 .surface-tint {
   background-color: var(--md-sys-color-on-surface-tint);
 }
-.error {
-  color: var(--md-sys-color-on-error);
-  background-color: var(--md-sys-color-error);
-}
-.on-error {
-  color: var(--md-sys-color-error);
-  background-color: var(--md-sys-color-on-error);
-}
-.error-container {
-  color: var(--md-sys-color-on-error-container);
-  background-color: var(--md-sys-color-error-container);
-}
-.on-error-container {
-  color: var(--md-sys-color-error-container);
-  background-color: var(--md-sys-color-on-error-container);
-}
 .black {
   background-color: var(--md-ref-palette-black);
 }
@@ -128,16 +112,31 @@
 .white-text {
   color: var(--md-ref-palette-white);
 }
-
+.error {
+  color: var(--md-sys-color-on-error);
+  background-color: var(--md-sys-color-error);
+}
+.on-error {
+  color: var(--md-sys-color-error);
+  background-color: var(--md-sys-color-on-error);
+}
+.error-container {
+  color: var(--md-sys-color-on-error-container) !important;
+  background-color: var(--md-sys-color-error-container) !important;
+}
+.on-error-container {
+  color: var(--md-sys-color-error-container);
+  background-color: var(--md-sys-color-on-error-container);
+}
 .success-container{
-  background-color: rgb(56, 142, 60);
-  color: var(--fn-ref-palette-white);
+  background-color: rgb(56, 142, 60) !important;
+  color: var(--fn-ref-palette-white) !important;
 }
 .warning-container{
-  background-color: rgb(237, 108, 2);
-  color: var(--fn-ref-palette-white);
+  background-color: rgb(237, 108, 2) !important;
+  color: var(--fn-ref-palette-white) !important;
 }
 .info-container{
-  background-color: rgb(2, 136, 209);
-  color: var(--fn-ref-palette-white);
+  background-color: rgb(2, 136, 209) !important;
+  color: var(--fn-ref-palette-white) !important;
 }
