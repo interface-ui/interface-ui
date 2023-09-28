@@ -1,5 +1,3 @@
-@import "../../../styles/base.less";
-
 .fn-input {
   --fn-text-color: #000;
   --fn-border-color: #dddfe5;
@@ -7,7 +5,6 @@
   --fn-disabled-color: var(--fn-border-color);
   --fn-disabled-fill-color: #f5f7fa;
   --fn-fill-color: #f5f7fa;
-  font-size: 14px;
 }
 
 [data-theme="dark"] .fn-input,
@@ -19,7 +16,6 @@
   --fn-disabled-color: var(--fn-border-color);
   --fn-disabled-fill-color: #262727;
   --fn-focus-color: #1677ff;
-  font-size: 14px;
 }
 
 
@@ -52,10 +48,23 @@
   justify-content: flex-start;
   transition: all 0.3s;
   width: var(--fn-input-width);
-  height: var(--fn-input-height);
   border:1px solid var(--fn-border-color);
   border-radius: 3px;
   background-color: var(--fn-fill-color);
+  &--small {
+    height: 32px;
+    font-size: 12px;
+  }
+  &--medium {
+    height: 40px;
+    font-size: 16px;
+  }
+  &--large {
+    height: 48px;
+    font-size: 20px;
+
+  }
+
   &:hover{
     border: 1px solid var(--fn-focus-color) ;
     color:var(--fn-text-color); 
@@ -99,11 +108,9 @@
     padding: 3px 10px;
     outline: none;
     width: calc(100% - var(--fn-input-icon-width));
-    height: 40px;
     background-color: transparent;
     border-radius: 3px;
     color:var(--fn-text-color);
-    font-size: 16px;
 
     &::-webkit-input-placeholder { /* WebKit, Blink, Edge */
       color:    #616468;

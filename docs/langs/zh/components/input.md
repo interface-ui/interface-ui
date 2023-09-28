@@ -19,6 +19,8 @@ lang: zh
 <demo src="../../../example/input/base.vue"></demo>
 
 
+
+
 ## 禁用状态
 
 通过 ```disabled``` 属性禁用输入框。
@@ -39,6 +41,12 @@ lang: zh
 通过 ```password``` 属性得到一个可以切换显隐密码的输入框。
 
 <demo src="../../../example/input/password.vue"></demo>
+
+## 尺寸
+
+使用 `size` 属性改变输入框大小。 除了默认大小外，还有另外两个选项： `large`,`small`。
+
+<demo src="../../../example/input/size.vue"></demo>
 
 
 ## 数字框

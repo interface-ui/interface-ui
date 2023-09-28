@@ -40,7 +40,7 @@ lang: zh
 
 <demo src="../../../example/button/outlined.vue"></demo>
 
-### 大小
+### 尺寸
 
 按钮堆叠的大小从小到大，使用 `size` 属性来更改大小。
 

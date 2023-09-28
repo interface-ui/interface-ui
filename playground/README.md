@@ -37,11 +37,11 @@ import '@fusion-ui/components/button/src/index.less' // 开发调试的样式
 
 我们开始制定组件开发规范，希望能够帮助大家更好的开发组件，我们会不断的完善和优化，欢迎大家提出宝贵的意见和建议。
 
-我们开始使用 [Google Material Design](https://m3.material.io/) 作为组件的设计规范。``` Material Design``` 提供了组件开发的设计标准如大小、间距、颜色、动画等，让我们的组件库有了设计准则。
+我们开始使用 [Google Material Design](https://m3.material.io/) 作为组件的设计规范。``` Material Design``` 提供了组件开发的设计标准如尺寸、间距、颜色、动画等，让我们的组件库有了设计准则。
 
 例如：``` Material Design``` 中的按钮组件，它的设计标准如下：
 
-大小间距：
+尺寸间距：
 
 ![Button](./public/image/button.png)
 

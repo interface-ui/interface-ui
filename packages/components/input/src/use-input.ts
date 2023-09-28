@@ -1,6 +1,5 @@
 import {
   computed,
-  onMounted,
 } from 'vue'
 import type { CSSProperties, Ref } from 'vue'
 import { addUnit } from '../../../utils/dom/style'
@@ -24,8 +23,8 @@ export const useInput = (
 
     if (props.width)
       style[`${varPrefix}-width`] = addUnit(props.width)
-    if (props.height)
-      style[`${varPrefix}-height`] = addUnit(props.height)
+    // if (props.height)
+    //   style[`${varPrefix}-height`] = addUnit(props.height)
 
     if (props.prefixIcon || props.suffixIcon || props.clearable || props.type === 'password')
       style[`${varPrefix}-icon-width`] = `${width}px`
@@ -33,10 +32,6 @@ export const useInput = (
       style[`${varPrefix}-icon-width`] = '0px'
 
     return style
-  })
-
-  onMounted(() => {
-
   })
 
   return {

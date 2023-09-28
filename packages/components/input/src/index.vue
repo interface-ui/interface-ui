@@ -1,15 +1,15 @@
 <script setup lang="ts">
 import { computed, ref, toRefs } from 'vue'
 import { Icon } from 'fusion-ui-iconify/dist/dist.mjs'
+import { useNamespace } from '@fusion-ui/utils/useNamespace'
+import { UPDATE_MODEL_EVENT } from '@fusion-ui/constants'
 import { getSvgIncon, inputEmits, inputProps } from '../src/input'
 import { useInput } from '../src/use-input'
-import { UPDATE_MODEL_EVENT } from '../../../constans/event'
+
 type TargetElement = HTMLInputElement | HTMLTextAreaElement
-
 const props = defineProps(inputProps)
-
 const emit = defineEmits(inputEmits)
-
+const ns = useNamespace('input')
 const { modelValue, disabled, maxLength, clearable, type } = toRefs(props)
 const inputRef = ref<HTMLElement>()
 const { overlayInputStyle } = useInput(props, inputRef)
@@ -40,6 +40,11 @@ const changeEyeIcon = () => {
     inintIcon.value = 'eye-slash'
   else inintIcon.value = 'eye'
 }
+
+const classList = computed(() => {
+  const { size } = props
+  return [ns.b(), ns.m(size), disabled.value ? 'input-disabled' : '']
+})
 
 /**
  * @description: input事件
@@ -73,13 +78,12 @@ const handleChange = (event: Event) => {
   <div
     v-if="type === 'text' || type === 'password' || type === 'number'"
     ref="inputRef"
-    class="fn-input"
+    :class="classList"
     :style="overlayInputStyle"
-    :class="[disabled && 'input-disabled']"
   >
     <!-- 前部图标 -->
     <span v-if="prefixIcon" class="prefix-icon">
-      <icon :icon="prefixIcon" color="pink" />
+      <icon :icon="prefixIcon" />
     </span>
 
     <!-- 输入框 -->
@@ -96,7 +100,7 @@ const handleChange = (event: Event) => {
     >
     <!-- 后部图标 -->
     <span v-if="suffixIcon" class="suffix-icon">
-      <icon :icon="suffixIcon" color="#4e80ee" />
+      <icon :icon="suffixIcon" />
     </span>
 
     <!-- 眼睛图标 -->

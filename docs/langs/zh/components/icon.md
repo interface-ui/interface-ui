@@ -18,7 +18,7 @@ lang: zh
 
 <demo src="../../../example/icon/icon.vue"></demo>
 
-## 尺寸大小
+## 尺寸
 
 图标默认尺寸 ```24``` ，你可以通过 ```size``` 属性来设置图标大小。
 

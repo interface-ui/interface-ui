@@ -1,4 +1,5 @@
 import type { ExtractPropTypes, PropType } from 'vue'
+import { type ComponentSize, componentSizes } from '@fusion-ui/constants'
 import { UPDATE_MODEL_EVENT } from '../../../constans/event'
 
 export type InputType = 'text' | 'textarea' | 'password' | 'number'
@@ -9,6 +10,11 @@ export const inputProps = {
   modelValue: {
     type: [String, Number],
     default: '',
+  },
+  size: {
+    type: String as PropType<ComponentSize>,
+    values: componentSizes,
+    default: 'medium',
   },
   type: {
     type: String as PropType<InputType>,

@@ -46,7 +46,7 @@ const list: PropTableItem[] = [
   },
   {
     name: 'width',
-    remark: '环形进度条大小',
+    remark: '环形进度条尺寸',
     type: 'Enum',
     optional: ['String', 'Number'],
     default: '120px',

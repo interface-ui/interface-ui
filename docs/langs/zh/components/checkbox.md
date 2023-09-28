@@ -26,7 +26,7 @@ lang: zh
 
 <demo src="../../../example/checkbox/basic.vue"></demo>
 
-## 大小
+## 尺寸
 
 使用 `size` 属性或自定义 SVG 图标的字体大小来改变复选框的大小。
 

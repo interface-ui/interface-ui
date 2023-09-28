@@ -7,8 +7,8 @@ const value2 = ref('')
 <template>
   <div space-y-2 class="w-100% o-demo_action_icon">
     <div fscw gap-2>
-      <fn-input v-model="value1" placeholder="Please input" prefix-icon="twemoji:calendar" />
-      <fn-input v-model="value2" placeholder="Please input" suffix-icon="twemoji:calendar" />
+      <fn-input v-model="value1" placeholder="Please input" prefix-icon="iconamoon:search-fill" />
+      <fn-input v-model="value2" placeholder="Please input" suffix-icon="iconamoon:search-fill" />
     </div>
   </div>
 </template>

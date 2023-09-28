@@ -4,5 +4,5 @@ const value1 = ref('123456')
 </script>
 
 <template>
-  <fn-input v-model="value1" type="password" prefix-icon="arcticons:password" />
+  <fn-input v-model="value1" type="password" prefix-icon="mdi:password-outline" />
 </template>

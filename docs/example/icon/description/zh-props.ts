@@ -8,7 +8,7 @@ const list: PropTableItem[] = [
   },
   {
     name: 'size',
-    remark: '大小',
+    remark: '尺寸',
     type: 'Number',
     default: '16',
   },
