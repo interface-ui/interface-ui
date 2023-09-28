@@ -49,3 +49,16 @@
    }
   }
 
+  .VPLocalNav{
+    position: fixed !important;
+    top: 63px !important;
+  }
+
+  @media (max-width: 960px) {
+    .VPNavBarTitle{
+    .title{
+      background-color: var(--vp-nav-screen-bg-color);
+    }
+  }
+}
+
