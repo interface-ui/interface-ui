@@ -1,5 +1,6 @@
 import FnButton from './button'
 import IconButton from './icon-button'
+import ButtonGroup from './button-group'
 import FnAlert from './alert'
 import FnIcon from './icon'
 import FnLink from './link'
@@ -24,6 +25,7 @@ import FnTypography from './typography'
 export * from './avatarGroup'
 export * from './button'
 export * from './icon-button'
+export * from './button-group'
 export * from './alert'
 export * from './icon'
 export * from './link'
@@ -47,6 +49,7 @@ export * from './typography'
 export const component = [
   FnButton,
   IconButton,
+  ButtonGroup,
   FnAlert,
   FnIcon,
   FnLink,
@@ -72,7 +75,7 @@ export const component = [
 
 const CK = {
   install(App: any) {
-    component.forEach((item) => {
+    component.forEach(item => {
       App.component(item.name, item)
     })
   },

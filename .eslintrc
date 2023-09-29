@@ -12,6 +12,7 @@
     "brace-style": "off",
     "@typescript-eslint/brace-style": "off",
     "vue/quote-props": "off",
-    "curly": "off"
+    "curly": "off",
+    "arrow-parens": "off"
   }
 }

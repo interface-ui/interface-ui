@@ -1,6 +1,10 @@
 import type { UseNamespaceReturn } from '@fusion-ui/utils/useNamespace'
 import { useColor } from '@fusion-ui/theme'
-import type { ButtonProps, IconButtonProps } from '@fusion-ui/components'
+import type {
+  ButtonGroupProps,
+  ButtonProps,
+  IconButtonProps,
+} from '@fusion-ui/components'
 import { useJSS } from '../use-jss'
 
 const jss = useJSS()
@@ -36,6 +40,21 @@ export const useIconButton = (
   const styles = {
     [ns.b()]: {
       '--fn-icon-button-color': $color.value ?? 'var(--md-sys-color-primary)',
+    },
+  }
+
+  return jss!.createStyleSheet(styles as any).attach()
+}
+
+export const useButtonGroup = (
+  props: ButtonGroupProps,
+  ns: UseNamespaceReturn
+) => {
+  const $color = useColor(props.color)
+
+  const styles = {
+    [ns.b()]: {
+      '--fn-button-group-color': $color.value ?? 'var(--md-sys-color-primary)',
     },
   }
 

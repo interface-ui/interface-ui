@@ -19,6 +19,6 @@ const { classes } = useIconButton(props, ns)
         class: [ns.e('icon')],
       }"
     />
-    <fn-ripple :color="props.color" />
+    <fn-ripple :color="props.color" center />
   </button>
 </template>

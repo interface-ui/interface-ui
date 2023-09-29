@@ -1,6 +1,7 @@
 {
   "semi": false,
   "singleQuote": true,
+  "arrowParens": "avoid",
   "overrides": [
     {
       "files": ".prettierrc",
