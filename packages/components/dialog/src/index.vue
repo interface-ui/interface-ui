@@ -51,7 +51,6 @@ function handleClick(event: MouseEvent) {
             </span>
           </div>
           <div class="dialog__content">
-            --{{ dialogRef }}--
             <slot />
           </div>
           <div class="footer">

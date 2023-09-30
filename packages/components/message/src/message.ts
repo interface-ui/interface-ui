@@ -7,7 +7,6 @@ const instances: MessageInstance[] = shallowReactive([])
 let currId = 1
 
 export function createMessage(props: LMessageProps) {
-  debugger
   const el = document.createElement('div')
   const id = `fn-message-${currId}`
 
