@@ -6,7 +6,10 @@ export const enComponents = [
         text: 'Button',
         link: '/langs/en/components/button',
       },
-
+      {
+        text: 'ButtonGroup',
+        link: '/langs/en/components/button-group',
+      },
       {
         text: 'Icon',
         link: '/langs/en/components/icon',
@@ -27,7 +30,6 @@ export const enComponents = [
         text: 'Radio',
         link: '/langs/en/components/radio',
       },
-
     ],
   },
   {
@@ -101,7 +103,10 @@ export const zhComponents = [
         text: 'Button 按钮',
         link: '/langs/zh/components/button',
       },
-
+      {
+        text: 'ButtonGroup 按钮组',
+        link: '/langs/zh/components/button-group',
+      },
       {
         text: 'Icon 图标',
         link: '/langs/zh/components/icon',
@@ -122,7 +127,6 @@ export const zhComponents = [
         text: 'Radio 单选框',
         link: '/langs/zh/components/radio',
       },
-
     ],
   },
   {
@@ -149,7 +153,6 @@ export const zhComponents = [
         text: 'Tag 标签',
         link: '/langs/zh/components/tag',
       },
-
     ],
   },
   {
@@ -171,7 +174,6 @@ export const zhComponents = [
         text: 'Switch 开关',
         link: '/langs/zh/components/switch',
       },
-
     ],
   },
   {
