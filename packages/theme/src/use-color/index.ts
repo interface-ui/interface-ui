@@ -1,6 +1,7 @@
-import type {
-  ThemeCallBack,
-  ThemePaletteColor,
+import {
+  type ThemeCallBack,
+  type ThemePaletteColor,
+  themePaletteColor,
 } from '@fusion-ui/theme/src/use-theme/theme'
 import useTheme from '@fusion-ui/theme/src/use-theme'
 import { computed } from 'vue'
@@ -31,7 +32,7 @@ const useColor = (
       }
       return color(theme)
     }
-    if (['primary', 'secondary', 'tertiary', 'error'].includes(color)) {
+    if (themePaletteColor.includes(color)) {
       return rgb
         ? `var(--md-sys-color-${color}-rgb)`
         : `var(--md-sys-color-${color})`

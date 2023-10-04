@@ -10,7 +10,8 @@ export interface ThemeConfig {
   palette: Partial<Palette>
 }
 
-export type ThemePaletteColor = 'primary' | 'secondary' | 'tertiary' | 'error'
+export const themePaletteColor = ['primary', 'secondary', 'tertiary', 'error']
+export type ThemePaletteColor = typeof themePaletteColor[number]
 export type ThemeCallBack = (theme: Theme) => string
 export interface ParsedScheme {
   palette: Palette
