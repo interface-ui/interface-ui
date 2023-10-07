@@ -2,6 +2,11 @@ header {
   margin-bottom: 20px;
 }
 
+.content {
+  display: flex;
+  gap: 16px;
+}
+
 .content + .content {
-  margin-top: 10px;
+  margin-top: 16px;
 }
