@@ -26,11 +26,11 @@ const useColor = (
     }
     if (typeof color === 'function') {
       if (rgb) {
-        const argb = argbFromHex(color(theme))
+        const argb = argbFromHex(color(theme.value))
         const { r, g, b } = rgbaFromArgb(argb)
         return `${r}, ${g}, ${b}`
       }
-      return color(theme)
+      return color(theme.value)
     }
     if (themePaletteColor.includes(color)) {
       return rgb

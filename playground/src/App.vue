@@ -1,19 +1,12 @@
 <script setup lang="ts">
-import { FnButton, FnButtonGroup } from '@fusion-ui/components'
-import { ref } from 'vue'
-const button = ref('深色')
+import { FnButton } from '@fusion-ui/components'
+import { createTheme } from '@fusion-ui/theme'
+import Child from './Child.vue'
+
+const theme = createTheme()
 
 const changTheme = () => {
-  const html = document.documentElement as HTMLElement
-  if (html.classList.contains('dark')) {
-    html.classList.remove('dark')
-    html.setAttribute('data-theme', 'light')
-    button.value = '浅色'
-  } else {
-    html.classList.add('dark')
-    html.setAttribute('data-theme', 'dark')
-    button.value = '深色'
-  }
+  theme.value.mode = theme.value.mode === 'dark' ? 'light' : 'dark'
 }
 // const checked = ref(false)
 </script>
@@ -22,43 +15,13 @@ const changTheme = () => {
   <!-- -------------------浅色/深色模式切换------------------- -->
   <header>
     <fn-button @click="changTheme">
-      {{ button }}
+      {{ theme.mode }}
     </fn-button>
   </header>
 
   <!-- -------------------新组建开发调试------------------- -->
   <div class="content">
-    <fn-button-group>
-      <fn-button>one</fn-button>
-      <fn-button>two</fn-button>
-      <fn-button>three</fn-button>
-    </fn-button-group>
-    <fn-button-group variant="outlined">
-      <fn-button>one</fn-button>
-      <fn-button>two</fn-button>
-      <fn-button>three</fn-button>
-    </fn-button-group>
-    <fn-button-group variant="text">
-      <fn-button>one</fn-button>
-      <fn-button>two</fn-button>
-      <fn-button>three</fn-button>
-    </fn-button-group>
-  </div>
-  <div class="content">
-    <fn-button-group orientation="vertical">
-      <fn-button>one</fn-button>
-      <fn-button>two</fn-button>
-      <fn-button>three</fn-button>
-    </fn-button-group>
-    <fn-button-group variant="outlined" orientation="vertical">
-      <fn-button>one</fn-button>
-      <fn-button>two</fn-button>
-      <fn-button>three</fn-button>
-    </fn-button-group>
-    <fn-button-group variant="text" orientation="vertical">
-      <fn-button>one</fn-button>
-      <fn-button>two</fn-button>
-      <fn-button>three</fn-button>
-    </fn-button-group>
+    <fn-button :color="theme => theme.palette.error">button</fn-button>
+    <child />
   </div>
 </template>

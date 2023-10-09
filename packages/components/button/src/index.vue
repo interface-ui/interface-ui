@@ -8,7 +8,7 @@ import { buttonProps } from './button'
 
 const props = defineProps(buttonProps)
 const ns = useNamespace('button')
-const { classes } = useButton(props, ns)
+const classes = useButton(props, ns)
 
 const classList = computed(() => {
   const { variant, shape, size } = props

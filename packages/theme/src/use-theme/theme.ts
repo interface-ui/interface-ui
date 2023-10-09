@@ -1,13 +1,15 @@
 import type { Scheme } from '@material/material-color-utilities'
-import type { States } from '../state/state'
-import type { Colors } from '../color/color'
-import type { Elevations } from '../elevation/elevation'
-import type { Typography } from '../typography/typography'
+import colors from '../color'
+import states from '../state'
+import elevations from '../elevation'
+import typography from '../typography'
+import type ThemeMode from '../mode'
 
 export type Palette = Omit<Record<keyof Scheme, string>, 'toJSON'>
 
 export interface ThemeConfig {
-  palette: Partial<Palette>
+  mode?: ThemeMode
+  palette?: Partial<Palette>
 }
 
 export const themePaletteColor = ['primary', 'secondary', 'tertiary', 'error']
@@ -18,10 +20,20 @@ export interface ParsedScheme {
   styles: Record<string, string>
 }
 
-export default interface Theme {
+export default class Theme {
+  mode: ThemeMode
   palette: Palette
-  readonly colors: Colors
-  readonly states: States
-  readonly elevations: Elevations
-  readonly typography: Typography
+  colors = colors
+  states = states
+  elevations = elevations
+  typography = typography
+
+  constructor(palette: Palette, mode: ThemeMode = 'light') {
+    this.palette = palette
+    this.mode = mode
+  }
+
+  setMode(mode: ThemeMode) {
+    this.mode = mode
+  }
 }
