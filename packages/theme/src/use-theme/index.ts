@@ -72,19 +72,17 @@ export const createTheme = (
   const lightPalette = parseShceme(dynamicTheme.schemes.light)
   const darkPalette = parseShceme(dynamicTheme.schemes.dark)
 
-  if (typeof window !== 'undefined') {
-    watch(
-      () => theme.value.mode,
-      newVal => {
-        html.setAttribute('data-theme', newVal)
-        const { palette } = newVal === 'dark' ? darkPalette! : lightPalette!
-        theme.value = new Theme({ ...palette, ...$palette }, newVal)
-      },
-      { immediate: true }
-    )
+  watch(
+    () => theme.value.mode,
+    newVal => {
+      html.setAttribute('data-theme', newVal)
+      const { palette } = newVal === 'dark' ? darkPalette! : lightPalette!
+      theme.value = new Theme({ ...palette, ...$palette }, newVal)
+    },
+    { immediate: true }
+  )
 
-    injectJSS(lightPalette, darkPalette)
-  }
+  injectJSS(lightPalette, darkPalette)
 
   uesThemeProvider(theme)
   return theme
