@@ -10,7 +10,7 @@ const list: PropTableItem[] = [
     name: 'size',
     remark: 'icon size',
     type: 'Number',
-    default: '16',
+    default: '24',
   },
   {
     name: 'color',
