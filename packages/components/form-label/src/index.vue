@@ -10,7 +10,6 @@ const ns = useNamespace('form-label')
 
 <script lang="ts">
 export default defineComponent({
-  name: 'FnFormLabel',
   inheritAttrs: false,
 })
 </script>

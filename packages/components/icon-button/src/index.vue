@@ -7,7 +7,7 @@ import { iconButtonProps } from './icon-button'
 
 const props = defineProps(iconButtonProps)
 const ns = useNamespace('icon-button')
-const { classes } = useIconButton(props, ns)
+const classes = useIconButton(props, ns)
 </script>
 
 <template>

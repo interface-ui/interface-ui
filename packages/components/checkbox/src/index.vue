@@ -11,16 +11,9 @@ import FnIcon from '../../icon'
 const props = defineProps(checkboxProps)
 const emits = defineEmits<{ (e: 'update:modelValue', v: boolean): void }>()
 const ns = useNamespace('checkbox')
-const { classes } = useCheckbox(props, ns)
+const classes = useCheckbox(props, ns)
 const attrs = useAttrs()
 
-const status = computed<CheckboxStatus>(() => {
-  if (typeof checked.value === 'boolean') {
-    return checked.value ? 'checked' : 'blank'
-  } else {
-    return (checked.value as any[]).includes(attrs.value) ? 'checked' : 'blank'
-  }
-})
 const checked = computed<boolean>({
   get() {
     return props.modelValue as any
@@ -29,12 +22,14 @@ const checked = computed<boolean>({
     emits(UPDATE_MODEL_EVENT, newVal)
   },
 })
-</script>
 
-<script lang="ts">
-export default {
-  name: 'FnCheckbox',
-}
+const status = computed<CheckboxStatus>(() => {
+  if (typeof checked.value === 'boolean') {
+    return checked.value ? 'checked' : 'blank'
+  } else {
+    return (checked.value as any[]).includes(attrs.value) ? 'checked' : 'blank'
+  }
+})
 </script>
 
 <template>

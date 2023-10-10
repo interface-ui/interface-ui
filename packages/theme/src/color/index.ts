@@ -2,7 +2,7 @@ import colorCSS from '@fusion-ui/theme/styles/palette.less?inline'
 import type { Colors } from './color'
 
 const match = colorCSS.matchAll(
-  /--\b(md|fn)\b-ref-palette-([a-z]+)(-variant)?([0-9]*): (#[0-9a-z]{6});/g
+  /--\b(md|fn)\b-ref-palette-([a-zA-Z]+)(-variant)?-([A-Z0-9]*): (#[0-9a-z]{6});/g
 )
 const colors: Colors = [...match].reduce((pre, cur) => {
   const [_, _source, colorName, variant, level, value] = cur

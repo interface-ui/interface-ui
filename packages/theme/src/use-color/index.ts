@@ -1,10 +1,10 @@
-import type {
-  ThemeCallBack,
-  ThemePaletteColor,
+import {
+  type ThemeCallBack,
+  type ThemePaletteColor,
+  themePaletteColor,
 } from '@fusion-ui/theme/src/use-theme/theme'
 import useTheme from '@fusion-ui/theme/src/use-theme'
 import { computed } from 'vue'
-import { argbFromHex, rgbaFromArgb } from '@material/material-color-utilities'
 
 /**
  * The function to compute color from props
@@ -14,27 +14,17 @@ import { argbFromHex, rgbaFromArgb } from '@material/material-color-utilities'
  * @param {string} [defaultVal] The default value when color does not exist
  * @return Return the computed string. The value can be CSS variable or color in hex
  */
-const useColor = (
-  color: ThemePaletteColor | string | ThemeCallBack,
-  rgb = false
-) => {
+const useColor = (color: ThemePaletteColor | string | ThemeCallBack) => {
   const theme = useTheme()
   return computed(() => {
     if (!color) {
       return null
     }
     if (typeof color === 'function') {
-      if (rgb) {
-        const argb = argbFromHex(color(theme))
-        const { r, g, b } = rgbaFromArgb(argb)
-        return `${r}, ${g}, ${b}`
-      }
-      return color(theme)
+      return color(theme.value)
     }
-    if (['primary', 'secondary', 'tertiary', 'error'].includes(color)) {
-      return rgb
-        ? `var(--md-sys-color-${color}-rgb)`
-        : `var(--md-sys-color-${color})`
+    if (themePaletteColor.includes(color)) {
+      return `var(--md-sys-color-${color})`
     }
     return color
   })

@@ -7,24 +7,12 @@ import {
   rgbaFromArgb,
   themeFromSourceColor,
 } from '@material/material-color-utilities'
-import { reactive } from 'vue'
-import colors from '../color'
-import states from '../state'
-import elevations from '../elevation'
-import typography from '../typography'
-import type Theme from './theme'
-import type { Palette, ParsedScheme } from './theme'
+import type { Ref } from 'vue'
+import { inject, provide, ref, watch } from 'vue'
+import Theme from './theme'
+import type { Palette, ParsedScheme, ThemeConfig } from './theme'
 
-const theme = reactive<Theme>({
-  colors,
-  states,
-  elevations,
-  typography,
-} as Theme)
-let lightPalette: ParsedScheme | null = null
-let darkPalette: ParsedScheme | null = null
-
-const parseShceme = (scheme: Scheme) => {
+const parseShceme = (scheme: Scheme): ParsedScheme => {
   const palette: Palette = {} as any
   const styles: Record<string, string> = {} as any
   for (const [key, value] of Object.entries(scheme.toJSON())) {
@@ -39,65 +27,71 @@ const parseShceme = (scheme: Scheme) => {
   return { palette, styles }
 }
 
-/**
- * The hook to create the theme
- * @param {string} source The source color of the theme, the value should be "Hex"
- * @param {Partial<Palette>} scheme The object to customize the current theme
- * @returns {Theme} Theme object
- */
-export const createTheme = (
-  source = '#3894ff',
-  scheme: Partial<Palette> = {}
-): Theme => {
-  const dynamicTheme = themeFromSourceColor(argbFromHex(source))
-
-  lightPalette = parseShceme(dynamicTheme.schemes.light)
-  darkPalette = parseShceme(dynamicTheme.schemes.dark)
-
-  if (typeof window !== 'undefined') {
-    const themeMatch = window.matchMedia('(prefers-color-scheme: dark)')
-    const onThemeChange = () => {
-      const { palette } = themeMatch.matches ? darkPalette! : lightPalette!
-      theme.palette = { ...palette, ...scheme }
-    }
-    jss.setup(preset())
-    const cssStyles = {
-      '@media (prefers-color-scheme: light)': {
-        '@global': {
-          ':root': lightPalette?.styles,
-          ':root[data-theme="dark"]': darkPalette?.styles,
-        },
+const injectJSS = (lightPalette: ParsedScheme, darkPalette: ParsedScheme) => {
+  jss.setup(preset())
+  const cssStyles = {
+    '@global': {
+      ':root': {
+        'color-scheme': 'light',
+        ...lightPalette?.styles,
       },
-      '@media (prefers-color-scheme: dark)': {
-        '@global': {
-          ':root': lightPalette?.styles,
-          ':root[data-theme="dark"]': darkPalette?.styles,
-        },
+      ':root[data-theme="dark"]': {
+        'color-scheme': 'dark',
+        ...darkPalette?.styles,
       },
-    }
-    jss.createStyleSheet(cssStyles).attach()
-    onThemeChange()
-    themeMatch.addEventListener('change', onThemeChange)
+    },
   }
-
-  return theme
+  jss.createStyleSheet(cssStyles).attach()
 }
 
 /**
- * @param {Partial<Palette>} scheme The object to customize the current theme
- * @returns {Theme} Theme object
+ * The hook to provide theme obj to the child components
+ * @param {Ref<Theme>} theme The theme obj
  */
-export const customizeTheme = (scheme: Partial<Palette>) => {
-  theme.palette = { ...theme.palette, ...scheme }
+export const uesThemeProvider = (theme: Ref<Theme>) => {
+  provide('ThemeContext', theme)
+}
 
+/**
+ * The hook to create the theme
+ * @param {string} source The source color of the theme, the value should be "Hex"
+ * @param {ThemeConfig} config The object to customize the theme
+ * @returns {Ref<Theme> } Theme object
+ */
+export const createTheme = (
+  source = '#3894ff',
+  config: ThemeConfig = {}
+): Ref<Theme> => {
+  const { palette: $palette, mode } = config
+  const theme = ref<Theme>(new Theme({} as Palette, mode))
+  const html = document.documentElement as HTMLElement
+
+  const dynamicTheme = themeFromSourceColor(argbFromHex(source))
+  const lightPalette = parseShceme(dynamicTheme.schemes.light)
+  const darkPalette = parseShceme(dynamicTheme.schemes.dark)
+
+  watch(
+    () => theme.value.mode,
+    newVal => {
+      html.setAttribute('data-theme', newVal)
+      const { palette } = newVal === 'dark' ? darkPalette! : lightPalette!
+      theme.value = new Theme({ ...palette, ...$palette }, newVal)
+    },
+    { immediate: true }
+  )
+
+  injectJSS(lightPalette, darkPalette)
+
+  uesThemeProvider(theme)
   return theme
 }
 
 /**
  * Get the current theme object
- * @returns {Theme} Theme object
+ * @returns {Ref<Theme> } Theme object
  */
-const useTheme = (): Theme => {
+const useTheme = (): Ref<Theme> => {
+  const theme = inject<Ref<Theme>>('ThemeContext')!
   return theme
 }
 

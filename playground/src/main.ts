@@ -1,5 +1,6 @@
 import { createApp } from 'vue'
-import fusionUi from 'fusion-ui-vue'
+// import fusionUi from 'fusion-ui-vue'
+import fusionUi from '@fusion-ui/components'
 // import { createRouter, createWebHistory } from 'vue-router'
 
 import './style.css'

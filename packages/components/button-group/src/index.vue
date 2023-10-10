@@ -9,7 +9,7 @@ export default {
   setup(props, { slots, attrs }) {
     const ns = useNamespace('button-group')
     const { orientation, ...buttonProps } = props
-    const { classes } = useButtonGroup(props, ns)
+    const classes = useButtonGroup(props, ns)
     const classList = computed(() => {
       const { variant, shape, size } = buttonProps
       return [
@@ -18,7 +18,7 @@ export default {
         ns.m(shape),
         ns.m(variant),
         ns.m(orientation),
-        classes[ns.b()],
+        classes.value[ns.b()],
       ].join(' ')
     })
 

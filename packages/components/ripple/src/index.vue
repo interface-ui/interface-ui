@@ -18,7 +18,7 @@ const ripplesArr = reactive<RippleStyle[]>([])
 const duration = ref<number>(600)
 const parent = getCurrentInstance()?.parent
 const ns = useNamespace('ripple')
-const { classes } = useRipple(props, ns)
+const classes = useRipple(props, ns)
 let bounce: NodeJS.Timeout | null = null
 let listener: EventListener | null = null
 
