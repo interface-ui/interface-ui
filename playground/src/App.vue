@@ -22,6 +22,7 @@ const changTheme = () => {
   <!-- -------------------新组建开发调试------------------- -->
   <div class="content">
     <fn-button :color="theme => theme.palette.error">button</fn-button>
+    <fn-button color="error">button</fn-button>
     <child />
   </div>
 </template>

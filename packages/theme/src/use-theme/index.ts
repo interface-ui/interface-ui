@@ -30,16 +30,14 @@ const parseShceme = (scheme: Scheme): ParsedScheme => {
 const injectJSS = (lightPalette: ParsedScheme, darkPalette: ParsedScheme) => {
   jss.setup(preset())
   const cssStyles = {
-    '@media (prefers-color-scheme: light)': {
-      '@global': {
-        ':root': lightPalette?.styles,
-        ':root[data-theme="dark"]': darkPalette?.styles,
+    '@global': {
+      ':root': {
+        'color-scheme': 'light',
+        ...lightPalette?.styles,
       },
-    },
-    '@media (prefers-color-scheme: dark)': {
-      '@global': {
-        ':root': lightPalette?.styles,
-        ':root[data-theme="dark"]': darkPalette?.styles,
+      ':root[data-theme="dark"]': {
+        'color-scheme': 'dark',
+        ...darkPalette?.styles,
       },
     },
   }
