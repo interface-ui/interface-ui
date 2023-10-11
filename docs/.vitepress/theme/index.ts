@@ -11,7 +11,7 @@ import '@fusion-ui/components/message/src/index.less' // 单文件样式
 
 // 注册本地组件
 import FusionUi from '@fusion-ui/components'
-import createTheme from '@fusion-ui/theme'
+import { createTheme } from '@fusion-ui/theme'
 
 import DemoBlock from '../components/demo-block'
 import TableBlock from '../components/table-block'
@@ -26,8 +26,9 @@ import './style/scrollbar.less'
 export default {
   ...theme,
   setup() {
-    createTheme()
     onMounted(() => {
+      createTheme()
+
       const html = document.documentElement
       const toggleTheme = () => {
         if (html.classList.contains('dark'))
