@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, ref, toRefs } from 'vue'
 import { Icon } from 'fusion-ui-iconify/dist/dist.mjs'
-import { useNamespace } from '@fusion-ui/utils/useNamespace'
+import { useNamespace } from '@fusion-ui/utils'
 import { UPDATE_MODEL_EVENT } from '@fusion-ui/constants'
 import { getSvgIncon, inputEmits, inputProps } from '../src/input'
 import { useInput } from '../src/use-input'
@@ -36,8 +36,7 @@ const inputType = ref(type.value)
 
 const changeEyeIcon = () => {
   inputType.value = inputType.value === 'password' ? 'text' : 'password'
-  if (inputType.value === 'password')
-    inintIcon.value = 'eye-slash'
+  if (inputType.value === 'password') inintIcon.value = 'eye-slash'
   else inintIcon.value = 'eye'
 }
 
@@ -97,7 +96,7 @@ const handleChange = (event: Event) => {
       @input="handleInput"
       @focus="handleFocus"
       @change="handleChange"
-    >
+    />
     <!-- 后部图标 -->
     <span v-if="suffixIcon" class="suffix-icon">
       <icon :icon="suffixIcon" />

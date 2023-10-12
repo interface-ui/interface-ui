@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { iconSize } from '@fusion-ui/constants'
-import { useNamespace } from '@fusion-ui/utils/useNamespace'
+import { useNamespace } from '@fusion-ui/utils'
 import { useIconButton } from '@fusion-ui/hooks'
 import FnRipple from '../../ripple'
 import { iconButtonProps } from './icon-button'

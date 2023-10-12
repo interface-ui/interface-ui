@@ -9,7 +9,7 @@ import {
 } from 'vue'
 import { addUnit } from '@fusion-ui/utils/dom'
 import { useRipple } from '@fusion-ui/hooks'
-import { useNamespace } from '@fusion-ui/utils/useNamespace'
+import { useNamespace } from '@fusion-ui/utils'
 import type { RippleStyle } from './ripple'
 import { rippleProps } from './ripple'
 

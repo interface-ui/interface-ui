@@ -8,12 +8,14 @@ import FnIcon from '../../icon'
 import { radioProps } from './radio'
 
 const props = defineProps(radioProps)
-const emits = defineEmits<{ (e: 'update:modelValue', v: boolean): void }>()
+const emits = defineEmits<{
+  (e: 'update:modelValue', v: string | number | boolean): void
+}>()
 const attrs = useAttrs()
 const ns = useNamespace('radio')
 const classes = useRadio(props, ns)
 
-const checked = computed<boolean>({
+const checked = computed<string | number | boolean>({
   get() {
     return props.modelValue as any
   },

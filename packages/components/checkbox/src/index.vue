@@ -2,7 +2,7 @@
 import { computed, useAttrs } from 'vue'
 import { UPDATE_MODEL_EVENT, iconSize } from '@fusion-ui/constants'
 import { useCheckbox } from '@fusion-ui/hooks'
-import { useNamespace } from '@fusion-ui/utils/useNamespace'
+import { useNamespace } from '@fusion-ui/utils'
 import type { CheckboxStatus } from '../src/checkbox'
 import { checkboxProps, iconType } from '../src/checkbox'
 import FnRipple from '../../ripple'

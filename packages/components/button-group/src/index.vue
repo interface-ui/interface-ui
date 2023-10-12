@@ -1,5 +1,5 @@
 <script lang="ts">
-import { useNamespace } from '@fusion-ui/utils/useNamespace'
+import { useNamespace } from '@fusion-ui/utils'
 import { computed, createElementVNode } from 'vue'
 import { useButtonGroup } from '@fusion-ui/hooks'
 import { buttonGroupProps } from './button-group'

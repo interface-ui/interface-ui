@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
-import { useNamespace } from '@fusion-ui/utils/useNamespace'
+import { useNamespace } from '@fusion-ui/utils'
 import { isString } from '@fusion-ui/utils/types'
 import { useDrawer } from '@fusion-ui/hooks'
 import { FnIcon } from '../../icon'
@@ -17,8 +17,7 @@ const drawerOverlay = computed(() => {
 const drawerClassList = computed(() => {
   const { direction } = props
   const classList = [ns.b()]
-  if (isString(direction))
-    classList.push(ns.m(direction))
+  if (isString(direction)) classList.push(ns.m(direction))
   return classList
 })
 
@@ -46,10 +45,7 @@ export default {
     />
 
     <transition :name="`slide-fade--${props.direction}`">
-      <div
-        v-show="visible" ref="targetDivRef"
-        :class="drawerClassList"
-      >
+      <div v-show="visible" ref="targetDivRef" :class="drawerClassList">
         <header>
           <span class="drawer-title">
             {{ props.title }}
