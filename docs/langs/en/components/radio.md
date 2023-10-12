@@ -11,40 +11,38 @@ lang: en
 
 # Radio
 
-Perform selection operations
+The Radio Group allows the user to select one option from a set.
 
+Use radio buttons when the user needs to see all available options. If available options can be collapsed, consider using a Select component because it uses less space.
+
+Radio buttons should have the most commonly used option selected by default.
 
 ## Basic usage
 
-You only need to set the ```v-model``` binding variable, and ```value``` as the selected value.
-<demo src="../../../example/radio/base.vue"></demo>
+Usually, `Radio` works with `FormLabel` component to display the lable.
+
+Using `v-model` binding variable, and `value` as the selected value.
+
+<demo src="../../../example/radio/basic.vue"></demo>
 
 
-## Disabled state
+## Standalone radio buttons
 
-Disable the radio box through the ```disabled``` property
+`Radio` can also be used standalone, without the `FormLabel` component.
 
-<demo src="../../../example/radio/disabled.vue"></demo>
+<demo src="../../../example/radio/standalone.vue"></demo>
 
+## Size and Color
 
-## Single box group
+The `size` and `color` props can be used to control the appearance of the `Radio`.
 
- Generate a set of vertically arranged radio boxes through ```option-list```
+<demo src="../../../example/radio/size-color.vue"></demo>
 
-<demo src="../../../example/radio/option-list-horizontal.vue"></demo>
+## Label placement
 
- Generate a set of vertically arranged radio boxes through ```horizontal = false```
+You can change the placement of the label with the `FormLabel` component's `label-placement` prop:
 
-<demo src="../../../example/radio/option-list.vue"></demo>
-
-## Customize the color of buttons
-
-Customize the color of the button through the ```color``` attribute
-
-<demo src="../../../example/radio/color.vue"></demo>
-
-<table-block type="propsZh" :data="props"></table-block>
-
+<demo src="../../../example/radio/label-placement.vue"></demo>
 
 ## Events
 

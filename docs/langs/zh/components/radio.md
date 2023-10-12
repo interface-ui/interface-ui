@@ -8,45 +8,40 @@ lang: zh
   import events from "../../../example/radio/description/zh-events.ts";
 </script>
 
+# 单选框
 
-# Radio 单选框
+单选框组允许用户从一组选项中选择一个选项。
 
-进行选择操作
+当用户需要查看所有可用选项时，请使用单选按钮。如果可用选项可以折叠，考虑使用选择组件，因为它占用较少的空间。
 
+单选按钮应默认选择最常用的选项。
 
-## 基础用法
+## 基本用法
 
-只需要设置 ```v-model``` 绑定变量，```value``` 为选中值。
-<demo src="../../../example/radio/base.vue"></demo>
+通常，`Radio` 与 `FormLabel` 组件一起使用，以显示标签。
 
+使用 `v-model` 绑定变量和 `value` 作为选定的值。
 
-## 禁用状态
+<demo src="../../../example/radio/basic.vue"></demo>
 
-通过 ```disabled``` 属性禁用单选框。
+## 独立的单选按钮
 
-<demo src="../../../example/radio/disabled.vue"></demo>
+`Radio` 也可以独立使用，无需 `FormLabel` 组件。
 
+<demo src="../../../example/radio/standalone.vue"></demo>
 
-## 单选框组
+## 大小和颜色
 
- 传入```option-list```属性，可以生成一组单选框。
-<demo src="../../../example/radio/option-list-horizontal.vue"></demo>
+`size` 和 `color` 属性可用于控制 `Radio` 的外观。
 
+<demo src="../../../example/radio/size-color.vue"></demo>
 
- 通过 ```horizontal = false``` 生成一组垂直排列的单选框。
+## 标签位置
 
-<demo src="../../../example/radio/option-list.vue"></demo>
+您可以使用 `FormLabel` 组件的 `label-placement` 属性来更改标签的位置：
 
-## 自定义按钮颜色
-
- 通过 ```color``` 属性自定义按钮颜色。
-<demo src="../../../example/radio/color.vue"></demo>
-
-
-## 属性
-<table-block type="propsZh" :data="props"></table-block>
-
+<demo src="../../../example/radio/label-placement.vue"></demo>
 
 ## 事件
-<table-block type="eventsZh" :data="events"></table-block>
 
+<table-block type="eventsZh" :data="events"></table-block>
