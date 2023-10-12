@@ -7,7 +7,14 @@
     "emitDeclarationOnly": true,
     "declaration": true,
     "declarationDir": "./packages/fusion-ui/dist/types",
-    "types": ["node"]
+    "types": ["node"],
+    "paths": {
+      "@fusion-ui/components": ["packages/components", "@fusion-ui/components"],
+      "@fusion-ui/constants": ["packages/constants", "@fusion-ui/constants"],
+      "@fusion-ui/hooks": ["packages/hooks", "@fusion-ui/hooks"],
+      "@fusion-ui/theme": ["packages/theme", "@fusion-ui/theme"],
+      "@fusion-ui/utils": ["packages/utils", "@fusion-ui/utils"]
+    }
   },
 
   "exclude": [
