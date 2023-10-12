@@ -24,7 +24,7 @@ export default {
 
     const slotsVNodes = slots?.default?.() ?? []
     slotsVNodes.forEach(vnode => {
-      vnode.props = { ...buttonProps, ...attrs }
+      vnode.props = { ...buttonProps, ...attrs, ...vnode.props }
     })
 
     return () => {

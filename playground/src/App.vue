@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import { FnButton } from '@fusion-ui/components'
+import { FnButton, FnRadio, FnFormLabel } from '@fusion-ui/components'
 import { createTheme } from '@fusion-ui/theme'
-import Child from './Child.vue'
+import { ref } from 'vue'
 
 const theme = createTheme()
 
 const changTheme = () => {
   theme.value.mode = theme.value.mode === 'dark' ? 'light' : 'dark'
 }
-// const checked = ref(false)
+const checked = ref(1)
 </script>
 
 <template>
@@ -21,8 +21,31 @@ const changTheme = () => {
 
   <!-- -------------------新组建开发调试------------------- -->
   <div class="content">
-    <fn-button :color="theme => theme.palette.error">button</fn-button>
-    <fn-button color="error">button</fn-button>
-    <child />
+    {{ checked }}
+    <fn-form-label
+      v-model="checked"
+      label="One"
+      :value="1"
+      :control="FnRadio"
+    />
+    <fn-form-label
+      v-model="checked"
+      label="Two"
+      :value="2"
+      :control="FnRadio"
+    />
+    <fn-form-label
+      v-model="checked"
+      label="Three"
+      :value="3"
+      :control="FnRadio"
+    />
+    <fn-form-label
+      v-model="checked"
+      label="Four"
+      :value="4"
+      :control="FnRadio"
+      disabled
+    />
   </div>
 </template>

@@ -1,71 +1,53 @@
-@import "../../../styles/base.less";
-[data-theme="light"] .fn-radio,
-.fn-radio[data-theme="light"],
 .fn-radio {
-  --fn-label-text-color: #606266;
-  font-size: 14px;
-}
-
-[data-theme="dark"] .fn-radio,
-.fn-radio[data-theme="dark"] {
-  --fn-label-text-color: #afbdd5;
-  font-size: 14px;
-}
-
-.fn-radio{
-  display: flex;
+  display: inline-flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
   position: relative;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  background-color: transparent;
+  outline: 0px;
+  border: 0px;
+  margin: 0px;
   cursor: pointer;
-  align-items: center;
-  >.fn-radio-inner{
+  user-select: none;
+  vertical-align: middle;
+  appearance: none;
+  text-decoration: none;
+  padding: 8px;
+  border-radius: 50%;
+
+  &:is([disabled]) {
+    cursor: default;
+  }
+
+  &:is([disabled]) &__icon {
+    color: var(--fn-sys-color-disabled-level-0) !important;
+  }
+
+  @media (any-hover: hover) {
+    &:not([disabled]):hover {
+      background-color: color-mix(
+        in srgb,
+        var(--fn-radio-color)
+          var(--md-sys-state-hover-state-layer-opacity-percentage),
+        var(--fn-sys-color-switch) var(--fn-zero-percentage)
+      );
+    }
+  }
+
+  &__input {
+    cursor: inherit;
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 0;
     opacity: 0;
-    display: none;
-    display: none;
-  }
-  >.fn-radio-check{
-    display: inline-block;
-    border: 1px solid var(--fn-label-text-color);
-    border-radius: 50% 50% 50% 50%;
-    width: 13px;
-    height: 13px;
-    margin: 0;
-  }
-  >.is-checked{
-    transition: all 0.2s;
-    background-color: #fff;
-    border: 4px solid var(--radio-background);
-
-  }
-
-
-  >.fn-radio-label{
-    color: var(--fn-label-text-color);
-    margin-left: 5px;
-  } 
-  >.is-checked-text{
-    color: hsl(217, 67%, 50%);
-  }
-}
-.is-disabled{
-  opacity: 0.5;
-  cursor:not-allowed;
-}
-
-.fn-radio-group{
-  > div:not(:last-child) {
-    margin-bottom: 5px;
-  }
-}
-.is-horizontal{
-  display: flex;
-  align-items: center;
-  > div:not(:last-child) {
-    margin-right: 10px;
-    margin-bottom: 0;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    margin: 0px;
+    padding: 0px;
+    z-index: 1;
   }
 }
