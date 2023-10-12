@@ -25,17 +25,17 @@ Generate letter avatars by passing text.
 Usually we use it to display users without avatars.
 <demo src="../../../example/avatar/no-avatar.vue"></demo>
 
-## 尺寸
+## Size
 
 We provide three sizes of avatars, namely ```small``` , ````default```` and ```large```. You can also use ```height``` and ```width``` to customize the size of the avatar.
 <demo src="../../../example/avatar/size.vue"></demo>
 
-## 图标头像
+## Icon avatar
 
 Generate icon avatars by passing icons.
 <demo src="../../../example/avatar/icon.vue"></demo>
 
-## 形状
+## shape
 
 Avatars in three shapes are provided, namely ```circle```, ```square``` and ```rounded```.
 <demo src="../../../example/avatar/shape.vue"></demo>
