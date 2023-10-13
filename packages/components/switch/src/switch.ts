@@ -1,5 +1,5 @@
 import type { ExtractPropTypes } from 'vue'
-import { UPDATE_MODEL_EVENT } from '../../../constans/event'
+import { UPDATE_MODEL_EVENT } from '../../../constants/event'
 
 export interface OptionType {
   label: string

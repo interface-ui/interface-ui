@@ -1,4 +1,4 @@
-import colorCSS from '@fusion-ui/theme/styles/palette.less?inline'
+import colorCSS from '@fusion-ui-vue/theme/styles/palette.less?inline'
 import type { Colors } from './color'
 
 const match = colorCSS.matchAll(

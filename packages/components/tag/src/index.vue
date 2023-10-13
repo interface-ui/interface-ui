@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { UseTag } from '@fusion-ui/hooks'
+import { UseTag } from '@fusion-ui-vue/hooks'
 import { tagProps } from '../src/tag'
 
 const props = defineProps(tagProps)

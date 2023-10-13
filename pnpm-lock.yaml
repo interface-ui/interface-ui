@@ -8,19 +8,19 @@ importers:
 
   .:
     dependencies:
-      '@fusion-ui/components':
+      '@fusion-ui-vue/components':
         specifier: workspace:*
         version: link:packages/components
-      '@fusion-ui/constants':
+      '@fusion-ui-vue/constants':
         specifier: workspace:*
-        version: link:packages/constans
-      '@fusion-ui/hooks':
+        version: link:packages/constants
+      '@fusion-ui-vue/hooks':
         specifier: workspace:*
         version: link:packages/hooks
-      '@fusion-ui/theme':
+      '@fusion-ui-vue/theme':
         specifier: workspace:*
         version: link:packages/theme
-      '@fusion-ui/utils':
+      '@fusion-ui-vue/utils':
         specifier: workspace:*
         version: link:packages/utils
       '@pnpm/types':
@@ -227,10 +227,25 @@ importers:
         specifier: '4'
         version: 4.0.0(vue@3.2.45)
 
-  packages/constans: {}
+  packages/constants: {}
 
   packages/fusion-ui:
     dependencies:
+      '@fusion-ui-vue/components':
+        specifier: ^0.0.1
+        version: link:../components
+      '@fusion-ui-vue/constants':
+        specifier: ^0.0.1
+        version: link:../constants
+      '@fusion-ui-vue/hooks':
+        specifier: ^0.0.1
+        version: link:../hooks
+      '@fusion-ui-vue/theme':
+        specifier: ^0.0.1
+        version: link:../theme
+      '@fusion-ui-vue/utils':
+        specifier: ^0.0.1
+        version: link:../utils
       '@pnpm/types':
         specifier: github:pnpm/types
         version: github.com/pnpm/types/e85ce6c0831cc56f7dd94c74eaba08101a50efdd

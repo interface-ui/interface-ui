@@ -7,9 +7,9 @@ import {
   ref,
   watchEffect,
 } from 'vue'
-import { addUnit } from '@fusion-ui/utils/dom'
-import { useRipple } from '@fusion-ui/hooks'
-import { useNamespace } from '@fusion-ui/utils/useNamespace'
+import { addUnit } from '@fusion-ui-vue/utils/dom'
+import { useRipple } from '@fusion-ui-vue/hooks'
+import { useNamespace } from '@fusion-ui-vue/utils/useNamespace'
 import type { RippleStyle } from './ripple'
 import { rippleProps } from './ripple'
 

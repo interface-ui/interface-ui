@@ -2,8 +2,8 @@ import {
   type ThemeCallBack,
   type ThemePaletteColor,
   themePaletteColor,
-} from '@fusion-ui/theme/src/use-theme/theme'
-import useTheme from '@fusion-ui/theme/src/use-theme'
+} from '@fusion-ui-vue/theme/src/use-theme/theme'
+import useTheme from '@fusion-ui-vue/theme/src/use-theme'
 import { computed } from 'vue'
 
 /**

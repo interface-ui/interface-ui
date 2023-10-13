@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { useRadio, useRadioGroup } from '@fusion-ui/hooks'
-import { UPDATE_MODEL_EVENT } from '../../../constans/event'
+import { useRadio, useRadioGroup } from '@fusion-ui-vue/hooks'
+import { UPDATE_MODEL_EVENT } from '../../../constants/event'
 import { radioEmits, radioProps } from '../src/radio'
 const props = defineProps(radioProps)
 

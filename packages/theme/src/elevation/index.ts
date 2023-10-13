@@ -1,4 +1,4 @@
-import elevationCSS from '@fusion-ui/theme/styles/elevation.less?inline'
+import elevationCSS from '@fusion-ui-vue/theme/styles/elevation.less?inline'
 import type { Elevations } from './elevation'
 
 const match = elevationCSS

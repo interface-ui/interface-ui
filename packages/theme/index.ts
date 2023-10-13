@@ -1,4 +1,4 @@
-import '@fusion-ui/theme/styles/baseline.less'
+import '@fusion-ui-vue/theme/styles/baseline.less'
 import useTheme from './src/use-theme'
 export * from './src/use-theme'
 export * from './src/use-theme/theme'

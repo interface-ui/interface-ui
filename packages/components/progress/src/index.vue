@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { UseProgress } from '@fusion-ui/hooks'
+import { UseProgress } from '@fusion-ui-vue/hooks'
 import { progressProps } from '../src/progress'
 import FnIcon from '../../icon'
 const props = defineProps(progressProps)

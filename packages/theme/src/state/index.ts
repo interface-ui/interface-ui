@@ -1,4 +1,4 @@
-import stateCss from '@fusion-ui/theme/styles/state.less?inline'
+import stateCss from '@fusion-ui-vue/theme/styles/state.less?inline'
 import type { States } from './state'
 
 const match = stateCss.matchAll(

@@ -6,7 +6,7 @@ import {
   watch,
 } from 'vue'
 import type { CSSProperties, Ref, SetupContext } from 'vue'
-import { UPDATE_MODEL_EVENT } from '../../../constans/event'
+import { UPDATE_MODEL_EVENT } from '../../../constants/event'
 import { addUnit } from '../../../utils/dom/style'
 import type { DialogEmits } from './dialog'
 

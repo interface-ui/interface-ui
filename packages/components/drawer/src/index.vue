@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
-import { useNamespace } from '@fusion-ui/utils/useNamespace'
-import { isString } from '@fusion-ui/utils/types'
-import { useDrawer } from '@fusion-ui/hooks'
+import { useNamespace } from '@fusion-ui-vue/utils/useNamespace'
+import { isString } from '@fusion-ui-vue/utils/types'
+import { useDrawer } from '@fusion-ui-vue/hooks'
 import { FnIcon } from '../../icon'
 import { drawerProps } from './drawer'
 const props = defineProps(drawerProps)

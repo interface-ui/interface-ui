@@ -6,8 +6,8 @@ import {
   watch
 } from 'vue'
 import type { SetupContext } from 'vue'
-import { UPDATE_MODEL_EVENT } from '@fusion-ui/constants'
-import type { DrawerEmits } from '@fusion-ui/components/drawer/src/drawer'
+import { UPDATE_MODEL_EVENT } from '@fusion-ui-vue/constants'
+import type { DrawerEmits } from '@fusion-ui-vue/components/drawer/src/drawer'
 export const useDrawer = (
   props: any,
 ) => {

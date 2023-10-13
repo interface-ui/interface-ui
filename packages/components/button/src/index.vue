@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-import { useNamespace } from '@fusion-ui/utils/useNamespace'
+import { useNamespace } from '@fusion-ui-vue/utils/useNamespace'
 import { computed } from 'vue'
-import { useButton } from '@fusion-ui/hooks'
-import { iconSize } from '@fusion-ui/constants'
+import { useButton } from '@fusion-ui-vue/hooks'
+import { iconSize } from '@fusion-ui-vue/constants'
 import FnRipple from '../../ripple'
 import { buttonProps } from './button'
 

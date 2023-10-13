@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { FnButton } from '@fusion-ui/components'
-import { createTheme } from '@fusion-ui/theme'
+import { FnButton } from '@fusion-ui-vue/components'
+import { createTheme } from '@fusion-ui-vue/theme'
 import Child from './Child.vue'
 
 const theme = createTheme()

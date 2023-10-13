@@ -1,9 +1,0 @@
-{
-  "name": "@fusion-ui/constants",
-  "version": "0.0.1",
-  "private": true,
-  "description": "constans",
-  "main": "index.ts",
-  "types": "./dist/types/packages/constans/index.d.ts"
-
-}

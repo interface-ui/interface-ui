@@ -1,6 +1,6 @@
 {
   "name": "fusion-ui-vue",
-  "version": "1.1.20",
+  "version": "1.1.24",
   "packageManager": "pnpm@7.5.2",
   "description": "A Component Library for Vue 3",
   "author": "tsinghua-lau",
@@ -29,6 +29,11 @@
     "dist"
   ],
   "dependencies": {
+    "@fusion-ui-vue/components": "^0.0.1",
+    "@fusion-ui-vue/constants": "^0.0.1",
+    "@fusion-ui-vue/hooks": "^0.0.1",
+    "@fusion-ui-vue/theme": "^0.0.1",
+    "@fusion-ui-vue/utils": "^0.0.1",
     "@pnpm/types": "github:pnpm/types",
     "@vue/shared": "^3.2.47",
     "@vueuse/core": "^9.1.1",

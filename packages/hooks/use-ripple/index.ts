@@ -1,6 +1,6 @@
-import type { RippleProps } from '@fusion-ui/components/ripple'
-import { useColor } from '@fusion-ui/theme'
-import type { UseNamespaceReturn } from '@fusion-ui/utils/useNamespace'
+import type { RippleProps } from '@fusion-ui-vue/components/ripple'
+import { useColor } from '@fusion-ui-vue/theme'
+import type { UseNamespaceReturn } from '@fusion-ui-vue/utils/useNamespace'
 import { computed } from 'vue'
 import { useJSS } from '../use-jss'
 

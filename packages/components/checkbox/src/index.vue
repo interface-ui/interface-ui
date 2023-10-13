@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 import { computed, useAttrs } from 'vue'
-import { UPDATE_MODEL_EVENT, iconSize } from '@fusion-ui/constants'
-import { useCheckbox } from '@fusion-ui/hooks'
-import { useNamespace } from '@fusion-ui/utils/useNamespace'
+import { UPDATE_MODEL_EVENT, iconSize } from '@fusion-ui-vue/constants'
+import { useCheckbox } from '@fusion-ui-vue/hooks'
+import { useNamespace } from '@fusion-ui-vue/utils/useNamespace'
 import type { CheckboxStatus } from '../src/checkbox'
 import { checkboxProps, iconType } from '../src/checkbox'
 import FnRipple from '../../ripple'

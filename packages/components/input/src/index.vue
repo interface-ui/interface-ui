@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { computed, ref, toRefs } from 'vue'
 import { Icon } from 'fusion-ui-iconify/dist/dist.mjs'
-import { useNamespace } from '@fusion-ui/utils/useNamespace'
-import { UPDATE_MODEL_EVENT } from '@fusion-ui/constants'
+import { useNamespace } from '@fusion-ui-vue/utils/useNamespace'
+import { UPDATE_MODEL_EVENT } from '@fusion-ui-vue/constants'
 import { getSvgIncon, inputEmits, inputProps } from '../src/input'
 import { useInput } from '../src/use-input'
 

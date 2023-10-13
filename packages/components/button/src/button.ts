@@ -1,9 +1,9 @@
 import type {
   ThemeCallBack,
   ThemePaletteColor,
-} from '@fusion-ui/theme/src/use-theme/theme'
+} from '@fusion-ui-vue/theme/src/use-theme/theme'
 import type { ExtractPropTypes, PropType } from 'vue'
-import { type ComponentSize, componentSizes } from '@fusion-ui/constants'
+import { type ComponentSize, componentSizes } from '@fusion-ui-vue/constants'
 
 export const buttonVariants = ['text', 'filled', 'outlined'] as const
 export type ButtonVariant = typeof buttonVariants[number]
