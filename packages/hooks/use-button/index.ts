@@ -1,10 +1,10 @@
-import type { UseNamespaceReturn } from '@fusion-ui/utils'
-import { themePaletteColor, useColor } from '@fusion-ui/theme'
+import type { UseNamespaceReturn } from '@fusion-ui-vue/utils'
+import { themePaletteColor, useColor } from '@fusion-ui-vue/theme'
 import type {
   ButtonGroupProps,
   ButtonProps,
   IconButtonProps,
-} from '@fusion-ui/components'
+} from '@fusion-ui-vue/components'
 import { computed } from 'vue'
 import { useJSS } from '../use-jss'
 

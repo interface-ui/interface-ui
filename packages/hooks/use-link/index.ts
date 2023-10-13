@@ -1,6 +1,6 @@
-import type { UseNamespaceReturn } from '@fusion-ui/utils'
-import { useColor } from '@fusion-ui/theme'
-import type { LlinkProps } from '@fusion-ui/components'
+import type { UseNamespaceReturn } from '@fusion-ui-vue/utils'
+import { useColor } from '@fusion-ui-vue/theme'
+import type { LlinkProps } from '@fusion-ui-vue/components'
 import { useJSS } from '../use-jss'
 
 const jss = useJSS()

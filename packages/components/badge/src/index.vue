@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { UseBadge } from '@fusion-ui/hooks'
+import { UseBadge } from '@fusion-ui-vue/hooks'
 import { badgeProps } from './badge'
 const props = defineProps(badgeProps)
 const { classList, styleList } = UseBadge(props)

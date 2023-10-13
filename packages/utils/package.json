@@ -1,6 +1,6 @@
 {
-  "name": "@fusion-ui/utils",
-  "private": true,
+  "name": "@fusion-ui-vue/utils",
+  "version": "0.0.1",
   "license": "MIT",
   "main": "index.ts",
   "types": "./dist/types/packages/utils/index.d.ts",

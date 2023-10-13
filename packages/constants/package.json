@@ -1,0 +1,8 @@
+{
+  "name": "@fusion-ui-vue/constants",
+  "version": "0.0.1",
+  "description": "constants",
+  "main": "index.ts",
+  "types": "./dist/types/packages/constants/index.d.ts"
+
+}

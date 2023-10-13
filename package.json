@@ -28,11 +28,11 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@fusion-ui/components": "workspace:*",
-    "@fusion-ui/constants": "workspace:*",
-    "@fusion-ui/hooks": "workspace:*",
-    "@fusion-ui/theme": "workspace:*",
-    "@fusion-ui/utils": "workspace:*",
+    "@fusion-ui-vue/components": "workspace:*",
+    "@fusion-ui-vue/constants": "workspace:*",
+    "@fusion-ui-vue/hooks": "workspace:*",
+    "@fusion-ui-vue/theme": "workspace:*",
+    "@fusion-ui-vue/utils": "workspace:*",
     "@pnpm/types": "github:pnpm/types",
     "@vue/shared": "^3.2.47",
     "@vueuse/core": "^9.1.1",

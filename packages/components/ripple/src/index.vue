@@ -7,9 +7,8 @@ import {
   ref,
   watchEffect,
 } from 'vue'
-import { addUnit } from '@fusion-ui/utils/dom'
-import { useRipple } from '@fusion-ui/hooks'
-import { useNamespace } from '@fusion-ui/utils'
+import { addUnit, useNamespace } from '@fusion-ui-vue/utils'
+import { useRipple } from '@fusion-ui-vue/hooks'
 import type { RippleStyle } from './ripple'
 import { rippleProps } from './ripple'
 
@@ -63,12 +62,6 @@ onUnmounted(() => {
   }
 })
 defineExpose({ addRipple })
-</script>
-
-<script lang="ts">
-export default {
-  name: 'FuRipple',
-}
 </script>
 
 <template>

@@ -1,8 +1,8 @@
 import type {
   ThemeCallBack,
   ThemePaletteColor,
-} from '@fusion-ui/theme/src/use-theme/theme'
-import { type ComponentSize, componentSizes } from '@fusion-ui/constants'
+} from '@fusion-ui-vue/theme/src/use-theme/theme'
+import { type ComponentSize, componentSizes } from '@fusion-ui-vue/constants'
 import type { ExtractPropTypes, PropType } from 'vue'
 
 export type CheckboxStatus = 'blank' | 'checked'

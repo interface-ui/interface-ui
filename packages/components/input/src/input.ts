@@ -1,6 +1,6 @@
 import type { ExtractPropTypes, PropType } from 'vue'
-import { type ComponentSize, componentSizes } from '@fusion-ui/constants'
-import { UPDATE_MODEL_EVENT } from '../../../constans/event'
+import { type ComponentSize, componentSizes } from '@fusion-ui-vue/constants'
+import { UPDATE_MODEL_EVENT } from '../../../constants/event'
 
 export type InputType = 'text' | 'textarea' | 'password' | 'number'
 export type value = string | number

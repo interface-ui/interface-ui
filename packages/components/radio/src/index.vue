@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { computed, useAttrs } from 'vue'
-import { useNamespace } from '@fusion-ui/utils/useNamespace'
-import { UPDATE_MODEL_EVENT, iconSize } from '@fusion-ui/constants'
+import { useNamespace } from '@fusion-ui-vue/utils'
+import { UPDATE_MODEL_EVENT, iconSize } from '@fusion-ui-vue/constants'
 import { useRadio } from '@fusion-ui/hooks'
 import FnRipple from '../../ripple'
 import FnIcon from '../../icon'

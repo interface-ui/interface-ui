@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { useLink } from '@fusion-ui/hooks'
-import { useNamespace } from '@fusion-ui/utils'
+import { useLink } from '@fusion-ui-vue/hooks'
+import { useNamespace } from '@fusion-ui-vue/utils'
 import { linkEmits, linkProps } from '../src/link'
 const props = defineProps(linkProps)
 

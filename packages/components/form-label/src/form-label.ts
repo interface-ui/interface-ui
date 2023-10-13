@@ -1,5 +1,5 @@
 import type { ExtractPropTypes } from 'vue'
-import { componentDirection } from '@fusion-ui/constants'
+import { componentDirection } from '@fusion-ui-vue/constants'
 
 export const formLabelProps = {
   label: {

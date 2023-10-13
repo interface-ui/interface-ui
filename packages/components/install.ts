@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-extra-semi */
 import type { App, AppContext, Component, Plugin } from 'vue'
-import '@fusion-ui/theme'
+import '@fusion-ui-vue/theme'
 
 export type SFCWithInstall<T> = T & Plugin
 

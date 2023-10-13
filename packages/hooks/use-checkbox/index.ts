@@ -1,6 +1,6 @@
-import type { CheckboxProps } from '@fusion-ui/components/checkbox'
-import { useColor } from '@fusion-ui/theme'
-import type { UseNamespaceReturn } from '@fusion-ui/utils'
+import type { CheckboxProps } from '@fusion-ui-vue/components'
+import { useColor } from '@fusion-ui-vue/theme'
+import type { UseNamespaceReturn } from '@fusion-ui-vue/utils'
 import { computed } from 'vue'
 import { useJSS } from '../use-jss'
 

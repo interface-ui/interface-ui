@@ -1,9 +1,9 @@
-import type { ComponentSize } from '@fusion-ui/constants'
-import { componentSizes } from '@fusion-ui/constants'
+import type { ComponentSize } from '@fusion-ui-vue/constants'
+import { componentSizes } from '@fusion-ui-vue/constants'
 import type {
   ThemeCallBack,
   ThemePaletteColor,
-} from '@fusion-ui/theme/src/use-theme/theme'
+} from '@fusion-ui-vue/theme/src/use-theme/theme'
 import type { ExtractPropTypes, PropType } from 'vue'
 
 export const iconButtonProps = {

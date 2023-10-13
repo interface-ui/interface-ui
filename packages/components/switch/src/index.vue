@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { nextTick } from 'vue'
-import { useSwitch, useSwitchInner } from '@fusion-ui/hooks'
-import { UPDATE_MODEL_EVENT } from '../../../constans/event'
+import { useSwitch, useSwitchInner } from '@fusion-ui-vue/hooks'
+import { UPDATE_MODEL_EVENT } from '../../../constants/event'
 import FnIcon from '../../icon'
 import { switchEmits, switchProps } from '../src/switch'
 

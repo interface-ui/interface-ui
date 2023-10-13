@@ -1,7 +1,7 @@
 import { describe, expect, it, test } from 'vitest'
 import { mount } from '@vue/test-utils'
-import type { ComponentSize } from '@fusion-ui/constants'
-import { componentSizes } from '@fusion-ui/constants'
+import type { ComponentSize } from '@fusion-ui-vue/constants'
+import { componentSizes } from '@fusion-ui-vue/constants'
 import { FnButton, buttonShapes, buttonVariants } from '../index'
 import type { ButtonShape, ButtonVariant } from '../src/button'
 

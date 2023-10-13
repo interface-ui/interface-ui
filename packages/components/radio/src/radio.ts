@@ -1,5 +1,5 @@
 import type { ExtractPropTypes, PropType } from 'vue'
-import { type ComponentSize, componentSizes } from '@fusion-ui/constants'
+import { type ComponentSize, componentSizes } from '@fusion-ui-vue/constants'
 import type { ThemeCallBack, ThemePaletteColor } from '@fusion-ui/theme'
 
 export const radioProps = {

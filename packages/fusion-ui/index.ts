@@ -1,5 +1,5 @@
 import Components from './components'
-export * from '@fusion-ui/components'
+export * from '@fusion-ui-vue/components'
 const CK = {
   install(App: any) {
     Components.forEach((item: any) => {
