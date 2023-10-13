@@ -1,6 +1,6 @@
-import type { RadioProps } from '@fusion-ui/components/radio'
-import { useColor } from '@fusion-ui/theme'
-import type { UseNamespaceReturn } from '@fusion-ui/utils'
+import type { RadioProps } from '@fusion-ui-vue/components/radio'
+import { useColor } from '@fusion-ui-vue/theme'
+import type { UseNamespaceReturn } from '@fusion-ui-vue/utils'
 import { computed } from 'vue'
 import { useJSS } from '../use-jss'
 

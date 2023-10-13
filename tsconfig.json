@@ -9,11 +9,17 @@
     "declarationDir": "./packages/fusion-ui/dist/types",
     "types": ["node"],
     "paths": {
-      "@fusion-ui/components": ["packages/components", "@fusion-ui/components"],
-      "@fusion-ui/constants": ["packages/constants", "@fusion-ui/constants"],
-      "@fusion-ui/hooks": ["packages/hooks", "@fusion-ui/hooks"],
-      "@fusion-ui/theme": ["packages/theme", "@fusion-ui/theme"],
-      "@fusion-ui/utils": ["packages/utils", "@fusion-ui/utils"]
+      "@fusion-ui-vue/components": [
+        "packages/components",
+        "@fusion-ui-vue/components"
+      ],
+      "@fusion-ui-vue/constants": [
+        "packages/constants",
+        "@fusion-ui-vue/constants"
+      ],
+      "@fusion-ui-vue/hooks": ["packages/hooks", "@fusion-ui-vue/hooks"],
+      "@fusion-ui-vue/theme": ["packages/theme", "@fusion-ui-vue/theme"],
+      "@fusion-ui-vue/utils": ["packages/utils", "@fusion-ui-vue/utils"]
     }
   },
 

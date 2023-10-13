@@ -2,7 +2,7 @@
 import { computed, useAttrs } from 'vue'
 import { useNamespace } from '@fusion-ui-vue/utils'
 import { UPDATE_MODEL_EVENT, iconSize } from '@fusion-ui-vue/constants'
-import { useRadio } from '@fusion-ui/hooks'
+import { useRadio } from '@fusion-ui-vue/hooks'
 import FnRipple from '../../ripple'
 import FnIcon from '../../icon'
 import { radioProps } from './radio'

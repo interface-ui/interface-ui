@@ -45,8 +45,9 @@ export * from './breadcrumb-item'
 export * from './drawer'
 export * from './form-label'
 export * from './typography'
+export * from './ripple'
 
-export const component = [
+export const components = [
   FnButton,
   IconButton,
   ButtonGroup,
@@ -75,7 +76,7 @@ export const component = [
 
 const CK = {
   install(App: any) {
-    component.forEach(item => {
+    components.forEach(item => {
       App.component(item.name, item)
     })
   },
