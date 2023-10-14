@@ -5,7 +5,6 @@ lang: en
 
 <script setup lang="ts">
   import props from "../../../example/radio/description/en-props.ts";
-  import events from "../../../example/radio/description/en-events.ts";
 </script>
 
 
@@ -44,6 +43,6 @@ You can change the placement of the label with the `FormLabel` component's `labe
 
 <demo src="../../../example/radio/label-placement.vue"></demo>
 
-## Events
+## Attributes
 
-<table-block type="eventsZh" :data="events"></table-block>
+<table-block type="propsEn" :data="props"></table-block>

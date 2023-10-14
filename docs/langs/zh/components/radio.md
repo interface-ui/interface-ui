@@ -5,7 +5,6 @@ lang: zh
 
 <script setup lang="ts">
   import props from "../../../example/radio/description/zh-props.ts";
-  import events from "../../../example/radio/description/zh-events.ts";
 </script>
 
 # 单选框
@@ -42,6 +41,6 @@ lang: zh
 
 <demo src="../../../example/radio/label-placement.vue"></demo>
 
-## 事件
+## 属性
 
-<table-block type="eventsZh" :data="events"></table-block>
+<table-block type="propsZh" :data="props"></table-block>
