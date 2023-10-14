@@ -1,8 +1,5 @@
 import type { ExtractPropTypes, PropType } from 'vue'
-import type {
-  ThemeCallBack,
-  ThemePaletteColor,
-} from 'packages/theme/src/use-theme/theme'
+import type { ThemeCallBack, ThemePaletteColor } from '@fusion-ui-vue/theme'
 import { buildProps } from '@fusion-ui-vue/utils'
 
 export interface RippleStyle {

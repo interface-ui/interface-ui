@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { FnButton, FnRadio, FnTypography } from '@fusion-ui-vue/components'
-import { createTheme } from '@fusion-ui-vue/theme'
+import createTheme from '@fusion-ui-vue/theme'
 import { ref } from 'vue'
 
 const theme = createTheme()

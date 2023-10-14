@@ -1,7 +1,4 @@
-import type {
-  ThemeCallBack,
-  ThemePaletteColor,
-} from 'packages/theme/src/use-theme/theme'
+import type { ThemeCallBack, ThemePaletteColor } from '@fusion-ui-vue/theme'
 import type { ExtractPropTypes, PropType } from 'vue'
 
 export const iconProps = {

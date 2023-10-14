@@ -20,7 +20,7 @@ export interface ParsedScheme {
   styles: Record<string, string>
 }
 
-export default class Theme {
+export class Theme {
   mode: ThemeMode
   palette: Palette
   colors = colors

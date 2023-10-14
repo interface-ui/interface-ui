@@ -26,12 +26,15 @@ export type TypographyWithoutSize = typeof typographyWithoutSize[number]
 
 export type TypographyType = TypographyWithoutSize | TypographyWithSize
 
-export type Typography = Record<TypographyWithoutSize, TypographyProp> &
-  Record<TypographyWithSize, Record<ComponentSize, TypographyProp>> & {
-    htmlFontSize: number
-    fontSize: number
-    pxToRem: (size: number) => string
-  }
+interface TypographyDefaultConfig {
+  fontFamily: string
+  htmlFontSize: number
+  fontSize: number
+  pxToRem: (size: number) => string
+}
+export type Typography = TypographyDefaultConfig &
+  Record<TypographyWithoutSize, TypographyProp> &
+  Record<TypographyWithSize, Record<ComponentSize, TypographyProp>>
 
 export type TypographyMap = Record<TypographyType, string>
 export const typographyMapping: TypographyMap = {

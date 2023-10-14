@@ -11,7 +11,7 @@ import '@fusion-ui-vue/components/message/src/index.less' // 单文件样式
 
 // 注册本地组件
 import FusionUi from '@fusion-ui-vue/components'
-import { createTheme } from '@fusion-ui-vue/theme'
+import createTheme from '@fusion-ui-vue/theme'
 
 import DemoBlock from '../components/demo-block'
 import TableBlock from '../components/table-block'

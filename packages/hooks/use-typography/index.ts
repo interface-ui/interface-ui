@@ -3,7 +3,7 @@ import type { UseNamespaceReturn } from '@fusion-ui-vue/utils'
 import type { TypographyProps } from '@fusion-ui-vue/components'
 import { computed } from 'vue'
 import type { TypographyProp } from '@fusion-ui-vue/theme'
-import useTheme from '@fusion-ui-vue/theme'
+import { useTheme } from '@fusion-ui-vue/theme'
 import { useJSS } from '../use-jss'
 
 const jss = useJSS()
