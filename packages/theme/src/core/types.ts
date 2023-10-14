@@ -2,7 +2,7 @@ import type { Scheme } from '@material/material-color-utilities'
 import colors from '../color'
 import states from '../state'
 import elevations from '../elevation'
-import typography from '../typography'
+import { typography } from '../typography'
 import type ThemeMode from '../mode'
 
 export type Palette = Omit<Record<keyof Scheme, string>, 'toJSON'>
@@ -20,7 +20,7 @@ export interface ParsedScheme {
   styles: Record<string, string>
 }
 
-export default class Theme {
+export class Theme {
   mode: ThemeMode
   palette: Palette
   colors = colors

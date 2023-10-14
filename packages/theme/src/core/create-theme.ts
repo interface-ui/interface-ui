@@ -1,16 +1,18 @@
+/* eslint-disable quote-props */
 import jss from 'jss'
 import preset from 'jss-preset-default'
-import type { Scheme } from '@material/material-color-utilities'
+import type { Ref } from 'vue'
+import { ref, watch } from 'vue'
 import {
   argbFromHex,
   hexFromArgb,
   rgbaFromArgb,
   themeFromSourceColor,
 } from '@material/material-color-utilities'
-import type { Ref } from 'vue'
-import { inject, provide, ref, watch } from 'vue'
-import Theme from './theme'
-import type { Palette, ParsedScheme, ThemeConfig } from './theme'
+import type { Scheme } from '@material/material-color-utilities'
+import { uesThemeProvider } from '../hooks'
+import type { Palette, ParsedScheme, ThemeConfig } from './types'
+import { Theme } from './types'
 
 const parseShceme = (scheme: Scheme): ParsedScheme => {
   const palette: Palette = {} as any
@@ -27,8 +29,15 @@ const parseShceme = (scheme: Scheme): ParsedScheme => {
   return { palette, styles }
 }
 
-const injectJSS = (lightPalette: ParsedScheme, darkPalette: ParsedScheme) => {
+const injectJSS = (
+  lightPalette: ParsedScheme,
+  darkPalette: ParsedScheme,
+  theme: Theme
+) => {
   jss.setup(preset())
+  const { fontFamily, htmlFontSize } = theme.typography
+
+  // Init style
   const cssStyles = {
     '@global': {
       ':root': {
@@ -39,17 +48,17 @@ const injectJSS = (lightPalette: ParsedScheme, darkPalette: ParsedScheme) => {
         'color-scheme': 'dark',
         ...darkPalette?.styles,
       },
+      html: {
+        htmlFontSize,
+      },
+      body: {
+        fontFamily,
+        color: 'var(--md-sys-color-on-surface)',
+        fontSize: '1rem',
+      },
     },
   }
   jss.createStyleSheet(cssStyles).attach()
-}
-
-/**
- * The hook to provide theme obj to the child components
- * @param {Ref<Theme>} theme The theme obj
- */
-export const uesThemeProvider = (theme: Ref<Theme>) => {
-  provide('ThemeContext', theme)
 }
 
 /**
@@ -80,19 +89,10 @@ export const createTheme = (
     { immediate: true }
   )
 
-  injectJSS(lightPalette, darkPalette)
+  injectJSS(lightPalette, darkPalette, theme.value)
 
   uesThemeProvider(theme)
   return theme
 }
 
-/**
- * Get the current theme object
- * @returns {Ref<Theme> } Theme object
- */
-const useTheme = (): Ref<Theme> => {
-  const theme = inject<Ref<Theme>>('ThemeContext')!
-  return theme
-}
-
-export default useTheme
+export default createTheme

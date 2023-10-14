@@ -47,11 +47,14 @@ export const enComponents = [
         text: 'Card',
         link: '/langs/en/components/card',
       },
-
       {
         collapsible: false,
         text: 'Tag',
         link: '/langs/en/components/tag',
+      },
+      {
+        text: 'Typography',
+        link: '/langs/en/components/typography',
       },
     ],
   },
@@ -152,6 +155,10 @@ export const zhComponents = [
         collapsible: false,
         text: 'Tag 标签',
         link: '/langs/zh/components/tag',
+      },
+      {
+        text: 'Typography 板式',
+        link: '/langs/zh/components/typography',
       },
     ],
   },
