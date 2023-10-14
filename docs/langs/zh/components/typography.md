@@ -3,6 +3,10 @@ title: Typography
 lang: zh
 ---
 
+<script setup lang="ts">
+  import props from "../../../example/typography/description/zh-props.ts";
+</script>
+
 # Typography 排版
 
 排版有助于使文字更加清晰和美观
@@ -47,3 +51,7 @@ Fusion UI 默认使用 [Roboto](https://fonts.google.com/specimen/Roboto) 字体
 
 * **颜色**: `Typography` 的默认颜色为 `onSurface`。
 * **字体大小**: 使用 `rem` 而不是 `px`。
+
+## 属性
+
+<table-block type="propsZh" :data="props"></table-block>

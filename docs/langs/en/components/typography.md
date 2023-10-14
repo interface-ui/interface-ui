@@ -3,6 +3,10 @@ title: Typography
 lang: en-US
 ---
 
+<script setup lang="ts">
+  import props from "../../../example/typography/description/en-props.ts";
+</script>
+
 # Typography
 
 Typography helps make writing legible and beautiful
@@ -47,3 +51,7 @@ Key factors to follow for an accessible typography:
 
 * **Color**: The default color for `Typography` is `onSurface`.
 * **Font Size**: Use `rem` instead of pixels.
+
+## Attributes
+
+<table-block type="propsEn" :data="props"></table-block>
