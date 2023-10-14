@@ -25,9 +25,16 @@ const checked = ref(1)
   <div class="content">
     {{ checked }}
     <fn-form-label
+      disabled
       v-model="checked"
       label="One"
       :value="1"
+      :control="FnRadio"
+    />
+    <fn-form-label
+      v-model="checked"
+      label="Two"
+      :value="2"
       :control="FnRadio"
     />
   </div>

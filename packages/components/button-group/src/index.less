@@ -20,7 +20,7 @@
           var(--md-sys-state-focus-state-layer-opacity-percentage)
       );
     }
-    &:is([disabled]) {
+    &[disabled] {
       --border-color: var(--fn-sys-color-disabled-level-1) !important;
     }
     box-shadow: var(--md-sys-elevation-level-2);
@@ -43,7 +43,7 @@
         var(--fn-sys-color-switch) 0%
       );
     }
-    &:is([disabled]) {
+    &[disabled] {
       --border-color: var(--fn-sys-color-disabled-level-1) !important;
     }
     border-width: 1px;
@@ -70,7 +70,7 @@
         var(--fn-sys-color-switch) 0%
       );
     }
-    &:is([disabled]) {
+    &[disabled] {
       --border-color: var(--fn-sys-color-disabled-level-1) !important;
     }
     &.fn-button-group--horizontal .fn-button {
