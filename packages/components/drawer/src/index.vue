@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
-import { useNamespace } from '@fusion-ui-vue/utils/useNamespace'
-import { isString } from '@fusion-ui-vue/utils/types'
+import { isString, useNamespace } from '@fusion-ui-vue/utils'
 import { useDrawer } from '@fusion-ui-vue/hooks'
 import { FnIcon } from '../../icon'
 import { drawerProps } from './drawer'
@@ -17,8 +16,9 @@ const drawerOverlay = computed(() => {
 const drawerClassList = computed(() => {
   const { direction } = props
   const classList = [ns.b()]
-  if (isString(direction))
+  if (isString(direction)) {
     classList.push(ns.m(direction))
+  }
   return classList
 })
 
@@ -27,12 +27,6 @@ const handleClose = (event: MouseEvent) => {
   if (!targetDiv?.contains(event.target as HTMLElement)) {
     doClose()
   }
-}
-</script>
-
-<script lang="ts">
-export default {
-  name: 'FnDrawer',
 }
 </script>
 
@@ -46,10 +40,7 @@ export default {
     />
 
     <transition :name="`slide-fade--${props.direction}`">
-      <div
-        v-show="visible" ref="targetDivRef"
-        :class="drawerClassList"
-      >
+      <div v-show="visible" ref="targetDivRef" :class="drawerClassList">
         <header>
           <span class="drawer-title">
             {{ props.title }}

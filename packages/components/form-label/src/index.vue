@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { defineComponent } from 'vue'
-import { useNamespace } from '@fusion-ui-vue/utils/useNamespace'
+import { useNamespace } from '@fusion-ui-vue/utils'
 import FnTypography from '../../typography'
 import { formLabelProps } from './form-label'
 

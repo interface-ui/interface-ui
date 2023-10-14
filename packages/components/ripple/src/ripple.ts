@@ -3,6 +3,7 @@ import type {
   ThemeCallBack,
   ThemePaletteColor,
 } from 'packages/theme/src/use-theme/theme'
+import { buildProps } from '@fusion-ui-vue/utils'
 
 export interface RippleStyle {
   x: number
@@ -10,7 +11,7 @@ export interface RippleStyle {
   size: number
 }
 
-export const rippleProps = {
+export const rippleProps = buildProps({
   color: {
     type: [String, Function] as PropType<
       ThemeCallBack | ThemePaletteColor | string
@@ -21,6 +22,6 @@ export const rippleProps = {
     type: Boolean,
     default: false,
   },
-}
+})
 
 export type RippleProps = ExtractPropTypes<typeof rippleProps>

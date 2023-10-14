@@ -7,7 +7,20 @@
     "emitDeclarationOnly": true,
     "declaration": true,
     "declarationDir": "./packages/fusion-ui/dist/types",
-    "types": ["node"]
+    "types": ["node"],
+    "paths": {
+      "@fusion-ui-vue/components": [
+        "packages/components",
+        "@fusion-ui-vue/components"
+      ],
+      "@fusion-ui-vue/constants": [
+        "packages/constants",
+        "@fusion-ui-vue/constants"
+      ],
+      "@fusion-ui-vue/hooks": ["packages/hooks", "@fusion-ui-vue/hooks"],
+      "@fusion-ui-vue/theme": ["packages/theme", "@fusion-ui-vue/theme"],
+      "@fusion-ui-vue/utils": ["packages/utils", "@fusion-ui-vue/utils"]
+    }
   },
 
   "exclude": [

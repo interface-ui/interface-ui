@@ -1,7 +1,7 @@
 export { useJSS } from './use-jss'
 export { UseAlert } from './use-alert'
 export * from './use-button'
-export { useRadio, useRadioGroup } from './use-radio'
+export { useRadio } from './use-radio'
 export { useSwitchInner, useSwitch } from './use-switch'
 export { UseBadge } from './use-badge'
 export { UseProgress } from './use-progress'

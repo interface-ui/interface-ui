@@ -1,45 +1,23 @@
-import type { ExtractPropTypes } from 'vue'
-import { UPDATE_MODEL_EVENT } from '../../../constants/event'
+import type { ExtractPropTypes, PropType } from 'vue'
+import { type ComponentSize, componentSizes } from '@fusion-ui-vue/constants'
+import type { ThemeCallBack, ThemePaletteColor } from '@fusion-ui-vue/theme'
 
-export interface OptionType {
-  label: string
-  value: string | number
-  disabled?: boolean
-}
 export const radioProps = {
   modelValue: {
-    type: [String, Number],
-    default: '',
+    type: [String, Number, Boolean],
+    required: true,
   },
-  value: {
-    type: [String, Number],
-    default: '',
+  size: {
+    type: String as PropType<ComponentSize>,
+    value: componentSizes,
+    default: 'medium',
   },
   color: {
-    type: String,
-    default: '',
-  },
-  horizontal: {
-    type: Boolean,
-    default: true,
-  },
-  optionList: {
-    type: Array<OptionType>,
-    default: () => [],
-  },
-  disabled: {
-    type: Boolean,
-    required: false,
+    type: [String, Function] as PropType<
+      ThemeCallBack | ThemePaletteColor | string
+    >,
+    default: 'primary',
   },
 }
-const isString = (data: any): boolean => typeof data === 'string'
-const isNumber = (data: any): boolean => typeof data === 'number'
 
-export const radioEmits = {
-  [UPDATE_MODEL_EVENT]: (value: string) => isString(value) || isNumber(value),
-  click: (evt: MouseEvent) => evt instanceof MouseEvent,
-  change: (value: string) => true,
-}
-
-/** RadioProps 组件 props 类型 */
 export type RadioProps = ExtractPropTypes<typeof radioProps>

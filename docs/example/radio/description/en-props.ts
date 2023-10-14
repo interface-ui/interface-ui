@@ -8,28 +8,18 @@ const list: PropTableItem[] = [
     default: 'default',
   },
   {
-    name: 'disabled',
-    remark: 'Disable the radio box',
-    type: 'Boolean',
-    default: 'false',
-  },
-  {
-    name: 'option-list',
-    remark: 'Single box group',
-    type: 'Array',
-    default: '---',
+    name: 'size',
+    remark: 'Radio size',
+    type: 'Enum',
+    optional: ['small', 'medium', 'large'],
+    default: 'medium',
   },
   {
     name: 'color',
-    remark: 'Color of radio box',
-    type: 'String',
-    default: '---',
-  },
-  {
-    name: 'horizontal',
-    remark: 'Horizontal arrangement',
-    type: 'Boolean',
-    default: 'true',
+    remark: 'Customize the color of radios',
+    type: 'Enum',
+    optional: ['ThemePaletteColor', 'ThemeCallBack', 'String'],
+    default: 'primary',
   },
 ]
 

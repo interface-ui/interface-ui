@@ -1,4 +1,4 @@
-import type { UseNamespaceReturn } from '@fusion-ui-vue/utils/useNamespace'
+import type { UseNamespaceReturn } from '@fusion-ui-vue/utils'
 import { themePaletteColor, useColor } from '@fusion-ui-vue/theme'
 import type {
   ButtonGroupProps,

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useLink } from '@fusion-ui-vue/hooks'
-import { useNamespace } from '@fusion-ui-vue/utils/useNamespace'
+import { useNamespace } from '@fusion-ui-vue/utils'
 import { linkEmits, linkProps } from '../src/link'
 const props = defineProps(linkProps)
 
@@ -14,15 +14,15 @@ function handleClick(event: MouseEvent) {
 
 <template>
   <a
-    :class="[
-      ns.b(),
-      classes[ns.b()],
-    ]"
+    :class="[ns.b(), classes[ns.b()]]"
     :href="!href ? undefined : href"
     @click="handleClick"
   >
     <span v-if="icon">
-      <fn-icon :icon="icon" :style="$slots.default ? 'margin-right: 3px;' : ''" />
+      <fn-icon
+        :icon="icon"
+        :style="$slots.default ? 'margin-right: 3px;' : ''"
+      />
     </span>
     <span>
       <slot />

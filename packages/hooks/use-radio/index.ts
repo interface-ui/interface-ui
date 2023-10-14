@@ -1,86 +1,23 @@
-import type { CSSProperties, ComputedRef } from 'vue'
+import type { RadioProps } from '@fusion-ui-vue/components/radio'
+import { useColor } from '@fusion-ui-vue/theme'
+import type { UseNamespaceReturn } from '@fusion-ui-vue/utils'
 import { computed } from 'vue'
-import type { RadioProps } from '../../components/radio/src/radio'
+import { useJSS } from '../use-jss'
 
-/** class 类名集合类型 */
-export type ClassList = (string | Record<string, unknown>)[]
+const jss = useJSS()
 
-/**
- * useRadio 返回值类型接口
- *
- * @param { Object } classList 类名列表
- * @param { Object } styleList 样式列表
- */
-export interface UseRadioReturn {
-  classList: ComputedRef<ClassList>
-  styleList: ComputedRef<CSSProperties>
-}
+export const useRadio = (props: RadioProps, ns: UseNamespaceReturn) => {
+  const $color = useColor(props.color)
 
-/**
- * useRadioGroup 返回值类型接口
- *
- * @param { Object } classList 类名列表
- * @param { Object } styleList 样式列表
- */
-export interface UseRadioGroupReturn {
-  classList: ComputedRef<ClassList>
-}
-
-/**
- * 返回Radio组件的类名列表
- * @param prop
- * @returns
- */
-export const useRadio = (prop: RadioProps): UseRadioReturn => {
-  /** 类名列表 */
-  const classList = computed((): ClassList => {
-    return [
-      'fn-radio',
-      {
-        'is-disabled': prop.disabled,
-        'is-checked': prop.modelValue === prop.value,
+  return computed(() => {
+    const styles = {
+      [ns.b()]: {
+        '--fn-radio-color': $color.value ?? 'var(--md-sys-color-primary)',
       },
-    ]
-  })
-
-  /** 样式列表 */
-  const styleList = computed((): CSSProperties => {
-    const { color } = prop
-
-    if (prop.color) {
-      return {
-        '--radio-background': color || null,
-      } as CSSProperties
+      [ns.e('icon')]: {
+        color: $color.value ?? 'var(--md-sys-color-primary)',
+      },
     }
-
-    return {
-      '--radio-background': '#70a3f3',
-    } as CSSProperties
+    return jss!.createStyleSheet(styles).attach().classes
   })
-
-  return {
-    classList,
-    styleList,
-  }
-}
-
-/**
- * 返回RadioGroup组件的类名列表
- * @param prop
- * @returns
- */
-export const useRadioGroup = (prop: RadioProps): UseRadioGroupReturn => {
-  /** 类名列表 */
-  const classList = computed((): ClassList => {
-    return [
-      'fn-radio-group',
-      {
-        'is-horizontal': prop.horizontal,
-        'is-checked': prop.modelValue === prop.value,
-      },
-    ]
-  })
-  return {
-    classList,
-  }
 }

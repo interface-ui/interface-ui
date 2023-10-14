@@ -1,16 +1,8 @@
-import {
-  getCurrentInstance,
-
-  onMounted,
-  ref,
-  watch
-} from 'vue'
+import { getCurrentInstance, onMounted, ref, watch } from 'vue'
 import type { SetupContext } from 'vue'
 import { UPDATE_MODEL_EVENT } from '@fusion-ui-vue/constants'
-import type { DrawerEmits } from '@fusion-ui-vue/components/drawer/src/drawer'
-export const useDrawer = (
-  props: any,
-) => {
+import type { DrawerEmits } from '@fusion-ui-vue/components'
+export const useDrawer = (props: any) => {
   const instance = getCurrentInstance()!
   const emit = instance.emit as SetupContext<DrawerEmits>['emit']
   const visible = ref(false)
@@ -29,25 +21,26 @@ export const useDrawer = (
 
   watch(
     () => props.modelValue,
-    (val) => {
+    val => {
       if (val) {
         doOpen()
-      }
-      else {
-        if (visible.value)
+      } else {
+        if (visible.value) {
           visible.value = false
+        }
       }
-    },
+    }
   )
 
   onMounted(() => {
-    if (props.modelValue)
+    if (props.modelValue) {
       doOpen()
+    }
   })
 
   return {
     doOpen,
     doClose,
-    visible
+    visible,
   }
 }

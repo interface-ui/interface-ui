@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { useNamespace } from '@fusion-ui-vue/utils/useNamespace'
+import { useNamespace } from '@fusion-ui-vue/utils'
 import { computed } from 'vue'
 import { useButton } from '@fusion-ui-vue/hooks'
 import { iconSize } from '@fusion-ui-vue/constants'

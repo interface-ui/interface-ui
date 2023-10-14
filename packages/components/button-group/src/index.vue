@@ -1,5 +1,5 @@
 <script lang="ts">
-import { useNamespace } from '@fusion-ui-vue/utils/useNamespace'
+import { useNamespace } from '@fusion-ui-vue/utils'
 import { computed, createElementVNode } from 'vue'
 import { useButtonGroup } from '@fusion-ui-vue/hooks'
 import { buttonGroupProps } from './button-group'
@@ -24,7 +24,7 @@ export default {
 
     const slotsVNodes = slots?.default?.() ?? []
     slotsVNodes.forEach(vnode => {
-      vnode.props = { ...buttonProps, ...attrs }
+      vnode.props = { ...buttonProps, ...attrs, ...vnode.props }
     })
 
     return () => {

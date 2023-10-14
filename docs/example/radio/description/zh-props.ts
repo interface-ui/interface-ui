@@ -8,28 +8,18 @@ const list: PropTableItem[] = [
     default: 'default',
   },
   {
-    name: 'disabled',
-    remark: '禁用单选框',
-    type: 'Boolean',
-    default: 'false',
-  },
-  {
-    name: 'option-list',
-    remark: '单选框组',
-    type: 'Array',
-    default: '---',
+    name: 'size',
+    remark: '单选框尺寸',
+    type: 'Enum',
+    optional: ['small', 'medium', 'large'],
+    default: 'medium',
   },
   {
     name: 'color',
-    remark: '单选框颜色',
-    type: 'String',
-    default: '---',
-  },
-  {
-    name: 'horizontal',
-    remark: '水平排列',
-    type: 'Boolean',
-    default: 'true',
+    remark: '自定义单选框颜色',
+    type: 'Enum',
+    optional: ['ThemePaletteColor', 'ThemeCallBack', 'String'],
+    default: 'primary',
   },
 ]
 
