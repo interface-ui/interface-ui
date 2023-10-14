@@ -33,6 +33,10 @@ export const typographyProps = buildProps({
     type: Boolean,
     default: false,
   },
+  gutter: {
+    type: Boolean,
+    default: false,
+  },
 })
 
 export type TypographyProps = ExtractPropTypes<typeof typographyProps>

@@ -20,10 +20,14 @@ const is = computed<string>(() => {
 })
 
 const classList = computed(() => {
+  const { noWarp, gutter } = props
   const list = [ns.b(), classes.value[ns.b()]]
 
-  if (props.noWarp) {
+  if (noWarp) {
     list.push(ns.m('nowarp'))
+  }
+  if (gutter) {
+    list.push(ns.m('gutter'))
   }
 
   return list

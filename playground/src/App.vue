@@ -32,8 +32,8 @@ const checked = ref(1)
     />
   </div>
   <div>
-    <fn-typography variant="h1">h1</fn-typography>
-    <fn-typography variant="h2">h2</fn-typography>
+    <fn-typography variant="h1" gutter>h1</fn-typography>
+    <fn-typography variant="h2" gutter>h2</fn-typography>
     <fn-typography variant="h3">h3</fn-typography>
     <fn-typography variant="h4">h4</fn-typography>
     <fn-typography variant="h5">h5</fn-typography>

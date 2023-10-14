@@ -1,7 +1,14 @@
 .fn-typography {
-  margin: 0;
-  margin-bottom: 0.35em;
   color: var(--md-sys-color-on-surface);
+
+  &:where(h1, h2, h3, h4, h5, h6, p) {
+    margin: 0;
+  }
+
+  &--gutter {
+    margin-top: 0.35em;
+    margin-bottom: 0.35em;
+  }
 
   &--nowarp {
     text-wrap: nowrap;
