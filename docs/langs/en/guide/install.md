@@ -39,7 +39,7 @@ app.mount('#app')
   
 ```ts
 import { FnButton } from 'fusion-ui-vue'
-import 'fusion-ui-vue/dist/styles/button/src/index.css'
+import 'fusion-ui-vue/dist/styles/button.css'
 ```
 
 ### Auto import
