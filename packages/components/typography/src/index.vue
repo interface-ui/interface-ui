@@ -8,7 +8,7 @@ import { typographyProps } from './typography'
 
 const props = defineProps(typographyProps)
 const ns = useNamespace('typography')
-const classes = useTypography(props, ns)
+const cssClass = useTypography(props, ns)
 
 const is = computed<string>(() => {
   const { variant, component } = props
@@ -21,7 +21,7 @@ const is = computed<string>(() => {
 
 const classList = computed(() => {
   const { noWarp, gutter } = props
-  const list = [ns.b(), classes.value[ns.b()]]
+  const list = [ns.b(), cssClass.value]
 
   if (noWarp) {
     list.push(ns.m('nowarp'))

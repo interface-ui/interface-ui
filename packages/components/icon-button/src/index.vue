@@ -7,16 +7,16 @@ import { iconButtonProps } from './icon-button'
 
 const props = defineProps(iconButtonProps)
 const ns = useNamespace('icon-button')
-const classes = useIconButton(props, ns)
+const cssClass = useIconButton(props, ns)
 </script>
 
 <template>
-  <button :class="[ns.b(), classes[ns.b()]]">
+  <button :class="[ns.b(), cssClass]">
     <slot
       v-bind="{
         size: iconSize[props.size],
         color: props.color,
-        class: [ns.e('icon')],
+        class: cssClass,
       }"
     />
     <fn-ripple :color="props.color" center />

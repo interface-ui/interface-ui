@@ -13,7 +13,7 @@ const emits = defineEmits<{
 }>()
 const attrs = useAttrs()
 const ns = useNamespace('radio')
-const classes = useRadio(props, ns)
+const cssClass = useRadio(props, ns)
 
 const checked = computed<string | number | boolean>({
   get() {
@@ -32,9 +32,9 @@ const icon = computed<string>(() =>
 </script>
 
 <template>
-  <span :class="[ns.b(), ns.m(props.size), classes[ns.b()]]">
+  <span :class="[ns.b(), ns.m(props.size), cssClass]">
     <fn-icon
-      :class="[ns.e('icon'), classes[ns.e('icon')]]"
+      :class="[ns.e('icon')]"
       :icon="icon"
       :size="iconSize[props.size]"
     />

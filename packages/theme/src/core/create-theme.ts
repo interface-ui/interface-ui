@@ -1,6 +1,4 @@
 /* eslint-disable quote-props */
-import jss from 'jss'
-import preset from 'jss-preset-default'
 import type { Ref } from 'vue'
 import { ref, watch } from 'vue'
 import {
@@ -10,6 +8,7 @@ import {
   themeFromSourceColor,
 } from '@material/material-color-utilities'
 import type { Scheme } from '@material/material-color-utilities'
+import { injectGlobal } from '@emotion/css'
 import { uesThemeProvider } from '../hooks'
 import type { Palette, ParsedScheme, ThemeConfig } from './types'
 import { Theme } from './types'
@@ -34,31 +33,27 @@ const injectJSS = (
   darkPalette: ParsedScheme,
   theme: Theme
 ) => {
-  jss.setup(preset())
   const { fontFamily, htmlFontSize } = theme.typography
 
   // Init style
-  const cssStyles = {
-    '@global': {
-      ':root': {
-        'color-scheme': 'light',
-        ...lightPalette?.styles,
-      },
-      ':root[data-theme="dark"]': {
-        'color-scheme': 'dark',
-        ...darkPalette?.styles,
-      },
-      html: {
-        htmlFontSize,
-      },
-      body: {
-        fontFamily,
-        color: 'var(--md-sys-color-on-surface)',
-        fontSize: '1rem',
-      },
+  injectGlobal({
+    ':root': {
+      colorScheme: 'light',
+      ...lightPalette?.styles,
     },
-  }
-  jss.createStyleSheet(cssStyles).attach()
+    ':root[data-theme="dark"]': {
+      colorScheme: 'dark',
+      ...darkPalette?.styles,
+    },
+    html: {
+      fontSize: htmlFontSize,
+    },
+    body: {
+      fontFamily,
+      color: 'var(--md-sys-color-on-surface)',
+      fontSize: '1rem',
+    },
+  })
 }
 
 /**

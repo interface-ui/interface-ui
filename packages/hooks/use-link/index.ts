@@ -1,30 +1,24 @@
-import type { UseNamespaceReturn } from '@fusion-ui-vue/utils'
-import { useColor } from '@fusion-ui-vue/theme'
+import { css, useColor } from '@fusion-ui-vue/theme'
 import type { LlinkProps } from '@fusion-ui-vue/components'
-import { useJSS } from '../use-jss'
+import { computed } from 'vue'
+import type { ComponentStylingHook } from '../types'
 
-const jss = useJSS()
-
-export const useLink = (props: LlinkProps, ns: UseNamespaceReturn) => {
+export const useLink: ComponentStylingHook<LlinkProps> = props => {
   const $color = useColor(props.color as any)
 
-  const styles = {
-    [ns.b()]: {
-      '--fn-link__underline--status':
-        props.underline === 'none'
-          ? 'none'
-          : props.underline === 'hover'
-          ? 'none'
-          : 'underline',
-      '--fn-link__underline--hover':
-        props.underline === 'none'
-          ? 'none'
-          : props.underline === 'hover'
-          ? 'underline'
-          : 'underline',
-      '--fn-link-color': $color.value ?? 'var(--md-sys-color-primary)',
-    },
-  }
-
-  return jss!.createStyleSheet(styles as any).attach()
+  return computed(() => {
+    return css`
+      --fn-link-color: ${$color.value ?? 'var(--md-sys-color-primary)'};
+      --fn-link__underline--status: ${props.underline === 'none'
+        ? 'none'
+        : props.underline === 'hover'
+        ? 'none'
+        : 'underline'};
+      --fn-link__underline--hover: ${props.underline === 'none'
+        ? 'none'
+        : props.underline === 'hover'
+        ? 'underline'
+        : 'underline'};
+    `
+  })
 }

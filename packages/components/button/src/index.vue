@@ -8,7 +8,7 @@ import { buttonProps } from './button'
 
 const props = defineProps(buttonProps)
 const ns = useNamespace('button')
-const classes = useButton(props, ns)
+const cssClass = useButton(props, ns)
 
 const classList = computed(() => {
   const { variant, shape, size } = props
@@ -17,14 +17,7 @@ const classList = computed(() => {
 </script>
 
 <template>
-  <button
-    :class="[
-      ...classList,
-      `title-${props.size}`,
-      classes[ns.b()],
-      classes[ns.m(props.variant)],
-    ]"
-  >
+  <button :class="[...classList, `title-${props.size}`, cssClass]">
     <slot v-bind="{ size: iconSize[props.size] }" />
     <fn-ripple
       v-if="!props.disableRipple"

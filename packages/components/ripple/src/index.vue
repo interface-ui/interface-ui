@@ -17,7 +17,7 @@ const ripplesArr = reactive<RippleStyle[]>([])
 const duration = ref<number>(600)
 const parent = getCurrentInstance()?.parent
 const ns = useNamespace('ripple')
-const classes = useRipple(props, ns)
+const cssClass = useRipple(props, ns)
 let bounce: NodeJS.Timeout | null = null
 let listener: EventListener | null = null
 
@@ -65,7 +65,7 @@ defineExpose({ addRipple })
 </script>
 
 <template>
-  <span :class="[ns.b()]">
+  <span :class="[ns.b(), cssClass]">
     <span
       v-for="(ripple, index) of ripplesArr"
       :key="`ripple_${index}`"
@@ -75,7 +75,7 @@ defineExpose({ addRipple })
         width: addUnit(ripple.size),
         height: addUnit(ripple.size),
       }"
-      :class="[ns.e('span'), classes[ns.e('span')]]"
+      :class="[ns.e('span')]"
       class="pressed-state-layer"
     />
   </span>
