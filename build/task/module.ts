@@ -36,7 +36,7 @@ export async function buildModule() {
         },
       }),
     ],
-    external: ['vue', /\.less/],
+    external: ['vue', /\.less/, 'fusion-ui-vue/dist/styles/index.css'],
     treeshake: false,
   })
   await Promise.all(modulesOutputConfig.map(option => bundle.write(option)))
