@@ -28,10 +28,6 @@
   "files": [
     "dist"
   ],
-  "peerDependencies": {
-    "less": "^3.0.0",
-    "webpack": "^4.0.0"
-  },
   "dependencies": {
     "@fusion-ui-vue/components": "^0.0.1",
     "@fusion-ui-vue/constants": "^0.0.1",
