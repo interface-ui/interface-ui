@@ -15,7 +15,9 @@
     "build": "vitepress build",
     "serve": "vitepress serve"
   },
-
+  "peerDependencies": {
+    "fusion-ui-vue": "workspace:^"
+  },
   "dependencies": {
     "fusion-ui-iconify": "^1.0.35",
     "markdown-it": "^13.0.1",
