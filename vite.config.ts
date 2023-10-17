@@ -11,4 +11,9 @@ export default defineConfig({
       'fusion-ui-vue': path.resolve(__dirname, './packages/fusion-ui'),
     },
   },
+  build: {
+    rollupOptions: {
+      external: ['fusion-ui-vue/dist/styles/index.css'],
+    },
+  },
 })
