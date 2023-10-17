@@ -22,9 +22,9 @@ export default defineConfig({
     setupFiles: [resolve(__dirname, './vitestSetup.ts')],
     reporters: 'dot',
   },
-  build: {
-    rollupOptions: {
-      external: 'fusion-ui-vue/dist/styles/index.css',
-    },
-  },
+  // build: {
+  //   rollupOptions: {
+  //     external: 'fusion-ui-vue/dist/styles/index.css',
+  //   },
+  // },
 })
