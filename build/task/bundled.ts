@@ -12,7 +12,7 @@ import { componentsRoot } from '../path'
 export async function buildBundled() {
   consola.info('Start building bundle...')
   const plugins: Plugin[] = [
-    vue(),
+    vue() as any,
     nodeResolve({
       extensions: ['.mjs', '.js', '.json', '.ts'],
     }),
