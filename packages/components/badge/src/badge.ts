@@ -1,29 +1,43 @@
-import type { ExtractPropTypes, PropType } from 'vue'
-export type BadgeType = String | Number
+import type { ComponentDirections } from '@fusion-ui-vue/constants'
+import type { ThemeCallBack, ThemePaletteColor } from '@fusion-ui-vue/theme'
+import { buildProps } from '@fusion-ui-vue/utils'
+import type { Component, ExtractPropTypes, PropType } from 'vue'
 
-export const badgeProps = {
-  value: {
-    type: [String, Number] as PropType<BadgeType>,
-    default: '',
+export const badgeVariants = ['dot', 'content'] as const
+export type BadgeVariants = typeof badgeVariants[number]
+
+export const badgeProps = buildProps({
+  content: {
+    type: [String, Number, Object] as PropType<string | number | Component>,
   },
-  max: {
-    type: [String, Number] as PropType<BadgeType>,
-    default: '',
+  variant: {
+    type: String,
+    values: badgeVariants,
+    default: 'content',
   },
   color: {
-    type: String,
-    default: '#3894ff',
+    type: [String, Function] as PropType<
+      ThemeCallBack | ThemePaletteColor | string
+    >,
+    default: 'error',
   },
-  dot: {
-    type: Boolean,
-    required: false,
+  max: {
+    type: [String, Number],
   },
-  flashing: {
+  overlap: {
     type: Boolean,
-    required: false,
     default: false,
   },
-}
+  xAlign: {
+    type: String as PropType<Extract<ComponentDirections, 'left' | 'right'>>,
+    values: ['left', 'right'],
+    default: 'right',
+  },
+  yAlign: {
+    type: String as PropType<Extract<ComponentDirections, 'top' | 'bottom'>>,
+    values: ['top', 'bottom'],
+    default: 'top',
+  },
+})
 
-/** BadgeProps 组件 props 类型 */
 export type BadgeProps = ExtractPropTypes<typeof badgeProps>

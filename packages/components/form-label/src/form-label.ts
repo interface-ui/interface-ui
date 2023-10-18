@@ -1,5 +1,6 @@
-import type { ExtractPropTypes } from 'vue'
-import { componentDirection } from '@fusion-ui-vue/constants'
+import type { ExtractPropTypes, PropType } from 'vue'
+import type { ComponentDirections } from '@fusion-ui-vue/constants'
+import { componentDirections } from '@fusion-ui-vue/constants'
 
 export const formLabelProps = {
   label: {
@@ -10,8 +11,8 @@ export const formLabelProps = {
     required: true,
   },
   labelPlacement: {
-    type: String,
-    values: componentDirection,
+    type: String as PropType<ComponentDirections>,
+    values: componentDirections,
     default: 'right',
   },
 }

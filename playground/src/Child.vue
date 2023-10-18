@@ -1,21 +1,54 @@
 <script lang="ts" setup>
-import { FnButton } from '@fusion-ui-vue/components'
+import { FnAvatar, FnBadge } from '@fusion-ui-vue/components'
 import { styled } from '@fusion-ui-vue/theme'
 
-const StyledButton1 = styled(FnButton)(theme => ({
-  '--fn-button-color': theme.palette.error,
+const StyledBadge = styled(FnBadge)(theme => ({
+  '& .fn-badge__span--icon': {
+    backgroundColor: '#44b700',
+    color: '#44b700',
+    boxShadow: `0 0 0 2px ${theme.palette.background}`,
+    '&::after': {
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100%',
+      borderRadius: '50%',
+      animation: 'ripple 1.2s infinite ease-in-out',
+      border: '1px solid currentColor',
+      content: '""',
+    },
+  },
+  '@keyframes ripple': {
+    '0%': {
+      transform: 'scale(.8)',
+      opacity: 1,
+    },
+    '100%': {
+      transform: 'scale(2.4)',
+      opacity: 0,
+    },
+  },
 }))
-const StyledButton2 = styled(FnButton)`
-  background-color: red;
-  &:hover {
-    background-color: deeppink !important;
-  }
-`
+
+const SmallAvatar = styled(FnAvatar, {
+  src: 'https://mui.com/static/images/avatar/2.jpg',
+})(theme => ({
+  width: 22,
+  height: 22,
+  border: `2px solid ${theme.palette.background}`,
+}))
 </script>
 
 <template>
   <div>
-    <StyledButton1>button</StyledButton1>
-    <StyledButton2>button</StyledButton2>
+    <StyledBadge variant="dot" y-align="bottom" overlap>
+      <fn-avatar src="https://mui.com/static/images/avatar/1.jpg" />
+    </StyledBadge>
+  </div>
+  <div>
+    <fn-badge :content="SmallAvatar" y-align="bottom" overlap>
+      <fn-avatar src="https://mui.com/static/images/avatar/1.jpg" />
+    </fn-badge>
   </div>
 </template>

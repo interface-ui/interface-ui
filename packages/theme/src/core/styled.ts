@@ -5,7 +5,9 @@ import { css } from '@emotion/css'
 import { useTheme } from '../hooks'
 import type { Theme } from './types'
 
-export const styled = (comp: Component | string) => {
+type RenderTypes = Parameters<typeof h>
+
+export const styled = (comp: Component | string, props?: RenderTypes[1]) => {
   return (
     style: TemplateStringsArray | ((theme: Theme) => CSSInterpolation),
     ...args: CSSInterpolation[]
@@ -21,7 +23,8 @@ export const styled = (comp: Component | string) => {
         )
 
         const slotsVNodes = slots?.default?.()
-        return () => h(comp as any, { class: className.value }, slotsVNodes)
+        return () =>
+          h(comp as any, { class: className.value, ...props }, slotsVNodes)
       },
     })
   }
