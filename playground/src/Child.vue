@@ -3,7 +3,7 @@ import { FnAvatar, FnBadge } from '@fusion-ui-vue/components'
 import { styled } from '@fusion-ui-vue/theme'
 
 const StyledBadge = styled(FnBadge)(theme => ({
-  '& .fn-badge__span--icon': {
+  '& .fn-badge--icon': {
     backgroundColor: '#44b700',
     color: '#44b700',
     boxShadow: `0 0 0 2px ${theme.palette.background}`,
@@ -33,10 +33,10 @@ const StyledBadge = styled(FnBadge)(theme => ({
 
 const SmallAvatar = styled(FnAvatar, {
   src: 'https://mui.com/static/images/avatar/2.jpg',
+  size: 22,
 })(theme => ({
-  width: 22,
-  height: 22,
   border: `2px solid ${theme.palette.background}`,
+  transform: 'translate(30%, 30%)',
 }))
 </script>
 
@@ -47,7 +47,7 @@ const SmallAvatar = styled(FnAvatar, {
     </StyledBadge>
   </div>
   <div>
-    <fn-badge :content="SmallAvatar" y-align="bottom" overlap>
+    <fn-badge :content="SmallAvatar" y-align="bottom">
       <fn-avatar src="https://mui.com/static/images/avatar/1.jpg" />
     </fn-badge>
   </div>

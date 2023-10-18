@@ -1,62 +1,31 @@
-import type { ExtractPropTypes } from 'vue'
-import type { StandardLonghandProperties } from 'csstype'
-import { definePropType } from '../../../utils/vue/props/runtime'
-import { componentSizes } from '../../../constants/size'
-import { isNumber } from '../../../utils/types'
+import type { ExtractPropTypes, PropType } from 'vue'
+import type { ComponentSizes } from '@fusion-ui-vue/constants'
+import { componentSizes } from '@fusion-ui-vue/constants'
+import { buildProps, isNumber } from '@fusion-ui-vue/utils'
 
-import {
-  buildProps,
-} from '../../../utils/vue/props'
+export const avatarVariants = ['circle', 'square', 'rounded'] as const
+export type AvatarVariants = typeof avatarVariants[number]
 
 export const avatarProps = buildProps({
   size: {
-    type: [Number, String],
+    type: [Number, String] as PropType<number | ComponentSizes>,
     values: componentSizes,
-    default: '',
+    default: 40,
     validator: (val: unknown): val is number => isNumber(val),
   },
-  width: {
-    type: [Number, String],
-    default: 40,
-  },
-  height: {
-    type: [Number, String],
-    default: 40,
-  },
-
-  type: {
-    type: String,
-    default: 'secondary',
-    values: ['primary', 'error', 'secondary', 'tertiary'],
-    validator: value =>
-      ['primary', 'error', 'secondary', 'tertiary'].includes(value),
-  },
-  shape: {
-    type: String,
+  variant: {
+    type: String as PropType<AvatarVariants>,
+    values: avatarVariants,
     default: 'circle',
-    values: ['circle', 'square', 'rounded'],
-    validator: value =>
-      ['circle', 'square', 'rounded'].includes(value),
   },
-  src: {
-    type: String,
-    default: '',
-  },
-  alt: String,
-  srcSet: String,
-  background: String,
   color: {
     type: String,
-    default: 'white',
+    default: 'var(--md-sys-color-on-surface)',
   },
-  fit: {
-    type: definePropType<StandardLonghandProperties['objectFit']>(String),
-    default: 'cover',
+  backgroundColor: {
+    type: String,
+    default: 'var(--fn-sys-color-disabled-level-1)',
   },
-} as const)
-// type: definePropType<StandardLonghandProperties['objectFit']>(String),
-export type AvatarProps = ExtractPropTypes<typeof avatarProps>
+})
 
-export const avatarEmits = {
-  error: (evt: Event) => evt instanceof Event,
-}
+export type AvatarProps = ExtractPropTypes<typeof avatarProps>

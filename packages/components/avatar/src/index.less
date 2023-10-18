@@ -1,38 +1,18 @@
-@avatar-size: {
-  large: 64px;
-  default: 40px;
-  small: 24px;
-};
-
 .fn-avatar {
   position: relative;
-  &--small {
-    width: @avatar-size[small];
-    height: @avatar-size[small];
-  }
-  &--default {
-    width: @avatar-size[default];
-    height: @avatar-size[default];
-  }
-  &--large {
-    width: @avatar-size[large];
-    height: @avatar-size[large];
-  }
-
-  &--circle {
-    border-radius: 50%;
-  }
-  &--square {
-    border-radius: 0;
-  }
-  &--rounded {
-    border-radius: 4px;
-  }
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   user-select: none;
-  color: var(--fn-avatar-text-color);
-  background-color: var(--fn-avatar-background-color);
+
+  &--circle {
+    border-radius: 50%;
+  }
+  &--square {
+    border-radius: var(--md-sys-shape-corner-none-default-size);
+  }
+  &--rounded {
+    border-radius: var(--md-sys-shape-corner-extra-small-default-size);
+  }
 }

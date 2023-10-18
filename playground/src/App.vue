@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { FnButton, FnBadge } from '@fusion-ui-vue/components'
+import { FnButton, FnBadge, FnAvatar } from '@fusion-ui-vue/components'
 import createTheme from '@fusion-ui-vue/theme'
 // import { ref } from 'vue'
 import Child from './Child.vue'
@@ -34,5 +34,8 @@ const changTheme = () => {
   </div>
   <div class="content">
     <Child />
+  </div>
+  <div class="content">
+    <fn-avatar>H</fn-avatar>
   </div>
 </template>

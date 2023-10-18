@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { mount } from '@vue/test-utils'
-import type { ComponentSize } from '@fusion-ui-vue/constants'
+import type { ComponentSizes } from '@fusion-ui-vue/constants'
 import { componentSizes } from '@fusion-ui-vue/constants'
 import type { ButtonGroupOrientation } from '../index'
 import { FnButtonGroup, buttonGroupOrientation } from '../index'
@@ -32,7 +32,7 @@ describe('FnButtonGroup', () => {
   })
 
   it('size', () => {
-    componentSizes.forEach((item: ComponentSize): void => {
+    componentSizes.forEach((item: ComponentSizes): void => {
       const wrapper = mount(FnButtonGroup as any, {
         props: { size: item },
       })

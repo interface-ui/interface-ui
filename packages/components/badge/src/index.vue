@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { debugWarn, useNamespace } from '@fusion-ui-vue/utils'
-import { cx, styled, themePaletteColor, useColor } from '@fusion-ui-vue/theme'
+import { css, styled, themePaletteColor, useColor } from '@fusion-ui-vue/theme'
 import { computed } from 'vue'
 import Typography from '../../typography'
 import { badgeProps } from './badge'
@@ -20,13 +20,7 @@ const translate = {
   right: '50%',
   left: '-50%',
 }
-const BadgeTypography = styled(Typography)`
-  background-color: ${$color.value ?? 'var(--md-sys-color-error)'};
-  color: ${$onColor.value};
-  height: ${props.variant === 'dot' ? '8px' : '20px'};
-  min-width: ${props.variant === 'dot' ? '8px' : '20px'};
-  border-radius: 10px;
-  padding: ${props.variant === 'dot' ? '0' : '6px'} !important;
+const positionCss = css`
   ${props.xAlign}: 0;
   ${props.yAlign}: 0;
   transform: scale(1)
@@ -34,6 +28,14 @@ const BadgeTypography = styled(Typography)`
       ${props.overlap ? '0%' : (translate as any)[props.xAlign]},
       ${props.overlap ? '0%' : (translate as any)[props.yAlign]}
     );
+`
+const BadgeTypography = styled(Typography, { class: [positionCss] })`
+  background-color: ${$color.value ?? 'var(--md-sys-color-error)'};
+  color: ${$onColor.value};
+  height: ${props.variant === 'dot' ? '8px' : '20px'};
+  min-width: ${props.variant === 'dot' ? '8px' : '20px'};
+  border-radius: 10px;
+  padding: ${props.variant === 'dot' ? '0' : '6px'} !important;
 `
 
 const showTypography = computed(() => {
@@ -59,20 +61,24 @@ const badegContent = computed(() => {
 
   return content
 })
+
+const CustomContent = styled(props.content as any, {
+  class: [ns.m('icon'), positionCss],
+})``
 </script>
 
 <template>
-  <span :class="cx(ns.b())">
+  <span :class="ns.b()">
     <slot />
     <badge-typography
       v-if="showTypography"
-      :class="cx(ns.em('span', 'icon'))"
+      :class="ns.m('icon')"
       variant="label.small"
     >
       <template v-if="props.variant !== 'dot'">
         {{ badegContent }}
       </template>
     </badge-typography>
-    <props.content v-else />
+    <custom-content v-else />
   </span>
 </template>
