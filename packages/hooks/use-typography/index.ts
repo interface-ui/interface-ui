@@ -1,17 +1,11 @@
 /* eslint-disable @typescript-eslint/indent */
-import type { UseNamespaceReturn } from '@fusion-ui-vue/utils'
 import type { TypographyProps } from '@fusion-ui-vue/components'
 import { computed } from 'vue'
 import type { TypographyMap, TypographyProp } from '@fusion-ui-vue/theme'
-import { typographyMapping, useTheme } from '@fusion-ui-vue/theme'
-import { useJSS } from '../use-jss'
+import { css, typographyMapping, useTheme } from '@fusion-ui-vue/theme'
+import type { ComponentStylingHook } from '../types'
 
-const jss = useJSS()
-
-export const useTypography = (
-  props: TypographyProps,
-  ns: UseNamespaceReturn
-) => {
+export const useTypography: ComponentStylingHook<TypographyProps> = props => {
   const { variant, component } = props
   const [_, $variant, size] = variant.match(/([\w\d]+)\.?(\w+)?/)!
 
@@ -26,17 +20,13 @@ export const useTypography = (
       theme.value.typography[$variant]
 
   return computed(() => {
-    const styles = {
-      [ns.b()]: {
-        [`&:is(${renderTag})`]: {
-          ...style,
-          margin: 0,
-          padding: 0,
-          border: 'none',
-        },
+    return css({
+      [`&:is(${renderTag})`]: {
+        margin: 0,
+        padding: 0,
+        border: 'none',
+        ...style,
       },
-    }
-
-    return jss!.createStyleSheet(styles as any).attach().classes
+    } as any)
   })
 }

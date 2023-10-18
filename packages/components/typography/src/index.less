@@ -1,6 +1,11 @@
 .fn-typography {
   color: var(--md-sys-color-on-surface);
 
+  &[disabled] {
+    color: var(--fn-sys-color-disabled-level-0) !important;
+    cursor: default;
+  }
+
   &--gutter {
     margin-top: 0.35em !important;
     margin-bottom: 0.35em !important;

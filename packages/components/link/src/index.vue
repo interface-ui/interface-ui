@@ -1,23 +1,15 @@
 <script setup lang="ts">
 import { useLink } from '@fusion-ui-vue/hooks'
 import { useNamespace } from '@fusion-ui-vue/utils'
-import { linkEmits, linkProps } from '../src/link'
+import { linkProps } from '../src/link'
 const props = defineProps(linkProps)
 
-const emit = defineEmits(linkEmits)
 const ns = useNamespace('link')
-const { classes } = useLink(props, ns)
-function handleClick(event: MouseEvent) {
-  emit('click', event)
-}
+const cssClass = useLink(props)
 </script>
 
 <template>
-  <a
-    :class="[ns.b(), classes[ns.b()]]"
-    :href="!href ? undefined : href"
-    @click="handleClick"
-  >
+  <a :class="[ns.b(), cssClass]">
     <span v-if="icon">
       <fn-icon
         :icon="icon"

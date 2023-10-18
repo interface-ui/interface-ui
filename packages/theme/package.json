@@ -9,6 +9,7 @@
     "vue": "~3.2.45"
   },
   "dependencies": {
+    "@emotion/css": "^11.11.2",
     "@fontsource/roboto": "^5.0.8",
     "@material/material-color-utilities": "^0.2.7"
   }

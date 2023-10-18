@@ -18,12 +18,13 @@
   text-decoration: none;
   padding: 8px;
   border-radius: 50%;
+  height: fit-content;
 
-  &:is([disabled]) {
+  &[disabled] {
     cursor: default;
   }
 
-  &:is([disabled]) &__icon {
+  &[disabled] &__icon {
     color: var(--fn-sys-color-disabled-level-0) !important;
   }
 

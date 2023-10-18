@@ -37,8 +37,6 @@
     "@vue/shared": "^3.2.47",
     "@vueuse/core": "^9.1.1",
     "fusion-ui-vue": "workspace:^",
-    "jss": "^10.10.0",
-    "jss-preset-default": "^10.10.0",
     "lodash-unified": "^1.0.3",
     "vue": "~3.2.45"
   },

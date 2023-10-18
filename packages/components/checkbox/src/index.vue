@@ -11,7 +11,7 @@ import FnIcon from '../../icon'
 const props = defineProps(checkboxProps)
 const emits = defineEmits<{ (e: 'update:modelValue', v: boolean): void }>()
 const ns = useNamespace('checkbox')
-const classes = useCheckbox(props, ns)
+const cssClass = useCheckbox(props, ns)
 const attrs = useAttrs()
 
 const checked = computed<boolean>({
@@ -33,17 +33,17 @@ const status = computed<CheckboxStatus>(() => {
 </script>
 
 <template>
-  <span :class="[ns.b(), ns.m(props.size), classes[ns.b()]]">
+  <span :class="[ns.b(), ns.m(props.size), cssClass]">
     <slot
       v-bind="{
         checked,
         size: iconSize[props.size],
         color: props.color,
-        class: [ns.e('icon'), classes[ns.e('icon')]],
+        class: [ns.e('icon')],
       }"
     >
       <fn-icon
-        :class="[ns.e('icon'), classes[ns.e('icon')]]"
+        :class="[ns.e('icon')]"
         :icon="iconType[status]"
         :size="iconSize[props.size]"
       />

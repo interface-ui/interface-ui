@@ -6,10 +6,9 @@ lang: en
 <script setup lang="ts">
   import props from "../../../example/dialog/description/en-props.ts";
   import slots from "../../../example/dialog/description/en-slots.ts";
-  console.log(props);
 </script>
 
-# Dialog 
+# Dialog
 
 The Dialog component displays a popup dialog that contains and facilitates user-related operations.
 
@@ -20,7 +19,7 @@ You need to use the ```v-model``` directive to control the display status of the
 <demo src="../../../example/dialog/base.vue"></demo>
 
 ## Close Button
- 
+
 You can use the  ```show-close``` prop to control the visibility of the close button in the Dialog.
 
 <demo src="../../../example/dialog/close.vue"></demo>

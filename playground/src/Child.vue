@@ -1,11 +1,21 @@
 <script lang="ts" setup>
 import { FnButton } from '@fusion-ui-vue/components'
-import { useTheme } from '@fusion-ui-vue/theme'
+import { styled } from '@fusion-ui-vue/theme'
 
-const theme = useTheme()
-console.log('test theme', theme)
+const StyledButton1 = styled(FnButton)(theme => ({
+  '--fn-button-color': theme.palette.error,
+}))
+const StyledButton2 = styled(FnButton)`
+  background-color: red;
+  &:hover {
+    background-color: deeppink !important;
+  }
+`
 </script>
 
 <template>
-  <fn-button>Child button</fn-button>
+  <div>
+    <StyledButton1>button</StyledButton1>
+    <StyledButton2>button</StyledButton2>
+  </div>
 </template>

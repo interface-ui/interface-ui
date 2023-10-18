@@ -7,10 +7,6 @@ export const linkProps = {
     default: 'hover',
     required: false,
   },
-  href: {
-    type: String,
-    required: false,
-  },
   color: {
     type: String,
     required: false,
@@ -20,7 +16,5 @@ export const linkProps = {
     required: false,
   },
 }
-export const linkEmits = {
-  click: (evt: MouseEvent) => evt instanceof MouseEvent,
-}
+
 export type LlinkProps = ExtractPropTypes<typeof linkProps>

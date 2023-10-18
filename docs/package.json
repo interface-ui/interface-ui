@@ -15,11 +15,11 @@
     "build": "vitepress build",
     "serve": "vitepress serve"
   },
-
   "dependencies": {
     "fusion-ui-iconify": "^1.0.35",
     "markdown-it": "^13.0.1",
-    "vite-plugin-progress": "^0.0.7"
+    "vite-plugin-progress": "^0.0.7",
+    "fusion-ui-vue": "workspace:^"
   },
   "devDependencies": {
     "@types/markdown-it": "^12.2.3",

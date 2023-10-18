@@ -17,7 +17,11 @@ export default defineComponent({
 <template>
   <label :class="[ns.b(), ns.m(props.labelPlacement)]">
     <component :is="props.control" v-bind="$attrs" />
-    <fn-typography variant="body.large" component="span">
+    <fn-typography
+      variant="body.large"
+      component="span"
+      :disabled="$attrs.disabled"
+    >
       {{ props.label }}
     </fn-typography>
   </label>

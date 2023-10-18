@@ -16,7 +16,7 @@ export async function buildModule() {
       cwd: componentsComponents,
       absolute: true,
       onlyFiles: true,
-    }),
+    })
   )
   const bundle = await rollup({
     input,
