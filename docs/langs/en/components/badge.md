@@ -12,36 +12,40 @@ lang: en
 
 Numbers or status markers on buttons and icons.
 
-## Basic usage
+## Basic
 
-```value``` is used to display the number of new messages, ```color``` is used to set the background color.
-<demo src="../../../example/badge/base.vue"></demo>
+`value` is used to display the number of new messages
+
+<demo src="../../../example/badge/basic.vue"></demo>
 
 
 ## Max
 
-The custom maximum value is defined by the ```max``` property and accepts the Number value.
+The custom maximum value is defined by the `max` property and accepts the Number value.
+
 <demo src="../../../example/badge/max.vue"></demo>
+
+## Color
+
+Use `color` prop to customize the badge.
+
+<demo src="../../../example/badge/color.vue"></demo>
+
+## Alignment
+
+You can use the `xAlign` and `yAlign` props to move the badge to any corner of the wrapped element.
+
+<demo src="../../../example/badge/align.vue"></demo>
 
 
 ## Customizations
 
-When ```value``` is ```String```, custom text can be displayed.
+With the help of `styled` function, the `Badge` becomes more flexiable.
 
 <demo src="../../../example/badge/custom.vue"></demo>
 
-## Dot
-
-The ```dot``` attribute is used to display small dots, but the value attribute is invalid.
-<demo src="../../../example/badge/dot.vue"></demo>
-
-## Flashing
-
-The ```flashing``` property is used to set the flashing effect, which is a ```Boolean``` value.
-
-<demo src="../../../example/badge/flashing.vue"></demo>
-
 ## Attribute
+
 <table-block type="propsZh" :data="props"></table-block>
 
 
