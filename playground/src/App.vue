@@ -65,4 +65,16 @@ const changTheme = () => {
       />
     </fn-avatar-group>
   </div>
+  <div>
+    <fn-button-group>
+      <fn-button>one</fn-button>
+      <fn-button>two</fn-button>
+      <fn-button>three</fn-button>
+    </fn-button-group>
+    <fn-button-group disabled>
+      <fn-button>one</fn-button>
+      <fn-button>two</fn-button>
+      <fn-button>three</fn-button>
+    </fn-button-group>
+  </div>
 </template>
