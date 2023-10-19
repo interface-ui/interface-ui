@@ -1,13 +1,15 @@
-import { type ToRef, unref } from 'vue'
+import { type Ref, unref } from 'vue'
 
-type Refs<T> = {
-  [K in keyof T]: ToRef<T[K]>
+type Refs<T extends object> = {
+  [K in keyof T]: Ref<T[K]>
 }
+type UnRefs = <T extends object>(object: Refs<T>) => { [K in keyof T]: T[K] }
 
-export const unRefs = <T extends Refs<any>>(obj: T) => {
+export const unRefs: UnRefs = obj => {
   const newObj: any = {}
   Object.keys(obj).forEach(key => {
-    newObj[key as keyof T] = unref(obj[key as keyof T])
+    // @ts-expect-error: ignore
+    newObj[key] = unref(obj[key])
   })
 
   return newObj
