@@ -1,13 +1,12 @@
 import type { ThemeCallBack, ThemePaletteColor } from '@fusion-ui-vue/theme'
-import { type ComponentSize, componentSizes } from '@fusion-ui-vue/constants'
+import { type ComponentSizes, componentSizes } from '@fusion-ui-vue/constants'
 import type { ExtractPropTypes, PropType } from 'vue'
-import {
-  buildProps,
-} from '../../../utils/vue/props'
+import { buildProps } from '@fusion-ui-vue/utils'
 
 export const SwitchPropsNew = buildProps({
   modelValue: {
     type: Boolean,
+    required: true,
   },
   color: {
     type: [String, Function] as PropType<
@@ -16,11 +15,10 @@ export const SwitchPropsNew = buildProps({
     default: 'primary',
   },
   size: {
-    type: String as PropType<ComponentSize>,
+    type: String as PropType<ComponentSizes>,
     value: componentSizes,
     default: 'medium',
   },
-
   enableRipple: {
     type: Boolean,
     default: true,

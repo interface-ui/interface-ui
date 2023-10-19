@@ -1,9 +1,5 @@
 import { css, themePaletteColor, useColor } from '@fusion-ui-vue/theme'
-import type {
-  ButtonGroupProps,
-  ButtonProps,
-  IconButtonProps,
-} from '@fusion-ui-vue/components'
+import type { ButtonProps, IconButtonProps } from '@fusion-ui-vue/components'
 import { computed } from 'vue'
 import type { ComponentStylingHook } from '../types'
 
@@ -45,16 +41,6 @@ export const useIconButton: ComponentStylingHook<IconButtonProps> = props => {
   return computed(() => {
     return css`
       --fn-icon-button-color: ${$color.value ?? 'var(--md-sys-color-primary)'};
-    `
-  })
-}
-
-export const useButtonGroup: ComponentStylingHook<ButtonGroupProps> = props => {
-  const $color = useColor(props.color)
-
-  return computed(() => {
-    return css`
-      --fn-button-group-color: ${$color.value ?? 'var(--md-sys-color-primary)'};
     `
   })
 }

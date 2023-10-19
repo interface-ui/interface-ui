@@ -1,5 +1,5 @@
 import type { ExtractPropTypes, PropType } from 'vue'
-import { type ComponentSize, componentSizes } from '@fusion-ui-vue/constants'
+import { type ComponentSizes, componentSizes } from '@fusion-ui-vue/constants'
 import type { ThemeCallBack, ThemePaletteColor } from '@fusion-ui-vue/theme'
 
 export const radioProps = {
@@ -8,7 +8,7 @@ export const radioProps = {
     required: true,
   },
   size: {
-    type: String as PropType<ComponentSize>,
+    type: String as PropType<ComponentSizes>,
     value: componentSizes,
     default: 'medium',
   },

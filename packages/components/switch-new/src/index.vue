@@ -28,15 +28,10 @@ const classList = computed(() => {
 
 const classListOverlay = computed(() => {
   const { disabled } = instance?.attrs || {}
-  return [disabled === '' ? ns.m('disabled') : ns.m('no-disabled'), checked.value ? ns.m('active') : '']
-})
-
-const rippleColor = computed(() => {
-  if (props.modelValue) {
-    return props.color || 'var(--fn-switch-color)'
-  } else {
-    return '#fff'
-  }
+  return [
+    disabled === '' ? ns.m('disabled') : ns.m('no-disabled'),
+    checked.value ? ns.m('active') : '',
+  ]
 })
 </script>
 
@@ -44,13 +39,14 @@ const rippleColor = computed(() => {
   <span :class="[...classList, cssClass]">
     <div :class="[ns.e('overlay'), classListOverlay]">
       <div :class="[ns.e('dot')]" />
+      <!-- eslint-disable-next-line vue/html-self-closing -->
       <input
         v-bind="$attrs"
         v-model="checked"
         :class="[ns.e('input')]"
         type="checkbox"
-      >
-      <fn-ripple :color="rippleColor" center />
+      />
+      <fn-ripple :color="props.color" center />
     </div>
     <div :class="[ns.e('track')]" />
   </span>

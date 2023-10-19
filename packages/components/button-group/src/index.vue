@@ -1,35 +1,47 @@
 <script lang="ts">
-import { useNamespace } from '@fusion-ui-vue/utils'
-import { computed, createElementVNode } from 'vue'
-import { useButtonGroup } from '@fusion-ui-vue/hooks'
+import { unRefs, useNamespace } from '@fusion-ui-vue/utils'
+import {
+  computed,
+  createElementVNode,
+  defineComponent,
+  mergeProps,
+  toRefs,
+} from 'vue'
+import { css, cx, useColor } from '@fusion-ui-vue/theme'
 import { buttonGroupProps } from './button-group'
 
-export default {
+export default defineComponent({
   props: buttonGroupProps,
   setup(props, { slots, attrs }) {
     const ns = useNamespace('button-group')
-    const { orientation, ...buttonProps } = props
-    const cssClass = useButtonGroup(props, ns)
+    const { orientation, ...buttonProps } = toRefs(props)
+    const $color = useColor(props.color)
+    const cssClass = computed(
+      () => css`
+        --fn-button-group-color: ${$color.value ??
+        'var(--md-sys-color-primary)'};
+      `
+    )
     const classList = computed(() => {
-      const { variant, shape, size } = buttonProps
-      return [
+      const { variant, shape, size } = unRefs(buttonProps)
+      return cx([
         ns.b(),
         ns.m(size),
         ns.m(shape),
         ns.m(variant),
-        ns.m(orientation),
+        ns.m(orientation.value),
         cssClass.value,
-      ].join(' ')
+      ])
     })
 
     const slotsVNodes = slots?.default?.() ?? []
     slotsVNodes.forEach(vnode => {
-      vnode.props = { ...buttonProps, ...attrs, ...vnode.props }
+      vnode.props = mergeProps(unRefs(buttonProps), attrs, vnode?.props ?? {})
     })
 
     return () => {
       return createElementVNode('div', { class: classList.value }, slotsVNodes)
     }
   },
-}
+})
 </script>

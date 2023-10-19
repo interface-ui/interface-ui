@@ -1,17 +1,19 @@
 <template>
   <div fscw gap-5>
-    <fnAvatar
+    <fn-avatar
       alt="Remy Sharp"
       src="https://mui.com/static/images/avatar/1.jpg"
+      variant="circle"
     />
-    <fnAvatar
-      alt="Remy Sharp"
+    <fn-avatar
+      alt="Travis Howard"
       src="https://mui.com/static/images/avatar/2.jpg"
+      variant="square"
     />
-    <fnAvatar
-      alt="Remy Sharp"
+    <fn-avatar
+      alt="Travis Howard"
       src="https://mui.com/static/images/avatar/3.jpg"
+      variant="rounded"
     />
   </div>
-  <br>
 </template>

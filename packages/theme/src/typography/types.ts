@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/indent */
-import type { ComponentSize } from '@fusion-ui-vue/constants'
+import type { ComponentSizes } from '@fusion-ui-vue/constants'
 
 export interface TypographyProp {
   fontFamily: string
@@ -34,7 +34,7 @@ interface TypographyDefaultConfig {
 }
 export type Typography = TypographyDefaultConfig &
   Record<TypographyWithoutSize, TypographyProp> &
-  Record<TypographyWithSize, Record<ComponentSize, TypographyProp>>
+  Record<TypographyWithSize, Record<ComponentSizes, TypographyProp>>
 
 export type TypographyMap = Record<TypographyType, string>
 export const typographyMapping: TypographyMap = {

@@ -13,40 +13,47 @@ lang: en
 
 Avatar components can be used to represent people or objects, supporting image text or icons.
 
-## Basic usage
+## Basic
 
-<demo src="../../../example/avatar/base.vue"></demo>
+<demo src="../../../example/avatar/basic.vue"></demo>
 
 ## Letter avatar
 
 Generate letter avatars by passing text.
+
 <demo src="../../../example/avatar/letter.vue"></demo>
 
 Usually we use it to display users without avatars.
+
 <demo src="../../../example/avatar/no-avatar.vue"></demo>
 
 ## Size
 
-We provide three sizes of avatars, namely ```small``` , ````default```` and ```large```. You can also use ```height``` and ```width``` to customize the size of the avatar.
+Change the size of avatar with `size` prop. The default is `40`
+
 <demo src="../../../example/avatar/size.vue"></demo>
 
 ## Icon avatar
 
 Generate icon avatars by passing icons.
+
 <demo src="../../../example/avatar/icon.vue"></demo>
 
 ## shape
 
-Avatars in three shapes are provided, namely ```circle```, ```square``` and ```rounded```.
-<demo src="../../../example/avatar/shape.vue"></demo>
+Avatars in three shapes are provided, namely `circle`, `square` and `rounded`.
+
+<demo src="../../../example/avatar/variant.vue"></demo>
+
 
 ## Avatar Group
 
-Use ```avatar-group``` to combine multiple avatars together, and the ```max``` attribute to limit the number of avatars displayed.
+Use `AvatarGroup` to combine multiple avatars together, and the `max` attribute to limit the number of avatars displayed.
+
+`AvatarGroup` accept all the props of `Avatar` to help you control the all the avatars.
+
 <demo src="../../../example/avatar/group.vue"></demo>
 
-The ```total``` attribute shows the total number of avatars.
-<demo src="../../../example/avatar/total.vue"></demo>
 
 ## Attributes
 <table-block type="propsZh" :data="props"></table-block>

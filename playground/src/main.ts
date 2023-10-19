@@ -6,12 +6,13 @@ import fusionUi from '@fusion-ui-vue/components'
 import './style.css'
 // import 'fusion-ui-vue/dist/styles/base.css'
 // import 'fusion-ui-vue/dist/styles/index.css' // 打包后的全量样式
-import '@fusion-ui-vue/components/checkbox/src/index.less' // 开发调试的样式
+import '@fusion-ui-vue/components/avatar/src/index.less' // 开发调试的样式
 import '@fusion-ui-vue/components/ripple/src/index.less' // 开发调试的样式
 import '@fusion-ui-vue/components/button/src/index.less' // 开发调试的样式
-import '@fusion-ui-vue/components/typography/src/index.less' // 开发调试的样式
+import '@fusion-ui-vue/components/avatar-group/src/index.less' // 开发调试的样式
 import '@fusion-ui-vue/components/form-label/src/index.less' // 开发调试的样式
-import '@fusion-ui-vue/components/radio/src/index.less' // 开发调试的样式
+import '@fusion-ui-vue/components/badge/src/index.less' // 开发调试的样式
+import '@fusion-ui-vue/components/button-group/src/index.less' // 开发调试的样式
 
 // import RouterView from './RouterHello.vue'
 
