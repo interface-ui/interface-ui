@@ -1,5 +1,5 @@
-import type { Component } from 'vue'
-import { computed, defineComponent, h } from 'vue'
+import type { Component, VNodeProps } from 'vue'
+import { computed, defineComponent, h, mergeProps } from 'vue'
 import type { CSSInterpolation } from '@emotion/css'
 import { css, cx } from '@emotion/css'
 import { useTheme } from '../hooks'
@@ -27,7 +27,12 @@ export const styled = (comp: Component | string, props?: RenderTypes[1]) => {
           : cssClass.value
 
         const slotsVNodes = slots?.default?.()
-        return () => h(comp as any, { ...props, class: className }, slotsVNodes)
+        return () =>
+          h(
+            comp as any,
+            mergeProps(props as VNodeProps, { class: className }),
+            slotsVNodes
+          )
       },
     })
   }
