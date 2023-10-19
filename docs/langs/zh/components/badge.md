@@ -1,47 +1,49 @@
 ---
-title: Badge
+title: Badge 徽章
 lang: zh
 ---
 
 <script setup lang="ts">
-  import props from "../../../example/badge/description/zh-props.ts";
+  import props from "../../../example/badge/description/en-props.ts";
 </script>
 
 
-# Badge
+# Badge 徽章
 
 按钮和图标上的数字或状态标记。
 
-## 基础用法
+## 基本用法
 
-```value``` 用来展示新消息的数量, ```color``` 用来设置背景色。
-<demo src="../../../example/badge/base.vue"></demo>
+`value` 用于显示新消息的数量
+
+<demo src="../../../example/badge/basic.vue"></demo>
 
 
 ## 最大值
 
-自定义最大值，由 ```max``` 属性定义，接受 Number 值。
+自定义最大值由 `max` 属性定义，并接受数字值。
+
 <demo src="../../../example/badge/max.vue"></demo>
+
+## 颜色
+
+使用 `color` 属性自定义徽章。
+
+<demo src="../../../example/badge/color.vue"></demo>
+
+## 对齐
+
+您可以使用 `xAlign` 和 `yAlign` 属性将徽章移动到包装元素的任何角落。
+
+<demo src="../../../example/badge/align.vue"></demo>
 
 
 ## 自定义
 
-当 ```value``` 是 ```String``` 时，可以显示自定义文字。
+借助 `styled` 函数，`Badge` 变得更加灵活。
 
 <demo src="../../../example/badge/custom.vue"></demo>
 
-## 小圆点
-
-```dot``` 属性用来显示小圆点，此时 ```value``` 属性无效。
-<demo src="../../../example/badge/dot.vue"></demo>
-
-## 闪烁
-
-```flashing``` 属性用来设置闪动效果，它是一个 ```Boolean``` 值。
-
-<demo src="../../../example/badge/flashing.vue"></demo>
-
 ## 属性
+
 <table-block type="propsZh" :data="props"></table-block>
-
-
