@@ -1,9 +1,7 @@
 import type { ThemeCallBack, ThemePaletteColor } from '@fusion-ui-vue/theme'
-import { type ComponentSize, componentSizes } from '@fusion-ui-vue/constants'
+import { type ComponentSizes, componentSizes } from '@fusion-ui-vue/constants'
 import type { ExtractPropTypes, PropType } from 'vue'
-import {
-  buildProps,
-} from '../../../utils/vue/props'
+import { buildProps } from '../../../utils/vue/props'
 
 export const SwitchPropsNew = buildProps({
   modelValue: {
@@ -16,7 +14,7 @@ export const SwitchPropsNew = buildProps({
     default: 'primary',
   },
   size: {
-    type: String as PropType<ComponentSize>,
+    type: String as PropType<ComponentSizes>,
     value: componentSizes,
     default: 'medium',
   },

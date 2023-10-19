@@ -1,3 +1,4 @@
+<script lang="ts">
 import { computed, defineComponent, h, mergeProps, toRefs } from 'vue'
 import { unRefs, useNamespace } from '@fusion-ui-vue/utils'
 import { css, cx } from '@fusion-ui-vue/theme'
@@ -42,3 +43,4 @@ export default defineComponent({
       )
   },
 })
+</script>

@@ -1,3 +1,4 @@
+<script lang="ts">
 import { unRefs, useNamespace } from '@fusion-ui-vue/utils'
 import {
   computed,
@@ -43,3 +44,4 @@ export default defineComponent({
     }
   },
 })
+</script>
