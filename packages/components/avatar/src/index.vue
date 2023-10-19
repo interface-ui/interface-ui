@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { defineComponent, useAttrs } from 'vue'
+import { computed, defineComponent, useAttrs } from 'vue'
 import { useNamespace } from '@fusion-ui-vue/utils'
 import { css } from '@fusion-ui-vue/theme'
 import { avatarProps } from './avatar'
@@ -7,12 +7,14 @@ import { avatarProps } from './avatar'
 const props = defineProps(avatarProps)
 const ns = useNamespace('avatar')
 
-const cssClass = css`
-  height: ${props.size}px;
-  width: ${props.size}px;
-  background-color: ${props.backgroundColor};
-  color: ${props.color};
-`
+const cssClass = computed(
+  () => css`
+    height: ${props.size}px;
+    width: ${props.size}px;
+    background-color: ${props.backgroundColor};
+    color: ${props.color};
+  `
+)
 const { class: classAttr, ...restAttrs } = useAttrs()
 </script>
 

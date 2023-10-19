@@ -1,6 +1,6 @@
 import FnButton from './button'
-import IconButton from './icon-button'
-import ButtonGroup from './button-group'
+import FnIconButton from './icon-button'
+import FnButtonGroup from './button-group'
 import FnAlert from './alert'
 import FnIcon from './icon'
 import FnLink from './link'
@@ -13,7 +13,7 @@ import FnSwitch from './switch'
 import FnBadge from './badge'
 import FnProgress from './progress'
 import FnAvatar from './avatar'
-import FnAvatarGroup from './avatarGroup'
+import FnAvatarGroup from './avatar-group'
 import FnTag from './tag'
 import FnCheckbox from './checkbox'
 import FnBreadcrumb from './breadcrumb'
@@ -22,7 +22,7 @@ import FnRipple from './ripple'
 import FnDrawer from './drawer'
 import FnFormLabel from './form-label'
 import FnTypography from './typography'
-export * from './avatarGroup'
+export * from './avatar-group'
 export * from './button'
 export * from './icon-button'
 export * from './button-group'
@@ -49,8 +49,8 @@ export * from './ripple'
 
 export const components = [
   FnButton,
-  IconButton,
-  ButtonGroup,
+  FnIconButton,
+  FnButtonGroup,
   FnAlert,
   FnIcon,
   FnLink,

@@ -9,7 +9,7 @@ import './style.css'
 import '@fusion-ui-vue/components/avatar/src/index.less' // 开发调试的样式
 import '@fusion-ui-vue/components/ripple/src/index.less' // 开发调试的样式
 import '@fusion-ui-vue/components/button/src/index.less' // 开发调试的样式
-import '@fusion-ui-vue/components/typography/src/index.less' // 开发调试的样式
+import '@fusion-ui-vue/components/avatar-group/src/index.less' // 开发调试的样式
 import '@fusion-ui-vue/components/form-label/src/index.less' // 开发调试的样式
 import '@fusion-ui-vue/components/badge/src/index.less' // 开发调试的样式
 

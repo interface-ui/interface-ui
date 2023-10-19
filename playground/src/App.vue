@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import { FnButton, FnBadge, FnAvatar } from '@fusion-ui-vue/components'
 import createTheme from '@fusion-ui-vue/theme'
-// import { ref } from 'vue'
+import { ref } from 'vue'
 import Child from './Child.vue'
 
 // const checked = ref<boolean>(false)
 // const picked = ref<string>('apple')
+const size = ref<number>(50)
 const theme = createTheme()
 console.log(theme.value)
 
@@ -21,6 +22,7 @@ const changTheme = () => {
       <!-- @vue-skip -->
       {{ theme.mode }}
     </fn-button>
+    <fn-button @click="size += 10"> Add size </fn-button>
   </header>
 
   <!-- -------------------新组建开发调试------------------- -->
@@ -36,6 +38,31 @@ const changTheme = () => {
     <Child />
   </div>
   <div class="content">
-    <fn-avatar>H</fn-avatar>
+    <fn-avatar :size="size">H</fn-avatar>
+  </div>
+  <div class="content">
+    {{ size }}
+    <fn-avatar-group max="4" :size="size">
+      <fn-avatar
+        alt="Remy Sharp"
+        src="https://mui.com/static/images/avatar/1.jpg"
+      />
+      <fn-avatar
+        alt="Remy Sharp"
+        src="https://mui.com/static/images/avatar/2.jpg"
+      />
+      <fn-avatar
+        alt="Remy Sharp"
+        src="https://mui.com/static/images/avatar/3.jpg"
+      />
+      <fn-avatar
+        alt="Remy Sharp"
+        src="https://mui.com/static/images/avatar/4.jpg"
+      />
+      <fn-avatar
+        alt="Remy Sharp"
+        src="https://mui.com/static/images/avatar/5.jpg"
+      />
+    </fn-avatar-group>
   </div>
 </template>

@@ -2,6 +2,11 @@ html {
   margin: 8px;
 }
 
+body {
+  min-height: 100vh;
+  background-color: var(--md-sys-color-background);
+}
+
 header {
   margin-bottom: 20px;
 }
