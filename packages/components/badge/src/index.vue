@@ -20,16 +20,19 @@ const translate = {
   right: '50%',
   left: '-50%',
 }
-const positionCss = css`
-  ${props.xAlign}: 0;
-  ${props.yAlign}: 0;
-  transform: scale(1)
-    translate(
-      ${props.overlap ? '0%' : (translate as any)[props.xAlign]},
-      ${props.overlap ? '0%' : (translate as any)[props.yAlign]}
-    );
-`
-const BadgeTypography = styled(Typography, { class: [positionCss] })`
+
+const positionCss = computed(
+  () => css`
+    ${props.xAlign}: 0;
+    ${props.yAlign}: 0;
+    transform: scale(1)
+      translate(
+        ${props.overlap ? '0%' : (translate as any)[props.xAlign]},
+        ${props.overlap ? '0%' : (translate as any)[props.yAlign]}
+      );
+  `
+)
+const BadgeTypography = styled(Typography)`
   background-color: ${$color.value ?? 'var(--md-sys-color-error)'};
   color: ${$onColor.value};
   height: ${props.variant === 'dot' ? '8px' : '20px'};
@@ -62,9 +65,7 @@ const badegContent = computed(() => {
   return content
 })
 
-const CustomContent = styled(props.content as any, {
-  class: [ns.m('icon'), positionCss],
-})``
+const CustomContent = styled(props.content as any)``
 </script>
 
 <template>
@@ -72,13 +73,13 @@ const CustomContent = styled(props.content as any, {
     <slot />
     <badge-typography
       v-if="showTypography"
-      :class="ns.m('icon')"
+      :class="[ns.m('icon'), positionCss]"
       variant="label.small"
     >
       <template v-if="props.variant !== 'dot'">
         {{ badegContent }}
       </template>
     </badge-typography>
-    <custom-content v-else />
+    <custom-content v-else :class="[ns.m('icon'), positionCss]" />
   </span>
 </template>

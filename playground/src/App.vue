@@ -6,7 +6,8 @@ import Child from './Child.vue'
 
 // const checked = ref<boolean>(false)
 // const picked = ref<string>('apple')
-const size = ref<number>(50)
+const aaa = ref<number>(1)
+// const size = ref<number>(50)
 const theme = createTheme()
 console.log(theme.value)
 
@@ -22,7 +23,7 @@ const changTheme = () => {
       <!-- @vue-skip -->
       {{ theme.mode }}
     </fn-button>
-    <fn-button @click="size += 10"> Add size </fn-button>
+    <fn-button @click="aaa += 1"> Add size </fn-button>
   </header>
 
   <!-- -------------------新组建开发调试------------------- -->
@@ -34,9 +35,9 @@ const changTheme = () => {
       <fn-button>Button</fn-button>
     </fn-badge>
   </div>
-  <!-- <div class="content">
-    <Child />
-  </div> -->
+  <div class="content">
+    <Child :aaa="aaa" />
+  </div>
   <div class="content">
     <fn-avatar :background-color="theme => theme.colors.cyan[400]">
       B
