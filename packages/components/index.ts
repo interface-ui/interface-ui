@@ -22,6 +22,7 @@ import FnRipple from './ripple'
 import FnDrawer from './drawer'
 import FnFormLabel from './form-label'
 import FnTypography from './typography'
+import FnSwitchNew from './switch-new'
 export * from './avatarGroup'
 export * from './button'
 export * from './icon-button'
@@ -46,6 +47,7 @@ export * from './drawer'
 export * from './form-label'
 export * from './typography'
 export * from './ripple'
+export * from './switch-new'
 
 export const components = [
   FnButton,
@@ -72,6 +74,7 @@ export const components = [
   FnDrawer,
   FnFormLabel,
   FnTypography,
+  FnSwitchNew,
 ]
 
 const CK = {
