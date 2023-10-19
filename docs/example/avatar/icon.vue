@@ -1,23 +1,13 @@
 <template>
   <div fscw gap-5>
-    <fnAvatar
-      alt="Remy Sharp"
-      background="rgb(117 117 117)"
-    >
-      <fnIcon icon="ph:address-book" />
-    </fnAvatar>
-    <fnAvatar
-      alt="Remy Sharp"
-      background="rgb(233, 30, 99)"
-    >
-      <fnIcon icon="ph:wrench-light" />
-    </fnAvatar>
-    <fnAvatar
-      alt="Remy Sharp"
-      background="rgb(76, 175, 80)"
-    >
-      <fnIcon icon="ph:yin-yang-duotone" />
-    </fnAvatar>
+    <fn-avatar>
+      <fn-icon icon="ph:address-book" />
+    </fn-avatar>
+    <fn-avatar background-color="#dc3964" color="white">
+      <fn-icon icon="ph:wrench-light" />
+    </fn-avatar>
+    <fn-avatar background-color="#60ae57" color="white">
+      <fn-icon icon="ph:yin-yang-duotone" />
+    </fn-avatar>
   </div>
-  <br>
 </template>

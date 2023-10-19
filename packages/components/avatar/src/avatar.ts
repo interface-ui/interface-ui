@@ -2,6 +2,7 @@ import type { ExtractPropTypes, PropType } from 'vue'
 import type { ComponentSizes } from '@fusion-ui-vue/constants'
 import { componentSizes } from '@fusion-ui-vue/constants'
 import { buildProps, isNumber } from '@fusion-ui-vue/utils'
+import type { ThemeCallBack, ThemePaletteColor } from '@fusion-ui-vue/theme'
 
 export const avatarVariants = ['circle', 'square', 'rounded'] as const
 export type AvatarVariants = typeof avatarVariants[number]
@@ -19,11 +20,15 @@ export const avatarProps = buildProps({
     default: 'circle',
   },
   color: {
-    type: String,
+    type: [String, Function] as PropType<
+      ThemeCallBack | ThemePaletteColor | string
+    >,
     default: 'var(--md-sys-color-on-surface)',
   },
   backgroundColor: {
-    type: String,
+    type: [String, Function] as PropType<
+      ThemeCallBack | ThemePaletteColor | string
+    >,
     default: 'var(--fn-sys-color-disabled-level-1)',
   },
 })

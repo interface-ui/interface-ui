@@ -34,13 +34,15 @@ const changTheme = () => {
       <fn-button>Button</fn-button>
     </fn-badge>
   </div>
-  <div class="content">
+  <!-- <div class="content">
     <Child />
-  </div>
+  </div> -->
   <div class="content">
-    <fn-avatar :size="size">H</fn-avatar>
+    <fn-avatar :background-color="theme => theme.colors.cyan[400]">
+      B
+    </fn-avatar>
   </div>
-  <div class="content">
+  <!-- <div class="content">
     {{ size }}
     <fn-avatar-group max="4" :size="size">
       <fn-avatar
@@ -76,5 +78,5 @@ const changTheme = () => {
       <fn-button>two</fn-button>
       <fn-button>three</fn-button>
     </fn-button-group>
-  </div>
+  </div> -->
 </template>

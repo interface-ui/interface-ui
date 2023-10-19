@@ -30,7 +30,7 @@ export default defineConfig({
   transformers: [transformerVariantGroup(), transformerDirectives()],
   shortcuts: [
     {
-      fscw: 'flex justify-start items-center flex-wrap w-full',
+      fscw: 'flex justify-center items-center flex-wrap w-full',
       'o-demo_wrapper':
         'p-8 text-#282f38  border border-solid border-light-700 rounded-md dark:bg-dark-700 dark:border-#4C4D4F flex [&:o-button-base]:!c-context justify-center',
       'o-demo_actions': 'flex justify-end pt-3 gap-2',

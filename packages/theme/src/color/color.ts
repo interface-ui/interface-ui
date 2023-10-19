@@ -23,6 +23,6 @@ export interface Colors<F = Color<FusionColorLevel>> {
   orange: F & FusionColorExtensionLevel
   deepOrange: F & FusionColorExtensionLevel
   brown: F
-  Grey: F
+  grey: F
   blueGrey: F
 }
