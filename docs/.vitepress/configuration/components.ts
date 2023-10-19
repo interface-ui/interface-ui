@@ -78,6 +78,10 @@ export const enComponents = [
         link: '/langs/en/components/switch',
       },
       {
+        text: 'SwitchNew',
+        link: '/langs/en/components/switch-new',
+      },
+      {
         text: 'Progress',
         link: '/langs/en/components/progress',
       },

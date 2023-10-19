@@ -8,6 +8,7 @@ import '@fusion-ui-vue/components/drawer/src/index.less' // 单文件样式
 import '@fusion-ui-vue/components/link/src/index.less' // 单文件样式
 import '@fusion-ui-vue/components/dialog/src/index.less' // 单文件样式
 import '@fusion-ui-vue/components/message/src/index.less' // 单文件样式
+import '@fusion-ui-vue/components/switch-new/src/index.less' // 单文件样式
 
 // 注册本地组件
 import FusionUi from '@fusion-ui-vue/components'
