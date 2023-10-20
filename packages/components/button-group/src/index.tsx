@@ -27,10 +27,10 @@ export default defineComponent({
       ])
     })
 
-    return () => (
-      <div class={classList}>
-        {slots?.default?.(mergeProps(unRefs(buttonProps), attrs))}
-      </div>
-    )
+    const slotsVNodes = (slots?.default?.() ?? []).map((VNode: any) => (
+      <VNode {...mergeProps(unRefs(buttonProps), attrs, VNode.props ?? {})} />
+    ))
+
+    return () => <div class={classList.value}>{slotsVNodes}</div>
   },
 })

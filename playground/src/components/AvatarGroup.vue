@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { FnAvatar, FnAvatarGroup } from 'fusion-ui-vue'
+import { FnAvatar, FnAvatarGroup } from '@fusion-ui-vue/components'
 </script>
 
 <template>
@@ -11,6 +11,7 @@ import { FnAvatar, FnAvatarGroup } from 'fusion-ui-vue'
     <fn-avatar
       alt="Travis Howard"
       src="https://mui.com/static/images/avatar/2.jpg"
+      size="56"
     />
     <fn-avatar
       alt="Cindy Baker"

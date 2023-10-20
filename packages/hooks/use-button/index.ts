@@ -1,5 +1,9 @@
 import { css, themePaletteColor, useColor } from '@fusion-ui-vue/theme'
-import type { ButtonProps, IconButtonProps } from '@fusion-ui-vue/components'
+import {
+  type ButtonProps,
+  type IconButtonProps,
+  buttonHeight,
+} from '@fusion-ui-vue/components'
 import { computed } from 'vue'
 import type { ComponentStylingHook } from '../types'
 
@@ -31,6 +35,9 @@ export const useButton: ComponentStylingHook<ButtonProps> = (props, ns) => {
             };
           },
         },
+      &.${ns!.m(props.size)} {
+        height: ${buttonHeight[props.size]}px;
+      }
     `
   })
 }
