@@ -6,6 +6,11 @@ export const buttonVariants = ['text', 'filled', 'outlined'] as const
 export type ButtonVariant = typeof buttonVariants[number]
 export const buttonShapes = ['rounded', 'fullRounded', 'square'] as const
 export type ButtonShape = typeof buttonShapes[number]
+export const buttonHeight: Record<ComponentSizes, number> = {
+  small: 32,
+  medium: 40,
+  large: 48,
+}
 
 export const buttonProps = {
   variant: {
@@ -39,5 +44,4 @@ export const buttonProps = {
   },
 }
 
-/** ButtonProps 组件 props 类型 */
 export type ButtonProps = ExtractPropTypes<typeof buttonProps>

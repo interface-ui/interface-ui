@@ -9,6 +9,7 @@ import {
 } from 'vue'
 import { addUnit, useNamespace } from '@fusion-ui-vue/utils'
 import { useRipple } from '@fusion-ui-vue/hooks'
+import { css } from '@fusion-ui-vue/theme'
 import type { RippleStyle } from './ripple'
 import { rippleProps } from './ripple'
 
@@ -51,8 +52,15 @@ watchEffect(() => {
 })
 
 onMounted(() => {
-  if (parent)
+  if (parent) {
     listener = parent.proxy?.$el.addEventListener('mousedown', addRipple)
+    // Check if the parent element already has a position
+    if (window.getComputedStyle(parent.proxy?.$el).position === 'static') {
+      parent.proxy?.$el.classList.add(css`
+        position: relative;
+      `)
+    }
+  }
 })
 onUnmounted(() => {
   clear()

@@ -1,5 +1,5 @@
 import { withInstall } from '../install'
-import AvatarGroup from './src/index.vue'
+import AvatarGroup from './src/index'
 
 export const FnAvatarGroup = withInstall(AvatarGroup, 'FnAvatarGroup')
 FnAvatarGroup.name = 'FnAvatarGroup'
