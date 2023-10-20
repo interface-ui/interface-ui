@@ -21,38 +21,62 @@
   overflow: hidden;
   box-sizing: border-box;
 
-  &--medium{
-    width: @medium-size[switchWidth];
-    height: @medium-size[switchHeight] ;
-    padding:@medium-size[padding] ;
-    .fn-switch__overlay{
-      width:  @medium-size[overlaySize];
-      height: @medium-size[overlaySize];
-    }
-    .fn-switch__dot{
+  &__overlay--medium,
+  &__overlay--small{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    border-radius: 50%;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__dot--medium,
+  &__dot--small{
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: left 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+      transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    background-color: var(--fn-switch--dot-color);
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+      0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  }
+
+  &__overlay--medium{
+    width:  @medium-size[overlaySize];
+    height: @medium-size[overlaySize];
+  }
+
+  &__overlay--small{
+    width:  @small-size[overlaySize];
+    height: @small-size[overlaySize];
+  }
+
+  &__dot--medium{
       width:  @medium-size[dotSize];
       height: @medium-size[dotSize];
-    }
+  }
+
+  &__dot--small{
+      width:  @small-size[dotSize];
+      height: @small-size[dotSize];
+  }
+
+  &--medium{
+      width: @medium-size[switchWidth];
+      height: @medium-size[switchHeight] ;
+      padding:@medium-size[padding] ;
   }
 
   &--small{
-    width: @small-size[switchWidth] ;
-    height: @small-size[switchHeight] ;
-    padding:@small-size[padding] ;
-    .fn-switch__overlay{
-      width:  @small-size[overlaySize];
-      height: @small-size[overlaySize];
-    }
-    .fn-switch__dot{
-      width:  @small-size[dotSize];
-      height: @small-size[dotSize];
-    }
-  }
-
-  &--disabled{
-   .fn-switch__track{
-      opacity: 0.13;
-    }
+      width: @small-size[switchWidth] ;
+      height: @small-size[switchHeight] ;
+      padding:@small-size[padding] ;
   }
 
   &__input {
@@ -80,31 +104,7 @@
     }
   }
 
-  &__overlay {
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 1;
-    border-radius: 50%;
-    transition: all 0.2s ease-in-out;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  &__dot {
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: left 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
-      transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-    background-color: var(--fn-switch--dot-color);
-    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
-      0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-  }
-
-  &--no-disabled {
+  &--enabled {
     &:hover {
       background-color: color-mix(
         in srgb,
