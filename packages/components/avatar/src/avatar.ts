@@ -1,7 +1,8 @@
 import type { ExtractPropTypes, PropType } from 'vue'
 import type { ComponentSizes } from '@fusion-ui-vue/constants'
 import { componentSizes } from '@fusion-ui-vue/constants'
-import { buildProps, isNumber } from '@fusion-ui-vue/utils'
+import { buildProps, isNumber, isString } from '@fusion-ui-vue/utils'
+
 import type { ThemeCallBack, ThemePaletteColor } from '@fusion-ui-vue/theme'
 
 export const avatarVariants = ['circle', 'square', 'rounded'] as const
@@ -9,10 +10,11 @@ export type AvatarVariants = typeof avatarVariants[number]
 
 export const avatarProps = buildProps({
   size: {
-    type: [Number, String] as PropType<number | ComponentSizes>,
-    values: componentSizes,
+    type: [String, Number] as PropType<string | number | ComponentSizes>,
     default: 40,
-    validator: (val: unknown): val is number => isNumber(val),
+    validator: (val: unknown): val is string | number | ComponentSizes => {
+      return isNumber(val) || (isString(val) && !isNaN(parseFloat(val))) || componentSizes.includes(val as ComponentSizes)
+    },
   },
   variant: {
     type: String as PropType<AvatarVariants>,
