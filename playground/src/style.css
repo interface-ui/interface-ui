@@ -1,14 +1,18 @@
 html {
-  margin: 8px;
+  margin: 0;
+  padding: 0;
 }
 
 body {
+  padding: 16px;
   min-height: 100vh;
   background-color: var(--md-sys-color-background);
 }
 
 header {
   margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .content {
