@@ -1,12 +1,5 @@
-<script lang="ts">
 import { unRefs, useNamespace } from '@fusion-ui-vue/utils'
-import {
-  computed,
-  createElementVNode,
-  defineComponent,
-  mergeProps,
-  toRefs,
-} from 'vue'
+import { computed, defineComponent, mergeProps, toRefs } from 'vue'
 import { css, cx, useColor } from '@fusion-ui-vue/theme'
 import { buttonGroupProps } from './button-group'
 
@@ -34,14 +27,10 @@ export default defineComponent({
       ])
     })
 
-    const slotsVNodes = slots?.default?.() ?? []
-    slotsVNodes.forEach(vnode => {
-      vnode.props = mergeProps(unRefs(buttonProps), attrs, vnode?.props ?? {})
-    })
-
-    return () => {
-      return createElementVNode('div', { class: classList.value }, slotsVNodes)
-    }
+    return () => (
+      <div class={classList}>
+        {slots?.default?.(mergeProps(unRefs(buttonProps), attrs))}
+      </div>
+    )
   },
 })
-</script>

@@ -1,5 +1,5 @@
 import { withInstall } from '../install'
-import ButtonGroup from './src/index.vue'
+import ButtonGroup from './src/index'
 
 export const FnButtonGroup = withInstall(ButtonGroup, 'FnButtonGroup')
 FnButtonGroup.name = 'FnButtonGroup'
