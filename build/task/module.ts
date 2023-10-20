@@ -5,10 +5,10 @@ import vue from '@vitejs/plugin-vue'
 import commonjs from '@rollup/plugin-commonjs'
 import esbuild from 'rollup-plugin-esbuild'
 import consola from 'consola'
+import vueJsx from '@vitejs/plugin-vue-jsx'
 import { excludeFiles } from '../utils'
 import { modulesOutputConfig } from '../config'
 import { componentsComponents } from '../path'
-
 export async function buildModule() {
   consola.info('Start building modules...')
   const input = excludeFiles(
@@ -24,6 +24,7 @@ export async function buildModule() {
       vue({
         isProduction: false,
       }) as any,
+      vueJsx(),
       nodeResolve({
         extensions: ['.mjs', '.js', '.json', '.ts'],
       }),

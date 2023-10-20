@@ -29,7 +29,7 @@ const classList = computed(() => {
 const classListOverlay = computed(() => {
   const { disabled } = instance?.attrs || {}
   return [
-    disabled === '' ? ns.m('disabled') : ns.m('no-disabled'),
+    disabled === '' ? ns.m('disabled') : ns.m('enabled'),
     checked.value ? ns.m('active') : '',
   ]
 })
@@ -37,9 +37,8 @@ const classListOverlay = computed(() => {
 
 <template>
   <span :class="[...classList, cssClass]">
-    <div :class="[ns.e('overlay'), classListOverlay]">
-      <div :class="[ns.e('dot')]" />
-      <!-- eslint-disable-next-line vue/html-self-closing -->
+    <div :class="[ns.e(`overlay--${props.size}`), classListOverlay]">
+      <div :class="[ns.e(`dot--${props.size}`)]" />
       <input
         v-bind="$attrs"
         v-model="checked"

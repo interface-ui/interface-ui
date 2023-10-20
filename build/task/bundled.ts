@@ -8,7 +8,6 @@ import consola from 'consola'
 import type { Plugin } from 'rollup'
 import { bundleOutputConfig } from '../config'
 import { componentsRoot } from '../path'
-
 export async function buildBundled() {
   consola.info('Start building bundle...')
   const plugins: Plugin[] = [
