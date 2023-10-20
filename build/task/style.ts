@@ -4,8 +4,7 @@ import gulpLess from 'gulp-less'
 import gulpImportLess from 'gulp-import-less'
 import autoprefixer from 'gulp-autoprefixer'
 import cleanCSS from 'gulp-clean-css'
-
-import { outputFileSync, readFileSync } from 'fs-extra'
+import { existsSync, outputFileSync, readFileSync } from 'fs-extra'
 import { buildOutput, componentsComponents, componentsStyles, stylesRoot } from '../path'
 
 const generatedCssInfoList: CssInfo[] = []
@@ -50,7 +49,6 @@ function generateIndexCss(cssInfoList: CssInfo[]) {
 
   outputFileSync(resolve(buildOutput, 'styles', 'index.css'), indexCssContent)
 }
-
 function genStyleEntry(cssInfo: CssInfo) {
   if (cssInfo.path.includes(componentsComponents)) {
     const noStyleComps = ['on-click-outside']
@@ -59,13 +57,15 @@ function genStyleEntry(cssInfo: CssInfo) {
 
     const compName = cssInfo.name.split(/\\|\//)[1]
 
+    const isExist = existsSync(resolve(componentsComponents, compName, 'src/index.vue'))
+
     const importReg = /import .* from '(.*).vue'/g
 
     const indexCss = `./${compName}/src/index.css`
 
     const importCommon = `@import './base.css';\n@import '${indexCss}';\n`
 
-    const importContent = (readFileSync(resolve(componentsComponents, compName, 'src/index.vue'), 'utf-8').match(importReg) || [])
+    const importContent = (readFileSync(resolve(componentsComponents, compName, `src/index.${isExist ? 'vue' : 'tsx'}`,), 'utf-8').match(importReg) || [])
       .filter(path => noStyleComps.every(comp => !path.includes(comp)))
       .reduce((prev, curr) => prev += curr.replace(importReg, 'import \'$1.css\'\n'), importCommon)
     outputFileSync(resolve(buildOutput, 'styles', `${compName}.css`), importContent)
