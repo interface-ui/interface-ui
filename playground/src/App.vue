@@ -5,6 +5,7 @@ import { toRaw } from 'vue'
 import Badge from './components/Badge.vue'
 import AvatarGroup from './components/AvatarGroup.vue'
 import ButtonGroup from './components/ButtonGroup.vue'
+import SwitchNew from './components/Switch.vue'
 
 const theme = createTheme()
 
@@ -30,4 +31,5 @@ const changTheme = () => {
   <badge />
   <avatar-group />
   <button-group />
+  <switch-new />
 </template>
