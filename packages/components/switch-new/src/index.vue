@@ -44,7 +44,7 @@ const classListOverlay = computed(() => {
         v-model="checked"
         :class="[ns.e('input')]"
         type="checkbox"
-      >
+      />
       <fn-ripple :color="props.color" center />
     </div>
     <div :class="[ns.e('track')]" />

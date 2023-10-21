@@ -1,5 +1,4 @@
-<script lang="ts">
-import { computed, defineComponent, h, mergeProps, toRefs } from 'vue'
+import { computed, defineComponent, mergeProps, toRefs } from 'vue'
 import { unRefs, useNamespace } from '@fusion-ui-vue/utils'
 import { css, cx } from '@fusion-ui-vue/theme'
 import { FnAvatar } from '../../avatar'
@@ -15,13 +14,16 @@ export default defineComponent({
     let vNodes = slotsVNodes
     if (max.value && +max.value < slotsVNodes.length) {
       const count = slotsVNodes.length - +max.value
-      vNodes = [...slotsVNodes.slice(0, +max.value), h(FnAvatar, `+${count}`)]
+      vNodes = [
+        ...slotsVNodes.slice(0, +max.value),
+        <FnAvatar>+{count}</FnAvatar>,
+      ]
     }
 
     const renderVNodes = computed(() => {
-      return vNodes.map(vnode =>
-        h(vnode, mergeProps(unRefs(avatarProps), vnode.props ?? {}))
-      )
+      return vNodes.map((VNode: any) => (
+        <VNode {...mergeProps(unRefs(avatarProps), VNode.props ?? {})} />
+      ))
     })
 
     const classList = computed(() => {
@@ -35,12 +37,10 @@ export default defineComponent({
       return cx(classes)
     })
 
-    return () =>
-      h(
-        'div',
-        mergeProps(attrs, { class: classList.value }),
-        renderVNodes.value.reverse()
-      )
+    return () => (
+      <div {...mergeProps(attrs, { class: classList.value })}>
+        {renderVNodes.value.reverse()}
+      </div>
+    )
   },
 })
-</script>
