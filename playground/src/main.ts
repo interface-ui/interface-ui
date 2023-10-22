@@ -13,6 +13,7 @@ import '@fusion-ui-vue/components/avatar-group/src/index.less' // 开发调试�
 import '@fusion-ui-vue/components/form-label/src/index.less' // 开发调试的样式
 import '@fusion-ui-vue/components/badge/src/index.less' // 开发调试的样式
 import '@fusion-ui-vue/components/button-group/src/index.less' // 开发调试的样式
+import '@fusion-ui-vue/components/text-field/src/index.less' // 开发调试的样式
 
 // import RouterView from './RouterHello.vue'
 

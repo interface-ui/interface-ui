@@ -23,6 +23,7 @@ import FnDrawer from './drawer'
 import FnFormLabel from './form-label'
 import FnTypography from './typography'
 import FnSwitchNew from './switch-new'
+import FnTextField from './text-field'
 export * from './avatar-group'
 export * from './button'
 export * from './icon-button'
@@ -48,6 +49,7 @@ export * from './form-label'
 export * from './typography'
 export * from './ripple'
 export * from './switch-new'
+export * from './text-field'
 
 export const components = [
   FnButton,
@@ -75,6 +77,7 @@ export const components = [
   FnFormLabel,
   FnTypography,
   FnSwitchNew,
+  FnTextField,
 ]
 
 const CK = {
