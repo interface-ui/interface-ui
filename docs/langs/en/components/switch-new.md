@@ -33,6 +33,9 @@ Use the `size` prop to change the size of the switch
 
 ## Color
 
+The `color` prop can change the color of the switch
+
+
 <demo src="../../../example/switch-new/color.vue"></demo>
 
 ## Label placement

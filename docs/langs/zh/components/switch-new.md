@@ -33,6 +33,7 @@ lang: zh
 
 ## 颜色
 
+`color`道具可以更改开关的颜色。
 <demo src="../../../example/switch-new/color.vue"></demo>
 
 
