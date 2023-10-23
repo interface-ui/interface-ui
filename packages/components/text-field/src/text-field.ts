@@ -32,6 +32,13 @@ export const textFieldProps = buildProps({
     values: componentSizes,
     default: 'medium',
   },
+  error: {
+    type: Boolean,
+    default: false,
+  },
+  supportingText: {
+    type: String,
+  },
 })
 
 export type TextFieldProps = ExtractPropTypes<typeof textFieldProps>

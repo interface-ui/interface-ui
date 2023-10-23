@@ -6,16 +6,60 @@ const content = ref<string>('')
 </script>
 
 <template>
-  {{ content }}
+  <div class="content">
+    <fn-text-field
+      size="small"
+      v-model="content"
+      variant="outlined"
+      label="Outlined"
+      error
+    />
+    <fn-text-field
+      v-model="content"
+      size="small"
+      variant="filled"
+      label="Filled"
+    />
+    <fn-text-field
+      v-model="content"
+      size="small"
+      variant="standard"
+      label="Standard"
+    />
+  </div>
   <div class="content">
     <fn-text-field
       v-model="content"
       variant="outlined"
       label="Outlined"
-      type="password"
+      error
     />
-    <fn-text-field v-model="content" variant="outlined" label="Outlined" />
     <fn-text-field v-model="content" variant="filled" label="Filled" />
     <fn-text-field v-model="content" variant="standard" label="Standard" />
   </div>
+  <div class="content">
+    <fn-text-field
+      size="large"
+      v-model="content"
+      variant="outlined"
+      label="Outlined"
+      error
+      supporting-text="supporting text"
+    />
+    <fn-text-field
+      v-model="content"
+      size="large"
+      variant="filled"
+      label="Filled"
+      supporting-text="supporting text"
+    />
+    <fn-text-field
+      v-model="content"
+      size="large"
+      variant="standard"
+      label="Standard"
+      supporting-text="supporting text"
+    />
+  </div>
+  {{ content }}
 </template>
