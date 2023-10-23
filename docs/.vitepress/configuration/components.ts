@@ -185,6 +185,10 @@ export const zhComponents = [
         text: 'Switch 开关',
         link: '/langs/zh/components/switch',
       },
+      {
+        text: 'Switch new 开关',
+        link: '/langs/zh/components/switch-new',
+      },
     ],
   },
   {

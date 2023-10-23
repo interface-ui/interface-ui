@@ -1,6 +1,6 @@
 ---
 title: Switch
-lang: en
+lang: zh
 ---
 
 <script setup lang="ts">
@@ -11,35 +11,34 @@ lang: en
 
 # Switch
 
-Indicates the switching between two opposing states
+基础用法
 
+## 基础用法
 
-## Basic usage
-
-Bind the ```v-model``` to a variable of type ```Boolean``` to use it.
+绑定 `v-model` 到一个 `Boolean` 类型的变量，即可使用。
 
 <demo src="../../../example/switch-new/base.vue"></demo>
 
-## Label
-You can provide a label to the `Switch` thanks to the `FormControlLabel` component.
+## 标签
+
+使用`FormLabel`组件，您可以为`Switch`提供标签。
 
 <demo src="../../../example/switch-new/label.vue"></demo>
 
-## Size
+## 尺寸
 
-Use the `size` prop to change the size of the switch
+使用`size`道具可以更改开关的大小。
 
 <demo src="../../../example/switch-new/size.vue"></demo>
 
-## Color
+## 颜色
 
-The `color` prop can change the color of the switch
-
-
+`color`道具可以更改开关的颜色。
 <demo src="../../../example/switch-new/color.vue"></demo>
 
-## Label placement
 
-You can change the placement of the label
+## 标签放置
+
+可以更改标签的位置
 
 <demo src="../../../example/switch-new/placement.vue"></demo>
