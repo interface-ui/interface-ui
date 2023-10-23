@@ -13,18 +13,21 @@ const content = ref<string>('')
       variant="outlined"
       label="Outlined"
       error
+      placeholder="placeholder"
     />
     <fn-text-field
       v-model="content"
       size="small"
       variant="filled"
       label="Filled"
+      placeholder="placeholder"
     />
     <fn-text-field
       v-model="content"
       size="small"
       variant="standard"
       label="Standard"
+      placeholder="placeholder"
     />
   </div>
   <div class="content">
@@ -34,9 +37,20 @@ const content = ref<string>('')
       label="Outlined"
       error
       supporting-text="supporting text"
+      placeholder="placeholder"
     />
-    <fn-text-field v-model="content" variant="filled" label="Filled" />
-    <fn-text-field v-model="content" variant="standard" label="Standard" />
+    <fn-text-field
+      v-model="content"
+      variant="filled"
+      label="Filled"
+      placeholder="placeholder"
+    />
+    <fn-text-field
+      v-model="content"
+      variant="standard"
+      label="Standard"
+      placeholder="placeholder"
+    />
   </div>
   <div class="content">
     <fn-text-field
@@ -46,6 +60,7 @@ const content = ref<string>('')
       label="Outlined"
       error
       supporting-text="supporting text"
+      placeholder="placeholder"
     />
     <fn-text-field
       v-model="content"
@@ -53,6 +68,7 @@ const content = ref<string>('')
       variant="filled"
       label="Filled"
       supporting-text="supporting text"
+      placeholder="placeholder"
     />
     <fn-text-field
       v-model="content"
@@ -60,6 +76,7 @@ const content = ref<string>('')
       variant="standard"
       label="Standard"
       supporting-text="supporting text"
+      placeholder="placeholder"
     />
   </div>
   {{ content }}

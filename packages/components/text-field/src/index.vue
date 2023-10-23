@@ -49,7 +49,7 @@ const LabelTypography = computed(
       ns.m(props.variant),
       ns.m(props.size),
       props.error ? ns.m('error') : '',
-      isEmpty(props.modelValue) ? '' : ns.m('content-within'),
+      !isEmpty(props.modelValue) ? ns.m('content-within') : '',
       cssClass,
     ]"
   >
