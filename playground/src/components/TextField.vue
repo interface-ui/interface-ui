@@ -33,6 +33,7 @@ const content = ref<string>('')
       variant="outlined"
       label="Outlined"
       error
+      supporting-text="supporting text"
     />
     <fn-text-field v-model="content" variant="filled" label="Filled" />
     <fn-text-field v-model="content" variant="standard" label="Standard" />
