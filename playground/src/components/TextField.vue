@@ -35,7 +35,6 @@ const content = ref<string>('')
       v-model="content"
       variant="outlined"
       label="Outlined"
-      error
       supporting-text="supporting text"
       placeholder="placeholder"
     />
@@ -58,7 +57,6 @@ const content = ref<string>('')
       v-model="content"
       variant="outlined"
       label="Outlined"
-      error
       supporting-text="supporting text"
       placeholder="placeholder"
     />
@@ -69,6 +67,7 @@ const content = ref<string>('')
       label="Filled"
       supporting-text="supporting text"
       placeholder="placeholder"
+      error
     />
     <fn-text-field
       v-model="content"
@@ -77,6 +76,7 @@ const content = ref<string>('')
       label="Standard"
       supporting-text="supporting text"
       placeholder="placeholder"
+      error
     />
   </div>
   {{ content }}

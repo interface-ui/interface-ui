@@ -169,6 +169,9 @@
     & .fn-text-field__span--border,
     &:hover .fn-text-field__span--border {
       border-color: var(--md-sys-color-error);
+      &::before {
+        border-color: var(--md-sys-color-error);
+      }
     }
   }
 
@@ -214,6 +217,7 @@
     text-align: left;
     z-index: 1;
     transform-origin: left;
+    color: var(--md-sys-color-on-surface-variant);
     transition: color 200ms cubic-bezier(0, 0, 0.2, 1) 0ms,
       transform 200ms cubic-bezier(0, 0, 0.2, 1) 0ms,
       padding 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;

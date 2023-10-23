@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { isEmpty, useNamespace } from '@fusion-ui-vue/utils'
 import { computed, useAttrs } from 'vue'
-import { css, styled, useColor } from '@fusion-ui-vue/theme'
+import { css, useColor } from '@fusion-ui-vue/theme'
 import { UPDATE_MODEL_EVENT } from '@fusion-ui-vue/constants'
 import Typography from '../../typography'
 import FnInput from '../../input'
@@ -30,16 +30,6 @@ const id: string = attrs?.id
   ? (attrs.id as string)
   : `text-field-${new Date().getTime()}`
 const label = computed(() => props?.label ?? '')
-
-const LabelTypography = computed(
-  () => styled(Typography, {
-    component: 'label',
-    variant: 'body.medium',
-    id,
-  })`
-    color: var(--md-sys-color-on-surface-variant);
-  `
-)
 </script>
 
 <template>
@@ -53,9 +43,9 @@ const LabelTypography = computed(
       cssClass,
     ]"
   >
-    <label-typography v-if="props?.label" :class="[ns.e('label')]">
+    <typography v-if="props?.label" component="label" :class="[ns.e('label')]">
       {{ label }}
-    </label-typography>
+    </typography>
     <div :class="[ns.em('div', 'input-wrapper')]">
       <fn-input
         :id="id"
