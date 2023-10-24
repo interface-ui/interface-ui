@@ -5,3 +5,4 @@ export const FnIcon = withInstall(Icon, 'FnIcon')
 FnIcon.name = 'FnIcon'
 export default FnIcon
 export * from './src/icon'
+export type IconInstance = InstanceType<typeof Icon>

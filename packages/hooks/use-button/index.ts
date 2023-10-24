@@ -10,7 +10,7 @@ import type { ComponentStylingHook } from '../types'
 export const useButton: ComponentStylingHook<ButtonProps> = (props, ns) => {
   const $color = useColor(props.color, 'var(--md-sys-color-primary)')
   const $onColor = computed(() =>
-    (props.color as string) in themePaletteColor
+    themePaletteColor.includes(props.color as any)
       ? `var(--md-sys-color-on-${props.color})`
       : null
   )

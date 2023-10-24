@@ -2,11 +2,11 @@
 import { FnButton } from '@fusion-ui-vue/components'
 import createTheme from '@fusion-ui-vue/theme'
 import { toRaw } from 'vue'
-// import Badge from './components/Badge.vue'
+import Badge from './components/Badge.vue'
 // import AvatarGroup from './components/AvatarGroup.vue'
 // import ButtonGroup from './components/ButtonGroup.vue'
 // import SwitchNew from './components/Switch.vue'
-import TextField from './components/TextField.vue'
+// import TextField from './components/TextField.vue'
 
 const theme = createTheme()
 
@@ -29,9 +29,9 @@ const changTheme = () => {
       {{ theme.mode }}
     </fn-button>
   </header>
-  <!-- <badge />
-  <avatar-group />
-  <button-group />
-  <switch-new /> -->
-  <TextField />
+  <badge />
+  <!-- <avatar-group /> -->
+  <!-- <button-group /> -->
+  <!-- <switch-new /> -->
+  <!-- <TextField /> -->
 </template>
