@@ -56,6 +56,8 @@
       border-top-right-radius: var(
         --md-sys-shape-corner-extra-small-top-top-right
       );
+      // should use var(--md-sys-color-surface-container)
+      // but there are no this token
       background-color: var(--md-sys-color-surface-variant);
       &:hover {
         background-color: color-mix(
@@ -251,7 +253,7 @@
     background-color: color-mix(
       in srgb,
       var(--md-sys-color-on-surface) 4%,
-      var(--fn-sys-color-switch) 0%
+      var(--fn-sys-color-switch) var(--fn-zero-percentage)
     );
   }
   &.fn-text-field--outlined {

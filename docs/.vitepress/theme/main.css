@@ -16,12 +16,12 @@
   --vp-c-brand-darker: #454ce1;
   --vp-c-brand-dimm: rgba(100, 108, 255, 0.08); */
 
-  --vp-c-brand: #3B82F6;
-  --vp-c-brand-light: #60A5FA;
-  --vp-c-brand-lighter: #93C5FD;
-  --vp-c-brand-lightest: #BFDBFE;
-  --vp-c-brand-dark: #2563EB;
-  --vp-c-brand-darker: #1D4ED8;
+  --vp-c-brand: #3b82f6;
+  --vp-c-brand-light: #60a5fa;
+  --vp-c-brand-lighter: #93c5fd;
+  --vp-c-brand-lightest: #bfdbfe;
+  --vp-c-brand-dark: #2563eb;
+  --vp-c-brand-darker: #1d4ed8;
   --vp-c-brand-dimm: rgba(30, 58, 138, 0.08);
 
   --vp-code-block-bg: rgba(125, 125, 125, 0.04);
@@ -139,5 +139,5 @@
 }
 
 .VPContent {
-  background-color: var(--vp-c-bg);
+  background-color: var(--md-sys-color-surface);
 }

@@ -19,8 +19,8 @@ export const enComponents = [
         link: '/langs/en/components/link',
       },
       {
-        text: 'Input',
-        link: '/langs/en/components/input',
+        text: 'Text Field',
+        link: '/langs/en/components/text-field',
       },
       {
         text: 'Checkbox',
@@ -123,8 +123,8 @@ export const zhComponents = [
         link: '/langs/zh/components/link',
       },
       {
-        text: 'Input 输入框',
-        link: '/langs/zh/components/input',
+        text: 'Text Field 文本输入',
+        link: '/langs/zh/components/text-field',
       },
       {
         text: 'Checkbox 多选框',

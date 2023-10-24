@@ -30,7 +30,7 @@ export const textFieldProps = buildProps({
   size: {
     type: String as PropType<ComponentSizes>,
     values: componentSizes,
-    default: 'medium',
+    default: 'large',
   },
   error: {
     type: Boolean,
