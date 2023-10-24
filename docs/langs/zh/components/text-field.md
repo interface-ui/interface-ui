@@ -21,7 +21,7 @@ lang: zh
 
 ## 表单属性
 
-支持标准表单属性，例如 `required`、`disabled`、`type` 等。
+支持标准表单属性，例如 `required`、`disabled`、`type`、`placeholder` 等。
 
 <demo src="../../../example/text-field/form-props.vue"></demo>
 
