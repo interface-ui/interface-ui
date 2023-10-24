@@ -12,8 +12,38 @@ export interface ThemeConfig {
   palette?: Partial<Palette>
 }
 
-export const themePaletteColor = ['primary', 'secondary', 'tertiary', 'error']
-export type ThemePaletteColor = typeof themePaletteColor[number]
+export const themePaletteColor: (keyof Palette)[] = [
+  'primary',
+  'onPrimary',
+  'primaryContainer',
+  'onPrimaryContainer',
+  'secondary',
+  'onSecondary',
+  'secondaryContainer',
+  'onSecondaryContainer',
+  'tertiary',
+  'onTertiary',
+  'tertiaryContainer',
+  'onTertiaryContainer',
+  'error',
+  'onError',
+  'errorContainer',
+  'onErrorContainer',
+  'background',
+  'onBackground',
+  'surface',
+  'onSurface',
+  'surfaceVariant',
+  'onSurfaceVariant',
+  'outline',
+  'outlineVariant',
+  'shadow',
+  'scrim',
+  'inverseSurface',
+  'inverseOnSurface',
+  'inversePrimary',
+]
+export type ThemePaletteColor = Palette
 export type ThemeCallBack = (theme: Theme) => string
 export interface ParsedScheme {
   palette: Palette

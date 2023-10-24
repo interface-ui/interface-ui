@@ -9,7 +9,7 @@ const props = defineProps(badgeProps)
 const ns = useNamespace('badge')
 const $color = useColor(props.color)
 const $onColor = computed(() =>
-  themePaletteColor.includes(props.color as string)
+  (props.color as string) in themePaletteColor
     ? `var(--md-sys-color-on-${props.color})`
     : null
 )

@@ -13,9 +13,12 @@ const attrs = useAttrs()
 const ns = useNamespace('text-field')
 
 const cssClass = computed(() => {
-  const $color = useColor(props.error ? 'error' : props.color)
+  const $color = useColor(
+    props.error ? 'error' : props.color,
+    'var(--md-sys-color-primary)'
+  )
   return css`
-    --fn-text-field-color: ${$color.value ?? 'var(--md-sys-color-primary)'};
+    --fn-text-field-color: ${$color.value};
   `
 })
 const value = computed<string>({

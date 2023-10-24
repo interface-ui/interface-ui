@@ -4,11 +4,11 @@ import { computed } from 'vue'
 import type { ComponentStylingHook } from '../types'
 
 export const useLink: ComponentStylingHook<LlinkProps> = props => {
-  const $color = useColor(props.color as any)
+  const $color = useColor(props.color as any, 'var(--md-sys-color-primary)')
 
   return computed(() => {
     return css`
-      --fn-link-color: ${$color.value ?? 'var(--md-sys-color-primary)'};
+      --fn-link-color: ${$color.value};
       --fn-link__underline--status: ${props.underline === 'none'
         ? 'none'
         : props.underline === 'hover'
