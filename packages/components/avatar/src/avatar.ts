@@ -23,13 +23,13 @@ export const avatarProps = buildProps({
     type: [String, Function] as PropType<
       ThemeCallBack | ThemePaletteColor | string
     >,
-    default: 'var(--md-sys-color-on-surface)',
+    default: 'onSurface',
   },
   backgroundColor: {
     type: [String, Function] as PropType<
       ThemeCallBack | ThemePaletteColor | string
     >,
-    default: 'var(--fn-sys-color-disabled-level-1)',
+    default: 'surfaceVariant',
   },
 })
 

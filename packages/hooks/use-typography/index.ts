@@ -23,7 +23,6 @@ export const useTypography: ComponentStylingHook<TypographyProps> = props => {
     return css({
       [`&:is(${renderTag})`]: {
         margin: 0,
-        padding: 0,
         border: 'none',
         ...style,
       },

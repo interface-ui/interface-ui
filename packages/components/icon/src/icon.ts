@@ -1,7 +1,8 @@
 import type { ThemeCallBack, ThemePaletteColor } from '@fusion-ui-vue/theme'
+import { buildProps } from '@fusion-ui-vue/utils'
 import type { ExtractPropTypes, PropType } from 'vue'
 
-export const iconProps = {
+export const iconProps = buildProps({
   icon: {
     type: String,
     required: true,
@@ -15,6 +16,6 @@ export const iconProps = {
       ThemeCallBack | ThemePaletteColor | string
     >,
   },
-}
+})
 
-export type LIconProps = ExtractPropTypes<typeof iconProps>
+export type IconProps = ExtractPropTypes<typeof iconProps>

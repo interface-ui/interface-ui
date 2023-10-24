@@ -4,7 +4,7 @@ import { useColor } from '@fusion-ui-vue/theme'
 import { iconProps } from './icon'
 const { icon, color, size } = defineProps(iconProps)
 
-const $color = color ? useColor(color).value : color
+const $color = useColor(color as any)
 </script>
 
 <template>
