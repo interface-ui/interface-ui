@@ -4,6 +4,7 @@
   position: relative;
   box-sizing: border-box;
   min-width: 0px;
+  color: var(--fn-text-field-color);
 
   &__div--input-wrapper {
     height: var(--fn-text-field-height);
@@ -36,9 +37,6 @@
       & .fn-text-field__span--border {
         border-width: 2px;
         border-color: var(--fn-text-field-color);
-      }
-      & .fn-text-field__label {
-        color: var(--fn-text-field-color);
       }
     }
     &:focus-within,
@@ -156,9 +154,6 @@
       & .fn-text-field__span--border::after {
         transform: scaleX(1) translateX(0);
       }
-      & .fn-text-field__label {
-        color: var(--fn-text-field-color);
-      }
     }
   }
 
@@ -222,6 +217,11 @@
       transform 200ms cubic-bezier(0, 0, 0.2, 1) 0ms,
       padding 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
   }
+  &:focus-within {
+    & .fn-text-field__label {
+      color: var(--fn-text-field-color);
+    }
+  }
 
   & .fn-text-field__input {
     border: none;
@@ -240,5 +240,35 @@
 
   &--supporting-text {
     color: var(--fn-text-field-color);
+  }
+}
+
+.fn-text-field[disabled] {
+  color: var(--fn-sys-color-disabled-level-0);
+  &.fn-text-field--filled,
+  &.fn-text-field--standard {
+    > .fn-text-field__div--input-wrapper {
+      background-color: color-mix(
+        in srgb,
+        var(--md-sys-color-on-surface) 4%,
+        var(--fn-sys-color-switch) 0%
+      );
+    }
+  }
+  &.fn-text-field--outlined {
+    & .fn-text-field__span--border,
+    &:hover .fn-text-field__span--border {
+      border-color: var(--fn-sys-color-disabled-level-1);
+    }
+  }
+
+  > .fn-text-field__label {
+    color: inherit;
+  }
+  > .fn-text-field--supporting-text {
+    opacity: var(--md-sys-state-disabled-state-layer-opacity);
+  }
+  > .fn-text-field__div--input-wrapper {
+    color: inherit;
   }
 }
