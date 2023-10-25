@@ -46,7 +46,12 @@ const label = computed(() => props?.label ?? '')
       cssClass,
     ]"
   >
-    <typography v-if="props?.label" component="label" :class="[ns.e('label')]">
+    <typography
+      v-if="props?.label"
+      component="label"
+      :class="[ns.e('label')]"
+      no-warp
+    >
       {{ label }}
     </typography>
     <div :class="[ns.em('div', 'input-wrapper')]">
