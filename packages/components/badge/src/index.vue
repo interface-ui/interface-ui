@@ -32,14 +32,15 @@ const positionCss = computed(
       );
   `
 )
-const BadgeTypography = styled(Typography)`
-  background-color: ${$color.value ?? 'var(--md-sys-color-error)'};
-  color: ${$onColor.value};
-  height: ${props.variant === 'dot' ? '8px' : '20px'};
-  min-width: ${props.variant === 'dot' ? '8px' : '20px'};
-  border-radius: 10px;
-  padding: ${props.variant === 'dot' ? '0' : '6px'} !important;
-`
+const BadgeTypography = computed(
+  () => styled(Typography, { color: $onColor.value })`
+    background-color: ${$color.value ?? 'var(--md-sys-color-error)'};
+    height: ${props.variant === 'dot' ? '8px' : '20px'};
+    min-width: ${props.variant === 'dot' ? '8px' : '20px'};
+    border-radius: 10px;
+    padding: ${props.variant === 'dot' ? '0' : '6px'} !important;
+  `
+)
 
 const showTypography = computed(() => {
   const { content, variant } = props

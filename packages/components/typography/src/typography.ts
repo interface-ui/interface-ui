@@ -1,5 +1,9 @@
 import { buildProps } from '@fusion-ui-vue/utils'
-import type { TypographyWithoutSize } from '@fusion-ui-vue/theme'
+import type {
+  ThemeCallBack,
+  ThemePaletteColor,
+  TypographyWithoutSize,
+} from '@fusion-ui-vue/theme'
 import { typographyWithSize, typographyWithoutSize } from '@fusion-ui-vue/theme'
 import type { ExtractPropTypes, PropType } from 'vue'
 import { componentSizes } from '@fusion-ui-vue/constants'
@@ -36,6 +40,12 @@ export const typographyProps = buildProps({
   gutter: {
     type: Boolean,
     default: false,
+  },
+  color: {
+    type: [String, Function] as PropType<
+      ThemeCallBack | ThemePaletteColor | string
+    >,
+    default: 'onSurface',
   },
 })
 
