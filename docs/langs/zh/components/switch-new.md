@@ -4,8 +4,7 @@ lang: zh
 ---
 
 <script setup lang="ts">
-  import props from "../../../example/switch/description/en-props.ts";
-  import events from "../../../example/switch/description/en-events.ts";
+  import props from "../../../example/switch-new/description/zh-props.ts";
 </script>
 
 
@@ -42,3 +41,7 @@ lang: zh
 可以更改标签的位置
 
 <demo src="../../../example/switch-new/placement.vue"></demo>
+
+## 属性
+
+<table-block type="propsZh" :data="props"></table-block>

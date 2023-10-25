@@ -4,8 +4,7 @@ lang: en
 ---
 
 <script setup lang="ts">
-  import props from "../../../example/switch/description/en-props.ts";
-  import events from "../../../example/switch/description/en-events.ts";
+  import props from "../../../example/switch-new/description/en-props.ts";
 </script>
 
 
@@ -43,3 +42,7 @@ The `color` prop can change the color of the switch
 You can change the placement of the label
 
 <demo src="../../../example/switch-new/placement.vue"></demo>
+
+## 属性
+
+<table-block type="propsEn" :data="props"></table-block>
