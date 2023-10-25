@@ -275,3 +275,10 @@
     color: inherit;
   }
 }
+
+.fn-text-field:has(:required) {
+  & .fn-text-field__label::after {
+    content: ' *';
+    color: var(--md-sys-color-error);
+  }
+}
