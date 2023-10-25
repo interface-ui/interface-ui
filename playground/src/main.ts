@@ -15,6 +15,7 @@ import '@fusion-ui-vue/components/typography/src/index.less' // 开发调试的�
 import '@fusion-ui-vue/components/badge/src/index.less' // 开发调试的样式
 import '@fusion-ui-vue/components/input/src/index.less' // 开发调试的样式
 import '@fusion-ui-vue/components/text-field/src/index.less' // 开发调试的样式
+import '@fusion-ui-vue/components/icon-button/src/index.less' // 开发调试的样式
 
 // import RouterView from './RouterHello.vue'
 

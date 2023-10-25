@@ -5,6 +5,7 @@
   box-sizing: border-box;
   min-width: 0px;
   color: var(--fn-text-field-color);
+  width: fit-content;
 
   &__div--input-wrapper {
     height: var(--fn-text-field-height);
@@ -13,6 +14,20 @@
     flex-direction: row;
     border-radius: inherit;
     overflow: hidden;
+    align-items: center;
+    > .fn-text-field--start-adornment {
+      margin-left: 12px;
+    }
+    & > .fn-text-field--end-adornment {
+      margin-right: 12px;
+    }
+
+    > .fn-text-field--start-adornment,
+    > .fn-text-field--end-adornment {
+      display: inline-flex;
+      font-size: 16px;
+      color: var(--md-sys-color-on-surface-variant);
+    }
   }
 
   &--outlined {
@@ -28,9 +43,6 @@
       border-color: var(--md-sys-color-outline-hover);
     }
     &:focus-within {
-      & .fn-text-field__input::placeholder {
-        opacity: 1;
-      }
       & .fn-text-field__span--border {
         border-width: 2px;
         border-color: var(--fn-text-field-color);
@@ -38,6 +50,9 @@
     }
     &:focus-within,
     &.fn-text-field--content-within {
+      & .fn-text-field__input::placeholder {
+        opacity: 1;
+      }
       & .fn-text-field__label {
         transform: translate(8px, -50%) scale(0.75);
         background-color: var(--md-sys-color-surface);
@@ -83,6 +98,12 @@
         padding: 0 8px;
       }
     }
+    & .fn-text-field__div--input-wrapper {
+      > .fn-text-field--start-adornment {
+        padding-bottom: 8px;
+        padding-top: calc(var(--fn-text-field-height) - 32px);
+      }
+    }
   }
 
   &--standard {
@@ -105,6 +126,21 @@
     }
     & .fn-text-field--supporting-text {
       padding: 4px 0 0;
+    }
+    & .fn-text-field__div--input-wrapper {
+      > .fn-text-field--start-adornment {
+        margin-left: 0;
+        margin-right: 8px;
+      }
+      > .fn-text-field--end-adornment {
+        margin-right: 0;
+        margin-left: 8px;
+      }
+      > .fn-text-field--start-adornment,
+      > .fn-text-field--end-adornment {
+        padding-bottom: 8px;
+        padding-top: calc(var(--fn-text-field-height) - 32px);
+      }
     }
   }
 
@@ -145,14 +181,18 @@
       & .fn-text-field__span--border::after {
         transform: scaleX(1) translateX(0);
       }
-    }
-    &:hover .fn-text-field__span--border {
-      border-color: var(--md-sys-color-outline-hover);
-    }
-    &:focus-within {
       & .fn-text-field__span--border::after {
         transform: scaleX(1) translateX(0);
       }
+    }
+    &:focus-within,
+    &.fn-text-field--content-within {
+      & .fn-text-field__input::placeholder {
+        opacity: 1;
+      }
+    }
+    &:hover .fn-text-field__span--border {
+      border-color: var(--md-sys-color-outline-hover);
     }
   }
 
@@ -199,7 +239,7 @@
   }
   &--large {
     --fn-text-field-height: 56px;
-    --fn-text-fiedl-filled-standard-label-translateY: 25%;
+    --fn-text-fiedl-filled-standard-label-translateY: 10%;
   }
 
   &__label {

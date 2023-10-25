@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { isEmpty, useNamespace } from '@fusion-ui-vue/utils'
-import { computed, useAttrs } from 'vue'
+import { computed, useAttrs, useSlots } from 'vue'
 import { css, useColor } from '@fusion-ui-vue/theme'
 import { UPDATE_MODEL_EVENT } from '@fusion-ui-vue/constants'
 import Typography from '../../typography'
@@ -10,6 +10,7 @@ import { textFieldProps } from './text-field'
 const props = defineProps(textFieldProps)
 const emits = defineEmits<{ (e: 'update:modelValue', v: string): void }>()
 const attrs = useAttrs()
+const slots = useSlots()
 const ns = useNamespace('text-field')
 
 const cssClass = computed(() => {
@@ -33,6 +34,12 @@ const id: string = attrs?.id
   ? (attrs.id as string)
   : `text-field-${new Date().getTime()}`
 const label = computed(() => props?.label ?? '')
+
+const hasContent = computed<boolean>(() => {
+  const startAdornment = slots?.startAdornment?.()
+
+  return !isEmpty(props.modelValue) || !!startAdornment
+})
 </script>
 
 <template>
@@ -42,7 +49,7 @@ const label = computed(() => props?.label ?? '')
       ns.m(props.variant),
       ns.m(props.size),
       props.error ? ns.m('error') : '',
-      !isEmpty(props.modelValue) ? ns.m('content-within') : '',
+      hasContent ? ns.m('content-within') : '',
       cssClass,
     ]"
   >
@@ -50,17 +57,26 @@ const label = computed(() => props?.label ?? '')
       v-if="props?.label"
       component="label"
       :class="[ns.e('label')]"
+      color="onSurfaceVariant"
       no-warp
     >
       {{ label }}
     </typography>
     <div :class="[ns.em('div', 'input-wrapper')]">
+      <slot
+        name="startAdornment"
+        v-bind="{ class: [ns.m('start-adornment')], color: 'onSurfaceVariant' }"
+      />
       <fn-input
         :id="id"
         v-model="value"
         type="text"
         v-bind="$attrs"
         :class="[ns.e('input')]"
+      />
+      <slot
+        name="endAdornment"
+        v-bind="{ class: [ns.m('end-adornment')], color: 'onSurfaceVariant' }"
       />
       <span :class="[ns.em('span', 'border')]" />
     </div>
