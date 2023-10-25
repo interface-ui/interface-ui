@@ -2,7 +2,7 @@
 import { styled } from '@fusion-ui-vue/theme'
 import { ref } from 'vue'
 
-const contentText = ref<string>('Hellp World')
+const contentText = ref<string>('Hello World')
 const emptyText = ref<string>('')
 
 const Box = styled('div')`

@@ -6,18 +6,18 @@ const value = ref<string>('')
 
 <template>
   <div fscw gap-5 flex-nowrap>
-    <fn-text-field v-model="value" color="tertiary" label="Outlined" />
+    <fn-text-field v-model="value" color="tertiary" label="Tertiary" />
     <fn-text-field
       v-model="value"
       color="#2E7D32"
       variant="filled"
-      label="Filled"
+      label="Custom Color"
     />
     <fn-text-field
       v-model="value"
       :color="theme => theme.colors.cyan[400]"
       variant="standard"
-      label="Standard"
+      label="Theme Color"
     />
   </div>
 </template>

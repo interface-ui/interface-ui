@@ -39,6 +39,18 @@ lang: zh
 
 <demo src="../../../example/text-field/label.vue"></demo>
 
+## 图标
+
+你可以通过具名插槽在 `TextField ` 添加内部Icon，或者自定义带有外部Icon的组件。
+
+<demo src="../../../example/text-field/icon.vue"></demo>
+
+### 灵活定义
+
+与其他组件配合可以使自定义 `TextField` 更加灵活。
+
+<demo src="../../../example/text-field/icon-flexiable.vue"></demo>
+
 ## 颜色
 
 使用 `color` 属性更改focus状态下的颜色。

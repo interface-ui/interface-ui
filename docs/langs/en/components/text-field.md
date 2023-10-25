@@ -39,6 +39,18 @@ Set `label` to enable the internal label of `TextField`. Also, you can use an ex
 
 <demo src="../../../example/text-field/label.vue"></demo>
 
+## Icon
+
+You can add internal icon to the `TextField` via the name slots, or customize the external icon by yourself.
+
+<demo src="../../../example/text-field/icon.vue"></demo>
+
+### More flexiable
+
+It more flexiable use icon with other component
+
+<demo src="../../../example/text-field/icon-flexiable.vue"></demo>
+
 ## Color
 
 Use `color` prop to change the focus color.

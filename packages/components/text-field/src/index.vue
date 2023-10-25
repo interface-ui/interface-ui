@@ -84,6 +84,7 @@ const hasContent = computed<boolean>(() => {
       v-if="props?.supportingText"
       :class="[ns.m('supporting-text')]"
       variant="body.small"
+      color="var(--fn-text-field-color)"
       no-warp
     >
       {{ props.supportingText }}
