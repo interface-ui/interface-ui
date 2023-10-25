@@ -4,6 +4,7 @@ import { ref } from 'vue'
 
 const contentText = ref<string>('Hello World')
 const emptyText = ref<string>('')
+const variants = ['outlined', 'filled', 'standard'] as const
 
 const Box = styled('div')`
   display: flex;
@@ -22,17 +23,19 @@ const Box = styled('div')`
 
 <template>
   <box flex flex-col gap-10>
-    <div fscw gap-3>
+    <div v-for="variant in variants" :key="variant" fscw gap-3>
       <fn-text-field
         v-model="contentText"
         placeholder="Required"
         label="Required"
+        :variant="variant"
         required
       />
       <fn-text-field
         v-model="contentText"
         placeholder="Disabled"
         label="Disabled"
+        :variant="variant"
         disabled
       />
       <fn-text-field
@@ -40,11 +43,13 @@ const Box = styled('div')`
         placeholder="Password"
         label="Password"
         type="password"
+        :variant="variant"
       />
       <fn-text-field
         v-model="contentText"
         placeholder="Read Only"
         label="Read Only"
+        :variant="variant"
         readonly
       />
       <fn-text-field
@@ -52,100 +57,14 @@ const Box = styled('div')`
         placeholder="Number"
         label="Number"
         type="number"
+        :variant="variant"
       />
       <fn-text-field
         v-model="emptyText"
         placeholder="Search Field"
         label="Search Field"
         type="search"
-      />
-    </div>
-    <div fscw gap-3>
-      <fn-text-field
-        v-model="contentText"
-        variant="filled"
-        label="Required"
-        placeholder="Required"
-        required
-      />
-      <fn-text-field
-        v-model="contentText"
-        variant="filled"
-        label="Disabled"
-        placeholder="Disabled"
-        disabled
-      />
-      <fn-text-field
-        v-model="emptyText"
-        variant="filled"
-        label="Password"
-        type="password"
-        placeholder="Password"
-      />
-      <fn-text-field
-        v-model="contentText"
-        variant="filled"
-        label="Read Only"
-        placeholder="Read Only"
-        readonly
-      />
-      <fn-text-field
-        v-model="emptyText"
-        variant="filled"
-        label="Number"
-        type="number"
-        placeholder="Number"
-      />
-      <fn-text-field
-        v-model="emptyText"
-        variant="filled"
-        label="Search Field"
-        type="search"
-        placeholder="Search Field"
-      />
-    </div>
-    <div fscw gap-3>
-      <fn-text-field
-        v-model="contentText"
-        variant="standard"
-        label="Required"
-        placeholder="Required"
-        required
-      />
-      <fn-text-field
-        v-model="contentText"
-        variant="standard"
-        label="Disabled"
-        placeholder="Disabled"
-        disabled
-      />
-      <fn-text-field
-        v-model="emptyText"
-        variant="standard"
-        label="Password"
-        type="password"
-        placeholder="Password"
-      />
-      <fn-text-field
-        v-model="contentText"
-        variant="standard"
-        label="Read Only"
-        placeholder="Read Only"
-        readonly
-      />
-      <fn-text-field
-        v-model="emptyText"
-        variant="standard"
-        label="Number"
-        type="number"
-        placeholder="Number"
-      />
-      <fn-text-field
-        v-model="emptyText"
-        variant="standard"
-        label="Search Field"
-        type="search"
-        placeholder="Search Field"
+        :variant="variant"
       />
     </div>
   </box>

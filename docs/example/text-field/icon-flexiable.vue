@@ -30,7 +30,7 @@ const variants = ['outlined', 'filled', 'standard'] as const
         :variant="variant"
         supporting-text="Input the amount"
         label="Amount"
-        placeholder="Weight"
+        placeholder="Amount"
       >
         <template #endAdornment="adornment">
           <fn-typography v-bind="adornment"> $ </fn-typography>
