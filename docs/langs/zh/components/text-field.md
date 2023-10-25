@@ -21,7 +21,7 @@ lang: zh
 
 ## 表单属性
 
-支持标准表单属性，例如 `required`、`disabled`、`type` 等。
+支持标准表单属性，例如 `required`、`disabled`、`type`、`placeholder` 等。
 
 <demo src="../../../example/text-field/form-props.vue"></demo>
 
@@ -32,6 +32,24 @@ lang: zh
 > `Filled` 和 `Standard` 变体的 `label` 会自动隐藏，因为高度受限。
 
 <demo src="../../../example/text-field/size.vue"></demo>
+
+## 标签
+
+通过 `label` 属性可以启用 `TextField` 的内置标签。同时，你也可以通过 `FormLabel` 组件来使用外部标签。
+
+<demo src="../../../example/text-field/label.vue"></demo>
+
+## 图标
+
+你可以通过具名插槽在 `TextField ` 添加内部Icon，或者自定义带有外部Icon的组件。
+
+<demo src="../../../example/text-field/icon.vue"></demo>
+
+### 灵活定义
+
+与其他组件配合可以使自定义 `TextField` 更加灵活。
+
+<demo src="../../../example/text-field/icon-flexiable.vue"></demo>
 
 ## 颜色
 

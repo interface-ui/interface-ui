@@ -2,7 +2,7 @@
 import { styled } from '@fusion-ui-vue/theme'
 import { ref } from 'vue'
 
-const contentText = ref<string>('Hellp World')
+const contentText = ref<string>('Hello World')
 const emptyText = ref<string>('')
 
 const Box = styled('div')`
@@ -21,49 +21,41 @@ const Box = styled('div')`
 </script>
 
 <template>
-  <box flex flex-col gap-10 class="">
-    <div fscw gap-3>
-      <fn-text-field v-model="contentText" label="Required" required />
-      <fn-text-field v-model="contentText" label="Disabled" disabled />
-      <fn-text-field v-model="emptyText" label="Password" type="password" />
-      <fn-text-field v-model="contentText" label="Read Only" readonly />
-      <fn-text-field v-model="emptyText" label="Number" type="number" />
-      <fn-text-field v-model="emptyText" label="Search Field" type="search" />
-    </div>
+  <box flex flex-col gap-10>
     <div fscw gap-3>
       <fn-text-field
         v-model="contentText"
-        variant="filled"
+        placeholder="Required"
         label="Required"
         required
       />
       <fn-text-field
         v-model="contentText"
-        variant="filled"
+        placeholder="Disabled"
         label="Disabled"
         disabled
       />
       <fn-text-field
         v-model="emptyText"
-        variant="filled"
+        placeholder="Password"
         label="Password"
         type="password"
       />
       <fn-text-field
         v-model="contentText"
-        variant="filled"
+        placeholder="Read Only"
         label="Read Only"
         readonly
       />
       <fn-text-field
         v-model="emptyText"
-        variant="filled"
+        placeholder="Number"
         label="Number"
         type="number"
       />
       <fn-text-field
         v-model="emptyText"
-        variant="filled"
+        placeholder="Search Field"
         label="Search Field"
         type="search"
       />
@@ -71,14 +63,60 @@ const Box = styled('div')`
     <div fscw gap-3>
       <fn-text-field
         v-model="contentText"
+        variant="filled"
+        label="Required"
+        placeholder="Required"
+        required
+      />
+      <fn-text-field
+        v-model="contentText"
+        variant="filled"
+        label="Disabled"
+        placeholder="Disabled"
+        disabled
+      />
+      <fn-text-field
+        v-model="emptyText"
+        variant="filled"
+        label="Password"
+        type="password"
+        placeholder="Password"
+      />
+      <fn-text-field
+        v-model="contentText"
+        variant="filled"
+        label="Read Only"
+        placeholder="Read Only"
+        readonly
+      />
+      <fn-text-field
+        v-model="emptyText"
+        variant="filled"
+        label="Number"
+        type="number"
+        placeholder="Number"
+      />
+      <fn-text-field
+        v-model="emptyText"
+        variant="filled"
+        label="Search Field"
+        type="search"
+        placeholder="Search Field"
+      />
+    </div>
+    <div fscw gap-3>
+      <fn-text-field
+        v-model="contentText"
         variant="standard"
         label="Required"
+        placeholder="Required"
         required
       />
       <fn-text-field
         v-model="contentText"
         variant="standard"
         label="Disabled"
+        placeholder="Disabled"
         disabled
       />
       <fn-text-field
@@ -86,11 +124,13 @@ const Box = styled('div')`
         variant="standard"
         label="Password"
         type="password"
+        placeholder="Password"
       />
       <fn-text-field
         v-model="contentText"
         variant="standard"
         label="Read Only"
+        placeholder="Read Only"
         readonly
       />
       <fn-text-field
@@ -98,12 +138,14 @@ const Box = styled('div')`
         variant="standard"
         label="Number"
         type="number"
+        placeholder="Number"
       />
       <fn-text-field
         v-model="emptyText"
         variant="standard"
         label="Search Field"
         type="search"
+        placeholder="Search Field"
       />
     </div>
   </box>

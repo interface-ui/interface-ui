@@ -6,7 +6,7 @@ const content = ref<string>('')
 </script>
 
 <template>
-  <div class="content">
+  <!-- <div class="content">
     <fn-text-field
       size="small"
       v-model="content"
@@ -49,7 +49,7 @@ const content = ref<string>('')
       label="Standard"
       placeholder="placeholder"
     />
-  </div>
+  </div> -->
   <div class="content">
     <fn-text-field
       size="large"
@@ -58,17 +58,57 @@ const content = ref<string>('')
       label="Outlined"
       supporting-text="supporting text"
       placeholder="placeholder"
-      disabled
-    />
+    >
+      <template #startAdornment="adornment">
+        <fn-typography v-bind="adornment">kg</fn-typography>
+      </template>
+    </fn-text-field>
     <fn-text-field
-      v-model="content"
       size="large"
-      variant="filled"
-      label="Filled"
+      v-model="content"
+      variant="outlined"
+      label="Outlined"
       supporting-text="supporting text"
       placeholder="placeholder"
-      disabled
-    />
+    >
+      <template #startAdornment="adornment">
+        <fn-icon icon="mdi:account-circle" v-bind="adornment" />
+      </template>
+    </fn-text-field>
+    <fn-text-field
+      size="large"
+      v-model="content"
+      variant="outlined"
+      label="Password"
+      supporting-text="Input your password"
+      placeholder="Password"
+      type="password"
+    >
+      <template #endAdornment="adornment">
+        <fn-icon-button v-bind="adornment" #default="icon">
+          <fn-icon icon="mdi:eye" v-bind="icon" />
+        </fn-icon-button>
+      </template>
+    </fn-text-field>
+    <fn-text-field
+      size="large"
+      v-model="content"
+      variant="filled"
+      label="Password"
+      supporting-text="Input your password"
+      placeholder="Password"
+      type="password"
+    >
+      <template #startAdornment="adornment">
+        <fn-icon icon="mdi:account-circle" v-bind="adornment" />
+      </template>
+      <template #endAdornment="adornment">
+        <fn-icon-button v-bind="adornment" #default="icon">
+          <fn-icon icon="mdi:eye" v-bind="icon" />
+        </fn-icon-button>
+      </template>
+    </fn-text-field>
+
     <fn-text-field
       v-model="content"
       size="large"
@@ -76,8 +116,11 @@ const content = ref<string>('')
       label="Standard"
       supporting-text="supporting text"
       placeholder="placeholder"
-      disabled
-    />
+    >
+      <template #startAdornment="adornment">
+        <fn-icon icon="mdi:account-circle" v-bind="adornment" />
+      </template>
+    </fn-text-field>
   </div>
   {{ content }}
 </template>

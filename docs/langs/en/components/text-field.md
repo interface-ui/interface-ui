@@ -21,7 +21,7 @@ The component support three variants: outlined (default), filled and standard.
 
 ## Form props
 
-Standard form attributes are supported e.g. `required`, `disabled`, `type`, etc.
+Standard form attributes are supported e.g. `required`, `disabled`, `type`, `placeholder` etc.
 
 <demo src="../../../example/text-field/form-props.vue"></demo>
 
@@ -32,6 +32,24 @@ The are small, medium, and large (default) three size to choose.
 <demo src="../../../example/text-field/size.vue"></demo>
 
 > The `label` will be hide automatically for `Filled` and `Standard` variants due to the limit of height.
+
+## Label
+
+Set `label` to enable the internal label of `TextField`. Also, you can use an external label with the help of `FormLabel`
+
+<demo src="../../../example/text-field/label.vue"></demo>
+
+## Icon
+
+You can add internal icon to the `TextField` via the name slots, or customize the external icon by yourself.
+
+<demo src="../../../example/text-field/icon.vue"></demo>
+
+### More flexiable
+
+It more flexiable use icon with other component
+
+<demo src="../../../example/text-field/icon-flexiable.vue"></demo>
 
 ## Color
 
