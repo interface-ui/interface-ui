@@ -33,6 +33,12 @@ lang: zh
 
 <demo src="../../../example/text-field/size.vue"></demo>
 
+## 标签
+
+通过 `label` 属性可以启用 `TextField` 的内置标签。同时，你也可以通过 `FormLabel` 组件来使用外部标签。
+
+<demo src="../../../example/text-field/label.vue"></demo>
+
 ## 颜色
 
 使用 `color` 属性更改focus状态下的颜色。

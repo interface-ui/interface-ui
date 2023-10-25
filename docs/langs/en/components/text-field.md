@@ -33,6 +33,12 @@ The are small, medium, and large (default) three size to choose.
 
 > The `label` will be hide automatically for `Filled` and `Standard` variants due to the limit of height.
 
+## Label
+
+Set `label` to enable the internal label of `TextField`. Also, you can use an external label with the help of `FormLabel`
+
+<demo src="../../../example/text-field/label.vue"></demo>
+
 ## Color
 
 Use `color` prop to change the focus color.
