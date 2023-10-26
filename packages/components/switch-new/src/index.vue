@@ -8,7 +8,7 @@ import { SwitchPropsNew } from './switch'
 const props = defineProps(SwitchPropsNew)
 const emits = defineEmits<{ (e: 'update:modelValue', v: boolean): void }>()
 const instance = getCurrentInstance()
-const ns = useNamespace('switch')
+const ns = useNamespace('switch-new')
 const cssClass = useSwitchNew(props, ns)
 
 const checked = computed<boolean>({
@@ -44,7 +44,7 @@ const classListOverlay = computed(() => {
         v-model="checked"
         :class="[ns.e('input')]"
         type="checkbox"
-      />
+      >
       <fn-ripple :color="props.color" center />
     </div>
     <div :class="[ns.e('track')]" />
