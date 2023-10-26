@@ -2,7 +2,8 @@ import type { Scheme } from '@material/material-color-utilities'
 import colors from '../color'
 import states from '../state'
 import elevations from '../elevation'
-import { typography } from '../typography'
+import typography from '../typography'
+import zIndex from '../z-index'
 import type ThemeMode from '../mode'
 
 export type Palette = Omit<Record<keyof Scheme, string>, 'toJSON'>
@@ -57,6 +58,7 @@ export class Theme {
   states = states
   elevations = elevations
   typography = typography
+  zIndex = zIndex
 
   constructor(palette: Palette, mode: ThemeMode = 'light') {
     this.palette = palette
