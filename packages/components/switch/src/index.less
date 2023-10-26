@@ -2,7 +2,7 @@
   display: inline-flex;
   align-items: center;
   position: relative;
-  width: 52px;
+  aspect-ratio: 52 / 32;
   box-sizing: border-box;
   border-width: 2px;
   border-style: solid;
@@ -39,15 +39,18 @@
   }
 
   &__thumb {
-    --interval: 3px;
     z-index: 2;
-    left: calc(-1 * var(--interval) / 0.66 - 1px);
+    --interval: 3px;
+    --wrapper-height: calc(var(--fn-switch-height) - 2px - var(--interval) * 2);
+    left: calc(
+      -1 * (var(--fn-switch-height) - 2px - var(--wrapper-height) * 0.66) / 2
+    );
     transition: left 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
     &--icon-wrapper {
       display: inline-flex;
       justify-content: center;
       align-items: center;
-      height: calc(var(--fn-switch-height) - 2px - var(--interval) * 2);
+      height: var(--wrapper-height);
       aspect-ratio: 1;
       overflow: hidden;
       border-radius: 50%;
