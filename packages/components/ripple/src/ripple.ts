@@ -19,6 +19,10 @@ export const rippleProps = buildProps({
     type: Boolean,
     default: false,
   },
+  duration: {
+    type: Number,
+    default: 600,
+  },
 })
 
 export type RippleProps = ExtractPropTypes<typeof rippleProps>
