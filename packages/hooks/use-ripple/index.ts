@@ -9,6 +9,7 @@ export const useRipple: ComponentStylingHook<RippleProps> = (props, ns) => {
 
   return computed(() => {
     return css`
+      --fn-ripple--duration: ${props.duration}ms;
       & .${ns!.e('span')} {
         background-color: ${$color.value};
       }

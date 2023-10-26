@@ -15,7 +15,7 @@ import { rippleProps } from './ripple'
 
 const props = defineProps(rippleProps)
 const ripplesArr = reactive<RippleStyle[]>([])
-const duration = ref<number>(600)
+const duration = ref<number>(props.duration)
 const parent = getCurrentInstance()?.parent
 const ns = useNamespace('ripple')
 const cssClass = useRipple(props, ns)
@@ -25,7 +25,7 @@ let listener: EventListener | null = null
 const addRipple = (event: MouseEvent) => {
   const target = event.currentTarget as HTMLElement
   const rect = target.getBoundingClientRect()
-  const size = Math.max(target.clientWidth, target.clientHeight)
+  const size = Math.min(target.clientWidth, target.clientHeight)
   const radius = size / 2
 
   const x = props.center ? 0 : event.clientX - rect.left - radius

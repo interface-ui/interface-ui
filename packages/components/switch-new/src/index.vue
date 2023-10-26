@@ -45,7 +45,7 @@ const classListOverlay = computed(() => {
         :class="[ns.e('input')]"
         type="checkbox"
       >
-      <fn-ripple :color="props.color" center />
+      <fn-ripple :color="props.color" :duration="1200" center />
     </div>
     <div :class="[ns.e('track')]" />
   </span>
