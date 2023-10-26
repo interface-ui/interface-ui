@@ -1,4 +1,4 @@
-import{e as f,d as v,a3 as h,o as V,c as _,r as z,D as n,n as U,b as u,a8 as C,a9 as w,A as B,a4 as F,ai as D,x as i,C as k,a6 as E,f as m,B as p,z as y,t as N}from"./framework.ac0b83b1.js";import{u as S,_ as L,a as P,w as R}from"./plugin-vue_export-helper.b3269829.js";import{c as A,a as J,U as M,i as $}from"./size.bbb9954b.js";import{F as T,a as I}from"./index.afd9f948.js";const q=(c,e)=>{const s=S(c.color,"var(--md-sys-color-primary)");return f(()=>A`
+import{e as f,d as v,a3 as h,o as V,c as _,r as z,D as n,n as U,b as u,a8 as C,a9 as w,A as B,a4 as F,ai as D,x as i,C as k,a6 as E,f as m,B as p,z as y,t as N}from"./framework.ac0b83b1.js";import{u as S,_ as L,a as P,w as R}from"./plugin-vue_export-helper.b3269829.js";import{c as A,a as J,U as M,i as $}from"./size.bbb9954b.js";import{F as T,a as I}from"./index.e04d9013.js";const q=(c,e)=>{const s=S(c.color,"var(--md-sys-color-primary)");return f(()=>A`
       --fn-checkbox-color: ${s.value};
       & .${e.e("icon")} {
         color: ${s.value};
