@@ -1,112 +1,131 @@
-@import "../../../styles/base.less";
-[data-theme="light"] .fn-switch,
-.fn-switch[data-theme="light"],
 .fn-switch {
-  --fn-label-text-color: #606266;
-  font-size: 14px;
-}
-
-[data-theme="dark"] .fn-switch,
-.fn-switch[data-theme="dark"] {
-  --fn-label-text-color: #afbdd5;
-  font-size: 14px;
-}
-
-@buttonSize:15px;
-
-.fn-switch{
-  width: 50px;
-  height: 20px;
-  border-radius: 9999px;
-  transition: all .3s;
-  background-color: var(--switch-background);
-
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  width: 52px;
+  box-sizing: border-box;
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--md-sys-color-outline);
+  border-radius: var(--md-sys-shape-corner-extra-large-default-size);
   cursor: pointer;
-  >.fn-switch__inner{
-    width: calc(100% - 5px);
-    margin-left: 2.5px;
-    height: 100%;
-    border-radius: 99999px;
-    position: relative;
-    overflow: hidden;
+  height: var(--fn-switch-height);
+  // should use var(--md-sys-color-surface-container)
+  // but there are no this token
+  color: var(--md-sys-color-surface-variant);
+  background-color: transparent;
+  transition: background-color 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
 
-    >.fn-switch__core{
-      width: calc(100% - @buttonSize);
-      height: 100%;
-      font-size: 13px;
-      display: flex;
-      align-items: center;
+  @media (any-hover: hover) {
+    --fn-switch-hover-color: color-mix(
+      in srgb,
+      var(--fn-switch-color)
+        var(--md-sys-state-hover-state-layer-opacity-percentage),
+      var(--fn-sys-color-switch) var(--fn-zero-percentage)
+    );
+    --fn-switch-checked-hover-color: color-mix(
+      in srgb,
+      var(--fn-switch-color),
+      var(--fn-sys-color-switch-reverse)
+        var(--md-sys-state-hover-state-layer-opacity-percentage)
+    );
+    &:hover {
+      background-color: var(--fn-switch-hover-color);
+    }
+    &:not([disabled]):has(:checked):hover {
+      border-color: var(--fn-switch-checked-hover-color);
+      background-color: var(--fn-switch-checked-hover-color);
+    }
+  }
+
+  &__thumb {
+    --interval: 3px;
+    z-index: 2;
+    left: calc(-1 * var(--interval) / 0.66 - 1px);
+    transition: left 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+    &--icon-wrapper {
+      display: inline-flex;
       justify-content: center;
-      float: var(--switch-float);
-      color: #fff;
-     
-      span{
-        width: calc(100% - 0px);
-        height: 100%;
-        display: inline-block;
-        user-select: none;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        text-align: center;
-      }
-      .icon span{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+      align-items: center;
+      height: calc(var(--fn-switch-height) - 2px - var(--interval) * 2);
+      aspect-ratio: 1;
+      overflow: hidden;
+      border-radius: 50%;
+      background-color: var(--md-sys-color-outline);
+      transform: scale(0.66);
+      transition: transform 200ms cubic-bezier(0, 0, 0.2, 1) 0ms,
+        background-color 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
     }
+    i&--icon {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+    }
+    span&--icon {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      transform: scale(0);
+      color: var(--fn-switch-color);
+      transition: transform 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+    }
+  }
 
-    >.fn-switch__button{
-      width:@buttonSize;
-      height:@buttonSize;
-      background-color: #fff;
-      border-radius: 99999px;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
+  &:has(:checked) {
+    color: var(--fn-switch-color);
+    border-color: var(--fn-switch-color);
+    background-color: var(--fn-switch-color);
+    & .fn-switch__thumb {
+      left: calc(100% - var(--fn-switch-height) - var(--interval));
+      &--icon-wrapper {
+        background-color: var(--fn-switch-on-color);
+        transform: scale(1);
+      }
+      &--icon {
+        transform: scale(1);
+      }
     }
-    > .is-checked{
-      animation: switch-checked  .2s linear forwards;
-    }
-    > .no-checked{
-      animation: switch-no-checked  .2s linear forwards;
-    }
   }
-}
-@keyframes switch-checked {
-  0% {
-    width:@buttonSize;
-    left: var(--leftStart);
-  }
-  10% {
-    width: 40px;
-  }
-  90% {
-    width: 40px;
-  }
-  100% {
-    width:@buttonSize;
-    left: calc(var(--leftEnd) - @buttonSize) ;
-  }
-}
-@keyframes switch-no-checked {
-  0% {
-    width:@buttonSize;
-    right:  0;
-  }
-  10% {
-    width: 40px;
-  }
-  90% {
-    width: 40px;
-  }
-  100% {
-    width:@buttonSize;
-    right: calc(var(--leftStart) - @buttonSize);
+
+  &__input {
+    cursor: inherit;
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    margin: 0px;
+    padding: 0px;
+    z-index: 1;
   }
 }
 
-.switch-is-disabled{
-  cursor:not-allowed ;
+.fn-switch[disabled] {
+  cursor: default;
+  color: var(--md-sys-color-on-surface);
+  border-color: var(--fn-sys-color-disabled-level-1);
+
+  & .fn-switch__thumb {
+    &--icon-wrapper {
+      background-color: var(--fn-sys-color-disabled-level-0);
+    }
+    &--icon {
+      color: var(--fn-sys-color-disabled-level-0);
+    }
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: transparent;
+    }
+  }
+
+  &:has(:checked) {
+    background-color: var(--fn-sys-color-disabled-level-1);
+    & .fn-switch__thumb--icon-wrapper {
+      background-color: var(--md-sys-color-surface);
+    }
+  }
 }

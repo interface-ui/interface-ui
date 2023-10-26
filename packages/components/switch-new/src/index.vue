@@ -38,14 +38,15 @@ const classListOverlay = computed(() => {
 <template>
   <span :class="[...classList, cssClass]">
     <div :class="[ns.e(`overlay--${props.size}`), classListOverlay]">
-      <div :class="[ns.e(`dot--${props.size}`)]" />
+      <div :class="[ns.e(`dot--${props.size}`)]">
+        <fn-ripple :color="props.color" :duration="1200" center />
+      </div>
       <input
         v-bind="$attrs"
         v-model="checked"
         :class="[ns.e('input')]"
         type="checkbox"
-      >
-      <fn-ripple :color="props.color" :duration="1200" center />
+      />
     </div>
     <div :class="[ns.e('track')]" />
   </span>

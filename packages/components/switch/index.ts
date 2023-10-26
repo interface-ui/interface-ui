@@ -1,6 +1,8 @@
 import { withInstall } from '../install'
-import Swtich from './src/index.vue'
+import Switch from './src/index.vue'
 
-export const FnSwtich = withInstall(Swtich, 'FnSwtich')
-FnSwtich.name = 'FnSwtich'
-export default FnSwtich
+export const FnSwitch = withInstall(Switch, 'FnSwitch')
+FnSwitch.name = 'FnSwitch'
+export default FnSwitch
+export * from './src/switch'
+export type SwitchInstance = InstanceType<typeof Switch>

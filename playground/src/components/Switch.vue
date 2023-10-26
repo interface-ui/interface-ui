@@ -1,16 +1,23 @@
 <script lang="ts" setup>
-import { FnSwitchNew } from '@fusion-ui-vue/components'
+import '@fusion-ui-vue/components/switch/src/index.less' // 开发调试的样式
+import '@fusion-ui-vue/components/icon-button/src/index.less' // 开发调试的样式
+import { FnSwitch } from '@fusion-ui-vue/components'
 
 import { ref } from 'vue'
-const value1 = ref(false)
-const value2 = ref(true)
-const value3 = ref(false)
-const value4 = ref(true)
+const value = ref(false)
 </script>
 
 <template>
-  <fn-switch-new v-model="value1" />
-  <fn-switch-new v-model="value2" />
-  <fn-switch-new v-model="value3" disabled />
-  <fn-switch-new v-model="value4" disabled />
+  <div class="content">
+    <fn-switch size="small" v-model="value" />
+    <fn-switch size="small" v-model="value" disabled />
+  </div>
+  <div class="content">
+    <fn-switch color="tertiary" v-model="value" />
+    <fn-switch v-model="value" disabled />
+  </div>
+  <div class="content">
+    <fn-switch size="large" v-model="value" />
+    <fn-switch size="large" v-model="value" disabled />
+  </div>
 </template>

@@ -1,60 +1,35 @@
-import type { ExtractPropTypes } from 'vue'
-import { UPDATE_MODEL_EVENT } from '../../../constants/event'
+import type { ComponentSizes } from '@fusion-ui-vue/constants'
+import { componentSizes } from '@fusion-ui-vue/constants'
+import type { ThemeCallBack, ThemePaletteColor } from '@fusion-ui-vue/theme'
+import { buildProps } from '@fusion-ui-vue/utils'
+import type { ExtractPropTypes, PropType } from 'vue'
 
-export interface OptionType {
-  label: string
-  value: string | number
-  disabled?: boolean
+export const switchHeight: Record<ComponentSizes, number> = {
+  small: 28,
+  medium: 32,
+  large: 36,
 }
-export const switchProps = {
+
+export const switchProps = buildProps({
   modelValue: {
     type: Boolean,
     default: '',
   },
-  width: {
-    type: [String, Number],
-    default: '50px',
-  },
   color: {
-    type: String,
-    default: '',
+    type: [String, Function] as PropType<
+      ThemeCallBack | ThemePaletteColor | string
+    >,
+    default: 'primary',
   },
-  disabled: {
+  size: {
+    type: String as PropType<ComponentSizes>,
+    value: componentSizes,
+    default: 'medium',
+  },
+  enableRipple: {
     type: Boolean,
-    required: false,
+    default: true,
   },
-  checkedText: {
-    type: [String, Number],
-    default: '',
-  },
-  unCheckedText: {
-    type: [String, Number],
-    default: '',
-  },
-  checkedIcon: {
-    type: [String],
-    default: '',
-  },
-  unCheckedIcon: {
-    type: [String],
-    default: '',
-  },
-  checkedIconColor: {
-    type: String,
-    default: '',
-  },
-  unCheckedIconColor: {
-    type: String,
-    default: '',
-  },
-}
-const isBoolean = (data: any): boolean => typeof data === 'boolean'
+})
 
-export const switchEmits = {
-  [UPDATE_MODEL_EVENT]: (value: string) => isBoolean(value),
-  click: (evt: MouseEvent) => evt instanceof MouseEvent,
-  change: (value: string) => true,
-}
-
-/** SwitchProps 组件 props 类型 */
 export type SwitchProps = ExtractPropTypes<typeof switchProps>
