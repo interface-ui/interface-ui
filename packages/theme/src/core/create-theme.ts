@@ -63,7 +63,7 @@ const injectJSS = (
  * @returns {Ref<Theme> } Theme object
  */
 export const createTheme = (
-  source = '#3894ff',
+  source = '#6750A4',
   config: ThemeConfig = {}
 ): Ref<Theme> => {
   const { palette: $palette, mode } = config

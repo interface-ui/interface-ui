@@ -4,7 +4,6 @@ import {
   onMounted,
   onUnmounted,
   reactive,
-  ref,
   watchEffect,
 } from 'vue'
 import { addUnit, useNamespace } from '@fusion-ui-vue/utils'
@@ -15,7 +14,6 @@ import { rippleProps } from './ripple'
 
 const props = defineProps(rippleProps)
 const ripplesArr = reactive<RippleStyle[]>([])
-const duration = ref<number>(props.duration)
 const parent = getCurrentInstance()?.parent
 const ns = useNamespace('ripple')
 const cssClass = useRipple(props, ns)
@@ -25,11 +23,15 @@ let listener: EventListener | null = null
 const addRipple = (event: MouseEvent) => {
   const target = event.currentTarget as HTMLElement
   const rect = target.getBoundingClientRect()
-  const size = Math.min(target.clientWidth, target.clientHeight)
+  const size = Math.max(target.clientWidth, target.clientHeight)
   const radius = size / 2
 
-  const x = props.center ? 0 : event.clientX - rect.left - radius
-  const y = props.center ? 0 : event.clientY - rect.top - radius
+  const x = props.center
+    ? target.clientWidth / 2 - radius
+    : event.clientX - rect.left - radius
+  const y = props.center
+    ? target.clientHeight / 2 - radius
+    : event.clientY - rect.top - radius
   ripplesArr.push({ x, y, size })
 }
 
@@ -47,7 +49,7 @@ watchEffect(() => {
     bounce = setTimeout(() => {
       ripplesArr.length = 0
       clear()
-    }, duration.value * 4)
+    }, props.duration * 2)
   }
 })
 
