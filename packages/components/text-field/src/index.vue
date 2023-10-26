@@ -30,9 +30,14 @@ const value = computed<string>({
     emits(UPDATE_MODEL_EVENT, newVal)
   },
 })
+
+const generateId = () => {
+  return (Math.random() + 1).toString(36).substring(7)
+}
+
 const id: string = attrs?.id
   ? (attrs.id as string)
-  : `text-field-${new Date().getTime()}`
+  : `text-field-${generateId()}`
 const label = computed(() => props?.label ?? '')
 
 const hasContent = computed<boolean>(() => {
