@@ -1,65 +1,30 @@
 import type { PropTableItem } from '../../../.vitepress/components/table-block/src/table'
 const list: PropTableItem[] = [
   {
-    name: 'model-value / v-model',
-    remark: '绑定值',
+    name: 'modelValue',
+    remark: 'Binding value',
     type: 'Boolean',
-    default: 'false',
+    default: '---',
   },
   {
-    name: 'disabled',
-    remark: '禁用状态',
-    type: 'Boolean',
-    default: 'false',
+    name: 'size',
+    remark: '开关 size',
+    type: 'Enum',
+    optional: ['small', 'medium', 'large'],
+    default: 'medium',
   },
   {
     name: 'color',
-    remark: '激活状态颜色',
-    type: 'String',
-    default: '---',
+    remark: '自定义开关的颜色',
+    type: 'Enum',
+    optional: ['ThemePaletteColor', 'ThemeCallBack', 'String'],
+    default: 'primary',
   },
   {
-    name: 'icon',
-    remark: '图标按钮',
-    type: 'String',
-    default: '---',
-  },
-  {
-    name: 'checked-text',
-    remark: '激活状态文字',
-    type: 'String',
-    default: '---',
-  },
-  {
-    name: 'un-checked-text',
-    remark: '关闭状态文字',
-    type: 'String',
-    default: '---',
-  },
-
-  {
-    name: 'checked-icon',
-    remark: '激活图标',
-    type: 'String',
-    default: '---',
-  },
-  {
-    name: 'un-checked-icon',
-    remark: '关闭图标',
-    type: 'String',
-    default: '---',
-  },
-  {
-    name: 'checked-icon-color',
-    remark: '激活图标颜色',
-    type: 'String',
-    default: '---',
-  },
-  {
-    name: 'un-checked-icon-color',
-    remark: '关闭图标颜色',
-    type: 'String',
-    default: '---',
+    name: 'disabledIcon',
+    remark: '隐藏在选中状态下的图标',
+    type: 'Boolean',
+    default: 'false',
   },
 ]
 

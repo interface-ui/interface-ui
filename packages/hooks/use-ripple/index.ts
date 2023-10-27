@@ -5,7 +5,7 @@ import type { RippleProps } from '@fusion-ui-vue/components'
 import type { ComponentStylingHook } from '../types'
 
 export const useRipple: ComponentStylingHook<RippleProps> = (props, ns) => {
-  const $color = useColor(props.color, 'var(--md-sys-color-primary)')
+  const $color = useColor(props, 'color', 'var(--fn-sys-color-ripple)')
 
   return computed(() => {
     return css`

@@ -1,61 +1,65 @@
-<script setup lang="ts">
-import { nextTick } from 'vue'
-import { useSwitch, useSwitchInner } from '@fusion-ui-vue/hooks'
-import { UPDATE_MODEL_EVENT } from '../../../constants/event'
+<script lang="ts" setup>
+import { useNamespace } from '@fusion-ui-vue/utils'
+import { computed } from 'vue'
+import { UPDATE_MODEL_EVENT } from '@fusion-ui-vue/constants'
+import { css, themePaletteColor, useColor } from '@fusion-ui-vue/theme'
+import FnIconButton from '../../icon-button'
 import FnIcon from '../../icon'
-import { switchEmits, switchProps } from '../src/switch'
+import { switchHeight, switchProps } from './switch'
 
 const props = defineProps(switchProps)
-const emit = defineEmits(switchEmits)
-const { styleList, classList } = useSwitchInner(props)
-const { fnClassList } = useSwitch(props)
-const handleChange = (event: MouseEvent) => {
-  if (props.disabled)
-    return
-  emit(UPDATE_MODEL_EVENT, !props.modelValue as any)
-  nextTick(() => {
-    emit('change', props.modelValue as any)
-  })
-}
+const emits = defineEmits<{ (e: 'update:modelValue', v: boolean): void }>()
+const ns = useNamespace('switch')
+const $color = useColor(props, 'color', 'var(--md-sys-color-primary)')
+const $onColor = computed(() =>
+  themePaletteColor.includes(props.color as any)
+    ? `var(--md-sys-color-on-${props.color})`
+    : 'var(--md-sys-color-on-primary)'
+)
+
+const checked = computed<boolean>({
+  get() {
+    return props.modelValue as any
+  },
+  set(newVal) {
+    emits(UPDATE_MODEL_EVENT, newVal)
+  },
+})
+
+const cssClass = computed(
+  () => css`
+    --fn-switch-color: ${$color.value};
+    --fn-switch-on-color: ${$onColor.value};
+    --fn-switch-height: ${switchHeight[props.size]}px;
+  `
+)
 </script>
 
 <template>
-  <div :class="fnClassList" :style="styleList" @click="handleChange">
-    <div class="fn-switch__inner">
-      <!-- text -->
-      <div
-        v-show="props.checkedText || props.unCheckedText"
-        class="fn-switch__core"
-      >
-        <span v-show="props.checkedText && props.modelValue">
-          {{ props.checkedText }}
-        </span>
-        <span v-show="props.unCheckedText && !props.modelValue">
-          {{ props.unCheckedText }}
-        </span>
-      </div>
-
-      <!-- icon -->
-      <div
-        v-show="props.checkedIcon || props.unCheckedIcon"
-        class="fn-switch__core"
-      >
-        <span v-show="props.modelValue" class="icon">
+  <span :class="[ns.b(), cssClass]">
+    <fn-icon-button
+      :class="[ns.e('thumb')]"
+      :color="props.color"
+      :disabled="$attrs.disabled"
+      @click="checked = !checked"
+    >
+      <span :class="[ns.em('thumb', 'icon-wrapper')]">
+        <slot v-bind="{ class: [ns.em('thumb', 'icon')], size: '16' }">
           <fn-icon
-            :icon="props.checkedIcon"
-            :color="props.checkedIconColor"
-            size="13"
+            v-if="!props.disabledIcon"
+            :class="[ns.em('thumb', 'icon')]"
+            icon="mdi:check"
+            size="16"
           />
-        </span>
-        <span v-show="!props.modelValue" class="icon">
-          <fn-icon
-            :icon="props.unCheckedIcon"
-            :color="props.unCheckedIconColor"
-            size="13"
-          />
-        </span>
-      </div>
-      <div class="fn-switch__button" :class="classList" />
-    </div>
-  </div>
+        </slot>
+      </span>
+    </fn-icon-button>
+    <!-- eslint-disable vue/html-self-closing -->
+    <input
+      v-bind="$attrs"
+      v-model="checked"
+      :class="[ns.e('input')]"
+      type="checkbox"
+    />
+  </span>
 </template>

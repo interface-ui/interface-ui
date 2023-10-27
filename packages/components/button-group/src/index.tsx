@@ -8,7 +8,7 @@ export default defineComponent({
   setup(props, { slots, attrs }) {
     const ns = useNamespace('button-group')
     const { orientation, ...buttonProps } = toRefs(props)
-    const $color = useColor(props.color)
+    const $color = useColor(props, 'color')
     const cssClass = computed(
       () => css`
         --fn-button-group-color: ${$color.value ??

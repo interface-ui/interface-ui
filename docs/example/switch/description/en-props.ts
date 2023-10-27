@@ -1,54 +1,30 @@
 import type { PropTableItem } from '../../../.vitepress/components/table-block/src/table'
 const list: PropTableItem[] = [
-
+  {
+    name: 'modelValue',
+    remark: 'Binding value',
+    type: 'Boolean',
+    default: '---',
+  },
+  {
+    name: 'size',
+    remark: 'Switch size',
+    type: 'Enum',
+    optional: ['small', 'medium', 'large'],
+    default: 'medium',
+  },
   {
     name: 'color',
-    remark: 'Activation status color',
-    type: 'String',
-    default: '---',
+    remark: 'Customize the color of switches',
+    type: 'Enum',
+    optional: ['ThemePaletteColor', 'ThemeCallBack', 'String'],
+    default: 'primary',
   },
   {
-    name: 'icon',
-    remark: 'Icon',
-    type: 'String',
-    default: '---',
-  },
-  {
-    name: 'checked-text',
-    remark: 'Activate the status text',
-    type: 'String',
-    default: '---',
-  },
-  {
-    name: 'un-checked-text',
-    remark: 'Close the status text',
-    type: 'String',
-    default: '---',
-  },
-
-  {
-    name: 'checked-icon',
-    remark: 'Activate the icon',
-    type: 'String',
-    default: '---',
-  },
-  {
-    name: 'un-checked-icon',
-    remark: 'Close the icon',
-    type: 'String',
-    default: '---',
-  },
-  {
-    name: 'checked-icon-color',
-    remark: 'Activate the icon color',
-    type: 'String',
-    default: '---',
-  },
-  {
-    name: 'un-checked-icon-color',
-    remark: 'Turn off the icon color',
-    type: 'String',
-    default: '---',
+    name: 'disabledIcon',
+    remark: 'Hide the icon in checked state',
+    type: 'Boolean',
+    default: 'false',
   },
 ]
 

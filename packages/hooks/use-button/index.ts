@@ -8,7 +8,7 @@ import { computed } from 'vue'
 import type { ComponentStylingHook } from '../types'
 
 export const useButton: ComponentStylingHook<ButtonProps> = (props, ns) => {
-  const $color = useColor(props.color, 'var(--md-sys-color-primary)')
+  const $color = useColor(props, 'color', 'var(--md-sys-color-primary)')
   const $onColor = computed(() =>
     themePaletteColor.includes(props.color as any)
       ? `var(--md-sys-color-on-${props.color})`
@@ -43,7 +43,7 @@ export const useButton: ComponentStylingHook<ButtonProps> = (props, ns) => {
 }
 
 export const useIconButton: ComponentStylingHook<IconButtonProps> = props => {
-  const $color = useColor(props.color, 'var(--md-sys-color-primary)')
+  const $color = useColor(props, 'color', 'var(--md-sys-color-primary)')
 
   return computed(() => {
     return css`

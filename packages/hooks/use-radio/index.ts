@@ -4,7 +4,7 @@ import { computed } from 'vue'
 import type { ComponentStylingHook } from '../types'
 
 export const useRadio: ComponentStylingHook<RadioProps> = (props, ns) => {
-  const $color = useColor(props.color, 'var(--md-sys-color-primary)')
+  const $color = useColor(props, 'color', 'var(--md-sys-color-primary)')
 
   return computed(() => {
     return css`

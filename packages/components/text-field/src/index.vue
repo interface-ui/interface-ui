@@ -14,10 +14,9 @@ const slots = useSlots()
 const ns = useNamespace('text-field')
 
 const cssClass = computed(() => {
-  const $color = useColor(
-    props.error ? 'error' : props.color,
-    'var(--md-sys-color-primary)'
-  )
+  const $color = props.error
+    ? useColor(props, null, 'var(--md-sys-color-error)')
+    : useColor(props, 'color', 'var(--md-sys-color-primary)')
   return css`
     --fn-text-field-color: ${$color.value};
   `
@@ -30,9 +29,14 @@ const value = computed<string>({
     emits(UPDATE_MODEL_EVENT, newVal)
   },
 })
+
+const generateId = () => {
+  return (Math.random() + 1).toString(36).substring(7)
+}
+
 const id: string = attrs?.id
   ? (attrs.id as string)
-  : `text-field-${new Date().getTime()}`
+  : `text-field-${generateId()}`
 const label = computed(() => props?.label ?? '')
 
 const hasContent = computed<boolean>(() => {

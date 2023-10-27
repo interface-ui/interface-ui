@@ -72,8 +72,12 @@
       border-top-right-radius: var(
         --md-sys-shape-corner-extra-small-top-top-right
       );
-      // should use var(--md-sys-color-surface-container)
-      // but there are no this token
+      /**
+        UPDATE NEEDED
+
+        should use var(--md-sys-color-surface-container-heightest)
+        @link https://m3.material.io/components/text-fields/specs
+      */
       background-color: var(--md-sys-color-surface-variant);
       &:hover {
         background-color: color-mix(
@@ -139,7 +143,7 @@
       > .fn-text-field--start-adornment,
       > .fn-text-field--end-adornment {
         padding-bottom: 8px;
-        padding-top: calc(var(--fn-text-field-height) - 32px);
+        margin-top: calc(var(--fn-text-field-height) - 32px);
       }
     }
   }
