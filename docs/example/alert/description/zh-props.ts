@@ -2,20 +2,20 @@ import type { PropTableItem } from '../../../.vitepress/components/table-block/s
 const list: PropTableItem[] = [
   {
     name: 'severity',
-    remark: 'Alert Severe level',
+    remark: 'Alert 严重等级',
     type: 'Enum',
     optional: ['error', 'warning', 'info', 'success'],
     default: '---',
   },
   {
     name: 'fn-typography',
-    remark: 'Provide title style',
+    remark: '提供标题样式',
     type: '--',
     default: '--',
   },
   {
     name: 'icon',
-    remark: 'Provide the icon, icon is false to close the icon',
+    remark: '提供图标，icon 为 false 关闭图标',
     type: 'String',
     default: '---',
   },
@@ -26,6 +26,7 @@ const list: PropTableItem[] = [
     type: 'String',
     default: '---',
   },
+
 ]
 
 export default list
