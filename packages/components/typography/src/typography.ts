@@ -1,7 +1,6 @@
 import { buildProps } from '@fusion-ui-vue/utils'
 import type {
-  ThemeCallBack,
-  ThemePaletteColor,
+  AcceptableColor,
   TypographyWithoutSize,
 } from '@fusion-ui-vue/theme'
 import { typographyWithSize, typographyWithoutSize } from '@fusion-ui-vue/theme'
@@ -42,9 +41,7 @@ export const typographyProps = buildProps({
     default: false,
   },
   color: {
-    type: [String, Function] as PropType<
-      ThemeCallBack | ThemePaletteColor | string
-    >,
+    type: [String, Function] as PropType<AcceptableColor>,
     default: 'onSurface',
   },
 })

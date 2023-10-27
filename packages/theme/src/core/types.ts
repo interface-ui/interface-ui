@@ -71,23 +71,24 @@ export const themePaletteColor: (keyof (Palette & AdditionalPalette))[] = [
   'infoContainer',
   'onInfoContainer',
 ]
-export type ThemePaletteColor = Palette
+export type ThemePaletteColor = Palette & AdditionalPalette
 export type ThemeCallBack = (theme: Theme) => string
 export interface ParsedScheme {
   palette: Palette | AdditionalPalette
   styles: Record<string, string>
 }
+export type AcceptableColor = keyof ThemePaletteColor | string | ThemeCallBack
 
 export class Theme {
   mode: ThemeMode
-  palette: Palette | AdditionalPalette
+  palette: ThemePaletteColor
   colors = colors
   states = states
   elevations = elevations
   typography = typography
   zIndex = zIndex
 
-  constructor(palette: Palette | AdditionalPalette, mode: ThemeMode = 'light') {
+  constructor(palette: Palette & AdditionalPalette, mode: ThemeMode = 'light') {
     this.palette = palette
     this.mode = mode
   }

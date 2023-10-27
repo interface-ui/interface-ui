@@ -1,4 +1,4 @@
-import type { ThemeCallBack, ThemePaletteColor } from '@fusion-ui-vue/theme'
+import type { AcceptableColor } from '@fusion-ui-vue/theme'
 import { type ComponentSizes, componentSizes } from '@fusion-ui-vue/constants'
 import type { ExtractPropTypes, PropType } from 'vue'
 import { buildProps } from '@fusion-ui-vue/utils'
@@ -9,9 +9,7 @@ export const SwitchPropsNew = buildProps({
     required: true,
   },
   color: {
-    type: [String, Function] as PropType<
-      ThemeCallBack | ThemePaletteColor | string
-    >,
+    type: [String, Function] as PropType<AcceptableColor>,
     default: 'primary',
   },
   size: {

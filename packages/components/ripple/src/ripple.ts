@@ -1,5 +1,5 @@
 import type { ExtractPropTypes, PropType } from 'vue'
-import type { ThemeCallBack, ThemePaletteColor } from '@fusion-ui-vue/theme'
+import type { AcceptableColor } from '@fusion-ui-vue/theme'
 import { buildProps } from '@fusion-ui-vue/utils'
 
 export interface RippleStyle {
@@ -10,9 +10,7 @@ export interface RippleStyle {
 
 export const rippleProps = buildProps({
   color: {
-    type: [String, Function] as PropType<
-      ThemeCallBack | ThemePaletteColor | string
-    >,
+    type: [String, Function] as PropType<AcceptableColor>,
     default: 'var(--fn-sys-color-ripple)',
   },
   center: {

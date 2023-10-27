@@ -6,7 +6,7 @@ import { toRaw } from 'vue'
 // import AvatarGroup from './components/AvatarGroup.vue'
 // import ButtonGroup from './components/ButtonGroup.vue'
 // import SwitchNew from './components/Switch.vue'
-import TextField from './components/TextField.vue'
+// import TextField from './components/TextField.vue'
 
 const theme = createTheme()
 
@@ -24,7 +24,7 @@ const changTheme = () => {
 <template>
   <!-- ------------------- Toggle between the light/dark mode ------------------- -->
   <header>
-    <fn-button @click="changTheme">
+    <fn-button @click="changTheme" color="#2E7D32">
       <!-- @vue-skip -->
       {{ theme.mode }}
     </fn-button>
@@ -33,5 +33,5 @@ const changTheme = () => {
   <!-- <avatar-group /> -->
   <!-- <button-group /> -->
   <!-- <switch-new /> -->
-  <TextField />
+  <!-- <TextField /> -->
 </template>

@@ -1,4 +1,9 @@
-import { css, themePaletteColor, useColor } from '@fusion-ui-vue/theme'
+import {
+  css,
+  themePaletteColor,
+  useColor,
+  useRgbColor,
+} from '@fusion-ui-vue/theme'
 import {
   type ButtonProps,
   type IconButtonProps,
@@ -9,6 +14,7 @@ import type { ComponentStylingHook } from '../types'
 
 export const useButton: ComponentStylingHook<ButtonProps> = (props, ns) => {
   const $color = useColor(props, 'color', 'var(--md-sys-color-primary)')
+  const $colorRgb = useRgbColor(props, 'color', 'var(--md-sys-color-primary)')
   const $onColor = computed(() =>
     themePaletteColor.includes(props.color as any)
       ? `var(--md-sys-color-on-${props.color})`
@@ -18,6 +24,7 @@ export const useButton: ComponentStylingHook<ButtonProps> = (props, ns) => {
   return computed(() => {
     return css`
       --fn-button-color: ${$color.value};
+      --fn-button-color-rgb: ${$colorRgb.value};
       --fn-button-on-color: ${
         $onColor.value ?? 'var(--md-sys-color-on-primary)'
       };
@@ -44,10 +51,16 @@ export const useButton: ComponentStylingHook<ButtonProps> = (props, ns) => {
 
 export const useIconButton: ComponentStylingHook<IconButtonProps> = props => {
   const $color = useColor(props, 'color', 'var(--md-sys-color-primary)')
+  const $colorRgb = useRgbColor(
+    props,
+    'color',
+    'var(--md-sys-color-primary-rgb)'
+  )
 
   return computed(() => {
     return css`
       --fn-icon-button-color: ${$color.value};
+      --fn-icon-button-color-rgb: ${$colorRgb.value};
     `
   })
 }
