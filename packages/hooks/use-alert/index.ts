@@ -1,66 +1,36 @@
-import type { CSSProperties, ComputedRef } from 'vue'
-import { computed, getCurrentInstance, onMounted, ref } from 'vue'
+import { css, themePaletteColor, useColor } from '@fusion-ui-vue/theme'
+
+import { computed } from 'vue'
 import type { AlertProps } from '../../components/alert/src/alert'
+import type { ComponentStylingHook } from '../types'
 
-/** class 类名集合类型 */
-export type ClassList = (string | Record<string, unknown>)[]
+export const useAlert: ComponentStylingHook<AlertProps> = (props, ns) => {
+  const $color = props.color ? useColor(props.color) : useColor(props.severity, 'var(--md-sys-color-primary)')
+  const $onColor = computed(() =>
+    themePaletteColor.includes(props.severity as any)
+      ? `var(--md-sys-color-on-${props.severity})`
+      : null
+  )
+  const $background = computed(() =>
+    themePaletteColor.includes(props.severity as any)
+      ? `var(--md-sys-color-${props.severity}-container)`
+      : null
+  )
 
-/**
- * UseAlertReturn 返回值类型接口
- *
- * @param { Object } classList 类名列表
- * @param { Object } styleList 样式列表
- */
-export interface UseAlertReturn {
-  classList: ComputedRef<ClassList>
-  styleList: ComputedRef<CSSProperties>
-}
+  const $backgroundFilled = computed(() =>
+    themePaletteColor.includes(props.severity as any)
+      ? `var(--md-sys-color-${props.severity}-container-filled)`
+      : null
+  )
 
-/**
- * 返回Alert组件的类名列表
- * @param prop
- * @returns
- */
-export const UseAlert = (prop: AlertProps): UseAlertReturn => {
-  onMounted(() => {
-    boxElHeight.value = (getCurrentInstance()?.refs.box as HTMLElement)?.clientHeight
+  return computed(() => {
+    return css`
+      --fn-alert-background: ${$background.value};
+      --fn-alert-background-filled: ${$backgroundFilled.value};
+      --fn-alert-color: ${$color.value};
+      --fn-alert-on-color: ${
+        $onColor.value ?? 'var(--md-sys-color-on-primary)'
+      };
+    `
   })
-  /** 类名列表 */
-  const classList = computed((): ClassList => {
-    return [
-      'fn-alert',
-      `${prop.state}-container`
-    ]
-  })
-
-  const boxElHeight = ref(0)
-
-  /** 样式列表 */
-  const styleList = computed((): CSSProperties => {
-    const style: CSSProperties = {}
-
-    // const slots = getCurrentInstance()!.slots
-    // if (prop.closable || slots.close || slots.textArea)
-    //   style['--bar-width'] = 'calc(100% - 20px)'
-    // else
-    //   style['--bar-width'] = '100%'
-    if (prop.duration)
-      style['--bar-duration'] = prop.duration ? `${prop.duration}s` : '2s'
-
-    if (prop.scrollable) {
-      style['--scroll-start'] = `-${boxElHeight.value}px`
-      style['--scroll-end'] = `${boxElHeight.value}px`
-      if (prop.direction === 'left')
-        style['--direction'] = 'barScrollToLeft'
-      else
-        style['--direction'] = 'barScrollToTop'
-    }
-
-    return style
-  })
-
-  return {
-    styleList,
-    classList,
-  }
 }

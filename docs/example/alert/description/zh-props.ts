@@ -1,42 +1,30 @@
 import type { PropTableItem } from '../../../.vitepress/components/table-block/src/table'
 const list: PropTableItem[] = [
   {
-    name: 'title',
-    remark: 'Alert 标题',
-    type: 'String',
+    name: 'severity',
+    remark: 'Alert Severe level',
+    type: 'Enum',
+    optional: ['error', 'warning', 'info', 'success'],
     default: '---',
   },
   {
-    name: 'type',
-    remark: 'Alert 类型',
-    type: 'Enum',
-    optional: ['info', 'success', 'error', 'warning'],
-    default: 'info',
+    name: 'fn-typography',
+    remark: 'Provide title style',
+    type: '--',
+    default: '--',
   },
   {
-    name: 'closable',
-    remark: '是否可以关闭',
-    type: 'Boolean',
-    default: 'false',
+    name: 'icon',
+    remark: 'Provide the icon, icon is false to close the icon',
+    type: 'String',
+    default: '---',
   },
+
   {
-    name: 'center',
-    remark: '文字是否居中',
-    type: 'Boolean',
-    default: 'false',
-  },
-  {
-    name: 'scrollable',
-    remark: '开启滚动',
-    type: 'Boolean',
-    default: 'false',
-  },
-  {
-    name: 'direction',
-    remark: '滚动方向',
-    type: 'Enum',
-    optional: ['left', 'top'],
-    default: 'left',
+    name: 'variant',
+    remark: '提供 outlined 与 filled 样式',
+    type: 'String',
+    default: '---',
   },
 ]
 

@@ -1,132 +1,45 @@
-@import "../../../styles/base.less";
-[data-theme="light"] .fn-alert,
-.fn-alert[data-theme="light"],
-.fn-alert {
-  font-size: 14px;
-}
-
-[data-theme="dark"] .fn-alert,
-.fn-alert[data-theme="dark"] {
-  font-size: 14px;
-}
-
 .fn-alert{
   position: relative;
   border-radius: 5px;
-  // height: 48px;
   line-height: 1.43;
   padding: 6px 16px;
-  
-  &-info{
-    background-color: #85888e;
+  background-color: var(--fn-alert-background);
+  color: var(--fn-alert-on-color);
+  display:flex;
+  font-size: 14px;
+  &--outlined{
+    background-color: transparent;
+    border: 1px solid var(--fn-alert-color);
+    color: var(--fn-alert-color);
   }
-  &-success{
-    background-color: var(--fn-green-500);
-  }
-  &-warning{
-    background-color:#e6a23c;
-  }
-  &-danger{
-    background-color: #f56c6c;
+  &--filled{
+    background-color: var(--fn-alert-background-filled);
+    color: #fff;
   }
 
-  &-content{
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
+  &--icon{
+    color: var(--fn-alert-on-color);
+    margin-right: 12px;
+    padding: 7px 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 22px;
+    opacity: 0.9;
+  }
+  &--message{
+    padding: 8px 0;
+    min-width: 0;
+    overflow: auto;
+    >.fn-typography--gutter{
+      margin-top: 0 !important;
+    }
+  }
+  &--action{
     display: flex;
     align-items: center;
-    > .fixed-tip{
-      margin-right: 5px;
-      font-weight: 700;
-      color: #fff;
-    }
-    > .scroll-area{
-      width: 100%;
-      height: 100%;
-      padding: 4px;
-      overflow: hidden;
-      > .bar{
-        height: 100%;
-        color:#fff;
-        >.box{
-          height: 100%;
-          display: grid;
-          align-items: center;
-          font-size: 14px;
-          .title{
-          }
-          .description{
-          }
-        }
-      }
-    }
-
-    > .close{
-      cursor: pointer;
-    }
-    
-    > .slots{
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-    }
-
-    .bar-scroll{
-      position: relative;
-      animation: var(--direction) var(--bar-duration) linear infinite;
-      &:hover{
-        animation-play-state: paused;
-      }
-    }
-  }
-}
-
-
-@keyframes barScrollToTop {
-  0%{
-    bottom: var(--scroll-start);
-  }
-  20%{
-    bottom: 0;
-  }
-  80%{
-    bottom: 0;
-  }
-  100%{
-    bottom: var(--scroll-end);
-  }
-}
-
-@keyframes barScrollToLeft {
-  0%{
-    left: 101%;
-  }
-  100%{
-    left: -101%;
-  }
-}
-
-
-.alert-fade-enter-active{
-  animation: alert-fade-in .3s;
-}
-.alert-fade-leave-active {
-  animation: alert-fade-out .3s;
-}
-@keyframes alert-fade-in{
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes alert-fade-out{
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
+    margin-left: auto;
+    margin-right: -8px;
   }
 }
