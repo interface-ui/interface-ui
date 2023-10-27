@@ -4,9 +4,7 @@
   position: relative;
   aspect-ratio: 52 / 32;
   box-sizing: border-box;
-  border-width: 2px;
-  border-style: solid;
-  border-color: var(--md-sys-color-outline);
+  border: 2px solid var(--md-sys-color-outline);
   border-radius: var(--md-sys-shape-corner-extra-large-default-size);
   cursor: pointer;
   height: var(--fn-switch-height);
@@ -41,9 +39,9 @@
   &__thumb {
     z-index: 2;
     --interval: 3px;
-    --wrapper-height: calc(var(--fn-switch-height) - 2px - var(--interval) * 2);
+    --wrapper-height: calc(var(--fn-switch-height) - 4px - var(--interval) * 2);
     left: calc(
-      -1 * (var(--fn-switch-height) - 2px - var(--wrapper-height) * 0.66) / 2
+      -1 * (var(--fn-switch-height) - 4px - var(--wrapper-height) * 0.66) / 2
     );
     transition: left 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
     &--icon-wrapper {
@@ -80,7 +78,7 @@
     border-color: var(--fn-switch-color);
     background-color: var(--fn-switch-color);
     & .fn-switch__thumb {
-      left: calc(100% - var(--fn-switch-height) - var(--interval));
+      left: calc(100% - var(--fn-switch-height) - var(--interval) + 2px);
       &--icon-wrapper {
         background-color: var(--fn-switch-on-color);
         transform: scale(1);

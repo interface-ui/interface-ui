@@ -44,7 +44,12 @@ const cssClass = computed(
       @click="checked = !checked"
     >
       <span :class="[ns.em('thumb', 'icon-wrapper')]">
-        <fn-icon :class="[ns.em('thumb', 'icon')]" icon="mdi:check" size="16" />
+        <fn-icon
+          v-if="props.enableIcon"
+          :class="[ns.em('thumb', 'icon')]"
+          icon="mdi:check"
+          size="16"
+        />
       </span>
     </fn-icon-button>
     <!-- eslint-disable vue/html-self-closing -->
