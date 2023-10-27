@@ -5,7 +5,9 @@ import type { AlertProps } from '../../components/alert/src/alert'
 import type { ComponentStylingHook } from '../types'
 
 export const useAlert: ComponentStylingHook<AlertProps> = (props, ns) => {
-  const $color = props.color ? useColor(props.color) : useColor(props.severity, 'var(--md-sys-color-primary)')
+  const $color = props.color
+    ? useColor(props, 'color')
+    : useColor(props, 'severity', 'var(--md-sys-color-primary)')
   const $onColor = computed(() =>
     themePaletteColor.includes(props.severity as any)
       ? `var(--md-sys-color-on-${props.severity})`
@@ -28,9 +30,8 @@ export const useAlert: ComponentStylingHook<AlertProps> = (props, ns) => {
       --fn-alert-background: ${$background.value};
       --fn-alert-background-filled: ${$backgroundFilled.value};
       --fn-alert-color: ${$color.value};
-      --fn-alert-on-color: ${
-        $onColor.value ?? 'var(--md-sys-color-on-primary)'
-      };
+      --fn-alert-on-color: ${$onColor.value ??
+      'var(--md-sys-color-on-primary)'};
     `
   })
 }
