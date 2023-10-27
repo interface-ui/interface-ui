@@ -44,6 +44,7 @@ const content = ref<string>('')
       variant="filled"
       label="Filled"
       placeholder="placeholder"
+      disabled
     />
     <fn-text-field
       v-model="content"
