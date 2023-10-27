@@ -17,7 +17,7 @@ export const parseShceme = (scheme: Scheme): ParsedScheme => {
     const { r, g, b } = rgbaFromArgb(value)
     palette[key as keyof Palette] = color
     styles[`--md-sys-color-${token}`] = color
-    styles[`--md-sys-color-${token}-rgb`] = `${r}, ${g}, ${b}`
+    styles[`--md-sys-color-${token}-rgb`] = `${r} ${g} ${b}`
   }
 
   return { palette, styles }
@@ -42,7 +42,7 @@ export const parseCustomScheme = (
       const { r, g, b } = rgbaFromArgb(value)
       palette[_key as keyof AdditionalPalette] = color
       styles[`--md-sys-color-${token}`] = color
-      styles[`--md-sys-color-${token}-rgb`] = `${r}, ${g}, ${b}`
+      styles[`--md-sys-color-${token}-rgb`] = `${r} ${g} ${b}`
     }
   })
 

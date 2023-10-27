@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import '@fusion-ui-vue/components/text-field/src/index.less' // 开发调试的样式
+import '@fusion-ui-vue/components/input/src/index.less' // 开发调试的样式
 import { FnTextField } from '@fusion-ui-vue/components'
 import { ref } from 'vue'
 
@@ -6,7 +8,7 @@ const content = ref<string>('')
 </script>
 
 <template>
-  <!-- <div class="content">
+  <div class="content">
     <fn-text-field
       size="small"
       v-model="content"
@@ -42,6 +44,7 @@ const content = ref<string>('')
       variant="filled"
       label="Filled"
       placeholder="placeholder"
+      disabled
     />
     <fn-text-field
       v-model="content"
@@ -49,7 +52,7 @@ const content = ref<string>('')
       label="Standard"
       placeholder="placeholder"
     />
-  </div> -->
+  </div>
   <div class="content">
     <fn-text-field
       size="large"

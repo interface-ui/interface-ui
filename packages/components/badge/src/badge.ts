@@ -1,5 +1,5 @@
 import type { ComponentDirections } from '@fusion-ui-vue/constants'
-import type { ThemeCallBack, ThemePaletteColor } from '@fusion-ui-vue/theme'
+import type { AcceptableColor } from '@fusion-ui-vue/theme'
 import { buildProps } from '@fusion-ui-vue/utils'
 import type { Component, ExtractPropTypes, PropType } from 'vue'
 
@@ -16,9 +16,7 @@ export const badgeProps = buildProps({
     default: 'content',
   },
   color: {
-    type: [String, Function] as PropType<
-      ThemeCallBack | ThemePaletteColor | string
-    >,
+    type: [String, Function] as PropType<AcceptableColor>,
     default: 'error',
   },
   max: {

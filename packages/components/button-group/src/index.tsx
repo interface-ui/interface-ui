@@ -1,6 +1,6 @@
 import { unRefs, useNamespace } from '@fusion-ui-vue/utils'
 import { computed, defineComponent, mergeProps, toRefs } from 'vue'
-import { css, cx, useColor } from '@fusion-ui-vue/theme'
+import { css, cx, useColor, useRgbColor } from '@fusion-ui-vue/theme'
 import { buttonGroupProps } from './button-group'
 
 export default defineComponent({
@@ -8,11 +8,16 @@ export default defineComponent({
   setup(props, { slots, attrs }) {
     const ns = useNamespace('button-group')
     const { orientation, ...buttonProps } = toRefs(props)
-    const $color = useColor(props, 'color')
+    const $color = useColor(props, 'color', 'var(--md-sys-color-primary)')
+    const $colorRgb = useRgbColor(
+      props,
+      'color',
+      'var(--md-sys-color-primary-rgb)'
+    )
     const cssClass = computed(
       () => css`
-        --fn-button-group-color: ${$color.value ??
-        'var(--md-sys-color-primary)'};
+        --fn-button-group-color: ${$color.value};
+        --fn-button-group-color-rgb: ${$colorRgb.value};
       `
     )
     const classList = computed(() => {

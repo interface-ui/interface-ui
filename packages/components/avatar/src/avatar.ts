@@ -1,7 +1,7 @@
 import type { ExtractPropTypes, PropType } from 'vue'
 import { buildProps, isNumber, isString } from '@fusion-ui-vue/utils'
 
-import type { ThemeCallBack, ThemePaletteColor } from '@fusion-ui-vue/theme'
+import type { AcceptableColor } from '@fusion-ui-vue/theme'
 
 export const avatarVariants = ['circle', 'square', 'rounded'] as const
 export type AvatarVariants = typeof avatarVariants[number]
@@ -20,15 +20,11 @@ export const avatarProps = buildProps({
     default: 'circle',
   },
   color: {
-    type: [String, Function] as PropType<
-      ThemeCallBack | ThemePaletteColor | string
-    >,
+    type: [String, Function] as PropType<AcceptableColor>,
     default: 'onSurface',
   },
   backgroundColor: {
-    type: [String, Function] as PropType<
-      ThemeCallBack | ThemePaletteColor | string
-    >,
+    type: [String, Function] as PropType<AcceptableColor>,
     default: 'surfaceVariant',
   },
 })

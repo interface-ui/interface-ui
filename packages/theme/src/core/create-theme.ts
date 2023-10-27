@@ -6,7 +6,7 @@ import {
 } from '@material/material-color-utilities'
 import type { CustomColor } from '@material/material-color-utilities'
 import { uesThemeProvider } from '../hooks'
-import type { Palette, ThemeConfig } from './types'
+import type { ThemeConfig, ThemePaletteColor } from './types'
 import { Theme } from './types'
 import defaultTheme from './default.theme'
 import {
@@ -28,7 +28,7 @@ export const createTheme = (
   customColors: CustomColor[] = defaultTheme.customColors
 ): Ref<Theme> => {
   const { palette: $palette, mode } = config
-  const theme = ref<Theme>(new Theme({} as Palette, mode))
+  const theme = ref<Theme>(new Theme({} as ThemePaletteColor, mode))
   const html = document.documentElement as HTMLElement
 
   const dynamicTheme = themeFromSourceColor(argbFromHex(source), [
@@ -51,7 +51,10 @@ export const createTheme = (
       html.setAttribute('data-theme', newVal)
       const { palette } = newVal === 'dark' ? darkPalette! : lightPalette!
 
-      theme.value = new Theme({ ...palette, ...$palette }, newVal)
+      theme.value = new Theme(
+        { ...palette, ...$palette } as ThemePaletteColor,
+        newVal
+      )
     },
     { immediate: true }
   )

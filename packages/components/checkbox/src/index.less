@@ -30,11 +30,9 @@
 
   @media (any-hover: hover) {
     &:not([disabled]):hover {
-      background-color: color-mix(
-        in srgb,
-        var(--fn-checkbox-color)
-          var(--md-sys-state-hover-state-layer-opacity-percentage),
-        var(--fn-sys-color-switch) var(--fn-zero-percentage)
+      background-color: rgb(
+        var(--fn-checkbox-color-rgb) /
+          var(--md-sys-state-hover-state-layer-opacity)
       );
     }
   }

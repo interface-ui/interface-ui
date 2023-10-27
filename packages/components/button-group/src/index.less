@@ -38,11 +38,7 @@
   }
   &--outlined {
     &:not([disabled]) {
-      --border-color: color-mix(
-        in srgb,
-        var(--fn-button-group-color) 60%,
-        var(--fn-sys-color-switch) 0%
-      );
+      --border-color: rgb(var(--fn-button-group-color-rgb) / 0.6);
     }
     &[disabled] {
       --border-color: var(--fn-sys-color-disabled-level-1) !important;
@@ -65,11 +61,7 @@
   }
   &--text {
     &:not([disabled]) {
-      --border-color: color-mix(
-        in srgb,
-        var(--fn-button-group-color) 60%,
-        var(--fn-sys-color-switch) 0%
-      );
+      --border-color: rgb(var(--fn-button-group-color-rgb) / 0.6);
     }
     &[disabled] {
       --border-color: var(--fn-sys-color-disabled-level-1) !important;

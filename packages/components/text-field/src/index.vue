@@ -61,7 +61,7 @@ const hasContent = computed<boolean>(() => {
       v-if="props?.label"
       component="label"
       :class="[ns.e('label')]"
-      color="onSurfaceVariant"
+      color="rgb(var(--md-sys-color-on-surface-rgb) / 0.6);"
       no-warp
     >
       {{ label }}

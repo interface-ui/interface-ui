@@ -1,4 +1,4 @@
-import type { ThemeCallBack, ThemePaletteColor } from '@fusion-ui-vue/theme'
+import type { AcceptableColor } from '@fusion-ui-vue/theme'
 import { buildProps } from '@fusion-ui-vue/utils'
 import type { ExtractPropTypes, PropType } from 'vue'
 
@@ -12,9 +12,7 @@ export const iconProps = buildProps({
     default: '24',
   },
   color: {
-    type: [String, Function] as PropType<
-      ThemeCallBack | ThemePaletteColor | string
-    >,
+    type: [String, Function] as PropType<AcceptableColor>,
   },
 })
 
