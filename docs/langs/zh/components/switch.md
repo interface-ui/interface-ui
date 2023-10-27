@@ -5,7 +5,6 @@ lang: zh
 
 <script setup lang="ts">
   import props from "../../../example/switch/description/zh-props.ts";
-  import events from "../../../example/switch/description/zh-events.ts";
 </script>
 
 
@@ -18,21 +17,14 @@ lang: zh
 
 绑定 `v-model` 到一个 `Boolean` 类型的变量，即可使用。
 
-<demo src="../../../example/switch/base.vue"></demo>
+<demo src="../../../example/switch/basic.vue"></demo>
 
 
 # 开关颜色
 
 ```color``` 属性可以设置开关的颜色。
 
-<demo src="../../../example/switch/color.vue"></demo>
-
-# 文字描述
-
-``` checked-text``` ```un-checked-text``` 设置开关的文字描述，超出长度会被隐藏。
-
-<demo src="../../../example/switch/text.vue"></demo>
-
+<demo src="../../../example/switch/size-color.vue"></demo>
 
 # 显示自定义图标
 
@@ -40,16 +32,5 @@ lang: zh
 
 <demo src="../../../example/switch/icon.vue"></demo>
 
-# 禁用状态
-
-```disabled``` 属性可以设置开关的禁用状态。
-
-<demo src="../../../example/switch/disabled.vue"></demo>
-
 ## 属性
 <table-block type="propsZh" :data="props"></table-block>
-
-
-## 事件
-<table-block type="eventsZh" :data="events"></table-block>
-

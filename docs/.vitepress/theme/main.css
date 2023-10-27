@@ -139,5 +139,10 @@
 }
 
 .VPContent {
+  background-color: var(--vp-c-bg);
+}
+
+.o-demo_wrapper {
   background-color: var(--md-sys-color-surface);
+  flex-wrap: wrap;
 }

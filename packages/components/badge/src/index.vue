@@ -7,7 +7,7 @@ import { badgeProps } from './badge'
 
 const props = defineProps(badgeProps)
 const ns = useNamespace('badge')
-const $color = useColor(props.color)
+const $color = useColor(props, 'color', 'var(--md-sys-color-error)')
 const $onColor = computed(() =>
   themePaletteColor.includes(props.color as any)
     ? `var(--md-sys-color-on-${props.color})`
@@ -34,7 +34,7 @@ const positionCss = computed(
 )
 const BadgeTypography = computed(
   () => styled(Typography, { color: $onColor.value })`
-    background-color: ${$color.value ?? 'var(--md-sys-color-error)'};
+    background-color: ${$color.value};
     height: ${props.variant === 'dot' ? '8px' : '20px'};
     min-width: ${props.variant === 'dot' ? '8px' : '20px'};
     border-radius: 10px;

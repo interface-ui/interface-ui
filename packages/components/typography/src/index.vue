@@ -24,7 +24,7 @@ const parsed = computed(() => {
 })
 
 const is = computed<string>(() => parsed.value[0])
-const $color = useColor(props.color, 'var(--md-sys-color-on-primary)')
+const $color = useColor(props, 'color', 'var(--md-sys-color-on-primary)')
 
 const cssClass = computed(() => {
   const [_, variant, size] = parsed.value

@@ -10,11 +10,11 @@ import { switchHeight, switchProps } from './switch'
 const props = defineProps(switchProps)
 const emits = defineEmits<{ (e: 'update:modelValue', v: boolean): void }>()
 const ns = useNamespace('switch')
-const $color = useColor(props.color, 'var(--md-sys-color-primary)')
+const $color = useColor(props, 'color', 'var(--md-sys-color-primary)')
 const $onColor = computed(() =>
   themePaletteColor.includes(props.color as any)
     ? `var(--md-sys-color-on-${props.color})`
-    : 'var(--md-sys-color-on-primary-container)'
+    : 'var(--md-sys-color-on-primary)'
 )
 
 const checked = computed<boolean>({
@@ -44,12 +44,14 @@ const cssClass = computed(
       @click="checked = !checked"
     >
       <span :class="[ns.em('thumb', 'icon-wrapper')]">
-        <fn-icon
-          v-if="props.enableIcon"
-          :class="[ns.em('thumb', 'icon')]"
-          icon="mdi:check"
-          size="16"
-        />
+        <slot v-bind="{ class: [ns.em('thumb', 'icon')], size: '16' }">
+          <fn-icon
+            v-if="!props.disabledIcon"
+            :class="[ns.em('thumb', 'icon')]"
+            icon="mdi:check"
+            size="16"
+          />
+        </slot>
       </span>
     </fn-icon-button>
     <!-- eslint-disable vue/html-self-closing -->

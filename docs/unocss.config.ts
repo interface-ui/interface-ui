@@ -32,7 +32,7 @@ export default defineConfig({
     {
       fscw: 'flex justify-center items-center flex-wrap w-full',
       'o-demo_wrapper':
-        'p-8 text-#282f38  border border-solid border-light-700 rounded-md dark:bg-dark-700 dark:border-#4C4D4F flex [&:o-button-base]:!c-context justify-center',
+        'p-8 text-#282f38  border border-solid border-light-700 rounded-md dark:border-#4C4D4F flex [&:o-button-base]:!c-context justify-center gap-5',
       'o-demo_actions': 'flex justify-end pt-3 gap-2',
       'o-demo_action_item':
         'relative outline-none flex justify-center items-center w-7 h-7 p-0 rounded-full border border-solid border-light-900 dark:border-dark-900 bg-white dark:bg-#38383A cursor-pointer hover:bg-#E5E6EB dark:hover:bg-dark:300',

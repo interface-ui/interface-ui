@@ -26,13 +26,9 @@ export const switchProps = buildProps({
     value: componentSizes,
     default: 'medium',
   },
-  enableIcon: {
+  disabledIcon: {
     type: Boolean,
-    default: true,
-  },
-  enableRipple: {
-    type: Boolean,
-    default: true,
+    default: false,
   },
 })
 

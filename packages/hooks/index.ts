@@ -1,7 +1,6 @@
 export { UseAlert } from './use-alert'
 export * from './use-button'
 export * from './use-radio'
-export { useSwitchInner, useSwitch } from './use-switch'
 export { UseProgress } from './use-progress'
 export { UseTag } from './use-tag'
 export * from './use-checkbox'

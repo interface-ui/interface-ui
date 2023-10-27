@@ -14,10 +14,9 @@ const slots = useSlots()
 const ns = useNamespace('text-field')
 
 const cssClass = computed(() => {
-  const $color = useColor(
-    props.error ? 'error' : props.color,
-    'var(--md-sys-color-primary)'
-  )
+  const $color = props.error
+    ? useColor(props, null, 'var(--md-sys-color-error)')
+    : useColor(props, 'color', 'var(--md-sys-color-primary)')
   return css`
     --fn-text-field-color: ${$color.value};
   `

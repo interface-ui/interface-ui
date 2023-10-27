@@ -4,7 +4,7 @@ import { computed } from 'vue'
 import type { ComponentStylingHook } from '../types'
 
 export const useCheckbox: ComponentStylingHook<CheckboxProps> = (props, ns) => {
-  const $color = useColor(props.color, 'var(--md-sys-color-primary)')
+  const $color = useColor(props, 'color', 'var(--md-sys-color-primary)')
 
   return computed(() => {
     return css`
