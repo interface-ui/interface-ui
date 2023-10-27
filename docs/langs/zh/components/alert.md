@@ -5,55 +5,61 @@ lang: zh
 
 <script setup lang="ts">
   import props from "../../../example/alert/description/zh-props.ts";
-  import events from "../../../example/alert/description/zh-events.ts";
   import slots from "../../../example/alert/description/zh-slots.ts";
 </script>
 
-# Alert 提示
 
-用于页面中展示重要的提示信息。
+# Alert
 
-## 基础用法
+用于在页面上显示重要提示信息。
 
-```Alert``` 组件提供四种类型，由 ```type``` 属性指定，默认值为 ```info```
+## Basic usage
+
+`Alert` 提供了四个严重级别，设置了独特的图标和颜色。
+
 <demo src="../../../example/alert/base.vue"></demo>
 
+## 描述
 
-## 自定义关闭按钮
+您可以使用`FnTypography`组件在内容上方显示格式化标题。
 
-```closable``` 属性用于定义是否显示关闭按钮，```closeArea``` 插槽用于自定义关闭按钮的内容。
+<demo src="../../../example/alert/description.vue"></demo>
 
-当 Alert 组件被关闭时会触发 ```close``` 事件。
+## 操作
 
-<demo src="../../../example/alert/close.vue"></demo>
+在组件末尾添加操作按钮。
 
-## 文字居中
+<demo src="../../../example/alert/actions.vue"></demo>
 
-使用 ```center``` 属性来让文字水平居中。
-<demo src="../../../example/alert/center.vue"></demo>
+## Icons
 
-## 标题
+提供了`icon`属性，可以设置图标。 将图标道具设置为 `false` 将完全删除图标。
 
-使用 ```title``` 属性来给描述添加标题。
-<demo src="../../../example/alert/title.vue"></demo>
+<demo src="../../../example/alert/icon.vue"></demo>
 
-## 前部固定内容
 
-使用 ```fixedArea``` 插槽来给描述添加前部固定内容。
-<demo src="../../../example/alert/flex-tip.vue"></demo>
+## Outlined
 
-## 滚动
+`Outlined` 镂空状态
 
-使用 ```scrollable``` 默认开启向左的滚动，同样可以通过 ```duration``` 属性来定义滚动条的持续时间。
-<demo src="../../../example/alert/scrollable.vue"></demo>
+<demo src="../../../example/alert/outlined.vue"></demo>
 
-## 属性
+## Filled
+
+`Filled` 填充状态
+
+<demo src="../../../example/alert/filled.vue"></demo>
+
+## Color
+
+颜色道具将覆盖指定严重程度的默认颜色。
+
+<demo src="../../../example/alert/color.vue"></demo>
+
+## Attribute
+
 <table-block type="propsZh" :data="props"></table-block>
 
 
-## 事件
-<table-block type="eventsZh" :data="events"></table-block>
-
-
-## 插槽
+## Slots
 <table-block type="slotsZh" :data="slots"></table-block>

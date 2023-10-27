@@ -1,4 +1,4 @@
-export { UseAlert } from './use-alert'
+export { useAlert } from './use-alert'
 export * from './use-button'
 export * from './use-radio'
 export { UseProgress } from './use-progress'

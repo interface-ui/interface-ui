@@ -5,56 +5,61 @@ lang: en
 
 <script setup lang="ts">
   import props from "../../../example/alert/description/en-props.ts";
-  import events from "../../../example/alert/description/en-events.ts";
   import slots from "../../../example/alert/description/en-slots.ts";
 </script>
 
 
 # Alert
 
-Used to display important prompt information on the page.
+Used to display important reminder information on the page.
 
 ## Basic usage
 
-The ```Alert``` component provides four types, specified by the ```type``` attribute, with a default value of ```info```
+`Alert` provides four severity levels and sets unique icons and colors.
+
 <demo src="../../../example/alert/base.vue"></demo>
 
+## Description
 
-## Customize the close button
+You can use the 'FnTypography' component to display formatting titles above the content.
 
-The ```close``` attribute is used to define whether the close button is displayed, and the ```closeArea``` slot is used to customize the content of the close button.
+<demo src="../../../example/alert/description.vue"></demo>
 
-The ```close``` event will be triggered when the Alert component is closed.
+## Actions
 
-<demo src="../../../example/alert/close.vue"></demo>
+Add an action button at the end of the component.
 
-## Text centered
+<demo src="../../../example/alert/actions.vue"></demo>
 
-Use the ```center``` attribute to center the text horizontally.
-<demo src="../../../example/alert/center.vue"></demo>
+## Icons
 
-## Title
+The `icon` property is provided to set the icon. Setting the icon prop to `false` will completely delete the icon.
 
-Use the ```title``` attribute to add a title to the description.
-<demo src="../../../example/alert/title.vue"></demo>
+<demo src="../../../example/alert/icon.vue"></demo>
 
-## Front fixed content
 
-Use the ```fixedArea``` slot to add front fixed content to the description.
-<demo src="../../../example/alert/flex-tip.vue"></demo>
+## Outlined
 
-## Scrollable
+`Outlined` status
 
-By default, scrolling to the left is enabled using the ```scrollable``` attribute, and the duration of the scrollbar can also be defined through the ```duration``` attribute.
-<demo src="../../../example/alert/scrollable.vue"></demo>
+<demo src="../../../example/alert/outlined.vue"></demo>
+
+## Filled
+
+`Filled` status
+
+<demo src="../../../example/alert/filled.vue"></demo>
+
+## Color
+
+The color prop will override the default color of the specified severity.
+
+<demo src="../../../example/alert/color.vue"></demo>
 
 ## Attribute
-<table-block type="propsZh" :data="props"></table-block>
 
-
-## Events
-<table-block type="eventsZh" :data="events"></table-block>
+<table-block type="propsEn" :data="props"></table-block>
 
 
 ## Slots
-<table-block type="slotsZh" :data="slots"></table-block>
+<table-block type="slotsEn" :data="slots"></table-block>

@@ -1,43 +1,32 @@
 import type { ExtractPropTypes, PropType } from 'vue'
-export type BadgeType = String | Number
-
+import type { ThemeCallBack, ThemePaletteColor } from '@fusion-ui-vue/theme'
+import { type ComponentSeverity } from '@fusion-ui-vue/constants'
+export type AlertType = String | Boolean
+export const alertVariants = ['filled', 'outlined'] as const
+export type AlertVariant = typeof alertVariants[number]
 export const alertProps = {
   title: {
-    type: [String, Number] as PropType<BadgeType>,
+    type: String as PropType<AlertType>,
     default: '',
   },
-  description: {
-    type: [String, Number] as PropType<BadgeType>,
-    default: '',
-  },
-  fixedTip: {
-    type: String,
-    default: '',
-  },
-  direction: {
-    type: String as PropType<'left' | 'top'>,
-    default: 'left',
-  },
-
-  closable: {
-    type: Boolean,
-    default: false,
-  },
-  center: {
-    type: Boolean,
-    default: false,
-  },
-  scrollable: {
-    type: Boolean,
-    default: false,
-  },
-  duration: {
-    type: Number,
-    default: 2,
-  },
-  state: {
-    type: String as PropType<'success' | 'warning' | 'error' | 'info'>,
+  severity: {
+    type: String as PropType<ComponentSeverity>,
     default: 'info',
+  },
+  icon: {
+    type: String as PropType<AlertType>,
+    default: '',
+  },
+  variant: {
+    type: String as PropType<AlertVariant>,
+    values: alertVariants,
+    default: '',
+  },
+  color: {
+    type: [String, Function] as PropType<
+      ThemeCallBack | ThemePaletteColor | string
+    >,
+    default: '',
   },
 }
 

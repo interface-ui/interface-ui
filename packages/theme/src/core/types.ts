@@ -6,7 +6,13 @@ import typography from '../typography'
 import zIndex from '../z-index'
 import type ThemeMode from '../mode'
 
-export type Palette = Omit<Record<keyof Scheme, string>, 'toJSON'>
+type ExtendedScheme = Scheme & {
+  success: string
+  info: string
+  warning: string
+}
+
+export type Palette = Omit<Record<keyof ExtendedScheme, string>, 'toJSON'>
 
 export interface ThemeConfig {
   mode?: ThemeMode
@@ -43,6 +49,9 @@ export const themePaletteColor: (keyof Palette)[] = [
   'inverseSurface',
   'inverseOnSurface',
   'inversePrimary',
+  'success',
+  'info',
+  'warning',
 ]
 export type ThemePaletteColor = Palette
 export type ThemeCallBack = (theme: Theme) => string

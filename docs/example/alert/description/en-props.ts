@@ -1,42 +1,30 @@
 import type { PropTableItem } from '../../../.vitepress/components/table-block/src/table'
 const list: PropTableItem[] = [
   {
-    name: 'model-value / v-model',
-    remark: 'Enter box values',
+    name: 'severity',
+    remark: 'Alert Severe level',
     type: 'Enum',
-    optional: ['String', 'Number'],
+    optional: ['error', 'warning', 'info', 'success'],
     default: '---',
   },
   {
-    name: 'disabled',
-    remark: 'Disabled state',
-    type: 'Boolean',
-    default: 'false',
+    name: 'fn-typography',
+    remark: 'Provide title style',
+    type: '--',
+    default: '--',
   },
   {
-    name: 'clearable',
-    remark: 'Empty with one click',
+    name: 'icon',
+    remark: 'Provide the icon, icon is false to close the icon',
     type: 'String',
     default: '---',
   },
+
   {
-    name: 'prefixIcon',
-    remark: 'Prefix icon',
+    name: 'variant',
+    remark: ' outlined & filled ',
     type: 'String',
     default: '---',
-  },
-  {
-    name: 'suffixIcon',
-    remark: 'Suffix icon',
-    type: 'String',
-    default: '---',
-  },
-  {
-    name: 'type',
-    remark: 'Type of input box',
-    type: 'Enum',
-    optional: ['text', 'password', 'textarea', 'number'],
-    default: 'text',
   },
 ]
 
