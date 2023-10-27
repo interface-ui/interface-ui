@@ -31,8 +31,7 @@ export const useColor = <T extends { [k: string]: AcceptableColor | any }>(
     if (typeof color === 'function') {
       return color(theme.value)
     }
-    if (typeof color === 'string') {
-      // if (typeof color === 'string' && color in theme.value.palette) {
+    if (typeof color === 'string' && color in theme.value.palette) {
       const _color = color.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase()
       return `var(--md-sys-color-${_color})`
     }
