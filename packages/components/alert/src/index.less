@@ -4,18 +4,26 @@
   line-height: 1.43;
   padding: 6px 16px;
   background-color: var(--fn-alert-background);
-  color: var(--fn-alert-on-color);
   display:flex;
   font-size: 14px;
+  &--error{
+    color: var(--md-sys-color-error)
+  }
+  &--warning{
+    color: var(--md-sys-color-warning)
+  }
+  &--info{
+    color: var(--md-sys-color-info)
+  }
+  &--success{
+    color: var(--md-sys-color-success)
+  }
   &--outlined{
     background-color: transparent;
     border: 1px solid var(--fn-alert-color);
     color: var(--fn-alert-color);
   }
-  &--filled{
-    background-color: var(--fn-alert-background-filled);
-    color: #fff;
-  }
+
 
   &--icon{
     color: var(--fn-alert-on-color);
