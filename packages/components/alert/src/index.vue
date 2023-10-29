@@ -23,7 +23,7 @@ const handleClick = (): void => {
 
 <template>
   <transition name="alert-fade">
-    <div v-show="visible" :class="[ns.b(), ns.m(props.variant), cssClass]">
+    <div v-show="visible" :class="[ns.b(), ns.m(props.variant), ns.m(props.severity), cssClass]">
       <div v-if="icon" :class="[ns.m('icon')]">
         <fn-icon :icon="icon" />
       </div>

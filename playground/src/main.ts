@@ -8,6 +8,7 @@ import './style.css'
 import 'fusion-ui-vue/dist/styles/index.css' // 打包后的全量样式
 import '@fusion-ui-vue/components/ripple/src/index.less' // 开发调试的样式
 import '@fusion-ui-vue/components/button/src/index.less' // 开发调试的样式
+import '@fusion-ui-vue/components/alert/src/index.less' // 开发调试的样式
 // import RouterView from './RouterHello.vue'
 
 import 'virtual:uno.css'

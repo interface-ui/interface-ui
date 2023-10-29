@@ -41,7 +41,7 @@
   .VPSidebarItem .is-active{
    .item{
     .indicator{
-      background-color: #4e80ee;
+      background-color: var(--md-sys-color-primary);
       width: 2px;
       top:10px;
       bottom:10px;

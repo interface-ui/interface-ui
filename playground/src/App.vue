@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { FnButton } from '@fusion-ui-vue/components'
+import { FnButton,FnAlert } from '@fusion-ui-vue/components'
 import createTheme from '@fusion-ui-vue/theme'
 import { toRaw } from 'vue'
 // import Badge from './components/Badge.vue'
@@ -7,6 +7,7 @@ import { toRaw } from 'vue'
 // import ButtonGroup from './components/ButtonGroup.vue'
 // import SwitchNew from './components/Switch.vue'
 // import TextField from './components/TextField.vue'
+import Alert from './components/Alert.vue'
 
 const theme = createTheme()
 
@@ -34,4 +35,5 @@ const changTheme = () => {
   <!-- <button-group /> -->
   <!-- <switch-new /> -->
   <!-- <TextField /> -->
+  <Alert/>
 </template>

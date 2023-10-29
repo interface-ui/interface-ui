@@ -16,7 +16,7 @@
   --vp-c-brand-darker: #454ce1;
   --vp-c-brand-dimm: rgba(100, 108, 255, 0.08); */
 
-  --vp-c-brand: #3b82f6;
+  --vp-c-brand: var(--md-sys-color-primary);
   --vp-c-brand-light: #60a5fa;
   --vp-c-brand-lighter: #93c5fd;
   --vp-c-brand-lightest: #bfdbfe;
