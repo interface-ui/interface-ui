@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { FnButton,FnAlert } from '@fusion-ui-vue/components'
+import { FnButton } from '@fusion-ui-vue/components'
 import createTheme from '@fusion-ui-vue/theme'
 import { toRaw } from 'vue'
 // import Badge from './components/Badge.vue'
@@ -7,7 +7,8 @@ import { toRaw } from 'vue'
 // import ButtonGroup from './components/ButtonGroup.vue'
 // import SwitchNew from './components/Switch.vue'
 // import TextField from './components/TextField.vue'
-import Alert from './components/Alert.vue'
+// import Alert from './components/Alert.vue'
+import SvgIcon from './components/SvgIcon.vue'
 
 const theme = createTheme()
 
@@ -25,7 +26,7 @@ const changTheme = () => {
 <template>
   <!-- ------------------- Toggle between the light/dark mode ------------------- -->
   <header>
-    <fn-button @click="changTheme" color="#2E7D32">
+    <fn-button @click="changTheme">
       <!-- @vue-skip -->
       {{ theme.mode }}
     </fn-button>
@@ -35,5 +36,6 @@ const changTheme = () => {
   <!-- <button-group /> -->
   <!-- <switch-new /> -->
   <!-- <TextField /> -->
-  <Alert/>
+  <!-- <Alert /> -->
+  <svg-icon />
 </template>
