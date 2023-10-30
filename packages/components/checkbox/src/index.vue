@@ -50,6 +50,6 @@ const checked = computed<boolean>({
       class="fn-form__input"
       type="checkbox"
     />
-    <fn-ripple :color="$attrs.color as string" center />
+    <fn-ripple :color="$props.color" center />
   </fn-icon-button>
 </template>

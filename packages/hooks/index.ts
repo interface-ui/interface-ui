@@ -1,6 +1,5 @@
 export { useAlert } from './use-alert'
 export * from './use-button'
-export * from './use-radio'
 export { UseProgress } from './use-progress'
 export { UseTag } from './use-tag'
 export * from './use-ripple'

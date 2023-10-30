@@ -17,10 +17,6 @@ export const checkboxProps = {
     value: componentSizes,
     default: 'medium',
   },
-  enableRipple: {
-    type: Boolean,
-    default: true,
-  },
 }
 
 export type CheckboxProps = ExtractPropTypes<typeof checkboxProps>

@@ -31,7 +31,7 @@ const checked = computed<string | number | boolean>({
     v-bind="{ color: $props.color, size: $props.size, class: [ns.b()] }"
     :class="[ns.b(), ns.m(props.size)]"
   >
-    <radio-button-checked v-if="checked" :size="icon.size" />
+    <radio-button-checked v-if="checked === $attrs.value" :size="icon.size" />
     <radio-button-unchecked v-else :size="icon.size" />
     <!-- eslint-disable vue/html-self-closing -->
     <input
@@ -41,6 +41,6 @@ const checked = computed<string | number | boolean>({
       class="fn-form__input"
       type="radio"
     />
-    <fn-ripple :color="props.color" center />
+    <fn-ripple :color="$props.color" center />
   </fn-icon-button>
 </template>
