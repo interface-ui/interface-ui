@@ -2,12 +2,7 @@
 import { useNamespace } from '@fusion-ui-vue/utils'
 import { computed } from 'vue'
 import { UPDATE_MODEL_EVENT } from '@fusion-ui-vue/constants'
-import {
-  css,
-  themePaletteColor,
-  useColor,
-  useRgbColor,
-} from '@fusion-ui-vue/theme'
+import { css, themeSchemes, useColor, useRgbColor } from '@fusion-ui-vue/theme'
 import FnIconButton from '../../icon-button'
 import FnIcon from '../../icon'
 import { switchHeight, switchProps } from './switch'
@@ -18,7 +13,7 @@ const ns = useNamespace('switch')
 const $color = useColor(props, 'color', 'var(--md-sys-color-primary)')
 const $colorRgb = useRgbColor(props, 'color', 'var(--md-sys-color-primary-rgb)')
 const $onColor = computed(() =>
-  themePaletteColor.includes(props.color as any)
+  themeSchemes.includes(props.color as any)
     ? `var(--md-sys-color-on-${props.color})`
     : 'var(--md-sys-color-on-primary)'
 )

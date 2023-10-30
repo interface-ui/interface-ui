@@ -5,7 +5,7 @@ const list: PropTableItem[] = [
     remark: 'color',
     default: '--',
     type: 'Enum',
-    optional: ['ThemePaletteColor', 'ThemeCallBack', 'String'],
+    optional: ['ThemeSchemes', 'ThemeCallBack', 'String'],
   },
   {
     name: 'underline',

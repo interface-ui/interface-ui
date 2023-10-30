@@ -3,7 +3,7 @@ import { FnSvgIcon } from '@fusion-ui-vue/components'
 </script>
 
 <template>
-  <fn-svg-icon :color="theme => theme.palette.error" size="60">
+  <fn-svg-icon :color="theme => theme.schemes.error" size="60">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fill="none"

@@ -6,14 +6,16 @@ import {
 } from '@material/material-color-utilities'
 import type { CustomColor } from '@material/material-color-utilities'
 import { uesThemeProvider } from '../hooks'
-import type { ThemeConfig, ThemePaletteColor } from './types'
-import { Theme } from './types'
+import type { ThemeConfig, ThemeSchemes } from './types'
+import Theme from './theme'
 import defaultTheme from './default.theme'
 import {
+  createCustomPalettes,
   injectJSS,
-  mergeParsedScheme,
-  parseCustomScheme,
-  parseShceme,
+  mergeParsedSchemes,
+  parseCustomSchemes,
+  parsePalettes,
+  parseShcemes,
 } from './utils'
 
 /**
@@ -27,8 +29,7 @@ export const createTheme = (
   config: ThemeConfig = {},
   customColors: CustomColor[] = defaultTheme.customColors
 ): Ref<Theme> => {
-  const { palette: $palette, mode } = config
-  const theme = ref<Theme>(new Theme({} as ThemePaletteColor, mode))
+  const { schemes: $schemes, mode } = config
   const html = document.documentElement as HTMLElement
 
   const dynamicTheme = themeFromSourceColor(argbFromHex(source), [
@@ -36,30 +37,38 @@ export const createTheme = (
     ...(config.customColors ?? []),
   ])
 
-  const lightPalette = mergeParsedScheme(
-    parseShceme(dynamicTheme.schemes.light),
-    parseCustomScheme(dynamicTheme.customColors, 'light')
+  const palettes = {
+    ...parsePalettes(dynamicTheme.palettes),
+    ...createCustomPalettes(customColors),
+  }
+
+  const theme = ref<Theme>(new Theme({} as ThemeSchemes, palettes, mode))
+
+  const lightSchemes = mergeParsedSchemes(
+    parseShcemes(dynamicTheme.schemes.light),
+    parseCustomSchemes(dynamicTheme.customColors, 'light')
   )
-  const darkPalette = mergeParsedScheme(
-    parseShceme(dynamicTheme.schemes.dark),
-    parseCustomScheme(dynamicTheme.customColors, 'dark')
+  const darkSchemes = mergeParsedSchemes(
+    parseShcemes(dynamicTheme.schemes.dark),
+    parseCustomSchemes(dynamicTheme.customColors, 'dark')
   )
 
   watch(
     () => theme.value.mode,
     newVal => {
       html.setAttribute('data-theme', newVal)
-      const { palette } = newVal === 'dark' ? darkPalette! : lightPalette!
+      const { schemes } = newVal === 'dark' ? darkSchemes! : lightSchemes!
 
       theme.value = new Theme(
-        { ...palette, ...$palette } as ThemePaletteColor,
+        { ...schemes, ...$schemes } as ThemeSchemes,
+        palettes,
         newVal
       )
     },
     { immediate: true }
   )
 
-  injectJSS(lightPalette, darkPalette, theme.value)
+  injectJSS(lightSchemes, darkSchemes, theme.value)
 
   uesThemeProvider(theme)
   return theme

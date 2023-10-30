@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { debugWarn, useNamespace } from '@fusion-ui-vue/utils'
-import { css, styled, themePaletteColor, useColor } from '@fusion-ui-vue/theme'
+import { css, styled, themeSchemes, useColor } from '@fusion-ui-vue/theme'
 import { computed } from 'vue'
 import Typography from '../../typography'
 import { badgeProps } from './badge'
@@ -9,7 +9,7 @@ const props = defineProps(badgeProps)
 const ns = useNamespace('badge')
 const $color = useColor(props, 'color', 'var(--md-sys-color-error)')
 const $onColor = computed(() =>
-  themePaletteColor.includes(props.color as any)
+  themeSchemes.includes(props.color as any)
     ? `var(--md-sys-color-on-${props.color})`
     : 'var(--md-sys-color-on-primary)'
 )

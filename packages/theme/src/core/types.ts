@@ -1,13 +1,13 @@
-import type { CustomColor, Scheme } from '@material/material-color-utilities'
-import colors from '../color'
-import states from '../state'
-import elevations from '../elevation'
-import typography from '../typography'
-import zIndex from '../z-index'
+import type {
+  CustomColor,
+  Theme as DynamicTheme,
+  Scheme,
+} from '@material/material-color-utilities'
 import type ThemeMode from '../mode'
+import type Theme from './theme'
 
-export type Palette = Omit<Record<keyof Scheme, string>, 'toJSON'>
-export interface AdditionalPalette {
+export type Schemes = Omit<Record<keyof Scheme, string>, 'toJSON'>
+export interface AdditionalSchemes {
   success: string
   onSuccess: string
   successContainer: string
@@ -24,11 +24,11 @@ export interface AdditionalPalette {
 
 export interface ThemeConfig {
   mode?: ThemeMode
-  palette?: Partial<Palette>
+  schemes?: Partial<Schemes>
   customColors?: CustomColor[]
 }
 
-export const themePaletteColor: (keyof (Palette & AdditionalPalette))[] = [
+export const themeSchemes: (keyof (Schemes & AdditionalSchemes))[] = [
   'primary',
   'onPrimary',
   'primaryContainer',
@@ -71,29 +71,30 @@ export const themePaletteColor: (keyof (Palette & AdditionalPalette))[] = [
   'infoContainer',
   'onInfoContainer',
 ]
-export type ThemePaletteColor = Palette & AdditionalPalette
+export type ThemeSchemes = Schemes & AdditionalSchemes
+export const themePalettesTones = [
+  '0',
+  '10',
+  '20',
+  '30',
+  '40',
+  '50',
+  '60',
+  '70',
+  '90',
+  '95',
+  '99',
+  '100',
+] as const
+export type ThemePalettesTones = typeof themePalettesTones[number]
+export type ThemePalettes = Record<
+  keyof DynamicTheme['palettes'],
+  Record<ThemePalettesTones, string>
+> & { [k: string]: Record<ThemePalettesTones, string> }
+
 export type ThemeCallBack = (theme: Theme) => string
-export interface ParsedScheme {
-  palette: Palette | AdditionalPalette
+export interface ParsedSchemes {
+  schemes: Schemes | AdditionalSchemes
   styles: Record<string, string>
 }
-export type AcceptableColor = keyof ThemePaletteColor | string | ThemeCallBack
-
-export class Theme {
-  mode: ThemeMode
-  palette: ThemePaletteColor
-  colors = colors
-  states = states
-  elevations = elevations
-  typography = typography
-  zIndex = zIndex
-
-  constructor(palette: Palette & AdditionalPalette, mode: ThemeMode = 'light') {
-    this.palette = palette
-    this.mode = mode
-  }
-
-  setMode(mode: ThemeMode) {
-    this.mode = mode
-  }
-}
+export type AcceptableColor = keyof ThemeSchemes | string | ThemeCallBack

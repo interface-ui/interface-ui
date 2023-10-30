@@ -10,8 +10,7 @@ export default defineComponent({
     const cssClass = useCss(props)
     const slotsVNodes = slots?.default?.() ?? []
     if (slotsVNodes.length > 1) {
-      console.error('[Fusion UI]: The SvgIcon can only contain one child.')
-      return () => ''
+      throw new Error('[Fusion UI]: The SvgIcon can only contain one child.')
     }
 
     return () => (

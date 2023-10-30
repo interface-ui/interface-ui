@@ -23,7 +23,7 @@ const list: PropTableItem[] = [
     name: 'color',
     remark: '自定义文本输入focus状态的颜色',
     type: 'Enum',
-    optional: ['ThemePaletteColor', 'ThemeCallBack', 'String'],
+    optional: ['ThemeSchemes', 'ThemeCallBack', 'String'],
     default: 'primary',
   },
   {
