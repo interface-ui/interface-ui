@@ -17,16 +17,6 @@ export const checkboxProps = {
     value: componentSizes,
     default: 'medium',
   },
-  enableRipple: {
-    type: Boolean,
-    default: true,
-  },
-}
-
-export const iconType: Record<CheckboxStatus, string> = {
-  blank: 'ic:baseline-check-box-outline-blank',
-  checked: 'ic:baseline-check-box',
-  // indeterminate: 'ic:baseline-indeterminate-check-box',
 }
 
 export type CheckboxProps = ExtractPropTypes<typeof checkboxProps>

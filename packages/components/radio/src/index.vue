@@ -1,19 +1,18 @@
 <script lang="ts" setup>
-import { computed, useAttrs } from 'vue'
+import { computed } from 'vue'
 import { useNamespace } from '@fusion-ui-vue/utils'
-import { UPDATE_MODEL_EVENT, iconSize } from '@fusion-ui-vue/constants'
-import { useRadio } from '@fusion-ui-vue/hooks'
+import { UPDATE_MODEL_EVENT } from '@fusion-ui-vue/constants'
+import { FnIconButton } from '../../icon-button'
 import FnRipple from '../../ripple'
-import FnIcon from '../../icon'
+import RadioButtonChecked from '../../internal/RadioButtonCheckedFilled.vue'
+import RadioButtonUnchecked from '../../internal/RadioButtonUncheckedFilled.vue'
 import { radioProps } from './radio'
 
 const props = defineProps(radioProps)
 const emits = defineEmits<{
   (e: 'update:modelValue', v: string | number | boolean): void
 }>()
-const attrs = useAttrs()
 const ns = useNamespace('radio')
-const cssClass = useRadio(props, ns)
 
 const checked = computed<string | number | boolean>({
   get() {
@@ -23,28 +22,25 @@ const checked = computed<string | number | boolean>({
     emits(UPDATE_MODEL_EVENT, newVal)
   },
 })
-
-const icon = computed<string>(() =>
-  props.modelValue === attrs.value
-    ? 'mdi:radiobox-marked'
-    : 'mdi:radiobox-blank'
-)
 </script>
 
 <template>
-  <span :class="[ns.b(), ns.m(props.size), cssClass]">
-    <fn-icon
-      :class="[ns.e('icon')]"
-      :icon="icon"
-      :size="iconSize[props.size]"
-    />
+  <fn-icon-button
+    v-slot="icon"
+    component="span"
+    v-bind="{ color: $props.color, size: $props.size, class: [ns.b()] }"
+    :class="[ns.b(), ns.m(props.size)]"
+  >
+    <radio-button-checked v-if="checked === $attrs.value" :size="icon.size" />
+    <radio-button-unchecked v-else :size="icon.size" />
     <!-- eslint-disable vue/html-self-closing -->
     <input
       v-bind="$attrs"
       v-model="checked"
       :class="[ns.e('input')]"
+      class="fn-form__input"
       type="radio"
     />
-    <fn-ripple :color="props.color" center />
-  </span>
+    <fn-ripple :color="$props.color" center />
+  </fn-icon-button>
 </template>

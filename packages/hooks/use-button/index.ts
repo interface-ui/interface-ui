@@ -4,11 +4,7 @@ import {
   useColor,
   useRgbColor,
 } from '@fusion-ui-vue/theme'
-import {
-  type ButtonProps,
-  type IconButtonProps,
-  buttonHeight,
-} from '@fusion-ui-vue/components'
+import { type ButtonProps, buttonHeight } from '@fusion-ui-vue/components'
 import { computed } from 'vue'
 import type { ComponentStylingHook } from '../types'
 
@@ -45,22 +41,6 @@ export const useButton: ComponentStylingHook<ButtonProps> = (props, ns) => {
       &.${ns!.m(props.size)} {
         height: ${buttonHeight[props.size]}px;
       }
-    `
-  })
-}
-
-export const useIconButton: ComponentStylingHook<IconButtonProps> = props => {
-  const $color = useColor(props, 'color', 'var(--md-sys-color-primary)')
-  const $colorRgb = useRgbColor(
-    props,
-    'color',
-    'var(--md-sys-color-primary-rgb)'
-  )
-
-  return computed(() => {
-    return css`
-      --fn-icon-button-color: ${$color.value};
-      --fn-icon-button-color-rgb: ${$colorRgb.value};
     `
   })
 }

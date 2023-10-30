@@ -1,18 +1,16 @@
 <script lang="ts" setup>
-import { computed, useAttrs } from 'vue'
-import { UPDATE_MODEL_EVENT, iconSize } from '@fusion-ui-vue/constants'
-import { useCheckbox } from '@fusion-ui-vue/hooks'
+import { computed } from 'vue'
+import { UPDATE_MODEL_EVENT } from '@fusion-ui-vue/constants'
 import { useNamespace } from '@fusion-ui-vue/utils'
-import type { CheckboxStatus } from '../src/checkbox'
-import { checkboxProps, iconType } from '../src/checkbox'
+import FnIconButton from '../../icon-button'
+import { checkboxProps } from '../src/checkbox'
 import FnRipple from '../../ripple'
-import FnIcon from '../../icon'
+import CheckBox from '../../internal/CheckBoxFilled.vue'
+import CheckBoxOutlineBlank from '../..//internal/CheckBoxOutlineBlankFilled.vue'
 
 const props = defineProps(checkboxProps)
 const emits = defineEmits<{ (e: 'update:modelValue', v: boolean): void }>()
 const ns = useNamespace('checkbox')
-const cssClass = useCheckbox(props, ns)
-const attrs = useAttrs()
 
 const checked = computed<boolean>({
   get() {
@@ -22,39 +20,36 @@ const checked = computed<boolean>({
     emits(UPDATE_MODEL_EVENT, newVal)
   },
 })
-
-const status = computed<CheckboxStatus>(() => {
-  if (typeof checked.value === 'boolean') {
-    return checked.value ? 'checked' : 'blank'
-  } else {
-    return (checked.value as any[]).includes(attrs.value) ? 'checked' : 'blank'
-  }
-})
 </script>
 
 <template>
-  <span :class="[ns.b(), ns.m(props.size), cssClass]">
+  <fn-icon-button
+    v-slot="icon"
+    component="span"
+    v-bind="{
+      color: $props.color,
+      size: $props.size,
+      class: [ns.b(), ns.m(props.size)],
+    }"
+  >
     <slot
       v-bind="{
         checked,
-        size: iconSize[props.size],
-        color: props.color,
-        class: [ns.e('icon')],
+        size: icon.size,
+        class: ['fn-icon', ns.e('icon')],
       }"
     >
-      <fn-icon
-        :class="[ns.e('icon')]"
-        :icon="iconType[status]"
-        :size="iconSize[props.size]"
-      />
+      <check-box v-if="checked" :size="icon.size" />
+      <check-box-outline-blank v-else :size="icon.size" />
     </slot>
     <!-- eslint-disable vue/html-self-closing -->
     <input
       v-bind="$attrs"
       v-model="checked"
       :class="[ns.e('input')]"
+      class="fn-form__input"
       type="checkbox"
     />
-    <fn-ripple :color="props.color" center />
-  </span>
+    <fn-ripple :color="$props.color" center />
+  </fn-icon-button>
 </template>

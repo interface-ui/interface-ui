@@ -1,24 +1,32 @@
 <script lang="ts" setup>
+import { computed } from 'vue'
 import { iconSize } from '@fusion-ui-vue/constants'
 import { useNamespace } from '@fusion-ui-vue/utils'
-import { useIconButton } from '@fusion-ui-vue/hooks'
+import { css, useColor, useRgbColor } from '@fusion-ui-vue/theme'
 import FnRipple from '../../ripple'
 import { iconButtonProps } from './icon-button'
 
 const props = defineProps(iconButtonProps)
 const ns = useNamespace('icon-button')
-const cssClass = useIconButton(props, ns)
+const $color = useColor(props, 'color', 'var(--md-sys-color-primary)')
+const $colorRgb = useRgbColor(props, 'color', 'var(--md-sys-color-primary-rgb)')
+
+const cssClass = computed(
+  () => css`
+    --fn-icon-button-color: ${$color.value};
+    --fn-icon-button-color-rgb: ${$colorRgb.value};
+  `
+)
 </script>
 
 <template>
-  <button :class="[ns.b(), cssClass]">
+  <component :is="$props.component" :class="[ns.b(), cssClass]">
     <slot
       v-bind="{
         size: iconSize[props.size],
         color: props.color,
-        class: cssClass,
       }"
     />
     <fn-ripple :color="props.color" center />
-  </button>
+  </component>
 </template>
