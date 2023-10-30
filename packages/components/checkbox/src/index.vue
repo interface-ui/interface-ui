@@ -5,8 +5,8 @@ import { useNamespace } from '@fusion-ui-vue/utils'
 import FnIconButton from '../../icon-button'
 import { checkboxProps } from '../src/checkbox'
 import FnRipple from '../../ripple'
-import CheckBoxFilled from '../../internal/CheckBoxFilled.vue'
-import CheckBoxOutlineBlankFilled from '../..//internal/CheckBoxOutlineBlankFilled.vue'
+import CheckBox from '../../internal/CheckBoxFilled.vue'
+import CheckBoxOutlineBlank from '../..//internal/CheckBoxOutlineBlankFilled.vue'
 
 const props = defineProps(checkboxProps)
 const emits = defineEmits<{ (e: 'update:modelValue', v: boolean): void }>()
@@ -26,7 +26,11 @@ const checked = computed<boolean>({
   <fn-icon-button
     v-slot="icon"
     component="span"
-    v-bind="{ color: $props.color, size: $props.size, class: [ns.b()] }"
+    v-bind="{
+      color: $props.color,
+      size: $props.size,
+      class: [ns.b(), ns.m(props.size)],
+    }"
   >
     <slot
       v-bind="{
@@ -35,8 +39,8 @@ const checked = computed<boolean>({
         class: ['fn-icon', ns.e('icon')],
       }"
     >
-      <check-box-filled v-if="checked" :size="icon.size" />
-      <check-box-outline-blank-filled v-else :size="icon.size" />
+      <check-box v-if="checked" :size="icon.size" />
+      <check-box-outline-blank v-else :size="icon.size" />
     </slot>
     <!-- eslint-disable vue/html-self-closing -->
     <input
