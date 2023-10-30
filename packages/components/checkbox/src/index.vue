@@ -38,8 +38,8 @@ const checked = computed<boolean>({
         class: ['fn-icon', ns.e('icon')],
       }"
     >
-      <check-box v-if="checked" :size="icon.size" />
-      <check-box-outline-blank v-else :size="icon.size" />
+      <check-box v-if="checked" />
+      <check-box-outline-blank v-else />
     </slot>
     <!-- eslint-disable vue/html-self-closing -->
     <input

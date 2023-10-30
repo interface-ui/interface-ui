@@ -6,7 +6,7 @@ export default {
   props: {
     size: {
       type: [Number, String],
-      default: 24,
+      default: 'inherit',
     },
     color: {
       type: String,
@@ -30,8 +30,6 @@ export default {
 
     return {
       fontSize,
-      // eslint-disable-next-line vue/no-dupe-keys
-      color: props.color,
     }
   },
 }
@@ -45,7 +43,10 @@ export default {
     height="24"
     viewBox="0 0 24 24"
     width="24"
-    :style="{ fontSize, color }"
+    :style="{
+      '--fn-icon-font-size': fontSize,
+      '--fn-icon-color': $props.color,
+    }"
   >
     <g><rect fill="none" height="24" width="24" /></g>
     <g>

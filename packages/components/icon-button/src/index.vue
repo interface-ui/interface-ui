@@ -15,18 +15,24 @@ const cssClass = computed(
   () => css`
     --fn-icon-button-color: ${$color.value};
     --fn-icon-button-color-rgb: ${$colorRgb.value};
+    &.${ns.m(props.size)} .fn-icon {
+      font-size: ${iconSize[props.size]}px;
+    }
   `
 )
 </script>
 
 <template>
-  <component :is="$props.component" :class="[ns.b(), cssClass]">
+  <component
+    :is="$props.component"
+    :class="[ns.b(), ns.m($props.size), cssClass]"
+  >
     <slot
       v-bind="{
-        size: iconSize[props.size],
-        color: props.color,
+        size: iconSize[$props.size!],
+        color: $props.color,
       }"
     />
-    <fn-ripple :color="props.color" center />
+    <fn-ripple :color="$props.color" center />
   </component>
 </template>

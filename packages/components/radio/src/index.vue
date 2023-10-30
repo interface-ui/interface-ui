@@ -25,13 +25,12 @@ const checked = computed<string | number | boolean>({
 
 <template>
   <fn-icon-button
-    v-slot="icon"
     component="span"
     v-bind="{ color: $props.color, size: $props.size, class: [ns.b()] }"
     :class="[ns.b(), ns.m(props.size)]"
   >
-    <radio-button-checked v-if="checked === $attrs.value" :size="icon.size" />
-    <radio-button-unchecked v-else :size="icon.size" />
+    <radio-button-checked v-if="checked === $attrs.value" />
+    <radio-button-unchecked v-else />
     <!-- eslint-disable vue/html-self-closing -->
     <input
       v-bind="$attrs"
