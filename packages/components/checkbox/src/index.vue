@@ -4,7 +4,6 @@ import { UPDATE_MODEL_EVENT } from '@fusion-ui-vue/constants'
 import { useNamespace } from '@fusion-ui-vue/utils'
 import FnIconButton from '../../icon-button'
 import { checkboxProps } from '../src/checkbox'
-import FnRipple from '../../ripple'
 import CheckBox from '../../internal/CheckBoxFilled.vue'
 import CheckBoxOutlineBlank from '../..//internal/CheckBoxOutlineBlankFilled.vue'
 
@@ -50,6 +49,5 @@ const checked = computed<boolean>({
       class="fn-form__input"
       type="checkbox"
     />
-    <fn-ripple :color="$props.color" center />
   </fn-icon-button>
 </template>

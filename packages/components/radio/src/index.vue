@@ -3,7 +3,6 @@ import { computed } from 'vue'
 import { useNamespace } from '@fusion-ui-vue/utils'
 import { UPDATE_MODEL_EVENT } from '@fusion-ui-vue/constants'
 import { FnIconButton } from '../../icon-button'
-import FnRipple from '../../ripple'
 import RadioButtonChecked from '../../internal/RadioButtonCheckedFilled.vue'
 import RadioButtonUnchecked from '../../internal/RadioButtonUncheckedFilled.vue'
 import { radioProps } from './radio'
@@ -41,6 +40,5 @@ const checked = computed<string | number | boolean>({
       class="fn-form__input"
       type="radio"
     />
-    <fn-ripple :color="$props.color" center />
   </fn-icon-button>
 </template>
