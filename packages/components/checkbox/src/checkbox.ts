@@ -23,10 +23,4 @@ export const checkboxProps = {
   },
 }
 
-export const iconType: Record<CheckboxStatus, string> = {
-  blank: 'ic:baseline-check-box-outline-blank',
-  checked: 'ic:baseline-check-box',
-  // indeterminate: 'ic:baseline-indeterminate-check-box',
-}
-
 export type CheckboxProps = ExtractPropTypes<typeof checkboxProps>
