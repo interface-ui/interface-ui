@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { noop, useResizeObserver, useTimeoutFn } from '@vueuse/core'
 import { computed, onMounted, ref } from 'vue'
-import FnIcon from '../../icon/src/index.vue'
+// import FnIcon from '../../icon/src/index.vue'
 import { getLastOffset, getSvgIncon } from './message'
 import type { MessageType } from './types'
 const props = withDefaults(
@@ -20,7 +20,7 @@ const props = withDefaults(
     offset: 20,
     closeBtn: false,
     showIcon: true,
-  },
+  }
 )
 defineEmits(['destroy'])
 
@@ -30,8 +30,7 @@ const elRef = ref<HTMLDivElement>()
 let clearTimer = noop
 
 function startTimer() {
-  if (props.duration === 0)
-    return
+  if (props.duration === 0) return
   ;({ stop: clearTimer } = useTimeoutFn(() => {
     visible.value = false
     clearTimer = noop
@@ -69,7 +68,7 @@ defineExpose({ bottom, lastOffset, visible })
         {{ message }}
       </div>
       <div v-if="closeBtn" class="close-btn" @click="visible = false">
-        <fn-icon icon="material-symbols:close" size="18px" />
+        <!-- <fn-icon icon="material-symbols:close" size="18px" /> -->
       </div>
     </div>
   </Transition>

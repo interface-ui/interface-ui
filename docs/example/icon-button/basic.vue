@@ -1,12 +1,12 @@
+<script lang="ts" setup>
+import { CakeFilled } from 'fusion-ui-iconify'
+</script>
+
 <template>
-  <div space-y-2>
-    <div fscw gap-2>
-      <fn-icon-button #default="icon">
-        <fn-icon icon="mdi:cake-variant" v-bind="icon" />
-      </fn-icon-button>
-      <fn-icon-button disabled #default="icon">
-        <fn-icon icon="mdi:cake-variant" v-bind="icon" />
-      </fn-icon-button>
-    </div>
-  </div>
+  <fn-icon-button>
+    <cake-filled />
+  </fn-icon-button>
+  <fn-icon-button disabled>
+    <cake-filled />
+  </fn-icon-button>
 </template>

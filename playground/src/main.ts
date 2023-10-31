@@ -5,7 +5,7 @@ import fusionUi from '@fusion-ui-vue/components'
 
 import './style.css'
 // import 'fusion-ui-vue/dist/styles/base.css'
-import 'fusion-ui-vue/dist/styles/index.css' // 打包后的全量样式
+// import 'fusion-ui-vue/dist/styles/index.css' // 打包后的全量样式
 import '@fusion-ui-vue/components/ripple/src/index.less' // 开发调试的样式
 import '@fusion-ui-vue/components/button/src/index.less' // 开发调试的样式
 import '@fusion-ui-vue/components/alert/src/index.less' // 开发调试的样式

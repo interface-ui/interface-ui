@@ -37,7 +37,6 @@
     "@pnpm/types": "github:pnpm/types",
     "@vue/shared": "^3.2.47",
     "@vueuse/core": "^9.1.1",
-    "fusion-ui-iconify": "^1.0.21",
     "lodash-unified": "^1.0.3",
     "vite-plugin-progress": "^0.0.7",
     "vue": "~3.2.45"

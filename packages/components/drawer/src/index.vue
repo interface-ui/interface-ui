@@ -2,7 +2,7 @@
 import { computed, ref } from 'vue'
 import { isString, useNamespace } from '@fusion-ui-vue/utils'
 import { useDrawer } from '@fusion-ui-vue/hooks'
-import { FnIcon } from '../../icon'
+// import { FnIcon } from '../../icon'
 import { drawerProps } from './drawer'
 const props = defineProps(drawerProps)
 const { visible, doClose } = useDrawer(props)
@@ -46,7 +46,7 @@ const handleClose = (event: MouseEvent) => {
             {{ props.title }}
           </span>
           <span class="drawer-close" @click="doClose">
-            <fn-icon icon="ic:round-close" size="25" />
+            <!-- <fn-icon icon="ic:round-close" size="25" /> -->
           </span>
         </header>
         <div class="drawer-body">
