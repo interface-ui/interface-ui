@@ -4,8 +4,8 @@ import { UPDATE_MODEL_EVENT } from '@fusion-ui-vue/constants'
 import { useNamespace } from '@fusion-ui-vue/utils'
 import FnIconButton from '../../icon-button'
 import { checkboxProps } from '../src/checkbox'
-import CheckBox from '../../internal/CheckBoxFilled.vue'
-import CheckBoxOutlineBlank from '../..//internal/CheckBoxOutlineBlankFilled.vue'
+import CheckBox from '../../svg-icon/internal/CheckBoxFilled.vue'
+import CheckBoxOutlineBlank from '../../svg-icon/internal/CheckBoxOutlineBlankFilled.vue'
 
 const props = defineProps(checkboxProps)
 const emits = defineEmits<{ (e: 'update:modelValue', v: boolean): void }>()
