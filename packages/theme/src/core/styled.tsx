@@ -3,7 +3,7 @@ import { computed, defineComponent, mergeProps } from 'vue'
 import type { CSSInterpolation } from '@emotion/css'
 import { css } from '@emotion/css'
 import { useTheme } from '../hooks'
-import type { Theme } from './types'
+import type Theme from './theme'
 
 type RenderTypes = Parameters<typeof h>
 

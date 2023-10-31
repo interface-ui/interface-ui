@@ -24,6 +24,7 @@ import FnFormLabel from './form-label'
 import FnTypography from './typography'
 import FnSwitchNew from './switch-new'
 import FnTextField from './text-field'
+import FnSvgIcon from './svg-icon'
 export * from './avatar-group'
 export * from './button'
 export * from './icon-button'
@@ -50,6 +51,7 @@ export * from './typography'
 export * from './ripple'
 export * from './switch-new'
 export * from './text-field'
+export * from './svg-icon'
 
 export const components = [
   FnButton,
@@ -78,6 +80,7 @@ export const components = [
   FnTypography,
   FnSwitchNew,
   FnTextField,
+  FnSvgIcon,
 ]
 
 const CK = {

@@ -25,7 +25,7 @@ const list: PropTableItem[] = [
     name: 'color',
     remark: '自定义按钮颜色',
     type: 'Enum',
-    optional: ['ThemePaletteColor', 'ThemeCallBack', 'String'],
+    optional: ['ThemeSchemes', 'ThemeCallBack', 'String'],
     default: 'primary',
   },
   {

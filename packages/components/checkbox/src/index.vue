@@ -4,9 +4,8 @@ import { UPDATE_MODEL_EVENT } from '@fusion-ui-vue/constants'
 import { useNamespace } from '@fusion-ui-vue/utils'
 import FnIconButton from '../../icon-button'
 import { checkboxProps } from '../src/checkbox'
-import FnRipple from '../../ripple'
-import CheckBox from '../../internal/CheckBoxFilled.vue'
-import CheckBoxOutlineBlank from '../..//internal/CheckBoxOutlineBlankFilled.vue'
+import CheckBox from '../../svg-icon/internal/CheckBoxFilled.vue'
+import CheckBoxOutlineBlank from '../../svg-icon/internal/CheckBoxOutlineBlankFilled.vue'
 
 const props = defineProps(checkboxProps)
 const emits = defineEmits<{ (e: 'update:modelValue', v: boolean): void }>()
@@ -39,8 +38,8 @@ const checked = computed<boolean>({
         class: ['fn-icon', ns.e('icon')],
       }"
     >
-      <check-box v-if="checked" :size="icon.size" />
-      <check-box-outline-blank v-else :size="icon.size" />
+      <check-box v-if="checked" />
+      <check-box-outline-blank v-else />
     </slot>
     <!-- eslint-disable vue/html-self-closing -->
     <input
@@ -50,6 +49,5 @@ const checked = computed<boolean>({
       class="fn-form__input"
       type="checkbox"
     />
-    <fn-ripple :color="$props.color" center />
   </fn-icon-button>
 </template>

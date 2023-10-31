@@ -1,6 +1,5 @@
 import type { PropTableItem } from '../../../.vitepress/components/table-block/src/table'
 const list: PropTableItem[] = [
-
   {
     name: 'model-value / v-model',
     remark: 'Binding value',
@@ -17,7 +16,7 @@ const list: PropTableItem[] = [
     name: 'color',
     remark: 'Custom color',
     type: 'Enum',
-    optional: ['ThemePaletteColor', 'ThemeCallBack', 'String'],
+    optional: ['ThemeSchemes', 'ThemeCallBack', 'String'],
     default: 'primary',
   },
   {

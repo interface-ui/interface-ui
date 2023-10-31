@@ -3,9 +3,8 @@ import { computed } from 'vue'
 import { useNamespace } from '@fusion-ui-vue/utils'
 import { UPDATE_MODEL_EVENT } from '@fusion-ui-vue/constants'
 import { FnIconButton } from '../../icon-button'
-import FnRipple from '../../ripple'
-import RadioButtonChecked from '../../internal/RadioButtonCheckedFilled.vue'
-import RadioButtonUnchecked from '../../internal/RadioButtonUncheckedFilled.vue'
+import RadioButtonChecked from '../../svg-icon/internal/RadioButtonCheckedFilled.vue'
+import RadioButtonUnchecked from '../../svg-icon/internal/RadioButtonUncheckedFilled.vue'
 import { radioProps } from './radio'
 
 const props = defineProps(radioProps)
@@ -26,13 +25,12 @@ const checked = computed<string | number | boolean>({
 
 <template>
   <fn-icon-button
-    v-slot="icon"
     component="span"
     v-bind="{ color: $props.color, size: $props.size, class: [ns.b()] }"
     :class="[ns.b(), ns.m(props.size)]"
   >
-    <radio-button-checked v-if="checked === $attrs.value" :size="icon.size" />
-    <radio-button-unchecked v-else :size="icon.size" />
+    <radio-button-checked v-if="checked === $attrs.value" />
+    <radio-button-unchecked v-else />
     <!-- eslint-disable vue/html-self-closing -->
     <input
       v-bind="$attrs"
@@ -41,6 +39,5 @@ const checked = computed<string | number | boolean>({
       class="fn-form__input"
       type="radio"
     />
-    <fn-ripple :color="$props.color" center />
   </fn-icon-button>
 </template>

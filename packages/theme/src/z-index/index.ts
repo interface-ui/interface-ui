@@ -1,4 +1,4 @@
-import zIndexCSS from '@fusion-ui-vue/theme/styles/palette.less?inline'
+import zIndexCSS from '@fusion-ui-vue/theme/styles/z-index.less?inline'
 import type { ZIndex } from './z-index'
 
 const match = zIndexCSS.matchAll(/--fn-sys-z-index-(.+): ([0-9]+);/g)

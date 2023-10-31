@@ -16,7 +16,7 @@ const list: PropTableItem[] = [
     name: 'color',
     remark: '自定义颜色',
     type: 'Enum',
-    optional: ['ThemePaletteColor', 'ThemeCallBack', 'String'],
+    optional: ['ThemeSchemes', 'ThemeCallBack', 'String'],
     default: 'primary',
   },
   {
@@ -26,7 +26,6 @@ const list: PropTableItem[] = [
     optional: ['medium', 'small'],
     default: 'medium',
   },
-
 ]
 
 export default list

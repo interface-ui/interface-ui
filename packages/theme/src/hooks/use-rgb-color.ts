@@ -30,7 +30,7 @@ export const useRgbColor = <T extends { [k: string]: AcceptableColor | any }>(
       const { r, g, b } = rgbaFromArgb(argbFromHex(color(theme.value)))
       return `${r} ${g} ${b}`
     }
-    if (typeof color === 'string' && color in theme.value.palette) {
+    if (typeof color === 'string' && color in theme.value.schemes) {
       const _color = color.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase()
       return `var(--md-sys-color-${_color}-rgb)`
     }

@@ -1,4 +1,4 @@
-import { css, themePaletteColor, useColor } from '@fusion-ui-vue/theme'
+import { css, themeSchemes, useColor } from '@fusion-ui-vue/theme'
 
 import { computed } from 'vue'
 import type { AlertProps } from '../../components/alert/src/alert'
@@ -9,18 +9,18 @@ export const useAlert: ComponentStylingHook<AlertProps> = (props, ns) => {
     ? useColor(props, 'color')
     : useColor(props, 'severity', 'var(--md-sys-color-primary)')
   const $onColor = computed(() =>
-    themePaletteColor.includes(props.severity as any)
+    themeSchemes.includes(props.severity as any)
       ? `var(--md-sys-color-on-${props.severity})`
       : null
   )
   const $background = computed(() =>
-    themePaletteColor.includes(props.severity as any)
+    themeSchemes.includes(props.severity as any)
       ? `var(--md-sys-color-${props.severity}-container)`
       : null
   )
 
   const $backgroundFilled = computed(() =>
-    themePaletteColor.includes(props.severity as any)
+    themeSchemes.includes(props.severity as any)
       ? `var(--md-sys-color-${props.severity}-container-filled)`
       : null
   )

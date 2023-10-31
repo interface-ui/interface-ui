@@ -1,3 +1,4 @@
+<!-- eslint-disable @typescript-eslint/indent -->
 <script lang="ts" setup>
 import { computed } from 'vue'
 import type { TypographyMap, TypographyProp } from '@fusion-ui-vue/theme'

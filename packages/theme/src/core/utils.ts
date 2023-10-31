@@ -1,36 +1,83 @@
 /* eslint-disable quote-props */
 import { injectGlobal } from '@emotion/css'
 import type {
+  CustomColor,
   CustomColorGroup,
+  Theme as DynamicTheme,
   Scheme,
 } from '@material/material-color-utilities'
-import { hexFromArgb, rgbaFromArgb } from '@material/material-color-utilities'
+import {
+  CorePalette,
+  hexFromArgb,
+  rgbaFromArgb,
+} from '@material/material-color-utilities'
 import type ThemeMode from '../mode'
-import type { AdditionalPalette, Palette, ParsedScheme, Theme } from './types'
+import { themePalettesTones } from './types'
+import type {
+  AdditionalSchemes,
+  ParsedSchemes,
+  Schemes,
+  ThemePalettes,
+  ThemePalettesTones,
+} from './types'
+import type Theme from './theme'
 
-export const parseShceme = (scheme: Scheme): ParsedScheme => {
-  const palette: Palette = {} as any
+export const parsePalettes = (
+  palette: DynamicTheme['palettes']
+): ThemePalettes => {
+  const palettes = {} as ThemePalettes
+  for (const [color, tones] of Object.entries(palette)) {
+    const obj = {} as Record<ThemePalettesTones, string>
+    themePalettesTones.forEach(
+      toneKey =>
+        (obj[toneKey as ThemePalettesTones] = hexFromArgb(tones.tone(+toneKey)))
+    )
+    palettes[color as keyof DynamicTheme['palettes']] = obj
+  }
+
+  return palettes
+}
+
+export const createCustomPalettes = (customColors: CustomColor[]) => {
+  const palettes = {} as any
+  customColors.forEach(color => {
+    const { name, value } = color
+    const tones = CorePalette.of(value).a1
+
+    const obj = {} as Record<ThemePalettesTones, string>
+    themePalettesTones.forEach(
+      toneKey =>
+        (obj[toneKey as ThemePalettesTones] = hexFromArgb(tones.tone(+toneKey)))
+    )
+    palettes[name.toLowerCase()] = obj
+  })
+
+  return palettes
+}
+
+export const parseShcemes = (scheme: Scheme): ParsedSchemes => {
+  const schemes: Schemes = {} as any
   const styles: Record<string, string> = {} as any
   for (const [key, value] of Object.entries(scheme.toJSON())) {
     const token = key.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase()
     const color = hexFromArgb(value)
     const { r, g, b } = rgbaFromArgb(value)
-    palette[key as keyof Palette] = color
+    schemes[key as keyof Schemes] = color
     styles[`--md-sys-color-${token}`] = color
     styles[`--md-sys-color-${token}-rgb`] = `${r} ${g} ${b}`
   }
 
-  return { palette, styles }
+  return { schemes, styles }
 }
 
-export const parseCustomScheme = (
-  schemes: CustomColorGroup[],
+export const parseCustomSchemes = (
+  scheme: CustomColorGroup[],
   mode: ThemeMode
 ) => {
-  const palette: AdditionalPalette = {} as any
+  const schemes: AdditionalSchemes = {} as any
   const styles: Record<string, string> = {} as any
 
-  schemes.forEach(scheme => {
+  scheme.forEach(scheme => {
     const { name } = scheme.color
     const _palette = mode === 'light' ? scheme.light : scheme.dark
     for (const [key, value] of Object.entries(_palette)) {
@@ -40,30 +87,30 @@ export const parseCustomScheme = (
       const token = _key.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase()
       const color = hexFromArgb(value)
       const { r, g, b } = rgbaFromArgb(value)
-      palette[_key as keyof AdditionalPalette] = color
+      schemes[_key as keyof AdditionalSchemes] = color
       styles[`--md-sys-color-${token}`] = color
       styles[`--md-sys-color-${token}-rgb`] = `${r} ${g} ${b}`
     }
   })
 
-  return { palette, styles }
+  return { schemes, styles }
 }
 
-export const mergeParsedScheme = (...args: ParsedScheme[]): ParsedScheme => {
-  const palette: Palette = {} as any
+export const mergeParsedSchemes = (...args: ParsedSchemes[]): ParsedSchemes => {
+  const schemes: Schemes = {} as any
   const styles: Record<string, string> = {} as any
 
   args.forEach(parsedScheme => {
-    Object.assign(palette, parsedScheme.palette)
+    Object.assign(schemes, parsedScheme.schemes)
     Object.assign(styles, parsedScheme.styles)
   })
 
-  return { palette, styles }
+  return { schemes, styles }
 }
 
 export const injectJSS = (
-  lightPalette: ParsedScheme,
-  darkPalette: ParsedScheme,
+  lightSchemes: ParsedSchemes,
+  darkSchemes: ParsedSchemes,
   theme: Theme
 ) => {
   const { fontFamily, htmlFontSize } = theme.typography
@@ -72,11 +119,11 @@ export const injectJSS = (
   injectGlobal({
     ':root': {
       colorScheme: 'light',
-      ...lightPalette?.styles,
+      ...lightSchemes?.styles,
     },
     ':root[data-theme="dark"]': {
       colorScheme: 'dark',
-      ...darkPalette?.styles,
+      ...darkSchemes?.styles,
     },
     html: {
       fontSize: htmlFontSize,

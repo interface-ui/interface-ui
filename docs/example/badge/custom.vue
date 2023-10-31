@@ -7,7 +7,7 @@ const StyledBadge = styled(FnBadge)(theme => ({
   '& .fn-badge--icon': {
     backgroundColor: '#44b700',
     color: '#44b700',
-    boxShadow: `0 0 0 2px ${theme.palette.background}`,
+    boxShadow: `0 0 0 2px ${theme.schemes.background}`,
     '&::after': {
       position: 'absolute',
       top: 0,
@@ -36,7 +36,7 @@ const SmallAvatar = styled(FnAvatar, {
   src: 'https://mui.com/static/images/avatar/2.jpg',
   size: 22,
 })(theme => ({
-  border: `2px solid ${theme.palette.background}`,
+  border: `2px solid ${theme.schemes.background}`,
   transform: 'translate(30%, 30%)',
 }))
 </script>
