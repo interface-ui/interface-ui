@@ -2,7 +2,6 @@ import FnButton from './button'
 import FnIconButton from './icon-button'
 import FnButtonGroup from './button-group'
 import FnAlert from './alert'
-import FnIcon from './icon'
 import FnLink from './link'
 import FnMessage from './message'
 import FnDialog from './dialog'
@@ -30,7 +29,6 @@ export * from './button'
 export * from './icon-button'
 export * from './button-group'
 export * from './alert'
-export * from './icon'
 export * from './link'
 export * from './message'
 export * from './dialog'
@@ -58,7 +56,6 @@ export const components = [
   FnIconButton,
   FnButtonGroup,
   FnAlert,
-  FnIcon,
   FnLink,
   FnMessage,
   FnDialog,

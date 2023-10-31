@@ -3,8 +3,8 @@ import { useNamespace } from '@fusion-ui-vue/utils'
 import { computed } from 'vue'
 import { UPDATE_MODEL_EVENT } from '@fusion-ui-vue/constants'
 import { css, themeSchemes, useColor, useRgbColor } from '@fusion-ui-vue/theme'
+import CheckFilled from '../../svg-icon/internal/CheckFilled.vue'
 import FnIconButton from '../../icon-button'
-import FnIcon from '../../icon'
 import { switchHeight, switchProps } from './switch'
 
 const props = defineProps(switchProps)
@@ -47,10 +47,9 @@ const cssClass = computed(
     >
       <span :class="[ns.em('thumb', 'icon-wrapper')]">
         <slot v-bind="{ class: [ns.em('thumb', 'icon')], size: '16' }">
-          <fn-icon
+          <check-filled
             v-if="!props.disabledIcon"
             :class="[ns.em('thumb', 'icon')]"
-            icon="mdi:check"
             size="16"
           />
         </slot>
