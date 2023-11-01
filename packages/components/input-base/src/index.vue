@@ -2,11 +2,13 @@
 import { useNamespace } from '@fusion-ui-vue/utils'
 import { computed } from 'vue'
 import { UPDATE_MODEL_EVENT } from '@fusion-ui-vue/constants'
-import { inputProps } from './input'
+import { inputBaseProps } from './input-base'
+import useCss from './index.jss'
 
-const props = defineProps(inputProps)
+const props = defineProps(inputBaseProps)
 const emits = defineEmits<{ (e: 'update:modelValue', v: string): void }>()
-const ns = useNamespace('input')
+const ns = useNamespace('input-base')
+const cssClass = useCss(props)
 
 const value = computed<string>({
   get() {
@@ -19,6 +21,5 @@ const value = computed<string>({
 </script>
 
 <template>
-  <!-- eslint-disable-next-line vue/html-self-closing -->
-  <input v-model="value" :class="[ns.b()]" class="bady-large" />
+  <input v-model="value" :class="[ns.b(), cssClass]" />
 </template>

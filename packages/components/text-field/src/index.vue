@@ -4,7 +4,7 @@ import { computed, useAttrs, useSlots } from 'vue'
 import { css, useColor } from '@fusion-ui-vue/theme'
 import { UPDATE_MODEL_EVENT } from '@fusion-ui-vue/constants'
 import Typography from '../../typography'
-import FnInput from '../../input'
+import FnInputBase from '../../input-base'
 import { textFieldProps } from './text-field'
 
 const props = defineProps(textFieldProps)
@@ -71,7 +71,7 @@ const hasContent = computed<boolean>(() => {
         name="startAdornment"
         v-bind="{ class: [ns.m('start-adornment')], color: 'onSurfaceVariant' }"
       />
-      <fn-input
+      <fn-input-base
         :id="id"
         v-model="value"
         type="text"

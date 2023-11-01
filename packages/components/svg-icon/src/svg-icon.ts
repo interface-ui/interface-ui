@@ -12,7 +12,7 @@ export const svgIconProps = buildProps({
     default: 'inherit',
   },
   cs: {
-    type: [Object, String] as PropType<TemplateStringsArray>,
+    type: [Object, String, Array] as PropType<TemplateStringsArray>,
   },
 })
 

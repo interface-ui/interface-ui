@@ -5,7 +5,7 @@ import FnAlert from './alert'
 import FnLink from './link'
 import FnMessage from './message'
 import FnDialog from './dialog'
-import FnInput from './input'
+import FnInputBase from './input-base'
 import FnRadio from './radio'
 import FnCard from './card'
 import FnSwitch from './switch'
@@ -32,7 +32,7 @@ export * from './alert'
 export * from './link'
 export * from './message'
 export * from './dialog'
-export * from './input'
+export * from './input-base'
 export * from './radio'
 export * from './switch'
 export * from './badge'
@@ -59,7 +59,7 @@ export const components = [
   FnLink,
   FnMessage,
   FnDialog,
-  FnInput,
+  FnInputBase,
   FnRadio,
   FnSwitch,
   FnBadge,
