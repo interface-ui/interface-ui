@@ -1,5 +1,7 @@
 <script lang="ts" setup>
-import { CakeFilled } from 'fusion-ui-iconify'
+// import { CakeFilled } from 'fusion-ui-iconify'
+import * as pkg from 'fusion-ui-iconify'
+const { CakeFilled } = pkg
 </script>
 
 <template>
