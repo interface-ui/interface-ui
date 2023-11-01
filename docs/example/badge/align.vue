@@ -1,7 +1,11 @@
 <script lang="ts" setup>
 import { FnRadio } from 'fusion-ui-vue'
 import { ref } from 'vue'
+import { useTheme } from '@fusion-ui-vue/theme'
+import * as pkg from 'fusion-ui-iconify'
+const { NotificationsFilled } = pkg
 
+const theme = useTheme()
 const xAlign = ref<'left' | 'right'>('right')
 const yAlign = ref<'top' | 'bottom'>('top')
 </script>
@@ -35,19 +39,19 @@ const yAlign = ref<'top' | 'bottom'>('top')
   </div>
   <div fscw gap-10>
     <fn-badge variant="dot" :x-align="xAlign" :y-align="yAlign">
-      <fn-icon icon="mdi:bell" :color="theme => theme.colors.grey[500]" />
+      <notifications-filled size="24" :color="theme.schemes.secondary" />
     </fn-badge>
     <fn-badge content="1" :x-align="xAlign" :y-align="yAlign">
-      <fn-icon icon="mdi:bell" :color="theme => theme.colors.grey[500]" />
+      <notifications-filled size="24" :color="theme.schemes.secondary" />
     </fn-badge>
     <fn-badge content="10" :x-align="xAlign" :y-align="yAlign">
-      <fn-icon icon="mdi:bell" :color="theme => theme.colors.grey[500]" />
+      <notifications-filled size="24" :color="theme.schemes.secondary" />
     </fn-badge>
     <fn-badge content="1000" max="99" :x-align="xAlign" :y-align="yAlign">
-      <fn-icon icon="mdi:bell" :color="theme => theme.colors.grey[500]" />
+      <notifications-filled size="24" :color="theme.schemes.secondary" />
     </fn-badge>
     <fn-badge content="1000" max="999" :x-align="xAlign" :y-align="yAlign">
-      <fn-icon icon="mdi:bell" :color="theme => theme.colors.grey[500]" />
+      <notifications-filled size="24" :color="theme.schemes.secondary" />
     </fn-badge>
   </div>
 </template>
