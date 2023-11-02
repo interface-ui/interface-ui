@@ -150,7 +150,7 @@ const useCss: ComponentStylingHook<TextFieldProps> = props => {
         opacity: 1;
       }
       & .fn-text-field__label {
-        transform: translate(17px, -50%) scale(0.75);
+        transform: translate(18px, -50%) scale(0.75);
       }
       & legend {
         max-width: 100%;
