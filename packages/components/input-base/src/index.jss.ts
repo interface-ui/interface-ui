@@ -9,11 +9,25 @@ const useCss: ComponentStylingHook<InputBaseProps> = props =>
 
     const styleFromCs = props.cs ? css(props.cs) : ''
     return cx(
-      css`
-        background: none;
-        color: inherit;
-      `,
-      css(theme.value.typography.body.large as any),
+      css([
+        {
+          background: 'none',
+          color: 'inherit',
+        },
+        theme.value.typography.body.large as any,
+        props.internal && {
+          cursor: 'inherit',
+          position: 'absolute',
+          opacity: 0,
+          width: '100%',
+          height: '100%',
+          top: '0px',
+          left: '0px',
+          margin: '0px',
+          padding: '0px',
+          Zndex: 1,
+        },
+      ]),
       styleFromCs
     )
   })

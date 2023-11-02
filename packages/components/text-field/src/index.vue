@@ -73,10 +73,11 @@ const hasContent = computed<boolean>(() => {
       />
       <fn-input-base
         :id="id"
-        v-model="value"
-        type="text"
         v-bind="$attrs"
+        v-model="value"
         :class="[ns.e('input')]"
+        type="text"
+        internal
       />
       <slot
         name="endAdornment"

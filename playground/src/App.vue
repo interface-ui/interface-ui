@@ -4,8 +4,8 @@ import createTheme from '@fusion-ui-vue/theme'
 // import Badge from './components/Badge.vue'
 // import AvatarGroup from './components/AvatarGroup.vue'
 // import ButtonGroup from './components/ButtonGroup.vue'
-// import SwitchNew from './components/Switch.vue'
-import TextField from './components/TextField.vue'
+import SwitchNew from './components/Switch.vue'
+// import TextField from './components/TextField.vue'
 // import Alert from './components/Alert.vue'
 // import SvgIcon from './components/SvgIcon.vue'
 import ButtonT from './components/Button.vue'
@@ -38,8 +38,8 @@ const value = ref('')
   <!-- <badge /> -->
   <!-- <avatar-group /> -->
   <!-- <button-group /> -->
-  <!-- <switch-new /> -->
-  <TextField />
+  <switch-new />
+  <!-- <TextField /> -->
   <!-- <Alert /> -->
   <!-- <svg-icon /> -->
   <button-t />

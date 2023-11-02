@@ -8,10 +8,12 @@ import CheckBox from '../../svg-icon/internal/CheckBoxFilled.vue'
 import CheckBoxOutlineBlank from '../../svg-icon/internal/CheckBoxOutlineBlankFilled.vue'
 
 const props = defineProps(checkboxProps)
-const emits = defineEmits<{ (e: 'update:modelValue', v: boolean): void }>()
+const emits = defineEmits<{
+  (e: 'update:modelValue', v: boolean | string[]): void
+}>()
 const ns = useNamespace('checkbox')
 
-const checked = computed<boolean>({
+const checked = computed<boolean | string[]>({
   get() {
     return props.modelValue as any
   },

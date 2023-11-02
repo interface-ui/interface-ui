@@ -1,3 +1,4 @@
+import FnButtonBase from './button-base'
 import FnButton from './button'
 import FnIconButton from './icon-button'
 import FnButtonGroup from './button-group'
@@ -24,6 +25,7 @@ import FnTypography from './typography'
 import FnSwitchNew from './switch-new'
 import FnTextField from './text-field'
 import FnSvgIcon from './svg-icon'
+export * from './button-base'
 export * from './avatar-group'
 export * from './button'
 export * from './icon-button'
@@ -52,6 +54,7 @@ export * from './text-field'
 export * from './svg-icon'
 
 export const components = [
+  FnButtonBase,
   FnButton,
   FnIconButton,
   FnButtonGroup,
