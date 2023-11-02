@@ -12,9 +12,12 @@ import { DeleteFilled } from 'fusion-ui-iconify'
       <delete-filled />
       delete
     </fn-button>
-    <fn-button variant="outlined" size="large">
+    <fn-button variant="outlined" size="large" disabled>
       <delete-filled />
       delete
     </fn-button>
+    <fn-icon-button>
+      <delete-filled />
+    </fn-icon-button>
   </div>
 </template>

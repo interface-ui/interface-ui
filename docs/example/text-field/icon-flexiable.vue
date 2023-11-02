@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
+import * as pkg from 'fusion-ui-iconify'
 
+const { VisibilityFilled, VisibilityOffFilled } = pkg
 const weight = ref<string>('')
 const amount = ref<string>('')
 const password = ref<string>('')
@@ -47,8 +49,13 @@ const variants = ['outlined', 'filled', 'standard'] as const
       >
         <template #endAdornment="adornment">
           <fn-icon-button v-slot="icon" v-bind="adornment">
-            <fn-icon
-              :icon="showPassword ? 'mdi:eye' : 'mdi:eye-off'"
+            <visibility-filled
+              v-show="showPassword"
+              v-bind="icon"
+              @click="showPassword = !showPassword"
+            />
+            <visibility-off-filled
+              v-show="!showPassword"
               v-bind="icon"
               @click="showPassword = !showPassword"
             />

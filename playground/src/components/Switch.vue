@@ -1,17 +1,17 @@
 <script lang="ts" setup>
-import '@fusion-ui-vue/components/switch/src/index.less' // 开发调试的样式
-import '@fusion-ui-vue/components/icon-button/src/index.less' // 开发调试的样式
+// import '@fusion-ui-vue/components/switch/src/index.less' // 开发调试的样式
 import { FnSwitch } from '@fusion-ui-vue/components'
-
 import { computed, ref } from 'vue'
-const value = ref([false, true])
-const color = computed(() => (value.value[1] ? 'primary' : 'error'))
+
+const value = ref(false)
+const color = computed(() => (value.value ? 'primary' : 'error'))
 </script>
 
 <template>
+  {{ value }}
   <div class="content">
-    <fn-switch size="small" v-model="value[0]" :color="color" />
-    <fn-switch size="small" v-model="value[1]" />
+    <fn-switch size="small" v-model="value" :color="color" />
+    <fn-switch size="small" v-model="value" disabled />
     <!-- <fn-switch size="small" v-model="value" disabled /> -->
   </div>
   <!-- <div class="content">

@@ -1,32 +1,19 @@
 <script lang="ts" setup>
-import { computed } from 'vue'
 import { iconSize } from '@fusion-ui-vue/constants'
 import { useNamespace } from '@fusion-ui-vue/utils'
-import { css, useColor, useRgbColor } from '@fusion-ui-vue/theme'
+import FnButtonBase from '../../button-base'
 import FnRipple from '../../ripple'
 import { iconButtonProps } from './icon-button'
+import useCss from './index.jss'
 
 const props = defineProps(iconButtonProps)
 const ns = useNamespace('icon-button')
-const $color = useColor(props, 'color', 'var(--md-sys-color-primary)')
-const $colorRgb = useRgbColor(props, 'color', 'var(--md-sys-color-primary-rgb)')
 
-const cssClass = computed(
-  () => css`
-    --fn-icon-button-color: ${$color.value};
-    --fn-icon-button-color-rgb: ${$colorRgb.value};
-    &.${ns.m(props.size)} .fn-icon {
-      font-size: ${iconSize[props.size]}px;
-    }
-  `
-)
+const cssClass = useCss(props, ns)
 </script>
 
 <template>
-  <component
-    :is="$props.component"
-    :class="[ns.b(), ns.m($props.size), cssClass]"
-  >
+  <fn-button-base :class="[ns.b(), ns.m($props.size), cssClass]">
     <slot
       v-bind="{
         size: iconSize[$props.size!],
@@ -34,5 +21,5 @@ const cssClass = computed(
       }"
     />
     <fn-ripple :color="$props.color" center />
-  </component>
+  </fn-button-base>
 </template>

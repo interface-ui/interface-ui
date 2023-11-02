@@ -24,6 +24,9 @@ export const switchProps = buildProps({
     value: componentSizes,
     default: 'medium',
   },
+  cs: {
+    type: [Object, String, Array] as PropType<TemplateStringsArray>,
+  },
   disabledIcon: {
     type: Boolean,
     default: false,
