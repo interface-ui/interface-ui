@@ -30,6 +30,9 @@ export const textFieldProps = buildProps({
     values: componentSizes,
     default: 'large',
   },
+  cs: {
+    type: [String, Array, Object] as PropType<TemplateStringsArray>,
+  },
   error: {
     type: Boolean,
     default: false,

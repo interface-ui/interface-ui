@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import { FnButton, FnInputBase } from '@fusion-ui-vue/components'
+import { FnButton } from '@fusion-ui-vue/components'
 import createTheme from '@fusion-ui-vue/theme'
 // import Badge from './components/Badge.vue'
 // import AvatarGroup from './components/AvatarGroup.vue'
 // import ButtonGroup from './components/ButtonGroup.vue'
-import SwitchNew from './components/Switch.vue'
-// import TextField from './components/TextField.vue'
+// import SwitchNew from './components/Switch.vue'
+import TextField from './components/TextField.vue'
 // import Alert from './components/Alert.vue'
 // import SvgIcon from './components/SvgIcon.vue'
-import ButtonT from './components/Button.vue'
-import Checkbox from './components/Checkbox.vue'
-import { toRaw, watch, ref } from 'vue'
+// import ButtonT from './components/Button.vue'
+// import Checkbox from './components/Checkbox.vue'
+import { toRaw, watch } from 'vue'
 
 const theme = createTheme()
 
@@ -25,7 +25,6 @@ const changTheme = () => {
 watch(theme, () => ((window as any).theme = toRaw(theme.value)), {
   immediate: true,
 })
-const value = ref('')
 </script>
 
 <template>
@@ -39,11 +38,10 @@ const value = ref('')
   <!-- <badge /> -->
   <!-- <avatar-group /> -->
   <!-- <button-group /> -->
-  <switch-new />
-  <!-- <TextField /> -->
+  <!-- <switch-new /> -->
+  <TextField />
   <!-- <Alert /> -->
   <!-- <svg-icon /> -->
-  <button-t />
-  <fn-input-base v-model="value" />
-  <checkbox />
+  <!-- <button-t />
+  <checkbox /> -->
 </template>

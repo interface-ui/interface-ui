@@ -25,7 +25,7 @@ const useCss: ComponentStylingHook<InputBaseProps> = props =>
           left: '0px',
           margin: '0px',
           padding: '0px',
-          Zndex: 1,
+          zIndex: 1,
         },
       ]),
       styleFromCs

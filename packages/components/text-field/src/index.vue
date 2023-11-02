@@ -1,26 +1,19 @@
 <script lang="ts" setup>
 import { isEmpty, useNamespace } from '@fusion-ui-vue/utils'
 import { computed, useAttrs, useSlots } from 'vue'
-import { css, useColor } from '@fusion-ui-vue/theme'
 import { UPDATE_MODEL_EVENT } from '@fusion-ui-vue/constants'
 import Typography from '../../typography'
 import FnInputBase from '../../input-base'
 import { textFieldProps } from './text-field'
+import useCss from './index.jss'
 
 const props = defineProps(textFieldProps)
 const emits = defineEmits<{ (e: 'update:modelValue', v: string): void }>()
 const attrs = useAttrs()
 const slots = useSlots()
 const ns = useNamespace('text-field')
+const cssClass = useCss(props)
 
-const cssClass = computed(() => {
-  const $color = props.error
-    ? useColor(props, null, 'var(--md-sys-color-error)')
-    : useColor(props, 'color', 'var(--md-sys-color-primary)')
-  return css`
-    --fn-text-field-color: ${$color.value};
-  `
-})
 const value = computed<string>({
   get() {
     return props.modelValue as any
@@ -52,7 +45,6 @@ const hasContent = computed<boolean>(() => {
       ns.b(),
       ns.m(props.variant),
       ns.m(props.size),
-      props.error ? ns.m('error') : '',
       hasContent ? ns.m('content-within') : '',
       cssClass,
     ]"
@@ -66,7 +58,7 @@ const hasContent = computed<boolean>(() => {
     >
       {{ label }}
     </typography>
-    <div :class="[ns.em('div', 'input-wrapper')]">
+    <div :class="[ns.m('input-wrapper')]">
       <slot
         name="startAdornment"
         v-bind="{ class: [ns.m('start-adornment')], color: 'onSurfaceVariant' }"
@@ -77,19 +69,20 @@ const hasContent = computed<boolean>(() => {
         v-model="value"
         :class="[ns.e('input')]"
         type="text"
-        internal
       />
       <slot
         name="endAdornment"
         v-bind="{ class: [ns.m('end-adornment')], color: 'onSurfaceVariant' }"
       />
-      <span :class="[ns.em('span', 'border')]" />
+      <fieldset v-if="$props.variant === 'outlined'" :class="[ns.m('border')]">
+        <typography component="legend" no-warp>{{ label }}</typography>
+      </fieldset>
+      <span v-else :class="[ns.m('border')]" />
     </div>
     <typography
       v-if="props?.supportingText"
       :class="[ns.m('supporting-text')]"
       variant="body.small"
-      color="var(--fn-text-field-color)"
       no-warp
     >
       {{ props.supportingText }}
