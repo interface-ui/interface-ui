@@ -1,8 +1,11 @@
 <script setup lang="ts">
-import { styled } from '@fusion-ui-vue/theme'
 import { ref } from 'vue'
+import * as pkg from 'fusion-ui-iconify'
+import { styled, useTheme } from '@fusion-ui-vue/theme'
 
+const { AccountCircleFilled } = pkg
 const value = ref<string>('')
+const theme = useTheme()
 const InputWrapper = styled('div')`
   display: flex;
   align-items: center;
@@ -23,11 +26,18 @@ const InputWrapper = styled('div')`
       placeholder="Internal Icon"
     >
       <template #startAdornment="adornment">
-        <fn-icon icon="mdi:account-circle" v-bind="adornment" />
+        <account-circle-filled
+          v-bind="adornment"
+          size="24"
+          :color="theme.schemes.onSurfaceVariant"
+        />
       </template>
     </fn-text-field>
     <input-wrapper>
-      <fn-icon icon="mdi:account-circle" color="onSurfaceVariant" />
+      <account-circle-filled
+        size="24"
+        :color="theme.schemes.onSurfaceVariant"
+      />
       <fn-text-field
         v-model="value"
         size="large"

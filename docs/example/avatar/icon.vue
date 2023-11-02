@@ -1,13 +1,21 @@
+<script lang="ts" setup>
+// import {
+//   AccessibilityFilled,
+//   AutorenewFilled,
+//   BookFilled,
+// } from 'fusion-ui-iconify'
+import * as pkg from 'fusion-ui-iconify'
+const { BookFilled, AccessibilityFilled, AutorenewFilled } = pkg
+</script>
+
 <template>
-  <div fscw gap-5>
-    <fn-avatar>
-      <fn-icon icon="ph:address-book" />
-    </fn-avatar>
-    <fn-avatar background-color="#dc3964" color="white">
-      <fn-icon icon="ph:wrench-light" />
-    </fn-avatar>
-    <fn-avatar background-color="#60ae57" color="white">
-      <fn-icon icon="ph:yin-yang-duotone" />
-    </fn-avatar>
-  </div>
+  <fn-avatar>
+    <book-filled />
+  </fn-avatar>
+  <fn-avatar background-color="#dc3964" color="white">
+    <accessibility-filled />
+  </fn-avatar>
+  <fn-avatar background-color="#60ae57" color="white">
+    <autorenew-filled />
+  </fn-avatar>
 </template>

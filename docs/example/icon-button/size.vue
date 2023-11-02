@@ -1,15 +1,17 @@
+<script lang="ts" setup>
+// import { DeleteFilled } from 'fusion-ui-iconi   fy'
+import * as pkg from 'fusion-ui-iconify'
+const { DeleteFilled } = pkg
+</script>
+
 <template>
-  <div space-y-2>
-    <div fscw gap-2>
-      <fn-icon-button size="small" #default="icon">
-        <fn-icon icon="mdi:delete" v-bind="icon" />
-      </fn-icon-button>
-      <fn-icon-button #default="icon">
-        <fn-icon icon="mdi:delete" v-bind="icon" />
-      </fn-icon-button>
-      <fn-icon-button size="large" #default="icon">
-        <fn-icon icon="mdi:delete" v-bind="icon" />
-      </fn-icon-button>
-    </div>
-  </div>
+  <fn-icon-button size="small">
+    <delete-filled />
+  </fn-icon-button>
+  <fn-icon-button>
+    <delete-filled />
+  </fn-icon-button>
+  <fn-icon-button size="large">
+    <delete-filled />
+  </fn-icon-button>
 </template>

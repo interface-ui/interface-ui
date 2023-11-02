@@ -1,7 +1,7 @@
 import { defineComponent } from 'vue'
 import { useNamespace } from '@fusion-ui-vue/utils'
 import { svgIconProps } from './svg-icon'
-import useCss from './style'
+import useCss from './index.jss'
 
 export default defineComponent({
   props: svgIconProps,

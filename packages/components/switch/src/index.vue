@@ -2,21 +2,16 @@
 import { useNamespace } from '@fusion-ui-vue/utils'
 import { computed } from 'vue'
 import { UPDATE_MODEL_EVENT } from '@fusion-ui-vue/constants'
-import { css, themeSchemes, useColor, useRgbColor } from '@fusion-ui-vue/theme'
+import CheckFilled from '../../svg-icon/internal/CheckFilled.vue'
 import FnIconButton from '../../icon-button'
-import FnIcon from '../../icon'
-import { switchHeight, switchProps } from './switch'
+import FnInputBase from '../../input-base'
+import { switchProps } from './switch'
+import useCss from './index.jss'
 
 const props = defineProps(switchProps)
 const emits = defineEmits<{ (e: 'update:modelValue', v: boolean): void }>()
 const ns = useNamespace('switch')
-const $color = useColor(props, 'color', 'var(--md-sys-color-primary)')
-const $colorRgb = useRgbColor(props, 'color', 'var(--md-sys-color-primary-rgb)')
-const $onColor = computed(() =>
-  themeSchemes.includes(props.color as any)
-    ? `var(--md-sys-color-on-${props.color})`
-    : 'var(--md-sys-color-on-primary)'
-)
+const cssClass = useCss(props, ns)
 
 const checked = computed<boolean>({
   get() {
@@ -26,19 +21,12 @@ const checked = computed<boolean>({
     emits(UPDATE_MODEL_EVENT, newVal)
   },
 })
-
-const cssClass = computed(
-  () => css`
-    --fn-switch-color: ${$color.value};
-    --fn-switch-color-rgb: ${$colorRgb.value};
-    --fn-switch-on-color: ${$onColor.value};
-    --fn-switch-height: ${switchHeight[props.size]}px;
-  `
-)
 </script>
 
 <template>
-  <span :class="[ns.b(), cssClass]">
+  <span
+    :class="[ns.b(), checked ? ns.m('checked') : ns.m('unchecked'), cssClass]"
+  >
     <fn-icon-button
       :class="[ns.e('thumb')]"
       :color="props.color"
@@ -46,22 +34,17 @@ const cssClass = computed(
       @click="checked = !checked"
     >
       <span :class="[ns.em('thumb', 'icon-wrapper')]">
-        <slot v-bind="{ class: [ns.em('thumb', 'icon')], size: '16' }">
-          <fn-icon
-            v-if="!props.disabledIcon"
-            :class="[ns.em('thumb', 'icon')]"
-            icon="mdi:check"
-            size="16"
-          />
+        <slot v-bind="{ size: 16 }">
+          <check-filled v-if="!props.disabledIcon" />
         </slot>
       </span>
     </fn-icon-button>
-    <!-- eslint-disable vue/html-self-closing -->
-    <input
+    <fn-input-base
       v-bind="$attrs"
       v-model="checked"
       :class="[ns.e('input')]"
       type="checkbox"
+      internal
     />
   </span>
 </template>

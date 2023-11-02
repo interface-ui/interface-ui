@@ -3,6 +3,7 @@ import { useNamespace } from '@fusion-ui-vue/utils'
 import { computed } from 'vue'
 import { useButton } from '@fusion-ui-vue/hooks'
 import { iconSize } from '@fusion-ui-vue/constants'
+import FnButtonBase from '../../button-base'
 import FnRipple from '../../ripple'
 import { buttonProps } from './button'
 
@@ -17,11 +18,11 @@ const classList = computed(() => {
 </script>
 
 <template>
-  <button :class="[...classList, `title-${props.size}`, cssClass]">
+  <fn-button-base :class="[...classList, `title-${props.size}`, cssClass]">
     <slot v-bind="{ size: iconSize[props.size] }" />
     <fn-ripple
       v-if="!props.disableRipple"
       :color="props.variant === 'filled' ? undefined : props.color"
     />
-  </button>
+  </fn-button-base>
 </template>

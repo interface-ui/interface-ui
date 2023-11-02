@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import '@fusion-ui-vue/components/text-field/src/index.less' // 开发调试的样式
-import '@fusion-ui-vue/components/input/src/index.less' // 开发调试的样式
+import '@fusion-ui-vue/components/typography/src/index.less' // 开发调试的样式
+
 import { FnTextField } from '@fusion-ui-vue/components'
 import { ref } from 'vue'
 
@@ -13,7 +13,7 @@ const content = ref<string>('')
       size="small"
       v-model="content"
       variant="outlined"
-      label="Outlined"
+      label="avb"
       placeholder="placeholder"
     />
     <fn-text-field
@@ -38,13 +38,13 @@ const content = ref<string>('')
       label="Outlined"
       supporting-text="supporting text"
       placeholder="placeholder"
+      error
     />
     <fn-text-field
       v-model="content"
       variant="filled"
       label="Filled"
       placeholder="placeholder"
-      disabled
     />
     <fn-text-field
       v-model="content"
@@ -54,6 +54,30 @@ const content = ref<string>('')
     />
   </div>
   <div class="content">
+    <fn-text-field
+      v-model="content"
+      size="large"
+      variant="outlined"
+      label="AVBCHSHSIASHOHOSHOH"
+      supporting-text="supporting text"
+      placeholder="placeholder"
+    />
+    <fn-text-field
+      v-model="content"
+      size="large"
+      variant="filled"
+      label="Filled"
+      placeholder="placeholder"
+    />
+    <fn-text-field
+      v-model="content"
+      size="large"
+      variant="standard"
+      label="Standard"
+      placeholder="placeholder"
+    />
+  </div>
+  <!-- <div class="content">
     <fn-text-field
       size="large"
       v-model="content"
@@ -124,6 +148,5 @@ const content = ref<string>('')
         <fn-icon icon="mdi:account-circle" v-bind="adornment" />
       </template>
     </fn-text-field>
-  </div>
-  {{ content }}
+  </div> -->
 </template>

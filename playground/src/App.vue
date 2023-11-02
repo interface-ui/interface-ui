@@ -5,9 +5,11 @@ import createTheme from '@fusion-ui-vue/theme'
 // import AvatarGroup from './components/AvatarGroup.vue'
 // import ButtonGroup from './components/ButtonGroup.vue'
 // import SwitchNew from './components/Switch.vue'
-// import TextField from './components/TextField.vue'
+import TextField from './components/TextField.vue'
 // import Alert from './components/Alert.vue'
-import SvgIcon from './components/SvgIcon.vue'
+// import SvgIcon from './components/SvgIcon.vue'
+// import ButtonT from './components/Button.vue'
+// import Checkbox from './components/Checkbox.vue'
 import { toRaw, watch } from 'vue'
 
 const theme = createTheme()
@@ -37,7 +39,9 @@ watch(theme, () => ((window as any).theme = toRaw(theme.value)), {
   <!-- <avatar-group /> -->
   <!-- <button-group /> -->
   <!-- <switch-new /> -->
-  <!-- <TextField /> -->
+  <TextField />
   <!-- <Alert /> -->
-  <svg-icon />
+  <!-- <svg-icon /> -->
+  <!-- <button-t />
+  <checkbox /> -->
 </template>

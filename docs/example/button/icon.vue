@@ -1,14 +1,16 @@
+<script lang="ts" setup>
+// import { DeleteFilled, SaveFilled } from 'fusion-ui-iconify'
+import * as pkg from 'fusion-ui-iconify'
+const { DeleteFilled, SaveFilled } = pkg
+</script>
+
 <template>
-  <div space-y-2>
-    <div fscw gap-2>
-      <fn-button variant="outlined" #default="icon">
-        <fn-icon icon="mdi:delete" v-bind="icon" />
-        delete
-      </fn-button>
-      <fn-button #default="icon">
-        save
-        <fn-icon icon="mdi:content-save" v-bind="icon" />
-      </fn-button>
-    </div>
-  </div>
+  <fn-button variant="outlined">
+    <delete-filled />
+    delete
+  </fn-button>
+  <fn-button>
+    save
+    <save-filled />
+  </fn-button>
 </template>
