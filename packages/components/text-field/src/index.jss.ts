@@ -45,7 +45,8 @@ const useCss: ComponentStylingHook<TextFieldProps> = props => {
       transform-origin: left;
       max-width: calc(100% - 32px) !important;
       transition: color 200ms cubic-bezier(0, 0, 0.2, 1) 0ms,
-        transform 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+        transform 200ms cubic-bezier(0, 0, 0.2, 1) 0ms,
+        padding 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
     }
     & .fn-text-field--border {
       position: absolute;
