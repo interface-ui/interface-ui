@@ -36,8 +36,8 @@ const checked = computed<string | number | boolean>({
       v-bind="$attrs"
       v-model="checked"
       :class="[ns.e('input')]"
-      class="fn-form__input"
       type="radio"
+      internal
     />
   </fn-icon-button>
 </template>
