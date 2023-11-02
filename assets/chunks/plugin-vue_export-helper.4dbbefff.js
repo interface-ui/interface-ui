@@ -1,0 +1,1 @@
+function s(t,o){return t.install=n=>{n.component(o,t)},t}const a=(t,o)=>(t.install=n=>{t._context=n._context,n.config.globalProperties[o]=t},t);var l=(t,o)=>{const n=t.__vccOpts||t;for(const[r,e]of o)n[r]=e;return n};export{l as _,a,s as w};
