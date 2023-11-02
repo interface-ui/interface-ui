@@ -9,6 +9,7 @@ import SwitchNew from './components/Switch.vue'
 // import Alert from './components/Alert.vue'
 // import SvgIcon from './components/SvgIcon.vue'
 import ButtonT from './components/Button.vue'
+import Checkbox from './components/Checkbox.vue'
 import { toRaw, watch, ref } from 'vue'
 
 const theme = createTheme()
@@ -44,4 +45,5 @@ const value = ref('')
   <!-- <svg-icon /> -->
   <button-t />
   <fn-input-base v-model="value" />
+  <checkbox />
 </template>

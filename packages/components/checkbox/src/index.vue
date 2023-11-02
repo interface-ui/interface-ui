@@ -3,6 +3,7 @@ import { computed } from 'vue'
 import { UPDATE_MODEL_EVENT } from '@fusion-ui-vue/constants'
 import { useNamespace } from '@fusion-ui-vue/utils'
 import FnIconButton from '../../icon-button'
+import FnInputBase from '../../input-base'
 import { checkboxProps } from '../src/checkbox'
 import CheckBox from '../../svg-icon/internal/CheckBoxFilled.vue'
 import CheckBoxOutlineBlank from '../../svg-icon/internal/CheckBoxOutlineBlankFilled.vue'
@@ -44,12 +45,12 @@ const checked = computed<boolean | string[]>({
       <check-box-outline-blank v-else />
     </slot>
     <!-- eslint-disable vue/html-self-closing -->
-    <input
+    <fn-input-base
       v-bind="$attrs"
       v-model="checked"
       :class="[ns.e('input')]"
-      class="fn-form__input"
       type="checkbox"
+      internal
     />
   </fn-icon-button>
 </template>
