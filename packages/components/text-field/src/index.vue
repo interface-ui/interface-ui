@@ -69,7 +69,6 @@ const hasContent = computed<boolean>(() => {
         v-bind="$attrs"
         v-model="value"
         :class="[ns.e('input')]"
-        type="text"
       />
       <slot
         name="endAdornment"
