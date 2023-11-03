@@ -23,7 +23,7 @@ const variants = ['outlined', 'filled', 'standard'] as const
         placeholder="Weight"
       >
         <template #startAdornment="adornment">
-          <fn-typography v-bind="adornment"> kg </fn-typography>
+          <fn-typography v-bind="adornment">kg</fn-typography>
         </template>
       </fn-text-field>
       <fn-text-field
@@ -48,17 +48,13 @@ const variants = ['outlined', 'filled', 'standard'] as const
         :type="type"
       >
         <template #endAdornment="adornment">
-          <fn-icon-button v-slot="icon" v-bind="adornment">
-            <visibility-filled
-              v-show="showPassword"
-              v-bind="icon"
-              @click="showPassword = !showPassword"
-            />
-            <visibility-off-filled
-              v-show="!showPassword"
-              v-bind="icon"
-              @click="showPassword = !showPassword"
-            />
+          <fn-icon-button
+            v-slot="icon"
+            v-bind="adornment"
+            @click="showPassword = !showPassword"
+          >
+            <visibility-filled v-show="showPassword" v-bind="icon" />
+            <visibility-off-filled v-show="!showPassword" v-bind="icon" />
           </fn-icon-button>
         </template>
       </fn-text-field>
