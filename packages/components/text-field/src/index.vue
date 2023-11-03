@@ -62,7 +62,7 @@ const hasContent = computed<boolean>(() => {
     <div :class="[ns.m('input-wrapper')]">
       <slot
         name="startAdornment"
-        v-bind="{ class: [ns.m('start-adornment')], color: 'onSurfaceVariant' }"
+        v-bind="{ class: [ns.m('start-adornment')] }"
       />
       <fn-input-base
         :id="id"
@@ -70,10 +70,7 @@ const hasContent = computed<boolean>(() => {
         v-model="value"
         :class="[ns.e('input')]"
       />
-      <slot
-        name="endAdornment"
-        v-bind="{ class: [ns.m('end-adornment')], color: 'onSurfaceVariant' }"
-      />
+      <slot name="endAdornment" v-bind="{ class: [ns.m('end-adornment')] }" />
       <fieldset
         v-if="$props.variant === 'outlined' && props?.label"
         :class="[ns.m('border')]"

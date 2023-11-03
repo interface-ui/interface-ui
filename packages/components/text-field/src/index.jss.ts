@@ -30,7 +30,7 @@ const useCss: ComponentStylingHook<TextFieldProps> = props => {
       & > .fn-text-field--start-adornment,
       & > .fn-text-field--end-adornment {
         display: inline-flex;
-        font-size: 16px;
+        font-size: 24px;
         color: var(--md-sys-color-on-surface-variant);
       }
     }
@@ -203,8 +203,8 @@ const useCss: ComponentStylingHook<TextFieldProps> = props => {
     }
     & .fn-text-field--input-wrapper {
       > .fn-text-field--start-adornment {
-        padding-bottom: 8px;
-        padding-top: calc(var(--fn-text-field-height) - 32px);
+        margin-bottom: 8px;
+        margin-top: calc(var(--fn-text-field-height) - 32px);
       }
     }
     & .fn-text-field__label {
@@ -289,7 +289,7 @@ const useCss: ComponentStylingHook<TextFieldProps> = props => {
       }
       > .fn-text-field--start-adornment,
       > .fn-text-field--end-adornment {
-        padding-bottom: 8px;
+        margin-bottom: 8px;
         margin-top: calc(var(--fn-text-field-height) - 32px);
       }
     }

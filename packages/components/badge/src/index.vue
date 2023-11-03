@@ -65,8 +65,6 @@ const badegContent = computed(() => {
 
   return content
 })
-
-const CustomContent = styled(props.content as any)``
 </script>
 
 <template>
@@ -81,6 +79,6 @@ const CustomContent = styled(props.content as any)``
         {{ badegContent }}
       </template>
     </badge-typography>
-    <custom-content v-else :class="[ns.m('icon'), positionCss]" />
+    <props.content v-else :class="[ns.m('icon'), positionCss]" />
   </span>
 </template>

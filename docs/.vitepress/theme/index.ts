@@ -1,4 +1,4 @@
-import { h, onMounted } from 'vue'
+import { h, onMounted, toRaw } from 'vue'
 import theme from 'vitepress/theme'
 
 // 导入本地源码样式--测试
@@ -23,13 +23,19 @@ export default {
   ...theme,
   setup() {
     onMounted(() => {
-      createTheme()
+      const uiTheme = createTheme()
+
+      ;(window as any).theme = toRaw(uiTheme.value)
 
       const html = document.documentElement
       const toggleTheme = () => {
-        if (html.classList.contains('dark'))
+        if (html.classList.contains('dark')) {
           html.setAttribute('data-theme', 'dark')
-        else html.removeAttribute('data-theme')
+          uiTheme.value.mode = 'dark'
+        } else {
+          html.removeAttribute('data-theme')
+          uiTheme.value.mode = 'light'
+        }
       }
 
       toggleTheme()

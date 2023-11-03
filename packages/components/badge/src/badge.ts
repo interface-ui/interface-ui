@@ -11,7 +11,7 @@ export const badgeProps = buildProps({
     type: [String, Number, Object] as PropType<string | number | Component>,
   },
   variant: {
-    type: String,
+    type: String as PropType<BadgeVariants>,
     values: badgeVariants,
     default: 'content',
   },
