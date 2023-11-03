@@ -85,7 +85,8 @@ const useCss: ComponentStylingHook<TextFieldProps> = props => {
       height: 100%;
     }
     &:has(:required) {
-      & .fn-text-field__label::after {
+      & .fn-text-field__label::after,
+      & legend::after {
         content: ' *';
         color: var(--md-sys-color-error);
       }
@@ -109,10 +110,13 @@ const useCss: ComponentStylingHook<TextFieldProps> = props => {
       border-width: 1px;
       border-color: var(--md-sys-color-outline);
       border-radius: inherit;
+      height: 100%;
+    }
+    & fieldset.fn-text-field--border {
       inset: -5px 0 0;
       height: auto;
       padding: 0 8px;
-      & > legend {
+      & legend {
         float: unset;
         width: auto;
         overflow: hidden;
@@ -122,11 +126,9 @@ const useCss: ComponentStylingHook<TextFieldProps> = props => {
         font-size: 0.75rem;
         visibility: hidden;
         max-width: 0;
-        transition: max-width 100ms cubic-bezier(0, 0, 0.2, 1) 50ms,
-          padding 100ms cubic-bezier(0, 0, 0.2, 1) 50ms;
+        transition: max-width 200ms cubic-bezier(0, 0, 0.2, 1) 0ms,
+          padding 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
         white-space: nowrap;
-        position: relative;
-        left: -0.1em;
       }
     }
     &:hover .fn-text-field--border {
@@ -151,11 +153,11 @@ const useCss: ComponentStylingHook<TextFieldProps> = props => {
         opacity: 1;
       }
       & .fn-text-field__label {
-        transform: translate(18px, -50%) scale(0.75);
+        transform: translate(16px, -50%) scale(0.75);
       }
-      & legend {
+      & fieldset.fn-text-field--border legend {
         max-width: 100%;
-        padding: 0 8px;
+        padding: 0 6px;
       }
     }
     & .fn-text-field__input {
@@ -193,11 +195,10 @@ const useCss: ComponentStylingHook<TextFieldProps> = props => {
     &.fn-text-field--content-within {
       & .fn-text-field__label {
         transform: translate(
-            10px,
+            16px,
             var(--fn-text-fiedl-filled-standard-label-translateY)
           )
           scale(0.75);
-        padding: 0 8px;
       }
     }
     & .fn-text-field--input-wrapper {

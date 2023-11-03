@@ -51,6 +51,7 @@ const hasContent = computed<boolean>(() => {
   >
     <typography
       v-if="props?.label"
+      :id="id"
       component="label"
       :class="[ns.e('label')]"
       color="rgb(var(--md-sys-color-on-surface-rgb) / 0.6);"
@@ -74,8 +75,11 @@ const hasContent = computed<boolean>(() => {
         name="endAdornment"
         v-bind="{ class: [ns.m('end-adornment')], color: 'onSurfaceVariant' }"
       />
-      <fieldset v-if="$props.variant === 'outlined'" :class="[ns.m('border')]">
-        <typography v-if="props?.label" component="legend" no-warp>
+      <fieldset
+        v-if="$props.variant === 'outlined' && props?.label"
+        :class="[ns.m('border')]"
+      >
+        <typography component="legend" no-warp>
           {{ label }}
         </typography>
       </fieldset>
