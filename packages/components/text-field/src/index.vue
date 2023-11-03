@@ -51,6 +51,7 @@ const hasContent = computed<boolean>(() => {
   >
     <typography
       v-if="props?.label"
+      :id="id"
       component="label"
       :class="[ns.e('label')]"
       color="rgb(var(--md-sys-color-on-surface-rgb) / 0.6);"
@@ -61,21 +62,22 @@ const hasContent = computed<boolean>(() => {
     <div :class="[ns.m('input-wrapper')]">
       <slot
         name="startAdornment"
-        v-bind="{ class: [ns.m('start-adornment')], color: 'onSurfaceVariant' }"
+        v-bind="{ class: [ns.m('start-adornment')] }"
       />
       <fn-input-base
         :id="id"
         v-bind="$attrs"
         v-model="value"
         :class="[ns.e('input')]"
-        type="text"
       />
-      <slot
-        name="endAdornment"
-        v-bind="{ class: [ns.m('end-adornment')], color: 'onSurfaceVariant' }"
-      />
-      <fieldset v-if="$props.variant === 'outlined'" :class="[ns.m('border')]">
-        <typography component="legend" no-warp>{{ label }}</typography>
+      <slot name="endAdornment" v-bind="{ class: [ns.m('end-adornment')] }" />
+      <fieldset
+        v-if="$props.variant === 'outlined' && props?.label"
+        :class="[ns.m('border')]"
+      >
+        <typography component="legend" no-warp>
+          {{ label }}
+        </typography>
       </fieldset>
       <span v-else :class="[ns.m('border')]" />
     </div>

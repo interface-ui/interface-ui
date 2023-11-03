@@ -11,6 +11,10 @@ export const svgIconProps = buildProps({
     type: [String, Function] as PropType<AcceptableColor>,
     default: 'inherit',
   },
+  component: {
+    type: [Object, String, Array] as PropType<TemplateStringsArray>,
+    default: 'svg',
+  },
   cs: {
     type: [Object, String, Array] as PropType<TemplateStringsArray>,
   },

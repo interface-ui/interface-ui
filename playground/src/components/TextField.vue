@@ -38,6 +38,7 @@ const content = ref<string>('')
       label="Outlined"
       supporting-text="supporting text"
       placeholder="placeholder"
+      type="password"
       error
     />
     <fn-text-field

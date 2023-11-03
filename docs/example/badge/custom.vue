@@ -35,10 +35,10 @@ const StyledBadge = styled(FnBadge)(theme => ({
 const SmallAvatar = styled(FnAvatar, {
   src: 'https://mui.com/static/images/avatar/2.jpg',
   size: 22,
-})(theme => ({
-  border: `2px solid ${theme.schemes.background}`,
-  transform: 'translate(30%, 30%)',
-}))
+})`
+  border: 2px solid var(--md-sys-color-background);
+  transform: translate(30%, 30%);
+`
 </script>
 
 <template>

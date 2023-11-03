@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { computed } from 'vue'
+import { computed, useAttrs } from 'vue'
 import { UPDATE_MODEL_EVENT } from '@fusion-ui-vue/constants'
 import { useNamespace } from '@fusion-ui-vue/utils'
 import FnIconButton from '../../icon-button'
@@ -13,6 +13,7 @@ const emits = defineEmits<{
   (e: 'update:modelValue', v: boolean | string[]): void
 }>()
 const ns = useNamespace('checkbox')
+const attrs = useAttrs()
 
 const checked = computed<boolean | string[]>({
   get() {
@@ -21,6 +22,13 @@ const checked = computed<boolean | string[]>({
   set(newVal) {
     emits(UPDATE_MODEL_EVENT, newVal)
   },
+})
+const showCheckedIcon = computed<boolean>(() => {
+  if (typeof checked.value === 'boolean') {
+    return checked.value
+  } else {
+    return (checked.value as any[]).includes(attrs.value)
+  }
 })
 </script>
 
@@ -41,7 +49,7 @@ const checked = computed<boolean | string[]>({
         class: ['fn-icon', ns.e('icon')],
       }"
     >
-      <check-box v-if="checked" />
+      <check-box v-if="showCheckedIcon" />
       <check-box-outline-blank v-else />
     </slot>
     <!-- eslint-disable vue/html-self-closing -->
