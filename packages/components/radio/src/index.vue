@@ -5,6 +5,7 @@ import { UPDATE_MODEL_EVENT } from '@fusion-ui-vue/constants'
 import { FnIconButton } from '../../icon-button'
 import RadioButtonChecked from '../../svg-icon/internal/RadioButtonCheckedFilled.vue'
 import RadioButtonUnchecked from '../../svg-icon/internal/RadioButtonUncheckedFilled.vue'
+import FnInputBase from '../../input-base'
 import { radioProps } from './radio'
 
 const props = defineProps(radioProps)
@@ -31,8 +32,7 @@ const checked = computed<string | number | boolean>({
   >
     <radio-button-checked v-if="checked === $attrs.value" />
     <radio-button-unchecked v-else />
-    <!-- eslint-disable vue/html-self-closing -->
-    <input
+    <fn-input-base
       v-bind="$attrs"
       v-model="checked"
       :class="[ns.e('input')]"
