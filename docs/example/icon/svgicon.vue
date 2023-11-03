@@ -1,10 +1,9 @@
 <script lang="ts" setup>
 import { FnSvgIcon } from '@fusion-ui-vue/components'
-import { DeleteFilled } from 'fusion-ui-iconify'
 </script>
 
 <template>
-  <fn-svg-icon :color="theme => theme.schemes.error" size="60">
+  <fn-svg-icon :color="theme => theme.schemes.primary" size="30">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
@@ -19,5 +18,4 @@ import { DeleteFilled } from 'fusion-ui-iconify'
       />
     </svg>
   </fn-svg-icon>
-  <fn-svg-icon :component="DeleteFilled" />
 </template>

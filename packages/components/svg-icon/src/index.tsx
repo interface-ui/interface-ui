@@ -13,10 +13,11 @@ export default defineComponent({
       throw new Error('[Fusion UI]: The SvgIcon can only contain one child.')
     }
 
+    const Comp = props.component as any
     return () => (
-      <svg class={[ns.b(), cssClass.value]} {...slotsVNodes[0]?.props}>
+      <Comp class={[ns.b(), cssClass.value]} {...slotsVNodes[0]?.props}>
         {slotsVNodes[0]?.children}
-      </svg>
+      </Comp>
     )
   },
 })

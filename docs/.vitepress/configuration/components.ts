@@ -10,10 +10,10 @@ export const enComponents = [
         text: 'ButtonGroup',
         link: '/langs/en/components/button-group',
       },
-      // {
-      //   text: 'Icon',
-      //   link: '/langs/en/components/icon',
-      // },
+      {
+        text: 'Icons',
+        link: '/langs/en/components/icon',
+      },
       {
         text: 'Link',
         link: '/langs/en/components/link',
@@ -114,10 +114,10 @@ export const zhComponents = [
         text: 'ButtonGroup 按钮组',
         link: '/langs/zh/components/button-group',
       },
-      // {
-      //   text: 'Icon 图标',
-      //   link: '/langs/zh/components/icon',
-      // },
+      {
+        text: 'Icons 图标',
+        link: '/langs/zh/components/icon',
+      },
       {
         text: 'Link 链接',
         link: '/langs/zh/components/link',
