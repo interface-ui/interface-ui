@@ -12,7 +12,7 @@
   ],
   "scripts": {
     "dev": "vitepress dev --port 3147 --host",
-    "build": "export NODE_OPTIONS='--max-old-space-size=8192' && vitepress build",
+    "build": "NODE_OPTIONS=--max-old-space-size=10240 vitepress build",
     "serve": "vitepress serve"
   },
   "dependencies": {
