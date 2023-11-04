@@ -2,8 +2,7 @@
 import { FnRadio } from 'fusion-ui-vue'
 import { ref } from 'vue'
 import { useTheme } from '@fusion-ui-vue/theme'
-import * as pkg from 'fusion-ui-iconify'
-const { NotificationsFilled } = pkg
+import { NotificationsFilled } from 'fusion-ui-iconify'
 
 const theme = useTheme()
 const xAlign = ref<'left' | 'right'>('right')

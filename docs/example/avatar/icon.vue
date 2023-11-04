@@ -1,11 +1,9 @@
 <script lang="ts" setup>
-// import {
-//   AccessibilityFilled,
-//   AutorenewFilled,
-//   BookFilled,
-// } from 'fusion-ui-iconify'
-import * as pkg from 'fusion-ui-iconify'
-const { BookFilled, AccessibilityFilled, AutorenewFilled } = pkg
+import {
+  AccessibilityFilled,
+  AutorenewFilled,
+  BookFilled,
+} from 'fusion-ui-iconify'
 </script>
 
 <template>

@@ -39,10 +39,9 @@ npm install fusion-ui-iconify
 import 'fusion-ui-iconify/dist/style.css'
 ```
 
-使用以下方式导入图标（❗️需要优化）
+使用以下方式导入图标
 ```js
-import * as pkg from 'fusion-ui-iconify'
-const { DeleteFilled, SaveFilled } = pkg
+import { DeleteFilled, SaveFilled } from 'fusion-ui-iconify'
 ```
 
 每个Material图标还具有“style”：Filled，Outlined，Rounded，Two-tone和Sharp。要导入带有默认主题以外的主题的图标组件，请在图标名称后附加样式名称。

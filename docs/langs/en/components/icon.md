@@ -41,8 +41,7 @@ import 'fusion-ui-iconify/dist/style.css'
 
 Import icons using the following way (❗️Needs to be optimized)
 ```js
-import * as pkg from 'fusion-ui-iconify'
-const { DeleteFilled, SaveFilled } = pkg
+import { DeleteFilled, SaveFilled } from 'fusion-ui-iconify'
 ```
 
 Each Material icon also has a "style": Filled, Outlined, Rounded, Two-tone, and Sharp. To import the icon component with a theme other than the default, append the style name to the icon name.
