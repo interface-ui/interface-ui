@@ -60,7 +60,7 @@ If you need a custom SVG icon (not available in the Material Icons) you can use 
 
 It comes with built-in accessibility.
 
-SVG elements should be scaled for a `24 x 24 px` viewport so that the resulting icon can be used as is, or included as a child for other Material UI components that use icons.
+SVG elements should be scaled for a `24 x 24 px` viewport so that the resulting icon can be used as is.
 
 By default, the component **inherits** the current color and font size. Optionally, you can apply one of the theme colors using the `color` prop and `size` prop to change it.
 
