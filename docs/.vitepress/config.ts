@@ -13,7 +13,8 @@ export default defineConfig({
   themeConfig: {
     logo: '/logo.svg',
     editLink: {
-      pattern: 'https://github.com/tsinghua-lau/fusion-ui/edit/master/docs/:path',
+      pattern:
+        'https://github.com/tsinghua-lau/fusion-ui/edit/master/docs/:path',
       text: 'Suggest changes to this page',
     },
     nav,
@@ -21,6 +22,9 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com/tsinghua-lau/fusion-ui' },
     ],
     sidebar,
+    outline: {
+      level: 'deep',
+    },
     algolia: {
       appId: 'G9YJQIU3F0',
       apiKey: '648079ba68cded490d9b86ac10ef5691',
@@ -36,7 +40,7 @@ export default defineConfig({
     },
   },
   markdown: {
-    config: (md) => {
+    config: md => {
       applyPlugins(md)
     },
     theme: {
