@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { FnSvgIcon } from '@fusion-ui-vue/components'
+import { FnSvgIcon } from 'fusion-ui-vue'
 import { DeleteFilled } from 'fusion-ui-iconify'
 </script>
 
