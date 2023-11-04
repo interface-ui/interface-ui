@@ -1,6 +1,6 @@
 {
   "name": "@fusion-ui-vue/theme",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Fusion-Ui Theme",
   "license": "MIT",
   "main": "index.ts",
