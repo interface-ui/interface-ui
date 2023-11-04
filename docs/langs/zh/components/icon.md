@@ -39,10 +39,9 @@ npm install fusion-ui-iconify
 import 'fusion-ui-iconify/dist/style.css'
 ```
 
-使用以下方式导入图标（❗️需要优化）
+使用以下方式导入图标
 ```js
-import * as pkg from 'fusion-ui-iconify'
-const { DeleteFilled, SaveFilled } = pkg
+import { DeleteFilled, SaveFilled } from 'fusion-ui-iconify'
 ```
 
 每个Material图标还具有“style”：Filled，Outlined，Rounded，Two-tone和Sharp。要导入带有默认主题以外的主题的图标组件，请在图标名称后附加样式名称。
@@ -61,7 +60,7 @@ const { DeleteFilled, SaveFilled } = pkg
 
 它带有内置的可访问性。
 
-SVG元素应缩放为 `24 x 24像素` 的视口，以便生成的图标可以直接使用，或者包含为使用图标的其他Material UI组件的子组件。
+SVG元素应缩放为 `24 x 24像素` 的视口，以便生成的图标可以直接使用。
 
 默认情况下，该组件**继承**当前颜色和字体大小。可选地，您可以使用`color`属性和`size`属性来更改其中一个主题颜色。
 

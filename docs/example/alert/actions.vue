@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import { CloseOutlined } from 'fusion-ui-iconify'
+</script>
+
 <template>
   <div space-y-5 w-full>
     <fn-alert severity="error">
@@ -11,8 +15,8 @@
     <fn-alert severity="warning">
       This is an warning alert — check it out!
       <template #action>
-        <fn-icon-button v-slot="icon" size="large">
-          <fn-icon icon="mdi:delete" v-bind="icon" />
+        <fn-icon-button>
+          <close-outlined />
         </fn-icon-button>
       </template>
     </fn-alert>

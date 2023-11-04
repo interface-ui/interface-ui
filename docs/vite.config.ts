@@ -5,6 +5,9 @@ export default defineConfig(() => {
   return {
     plugins: [
       vueJsx(),
-    ]
+    ],
+    ssr: {
+      noExternal: ['fusion-ui-iconify'],
+    },
   }
 })

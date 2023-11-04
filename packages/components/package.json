@@ -1,6 +1,6 @@
 {
   "name": "@fusion-ui-vue/components",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "all components are settled here",
   "sideEffects": false,
   "main": "index.ts",
