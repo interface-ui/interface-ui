@@ -1,15 +1,15 @@
 <script lang="ts" setup>
 import { useNamespace } from '@fusion-ui-vue/utils'
-import { css } from '@fusion-ui-vue/theme'
 import { buttonBaseProps } from './button-base'
+import useCss from './index.jss'
 
 const props = defineProps(buttonBaseProps)
 const ns = useNamespace('button-base')
-const csStyle = props.cs ? css(props.cs) : ''
+const cssClass = useCss(props)
 </script>
 
 <template>
-  <component :is="$props.component" :class="[ns.b(), csStyle]">
+  <component :is="$props.component" :class="[ns.b(), cssClass]">
     <slot />
   </component>
 </template>
