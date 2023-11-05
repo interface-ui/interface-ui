@@ -3,9 +3,7 @@ import { ref } from 'vue'
 import * as pkg from 'fusion-ui-iconify'
 // import { AccountCircleFilled } from 'fusion-ui-iconify'
 import { styled, useTheme } from '@fusion-ui-vue/theme'
-const {
-  AccountCircleFilled
-} = pkg
+const { AccountCircleFilled } = pkg
 
 const value = ref<string>('')
 const theme = useTheme()

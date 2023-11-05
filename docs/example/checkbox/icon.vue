@@ -1,12 +1,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 import * as pkg from 'fusion-ui-iconify'
-const {
-  BedtimeFilled,
-  BedtimeOutlined,
-  StarFilled,
-  StarOutlineFilled,
-} = pkg
+const { BedtimeFilled, BedtimeOutlined, StarFilled, StarOutlineFilled } = pkg
 // import {
 //   BedtimeFilled,
 //   BedtimeOutlined,

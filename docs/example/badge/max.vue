@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import * as pkg from 'fusion-ui-iconify'
-const {
-  EmailFilled, NotificationsFilled
-} = pkg
+const { EmailFilled, NotificationsFilled } = pkg
 // import { EmailFilled, NotificationsFilled } from 'fusion-ui-iconify'
 </script>
 

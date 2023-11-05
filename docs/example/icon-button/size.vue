@@ -1,8 +1,6 @@
 <script lang="ts" setup>
 import * as pkg from 'fusion-ui-iconify'
-const {
-  DeleteFilled
-} = pkg
+const { DeleteFilled } = pkg
 // import { DeleteFilled } from 'fusion-ui-iconify'
 </script>
 

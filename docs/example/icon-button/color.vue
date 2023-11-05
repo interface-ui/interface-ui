@@ -1,8 +1,6 @@
 <script lang="ts" setup>
 import * as pkg from 'fusion-ui-iconify'
-const {
-  FingerprintFilled
-} = pkg
+const { FingerprintFilled } = pkg
 // import { FingerprintFilled } from 'fusion-ui-iconify'
 </script>
 

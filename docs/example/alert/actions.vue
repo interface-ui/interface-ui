@@ -9,9 +9,7 @@ const { CloseOutlined } = pkg
     <fn-alert severity="error">
       This is an error alert — check it out!
       <template #action>
-        <fn-button variant="text">
-          CLOSE
-        </fn-button>
+        <fn-button variant="text"> CLOSE </fn-button>
       </template>
     </fn-alert>
     <fn-alert severity="warning">
@@ -23,5 +21,4 @@ const { CloseOutlined } = pkg
       </template>
     </fn-alert>
   </div>
-  <br>
 </template>

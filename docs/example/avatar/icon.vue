@@ -1,10 +1,6 @@
 <script lang="ts" setup>
 import * as pkg from 'fusion-ui-iconify'
-const {
-  AccessibilityFilled,
-  AutorenewFilled,
-  BookFilled
-} = pkg
+const { AccessibilityFilled, AutorenewFilled, BookFilled } = pkg
 // import {
 //   AccessibilityFilled,
 //   AutorenewFilled,
