@@ -1,9 +1,17 @@
-import { CheckCircleOutlineOutlined, ErrorOutlineOutlined, InfoOutlined, WarningOutlined } from 'fusion-ui-iconify'
+// import { CheckCircleOutlineOutlined, ErrorOutlineOutlined, InfoOutlined, WarningOutlined } from 'fusion-ui-iconify'
+import * as pkg from 'fusion-ui-iconify'
+const {
+  CheckCircleOutlineOutlined,
+  ErrorOutlineOutlined,
+  InfoOutlined,
+  WarningOutlined,
+} = pkg
+
 export const TypeComponents = {
   CheckCircleOutlineOutlined,
   ErrorOutlineOutlined,
   WarningOutlined,
-  InfoOutlined
+  InfoOutlined,
 }
 
 export const TypeComponentsMap = {

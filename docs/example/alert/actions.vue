@@ -1,5 +1,7 @@
 <script setup lang="ts">
-import { CloseOutlined } from 'fusion-ui-iconify'
+// import { CloseOutlined } from 'fusion-ui-iconify'
+import * as pkg from 'fusion-ui-iconify'
+const { CloseOutlined } = pkg
 </script>
 
 <template>
@@ -7,9 +9,7 @@ import { CloseOutlined } from 'fusion-ui-iconify'
     <fn-alert severity="error">
       This is an error alert — check it out!
       <template #action>
-        <fn-button variant="text">
-          CLOSE
-        </fn-button>
+        <fn-button variant="text"> CLOSE </fn-button>
       </template>
     </fn-alert>
     <fn-alert severity="warning">
@@ -21,5 +21,4 @@ import { CloseOutlined } from 'fusion-ui-iconify'
       </template>
     </fn-alert>
   </div>
-  <br>
 </template>

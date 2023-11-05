@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
-import { VisibilityFilled, VisibilityOffFilled } from 'fusion-ui-iconify'
+// import { VisibilityFilled, VisibilityOffFilled } from 'fusion-ui-iconify'
+import * as pkg from 'fusion-ui-iconify'
+const { VisibilityFilled, VisibilityOffFilled } = pkg
+
 const weight = ref<string>('')
 const amount = ref<string>('')
 const password = ref<string>('')
