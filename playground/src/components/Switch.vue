@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-// import '@fusion-ui-vue/components/switch/src/index.less' // 开发调试的样式
+import '@fusion-ui-vue/components/switch/src/index.less' // 开发调试的样式
 import { FnSwitch } from '@fusion-ui-vue/components'
 import { computed, ref } from 'vue'
 
@@ -8,7 +8,7 @@ const color = computed(() => (value.value ? 'primary' : 'error'))
 </script>
 
 <template>
-  {{ value }}
+  {{ color }}
   <div class="content">
     <fn-switch size="small" v-model="value" :color="color" />
     <fn-switch size="small" v-model="value" disabled />
