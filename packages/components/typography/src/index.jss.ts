@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/indent */
-import type { TypographyProps } from '@fusion-ui-vue/components'
-import { computed } from 'vue'
 import type { TypographyMap, TypographyProp } from '@fusion-ui-vue/theme'
-import { css, typographyMapping, useTheme } from '@fusion-ui-vue/theme'
-import type { ComponentStylingHook } from '../types'
+import { css, cx, typographyMapping, useTheme } from '@fusion-ui-vue/theme'
+import type { ComponentStylingHook } from 'packages/hooks/types'
+import { computed } from 'vue'
+import type { TypographyProps } from './typography'
 
-export const useTypography: ComponentStylingHook<TypographyProps> = props => {
+const useCss: ComponentStylingHook<TypographyProps> = props => {
   const { variant, component } = props
   const [_, $variant, size] = variant.match(/([\w\d]+)\.?(\w+)?/)!
 
@@ -20,12 +20,18 @@ export const useTypography: ComponentStylingHook<TypographyProps> = props => {
       theme.value.typography[$variant]
 
   return computed(() => {
-    return css({
-      [`&:is(${renderTag})`]: {
-        margin: 0,
-        border: 'none',
-        ...style,
-      },
-    } as any)
+    const styleFromCs = props.cs ? css(props.cs) : ''
+    return cx(
+      css({
+        [`&:is(${renderTag})`]: {
+          margin: 0,
+          border: 'none',
+          ...style,
+        },
+      } as any),
+      styleFromCs
+    )
   })
 }
+
+export default useCss
