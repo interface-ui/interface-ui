@@ -1,5 +1,4 @@
 export { useAlert } from './use-alert'
-export * from './use-button'
 export { UseProgress } from './use-progress'
 export { UseTag } from './use-tag'
 export * from './use-switch-new'
