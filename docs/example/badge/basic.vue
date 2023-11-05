@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { useTheme } from '@fusion-ui-vue/theme'
-// import { NotificationsFilled } from 'fusion-ui-iconify'
 import * as pkg from 'fusion-ui-iconify'
 const { NotificationsFilled } = pkg
+// import { NotificationsFilled } from 'fusion-ui-iconify'
 
 const theme = useTheme()
 </script>

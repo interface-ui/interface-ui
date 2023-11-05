@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-// import { HomeFilled } from 'fusion-ui-iconify'
 import * as pkg from 'fusion-ui-iconify'
 const { HomeFilled } = pkg
+// import { HomeFilled } from 'fusion-ui-iconify'
 </script>
 
 <template>

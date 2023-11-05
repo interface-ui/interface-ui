@@ -1,11 +1,4 @@
 <script lang="ts" setup>
-// import {
-//   DeleteFilled,
-//   DeleteOutlined,
-//   DeleteRound,
-//   DeleteSharp,
-//   DeleteTwotone,
-// } from 'fusion-ui-iconify'
 import * as pkg from 'fusion-ui-iconify'
 const {
   DeleteFilled,
@@ -14,6 +7,13 @@ const {
   DeleteSharp,
   DeleteTwotone,
 } = pkg
+// import {
+//   DeleteFilled,
+//   DeleteOutlined,
+//   DeleteRound,
+//   DeleteSharp,
+//   DeleteTwotone,
+// } from 'fusion-ui-iconify'
 </script>
 
 <template>
