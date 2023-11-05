@@ -1,11 +1,18 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
-import {
+import * as pkg from 'fusion-ui-iconify'
+const {
   BedtimeFilled,
   BedtimeOutlined,
   StarFilled,
   StarOutlineFilled,
-} from 'fusion-ui-iconify'
+} = pkg
+// import {
+//   BedtimeFilled,
+//   BedtimeOutlined,
+//   StarFilled,
+//   StarOutlineFilled,
+// } from 'fusion-ui-iconify'
 
 const checked = ref<boolean>(false)
 </script>

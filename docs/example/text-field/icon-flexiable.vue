@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
-import { VisibilityFilled, VisibilityOffFilled } from 'fusion-ui-iconify'
+import * as pkg from 'fusion-ui-iconify'
+const {
+  VisibilityFilled, VisibilityOffFilled
+} = pkg
+// import { VisibilityFilled, VisibilityOffFilled } from 'fusion-ui-iconify'
 const weight = ref<string>('')
 const amount = ref<string>('')
 const password = ref<string>('')
@@ -21,7 +25,9 @@ const variants = ['outlined', 'filled', 'standard'] as const
         placeholder="Weight"
       >
         <template #startAdornment="adornment">
-          <fn-typography v-bind="adornment">kg</fn-typography>
+          <fn-typography v-bind="adornment">
+            kg
+          </fn-typography>
         </template>
       </fn-text-field>
       <fn-text-field
@@ -33,7 +39,9 @@ const variants = ['outlined', 'filled', 'standard'] as const
         placeholder="Amount"
       >
         <template #endAdornment="adornment">
-          <fn-typography v-bind="adornment"> $ </fn-typography>
+          <fn-typography v-bind="adornment">
+            $
+          </fn-typography>
         </template>
       </fn-text-field>
       <fn-text-field
