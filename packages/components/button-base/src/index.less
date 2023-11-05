@@ -1,0 +1,19 @@
+.fn-button-base {
+  position: relative;
+  display: inline-flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  text-transform: uppercase !important;
+  vertical-align: middle;
+  cursor: pointer;
+  outline: 0px;
+  appearance: none;
+  &[disabled] {
+    cursor: default;
+  }
+}
