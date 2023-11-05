@@ -1,9 +1,7 @@
 <script lang="ts" setup>
-import { FnSvgIcon } from 'fusion-ui-vue'
+import { FnSvgIcon } from '@fusion-ui-vue/components'
 import * as pkg from 'fusion-ui-iconify'
-const {
-  DeleteFilled
-} = pkg
+const { DeleteFilled } = pkg
 // import { DeleteFilled } from 'fusion-ui-iconify'
 </script>
 
