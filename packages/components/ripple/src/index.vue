@@ -7,7 +7,8 @@ import {
   watchEffect,
 } from 'vue'
 import { addUnit, useNamespace } from '@fusion-ui-vue/utils'
-import { useRipple } from '@fusion-ui-vue/hooks'
+// import { useRipple } from '@fusion-ui-vue/hooks'
+import { useColor } from '@fusion-ui-vue/theme'
 import type { RippleStyle } from './ripple'
 import { rippleProps } from './ripple'
 
@@ -15,9 +16,11 @@ const props = defineProps(rippleProps)
 const ripplesArr = reactive<RippleStyle[]>([])
 const parent = getCurrentInstance()?.parent
 const ns = useNamespace('ripple')
-const cssClass = useRipple(props, ns)
+// const cssClass = useRipple(props, ns)
 let bounce: NodeJS.Timeout | null = null
 let listener: EventListener | null = null
+
+const $color = useColor(props, 'color', 'var(--fn-sys-color-ripple)').value!
 
 const addRipple = (event: MouseEvent) => {
   const target = event.currentTarget as HTMLElement
@@ -68,7 +71,7 @@ defineExpose({ addRipple })
 </script>
 
 <template>
-  <span :class="[ns.b(), cssClass]">
+  <span :class="[ns.b()]">
     <span
       v-for="(ripple, index) of ripplesArr"
       :key="`ripple_${index}`"
@@ -77,6 +80,8 @@ defineExpose({ addRipple })
         left: addUnit(ripple.x),
         width: addUnit(ripple.size),
         height: addUnit(ripple.size),
+        background: $color,
+        animationDuration: `${$props.duration}ms`,
       }"
       :class="[ns.e('span')]"
       class="pressed-state-layer"

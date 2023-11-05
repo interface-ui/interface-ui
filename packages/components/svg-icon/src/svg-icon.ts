@@ -1,6 +1,6 @@
 import type { AcceptableColor } from '@fusion-ui-vue/theme'
 import { buildProps } from '@fusion-ui-vue/utils'
-import type { ExtractPropTypes, PropType } from 'vue'
+import type { Component, ExtractPropTypes, PropType } from 'vue'
 
 export const svgIconProps = buildProps({
   size: {
@@ -12,7 +12,7 @@ export const svgIconProps = buildProps({
     default: 'inherit',
   },
   component: {
-    type: [Object, String, Array] as PropType<TemplateStringsArray>,
+    type: [Object, String] as PropType<string | Component>,
     default: 'svg',
   },
   cs: {

@@ -5,7 +5,7 @@ import {
   themeFromSourceColor,
 } from '@material/material-color-utilities'
 import type { CustomColor } from '@material/material-color-utilities'
-import { uesThemeProvider } from '../hooks'
+import { useThemeProvider } from '../hooks'
 import type { ThemeConfig, ThemeSchemes } from './types'
 import Theme from './theme'
 import defaultTheme from './default.theme'
@@ -68,7 +68,7 @@ export const createTheme = (
 
   injectJSS(lightSchemes, darkSchemes, theme.value)
 
-  uesThemeProvider(theme)
+  useThemeProvider(theme)
   return theme
 }
 

@@ -1,9 +1,8 @@
-import createTheme, { css, themeSchemes, useColor } from '@fusion-ui-vue/theme'
+import { css, themeSchemes, useColor, useTheme } from '@fusion-ui-vue/theme'
 
 import { computed } from 'vue'
 import type { AlertProps } from '../../components/alert/src/alert'
 import type { ComponentStylingHook } from '../types'
-const uiTheme = createTheme()
 
 function getValueByKey<T>(obj: Record<string, T>, key: string): T | undefined {
   if (key in obj) {
@@ -12,17 +11,16 @@ function getValueByKey<T>(obj: Record<string, T>, key: string): T | undefined {
   return undefined
 }
 
-export const useAlert: ComponentStylingHook<AlertProps> = (props, ns) => {
+export const useAlert: ComponentStylingHook<AlertProps> = props => {
+  const theme = useTheme()
   const $color = props.color
     ? useColor(props, 'color')
     : useColor(props, 'severity', 'var(--md-sys-color-primary)')
 
   const $iconColor = computed(() => {
-    const values = getValueByKey(uiTheme.value.palettes.error, '40')
+    const values = getValueByKey(theme.value.palettes.error, '40')
     return values
-  }
-
-  )
+  })
 
   const $onColor = computed(() =>
     themeSchemes.includes(props.severity as any)
@@ -34,7 +32,7 @@ export const useAlert: ComponentStylingHook<AlertProps> = (props, ns) => {
     if (props.color) {
       return themeSchemes.includes(props.color as any)
         ? `var(--md-sys-color-${props.color}-container)`
-        : props.color as string
+        : (props.color as string)
     } else {
       return themeSchemes.includes(props.severity as any)
         ? `var(--md-sys-color-${props.severity}-container)`

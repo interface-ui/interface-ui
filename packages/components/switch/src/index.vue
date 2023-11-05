@@ -11,7 +11,7 @@ import useCss from './index.jss'
 const props = defineProps(switchProps)
 const emits = defineEmits<{ (e: 'update:modelValue', v: boolean): void }>()
 const ns = useNamespace('switch')
-const cssClass = useCss(props, ns)
+const cssClass = useCss(props)
 
 const checked = computed<boolean>({
   get() {
@@ -24,9 +24,7 @@ const checked = computed<boolean>({
 </script>
 
 <template>
-  <span
-    :class="[ns.b(), checked ? ns.m('checked') : ns.m('unchecked'), cssClass]"
-  >
+  <span :class="[ns.b(), checked ? ns.m('checked') : '', cssClass]">
     <fn-icon-button
       :class="[ns.e('thumb')]"
       :color="props.color"

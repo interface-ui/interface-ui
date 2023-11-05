@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { FnAvatar, FnBadge, FnIcon } from '@fusion-ui-vue/components'
+import { FnAvatar, FnBadge } from '@fusion-ui-vue/components'
 import { styled } from '@fusion-ui-vue/theme'
 
 const StyledBadge = styled(FnBadge)(theme => ({
@@ -48,9 +48,9 @@ const SmallAvatar = styled(FnAvatar, {
     <fn-badge content="10">
       <fn-button>Hello</fn-button>
     </fn-badge>
-    <fn-badge content="6">
+    <!-- <fn-badge content="6">
       <fn-icon icon="mdi:bell" :color="theme => theme.colors.grey[500]" />
-    </fn-badge>
+    </fn-badge> -->
   </div>
   <styled-badge variant="dot" y-align="bottom" overlap>
     <fn-avatar src="https://mui.com/static/images/avatar/1.jpg" />

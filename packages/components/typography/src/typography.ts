@@ -44,6 +44,9 @@ export const typographyProps = buildProps({
     type: [String, Function] as PropType<AcceptableColor>,
     default: 'onSurface',
   },
+  cs: {
+    type: [Object, String, Array] as PropType<TemplateStringsArray>,
+  },
 })
 
 export type TypographyProps = ExtractPropTypes<typeof typographyProps>

@@ -13,34 +13,15 @@ const useCss: ComponentStylingHook<IconButtonProps> = (props, ns) =>
       'var(--md-sys-color-primary-rgb)'
     )
 
+    const iconButtonStyle = css`
+      --fn-icon-button-color: ${$color.value};
+      --fn-icon-button-color-rgb: ${$colorRgb.value};
+      &.${ns!.m(props.size)} .fn-icon {
+        font-size: ${iconSize[props.size]}px;
+      }
+    `
     const styleFromCs = props.cs ? css(props.cs) : ''
-    return cx(
-      css`
-        --fn-icon-button-color: ${$color.value};
-        --fn-icon-button-color-rgb: ${$colorRgb.value};
-        background-color: transparent;
-        appearance: none;
-        padding: 8px;
-        border-radius: 50%;
-        height: fit-content;
-        color: var(--fn-icon-button-color);
-        &[disabled] {
-          color: var(--fn-sys-color-disabled-level-0);
-        }
-        &.${ns!.m(props.size)} .fn-icon {
-          font-size: ${iconSize[props.size]}px;
-        }
-        @media (any-hover: hover) {
-          &:not([disabled]):hover {
-            background-color: rgb(
-              var(--fn-icon-button-color-rgb) /
-                var(--md-sys-state-hover-state-layer-opacity)
-            );
-          }
-        }
-      `,
-      styleFromCs
-    )
+    return cx(iconButtonStyle, styleFromCs)
   })
 
 export default useCss
