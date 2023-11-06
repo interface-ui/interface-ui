@@ -13,20 +13,14 @@ function getValueByKey<T>(obj: Record<string, T>, key: string): T | undefined {
 
 export const useAlert: ComponentStylingHook<AlertProps> = props => {
   const theme = useTheme()
-  const $color = props.color
+  const [$color, $onColor] = props.color
     ? useColor(props, 'color')
-    : useColor(props, 'severity', 'var(--md-sys-color-primary)')
+    : useColor(props, 'severity')
 
   const $iconColor = computed(() => {
     const values = getValueByKey(theme.value.palettes.error, '40')
     return values
   })
-
-  const $onColor = computed(() =>
-    themeSchemes.includes(props.severity as any)
-      ? `var(--md-sys-color-on-${props.severity})`
-      : null
-  )
 
   const $background = computed(() => {
     if (props.color) {

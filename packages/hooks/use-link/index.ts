@@ -4,7 +4,7 @@ import { computed } from 'vue'
 import type { ComponentStylingHook } from '../types'
 
 export const useLink: ComponentStylingHook<LlinkProps> = props => {
-  const $color = useColor(props, 'color', 'var(--md-sys-color-primary)')
+  const [$color] = useColor(props, 'color')
 
   return computed(() => {
     return css`

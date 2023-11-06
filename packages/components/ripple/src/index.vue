@@ -7,7 +7,6 @@ import {
   watchEffect,
 } from 'vue'
 import { addUnit, useNamespace } from '@fusion-ui-vue/utils'
-// import { useRipple } from '@fusion-ui-vue/hooks'
 import { useColor } from '@fusion-ui-vue/theme'
 import type { RippleStyle } from './ripple'
 import { rippleProps } from './ripple'
@@ -16,11 +15,10 @@ const props = defineProps(rippleProps)
 const ripplesArr = reactive<RippleStyle[]>([])
 const parent = getCurrentInstance()?.parent
 const ns = useNamespace('ripple')
-// const cssClass = useRipple(props, ns)
 let bounce: NodeJS.Timeout | null = null
 let listener: EventListener | null = null
 
-const $color = useColor(props, 'color', 'var(--fn-sys-color-ripple)').value!
+const $color = useColor(props, 'color')[0].value!
 
 const addRipple = (event: MouseEvent) => {
   const target = event.currentTarget as HTMLElement

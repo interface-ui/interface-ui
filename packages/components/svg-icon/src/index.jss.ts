@@ -8,7 +8,7 @@ const useCss: ComponentStylingHook<SvgIconProps> = props =>
     const {
       typography: { pxToRem },
     } = useTheme().value
-    const $color = useColor(props, 'color')
+    const [$color] = useColor(props, 'color')
 
     let fontSize
     const _size = +props.size

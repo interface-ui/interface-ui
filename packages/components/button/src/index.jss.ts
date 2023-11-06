@@ -1,4 +1,4 @@
-import { css, themeSchemes, useColor, useRgbColor } from '@fusion-ui-vue/theme'
+import { css, useColor, useRgbColor } from '@fusion-ui-vue/theme'
 import type { ComponentStylingHook } from 'packages/hooks/types'
 import { computed } from 'vue'
 import type { ButtonProps } from './button'
@@ -6,16 +6,11 @@ import { buttonHeight } from './button'
 
 const useCss: ComponentStylingHook<ButtonProps> = (props, ns) =>
   computed(() => {
-    const $color = useColor(props, 'color', 'var(--md-sys-color-primary)')
+    const [$color, $onColor] = useColor(props, 'color')
     const $colorRgb = useRgbColor(props, 'color', 'var(--md-sys-color-primary)')
-    const $onColor = computed(() =>
-      themeSchemes.includes(props.color as any)
-        ? `var(--md-sys-color-on-${props.color})`
-        : 'var(--md-sys-color-on-primary)'
-    )
 
     return css`
-      --fn-button-color: ${$color.value};
+      --fn-button-color: ${$color!.value};
       --fn-button-color-rgb: ${$colorRgb.value};
       --fn-button-on-color: ${$onColor.value};
       &.${ns!.m('filled')} {

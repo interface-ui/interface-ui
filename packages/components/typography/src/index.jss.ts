@@ -26,7 +26,7 @@ const useCss: ComponentStylingHook<TypographyProps> = props => {
       theme.value.typography[$variant]
 
   return computed(() => {
-    const $color = useColor(props, 'color', 'var(--md-sys-color-on-primary)')
+    const [$color] = useColor(props, 'color')
     const styleFromCs = props.cs ? css(props.cs) : ''
     return cx(
       css({

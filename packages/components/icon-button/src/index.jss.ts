@@ -6,7 +6,7 @@ import type { IconButtonProps } from './icon-button'
 
 const useCss: ComponentStylingHook<IconButtonProps> = (props, ns) =>
   computed(() => {
-    const $color = useColor(props, 'color', 'var(--md-sys-color-primary)')
+    const [$color] = useColor(props, 'color')
     const $colorRgb = useRgbColor(
       props,
       'color',

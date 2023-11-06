@@ -8,7 +8,7 @@ export const useSwitchNew: ComponentStylingHook<CheckboxProps> = (
   props,
   ns
 ) => {
-  const $color = useColor(props, 'color', 'var(--md-sys-color-primary)')
+  const [$color] = useColor(props, 'color')
   const instance = getCurrentInstance()
   const { disabled } = instance?.attrs || {}
   return computed(() => {

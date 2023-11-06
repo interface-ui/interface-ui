@@ -8,7 +8,7 @@ export default defineComponent({
   setup(props, { slots, attrs }) {
     const ns = useNamespace('button-group')
     const { orientation, ...buttonProps } = toRefs(props)
-    const $color = useColor(props, 'color', 'var(--md-sys-color-primary)')
+    const [$color] = useColor(props, 'color')
     const $colorRgb = useRgbColor(
       props,
       'color',

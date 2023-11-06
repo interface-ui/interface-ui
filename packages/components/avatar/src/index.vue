@@ -7,8 +7,8 @@ import { avatarProps } from './avatar'
 const props = defineProps(avatarProps)
 const ns = useNamespace('avatar')
 
-const backgroundColor = useColor(props, 'backgroundColor')
-const textColor = useColor(props, 'color')
+const [backgroundColor] = useColor(props, 'backgroundColor')
+const [textColor] = useColor(props, 'color')
 
 const cssClass = computed(
   () => css`
