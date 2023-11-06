@@ -53,8 +53,8 @@ const variants = ['outlined', 'filled', 'standard'] as const
             v-bind="adornment"
             @click="showPassword = !showPassword"
           >
-            <visibility-filled v-show="showPassword" v-bind="icon" />
-            <visibility-off-filled v-show="!showPassword" v-bind="icon" />
+            <visibility-off-filled v-show="showPassword" v-bind="icon" />
+            <visibility-filled v-show="!showPassword" v-bind="icon" />
           </fn-icon-button>
         </template>
       </fn-text-field>
