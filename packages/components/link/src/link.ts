@@ -1,20 +1,22 @@
-import type { ExtractPropTypes } from 'vue'
+import type { AcceptableColor } from '@fusion-ui-vue/theme'
+import type { ExtractPropTypes, PropType } from 'vue'
+
+export const linkUnderlineStyles = ['none', 'hover', 'always'] as const
+export type LinkUnderlineStyles = typeof linkUnderlineStyles[number]
 
 export const linkProps = {
   underline: {
-    type: String,
-    values: ['none', 'hover', 'always'] as const,
-    default: 'hover',
-    required: false,
+    type: String as PropType<LinkUnderlineStyles>,
+    values: linkUnderlineStyles,
+    default: 'always',
   },
   color: {
-    type: String,
-    required: false,
+    type: [String, Function] as PropType<AcceptableColor>,
+    default: 'primary',
   },
-  icon: {
-    type: String,
-    required: false,
+  cs: {
+    type: [Object, String, Array] as PropType<TemplateStringsArray>,
   },
 }
 
-export type LlinkProps = ExtractPropTypes<typeof linkProps>
+export type LinkProps = ExtractPropTypes<typeof linkProps>

@@ -30,8 +30,8 @@ const useCss: ComponentStylingHook<TypographyProps> = props => {
     const styleFromCs = props.cs ? css(props.cs) : ''
     return cx(
       css({
-        color: $color.value,
         [`&:is(${renderTag})`]: {
+          color: $color.value,
           margin: 0,
           border: 'none',
           ...style,
