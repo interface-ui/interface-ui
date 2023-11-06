@@ -30,6 +30,7 @@ export const createTheme = (
   customColors: CustomColor[] = defaultTheme.customColors
 ): Ref<Theme> => {
   const { schemes: $schemes, mode } = config
+  const html = document.documentElement
 
   const dynamicTheme = themeFromSourceColor(argbFromHex(source), [
     ...customColors,
@@ -56,6 +57,11 @@ export const createTheme = (
     () => theme.value.mode,
     newVal => {
       const { schemes } = newVal === 'dark' ? darkSchemes! : lightSchemes!
+      if (newVal === 'dark') {
+        html.setAttribute('data-theme', 'dark')
+      } else {
+        html.removeAttribute('data-theme')
+      }
 
       theme.value = new Theme(
         { ...schemes, ...$schemes } as ThemeSchemes,
