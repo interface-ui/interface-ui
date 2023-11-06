@@ -1,10 +1,10 @@
 import { css, useColor } from '@fusion-ui-vue/theme'
-import type { LlinkProps } from '@fusion-ui-vue/components'
+import type { LinkProps } from '@fusion-ui-vue/components'
 import { computed } from 'vue'
 import type { ComponentStylingHook } from '../types'
 
-export const useLink: ComponentStylingHook<LlinkProps> = props => {
-  const $color = useColor(props, 'color', 'var(--md-sys-color-primary)')
+export const useLink: ComponentStylingHook<LinkProps> = props => {
+  const [$color] = useColor(props, 'color')
 
   return computed(() => {
     return css`

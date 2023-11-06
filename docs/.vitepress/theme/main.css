@@ -111,7 +111,7 @@
   Also specify some classes twice to have higher specificity
   over scoped class data attribute.
 */
-.dark .vp-doc a,
+.dark .vp-doc a:not(.fn-link),
 .dark .vp-doc a > code,
 .dark .VPNavBarMenuLink.VPNavBarMenuLink:hover,
 .dark .VPNavBarMenuLink.VPNavBarMenuLink.active,
@@ -122,7 +122,7 @@
   color: var(--vp-c-brand-lighter);
 }
 
-.dark .vp-doc a:hover,
+.dark .vp-doc a:not(.fn-link):hover,
 .dark .vp-doc a > code:hover {
   color: var(--vp-c-brand-lightest);
   opacity: 1;
@@ -145,4 +145,29 @@
 .o-demo_wrapper {
   background-color: var(--md-sys-color-surface);
   flex-wrap: wrap;
+}
+
+/* reset the style for fn-link */
+.vp-doc a.fn-link {
+  cursor: pointer;
+}
+.vp-doc a.fn-link--underline-none {
+  text-decoration: none;
+}
+.vp-doc a.fn-link--underline-hover {
+  text-decoration: none;
+}
+.vp-doc a.fn-link--underline-hover:hover {
+  text-decoration: underline;
+}
+.vp-doc a.fn-link--underline-always {
+  text-decoration: underline rgb(var(--fn-link-color-rgb) / 0.4);
+}
+.vp-doc a.fn-link--underline-always:hover {
+  text-decoration: underline;
+}
+.vp-doc a.fn-link[disabled] {
+  pointer-events: none;
+  cursor: default;
+  color: var(--fn-sys-color-disabled-level-1);
 }

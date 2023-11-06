@@ -1,23 +1,20 @@
-<script setup lang="ts">
-import { useLink } from '@fusion-ui-vue/hooks'
+<script lang="ts" setup>
 import { useNamespace } from '@fusion-ui-vue/utils'
-import { linkProps } from '../src/link'
-const props = defineProps(linkProps)
+import FnTypography from '../../typography'
+import { linkProps } from './link'
+import useCss from './index.jss'
 
+const props = defineProps(linkProps)
 const ns = useNamespace('link')
-const cssClass = useLink(props)
+const cssClass = useCss(props)
 </script>
 
 <template>
-  <a :class="[ns.b(), cssClass]">
-    <span v-if="icon">
-      <fn-icon
-        :icon="icon"
-        :style="$slots.default ? 'margin-right: 3px;' : ''"
-      />
-    </span>
-    <span>
-      <slot />
-    </span>
-  </a>
+  <fn-typography
+    component="a"
+    :class="[ns.b(), ns.m(`underline-${$props.underline}`), cssClass]"
+    :color="$props.color"
+  >
+    <slot />
+  </fn-typography>
 </template>

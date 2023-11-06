@@ -4,6 +4,7 @@ import theme from 'vitepress/theme'
 // 导入本地源码样式--测试
 import 'fusion-ui-vue/dist/styles/index.css' // 全部样式
 import '@fusion-ui-vue/components/alert/src/index.less' // 单文件样式
+import '@fusion-ui-vue/components/link/src/index.less' // 单文件样式
 
 // 注册本地组件
 import FusionUi from '@fusion-ui-vue/components'
@@ -30,10 +31,8 @@ export default {
       const html = document.documentElement
       const toggleTheme = () => {
         if (html.classList.contains('dark')) {
-          html.setAttribute('data-theme', 'dark')
           uiTheme.value.mode = 'dark'
         } else {
-          html.removeAttribute('data-theme')
           uiTheme.value.mode = 'light'
         }
       }

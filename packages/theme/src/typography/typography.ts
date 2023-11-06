@@ -24,7 +24,6 @@ export const typography: Typography = {
     letterSpacing: typographyDefaultConfig.pxToRem(-0.25),
     lineHeight: typographyDefaultConfig.pxToRem(64),
     textTransform: 'unset',
-    textDecoration: 'unset',
   },
   h2: {
     fontFamily: 'Roboto',
@@ -34,7 +33,6 @@ export const typography: Typography = {
     letterSpacing: typographyDefaultConfig.pxToRem(0),
     lineHeight: typographyDefaultConfig.pxToRem(52),
     textTransform: 'unset',
-    textDecoration: 'unset',
   },
   h3: {
     fontFamily: 'Roboto',
@@ -44,7 +42,6 @@ export const typography: Typography = {
     letterSpacing: typographyDefaultConfig.pxToRem(0),
     lineHeight: typographyDefaultConfig.pxToRem(44),
     textTransform: 'unset',
-    textDecoration: 'unset',
   },
   h4: {
     fontFamily: 'Roboto',
@@ -54,7 +51,6 @@ export const typography: Typography = {
     letterSpacing: typographyDefaultConfig.pxToRem(0),
     lineHeight: typographyDefaultConfig.pxToRem(40),
     textTransform: 'unset',
-    textDecoration: 'unset',
   },
   h5: {
     fontFamily: 'Roboto',
@@ -64,7 +60,6 @@ export const typography: Typography = {
     letterSpacing: typographyDefaultConfig.pxToRem(0),
     lineHeight: typographyDefaultConfig.pxToRem(36),
     textTransform: 'unset',
-    textDecoration: 'unset',
   },
   h6: {
     fontFamily: 'Roboto',
@@ -74,7 +69,6 @@ export const typography: Typography = {
     letterSpacing: typographyDefaultConfig.pxToRem(0),
     lineHeight: typographyDefaultConfig.pxToRem(32),
     textTransform: 'unset',
-    textDecoration: 'unset',
   },
   title: {
     small: {
@@ -85,7 +79,6 @@ export const typography: Typography = {
       letterSpacing: typographyDefaultConfig.pxToRem(0.1),
       lineHeight: typographyDefaultConfig.pxToRem(20),
       textTransform: 'unset',
-      textDecoration: 'unset',
     },
     medium: {
       fontFamily: 'Roboto',
@@ -95,7 +88,6 @@ export const typography: Typography = {
       letterSpacing: typographyDefaultConfig.pxToRem(0.15000001),
       lineHeight: typographyDefaultConfig.pxToRem(24),
       textTransform: 'unset',
-      textDecoration: 'unset',
     },
     large: {
       fontFamily: 'Roboto',
@@ -105,7 +97,6 @@ export const typography: Typography = {
       letterSpacing: typographyDefaultConfig.pxToRem(0),
       lineHeight: typographyDefaultConfig.pxToRem(28),
       textTransform: 'unset',
-      textDecoration: 'unset',
     },
   },
   body: {
@@ -117,7 +108,6 @@ export const typography: Typography = {
       letterSpacing: typographyDefaultConfig.pxToRem(0.40000001),
       lineHeight: typographyDefaultConfig.pxToRem(16),
       textTransform: 'unset',
-      textDecoration: 'unset',
     },
     medium: {
       fontFamily: 'Roboto',
@@ -127,7 +117,6 @@ export const typography: Typography = {
       letterSpacing: typographyDefaultConfig.pxToRem(0.25),
       lineHeight: typographyDefaultConfig.pxToRem(20),
       textTransform: 'unset',
-      textDecoration: 'unset',
     },
     large: {
       fontFamily: 'Roboto',
@@ -137,7 +126,6 @@ export const typography: Typography = {
       letterSpacing: typographyDefaultConfig.pxToRem(0.5),
       lineHeight: typographyDefaultConfig.pxToRem(24),
       textTransform: 'unset',
-      textDecoration: 'unset',
     },
   },
   label: {
@@ -149,7 +137,6 @@ export const typography: Typography = {
       letterSpacing: typographyDefaultConfig.pxToRem(0.5),
       lineHeight: typographyDefaultConfig.pxToRem(16),
       textTransform: 'unset',
-      textDecoration: 'unset',
     },
     medium: {
       fontFamily: 'Roboto',
@@ -159,7 +146,6 @@ export const typography: Typography = {
       letterSpacing: typographyDefaultConfig.pxToRem(0.5),
       lineHeight: typographyDefaultConfig.pxToRem(16),
       textTransform: 'unset',
-      textDecoration: 'unset',
     },
     large: {
       fontFamily: 'Roboto',
@@ -169,7 +155,6 @@ export const typography: Typography = {
       letterSpacing: typographyDefaultConfig.pxToRem(0.1),
       lineHeight: typographyDefaultConfig.pxToRem(20),
       textTransform: 'unset',
-      textDecoration: 'unset',
     },
   },
 }

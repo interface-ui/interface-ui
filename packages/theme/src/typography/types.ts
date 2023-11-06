@@ -9,7 +9,6 @@ export interface TypographyProp {
   letterSpacing: string
   lineHeight: string
   textTransform: string
-  textDecoration: string
 }
 
 export const typographyWithSize = ['title', 'body', 'label'] as const

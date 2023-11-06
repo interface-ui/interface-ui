@@ -1,27 +1,16 @@
 import type { ComponentStylingHook } from 'packages/hooks/types'
 import { computed } from 'vue'
-import {
-  css,
-  cx,
-  themeSchemes,
-  useColor,
-  useRgbColor,
-} from '@fusion-ui-vue/theme'
+import { css, cx, useColor, useRgbColor } from '@fusion-ui-vue/theme'
 import type { SwitchProps } from './switch'
 import { switchHeight } from './switch'
 
 const useCss: ComponentStylingHook<SwitchProps> = props =>
   computed(() => {
-    const $color = useColor(props, 'color', 'var(--md-sys-color-primary)')
+    const [$color, $onColor] = useColor(props, 'color')
     const $colorRgb = useRgbColor(
       props,
       'color',
       'var(--md-sys-color-primary-rgb)'
-    )
-    const $onColor = computed(() =>
-      themeSchemes.includes(props.color as any)
-        ? `var(--md-sys-color-on-${props.color})`
-        : 'var(--md-sys-color-on-primary)'
     )
 
     const switchStyle = css`
