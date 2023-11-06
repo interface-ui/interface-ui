@@ -6,17 +6,12 @@ import { ref } from 'vue'
 const value = ref<string>('')
 const Box = styled('div')`
   display: flex;
-  flex-direction: column;
   gap: 10px;
-  width: 100%;
-  .fn-text-field {
-    width: 40%;
-  }
-  .fn-form-label {
-    justify-content: center;
-    .fn-typography {
-      min-width: 80px;
-    }
+  flex-wrap: wrap;
+  .fn-typography {
+    margin-right: 16px;
+    min-width: 80px;
+    text-align: right;
   }
 `
 </script>
