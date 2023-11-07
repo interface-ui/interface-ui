@@ -1,33 +1,42 @@
 <script lang="ts" setup>
-import { computed, ref } from 'vue'
+import { computed } from 'vue'
 import { useNamespace } from '@fusion-ui-vue/utils'
-import { useAlert } from '@fusion-ui-vue/hooks'
-import { alertProps } from './alert'
-const props = defineProps(alertProps)
-// const emit = defineEmits(alertEmits)
-// const iconComponent = computed(() => TypeComponentsMap[props.severity])
-const ns = useNamespace('alert')
-const cssClass = useAlert(props, ns)
-const visible = ref(true)
-const icon = computed(() => props.icon !== 'false')
+import { useTheme } from '@fusion-ui-vue/theme'
+import FnTypography from '../../typography'
+import { alertIcons, alertProps } from './alert'
+import useCss from './index.jss'
 
-const handleClick = (): void => {
-  // alert('click')
-}
+const props = defineProps(alertProps)
+const theme = useTheme()
+const ns = useNamespace('alert')
+const cssClass = useCss(props, ns)
+
+const actionColor = computed(() => {
+  const severityPalette = theme.value.palettes[props.severity]
+  return theme.value.mode === 'dark' ? severityPalette[50] : severityPalette[40]
+})
 </script>
 
 <template>
-  <transition name="alert-fade">
-    <div v-show="visible" :class="[ns.b(), ns.m(props.variant), cssClass]">
-      <div v-if="icon" :class="[ns.m('icon')]">
-        <!-- <component :is="iconComponent" /> -->
-      </div>
-      <div :class="[ns.m('message')]">
-        <slot />
-      </div>
-      <div :class="[ns.m('action')]" @click="handleClick">
-        <slot name="action" />
-      </div>
-    </div>
-  </transition>
+  <div :class="[ns.b(), ns.m(props.variant), cssClass]">
+    <slot
+      v-if="props.icon"
+      name="icon"
+      v-bind="{
+        severity: $props.severity,
+        class: [ns.m('icon')],
+      }"
+    >
+      <component :is="alertIcons[$props.severity!]" :class="[ns.m('icon')]" />
+    </slot>
+    <fn-typography
+      component="span"
+      color="var(--fn-alert-on-color)"
+      variant="body.medium"
+      :class="[ns.m('message')]"
+    >
+      <slot />
+    </fn-typography>
+    <slot name="action" v-bind="{ color: actionColor, size: 'small' }" />
+  </div>
 </template>

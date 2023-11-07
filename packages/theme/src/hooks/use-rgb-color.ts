@@ -20,7 +20,11 @@ export const useRgbColor = <T extends { [k: string]: AcceptableColor | any }>(
 ) => {
   const theme = useTheme()
   return computed(() => {
-    if (!key || !(key in props)) {
+    if (
+      !key ||
+      !(key in props) ||
+      !['string', 'function'].includes(typeof props[key])
+    ) {
       return defaultColor ?? null
     }
 
@@ -30,9 +34,11 @@ export const useRgbColor = <T extends { [k: string]: AcceptableColor | any }>(
       const { r, g, b } = rgbaFromArgb(argbFromHex(color(theme.value)))
       return `${r} ${g} ${b}`
     }
-    if (typeof color === 'string' && color in theme.value.schemes) {
+    if (color in theme.value.schemes) {
       const _color = color.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase()
       return `var(--md-sys-color-${_color}-rgb)`
+    } else if (!color.startsWith('#')) {
+      return color
     }
 
     const { r, g, b } = rgbaFromArgb(argbFromHex(color as string))

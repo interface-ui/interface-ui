@@ -43,8 +43,10 @@ const genOnColor = <T extends { [k: string]: AcceptableColor | any }>(
       return color.startsWith('on')
         ? `var(--md-sys-color-${_color})`
         : `var(--md-sys-color-on-${_color})`
-    } else {
+    } else if (color.startsWith('#')) {
       computedColor = color
+    } else {
+      return color
     }
 
     const tones = CorePalette.of(argbFromHex(computedColor)).a1
@@ -80,20 +82,4 @@ export const useColor = <T extends { [k: string]: AcceptableColor | any }>(
   const color = genColor(props, key, theme)
   const onColor = genOnColor(props, key, theme)
   return [color, onColor]
-  // return computed(() => {
-  //   if (!key || !(key in props)) {
-  //     return defaultColor ?? null
-  //   }
-
-  //   const color: AcceptableColor = props?.[key]
-
-  //   if (typeof color === 'function') {
-  //     return color(theme.value)
-  //   }
-  //   if (typeof color === 'string' && color in theme.value.schemes) {
-  //     const _color = color.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase()
-  //     return `var(--md-sys-color-${_color})`
-  //   }
-  //   return color
-  // })
 }

@@ -81,6 +81,7 @@ export const themePalettesTones = [
   '50',
   '60',
   '70',
+  '80',
   '90',
   '95',
   '99',

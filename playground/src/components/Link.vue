@@ -12,6 +12,7 @@ import { FnLink } from '@fusion-ui-vue/components'
   <div class="content">
     <fn-link href="#">Link</fn-link>
     <fn-link href="#" color="tertiary">Link</fn-link>
+    <fn-link href="#" color="inherit">Link</fn-link>
     <fn-link href="#" color="error">Link</fn-link>
     <fn-link href="#" :color="theme => theme.colors.cyan[400]">Link</fn-link>
     <fn-link href="#" color="#2E7D32">Link</fn-link>

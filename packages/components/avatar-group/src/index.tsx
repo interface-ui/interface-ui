@@ -15,8 +15,8 @@ export default defineComponent({
     if (max.value && +max.value < slotsVNodes.length) {
       const count = slotsVNodes.length - +max.value
       vNodes = [
-        ...slotsVNodes.slice(0, +max.value),
-        <FnAvatar>+{count}</FnAvatar>,
+        ...(slotsVNodes.slice(0, +max.value) as any),
+        (<FnAvatar>+{count}</FnAvatar>) as any,
       ]
     }
 
