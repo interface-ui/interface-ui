@@ -1,54 +1,33 @@
-.fn-alert{
+.fn-alert {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   position: relative;
-  border-radius: 5px;
-  line-height: 1.43;
+  border-radius: var(--md-sys-shape-corner-extra-small-default-size);
   padding: 6px 16px;
-  background-color: var(--fn-alert-background);
-  display:flex;
-  font-size: 14px;
-  // &--error{
-  //   color: var(--md-sys-color-error)
-  // }
-  // &--warning{
-  //   color: var(--md-sys-color-warning)
-  // }
-  // &--info{
-  //   color: var(--md-sys-color-info)
-  // }
-  // &--success{
-  //   color: var(--md-sys-color-success)
-  // }
-  &--outlined{
-    background-color: transparent;
-    border: 1px solid var(--fn-alert-color);
-    color: var(--fn-alert-color);
-  }
+  color: var(--fn-alert-on-color);
 
-
-  &--icon{
-    // color: var(--fn-alert-on-color);
-    color: var(--fn-alert-2222);
-    margin-right: 12px;
-    padding: 7px 0;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    font-size: 22px;
-    opacity: 0.9;
-  }
-  &--message{
+  .fn-alert--message {
+    flex: 1;
     padding: 8px 0;
-    min-width: 0;
-    overflow: auto;
-    >.fn-typography--gutter{
-      margin-top: 0 !important;
-    }
   }
-  &--action{
-    display: flex;
-    align-items: center;
-    margin-left: auto;
-    margin-right: -8px;
+
+  .fn-alert--icon,
+  .fn-icon {
+    font-size: 24px;
+    color: var(--fn-alert-highlight-color);
+    margin: 6px 0 auto;
+  }
+}
+
+// variants
+.fn-alert {
+  &--filled {
+    background-color: var(--fn-alert-color);
+  }
+
+  &--outlined {
+    border: 1px solid var(--fn-alert-highlight-color);
+    background: transparent;
   }
 }

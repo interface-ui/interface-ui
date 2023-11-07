@@ -19,7 +19,6 @@ let bounce: NodeJS.Timeout | null = null
 let listener: EventListener | null = null
 
 const $color = useColor(props, 'color')[0].value!
-
 const addRipple = (event: MouseEvent) => {
   const target = event.currentTarget as HTMLElement
   const rect = target.getBoundingClientRect()

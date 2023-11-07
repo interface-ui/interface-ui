@@ -1,36 +1,39 @@
-import type { ExtractPropTypes, PropType } from 'vue'
-import type { AcceptableColor } from '@fusion-ui-vue/theme'
+import type { Component, ExtractPropTypes, PropType } from 'vue'
 import { type ComponentSeverity } from '@fusion-ui-vue/constants'
-export type AlertType = String | Boolean
+import { buildProps } from '@fusion-ui-vue/utils'
+import SuccessOutlined from '../../svg-icon/internal/SuccessOutlined.vue'
+import WarningOutlined from '../../svg-icon/internal/WarningOutlined.vue'
+import ErrorOutlined from '../../svg-icon/internal/ErrorOutlined.vue'
+import InfoOutlined from '../../svg-icon/internal/InfoOutlined.vue'
+
 export const alertVariants = ['filled', 'outlined'] as const
-export type AlertVariant = typeof alertVariants[number]
-export const alertProps = {
-  title: {
-    type: String as PropType<AlertType>,
-    default: '',
+export type AlertVariants = typeof alertVariants[number]
+
+export const alertProps = buildProps({
+  variant: {
+    type: String as PropType<AlertVariants>,
+    values: alertVariants,
+    default: 'filled',
   },
   severity: {
     type: String as PropType<ComponentSeverity>,
+    required: true,
     default: 'info',
   },
   icon: {
-    type: String as PropType<AlertType>,
-    default: '',
+    type: Boolean,
+    default: true,
   },
-  variant: {
-    type: String as PropType<AlertVariant>,
-    values: alertVariants,
-    default: '',
+  cs: {
+    type: [Object, String, Array] as PropType<TemplateStringsArray>,
   },
-  color: {
-    type: [String, Function] as PropType<AcceptableColor>,
-    default: '',
-  },
+})
+
+export const alertIcons: Record<ComponentSeverity, Component> = {
+  success: SuccessOutlined,
+  warning: WarningOutlined,
+  error: ErrorOutlined,
+  info: InfoOutlined,
 }
 
-export const alertEmits = {
-  close: (evt: MouseEvent) => evt instanceof MouseEvent,
-}
-
-/** AlertProps 组件 props 类型 */
 export type AlertProps = ExtractPropTypes<typeof alertProps>
