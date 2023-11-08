@@ -1,23 +1,33 @@
+<script setup lang="ts">
+import * as pkg from 'fusion-ui-iconify'
+const { HistoryRound, VerifiedRound, AddShoppingCartRound } = pkg
+</script>
+
 <template>
   <div space-y-5 w-full>
-    <FnAlert severity="success" icon="material-symbols:add-alert-outline">
-      <fn-typography gutter variant="title.medium">
-        Title
-      </fn-typography>
+    <FnAlert severity="success">
+      <template #icon>
+        <history-round />
+      </template>
       This is an success alert — check it out!
     </FnAlert>
-    <FnAlert severity="success" icon="material-symbols:add-a-photo-outline-sharp">
-      <fn-typography gutter variant="title.medium">
-        Title
-      </fn-typography>
+    <FnAlert severity="success">
+      <template #icon>
+        <verified-round />
+      </template>
       This is an success alert — check it out!
     </FnAlert>
-    <FnAlert severity="success" icon="false">
-      <fn-typography gutter variant="title.medium">
-        Title
-      </fn-typography>
+    <FnAlert severity="success">
+      <template #icon>
+        <add-shopping-cart-round />
+      </template>
+      This is an success alert — check it out!
+    </FnAlert>
+    <FnAlert severity="success" :icon="false">
+      <template #icon>
+        <add-shopping-cart-round />
+      </template>
       This is an success alert — check it out!
     </FnAlert>
   </div>
-  <br>
 </template>

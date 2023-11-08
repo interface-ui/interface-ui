@@ -13,18 +13,19 @@ const list: PropTableItem[] = [
     type: '--',
     default: '--',
   },
-  {
-    name: 'icon',
-    remark: 'Provide the icon, icon is false to close the icon',
-    type: 'String',
-    default: '---',
-  },
 
   {
     name: 'variant',
     remark: ' outlined & filled ',
     type: 'String',
     default: '---',
+  },
+  {
+    name: 'cs',
+    remark: 'Flexible color configuration',
+    type: 'Enum',
+    optional: ['String', 'Object'],
+    default: '--',
   },
 ]
 

@@ -5,7 +5,7 @@ const list: PropTableItem[] = [
     remark: 'Alert 严重等级',
     type: 'Enum',
     optional: ['error', 'warning', 'info', 'success'],
-    default: '---',
+    default: 'info',
   },
   {
     name: 'fn-typography',
@@ -13,18 +13,19 @@ const list: PropTableItem[] = [
     type: '--',
     default: '--',
   },
-  {
-    name: 'icon',
-    remark: '提供图标，icon 为 false 关闭图标',
-    type: 'String',
-    default: '---',
-  },
 
   {
     name: 'variant',
-    remark: '提供 outlined 与 filled 样式',
+    remark: '提供 filled 与 outlined 样式',
     type: 'String',
-    default: '---',
+    default: 'filled',
+  },
+  {
+    name: 'cs',
+    remark: '灵活的颜色配置',
+    type: 'Enum',
+    optional: ['String', 'Object'],
+    default: '--',
   },
 
 ]

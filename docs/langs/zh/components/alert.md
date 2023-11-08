@@ -13,7 +13,7 @@ lang: zh
 
 用于在页面上显示重要提示信息。
 
-## Basic usage
+## 基本用法
 
 `Alert` 提供了四个严重级别，设置了独特的图标和颜色。
 
@@ -31,28 +31,22 @@ lang: zh
 
 <demo src="../../../example/alert/actions.vue"></demo>
 
-## Icons
+## 图标
 
-提供了`icon`属性，可以设置图标。 将图标道具设置为 `false` 将完全删除图标。
+提供了`icon` 插槽，可以设置图标。 将图标道具设置为 `false` 将完全删除图标。
 
 <demo src="../../../example/alert/icon.vue"></demo>
 
 
-## Outlined
+## 变种
 
-`Outlined` 镂空状态
+Variant 提供了两种填充状态`Filled` 与 `Outlined`，默认`Filled`。
 
 <demo src="../../../example/alert/outlined.vue"></demo>
 
-## Filled
-
-`Filled` 填充状态
-
-<demo src="../../../example/alert/filled.vue"></demo>
-
 ## Color
 
-颜色道具将覆盖指定严重程度的默认颜色。
+提供了 `cs` 属性，灵活配置想要的颜色。
 
 <demo src="../../../example/alert/color.vue"></demo>
 

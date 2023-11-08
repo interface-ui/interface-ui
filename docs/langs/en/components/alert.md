@@ -37,22 +37,16 @@ The `icon` property is provided to set the icon. Setting the icon prop to `false
 
 <demo src="../../../example/alert/icon.vue"></demo>
 
+## Variant
 
-## Outlined
-
-`Outlined` status
+The Variant property provides two filling states, `Filled` and `Outlined`, with the default being `Filled`.
 
 <demo src="../../../example/alert/outlined.vue"></demo>
 
-## Filled
 
-`Filled` status
+## Cs
 
-<demo src="../../../example/alert/filled.vue"></demo>
-
-## Color
-
-The color prop will override the default color of the specified severity.
+The 'cs' attribute is provided to flexibly configure the desired color.
 
 <demo src="../../../example/alert/color.vue"></demo>
 
