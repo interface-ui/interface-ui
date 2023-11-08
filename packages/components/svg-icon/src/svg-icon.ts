@@ -16,7 +16,7 @@ export const svgIconProps = buildProps({
     default: 'svg',
   },
   cs: {
-    type: [Object, String, Array] as PropType<TemplateStringsArray>,
+    type: [Object, String],
   },
 })
 

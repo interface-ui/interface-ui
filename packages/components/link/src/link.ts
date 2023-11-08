@@ -15,7 +15,7 @@ export const linkProps = {
     default: 'primary',
   },
   cs: {
-    type: [Object, String, Array] as PropType<TemplateStringsArray>,
+    type: [Object, String],
   },
 }
 

@@ -15,7 +15,7 @@ export const inputBaseProps = buildProps({
     default: '',
   },
   cs: {
-    type: [Object, String, Array] as PropType<TemplateStringsArray>,
+    type: [Object, String],
   },
   /**
    * TIPS

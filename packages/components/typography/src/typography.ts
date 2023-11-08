@@ -45,7 +45,7 @@ export const typographyProps = buildProps({
     default: 'onSurface',
   },
   cs: {
-    type: [Object, String, Array] as PropType<TemplateStringsArray>,
+    type: [Object, String],
   },
 })
 
