@@ -25,7 +25,7 @@ export const alertProps = buildProps({
     default: true,
   },
   cs: {
-    type: [Object, String, Array] as PropType<TemplateStringsArray>,
+    type: [Object, String],
   },
 })
 

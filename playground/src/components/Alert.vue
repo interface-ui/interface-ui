@@ -18,10 +18,14 @@ import { CloseOutlined } from 'fusion-ui-iconify'
   </div>
 
   <div class="content" style="margin-top: 16px">
-    <fn-alert variant="outlined" severity="success">
+    <fn-alert
+      variant="outlined"
+      severity="success"
+      :cs="{ '& .fn-alert--message': { opacity: 0 } }"
+    >
       This is an success alert — check it out!
     </fn-alert>
-    <fn-alert variant="outlined" severity="warning">
+    <fn-alert variant="outlined" severity="warning" cs="opacity: 0">
       This is an warning alert — check it out!
     </fn-alert>
     <fn-alert variant="outlined" severity="info">
