@@ -7,7 +7,7 @@ import { buttonHeight } from './button'
 const useCss: ComponentStylingHook<ButtonProps> = (props, ns) =>
   computed(() => {
     const [$color, $onColor] = useColor(props, 'color')
-    const $colorRgb = useRgbColor(props, 'color', 'var(--md-sys-color-primary)')
+    const [$colorRgb] = useRgbColor(props, 'color')
 
     return css`
       --fn-button-color: ${$color!.value};

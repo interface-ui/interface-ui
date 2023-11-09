@@ -7,11 +7,7 @@ import { switchHeight } from './switch'
 const useCss: ComponentStylingHook<SwitchProps> = props =>
   computed(() => {
     const [$color, $onColor] = useColor(props, 'color')
-    const $colorRgb = useRgbColor(
-      props,
-      'color',
-      'var(--md-sys-color-primary-rgb)'
-    )
+    const [$colorRgb] = useRgbColor(props, 'color')
 
     const switchStyle = css`
       --fn-switch-color: ${$color.value};

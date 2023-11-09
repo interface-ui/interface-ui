@@ -5,11 +5,7 @@ import type { LinkProps } from './link'
 
 const useCss: ComponentStylingHook<LinkProps> = props =>
   computed(() => {
-    const $colorRgb = useRgbColor(
-      props,
-      'color',
-      'var(--md-sys-color-primary-rgb)'
-    )
+    const [$colorRgb] = useRgbColor(props, 'color')
     const linkStyle = css`
       --fn-link-color-rgb: ${$colorRgb.value};
     `
