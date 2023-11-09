@@ -5,7 +5,7 @@ import {
   themeFromSourceColor,
 } from '@material/material-color-utilities'
 import { useThemeProvider } from '../hooks'
-import type { ThemeConfig, ThemeSchemes } from './types'
+import type { ThemeOptions, ThemeSchemes } from './types'
 import Theme from './theme'
 import defaultTheme from './default.theme'
 import {
@@ -25,8 +25,10 @@ import {
  */
 export const createTheme = (
   source = defaultTheme.source,
-  config: ThemeConfig = {}
+  options: ThemeOptions = {}
 ): Ref<Theme> => {
+  const config = options.config ?? {}
+  const target = options.target ?? 'root'
   const { schemes: $schemes, mode } = config
   const html = document.documentElement
   const customColors = [
@@ -52,6 +54,8 @@ export const createTheme = (
     parseCustomSchemes(dynamicTheme.customColors, 'dark')
   )
 
+  const injectCss = injectJSS(target, lightSchemes, darkSchemes, theme.value)
+
   watch(
     () => theme.value.mode,
     newVal => {
@@ -65,13 +69,12 @@ export const createTheme = (
       theme.value = new Theme(
         { ...schemes, ...$schemes } as ThemeSchemes,
         palettes,
-        newVal
+        newVal,
+        injectCss
       )
     },
     { immediate: true }
   )
-
-  injectJSS(lightSchemes, darkSchemes, theme.value)
 
   useThemeProvider(theme)
   return theme

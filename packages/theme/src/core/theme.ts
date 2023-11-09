@@ -20,15 +20,18 @@ export default class Theme {
   typography = typography
   zIndex = zIndex
   palettes: ThemePalettes
+  inject?: string
 
   constructor(
     schemes: Schemes & AdditionalSchemes,
     palettes: ThemePalettes,
-    mode: ThemeMode = 'light'
+    mode: ThemeMode = 'light',
+    inject?: string
   ) {
     this.schemes = schemes
     this.mode = mode
     this.palettes = palettes
+    this.inject = inject
   }
 
   setMode(mode: ThemeMode) {
