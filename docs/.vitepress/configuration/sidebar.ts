@@ -1,4 +1,5 @@
 import { enComponents, zhComponents } from './components'
+import { enTheme } from './theme'
 import { enGuides, zhGuides } from './guides'
 
 export const sidebar = {
@@ -16,4 +17,5 @@ export const sidebar = {
     },
   ],
   '/langs/en/components': enComponents,
+  '/langs/en/theme': enTheme,
 }

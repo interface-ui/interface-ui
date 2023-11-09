@@ -4,7 +4,6 @@ import {
   argbFromHex,
   themeFromSourceColor,
 } from '@material/material-color-utilities'
-import type { CustomColor } from '@material/material-color-utilities'
 import { useThemeProvider } from '../hooks'
 import type { ThemeConfig, ThemeSchemes } from './types'
 import Theme from './theme'
@@ -26,16 +25,16 @@ import {
  */
 export const createTheme = (
   source = defaultTheme.source,
-  config: ThemeConfig = {},
-  customColors: CustomColor[] = defaultTheme.customColors
+  config: ThemeConfig = {}
 ): Ref<Theme> => {
   const { schemes: $schemes, mode } = config
   const html = document.documentElement
-
-  const dynamicTheme = themeFromSourceColor(argbFromHex(source), [
-    ...customColors,
+  const customColors = [
+    ...defaultTheme.customColors,
     ...(config.customColors ?? []),
-  ])
+  ]
+
+  const dynamicTheme = themeFromSourceColor(argbFromHex(source), customColors)
 
   const palettes = {
     ...parsePalettes(dynamicTheme.palettes),
