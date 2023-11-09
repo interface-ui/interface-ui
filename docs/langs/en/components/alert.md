@@ -46,7 +46,7 @@ The Variant property provides two filling states, `Filled` and `Outlined`, with 
 
 ## Cs
 
-The 'cs' attribute is provided to flexibly configure the desired color.
+The `cs` attribute is provided to flexibly configure the desired color.
 
 <demo src="../../../example/alert/color.vue"></demo>
 
