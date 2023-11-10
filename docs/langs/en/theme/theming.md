@@ -21,6 +21,14 @@ To enhance consistency across apps, you can choose between light and dark theme 
 
 To provide a flexible way to customize the theme, we use the [dynamic color system](https://m3.material.io/styles/color/dynamic-color/overview) to create the theme schemes by passing the source color.
 
+### Nested theme
+
+You can use the nested theme with the `ThemeProvider` component.
+
+All the Fusion UI components inside the `ThemeProvider` will appply the new theme.
+
+<demo src="../../../example/theme/nested.vue"></demo>
+
 ## APIs
 
 ### createTheme()

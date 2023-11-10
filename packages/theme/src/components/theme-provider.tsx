@@ -1,4 +1,4 @@
-import type { PropType, Ref } from 'vue'
+import type { Component, PropType, Ref } from 'vue'
 import { defineComponent, ref, watch } from 'vue'
 import type { ThemeSchemes } from '../core'
 import { Theme } from '../core'
@@ -12,6 +12,10 @@ export default defineComponent({
     theme: {
       type: Object as PropType<Theme>,
       required: true,
+    },
+    component: {
+      type: [String, Object] as PropType<string | Component>,
+      default: 'div',
     },
   },
   setup(props, { slots }) {
@@ -60,14 +64,15 @@ export default defineComponent({
 
     useThemeProvider(theme as Ref<Theme>)
 
+    const Comp = props.component as any
     return () =>
       // eslint-disable-next-line multiline-ternary
       theme.value.target === 'root' ? (
         slots.default?.()
       ) : (
-        <div ref={element as any} class={injectCss}>
+        <Comp ref={element as any} class={injectCss}>
           {slots.default?.()}
-        </div>
+        </Comp>
       )
   },
 })
