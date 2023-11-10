@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { ThemeProvider } from '@fusion-ui-vue/theme'
 import { FnButton } from '@fusion-ui-vue/components'
 import createTheme from '@fusion-ui-vue/theme'
 // import Badge from './components/Badge.vue'
@@ -29,21 +30,23 @@ watch(theme, () => ((window as any).theme = toRaw(theme.value)), {
 </script>
 
 <template>
-  <!-- ------------------- Toggle between the light/dark mode ------------------- -->
-  <header>
-    <fn-button @click="changTheme">
-      <!-- @vue-skip -->
-      {{ theme.mode }}
-    </fn-button>
-  </header>
-  <!-- <badge /> -->
-  <!-- <avatar-group /> -->
-  <!-- <button-group /> -->
-  <!-- <switch-new /> -->
-  <!-- <TextField /> -->
-  <!-- <Alert /> -->
-  <!-- <svg-icon /> -->
-  <button-t />
-  <!-- <checkbox /> -->
-  <!-- <link-t /> -->
+  <theme-provider :theme="theme">
+    <!-- ------------------- Toggle between the light/dark mode ------------------- -->
+    <header>
+      <fn-button @click="changTheme">
+        <!-- @vue-skip -->
+        {{ theme.mode }}
+      </fn-button>
+    </header>
+    <!-- <badge /> -->
+    <!-- <avatar-group /> -->
+    <!-- <button-group /> -->
+    <!-- <switch-new /> -->
+    <!-- <TextField /> -->
+    <!-- <Alert /> -->
+    <!-- <svg-icon /> -->
+    <button-t />
+    <!-- <checkbox /> -->
+    <!-- <link-t /> -->
+  </theme-provider>
 </template>

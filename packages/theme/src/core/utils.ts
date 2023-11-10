@@ -140,7 +140,7 @@ export const injectJSS = (
     injectCss = css({
       ...lightSchemes?.styles,
 
-      ':root[data-theme="dark"] &': {
+      '&[data-theme="dark"]': {
         ...darkSchemes?.styles,
       },
     })

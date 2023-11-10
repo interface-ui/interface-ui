@@ -5,5 +5,6 @@ export * from './src/hooks'
 export * from './src/color'
 export * from './src/state'
 export * from './src/typography'
+export * from './src/components'
 
 export default createTheme

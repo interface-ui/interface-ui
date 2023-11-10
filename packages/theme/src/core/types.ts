@@ -29,7 +29,7 @@ export interface ThemeConfig {
 }
 
 export interface ThemeOptions {
-  target?: 'root' | 'host'
+  target: 'root' | 'host'
   config?: ThemeConfig
 }
 

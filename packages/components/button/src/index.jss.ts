@@ -10,7 +10,7 @@ const useCss: ComponentStylingHook<ButtonProps> = (props, ns) =>
     const [$colorRgb] = useRgbColor(props, 'color')
 
     return css`
-      --fn-button-color: ${$color!.value};
+      --fn-button-color: ${$color.value};
       --fn-button-color-rgb: ${$colorRgb.value};
       --fn-button-on-color: ${$onColor.value};
       &.${ns!.m('filled')} {

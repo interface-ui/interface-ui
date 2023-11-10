@@ -6,6 +6,7 @@ import zIndex from '../z-index'
 import type ThemeMode from '../mode'
 import type {
   AdditionalSchemes,
+  ParsedSchemes,
   Schemes,
   ThemePalettes,
   ThemeSchemes,
@@ -21,17 +22,24 @@ export default class Theme {
   zIndex = zIndex
   palettes: ThemePalettes
   inject?: string
+  target: 'root' | 'host'
+  readonly _lightSchemes: ParsedSchemes
+  readonly _darkSchemes: ParsedSchemes
 
   constructor(
     schemes: Schemes & AdditionalSchemes,
     palettes: ThemePalettes,
     mode: ThemeMode = 'light',
-    inject?: string
+    lightSchemes: ParsedSchemes,
+    darkSchemes: ParsedSchemes,
+    target: 'root' | 'host'
   ) {
     this.schemes = schemes
     this.mode = mode
     this.palettes = palettes
-    this.inject = inject
+    this._lightSchemes = lightSchemes
+    this._darkSchemes = darkSchemes
+    this.target = target
   }
 
   setMode(mode: ThemeMode) {

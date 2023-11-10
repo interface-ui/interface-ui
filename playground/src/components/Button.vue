@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { ThemeProvider } from '@fusion-ui-vue/theme'
 import Checkbox from './Checkbox.vue'
 import * as pkg from 'fusion-ui-iconify'
 import createTheme from '@fusion-ui-vue/theme'
@@ -13,8 +14,8 @@ const theme = createTheme('#2196f3', { target: 'host' })
       <delete-filled />
       delete
     </fn-button>
-    <div :class="theme.inject">
-      <fn-button variant="outlined" :color="theme.schemes.primary">
+    <theme-provider :theme="theme">
+      <fn-button variant="outlined">
         <delete-filled />
         delete
       </fn-button>
@@ -22,7 +23,7 @@ const theme = createTheme('#2196f3', { target: 'host' })
         <delete-filled />
       </fn-icon-button>
       <checkbox />
-    </div>
+    </theme-provider>
     <fn-button variant="outlined" size="large" disabled>
       <delete-filled />
       delete
