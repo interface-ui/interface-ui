@@ -37,19 +37,21 @@ export function demoBlockPlugin(md: MarkdownRenderer) {
 
       const props = parseProps(content)
 
-      if (!props.src)
+      if (!props.src) {
         return defaultRender!(tokens, idx, options, env, self)
+      }
 
       const frontmatter = env.frontmatter
 
       const mdDir = dirname(frontmatter.realPath ?? path)
-      const srcPath = resolve(mdDir, props.src)
+      const srcPath = resolve(mdDir, props.src as string)
       const code = fsExtra.readFileSync(srcPath, 'utf-8')
 
       const demoScripts = getDemoComponent(md, env, {
         title: props.title,
         desc: props.desc,
         path: srcPath,
+        preview: props.preview,
         code,
         ...props,
       })

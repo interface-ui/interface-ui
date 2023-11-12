@@ -15,7 +15,7 @@ The Link component allows you to easily customize anchor elements with your them
 
 The `Link` component is built on top of the `Typography` component, meaning that you can use its props
 
-<demo src="../../../example/link/basic.vue"></demo>
+<demo src="../../../example/link/basic.vue" preview="[2-3]"></demo>
 
 ## Color
 
