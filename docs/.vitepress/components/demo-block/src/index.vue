@@ -19,7 +19,7 @@ const [value, toggle] = useToggle()
 
 <template>
   <ClientOnly>
-    <div v-bind="$attrs" class="mt-6">
+    <div v-bind="$attrs" class="mt-6 demo-block">
       <div class="o-demo_wrapper vp-raw bg">
         <slot />
       </div>

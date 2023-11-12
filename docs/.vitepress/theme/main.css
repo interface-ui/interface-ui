@@ -171,3 +171,7 @@
   cursor: default;
   color: var(--fn-sys-color-disabled-level-1);
 }
+
+.demo-block div[class*='language-'] + div[class*='language-'] {
+  margin-top: 16px;
+}
