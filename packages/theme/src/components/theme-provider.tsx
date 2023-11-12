@@ -18,7 +18,8 @@ export default defineComponent({
       default: 'div',
     },
   },
-  setup(props, { slots }) {
+  emits: ['update:theme'],
+  setup(props, { slots, emit }) {
     const html = document.documentElement
     const theme = ref(props.theme)
     const parentTheme = props.theme.target === 'host' ? useTheme() : ref(null)
@@ -54,6 +55,7 @@ export default defineComponent({
         darkSchemes,
         target
       )
+      emit('update:theme', theme.value)
     }
 
     if (props.theme.target === 'root') {

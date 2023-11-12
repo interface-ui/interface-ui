@@ -2,11 +2,14 @@
 import { ThemeProvider } from '@fusion-ui-vue/theme'
 import { FnButton, FnIconButton } from '@fusion-ui-vue/components'
 import Checkbox from './Checkbox.vue'
-import * as pkg from 'fusion-ui-iconify'
 import createTheme from '@fusion-ui-vue/theme'
-const { DeleteFilled } = pkg
-// import { DeleteFilled } from 'fusion-ui-iconify'
+import { DeleteFilled } from 'fusion-ui-iconify'
+import { watchEffect } from 'vue'
 const theme = createTheme('#2196f3', { target: 'host' })
+
+watchEffect(() => {
+  console.log(theme.value)
+})
 </script>
 
 <template>
@@ -15,7 +18,7 @@ const theme = createTheme('#2196f3', { target: 'host' })
       <delete-filled />
       delete
     </fn-button>
-    <theme-provider :theme="theme">
+    <theme-provider v-model:theme="theme">
       <fn-button variant="outlined" :color="theme => theme.schemes.error">
         <delete-filled />
         delete
