@@ -15,35 +15,35 @@ Avatar 组件可以用来代表人物或对象, 支持图片文字或者图标�
 
 ## 基础用法
 
-<demo src="../../../example/avatar/basic.vue"></demo>
+<demo src="../../../example/avatar/basic.vue" />
 
 ## 字母头像
 
 通过传递文字来生成字母头像。
 
-<demo src="../../../example/avatar/letter.vue"></demo>
+<demo src="../../../example/avatar/letter.vue" />
 
 通常我们使用用来展示没有头像的用户。
 
-<demo src="../../../example/avatar/no-avatar.vue"></demo>
+<demo src="../../../example/avatar/no-avatar.vue" />
 
 ## 尺寸
 
 我们提供了三种尺寸的头像，分别是 `small`、`default`、`large`，也可以使用 `height` 和 `width`来自定义头像的尺寸。
 
-<demo src="../../../example/avatar/size.vue"></demo>
+<demo src="../../../example/avatar/size.vue" />
 
 ## 图标头像
 
 通过传递图标来生成图标头像。
 
-<demo src="../../../example/avatar/icon.vue"></demo>
+<demo src="../../../example/avatar/icon.vue" />
 
 ## 形状
 
 提供了三种形状的头像，分别是 `circle`、`square`、`rounded`。
 
-<demo src="../../../example/avatar/variant.vue"></demo>
+<demo src="../../../example/avatar/variant.vue" />
 
 ## 头像组
 
@@ -51,15 +51,15 @@ Avatar 组件可以用来代表人物或对象, 支持图片文字或者图标�
 
 `AvatarGroup` 支持所有 `Avatar` 的属性来统一控制其样式。
 
-<demo src="../../../example/avatar/group.vue"></demo>
+<demo src="../../../example/avatar/group.vue" />
 
 ## 属性
-<table-block type="propsZh" :data="props"></table-block>
+<table-block type="propsZh" :data="props" />
 
 
 ## 事件
-<table-block type="eventsZh" :data="events"></table-block>
+<table-block type="eventsZh" :data="events" />
 
 
 ## 插槽
-<table-block type="slotsZh" :data="slots"></table-block>
+<table-block type="slotsZh" :data="slots" />

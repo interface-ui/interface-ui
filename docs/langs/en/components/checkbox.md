@@ -24,7 +24,7 @@ If you have multiple options appearing in a list, you can preserve space by usin
 
 `Checkbox` is a controlled component, use `v-model` to switch the checked status.
 
-<demo src="../../../example/checkbox/basic.vue"></demo>
+<demo src="../../../example/checkbox/basic.vue" />
 
 ### Size
 
@@ -57,13 +57,13 @@ You can provide a label to the `Checkbox` thanks to the `FormLabel` component.
 
 All the `props` and `attrs` can be passed to `FormLabel` and will be applied to the `Checkbox`
 
-<demo src="../../../example/checkbox/label.vue"></demo>
+<demo src="../../../example/checkbox/label.vue" />
 
 ### Label Placement
 
 `label-placement` prop provide the ability to change the placement of the label
 
-<demo src="../../../example/checkbox/label-placement.vue"></demo>
+<demo src="../../../example/checkbox/label-placement.vue" />
 
 ## Use with array
 

@@ -13,27 +13,27 @@ Common display cards.
 
 ## Basic usage
 
-<demo src="../../../example/card/base.vue"></demo>
+<demo src="../../../example/card/base.vue" />
 
 ## Borderless card
 Use `border` attribute to define card's border.
 
-<demo src="../../../example/card/border.vue"></demo>
+<demo src="../../../example/card/border.vue" />
 
 ## Card hover effect
 Use `hover`attribute to define whether the card has a border
 
-<demo src="../../../example/card/hover.vue"></demo>
+<demo src="../../../example/card/hover.vue" />
 
 ## Card with background color
 Use `background`attribute to define card background color
 
-<demo src="../../../example/card/background.vue"></demo>
+<demo src="../../../example/card/background.vue" />
 
 ## Props
 
-<table-block type="propsEn" :data="props"></table-block>
+<table-block type="propsEn" :data="props" />
 
 ## Slots
 
-<table-block type="slotsEn" :data="slots"></table-block>
+<table-block type="slotsEn" :data="slots" />

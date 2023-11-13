@@ -16,15 +16,14 @@ const getPreviewCodes = (code: string, preview: string): string => {
   const [_, preivewLines] = preview.match(/\[([\s\S]+)\]/) ?? []
   preivewLines.split(', ').forEach(lineNumber => {
     if (!isNaN(Number(lineNumber))) {
-      previewCodes.push(codeArr[+lineNumber - 1].trim())
+      previewCodes.push(codeArr[+lineNumber - 1])
     } else {
       const [_, start, end] = lineNumber.match(/(\d+)-(\d+)/) ?? []
       for (let i = Number(start); i <= Number(end); i++) {
-        previewCodes.push(codeArr[i - 1].trim())
+        previewCodes.push(codeArr[i - 1])
       }
     }
   })
-
   return previewCodes.join('\n')
 }
 

@@ -17,19 +17,19 @@ Used for marking and selection.
 
 Use the type attribute to define Tag's type. In addition, the color attribute can be used to set the background color of the Tag.
 
-<demo src="../../../example/tag/base.vue"></demo>
+<demo src="../../../example/tag/base.vue" />
 
 ##  Removable Tag
 
 Setting the closable property can define whether a label can be removed. It accepts a Boolean. When a Tag is removed, a close event is triggered.
 
-<demo src="../../../example/tag/closable.vue"></demo>
+<demo src="../../../example/tag/closable.vue" />
 
 ## Edit Dynamically
 
 You can use the close event to add and remove tag dynamically.
 
-<demo src="../../../example/tag/edit.vue"></demo>
+<demo src="../../../example/tag/edit.vue" />
 
 ##  Sizes
 
@@ -37,7 +37,7 @@ Tag component provides three additional sizes for you to choose among different 
 
 Use attribute size to set additional sizes with large, default or small.
 
-<demo src="../../../example/tag/size.vue"></demo>
+<demo src="../../../example/tag/size.vue" />
 
 
 
@@ -45,23 +45,23 @@ Use attribute size to set additional sizes with large, default or small.
 
 Tag can also be rounded like button.
 
-<demo src="../../../example/tag/round.vue"></demo>
+<demo src="../../../example/tag/round.vue" />
 
 ## Custom Colors
 
 The color attribute can be used to define the color of a Tag.
 
-<demo src="../../../example/tag/color.vue"></demo>
+<demo src="../../../example/tag/color.vue" />
 
 
 ## Props
 
-<table-block type="propsEn" :data="props"></table-block>
+<table-block type="propsEn" :data="props" />
 
 ## Events
 
-<table-block type="eventsEn" :data="events"></table-block>
+<table-block type="eventsEn" :data="events" />
 
 ## Slots
 
-<table-block type="slotsEn" :data="slots"></table-block>
+<table-block type="slotsEn" :data="slots" />

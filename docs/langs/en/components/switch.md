@@ -18,19 +18,19 @@ Switches are the preferred way to adjust settings. They're used to control binar
 
 Bind the `v-model` to a variable of type `Boolean` to use it.
 
-<demo src="../../../example/switch/basic.vue"></demo>
+<demo src="../../../example/switch/basic.vue" />
 
 ## Size and color
 
 The `color` attribute can set the color of the switch.
 
-<demo src="../../../example/switch/size-color.vue"></demo>
+<demo src="../../../example/switch/size-color.vue" />
 
 ## Icon
 
 There is a confirm icon in checked state by default, use `disabled-icon` to hide it.
 
-<demo src="../../../example/switch/icon.vue"></demo>
+<demo src="../../../example/switch/icon.vue" />
 
 ## Attributes
-<table-block type="propsZh" :data="props"></table-block>
+<table-block type="propsZh" :data="props" />

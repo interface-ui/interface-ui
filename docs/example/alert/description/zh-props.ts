@@ -22,12 +22,11 @@ const list: PropTableItem[] = [
   },
   {
     name: 'cs',
-    remark: '灵活的颜色配置',
+    remark: '灵活的css配置',
     type: 'Enum',
     optional: ['String', 'Object'],
     default: '--',
   },
-
 ]
 
 export default list

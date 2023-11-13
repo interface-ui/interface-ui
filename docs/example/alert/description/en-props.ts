@@ -22,7 +22,7 @@ const list: PropTableItem[] = [
   },
   {
     name: 'cs',
-    remark: 'Flexible color configuration',
+    remark: 'Flexible css configuration',
     type: 'Enum',
     optional: ['String', 'Object'],
     default: '--',

@@ -6,16 +6,19 @@ It is recommended to use ```automatic import``` to import components, which is s
 
 ## Install Package
 
-```shell
-# npm
+::: code-group
+```shell [npm]
 npm i fusion-ui-vue
+```
 
-# yarn
+```shell [yarn]
 yarn add fusion-ui-vue
+```
 
-# pnpm
+```shell [pnpm]
 pnpm add fusion-ui-vue
 ```
+:::
 
 ## Full Import
 
@@ -36,7 +39,7 @@ app.mount('#app')
 ## On-demand Import
 
 * You can use the import statement to import the components you use.
-  
+
 ```ts
 import { FnButton } from 'fusion-ui-vue'
 import 'fusion-ui-vue/dist/styles/button.css'

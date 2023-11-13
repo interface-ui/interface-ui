@@ -52,7 +52,7 @@ Each Material icon also has a "style": Filled, Outlined, Rounded, Two-tone, and 
 - Twotone style is exported as `fusion-ui-iconify/dist/component/material-icons/DeleteTwoTone`,
 - Sharp style is exported as `fusion-ui-iconify/dist/component/material-icons/DeleteSharp`.
 
-<demo src="../../../example/icon/basic.vue"></demo>
+<demo src="../../../example/icon/basic.vue" />
 
 ## SvgIcon
 
@@ -66,7 +66,7 @@ By default, the component **inherits** the current color and font size. Optional
 
 It supports `<svg>` element as a child so you can copy and paste your SVG directly to SvgIcon component.
 
-<demo src="../../../example/icon/svgicon.vue"></demo>
+<demo src="../../../example/icon/svgicon.vue" />
 
 ### Color
 
@@ -74,20 +74,20 @@ The `color` prop of Icons in [Fusion UI Iconify](https://www.npmjs.com/package/f
 
 BUT❗️❗️❗️ You can use the `component` prop of `SvgIcon` to enable this feature.
 
-<demo src="../../../example/icon/color.vue"></demo>
+<demo src="../../../example/icon/color.vue" />
 
 ### Size
 
 The `size` prop accept both the String and Number.
 
-<demo src="../../../example/icon/size.vue"></demo>
+<demo src="../../../example/icon/size.vue" />
 
 ## Attributes
 
 ### Fusion UI Iconify
 
-<table-block type="propsEn" :data="iconProps"></table-block>
+<table-block type="propsEn" :data="iconProps" />
 
 ### SvgIcon
 
-<table-block type="propsEn" :data="svgIconProps"></table-block>
+<table-block type="propsEn" :data="svgIconProps" />

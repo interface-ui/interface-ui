@@ -35,7 +35,7 @@ The `Typography` component follows the [Material Design Typography Scale](https:
 
 ## Usage
 
-<demo src="../../../example/typography/basic.vue"></demo>
+<demo src="../../../example/typography/basic.vue" />
 
 ## Customization
 
@@ -43,7 +43,7 @@ By setting `component` prop, you can control which `Tag` be rendered in the HTML
 
 Using `variant` to style the component. The `body.large` is used as defalut variant.
 
-<demo src="../../../example/typography/customization.vue"></demo>
+<demo src="../../../example/typography/customization.vue" />
 
 ## Accessibility
 
@@ -54,4 +54,4 @@ Key factors to follow for an accessible typography:
 
 ## Attributes
 
-<table-block type="propsEn" :data="props"></table-block>
+<table-block type="propsEn" :data="props" />
