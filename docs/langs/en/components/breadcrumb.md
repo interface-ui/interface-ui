@@ -15,12 +15,12 @@ Displays the location of the current page, making it easier to browser back.
 ## Basic usage
 
 This component has a String attribute separator, and it determines the separator. Its default value is `/`.
-<demo src="../../../example/breadcrumb/base.vue"></demo>
+<demo src="../../../example/breadcrumb/base.vue" />
 
 ## Breadcrumb Attributes
 
-<table-block type="propsEn" :data="props"></table-block>
+<table-block type="propsEn" :data="props" />
 
 ## BreadcrumbItem Attributes
 
-<table-block type="propsEn" :data="itemProps"></table-block>
+<table-block type="propsEn" :data="itemProps" />

@@ -15,20 +15,20 @@ The Link component allows you to easily customize anchor elements with your them
 
 The `Link` component is built on top of the `Typography` component, meaning that you can use its props
 
-<demo src="../../../example/link/basic.vue" preview="[2-3]"></demo>
+<demo src="../../../example/link/basic.vue" preview="[2-3]" />
 
 ## Color
 
 Text links with different colors.
 
-<demo src="../../../example/link/color.vue"></demo>
+<demo src="../../../example/link/color.vue" />
 
 ## Underline
 
 Underline for text links.
 
-<demo src="../../../example/link/underline.vue"></demo>
+<demo src="../../../example/link/underline.vue" />
 
 ## Attributes
 
-<table-block type="propsEn" :data="props"></table-block>
+<table-block type="propsEn" :data="props" />

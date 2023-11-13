@@ -15,12 +15,12 @@ lang: zh
 ## 基础用法
 
 通过 `separator` 来设置分隔符。 默认值为 `/`。
-<demo src="../../../example/breadcrumb/base.vue"></demo>
+<demo src="../../../example/breadcrumb/base.vue" />
 
 ## Breadcrumb 属性
 
-<table-block type="propsZh" :data="props"></table-block>
+<table-block type="propsZh" :data="props" />
 
 ## BreadcrumbItem 属性
 
-<table-block type="propsZh" :data="itemProps"></table-block>
+<table-block type="propsZh" :data="itemProps" />

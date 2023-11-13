@@ -24,7 +24,7 @@ lang: zh
 
 `Checkbox` 是一个受控组件，使用 `v-model` 来切换选中状态。
 
-<demo src="../../../example/checkbox/basic.vue"></demo>
+<demo src="../../../example/checkbox/basic.vue" />
 
 ## 尺寸
 
@@ -59,13 +59,13 @@ lang: zh
 所有的 `props` 和 `attrs` 都可以传递给 `FormLabel`，并将应用于 `Checkbox`。
 
 
-<demo src="../../../example/checkbox/label.vue"></demo>
+<demo src="../../../example/checkbox/label.vue" />
 
 ## 标签位置
 
 `label-placement` 属性提供了更改标签位置的功能。
 
-<demo src="../../../example/checkbox/label-placement.vue"></demo>
+<demo src="../../../example/checkbox/label-placement.vue" />
 
 ## 使用数组
 

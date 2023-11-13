@@ -35,7 +35,7 @@ Fusion UI 默认使用 [Roboto](https://fonts.google.com/specimen/Roboto) 字体
 
 ## 使用方法
 
-<demo src="../../../example/typography/basic.vue"></demo>
+<demo src="../../../example/typography/basic.vue" />
 
 ## 自定义
 
@@ -43,7 +43,7 @@ Fusion UI 默认使用 [Roboto](https://fonts.google.com/specimen/Roboto) 字体
 
 使用 `variant` 来样式化组件。`body.large` 作为默认变体。
 
-<demo src="../../../example/typography/customization.vue"></demo>
+<demo src="../../../example/typography/customization.vue" />
 
 ## 辅助功能
 
@@ -54,4 +54,4 @@ Fusion UI 默认使用 [Roboto](https://fonts.google.com/specimen/Roboto) 字体
 
 ## 属性
 
-<table-block type="propsZh" :data="props"></table-block>
+<table-block type="propsZh" :data="props" />

@@ -52,7 +52,7 @@ import { DeleteFilled, SaveFilled } from 'fusion-ui-iconify'
 - Twotone样式导出为`fusion-ui-iconify/dist/component/material-icons/DeleteTwoTone`,
 - Sharp样式导出为`fusion-ui-iconify/dist/component/material-icons/DeleteSharp`。
 
-<demo src="../../../example/icon/basic.vue"></demo>
+<demo src="../../../example/icon/basic.vue" />
 
 ## SvgIcon
 
@@ -66,7 +66,7 @@ SVG元素应缩放为 `24 x 24像素` 的视口，以便生成的图标可以直
 
 它支持 `<svg>` 元素作为子元素，因此您可以将您的SVG直接复制粘贴到SvgIcon组件中。
 
-<demo src="../../../example/icon/svgicon.vue"></demo>
+<demo src="../../../example/icon/svgicon.vue" />
 
 ### 颜色
 
@@ -74,20 +74,20 @@ SVG元素应缩放为 `24 x 24像素` 的视口，以便生成的图标可以直
 
 但是❗️❗️❗️您可以使用 `SvgIcon` 的 `component` 属性来启用此功能。
 
-<demo src="../../../example/icon/color.vue"></demo>
+<demo src="../../../example/icon/color.vue" />
 
 ### 大小
 
 `size` 属性接受字符串和数字两种格式。
 
-<demo src="../../../example/icon/size.vue"></demo>
+<demo src="../../../example/icon/size.vue" />
 
 ## 属性
 
 ### Fusion UI Iconify
 
-<table-block type="propsZh" :data="iconProps"></table-block>
+<table-block type="propsZh" :data="iconProps" />
 
 ### SvgIcon
 
-<table-block type="propsZh" :data="svgIconProps"></table-block>
+<table-block type="propsZh" :data="svgIconProps" />

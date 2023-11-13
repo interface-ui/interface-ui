@@ -18,13 +18,13 @@ lang: zh
 
 `Button` 有三种变体：文本、填充（默认）和轮廓。
 
-<demo src="../../../example/button/basic.vue"></demo>
+<demo src="../../../example/button/basic.vue" />
 
 ### 文本按钮
 
 文本按钮用于最低优先级的操作，尤其在呈现多个选项时使用。
 
-<demo src="../../../example/button/text.vue"></demo>
+<demo src="../../../example/button/text.vue" />
 
 ### 填充按钮
 
@@ -32,42 +32,42 @@ lang: zh
 
 使用 `disable-elevation` 属性来移除高程。
 
-<demo src="../../../example/button/no-elevation.vue"></demo>
+<demo src="../../../example/button/no-elevation.vue" />
 
 ### 轮廓按钮
 
 轮廓按钮是中等重点的按钮。它们包含重要但不是应用程序中的主要操作的动作。
 
-<demo src="../../../example/button/outlined.vue"></demo>
+<demo src="../../../example/button/outlined.vue" />
 
 ### 尺寸
 
 按钮堆叠的大小从小到大，使用 `size` 属性来更改大小。
 
-<demo src="../../../example/button/sizes.vue"></demo>
+<demo src="../../../example/button/sizes.vue" />
 
 ### 颜色
 
 `color` 属性允许您自定义组件的颜色。
 
-<demo src="../../../example/button/color.vue"></demo>
+<demo src="../../../example/button/color.vue" />
 
 ### 形状
 
 有三种形状可供使用：圆角（默认）、方形和完全圆角。
 
-<demo src="../../../example/button/shapes.vue"></demo>
+<demo src="../../../example/button/shapes.vue" />
 
 ### 使用图标
 
 带有图标和标签的按钮。
 
-<demo src="../../../example/button/icon.vue"></demo>
+<demo src="../../../example/button/icon.vue" />
 
 ## 属性
 
-<table-block type="propsZh" :data="props"></table-block>
+<table-block type="propsZh" :data="props" />
 
 ## 插槽
 
-<table-block type="slotsZh" :data="slots"></table-block>
+<table-block type="slotsZh" :data="slots" />

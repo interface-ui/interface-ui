@@ -16,4 +16,4 @@ lang: zh
 
 ```model-value``` 属性，用于控制```Drawer```的显示和隐藏状态```
 
-<demo src="../../../example/drawer/base.vue"></demo>
+<demo src="../../../example/drawer/base.vue" />

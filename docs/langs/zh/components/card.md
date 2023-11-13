@@ -14,27 +14,27 @@ lang: zh
 
 ## 基础用法
 
-<demo src="../../../example/card/base.vue"></demo>
+<demo src="../../../example/card/base.vue" />
 
 ## 无边框卡片
 使用 `border`属性来定义卡片是否有边框。
 
-<demo src="../../../example/card/border.vue"></demo>
+<demo src="../../../example/card/border.vue" />
 
 ## 卡片悬浮效果
 使用 `hover`属性来定义卡片是否有边框。
 
-<demo src="../../../example/card/hover.vue"></demo>
+<demo src="../../../example/card/hover.vue" />
 
 ## 带有背景颜色的卡片
 使用 `background`属性来定义卡片背景颜色。
 
-<demo src="../../../example/card/background.vue"></demo>
+<demo src="../../../example/card/background.vue" />
 
 ## 属性
 
-<table-block type="propsZh" :data="props"></table-block>
+<table-block type="propsZh" :data="props" />
 
 ## 插槽
 
-<table-block type="slotsZh" :data="slots"></table-block>
+<table-block type="slotsZh" :data="slots" />

@@ -16,7 +16,7 @@ This is a drawer that can slide out of the page from ```left``` | ```right``` | 
 
 ```model-value``` attribute to control the display and hidden state of ```Drawer```
 
-<demo src="../../../example/drawer/base.vue"></demo>
+<demo src="../../../example/drawer/base.vue" />
 
 
 

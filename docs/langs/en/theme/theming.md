@@ -27,7 +27,7 @@ You can use the nested theme with the `ThemeProvider` component.
 
 All the Fusion UI components inside the `ThemeProvider` will appply the new theme.
 
-<demo src="../../../example/theme/nested.vue"></demo>
+<demo src="../../../example/theme/nested.vue" />
 
 ## APIs
 
