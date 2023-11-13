@@ -11,7 +11,9 @@ const cssClass = useCss(props)
 </script>
 
 <template>
-  <fn-button-base :class="[ns.b(), ns.m($props.size), cssClass]">
+  <fn-button-base
+    :class="[ns.b(), ns.m($props.size), `title-${$props.size}`, cssClass]"
+  >
     <slot />
     <fn-ripple color="var(--fn-sys-color-switch-reverse)" />
   </fn-button-base>
