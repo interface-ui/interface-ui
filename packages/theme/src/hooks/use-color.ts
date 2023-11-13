@@ -1,5 +1,5 @@
 import { useTheme } from '@fusion-ui-vue/theme'
-import type { Ref } from 'vue'
+import type { ComputedRef, Ref } from 'vue'
 import { computed, ref } from 'vue'
 import {
   CorePalette,
@@ -8,11 +8,20 @@ import {
 } from '@material/material-color-utilities'
 import type { AcceptableColor, Theme } from '../core'
 
+/**
+ * The function returns a valuable color from props.color
+ * The props.color can be any key in theme.schemes, a function, or a hex color
+ * (e.g. "primary" | "onPrimary") | (theme: Theme) => string | "string" (e.g. "red") | HexColor (e.g. "#fff")
+ * @param {T extends { [k: string]: AcceptableColor | any }} props The props of component
+ * @param {keyof T} key The key of props
+ * @return {ComputedRef<string>} Return the computed string.
+ * The value can be CSS variable, color in hex, or the color name in string (e.g. "red")
+ */
 const genColor = <T extends { [k: string]: AcceptableColor | any }>(
   props: T,
   key: keyof T,
   theme: Ref<Theme>
-) => {
+): ComputedRef<string> => {
   return computed(() => {
     const color: AcceptableColor = props?.[key]
 
@@ -27,11 +36,20 @@ const genColor = <T extends { [k: string]: AcceptableColor | any }>(
   })
 }
 
+/**
+ * The function returns a valuable on-color from props.color
+ * The props.color can be any key in theme.schemes, a function, or a hex color
+ * (e.g. "primary" | "onPrimary") | (theme: Theme) => string | "string" (e.g. "red") | HexColor (e.g. "#fff")
+ * @param {T extends { [k: string]: AcceptableColor | any }} props The props of component
+ * @param {keyof T} key The key of props
+ * @return {ComputedRef<string>} Return the computed string.
+ * The value can be CSS variable, color in hex, or the color name in string (e.g. "red")
+ */
 const genOnColor = <T extends { [k: string]: AcceptableColor | any }>(
   props: T,
   key: keyof T,
   theme: Ref<Theme>
-) => {
+): ComputedRef<string> => {
   return computed(() => {
     const color: AcceptableColor = props?.[key]
 
@@ -46,7 +64,7 @@ const genOnColor = <T extends { [k: string]: AcceptableColor | any }>(
     } else if (color.startsWith('#')) {
       computedColor = color
     } else {
-      return color
+      return '#ffffff'
     }
 
     const tones = CorePalette.of(argbFromHex(computedColor)).a1
@@ -57,19 +75,17 @@ const genOnColor = <T extends { [k: string]: AcceptableColor | any }>(
 }
 
 /**
- * The function to compute color from props
- * The props.color can be any key in theme.schemes
- * (e.g. "primary" | "onPrimary") | (theme: Theme) => string | "string" | HexColor (e.g. "#fff")
- * Use this function to get the final color value
+ * The function returns the pair of valuable [color, onColor] from props.color
+ * The props.color can be any key in theme.schemes, a function, or a hex color
+ * (e.g. "primary" | "onPrimary") | (theme: Theme) => string | "string" (e.g. "red") | HexColor (e.g. "#fff")
  * @param {T extends { [k: string]: AcceptableColor | any }} props The props of component
- * @param {keyof T | undefined | null} key The key of props
- * Set the key to null or undefined to use default color
- * @return Return the computed string. The value can be CSS variable or color in hex
+ * @param {keyof T} key The key of props
+ * @return {Ref<null>[] | ComputedRef<string>[]} The pair of color and onColor, [color, onColor]
  */
 export const useColor = <T extends { [k: string]: AcceptableColor | any }>(
   props: T,
   key: keyof T
-) => {
+): Ref<null>[] | ComputedRef<string>[] => {
   const theme = useTheme()
   if (
     !key ||

@@ -3,5 +3,6 @@ export interface DemoInfos {
   desc?: string
   path: string
   code: string
+  preview?: string
   lang?: string
 }

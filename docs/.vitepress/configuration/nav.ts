@@ -1,11 +1,13 @@
 import { version } from '../../../package.json'
 import { enComponents, zhComponents } from './components'
+import { enTheme } from './theme'
 import { enGuides, zhGuides } from './guides'
 
 export const nav = {
   en: [
     { text: 'Guide', items: enGuides },
     { text: 'Components', items: enComponents },
+    { text: 'Theme', items: enTheme },
     {
       text: `v${version}`,
       items: [

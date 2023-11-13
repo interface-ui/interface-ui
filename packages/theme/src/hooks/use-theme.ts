@@ -1,5 +1,5 @@
 import type { Ref } from 'vue'
-import { inject } from 'vue'
+import { inject, ref } from 'vue'
 import type { Theme } from '../core'
 
 /**
@@ -7,6 +7,6 @@ import type { Theme } from '../core'
  * @returns {Ref<Theme> } Theme object
  */
 export const useTheme = (): Ref<Theme> => {
-  const theme = inject<Ref<Theme>>('ThemeContext')!
-  return theme
+  const theme = inject<Ref<Theme>>('ThemeContext') ?? ref(null)
+  return theme as Ref<Theme>
 }

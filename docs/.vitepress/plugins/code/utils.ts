@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/indent */
 import { dirname, join, sep } from 'path'
 import fsExtra from 'fs-extra'
 import type { MarkdownRenderer } from 'vitepress'
@@ -9,11 +10,29 @@ const scriptLangTsRE = /<\s*script[^>]*\blang=['"]ts['"][^>]*/
 const scriptSetupRE = /<\s*script[^>]*\bsetup\b[^>]*/
 const scriptClientRE = /<\s*script[^>]*\bclient\b[^>]*/
 
+const getPreviewCodes = (code: string, preview: string): string => {
+  const codeArr = code.trim().split('\n')
+  const previewCodes = []
+  const [_, preivewLines] = preview.match(/\[([\s\S]+)\]/) ?? []
+  preivewLines.split(', ').forEach(lineNumber => {
+    if (!isNaN(Number(lineNumber))) {
+      previewCodes.push(codeArr[+lineNumber - 1].trim())
+    } else {
+      const [_, start, end] = lineNumber.match(/(\d+)-(\d+)/) ?? []
+      for (let i = Number(start); i <= Number(end); i++) {
+        previewCodes.push(codeArr[i - 1].trim())
+      }
+    }
+  })
+
+  return previewCodes.join('\n')
+}
+
 let index = 1
 export function getDemoComponent(
   md: MarkdownRenderer,
   env: any,
-  { title, desc, path, code, ...props }: DemoInfos,
+  { title, desc, path, preview, code, ...props }: DemoInfos
 ) {
   const componentName = `DemoComponent${index++}`
   path = normalizePath(path)
@@ -24,17 +43,26 @@ export function getDemoComponent(
 
   injectImportStatement(env, componentName, path)
 
+  const highlightedPreviewCode = preview
+    ? md.options.highlight!(
+        getPreviewCodes(code, preview),
+        props.lang || 'vue',
+        ''
+      )
+    : ''
+
   const highlightedCode = md.options.highlight!(code, props.lang || 'vue', '')
   return `
     <${DemoTag}
       code="${encodeURIComponent(code)}"
       highlightedCode="${encodeURIComponent(highlightedCode)}"
+      highlightedPreviewCode="${encodeURIComponent(highlightedPreviewCode)}"
       src="${path}"
       title="${title ?? ''}"
       desc="${desc ?? ''}"
       github="${github}"
     >
-        <${componentName}></${componentName}>
+      <${componentName}></${componentName}>
     </${DemoTag}>
   `.trim()
 }
@@ -44,7 +72,7 @@ export function genDemoByCode(
   md: MarkdownRenderer,
   env: any,
   path: string,
-  code: string,
+  code: string
 ) {
   let demoName = ''
   let demoPath = ''
@@ -52,8 +80,9 @@ export function genDemoByCode(
   while (true) {
     demoName = `demo-${fenceIndex++}.vue`
     demoPath = join(dirname(path), demoName)
-    if (!fsExtra.existsSync(demoPath))
+    if (!fsExtra.existsSync(demoPath)) {
       break
+    }
   }
 
   fsExtra.createFileSync(demoPath)
@@ -70,20 +99,20 @@ function normalizePath(path: string) {
 }
 
 function injectImportStatement(env: any, componentName: string, path: string) {
-  const componentRegistStatement
-    = `import ${componentName} from '${path}'`.trim()
+  const componentRegistStatement =
+    `import ${componentName} from '${path}'`.trim()
 
-  if (!env?.sfcBlocks?.scripts)
+  if (!env?.sfcBlocks?.scripts) {
     env.sfcBlocks.scripts = []
+  }
   const tags = env.sfcBlocks.scripts as { content: string }[]
 
-  const isUsingTS
-    = tags.findIndex(tag => scriptLangTsRE.test(tag.content)) > -1
-  const existingSetupScriptIndex = tags?.findIndex((tag) => {
+  const isUsingTS = tags.findIndex(tag => scriptLangTsRE.test(tag.content)) > -1
+  const existingSetupScriptIndex = tags?.findIndex(tag => {
     return (
-      scriptRE.test(tag.content)
-      && scriptSetupRE.test(tag.content)
-      && !scriptClientRE.test(tag.content)
+      scriptRE.test(tag.content) &&
+      scriptSetupRE.test(tag.content) &&
+      !scriptClientRE.test(tag.content)
     )
   })
 
@@ -93,10 +122,9 @@ function injectImportStatement(env: any, componentName: string, path: string) {
       scriptRE,
       `${componentRegistStatement}
 
-      </script>`,
+      </script>`
     )
-  }
-  else {
+  } else {
     tags.unshift({
       content: `
         <script ${isUsingTS ? 'lang="ts"' : ''} setup >

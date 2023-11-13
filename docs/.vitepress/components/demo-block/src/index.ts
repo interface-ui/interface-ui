@@ -33,6 +33,10 @@ export const demoProps = {
     type: Boolean,
     default: false,
   },
+  highlightedPreviewCode: {
+    type: String,
+    default: '',
+  },
 } as const
 
 export type ODemoProps = ExtractPropTypes<typeof demoProps>

@@ -9,11 +9,7 @@ export default defineComponent({
     const ns = useNamespace('button-group')
     const { orientation, ...buttonProps } = toRefs(props)
     const [$color] = useColor(props, 'color')
-    const $colorRgb = useRgbColor(
-      props,
-      'color',
-      'var(--md-sys-color-primary-rgb)'
-    )
+    const [$colorRgb] = useRgbColor(props, 'color')
     const cssClass = computed(
       () => css`
         --fn-button-group-color: ${$color.value};

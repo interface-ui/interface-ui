@@ -28,6 +28,11 @@ export interface ThemeConfig {
   customColors?: CustomColor[]
 }
 
+export interface ThemeOptions {
+  target: 'root' | 'host'
+  config?: ThemeConfig
+}
+
 export const themeSchemes: (keyof (Schemes & AdditionalSchemes))[] = [
   'primary',
   'onPrimary',

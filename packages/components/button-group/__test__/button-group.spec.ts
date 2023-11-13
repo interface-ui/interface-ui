@@ -4,7 +4,7 @@ import type { ComponentSizes } from '@fusion-ui-vue/constants'
 import { componentSizes } from '@fusion-ui-vue/constants'
 import type { ButtonGroupOrientation } from '../index'
 import { FnButtonGroup, buttonGroupOrientation } from '../index'
-import type { ButtonShape, ButtonVariant } from '../../button'
+import type { ButtonShapes, ButtonVariants } from '../../button'
 import { buttonShapes, buttonVariants } from '../../button'
 
 describe('FnButtonGroup', () => {
@@ -14,7 +14,7 @@ describe('FnButtonGroup', () => {
   })
 
   it('variant', () => {
-    buttonVariants.forEach((item: ButtonVariant): void => {
+    buttonVariants.forEach((item: ButtonVariants): void => {
       const wrapper = mount(FnButtonGroup as any, {
         props: { shape: item },
       })
@@ -23,7 +23,7 @@ describe('FnButtonGroup', () => {
   })
 
   it('shape', () => {
-    buttonShapes.forEach((item: ButtonShape): void => {
+    buttonShapes.forEach((item: ButtonShapes): void => {
       const wrapper = mount(FnButtonGroup as any, {
         props: { shape: item },
       })

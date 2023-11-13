@@ -3,9 +3,9 @@ import type { ExtractPropTypes, PropType } from 'vue'
 import { type ComponentSizes, componentSizes } from '@fusion-ui-vue/constants'
 
 export const buttonVariants = ['text', 'filled', 'outlined'] as const
-export type ButtonVariant = typeof buttonVariants[number]
+export type ButtonVariants = typeof buttonVariants[number]
 export const buttonShapes = ['rounded', 'fullRounded', 'square'] as const
-export type ButtonShape = typeof buttonShapes[number]
+export type ButtonShapes = typeof buttonShapes[number]
 export const buttonHeight: Record<ComponentSizes, number> = {
   small: 32,
   medium: 40,
@@ -14,12 +14,12 @@ export const buttonHeight: Record<ComponentSizes, number> = {
 
 export const buttonProps = {
   variant: {
-    type: String as PropType<ButtonVariant>,
+    type: String as PropType<ButtonVariants>,
     values: buttonVariants,
     default: 'filled',
   },
   shape: {
-    type: String as PropType<ButtonShape>,
+    type: String as PropType<ButtonShapes>,
     values: buttonShapes,
     default: 'rounded',
   },

@@ -18,13 +18,13 @@ Common operation buttons.
 
 The `Button` comes with three variants: text, filled (default), and outlined
 
-<demo src="../../../example/button/basic.vue"></demo>
+<demo src="../../../example/button/basic.vue" preview="[2-4]"></demo>
 
 ### Text button
 
 Text buttons are used for the lowest priority actions, especially when presenting multiple options.
 
-<demo src="../../../example/button/text.vue"></demo>
+<demo src="../../../example/button/text.vue" preview="[2, 3]"></demo>
 
 ### Filled button
 

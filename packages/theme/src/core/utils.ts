@@ -1,5 +1,5 @@
 /* eslint-disable quote-props */
-import { injectGlobal } from '@emotion/css'
+import { css, injectGlobal } from '@emotion/css'
 import type {
   CustomColor,
   CustomColorGroup,
@@ -109,29 +109,41 @@ export const mergeParsedSchemes = (...args: ParsedSchemes[]): ParsedSchemes => {
 }
 
 export const injectJSS = (
+  target: 'root' | 'host',
   lightSchemes: ParsedSchemes,
   darkSchemes: ParsedSchemes,
   theme: Theme
 ) => {
   const { fontFamily, htmlFontSize } = theme.typography
 
-  // Init style
-  injectGlobal({
-    ':root': {
-      colorScheme: 'light',
+  let injectCss: string | undefined
+  if (target === 'root') {
+    injectGlobal({
+      ':root': {
+        colorScheme: 'light',
+        ...lightSchemes?.styles,
+      },
+      ':root[data-theme="dark"]': {
+        colorScheme: 'dark',
+        ...darkSchemes?.styles,
+      },
+      html: {
+        fontSize: htmlFontSize,
+      },
+      body: {
+        fontFamily,
+        color: 'var(--md-sys-color-on-surface)',
+        fontSize: '1rem',
+      },
+    })
+  } else {
+    injectCss = css({
       ...lightSchemes?.styles,
-    },
-    ':root[data-theme="dark"]': {
-      colorScheme: 'dark',
-      ...darkSchemes?.styles,
-    },
-    html: {
-      fontSize: htmlFontSize,
-    },
-    body: {
-      fontFamily,
-      color: 'var(--md-sys-color-on-surface)',
-      fontSize: '1rem',
-    },
-  })
+
+      '&[data-theme="dark"]': {
+        ...darkSchemes?.styles,
+      },
+    })
+  }
+  return injectCss
 }

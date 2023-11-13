@@ -1,9 +1,9 @@
-import { describe, expect, it, test } from 'vitest'
+import { describe, expect, it } from 'vitest'
 import { mount } from '@vue/test-utils'
 import type { ComponentSizes } from '@fusion-ui-vue/constants'
 import { componentSizes } from '@fusion-ui-vue/constants'
 import { FnButton, buttonShapes, buttonVariants } from '../index'
-import type { ButtonShape, ButtonVariant } from '../src/button'
+import type { ButtonShapes, ButtonVariants } from '../src/button'
 
 describe('FnButton', () => {
   it('class', () => {
@@ -12,16 +12,16 @@ describe('FnButton', () => {
   })
 
   it('variant', () => {
-    buttonVariants.forEach((item: ButtonVariant): void => {
+    buttonVariants.forEach((item: ButtonVariants): void => {
       const wrapper = mount(FnButton as any, {
-        props: { shape: item },
+        props: { variant: item },
       })
       expect(wrapper.classes()).toContain(`fn-button--${item}`)
     })
   })
 
   it('shape', () => {
-    buttonShapes.forEach((item: ButtonShape): void => {
+    buttonShapes.forEach((item: ButtonShapes): void => {
       const wrapper = mount(FnButton as any, {
         props: { shape: item },
       })
@@ -38,7 +38,7 @@ describe('FnButton', () => {
     })
   })
 
-  test('default slot', () => {
+  it('default slot', () => {
     const wrapper = mount(FnButton as any, {
       slots: { default: 'Button' },
     })

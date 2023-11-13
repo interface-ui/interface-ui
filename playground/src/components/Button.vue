@@ -1,9 +1,15 @@
 <script lang="ts" setup>
-import * as pkg from 'fusion-ui-iconify'
-const {
-  DeleteFilled
-} = pkg
-// import { DeleteFilled } from 'fusion-ui-iconify'
+import { ThemeProvider } from '@fusion-ui-vue/theme'
+import { FnButton, FnIconButton } from '@fusion-ui-vue/components'
+import Checkbox from './Checkbox.vue'
+import createTheme from '@fusion-ui-vue/theme'
+import { DeleteFilled } from 'fusion-ui-iconify'
+import { watchEffect } from 'vue'
+const theme = createTheme('#2196f3', { target: 'host' })
+
+watchEffect(() => {
+  console.log(theme.value)
+})
 </script>
 
 <template>
@@ -12,10 +18,16 @@ const {
       <delete-filled />
       delete
     </fn-button>
-    <fn-button variant="outlined">
-      <delete-filled />
-      delete
-    </fn-button>
+    <theme-provider v-model:theme="theme">
+      <fn-button variant="outlined" :color="theme => theme.schemes.error">
+        <delete-filled />
+        delete
+      </fn-button>
+      <fn-icon-button :color="theme => theme.schemes.secondary">
+        <delete-filled />
+      </fn-icon-button>
+      <checkbox />
+    </theme-provider>
     <fn-button variant="outlined" size="large" disabled>
       <delete-filled />
       delete

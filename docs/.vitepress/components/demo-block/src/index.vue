@@ -6,8 +6,11 @@ import { demoProps } from './index'
 const props = defineProps(demoProps)
 
 const decodedHighlightedCode = computed(() =>
-  decodeURIComponent(props.highlightedCode),
+  decodeURIComponent(props.highlightedCode)
 )
+
+// console.log(decodeURIComponent(props.code))
+
 const { copy, copied } = useClipboard({
   source: decodeURIComponent(props.code),
 })
@@ -16,7 +19,7 @@ const [value, toggle] = useToggle()
 
 <template>
   <ClientOnly>
-    <div v-bind="$attrs" class="mt-6">
+    <div v-bind="$attrs" class="mt-6 demo-block">
       <div class="o-demo_wrapper vp-raw bg">
         <slot />
       </div>
@@ -48,10 +51,16 @@ const [value, toggle] = useToggle()
           <a class="o-demo_action_item" group @click="toggle()">
             <div class="o-demo_action_icon i-carbon:fit-to-width" />
             <div class="o-demo_tooltip" group-hover:opacity-100>
-              {{ value ? 'Hidden code' : 'Show code' }}
+              {{ value ? 'Hidden code' : 'Expand code' }}
             </div>
           </a>
         </div>
+        <div
+          v-if="$props.highlightedPreviewCode"
+          v-show="!value"
+          :class="`language-${lang} extra-class`"
+          v-html="decodeURIComponent($props.highlightedPreviewCode)"
+        />
         <div
           v-show="value"
           :class="`language-${lang} extra-class`"

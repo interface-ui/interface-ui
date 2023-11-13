@@ -36,7 +36,7 @@
     "@pnpm/types": "github:pnpm/types",
     "@vue/shared": "^3.2.47",
     "@vueuse/core": "^9.1.1",
-    "fusion-ui-iconify": "1.0.44",
+    "fusion-ui-iconify": "1.0.46",
     "fusion-ui-vue": "workspace:*",
     "lodash-unified": "^1.0.3",
     "vue": "~3.2.47"
