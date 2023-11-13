@@ -7,6 +7,10 @@ export const enTheme = [
         text: 'Theming',
         link: '/langs/en/theme/theming',
       },
+      {
+        text: 'ThemeProdiver',
+        link: '/langs/en/theme/theme-provider',
+      },
     ],
   },
 ]

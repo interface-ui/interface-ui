@@ -51,7 +51,7 @@ createTheme()
 </template>
 ```
 
-#### Arguments
+**Arguments**
 
 * `source?: string`: The source color used to create theme schemes and palettes.
 
@@ -69,7 +69,7 @@ styled(comp: Component | string, props?) =>
 
 The styled component function. Return a Vue component with specific props and styles.
 
-#### Arguments
+**Arguments**
 
 * `comp: Component | string`: A Vue component or html tag (e.g. 'div')
 
