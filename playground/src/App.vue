@@ -9,9 +9,10 @@ import createTheme from '@fusion-ui-vue/theme'
 // import TextField from './components/TextField.vue'
 // import Alert from './components/Alert.vue'
 // import SvgIcon from './components/SvgIcon.vue'
-import ButtonT from './components/Button.vue'
+// import ButtonT from './components/Button.vue'
 // import Checkbox from './components/Checkbox.vue'
 // import LinkT from './components/Link.vue'
+import FBA from './components/FBA.vue'
 import { toRaw, watch } from 'vue'
 
 const theme = createTheme()
@@ -45,8 +46,9 @@ watch(theme, () => ((window as any).theme = toRaw(theme.value)), {
     <!-- <TextField /> -->
     <!-- <Alert /> -->
     <!-- <svg-icon /> -->
-    <button-t />
+    <!-- <button-t /> -->
     <!-- <checkbox /> -->
     <!-- <link-t /> -->
+    <FBA />
   </theme-provider>
 </template>

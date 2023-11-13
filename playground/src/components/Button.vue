@@ -4,12 +4,7 @@ import { FnButton, FnIconButton } from '@fusion-ui-vue/components'
 import Checkbox from './Checkbox.vue'
 import createTheme from '@fusion-ui-vue/theme'
 import { DeleteFilled } from 'fusion-ui-iconify'
-import { watchEffect } from 'vue'
 const theme = createTheme('#2196f3', { target: 'host' })
-
-watchEffect(() => {
-  console.log(theme.value)
-})
 </script>
 
 <template>
