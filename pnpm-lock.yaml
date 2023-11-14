@@ -212,11 +212,11 @@ importers:
         specifier: ^3.1.2
         version: 3.1.2
       vue:
-        specifier: ~3.2.45
-        version: 3.2.45
+        specifier: ~3.2.47
+        version: 3.2.47
       vue-router:
         specifier: '4'
-        version: 4.0.0(vue@3.2.45)
+        version: 4.0.0(vue@3.2.47)
 
   packages/constants: {}
 
@@ -9613,21 +9613,12 @@ packages:
       - supports-color
     dev: true
 
-  /vue-router@4.0.0(vue@3.2.45):
-    resolution: {integrity: sha512-RiAsDsSV73TBqppgpAKghb5exHHKsFuTii7hbhj9QHjWJNDE4lBDTr7bVALG9DH9vVcFI+7PUTBGYbytBFsWsQ==}
-    peerDependencies:
-      vue: ^3.0.0
-    dependencies:
-      vue: 3.2.45
-    dev: false
-
   /vue-router@4.0.0(vue@3.2.47):
     resolution: {integrity: sha512-RiAsDsSV73TBqppgpAKghb5exHHKsFuTii7hbhj9QHjWJNDE4lBDTr7bVALG9DH9vVcFI+7PUTBGYbytBFsWsQ==}
     peerDependencies:
       vue: ^3.0.0
     dependencies:
       vue: 3.2.47
-    dev: true
 
   /vue-template-compiler@2.7.14:
     resolution: {integrity: sha512-zyA5Y3ArvVG0NacJDkkzJuPQDF8RFeRlzV2vLeSnhSpieO6LK2OVbdLPi5MPPs09Ii+gMO8nY4S3iKQxBxDmWQ==}
