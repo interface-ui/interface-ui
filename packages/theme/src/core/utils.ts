@@ -96,6 +96,11 @@ export const parseCustomSchemes = (
   return { schemes, styles }
 }
 
+/**
+ * Merge the parsed schemes into one object
+ * @param {ParsedSchemes[]} args The parsed schemes
+ * @returns {ParsedSchemes} The merged parsed schemes
+ */
 export const mergeParsedSchemes = (...args: ParsedSchemes[]): ParsedSchemes => {
   const schemes: Schemes = {} as any
   const styles: Record<string, string> = {} as any
@@ -108,6 +113,15 @@ export const mergeParsedSchemes = (...args: ParsedSchemes[]): ParsedSchemes => {
   return { schemes, styles }
 }
 
+/**
+ * Inject the schemes to the target element
+ * @param {'root' | 'host'} target The target element to inject the schemes
+ * root: the root element (html) of the document
+ * host: the current element (the theme provider component)
+ * @param {ParsedSchemes} lightSchemes The light schemes
+ * @param {ParsedSchemes} darkSchemes The dark schemes
+ * @param {Theme} theme The theme object
+ */
 export const injectJSS = (
   target: 'root' | 'host',
   lightSchemes: ParsedSchemes,
@@ -146,4 +160,85 @@ export const injectJSS = (
     })
   }
   return injectCss
+}
+
+export interface NewSchemes {
+  surfaceDim: number
+  surface: number
+  surfaceBright: number
+  surfaceContainerLowest: number
+  surfaceContainerLow: number
+  surfaceContainer: number
+  surfaceContainerHigh: number
+  surfaceContainerHighest: number
+  onSurface: number
+  onSurfaceVariant: number
+  outline: number
+  outlineVariant: number
+}
+export interface AdditionalThemeSchemes {
+  light: NewSchemes
+  dark: NewSchemes
+}
+export interface ParsedNewSchemes {
+  schemes: Record<keyof NewSchemes, string>
+  styles: Record<string, string>
+}
+/**
+ * The hrlper function to create the new scheme according to latest version Material Design Color System
+ * expecially the "Surface" series
+ * @link https://m3.material.io/styles/color/static/baseline#690f18cd-d40f-4158-a358-4cfdb3a32768
+ * @param {DynamicTheme} dynamicTheme The dynamic theme object
+ */
+export const newSchemes = (
+  dynamicTheme: DynamicTheme
+): AdditionalThemeSchemes => {
+  const {
+    palettes: { neutral, neutralVariant },
+  } = dynamicTheme
+  return {
+    light: {
+      surfaceDim: neutral.tone(87),
+      surface: neutral.tone(98),
+      surfaceBright: neutral.tone(98),
+      surfaceContainerLowest: neutral.tone(100),
+      surfaceContainerLow: neutral.tone(96),
+      surfaceContainer: neutral.tone(94),
+      surfaceContainerHigh: neutral.tone(92),
+      surfaceContainerHighest: neutral.tone(90),
+      onSurface: neutral.tone(10),
+      onSurfaceVariant: neutralVariant.tone(30),
+      outline: neutralVariant.tone(50),
+      outlineVariant: neutralVariant.tone(80),
+    },
+    dark: {
+      surfaceDim: neutral.tone(6),
+      surface: neutral.tone(6),
+      surfaceBright: neutral.tone(24),
+      surfaceContainerLowest: neutral.tone(4),
+      surfaceContainerLow: neutral.tone(10),
+      surfaceContainer: neutral.tone(12),
+      surfaceContainerHigh: neutral.tone(17),
+      surfaceContainerHighest: neutral.tone(22),
+      onSurface: neutral.tone(90),
+      onSurfaceVariant: neutralVariant.tone(80),
+      outline: neutralVariant.tone(60),
+      outlineVariant: neutralVariant.tone(30),
+    },
+  }
+}
+
+export const parsedNewSchemes = (scheme: NewSchemes): ParsedNewSchemes => {
+  const schemes: Record<keyof NewSchemes, string> = {} as any
+  const styles: Record<string, string> = {} as any
+  for (const [key, value] of Object.entries(scheme)) {
+    const token = key.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase()
+    const color = hexFromArgb(value)
+    const { r, g, b } = rgbaFromArgb(value)
+    schemes[key as keyof NewSchemes] = color
+    styles[`--md-sys-color-${token}`] = color
+    styles[`--md-sys-color-${token}-rgb`] = `${r} ${g} ${b}`
+  }
+
+  return { schemes, styles }
 }
