@@ -2,7 +2,9 @@
   --fn-zero-percentage: 0%;
   /* The var that will switch between different theme mode */
   --fn-sys-color-switch: var(--fn-ref-palette-white);
+  --fn-sys-color-switch-rgb: 255 255 255;
   --fn-sys-color-switch-reverse: var(--fn-ref-palette-black);
+  --fn-sys-color-switch-reverse-rgb: 0 0 0;
   --fn-sys-color-disabled-level-0: rgb(
     var(--md-sys-color-on-surface-rgb) /
       var(--md-sys-state-disabled-state-layer-opacity)
@@ -16,7 +18,9 @@
 :root[data-theme='dark'] {
   /* The var that will switch between different theme mode */
   --fn-sys-color-switch: var(--fn-ref-palette-black);
+  --fn-sys-color-switch-rgb: 0 0 0;
   --fn-sys-color-switch-reverse: var(--fn-ref-palette-white);
+  --fn-sys-color-switch-reverse-rgb: 255 255 255;
 }
 
 .fn-icon-material {
