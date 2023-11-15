@@ -1,0 +1,24 @@
+.fn-modal {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  inset: 0;
+  z-index: var(--fn-sys-z-index-modal);
+  &__backdrop {
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}

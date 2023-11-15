@@ -16,7 +16,7 @@ const cssClass = useCss(props)
 
 const value = computed<string>({
   get() {
-    return props.modelValue as any
+    return props.modelValue
   },
   set(newVal) {
     emits(UPDATE_MODEL_EVENT, newVal)
