@@ -8,7 +8,7 @@
     "build": "vite build"
   },
   "peerDependencies": {
-    "vue": "~3.2.47"
+    "vue": "^3.3.8"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.2.3",

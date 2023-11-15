@@ -7,8 +7,6 @@
   "module": "index.ts",
   "types": "./dist/types/packages/hook/index.d.ts",
   "peerDependencies": {
-    "jss": "^10.10.0",
-    "jss-preset-default": "^10.10.0",
-    "vue": "~3.2.47"
+    "vue": "^3.3.8"
   }
 }
