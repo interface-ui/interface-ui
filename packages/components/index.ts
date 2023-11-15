@@ -9,6 +9,10 @@ import FnDialog from './dialog'
 import FnInputBase from './input-base'
 import FnRadio from './radio'
 import FnCard from './card'
+import FnCardContent from './card-content'
+import FnCardHeader from './card-header'
+import FnCardAction from './card-action'
+import FnCardMedia from './card-media'
 import FnSwitch from './switch'
 import FnBadge from './badge'
 import FnProgress from './progress'
@@ -26,6 +30,7 @@ import FnSwitchNew from './switch-new'
 import FnTextField from './text-field'
 import FnSvgIcon from './svg-icon'
 import FnFba from './fba'
+import FnActionArea from './action-area'
 export * from './button-base'
 export * from './avatar-group'
 export * from './button'
@@ -41,6 +46,10 @@ export * from './switch'
 export * from './badge'
 export * from './progress'
 export * from './card'
+export * from './card-content'
+export * from './card-header'
+export * from './card-action'
+export * from './card-media'
 export * from './tag'
 export * from './avatar'
 export * from './checkbox'
@@ -54,6 +63,7 @@ export * from './switch-new'
 export * from './text-field'
 export * from './svg-icon'
 export * from './fba'
+export * from './action-area'
 
 export const components = [
   FnButtonBase,
@@ -70,6 +80,10 @@ export const components = [
   FnBadge,
   FnProgress,
   FnCard,
+  FnCardContent,
+  FnCardHeader,
+  FnCardAction,
+  FnCardMedia,
   FnTag,
   FnAvatar,
   FnAvatarGroup,
@@ -84,6 +98,7 @@ export const components = [
   FnTextField,
   FnSvgIcon,
   FnFba,
+  FnActionArea,
 ]
 
 const CK = {

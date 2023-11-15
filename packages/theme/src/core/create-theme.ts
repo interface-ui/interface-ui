@@ -10,9 +10,11 @@ import defaultTheme from './default.theme'
 import {
   createCustomPalettes,
   mergeParsedSchemes,
+  newSchemes,
   parseCustomSchemes,
   parsePalettes,
   parseShcemes,
+  parsedNewSchemes,
 } from './utils'
 
 /**
@@ -40,12 +42,20 @@ export const createTheme = (
     ...createCustomPalettes(customColors),
   }
 
+  /**
+   * TIPS This is the temporary solution to fix the issue of the current verison of `@material/material-color-utilities`
+   * lack of the "surface" relate shcehmes according to the latest version of the Material Design schemes
+   * The function can be removed after the issue is fixed
+   */
+  const additionalSchemes = newSchemes(dynamicTheme)
   const lightSchemes = mergeParsedSchemes(
     parseShcemes(dynamicTheme.schemes.light),
+    parsedNewSchemes(additionalSchemes.light) as any,
     parseCustomSchemes(dynamicTheme.customColors, 'light')
   )
   const darkSchemes = mergeParsedSchemes(
     parseShcemes(dynamicTheme.schemes.dark),
+    parsedNewSchemes(additionalSchemes.dark) as any,
     parseCustomSchemes(dynamicTheme.customColors, 'dark')
   )
 

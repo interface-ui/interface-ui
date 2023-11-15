@@ -1,41 +1,15 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { useNamespace } from '@fusion-ui-vue/utils'
 import { cardProps } from './card'
+import useCss from './index.jss'
 
 const props = defineProps(cardProps)
-
-const { border, hover } = props
-
-const classList = computed(() => {
-  return [
-    {
-      'has-border': border,
-      'has-hover': hover,
-    },
-  ]
-})
+const ns = useNamespace('card')
+const cssClass = useCss(props)
 </script>
 
 <template>
-  <div
-    class="fn-card" :class="classList" :style="{
-      backgroundColor: props.background,
-      width: `${props.width}px`,
-    }"
-  >
-    <div class="fn-card--title">
-      <span>
-        <slot name="header">
-          {{ title }}
-        </slot>
-      </span>
-    </div>
-    <div class="fn-card--content">
-      <slot>content</slot>
-    </div>
+  <div :class="[ns.b(), ns.m($props.variant), cssClass]">
+    <slot />
   </div>
 </template>
-
-<style scoped lang="less">
-
-</style>

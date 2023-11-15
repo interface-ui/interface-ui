@@ -1,22 +1,13 @@
 /* eslint-disable @typescript-eslint/indent */
-import type { TypographyMap, TypographyProp } from '@fusion-ui-vue/theme'
-import {
-  css,
-  cx,
-  typographyMapping,
-  useColor,
-  useTheme,
-} from '@fusion-ui-vue/theme'
+import type { TypographyProp } from '@fusion-ui-vue/theme'
+import { css, cx, useColor, useTheme } from '@fusion-ui-vue/theme'
 import type { ComponentStylingHook } from 'packages/hooks/types'
 import { computed } from 'vue'
 import type { TypographyProps } from './typography'
 
 const useCss: ComponentStylingHook<TypographyProps> = props => {
-  const { variant, component } = props
+  const { variant } = props
   const [_, $variant, size] = variant.match(/([\w\d]+)\.?(\w+)?/)!
-
-  const renderTag =
-    component ?? typographyMapping[$variant as keyof TypographyMap] ?? 'span'
 
   const theme = useTheme()
   const style: TypographyProp = size
@@ -30,12 +21,10 @@ const useCss: ComponentStylingHook<TypographyProps> = props => {
     const styleFromCs = props.cs ? css(props.cs) : ''
     return cx(
       css({
-        [`&:is(${renderTag})`]: {
-          color: $color.value,
-          margin: 0,
-          border: 'none',
-          ...style,
-        },
+        color: $color.value,
+        margin: 0,
+        border: 'none',
+        ...style,
       } as any),
       styleFromCs
     )

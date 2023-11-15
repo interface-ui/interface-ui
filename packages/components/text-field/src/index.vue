@@ -43,14 +43,15 @@ const hasContent = computed<boolean>(() => {
   <div
     :class="[
       ns.b(),
-      ns.m(props.variant),
-      ns.m(props.size),
+      ns.m($props.variant),
+      ns.m($props.size),
+      $props.error ? ns.m('error') : '',
       hasContent ? ns.m('content-within') : '',
       cssClass,
     ]"
   >
     <typography
-      v-if="props?.label"
+      v-if="$props?.label"
       :id="id"
       component="label"
       :class="[ns.e('label')]"
@@ -72,7 +73,7 @@ const hasContent = computed<boolean>(() => {
       />
       <slot name="endAdornment" v-bind="{ class: [ns.m('end-adornment')] }" />
       <fieldset
-        v-if="$props.variant === 'outlined' && props?.label"
+        v-if="$props.variant === 'outlined' && $props?.label"
         :class="[ns.m('border')]"
       >
         <typography component="legend" no-warp>
@@ -82,12 +83,12 @@ const hasContent = computed<boolean>(() => {
       <span v-else :class="[ns.m('border')]" />
     </div>
     <typography
-      v-if="props?.supportingText"
+      v-if="$props?.supportingText"
       :class="[ns.m('supporting-text')]"
       variant="body.small"
       no-warp
     >
-      {{ props.supportingText }}
+      {{ $props.supportingText }}
     </typography>
   </div>
 </template>

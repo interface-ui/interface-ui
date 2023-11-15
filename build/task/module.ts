@@ -1,3 +1,4 @@
+/* eslint-disable no-var */
 import { rollup } from 'rollup'
 import glob from 'fast-glob'
 import { nodeResolve } from '@rollup/plugin-node-resolve'
@@ -9,6 +10,16 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 import { excludeFiles } from '../utils'
 import { modulesOutputConfig } from '../config'
 import { componentsComponents } from '../path'
+
+/**
+ * TIPS This is a temporary solution to fix the building error
+ * ReferenceError: __name is not defined after upgrade the vue to @3.3.x
+ */
+var __defProp = Object.defineProperty
+var __name = (target, value) =>
+  __defProp(target, 'name', { value, configurable: true })
+globalThis.__name = __name
+
 export async function buildModule() {
   consola.info('Start building modules...')
   const input = excludeFiles(
@@ -30,7 +41,8 @@ export async function buildModule() {
       }),
       commonjs(),
       esbuild({
-        sourceMap: true,
+        keepNames: false,
+        sourceMap: false,
         target: 'es2018',
         loaders: {
           '.vue': 'ts',

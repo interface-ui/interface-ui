@@ -7,7 +7,7 @@
   "module": "index.ts",
   "types": "index.d.ts",
   "peerDependencies": {
-    "vue": "~3.2.45",
+    "vue": "^3.3.8",
     "vue-router": "4"
   },
   "dependencies": {

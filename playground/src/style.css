@@ -6,7 +6,6 @@ html {
 body {
   padding: 16px;
   min-height: 100vh;
-  background-color: var(--md-sys-color-background);
 }
 
 header {
