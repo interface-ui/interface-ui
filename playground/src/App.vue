@@ -12,7 +12,8 @@ import createTheme from '@fusion-ui-vue/theme'
 // import ButtonT from './components/Button.vue'
 // import Checkbox from './components/Checkbox.vue'
 // import LinkT from './components/Link.vue'
-import FBA from './components/FBA.vue'
+// import FBA from './components/FBA.vue'
+import Card from './components/Card.vue'
 import { toRaw, watch } from 'vue'
 
 const theme = createTheme()
@@ -49,6 +50,7 @@ watch(theme, () => ((window as any).theme = toRaw(theme.value)), {
     <!-- <button-t /> -->
     <!-- <checkbox /> -->
     <!-- <link-t /> -->
-    <FBA />
+    <!-- <FBA /> -->
+    <Card />
   </theme-provider>
 </template>

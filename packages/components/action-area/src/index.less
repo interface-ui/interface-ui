@@ -1,0 +1,16 @@
+.fn-action-area {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 600ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  &:active,
+  &:focus {
+    background-color: rgba(
+      0,
+      0,
+      0,
+      var(--md-sys-state-focus-state-layer-opacity)
+    );
+  }
+}

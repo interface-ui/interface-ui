@@ -6,7 +6,7 @@
   "main": "index.ts",
   "module": "index.ts",
   "peerDependencies": {
-    "vue": "~3.2.45"
+    "vue": "~3.2.47"
   },
   "dependencies": {
     "@emotion/css": "^11.11.2",
