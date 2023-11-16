@@ -2,7 +2,9 @@
 import '@fusion-ui-vue/components/modal/src/index.less' // 开发调试的样式
 import { ThemeProvider } from '@fusion-ui-vue/theme'
 import { FnButton, FnModal } from '@fusion-ui-vue/components'
+import { DeleteFilled } from 'fusion-ui-iconify'
 import createTheme from '@fusion-ui-vue/theme'
+import { FnMessage } from '@fusion-ui-vue/components'
 // import Badge from './components/Badge.vue'
 // import AvatarGroup from './components/AvatarGroup.vue'
 // import ButtonGroup from './components/ButtonGroup.vue'
@@ -42,6 +44,16 @@ watch(theme, () => ((window as any).theme = toRaw(theme.value)), {
         {{ theme.mode }}
       </fn-button>
       <fn-button @click="open = !open"> open modal </fn-button>
+      <fn-button
+        @click="
+          new FnMessage({ severity: 'success', variant: 'outlined' }).push({
+            content: 'this is a info message',
+            customIcon: DeleteFilled,
+          })
+        "
+      >
+        open message
+      </fn-button>
     </header>
     <!-- <badge /> -->
     <!-- <avatar-group /> -->

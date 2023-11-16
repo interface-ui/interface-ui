@@ -1,43 +1,13 @@
-.fn-message{
-  box-shadow: 0 3px 6px -4px #0000001f, 0 6px 16px #00000014, 0 9px 28px 8px #0000000d;
-  transform: translate(-50%);
-  max-width: 50%;
-  z-index: 99;
-  font-size: 13px;
+.fn-notistack {
   position: fixed;
-  left: 50%;
   display: flex;
-  align-items: center;
-  border-radius: 0.25rem;
-  --un-bg-opacity: 1;
-  background-color: rgba(255,255,255,var(--un-bg-opacity));
-  color: var(--fn-message-text-color);
-  transition-property: all;
-  transition-timing-function: cubic-bezier(.4,0,.2,1);
-  transition-duration: .3s;
-  border: 1px solid var(--fn-message-border-color);
-  // padding: 3px 10px 3px 15px;
-  padding: 10px;
-
-  > .message-content{
-    display: flex;
-    > i{
-      margin: auto;
-      margin-right: 10px;
-    }
-  }
+  flex-direction: column;
+  gap: 8px;
+  z-index: 1300;
+  pointer-events: auto;
+  width: fit-content;
 }
 
-.close-btn{
-  margin-left: 5px;
-  &:hover{
-    cursor: pointer;
-    color: var(--fn-message-text-color)
-  }
-}
-
-.fn-message-fade-enter-from,
-.fn-message-fade-leave-to {
-  transform: translate(-50%, -100%);
-  opacity:0;
+.message-leave-active:not(:last-child) {
+  position: absolute;
 }
