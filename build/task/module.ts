@@ -34,6 +34,9 @@ export async function buildModule() {
     plugins: [
       vue({
         isProduction: false,
+        script: {
+          defineModel: true,
+        },
       }) as any,
       vueJsx(),
       nodeResolve({

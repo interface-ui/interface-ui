@@ -17,6 +17,9 @@ export default defineComponent({
       type: [String, Object] as PropType<string | Component>,
       default: 'div',
     },
+    watcher: {
+      type: Function,
+    },
   },
   emits: ['update:theme'],
   setup(props, { slots, emit }) {
@@ -58,13 +61,15 @@ export default defineComponent({
       emit('update:theme', theme.value)
     }
 
-    if (props.theme.target === 'root') {
-      watch(() => props.theme.mode, toggleTheme)
-    } else {
-      watch(() => parentTheme.value!.mode, toggleTheme)
-    }
+    const warchTarget =
+      props.theme.target === 'root'
+        ? () => props.theme.mode
+        : () => parentTheme.value?.mode ?? props.theme.mode
+    props.watcher ? props.watcher() : watch(warchTarget, toggleTheme)
 
     useThemeProvider(theme as Ref<Theme>)
+
+    // defineExpose({ toggleTheme })
 
     const Comp = props.component as any
     return () =>

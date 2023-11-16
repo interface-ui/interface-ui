@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { isEmpty, useNamespace } from '@fusion-ui-vue/utils'
+import { generateId, isEmpty, useNamespace } from '@fusion-ui-vue/utils'
 import { computed, useAttrs, useSlots } from 'vue'
 import { UPDATE_MODEL_EVENT } from '@fusion-ui-vue/constants'
 import Typography from '../../typography'
@@ -16,17 +16,12 @@ const cssClass = useCss(props)
 
 const value = computed<string>({
   get() {
-    return props.modelValue as any
+    return props.modelValue
   },
   set(newVal) {
     emits(UPDATE_MODEL_EVENT, newVal)
   },
 })
-
-const generateId = () => {
-  return (Math.random() + 1).toString(36).substring(7)
-}
-
 const id: string = attrs?.id
   ? (attrs.id as string)
   : `text-field-${generateId()}`

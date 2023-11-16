@@ -1,5 +1,8 @@
 import type { Component, ExtractPropTypes, PropType } from 'vue'
-import { type ComponentSeverity } from '@fusion-ui-vue/constants'
+import {
+  type ComponentSeverity,
+  componentSeverity,
+} from '@fusion-ui-vue/constants'
 import { buildProps } from '@fusion-ui-vue/utils'
 import SuccessOutlined from '../../svg-icon/internal/SuccessOutlined.vue'
 import WarningOutlined from '../../svg-icon/internal/WarningOutlined.vue'
@@ -17,6 +20,7 @@ export const alertProps = buildProps({
   },
   severity: {
     type: String as PropType<ComponentSeverity>,
+    values: componentSeverity,
     required: true,
     default: 'info',
   },

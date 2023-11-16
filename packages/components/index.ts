@@ -31,6 +31,7 @@ import FnTextField from './text-field'
 import FnSvgIcon from './svg-icon'
 import FnFba from './fba'
 import FnActionArea from './action-area'
+import FnModal from './modal'
 export * from './button-base'
 export * from './avatar-group'
 export * from './button'
@@ -64,6 +65,7 @@ export * from './text-field'
 export * from './svg-icon'
 export * from './fba'
 export * from './action-area'
+export * from './modal'
 
 export const components = [
   FnButtonBase,
@@ -99,7 +101,8 @@ export const components = [
   FnSvgIcon,
   FnFba,
   FnActionArea,
-]
+  FnModal,
+] as any[]
 
 const CK = {
   install(App: any) {
