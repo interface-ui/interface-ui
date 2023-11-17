@@ -7,7 +7,7 @@ import Notistack from './notistack.vue'
 import type { MessageProps } from './message'
 import useCss from './index.jss'
 
-export class FnMessage {
+export class FnMessageClass {
   private _rendered = false
   private readonly _body: HTMLElement = document.body
   private _notistack: VNode = (<Notistack />)
@@ -17,6 +17,10 @@ export class FnMessage {
     severity: 'info',
     icon: true,
     customIcon: undefined,
+    action: undefined,
+    actionEvent: (node: VNode) => {
+      this._removeMessage((node as any).id)
+    },
     content: '',
     duration: 2000,
     transition: 'all 0.5s ease',
@@ -51,6 +55,8 @@ export class FnMessage {
       title,
       content,
       customIcon,
+      action,
+      actionEvent,
       duration,
       position: _position,
       transition: _transition,
@@ -62,7 +68,9 @@ export class FnMessage {
     let timer: any = null
 
     const Alert = FnAlert as any
-    const Icon = customIcon ? (customIcon as any) : null
+    const Icon = customIcon as any
+    const Action = action as any
+    const id = generateId()
     const alertVNode = (
       <Alert
         {...alertProps}
@@ -70,7 +78,7 @@ export class FnMessage {
         onMouseleave={() => this._startTimer(alertVNode, duration)}
       >
         {{
-          icon: () => <Icon />,
+          icon: customIcon ? () => <Icon /> : undefined,
           default: () => (
             <>
               {!isEmpty(title) && (
@@ -85,10 +93,20 @@ export class FnMessage {
               {content}
             </>
           ),
+          action: action
+            ? (icon: any) => (
+                <Action
+                  {...icon}
+                  onClick={() =>
+                    actionEvent(alertVNode, this._removeMessage.bind(this))
+                  }
+                />
+              )
+            : undefined,
         }}
       </Alert>
     )
-    ;(alertVNode as any).id = generateId()
+    ;(alertVNode as any).id = id
     this._notistack.component?.exposed?.add(alertVNode)
 
     timer = this._startTimer(alertVNode, duration)
@@ -130,8 +148,8 @@ export class FnMessage {
   }
 
   static install(app: any) {
-    app.config.globalProperties.$message = singleton(FnMessage)
+    app.config.globalProperties.$message = singleton(FnMessageClass)
   }
 }
 
-export default singleton(FnMessage)
+export default singleton(FnMessageClass)

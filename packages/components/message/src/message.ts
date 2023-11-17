@@ -1,4 +1,4 @@
-import type { Component, ExtractPropTypes, PropType } from 'vue'
+import type { Component, ExtractPropTypes, PropType, VNode } from 'vue'
 import { buildProps } from '@fusion-ui-vue/utils'
 import { alertProps } from '../../alert'
 
@@ -22,6 +22,15 @@ export const messageProps = buildProps({
   },
   customIcon: {
     type: Object as PropType<Component>,
+  },
+  action: {
+    type: Object as PropType<Component | VNode>,
+  },
+  actionEvent: {
+    type: Function as PropType<
+      (e: VNode, remove: (c: string | number) => void) => void
+    >,
+    default: () => {},
   },
   duration: {
     type: Number,
