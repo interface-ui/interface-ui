@@ -1,10 +1,14 @@
 <script setup lang="ts">
 import '@fusion-ui-vue/components/modal/src/index.less' // 开发调试的样式
 import { ThemeProvider } from '@fusion-ui-vue/theme'
-import { FnButton, FnModal } from '@fusion-ui-vue/components'
-import { DeleteFilled } from 'fusion-ui-iconify'
+import {
+  FnButton,
+  FnIconButton,
+  FnModal,
+  FnMessage,
+} from '@fusion-ui-vue/components'
+import { DeleteFilled, VerifiedRound } from 'fusion-ui-iconify'
 import createTheme from '@fusion-ui-vue/theme'
-import { FnMessage } from '@fusion-ui-vue/components'
 // import Badge from './components/Badge.vue'
 // import AvatarGroup from './components/AvatarGroup.vue'
 // import ButtonGroup from './components/ButtonGroup.vue'
@@ -17,7 +21,7 @@ import { FnMessage } from '@fusion-ui-vue/components'
 // import LinkT from './components/Link.vue'
 // import FBA from './components/FBA.vue'
 // import Card from './components/Card.vue'
-import { toRaw, watch, ref } from 'vue'
+import { toRaw, watch, ref, h } from 'vue'
 
 const theme = createTheme()
 const open = ref(false)
@@ -38,17 +42,36 @@ watch(theme, () => ((window as any).theme = toRaw(theme.value)), {
 <template>
   <theme-provider :theme="theme">
     <!-- ------------------- Toggle between the light/dark mode ------------------- -->
-    <header>
+    <header class="content">
       <fn-button @click="changTheme">
-        <!-- @vue-skip -->
         {{ theme.mode }}
       </fn-button>
       <fn-button @click="open = !open"> open modal </fn-button>
       <fn-button
         @click="
-          new FnMessage({ severity: 'success', variant: 'outlined' }).push({
+          new FnMessage({
+            /**
+             * custom default props
+             * Can be override by the props passed in the method
+             */
+            severity: 'success',
+            variant: 'outlined',
+            action: (action: any) =>
+              h(FnIconButton, { ...action }, () => h(DeleteFilled)),
+            placement: { x: 'center' },
+          }).push({
             content: 'this is a info message',
-            customIcon: DeleteFilled,
+            customIcon: VerifiedRound,
+            action: (actionProps: any) =>
+              h(FnIconButton, actionProps, () => h(VerifiedRound)),
+            /**
+             * if the actionEvent is not set
+             * the default action event is to close the message
+             */
+            actionEvent: (node, remove) => {
+              new FnMessage().error({ content: 'error' })
+              remove((node as any).id)
+            },
           })
         "
       >

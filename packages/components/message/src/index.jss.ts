@@ -2,8 +2,8 @@ import { css } from '@fusion-ui-vue/theme'
 import type { MessageProps } from './message'
 
 const useCss = (props: MessageProps) => {
-  const { position, transition } = props
-  const { x, y } = position
+  const { placement, transition } = props
+  const { x, y } = placement
 
   const transform = []
   let positionX
