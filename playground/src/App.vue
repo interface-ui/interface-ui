@@ -56,14 +56,12 @@ watch(theme, () => ((window as any).theme = toRaw(theme.value)), {
              */
             severity: 'success',
             variant: 'outlined',
-            action: (action: any) =>
-              h(FnIconButton, { ...action }, () => h(DeleteFilled)),
+            action: h(FnButton, () => 'Close'),
             placement: { x: 'center' },
           }).push({
             content: 'this is a info message',
             customIcon: VerifiedRound,
-            action: (actionProps: any) =>
-              h(FnIconButton, actionProps, () => h(VerifiedRound)),
+            action: h(FnIconButton, () => h(DeleteFilled)),
             /**
              * if the actionEvent is not set
              * the default action event is to close the message
