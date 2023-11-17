@@ -61,15 +61,13 @@ export default defineComponent({
       emit('update:theme', theme.value)
     }
 
-    const warchTarget =
+    const watchTarget =
       props.theme.target === 'root'
         ? () => props.theme.mode
         : () => parentTheme.value?.mode ?? props.theme.mode
-    props.watcher ? props.watcher() : watch(warchTarget, toggleTheme)
+    props.watcher ? props.watcher() : watch(watchTarget, toggleTheme)
 
     useThemeProvider(theme as Ref<Theme>)
-
-    // defineExpose({ toggleTheme })
 
     const Comp = props.component as any
     return () =>
