@@ -24,7 +24,7 @@ export class FnMessageClass {
     content: '',
     duration: 2000,
     transition: 'all 0.5s ease',
-    position: {
+    placement: {
       x: 'right',
       y: 'top',
     },
@@ -58,7 +58,7 @@ export class FnMessageClass {
       action,
       actionEvent,
       duration,
-      position: _position,
+      placement: _placement,
       transition: _transition,
       ...alertProps
     } = {

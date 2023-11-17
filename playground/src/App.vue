@@ -7,7 +7,7 @@ import {
   FnModal,
   FnMessage,
 } from '@fusion-ui-vue/components'
-import { DeleteFilled } from 'fusion-ui-iconify'
+import { DeleteFilled, VerifiedRound } from 'fusion-ui-iconify'
 import createTheme from '@fusion-ui-vue/theme'
 // import Badge from './components/Badge.vue'
 // import AvatarGroup from './components/AvatarGroup.vue'
@@ -50,14 +50,24 @@ watch(theme, () => ((window as any).theme = toRaw(theme.value)), {
       <fn-button
         @click="
           new FnMessage({
+            /**
+             * custom default props
+             * Can be override by the props passed in the method
+             */
             severity: 'success',
             variant: 'outlined',
-            position: { x: 'center' },
-          }).push({
-            content: 'this is a info message',
-            customIcon: DeleteFilled,
             action: (action: any) =>
               h(FnIconButton, { ...action }, () => h(DeleteFilled)),
+            placement: { x: 'center' },
+          }).push({
+            content: 'this is a info message',
+            customIcon: VerifiedRound,
+            action: (actionProps: any) =>
+              h(FnIconButton, actionProps, () => h(VerifiedRound)),
+            /**
+             * if the actionEvent is not set
+             * the default action event is to close the message
+             */
             actionEvent: (node, remove) => {
               new FnMessage().error({ content: 'error' })
               remove((node as any).id)
