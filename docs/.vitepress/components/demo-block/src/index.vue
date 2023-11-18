@@ -9,8 +9,6 @@ const decodedHighlightedCode = computed(() =>
   decodeURIComponent(props.highlightedCode)
 )
 
-// console.log(decodeURIComponent(props.code))
-
 const { copy, copied } = useClipboard({
   source: decodeURIComponent(props.code),
 })
@@ -42,18 +40,18 @@ const [value, toggle] = useToggle()
               Edit on GitHub
             </div>
           </a>
-          <a class="o-demo_action_item" group @click="copy()">
+          <button class="o-demo_action_item" group @click="copy()">
             <div class="o-demo_action_icon i-carbon:copy" />
             <div class="o-demo_tooltip" group-hover:opacity-100>
               {{ copied ? 'Copied' : 'Copy code' }}
             </div>
-          </a>
-          <a class="o-demo_action_item" group @click="toggle()">
+          </button>
+          <button class="o-demo_action_item" group @click="toggle()">
             <div class="o-demo_action_icon i-carbon:fit-to-width" />
             <div class="o-demo_tooltip" group-hover:opacity-100>
               {{ value ? 'Hidden code' : 'Expand code' }}
             </div>
-          </a>
+          </button>
         </div>
         <div
           v-if="$props.highlightedPreviewCode"
