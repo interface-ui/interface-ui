@@ -13,7 +13,6 @@ import TeamMember from '../components/team-member'
 import BpTable from '../components/table'
 import 'uno.css'
 import './main.css'
-import './style/var.css'
 import './style/table-block.less'
 import './style/scrollbar.less'
 
