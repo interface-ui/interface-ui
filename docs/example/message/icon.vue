@@ -1,26 +1,17 @@
 <script lang="ts" setup>
 import * as pkg from 'fusion-ui-iconify'
-import {
-  FnButton,
-  FnMessage,
-} from 'fusion-ui-vue'
+import { FnButton, FnMessage } from 'fusion-ui-vue'
+const { Filter3Filled } = pkg
 
-const { DeleteFilled, Filter3Filled } = pkg
+const handleClick = () => {
+  new FnMessage({}).push({
+    content: 'this is a success message',
+    severity: 'success',
+    customIcon: Filter3Filled,
+  })
+}
 </script>
 
 <template>
-  <div space-y-2>
-    <div fscw gap-2>
-      <fn-button
-        color="success" @click="new FnMessage({
-          severity: 'success',
-        }).push({
-          content: 'this is a success message',
-          customIcon: Filter3Filled,
-        })"
-      >
-        Success
-      </fn-button>
-    </div>
-  </div>
+  <fn-button color="success" @click="handleClick"> Success </fn-button>
 </template>

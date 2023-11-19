@@ -4,7 +4,7 @@ import { alertProps } from '../../alert'
 
 const messageXPlacements = ['left', 'center', 'right'] as const
 const messageYPlacements = ['top', 'bottom'] as const
-export interface MessagePositions {
+export interface MessagePlacements {
   x: typeof messageXPlacements[number]
   y: typeof messageYPlacements[number]
 }
@@ -41,12 +41,12 @@ export const messageProps = buildProps({
     default: 'all 0.5s ease',
   },
   placement: {
-    type: Object as PropType<Partial<MessagePositions>>,
+    type: Object as PropType<Partial<MessagePlacements>>,
     default: () => ({
       x: 'center',
       y: 'top',
     }),
-    validator: (val: Partial<MessagePositions>) => {
+    validator: (val: Partial<MessagePlacements>) => {
       const { x, y } = val
       const xValid = x ? messageXPlacements.includes(x) : true
       const yValid = y ? messageYPlacements.includes(y) : true
