@@ -13,6 +13,7 @@
   "scripts": {
     "dev": "vitepress dev --port 3147 --host",
     "build": "vitepress build",
+    "preview": "vitepress preview",
     "serve": "vitepress serve"
   },
   "dependencies": {
