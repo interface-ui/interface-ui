@@ -1,11 +1,12 @@
 <script lang="ts" setup>
 import * as pkg from 'fusion-ui-iconify'
 import {
-  FnButton,
+  FnButton, FnIconButton,
   FnMessage,
 } from 'fusion-ui-vue'
+import { h } from 'vue'
 
-const { DeleteFilled, Filter3Filled } = pkg
+const { DeleteFilled, VerifiedRound } = pkg
 </script>
 
 <template>
@@ -16,7 +17,12 @@ const { DeleteFilled, Filter3Filled } = pkg
           severity: 'success',
         }).push({
           content: 'this is a success message',
-          customIcon: Filter3Filled,
+          customIcon: VerifiedRound,
+          action: h(FnIconButton, () => h(DeleteFilled)),
+          actionEvent: (node, remove) => {
+            new FnMessage().error({ content: 'error' })
+            remove((node as any).id)
+          },
         })"
       >
         Success
