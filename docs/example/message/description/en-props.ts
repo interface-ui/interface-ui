@@ -11,7 +11,7 @@ const list: PropTableItem[] = [
     name: 'duration',
     remark: 'delay in closing',
     type: 'Number',
-    default: '2s',
+    default: '2000',
   },
   {
     name: 'closeBtn',

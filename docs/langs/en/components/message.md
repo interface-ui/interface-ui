@@ -10,37 +10,51 @@ lang: en
 
 # Message
 
+`❗️Updating... `
+
+::: warning
+Please note that calling `new FnMessage` multiple times will only create `one instance`.
+:::
 It is often used for feedback prompts after active operation. When the mouse hovers, the message does not disappear. After the mouse is moved out, the countdown begins, and the message automatically disappears after the countdown.
+
+The attribute of `Alert` can be used for Message, providing a more flexible way to use it.
 
 ## Basic Usage
 
 Call the ```FnMessage``` method and pass in the ```message``` parameter.
 <demo src="../../../example/message/base.vue" />
 
-## status
+## severity
 
-It is used to display "success, warning, message, danger (error)" operation feedback.
+It is used to display `success`, `error`, `warning`, `info`  operation feedback.
 
-<demo src="../../../example/message/type.vue" />
+<demo src="../../../example/message/severity.vue" />
+
+## Placement
+
+```placement``` property is used to set the location of the message prompt
+<demo src="../../../example/message/placement.vue" />
+
+## CustomIcon
+
+The `customIcon` attribute is used to customize the icon.
+<demo src="../../../example/message/icon.vue" />
 
 ## Closing time
 
-The delay of automatic shutdown is in milliseconds. If you don't close it, you can write 0.
+`Duration` The delay for automatic closing of the attribute, in milliseconds, defaults to 2000.
 
 <demo src="../../../example/message/time.vue" />
 
-## Manually close
 
-Show the close button
+## Manual shutdown
 
-<demo src="../../../example/message/close.vue" />
+Use the 'actionEvent' function to manually close.
 
-## Close the logo
-
-The `showIcon` attribute controls the visibility of the logo icon.
-
-<demo src="../../../example/message/icon.vue" />
+<demo src="../../../example/message/action.vue" />
 
 ## Attributes
+
+The attribute of `Alert` can be used for Message, providing a more flexible way to use it, I won't go into detail here.
 
 <table-block type="propsEn" :data="props" />

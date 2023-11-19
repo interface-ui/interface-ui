@@ -5,14 +5,25 @@ import { FnMessage } from 'fusion-ui-vue'
 <template>
   <div space-y-2>
     <div fscw gap-2>
-      <FnButton @click="FnMessage({ message: 'Default delay 2s', type: 'success' })">
-        Default delay 2s
+      <FnButton
+        color="success" @click="new FnMessage({
+          severity: 'success',
+        }).push({
+          duration: 2000,
+          content: 'this is a success message',
+        })"
+      >
+        Success
       </FnButton>
-      <FnButton @click="FnMessage({ message: 'Delay 3s', type: 'success', duration: 3000 })">
-        Delay 3s
-      </FnButton>
-      <FnButton @click="FnMessage({ message: 'It keeps showing', type: 'success', duration: 0, closeBtn: true })">
-        It keeps showing
+      <FnButton
+        color="success" @click="new FnMessage({
+          severity: 'success',
+        }).push({
+          duration: 4000,
+          content: 'this is a success message',
+        })"
+      >
+        Success
       </FnButton>
     </div>
   </div>
