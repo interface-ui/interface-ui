@@ -21,8 +21,8 @@ The attribute of `Alert` can be used for Message, providing a more flexible way 
 
 ## Basic Usage
 
-Call the ```FnMessage``` method and pass in the ```message``` parameter.
-<demo src="../../../example/message/base.vue" />
+Call the `FnMessage` method and pass in the `message` parameter.
+<demo src="../../../example/message/basic.vue" />
 
 ## severity
 
@@ -30,14 +30,16 @@ It is used to display `success`, `error`, `warning`, `info`  operation feedback.
 
 <demo src="../../../example/message/severity.vue" />
 
-## Placement
+## Placement `🔜 Coming soon`
 
-```placement``` property is used to set the location of the message prompt
-<demo src="../../../example/message/placement.vue" />
+`placement` property is used to set the location of the message prompt
+
+<!-- <demo src="../../../example/message/placement.vue" /> -->
 
 ## CustomIcon
 
 The `customIcon` attribute is used to customize the icon.
+
 <demo src="../../../example/message/icon.vue" />
 
 ## Closing time

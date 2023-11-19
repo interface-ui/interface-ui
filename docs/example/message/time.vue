@@ -1,30 +1,15 @@
 <script lang="ts" setup>
 import { FnMessage } from 'fusion-ui-vue'
+
+const handleClick = (duration: number) => {
+  new FnMessage().push({
+    duration,
+    content: `The duration is ${duration}ms`,
+  })
+}
 </script>
 
 <template>
-  <div space-y-2>
-    <div fscw gap-2>
-      <FnButton
-        color="success" @click="new FnMessage({
-          severity: 'success',
-        }).push({
-          duration: 2000,
-          content: 'this is a success message',
-        })"
-      >
-        Success
-      </FnButton>
-      <FnButton
-        color="success" @click="new FnMessage({
-          severity: 'success',
-        }).push({
-          duration: 4000,
-          content: 'this is a success message',
-        })"
-      >
-        Success
-      </FnButton>
-    </div>
-  </div>
+  <fn-button variant="outlined" @click="handleClick(2000)"> 2000 ms </fn-button>
+  <fn-button variant="outlined" @click="handleClick(4000)"> 4000 ms </fn-button>
 </template>

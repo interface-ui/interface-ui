@@ -40,7 +40,6 @@ export class FnMessageClass {
   private _render() {
     if (!this._rendered) {
       render(this._notistack, this._body)
-
       this._rendered = true
     }
   }
