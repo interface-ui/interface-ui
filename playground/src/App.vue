@@ -1,7 +1,13 @@
 <script setup lang="ts">
 import '@fusion-ui-vue/components/modal/src/index.less' // 开发调试的样式
+import '@fusion-ui-vue/components/collapse/src/index.less' // 开发调试的样式
 import { ThemeProvider } from '@fusion-ui-vue/theme'
-import { FnButton, FnIconButton, FnMessage } from '@fusion-ui-vue/components'
+import {
+  FnButton,
+  FnIconButton,
+  FnMessage,
+  FnCollapse,
+} from '@fusion-ui-vue/components'
 import { DeleteFilled, VerifiedRound } from 'fusion-ui-iconify'
 import createTheme from '@fusion-ui-vue/theme'
 // import Badge from './components/Badge.vue'
@@ -23,6 +29,7 @@ import { toRaw, watch, ref, h } from 'vue'
 
 const theme = createTheme()
 const open = ref(false)
+const collapse = ref(false)
 
 console.log(
   `%c [Fusion UI] Tip: you can access the documentation 'theme' object directly in the console.`,
@@ -70,6 +77,7 @@ const handleClick = () => {
       </fn-button>
       <fn-button @click="open = !open"> open modal </fn-button>
       <fn-button @click="handleClick"> open message </fn-button>
+      <fn-button @click="collapse = !collapse"> collapse </fn-button>
     </header>
     <!-- <badge /> -->
     <!-- <avatar-group /> -->
@@ -86,6 +94,8 @@ const handleClick = () => {
     <!-- <fn-modal v-model="open" /> -->
     <!-- <Popover /> -->
     <!-- <divider /> -->
-    <list />
+    <fn-collapse>
+      <list v-show="collapse" />
+    </fn-collapse>
   </theme-provider>
 </template>

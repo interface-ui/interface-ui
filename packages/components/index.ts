@@ -37,6 +37,7 @@ import FnDivider from './divider'
 import FnList from './list'
 import FnListItem from './list-item'
 import FnListItemPlaceholder from './list-item-placeholder'
+import FnCollapse from './collapse'
 export * from './button-base'
 export * from './avatar-group'
 export * from './button'
@@ -76,6 +77,7 @@ export * from './divider'
 export * from './list'
 export * from './list-item'
 export * from './list-item-placeholder'
+export * from './collapse'
 
 export const components = [
   FnButtonBase,
@@ -117,6 +119,7 @@ export const components = [
   FnList,
   FnListItem,
   FnListItemPlaceholder,
+  FnCollapse,
 ] as any[]
 
 const CK = {
