@@ -34,6 +34,9 @@ import FnActionArea from './action-area'
 import FnModal from './modal'
 import FnPopover from './popover'
 import FnDivider from './divider'
+import FnList from './list'
+import FnListItem from './list-item'
+import FnListItemPlaceholder from './list-item-placeholder'
 export * from './button-base'
 export * from './avatar-group'
 export * from './button'
@@ -70,6 +73,9 @@ export * from './action-area'
 export * from './modal'
 export * from './popover'
 export * from './divider'
+export * from './list'
+export * from './list-item'
+export * from './list-item-placeholder'
 
 export const components = [
   FnButtonBase,
@@ -108,6 +114,9 @@ export const components = [
   FnModal,
   FnPopover,
   FnDivider,
+  FnList,
+  FnListItem,
+  FnListItemPlaceholder,
 ] as any[]
 
 const CK = {

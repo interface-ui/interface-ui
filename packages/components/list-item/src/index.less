@@ -1,0 +1,24 @@
+.fn-list-item {
+  padding: 0 16px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  &--text {
+    flex: 1 1 auto;
+  }
+  &--leading.fn-icon {
+    font-size: 24px;
+    color: var(--md-sys-color-on-surface-variant);
+  }
+  &--leading.fn-list-item-placeholder {
+    width: 24px;
+  }
+}
+
+.fn-list-item.fn-action-area--disabled {
+  * {
+    color: var(--fn-sys-color-disabled-level-0);
+    opacity: 1;
+  }
+}
