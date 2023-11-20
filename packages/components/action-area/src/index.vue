@@ -8,8 +8,11 @@ const ns = useNamespace('action-area')
 </script>
 
 <template>
-  <component :is="$props.component" :class="[ns.b()]">
+  <component
+    :is="$props.component"
+    :class="[ns.b(), $props.disabled ? ns.m('disabled') : '']"
+  >
     <slot />
-    <fn-ripple v-if="!$attrs.disabled" color="onSurface" />
+    <fn-ripple v-if="!$props.disabled" color="onSurface" />
   </component>
 </template>

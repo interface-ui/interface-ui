@@ -6,6 +6,10 @@ export const actionAreaProps = buildProps({
     type: [String, Object] as PropType<string | Component>,
     default: 'div',
   },
+  disabled: {
+    type: Boolean,
+    default: false,
+  },
 })
 
 export type ActionAreaProps = ExtractPropTypes<typeof actionAreaProps>
