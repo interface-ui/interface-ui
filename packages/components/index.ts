@@ -33,6 +33,7 @@ import FnFba from './fba'
 import FnActionArea from './action-area'
 import FnModal from './modal'
 import FnPopover from './popover'
+import FnDivider from './divider'
 export * from './button-base'
 export * from './avatar-group'
 export * from './button'
@@ -68,6 +69,7 @@ export * from './fba'
 export * from './action-area'
 export * from './modal'
 export * from './popover'
+export * from './divider'
 
 export const components = [
   FnButtonBase,
@@ -105,6 +107,7 @@ export const components = [
   FnActionArea,
   FnModal,
   FnPopover,
+  FnDivider,
 ] as any[]
 
 const CK = {

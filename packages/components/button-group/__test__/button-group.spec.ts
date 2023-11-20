@@ -3,8 +3,8 @@ import { mount } from '@vue/test-utils'
 import type { ComponentSizes } from '@fusion-ui-vue/constants'
 import { componentSizes } from '@fusion-ui-vue/constants'
 import createTheme from '@fusion-ui-vue/theme'
-import type { ButtonGroupOrientation } from '../index'
-import { FnButtonGroup, buttonGroupOrientation } from '../index'
+import type { ButtonGroupOrientations } from '../index'
+import { FnButtonGroup, buttonGroupOrientations } from '../index'
 import type { ButtonShapes, ButtonVariants } from '../../button'
 import { buttonShapes, buttonVariants } from '../../button'
 
@@ -63,7 +63,7 @@ describe('FnButtonGroup', () => {
   })
 
   it('orientation', () => {
-    buttonGroupOrientation.forEach((item: ButtonGroupOrientation): void => {
+    buttonGroupOrientations.forEach((item: ButtonGroupOrientations): void => {
       const wrapper = mount(FnButtonGroup as any, {
         props: { orientation: item },
         global: {
