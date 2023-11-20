@@ -32,6 +32,7 @@ import FnSvgIcon from './svg-icon'
 import FnFba from './fba'
 import FnActionArea from './action-area'
 import FnModal from './modal'
+import FnPopover from './popover'
 export * from './button-base'
 export * from './avatar-group'
 export * from './button'
@@ -66,6 +67,7 @@ export * from './svg-icon'
 export * from './fba'
 export * from './action-area'
 export * from './modal'
+export * from './popover'
 
 export const components = [
   FnButtonBase,
@@ -102,6 +104,7 @@ export const components = [
   FnFba,
   FnActionArea,
   FnModal,
+  FnPopover,
 ] as any[]
 
 const CK = {

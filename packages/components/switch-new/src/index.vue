@@ -6,7 +6,7 @@ import { useNamespace } from '@fusion-ui-vue/utils'
 import FnRipple from '../../ripple'
 import { SwitchPropsNew } from './switch'
 const props = defineProps(SwitchPropsNew)
-const emits = defineEmits<{ (e: 'update:modelValue', v: boolean): void }>()
+const emit = defineEmits<{ (e: 'update:modelValue', v: boolean): void }>()
 const instance = getCurrentInstance()
 const ns = useNamespace('switch-new')
 const cssClass = useSwitchNew(props, ns)
@@ -16,7 +16,7 @@ const checked = computed<boolean>({
     return props.modelValue as any
   },
   set(newVal) {
-    emits(UPDATE_MODEL_EVENT, newVal)
+    emit(UPDATE_MODEL_EVENT, newVal)
   },
 })
 

@@ -1,0 +1,36 @@
+.fn-popover {
+  position: absolute;
+  border-radius: var(--md-sys-shape-corner-extra-small-default-size);
+  box-shadow: var(--md-sys-elevation-level-2);
+  background-color: var(--md-sys-color-surface);
+  padding: 16px;
+
+  &--open {
+    animation: popover-open 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &--close {
+    animation: popover-close 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@keyframes popover-open {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes popover-close {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0);
+  }
+}

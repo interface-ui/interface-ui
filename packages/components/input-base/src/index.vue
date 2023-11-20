@@ -5,7 +5,7 @@ import { inputBaseProps } from './input-base'
 import useCss from './index.jss'
 
 const props = defineProps(inputBaseProps)
-const emits = defineEmits<{
+const emit = defineEmits<{
   (e: 'update:modelValue', v: boolean | string[]): void
 }>()
 const ns = useNamespace('input-base')
@@ -16,7 +16,7 @@ const value = computed({
     return props.modelValue
   },
   set(newVal) {
-    emits('update:modelValue', newVal)
+    emit('update:modelValue', newVal)
   },
 })
 </script>

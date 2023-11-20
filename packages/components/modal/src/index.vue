@@ -5,10 +5,11 @@ import { UPDATE_MODEL_EVENT } from '@fusion-ui-vue/constants'
 import { modalProps } from './modal'
 
 const props = defineProps(modalProps)
-const emits = defineEmits<{
+const emit = defineEmits<{
   'update:modelValue': [value: boolean]
   close: []
 }>()
+defineOptions({ inheritAttrs: false })
 const ns = useNamespace('modal')
 
 const open = computed<boolean>({
@@ -16,13 +17,13 @@ const open = computed<boolean>({
     return props.modelValue
   },
   set(newVal) {
-    emits(UPDATE_MODEL_EVENT, newVal)
+    emit(UPDATE_MODEL_EVENT, newVal)
   },
 })
 
 const handleClick = () => {
   open.value = false
-  emits('close')
+  emit('close')
 }
 </script>
 
@@ -32,6 +33,7 @@ const handleClick = () => {
       <div
         v-show="open"
         :class="[ns.b(), open ? ns.m('open') : '']"
+        v-bind="$attrs"
         @click="handleClick"
       >
         <div

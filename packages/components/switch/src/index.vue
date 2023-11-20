@@ -9,7 +9,7 @@ import { switchProps } from './switch'
 import useCss from './index.jss'
 
 const props = defineProps(switchProps)
-const emits = defineEmits<{ (e: 'update:modelValue', v: boolean): void }>()
+const emit = defineEmits<{ (e: 'update:modelValue', v: boolean): void }>()
 const ns = useNamespace('switch')
 const cssClass = useCss(props)
 
@@ -18,7 +18,7 @@ const checked = computed<boolean>({
     return props.modelValue as any
   },
   set(newVal) {
-    emits(UPDATE_MODEL_EVENT, newVal)
+    emit(UPDATE_MODEL_EVENT, newVal)
   },
 })
 </script>
