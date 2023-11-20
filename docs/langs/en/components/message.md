@@ -17,7 +17,7 @@ Please note that calling `new FnMessage` multiple times will only create `one in
 :::
 It is often used for feedback prompts after active operation. When the mouse hovers, the message does not disappear. After the mouse is moved out, the countdown begins, and the message automatically disappears after the countdown.
 
-The attribute of `Alert` can be used for Message, providing a more flexible way to use it.
+The attribute of [`Alert`](./alert.md) can be used for Message, providing a more flexible way to use it.
 
 ## Basic Usage
 
@@ -51,12 +51,12 @@ The `customIcon` attribute is used to customize the icon.
 
 ## Manual shutdown
 
-Use the 'actionEvent' function to manually close.
+The `action` attribute can be used to customize the close button for manual closure, and `actionEvent` is the callback event for the close button.
 
 <demo src="../../../example/message/action.vue" />
 
 ## Attributes
 
-The attribute of `Alert` can be used for Message, providing a more flexible way to use it, I won't go into detail here.
+The properties of the [`Alert`](./alert.md) component are applicable to the Message component; no further details are provided here.
 
 <table-block type="propsEn" :data="props" />

@@ -13,5 +13,7 @@ const handleClick = () => {
 </script>
 
 <template>
-  <fn-button color="success" @click="handleClick"> Success </fn-button>
+  <fn-button color="success" @click="handleClick">
+    Success
+  </fn-button>
 </template>

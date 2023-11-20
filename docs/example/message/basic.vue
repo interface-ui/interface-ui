@@ -9,5 +9,7 @@ const handleClick = () => {
 </script>
 
 <template>
-  <fn-button variant="outlined" @click="handleClick"> Show message </fn-button>
+  <fn-button variant="outlined" @click="handleClick">
+    Show message
+  </fn-button>
 </template>

@@ -4,7 +4,17 @@ import { FnButton, FnIconButton, FnMessage } from 'fusion-ui-vue'
 import { h } from 'vue'
 
 const { DeleteFilled, VerifiedRound } = pkg
-const handleClick = () => {
+const handleClickClose = () => {
+  new FnMessage({
+    severity: 'success',
+  }).push({
+    content: 'this is a success message',
+    customIcon: VerifiedRound,
+    action: h(FnIconButton, () => h(DeleteFilled)),
+  })
+}
+
+const handleClickCloseEvent = () => {
   new FnMessage({
     severity: 'success',
   }).push({
@@ -12,7 +22,7 @@ const handleClick = () => {
     customIcon: VerifiedRound,
     action: h(FnIconButton, () => h(DeleteFilled)),
     actionEvent: (node, remove) => {
-      new FnMessage().error({ content: 'error' })
+      new FnMessage().success({ content: 'Close successfully' })
       remove((node as any).id)
     },
   })
@@ -20,7 +30,10 @@ const handleClick = () => {
 </script>
 
 <template>
-  <fn-button color="success" variant="outlined" @click="handleClick">
-    Success
+  <fn-button color="success" variant="outlined" @click="handleClickClose">
+    Close
+  </fn-button>
+  <fn-button color="success" variant="outlined" @click="handleClickCloseEvent">
+    Close Event
   </fn-button>
 </template>

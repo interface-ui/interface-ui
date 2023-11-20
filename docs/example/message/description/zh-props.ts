@@ -1,30 +1,58 @@
 import type { PropTableItem } from '../../../.vitepress/components/table-block/src/table'
 const list: PropTableItem[] = [
+
   {
-    name: 'state',
-    remark: '消息状态',
-    type: 'Enum',
-    optional: ['info', 'success', 'warning', 'danger'],
-    default: 'info',
+    name: 'title',
+    remark: '标题',
+    type: 'String',
+    default: '--',
+  },
+  {
+    name: 'content',
+    remark: '内容',
+    type: 'String',
+    default: '--',
   },
   {
     name: 'duration',
-    remark: '关闭延时',
+    remark: '关闭延时(ms)',
     type: 'Number',
-    default: '2s',
+    default: '2000',
   },
   {
-    name: 'closeBtn',
-    remark: '显示关闭按钮',
-    type: 'Boolean',
-    default: 'normal',
+    name: 'customIcon',
+    remark: '前部图标',
+    type: 'Object',
+    default: '--',
   },
   {
-    name: 'showIcon',
-    remark: '显示图标',
-    type: 'Boolean',
-    default: 'round',
+    name: 'action',
+    remark: '尾部图标',
+    type: 'Object',
+    default: '--',
   },
+  {
+    name: 'actionEvent',
+    remark: '尾部图标回调事件',
+    type: 'Function',
+    default: '--',
+  },
+  {
+    name: 'transition',
+    remark: '动画过渡效果',
+    type: 'String',
+    default: 'all 0.5s ease',
+  },
+  {
+    name: 'placement',
+    remark: '消息位置',
+    type: 'Object',
+    default: `{
+      x: 'center',
+      y: 'top',
+    }`,
+  },
+
 ]
 
 export default list

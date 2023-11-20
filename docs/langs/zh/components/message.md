@@ -18,7 +18,7 @@ lang: zh
 
 常用于主动操作后的反馈提示，鼠标悬停时消息不消失，鼠标移出后开始倒计时，倒计时结束后消息自动消失。
 
-`Alert` 的属性可以用于Message，提供更加灵活的使用方式。
+[`Alert`](./alert.md) 的属性可以用于Message，提供更加灵活的使用方式。
 
 
 
@@ -55,12 +55,12 @@ lang: zh
 
 ## 手动关闭
 
-借助 `actionEvent` 函数实现手动关闭。
+使用 `action` 属性可以自定义关闭按钮实现手动关闭，`actionEvent` 为关闭按钮的回调事件。
 
 <demo src="../../../example/message/action.vue" />
 
 ## 属性
 
-`Alert`组件属性适用于 `Message`，此处不再赘述。[❗️ TODO]
+[`Alert`](./alert.md)组件属性适用于 `Message`，此处不再赘述。[❗️ TODO]
 
 <table-block type="propsZh" :data="props" />
