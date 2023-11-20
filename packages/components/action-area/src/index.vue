@@ -8,6 +8,6 @@ const ns = useNamespace('action-area')
 <template>
   <div :class="[ns.b()]">
     <slot />
-    <fn-ripple color="var(--fn-sys-color-switch-reverse)" />
+    <fn-ripple v-if="!$attrs.disabled" color="onSurface" />
   </div>
 </template>
