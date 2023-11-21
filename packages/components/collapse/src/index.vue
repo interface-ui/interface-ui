@@ -1,44 +1,80 @@
 <script lang="ts" setup>
-const onEnter = (el: Element) => {
-  const element = el as HTMLElement
-  element.classList.add('fn-collapse')
-  element.style.height = 'auto'
-  const endHeight = window.getComputedStyle(el).height
-  element.style.height = '0px'
-  // eslint-disable-next-line no-unused-expressions
-  element.offsetHeight
-  element.style.height = endHeight
+import { useNamespace } from '@fusion-ui-vue/utils'
+import { type RendererElement } from 'vue'
+
+const ns = useNamespace('collapse')
+
+const dataset = {
+  oldPaddingTop: '',
+  oldPaddingBottom: '',
+  oldOverflow: '',
 }
 
-const onAfterEnter = (el: Element) => {
-  const element = el as HTMLElement
-  element.style.height = ''
-  element.classList.remove('fn-collapse')
+const reset = (el: RendererElement) => {
+  el.style.maxHeight = ''
+  el.style.overflow = dataset.oldOverflow
+  el.style.paddingTop = dataset.oldPaddingTop
+  el.style.paddingBottom = dataset.oldPaddingBottom
 }
 
-const onLeave = (el: Element) => {
-  const element = el as HTMLElement
-  element.classList.add('fn-collapse')
-  element.style.height = window.getComputedStyle(el).height
-  // eslint-disable-next-line no-unused-expressions
-  element.offsetHeight
-  element.style.height = '0px'
-}
+const listener = {
+  beforeEnter(el: RendererElement) {
+    dataset.oldPaddingTop = el.style.paddingTop
+    dataset.oldPaddingBottom = el.style.paddingBottom
 
-const onAfterLeave = (el: Element) => {
-  const element = el as HTMLElement
-  element.style.height = ''
-  element.classList.remove('fn-collapse')
+    el.style.maxHeight = 0
+    el.style.paddingTop = 0
+    el.style.paddingBottom = 0
+  },
+
+  enter(el: RendererElement) {
+    dataset.oldOverflow = el.style.overflow
+    if (el.scrollHeight !== 0) {
+      el.style.maxHeight = `${el.scrollHeight}px`
+    } else {
+      el.style.maxHeight = 0
+    }
+    el.style.paddingTop = dataset.oldPaddingTop
+    el.style.paddingBottom = dataset.oldPaddingBottom
+  },
+
+  afterEnter(el: RendererElement) {
+    el.style.maxHeight = ''
+    el.style.overflow = dataset.oldOverflow
+  },
+
+  enterCancelled(el: RendererElement) {
+    reset(el)
+  },
+
+  beforeLeave(el: RendererElement) {
+    dataset.oldPaddingTop = el.style.paddingTop
+    dataset.oldPaddingBottom = el.style.paddingBottom
+    dataset.oldOverflow = el.style.overflow
+
+    el.style.maxHeight = `${el.scrollHeight}px`
+  },
+
+  leave(el: RendererElement) {
+    if (el.scrollHeight !== 0) {
+      el.style.maxHeight = 0
+      el.style.paddingTop = 0
+      el.style.paddingBottom = 0
+    }
+  },
+
+  afterLeave(el: RendererElement) {
+    reset(el)
+  },
+
+  leaveCancelled(el: RendererElement) {
+    reset(el)
+  },
 }
 </script>
 
 <template>
-  <transition
-    @enter="onEnter"
-    @after-enter="onAfterEnter"
-    @leave="onLeave"
-    @after-leave="onAfterLeave"
-  >
+  <transition :name="ns.b()" v-on="listener">
     <slot />
   </transition>
 </template>

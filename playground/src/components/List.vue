@@ -8,13 +8,21 @@ import {
   FnDivider,
   FnTypography,
   FnListItemPlaceholder,
+  FnCollapse,
+  FnSvgIcon,
 } from '@fusion-ui-vue/components'
 import {
   ContentCopyFilled,
+  MoreOutlined,
   // ContentCutFilled,
+  ExpandMoreFilled,
   ContentPasteFilled,
   UndoFilled,
+  StarBorderOutlined,
 } from 'fusion-ui-iconify'
+import { ref } from 'vue'
+
+const collapse = ref(false)
 </script>
 
 <template>
@@ -24,7 +32,7 @@ import {
         <template #leading="icon">
           <content-copy-filled v-bind="icon" />
         </template>
-        Cut
+        Copy
         <template #trailing>
           <fn-typography variant="label.large" cs="opacity: 0.6;">
             ⌘X
@@ -36,7 +44,7 @@ import {
           <!-- <content-cut-filled v-bind="icon" /> -->
           <fn-list-item-placeholder v-bind="icon" />
         </template>
-        Copy
+        Cut
         <template #trailing>
           <fn-typography variant="label.large" cs="opacity: 0.6;">
             ⌘C
@@ -54,17 +62,42 @@ import {
           </fn-typography>
         </template>
       </fn-list-item>
+      <fn-list-item @click="collapse = !collapse">
+        <template #leading="icon">
+          <more-outlined v-bind="icon" />
+        </template>
+        More
+        <template #trailing>
+          <fn-svg-icon
+            :cs="{
+              transform: collapse ? 'rotate(180deg)' : 'rotate(0)',
+              transition: 'all .5s cubic-bezier(0.4, 0, 0.2, 1)',
+            }"
+            :component="ExpandMoreFilled"
+          />
+        </template>
+      </fn-list-item>
+      <fn-collapse>
+        <fn-list component="li" level="1" v-show="collapse">
+          <fn-list-item :indent="1">
+            <template #leading="icon">
+              <undo-filled v-bind="icon" />
+            </template>
+            Undo
+            <template #trailing>
+              <fn-typography variant="label.large" cs="opacity: 0.6;">
+                ⌘Z
+              </fn-typography>
+            </template>
+          </fn-list-item>
+        </fn-list>
+      </fn-collapse>
       <fn-divider />
       <fn-list-item>
         <template #leading="icon">
-          <undo-filled v-bind="icon" />
+          <star-border-outlined v-bind="icon" />
         </template>
-        Undo
-        <template #trailing>
-          <fn-typography variant="label.large" cs="opacity: 0.6;">
-            ⌘Z
-          </fn-typography>
-        </template>
+        Save
       </fn-list-item>
     </fn-list>
   </div>
