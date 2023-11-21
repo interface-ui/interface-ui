@@ -1,5 +1,5 @@
 import { withInstall } from '../install'
-import List from './src/index.vue'
+import List from './src/index'
 
 export const FnList = withInstall(List, 'FnList')
 FnList.name = 'FnList'

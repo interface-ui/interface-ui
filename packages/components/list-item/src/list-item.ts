@@ -6,7 +6,7 @@ export const listItemProps = buildProps({
     type: [Object, String],
   },
   indent: {
-    type: Number,
+    type: [Number, String],
     default: 0,
   },
 })

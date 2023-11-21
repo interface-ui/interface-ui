@@ -2,6 +2,7 @@
 import '@fusion-ui-vue/components/divider/src/index.less' // 开发调试的样式
 import '@fusion-ui-vue/components/list/src/index.less' // 开发调试的样式
 import '@fusion-ui-vue/components/list-item/src/index.less' // 开发调试的样式
+import '@fusion-ui-vue/components/list-item-header/src/index.less' // 开发调试的样式
 import {
   FnList,
   FnListItem,
@@ -10,6 +11,7 @@ import {
   FnListItemPlaceholder,
   FnCollapse,
   FnSvgIcon,
+  FnListItemHeader,
 } from '@fusion-ui-vue/components'
 import {
   ContentCopyFilled,
@@ -20,11 +22,18 @@ import {
   UndoFilled,
   StarBorderOutlined,
 } from 'fusion-ui-iconify'
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 import { useTheme } from '@fusion-ui-vue/theme'
 
 const collapse = ref(false)
 const theme = useTheme()
+const rotate = computed(() => ({
+  transform: collapse.value ? 'rotate(180deg)' : 'rotate(0)',
+  transition: theme.value.motion.create(['all'], {
+    duration: theme.value.motion.duration[500],
+    timingFunction: theme.value.motion.timingFunction['easing-emphasized'],
+  }),
+}))
 </script>
 
 <template>
@@ -70,22 +79,12 @@ const theme = useTheme()
         </template>
         More
         <template #trailing>
-          <fn-svg-icon
-            :cs="{
-              transform: collapse ? 'rotate(180deg)' : 'rotate(0)',
-              transition: theme.motion.create(['all'], {
-                duration: theme.motion.duration[500],
-                timingFunction:
-                  theme.motion.timingFunction['easing-emphasized'],
-              }),
-            }"
-            :component="ExpandMoreFilled"
-          />
+          <fn-svg-icon :cs="rotate" :component="ExpandMoreFilled" />
         </template>
       </fn-list-item>
       <fn-collapse>
         <fn-list component="li" level="1" v-show="collapse">
-          <fn-list-item :indent="1">
+          <fn-list-item>
             <template #leading="icon">
               <undo-filled v-bind="icon" />
             </template>
@@ -98,7 +97,8 @@ const theme = useTheme()
           </fn-list-item>
         </fn-list>
       </fn-collapse>
-      <fn-divider />
+      <fn-divider component="li" />
+      <fn-list-item-header> Other actions </fn-list-item-header>
       <fn-list-item>
         <template #leading="icon">
           <star-border-outlined v-bind="icon" />
