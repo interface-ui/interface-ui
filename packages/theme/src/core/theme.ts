@@ -2,6 +2,7 @@ import colors from '../color'
 import states from '../state'
 import elevations from '../elevation'
 import typography from '../typography'
+import motion from '../motion'
 import zIndex from '../z-index'
 import type ThemeMode from '../mode'
 import type {
@@ -20,6 +21,7 @@ export default class Theme {
   elevations = elevations
   typography = typography
   zIndex = zIndex
+  motion = motion
   palettes: ThemePalettes
   inject?: string
   target: 'root' | 'host'

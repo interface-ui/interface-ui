@@ -21,8 +21,10 @@ import {
   StarBorderOutlined,
 } from 'fusion-ui-iconify'
 import { ref } from 'vue'
+import { useTheme } from '@fusion-ui-vue/theme'
 
 const collapse = ref(false)
+const theme = useTheme()
 </script>
 
 <template>
@@ -71,7 +73,11 @@ const collapse = ref(false)
           <fn-svg-icon
             :cs="{
               transform: collapse ? 'rotate(180deg)' : 'rotate(0)',
-              transition: 'all .5s cubic-bezier(0.4, 0, 0.2, 1)',
+              transition: theme.motion.create(['all'], {
+                duration: theme.motion.duration[500],
+                timingFunction:
+                  theme.motion.timingFunction['easing-emphasized'],
+              }),
             }"
             :component="ExpandMoreFilled"
           />
