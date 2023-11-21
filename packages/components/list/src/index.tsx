@@ -1,4 +1,4 @@
-import { defineComponent } from 'vue'
+import { defineComponent, mergeProps } from 'vue'
 import { useNamespace } from '@fusion-ui-vue/utils'
 import { listProps } from './list'
 import useCss from './index.jss'
@@ -15,7 +15,7 @@ export default defineComponent({
       <Comp class={[ns.b(), ns.m(`level-${props.level}`), cssClass.value]}>
         <ul class={[ns.e('ul')]}>
           {slotsVNodes.map((VNode: any) => (
-            <VNode indent={props.level} />
+            <VNode {...mergeProps({ indent: props.level }, VNode.props)} />
           ))}
         </ul>
       </Comp>
