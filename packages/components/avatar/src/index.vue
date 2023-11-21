@@ -1,23 +1,12 @@
 <script setup lang="ts">
-import { computed, defineComponent, useAttrs } from 'vue'
+import { defineComponent, useAttrs } from 'vue'
 import { useNamespace } from '@fusion-ui-vue/utils'
-import { css, useColor } from '@fusion-ui-vue/theme'
 import { avatarProps } from './avatar'
+import useCss from './index.jss'
 
 const props = defineProps(avatarProps)
 const ns = useNamespace('avatar')
-
-const [backgroundColor] = useColor(props, 'background')
-const [textColor] = useColor(props, 'color')
-
-const cssClass = computed(
-  () => css`
-    height: ${props.size}px;
-    width: ${props.size}px;
-    background-color: ${backgroundColor.value};
-    color: ${textColor.value};
-  `
-)
+const cssClass = useCss(props)
 const { class: classAttr, ...restAttrs } = useAttrs()
 </script>
 

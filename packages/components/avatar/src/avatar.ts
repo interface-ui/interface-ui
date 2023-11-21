@@ -27,6 +27,9 @@ export const avatarProps = buildProps({
     type: [String, Function] as PropType<AcceptableColor>,
     default: 'surfaceVariant',
   },
+  cs: {
+    type: [Object, String],
+  },
 })
 
 export type AvatarProps = ExtractPropTypes<typeof avatarProps>
