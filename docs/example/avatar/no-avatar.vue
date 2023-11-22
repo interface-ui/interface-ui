@@ -24,7 +24,7 @@ const names = ['HG', '胡歌', '霆锋', 'TF', 'ZQ', '紫琪']
 const avatars = ref(
   names.map(name => ({
     props: {
-      backgroundColor: stringToColor(name),
+      background: stringToColor(name),
       color: 'white',
     },
     text: name,
