@@ -1,3 +1,4 @@
+import type { AcceptableColor } from '@fusion-ui-vue/theme'
 import { buildProps } from '@fusion-ui-vue/utils'
 import type { Component, ExtractPropTypes, PropType } from 'vue'
 
@@ -9,6 +10,17 @@ export const actionAreaProps = buildProps({
   disabled: {
     type: Boolean,
     default: false,
+  },
+  color: {
+    type: [String, Function] as PropType<AcceptableColor>,
+    default: 'var(--fn-sys-color-switch-reverse-rgb)',
+  },
+  highlight: {
+    type: Boolean,
+    default: false,
+  },
+  cs: {
+    type: [Object, String],
   },
 })
 

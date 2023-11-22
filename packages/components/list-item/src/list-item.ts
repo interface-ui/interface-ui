@@ -9,6 +9,14 @@ export const listItemProps = buildProps({
     type: [Number, String],
     default: 0,
   },
+  selectable: {
+    type: Boolean,
+    default: true,
+  },
+  highlight: {
+    type: Boolean,
+    default: false,
+  },
 })
 
 export type ListItemProps = ExtractPropTypes<typeof listItemProps>

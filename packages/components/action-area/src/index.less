@@ -9,8 +9,16 @@
     @media (any-hover: hover) {
       &:hover {
         background-color: rgba(
-          var(--fn-sys-color-switch-reverse-rgb) /
+          var(--fn-action-area-color-rgb) /
             var(--md-sys-state-hover-state-layer-opacity)
+        );
+      }
+      &--higtlight:hover {
+        background-color: color-mix(
+          in srgb,
+          var(--fn-action-area-color-rgb),
+          var(--fn-sys-color-switch-reverse)
+            var(--md-sys-state-hover-state-layer-opacity-percentage)
         );
       }
     }
@@ -18,9 +26,39 @@
     &:active,
     &:focus {
       background-color: rgba(
-        var(--fn-sys-color-switch-reverse-rgb) /
+        var(--fn-action-area-color-rgb) /
           var(--md-sys-state-focus-state-layer-opacity)
       );
     }
+  }
+
+  &--highlight:not(&--disabled) {
+    background-color: var(--fn-action-area-color);
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: color-mix(
+          in srgb,
+          var(--fn-action-area-color),
+          var(--fn-sys-color-switch-reverse)
+            var(--md-sys-state-hover-state-layer-opacity-percentage)
+        );
+      }
+    }
+    &:active,
+    &:focus {
+      background-color: color-mix(
+        in srgb,
+        var(--fn-action-area-color),
+        var(--fn-sys-color-switch-reverse)
+          var(--md-sys-state-focus-state-layer-opacity-percentage)
+      );
+    }
+  }
+  &--highlight.fn-action-area--disabled {
+    background-color: color-mix(
+      in srgb,
+      var(--fn-action-area-color) 38%,
+      var(--fn-sys-color-switch)
+    );
   }
 }

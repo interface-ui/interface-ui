@@ -36,6 +36,7 @@ import FnPopover from './popover'
 import FnDivider from './divider'
 import FnList from './list'
 import FnListItem from './list-item'
+import FnListItemText from './list-item-text'
 import FnListHeader from './list-item-header'
 import FnListItemPlaceholder from './list-item-placeholder'
 import FnCollapse from './collapse'
@@ -77,6 +78,7 @@ export * from './popover'
 export * from './divider'
 export * from './list'
 export * from './list-item'
+export * from './list-item-text'
 export * from './list-item-header'
 export * from './list-item-placeholder'
 export * from './collapse'
@@ -120,6 +122,7 @@ export const components = [
   FnDivider,
   FnList,
   FnListItem,
+  FnListItemText,
   FnListHeader,
   FnListItemPlaceholder,
   FnCollapse,
