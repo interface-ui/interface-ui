@@ -1,5 +1,6 @@
+import type { AcceptableColor } from '@fusion-ui-vue/theme'
 import { buildProps } from '@fusion-ui-vue/utils'
-import type { ExtractPropTypes } from 'vue'
+import type { ExtractPropTypes, PropType } from 'vue'
 
 export const listItemProps = buildProps({
   cs: {
@@ -16,6 +17,10 @@ export const listItemProps = buildProps({
   highlight: {
     type: Boolean,
     default: false,
+  },
+  highlightColor: {
+    type: [String, Function] as PropType<AcceptableColor>,
+    default: 'primaryContainer',
   },
 })
 

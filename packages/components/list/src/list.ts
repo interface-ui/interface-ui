@@ -3,9 +3,6 @@ import { buildProps } from '@fusion-ui-vue/utils'
 import type { Component, ExtractPropTypes, PropType } from 'vue'
 
 export const listProps = buildProps({
-  cs: {
-    type: [Object, String],
-  },
   component: {
     type: [String, Object] as PropType<string | Component>,
     default: 'div',
@@ -18,9 +15,16 @@ export const listProps = buildProps({
     type: [Number, String],
     default: 0,
   },
+  sublist: {
+    type: Boolean,
+    default: false,
+  },
   disablePadding: {
     type: Boolean,
     default: false,
+  },
+  cs: {
+    type: [Object, String],
   },
 })
 

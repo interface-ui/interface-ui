@@ -147,7 +147,7 @@ const rotate = computed(() => ({
             supporting-text="Ali Connors — I'll be in your neighborhood doing errands this…"
           />
         </fn-list-item>
-        <fn-list-item :selectable="false" disabled highlight>
+        <fn-list-item highlight>
           <template #leading="{ avatar }">
             <fn-avatar v-bind="avatar">A</fn-avatar>
           </template>

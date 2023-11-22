@@ -12,12 +12,7 @@ const cssClass = useCss(props)
 <template>
   <component
     :is="$props.component"
-    :class="[
-      ns.b(),
-      $props.disabled ? ns.m('disabled') : '',
-      $props.highlight ? ns.m('highlight') : '',
-      cssClass,
-    ]"
+    :class="[ns.b(), $props.disabled ? ns.m('disabled') : '', cssClass]"
   >
     <slot />
     <fn-ripple v-if="!$props.disabled" color="onSurface" />
