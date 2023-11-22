@@ -15,7 +15,9 @@ export const popoverProps = buildProps({
     default: false,
   },
   anchor: {
-    type: [Object, null, undefined] as PropType<HTMLElement | undefined | null>,
+    type: [Object, null, undefined] as PropType<
+      HTMLElement | MouseEvent | undefined | null
+    >,
     required: true,
   },
   backdrop: {

@@ -24,7 +24,7 @@ const style = ref({
 const cssClass = useCss(props)
 const DEFAULT_PLACEMENT: PopoverPlacements = { x: 'left', y: 'bottom' }
 
-const calculateStyle = (anchor: HTMLElement) => {
+const calculateStyleFromAnchor = (anchor: HTMLElement) => {
   if (!popoverRef.value) {
     return
   }
@@ -32,7 +32,7 @@ const calculateStyle = (anchor: HTMLElement) => {
   const { placement } = props
   let { x, y } = { ...DEFAULT_PLACEMENT, ...placement }
   const { top, left, width, height } = anchor.getBoundingClientRect()
-  const popoverWidth = popoverRef.value.offsetWidth
+  const popoverWidth = Math.max(popoverRef.value.offsetWidth, width)
   const popoverHeight = popoverRef.value.offsetHeight
   const { innerWidth, innerHeight } = window
 
@@ -85,11 +85,74 @@ const calculateStyle = (anchor: HTMLElement) => {
   }
 }
 
+const calculateStyleFromEvent = (e: MouseEvent) => {
+  if (!popoverRef.value) {
+    return
+  }
+
+  const { placement } = props
+  let { x, y } = { ...DEFAULT_PLACEMENT, ...placement }
+  const { x: left, y: top } = e
+
+  const popoverWidth = popoverRef.value.offsetWidth
+  const popoverHeight = popoverRef.value.offsetHeight
+  const { innerWidth, innerHeight } = window
+
+  if (x === 'center') {
+    x = 'right'
+  }
+  if (x === 'left') {
+    if (left < popoverWidth) {
+      x = 'right'
+    }
+  } else {
+    if (innerWidth - left < popoverWidth) {
+      x = 'left'
+    }
+  }
+
+  if (y === 'top') {
+    if (top < popoverHeight) {
+      y = 'bottom'
+    }
+  } else {
+    if (innerHeight - top < popoverHeight) {
+      y = 'top'
+    }
+  }
+
+  const position = { top: 0, left: 0 }
+  if (x === 'left') {
+    position.left = left - popoverWidth
+  } else {
+    position.left = left
+  }
+
+  if (y === 'top') {
+    position.top = top - popoverHeight
+  } else {
+    position.top = top
+  }
+
+  style.value = {
+    top: `${position.top}px`,
+    left: `${position.left}px`,
+    transformOrigin: `${x === 'left' ? 'right' : 'left'} ${
+      y === 'top' ? 'bottom' : 'top'
+    }`,
+    minWidth: `${popoverWidth}px`,
+  }
+}
+
 watch(
   () => props.open,
   newVal => {
     if (newVal) {
-      nextTick(() => calculateStyle(props.anchor as HTMLElement))
+      nextTick(() =>
+        props.anchor instanceof HTMLElement
+          ? calculateStyleFromAnchor(props.anchor as HTMLElement)
+          : calculateStyleFromEvent(props.anchor as MouseEvent)
+      )
     }
   }
 )
@@ -104,7 +167,7 @@ watch(
     <div
       ref="popoverRef"
       v-bind="$attrs"
-      :class="[ns.b(), cssClass, $props.open ? ns.m('open') : ns.m('close')]"
+      :class="[ns.b(), $props.open ? ns.m('open') : ns.m('close'), cssClass]"
       :style="style"
       @click.stop
     >
