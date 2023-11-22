@@ -14,16 +14,20 @@ defineEmits<{
 defineOptions({ inheritAttrs: false })
 const ns = useNamespace('popover')
 const popoverRef = ref<HTMLElement | null>(null)
-const style = ref({ top: '0', left: '0', transformOrigin: 'top left' })
+const style = ref({
+  top: '0',
+  left: '0',
+  transformOrigin: 'top left',
+  minWidth: '0',
+})
 
 const cssClass = useCss(props)
 const DEFAULT_PLACEMENT: PopoverPlacements = { x: 'left', y: 'bottom' }
 
-const calculatePosition = (anchor: HTMLElement) => {
+const calculateStyle = (anchor: HTMLElement) => {
   if (!popoverRef.value) {
     return
   }
-  const offset = 8
 
   const { placement } = props
   let { x, y } = { ...DEFAULT_PLACEMENT, ...placement }
@@ -68,15 +72,16 @@ const calculatePosition = (anchor: HTMLElement) => {
   }
 
   if (y === 'top') {
-    position.top = top - popoverHeight - offset
+    position.top = top - popoverHeight
   } else {
-    position.top = top + height + offset
+    position.top = top + height
   }
 
   style.value = {
     top: `${position.top}px`,
     left: `${position.left}px`,
     transformOrigin: `${x} ${y === 'top' ? 'bottom' : 'top'}`,
+    minWidth: `${width}px`,
   }
 }
 
@@ -84,7 +89,7 @@ watch(
   () => props.open,
   newVal => {
     if (newVal) {
-      nextTick(() => calculatePosition(props.anchor as HTMLElement))
+      nextTick(() => calculateStyle(props.anchor as HTMLElement))
     }
   }
 )

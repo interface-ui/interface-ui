@@ -4,6 +4,7 @@ import '@fusion-ui-vue/components/list/src/index.less'
 import '@fusion-ui-vue/components/list-item/src/index.less'
 import '@fusion-ui-vue/components/list-item-header/src/index.less'
 import '@fusion-ui-vue/components/badge/src/index.less'
+import '@fusion-ui-vue/components/menu/src/index.less'
 import {
   FnList,
   FnListItem,
@@ -16,6 +17,8 @@ import {
   FnBadge,
   FnAvatar,
   FnListItemText,
+  FnButton,
+  FnMenu,
 } from '@fusion-ui-vue/components'
 import {
   ContentCopyFilled,
@@ -27,11 +30,14 @@ import {
   StarBorderOutlined,
   SendFilled,
   InboxFilled,
+  ArrowRightFilled,
 } from 'fusion-ui-iconify'
 import { computed, ref } from 'vue'
 import { useTheme } from '@fusion-ui-vue/theme'
 
 const collapse = ref(false)
+const showSublist = ref(false)
+const anchor = ref(null)
 const theme = useTheme()
 const rotate = computed(() => ({
   transform: collapse.value ? 'rotate(180deg)' : 'rotate(0)',
@@ -159,4 +165,43 @@ const rotate = computed(() => ({
       </fn-list>
     </div>
   </div>
+
+  <fn-button @click="e => (anchor = e.currentTarget)">Show Menu</fn-button>
+  <fn-menu :open="Boolean(anchor)" :anchor="anchor" @close="anchor = null">
+    <fn-list-item> Copy </fn-list-item>
+    <fn-list-item> Cut </fn-list-item>
+    <fn-list-item disabled> Paste </fn-list-item>
+    <fn-list-item
+      @mouseenter="showSublist = true"
+      @mouseleave="showSublist = false"
+    >
+      More
+      <template #trailing="icon">
+        <arrow-right-filled v-bind="icon" />
+      </template>
+      <fn-list v-if="showSublist" sublist>
+        <fn-list-item>
+          <template #leading="{ icon }">
+            <send-filled v-bind="icon" />
+          </template>
+          Send
+        </fn-list-item>
+        <fn-list-item>
+          <template #leading="{ icon }">
+            <inbox-filled v-bind="icon" />
+          </template>
+          Inbox
+          <template #trailing>
+            <fn-badge content="20" max="10" />
+          </template>
+        </fn-list-item>
+        <fn-divider component="li" />
+        <fn-list-item indent="1" disabled> Spam </fn-list-item>
+        <fn-list-item indent="1"> Trash </fn-list-item>
+      </fn-list>
+    </fn-list-item>
+    <fn-divider component="li" />
+    <fn-list-item-header> Other actions </fn-list-item-header>
+    <fn-list-item> Save </fn-list-item>
+  </fn-menu>
 </template>

@@ -12,7 +12,14 @@ export default defineComponent({
     const slotsVNodes = slots.default?.() || []
     const Comp = props.component as any
     return () => (
-      <Comp class={[ns.b(), ns.m(`level-${props.level}`), cssClass.value]}>
+      <Comp
+        class={[
+          ns.b(),
+          ns.m(`level-${props.level}`),
+          props.sublist ? ns.m('sublist') : '',
+          cssClass.value,
+        ]}
+      >
         <ul class={[ns.e('ul')]}>
           {slotsVNodes.map((VNode: any) => (
             <VNode {...mergeProps({ indent: props.level }, VNode.props)} />
