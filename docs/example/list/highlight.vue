@@ -21,7 +21,7 @@ const handleClick = (num: number) => {
       </fn-list-item>
       <fn-list-item
         :highlight="highlightItem === 3"
-        highlight-color="secondaryContainer"
+        highlight-color="tertiaryContainer"
         @click="handleClick(3)"
       >
         Customization
