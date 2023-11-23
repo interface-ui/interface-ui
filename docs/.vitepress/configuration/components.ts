@@ -124,7 +124,7 @@ export const enComponents = [
       },
       {
         text: 'Collapse',
-        link: '/langs/en/components/drawer',
+        link: '/langs/en/components/collapse',
       },
       {
         text: 'Modal',
@@ -260,7 +260,7 @@ export const zhComponents = [
       },
       {
         text: 'Collapse 折叠面板',
-        link: '/langs/zh/components/drawer',
+        link: '/langs/zh/components/collapse',
       },
       {
         text: 'Modal 蒙板',
