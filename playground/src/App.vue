@@ -1,12 +1,8 @@
 <script setup lang="ts">
 import '@fusion-ui-vue/components/modal/src/index.less' // 开发调试的样式
+import '@fusion-ui-vue/components/collapse/src/index.less' // 开发调试的样式
 import { ThemeProvider } from '@fusion-ui-vue/theme'
-import {
-  FnButton,
-  FnIconButton,
-  FnModal,
-  FnMessage,
-} from '@fusion-ui-vue/components'
+import { FnButton, FnIconButton, FnMessage } from '@fusion-ui-vue/components'
 import { DeleteFilled, VerifiedRound } from 'fusion-ui-iconify'
 import createTheme from '@fusion-ui-vue/theme'
 // import Badge from './components/Badge.vue'
@@ -21,6 +17,9 @@ import createTheme from '@fusion-ui-vue/theme'
 // import LinkT from './components/Link.vue'
 // import FBA from './components/FBA.vue'
 // import Card from './components/Card.vue'
+// import Popover from './components/Popover.vue'
+// import Divider from './components/Divider.vue'
+import List from './components/List.vue'
 import { toRaw, watch, ref, h } from 'vue'
 
 const theme = createTheme()
@@ -37,6 +36,30 @@ const changTheme = () => {
 watch(theme, () => ((window as any).theme = toRaw(theme.value)), {
   immediate: true,
 })
+
+const handleClick = () => {
+  new FnMessage({
+    /**
+     * custom default props
+     * Can be override by the props passed in the method
+     */
+    severity: 'success',
+    variant: 'outlined',
+    placement: { x: 'center' },
+  }).push({
+    content: 'this is a info message',
+    customIcon: VerifiedRound,
+    action: h(FnIconButton, { color: 'primary' }, () => h(DeleteFilled)),
+    /**
+     * if the actionEvent is not set
+     * the default action event is to close the message
+     */
+    actionEvent: (node, remove) => {
+      new FnMessage().error({ content: 'error' })
+      remove((node as any).id)
+    },
+  })
+}
 </script>
 
 <template>
@@ -47,34 +70,7 @@ watch(theme, () => ((window as any).theme = toRaw(theme.value)), {
         {{ theme.mode }}
       </fn-button>
       <fn-button @click="open = !open"> open modal </fn-button>
-      <fn-button
-        @click="
-          new FnMessage({
-            /**
-             * custom default props
-             * Can be override by the props passed in the method
-             */
-            severity: 'success',
-            variant: 'outlined',
-            action: h(FnButton, () => 'Close'),
-            placement: { x: 'center' },
-          }).push({
-            content: 'this is a info message',
-            customIcon: VerifiedRound,
-            action: h(FnIconButton, () => h(DeleteFilled)),
-            /**
-             * if the actionEvent is not set
-             * the default action event is to close the message
-             */
-            actionEvent: (node, remove) => {
-              new FnMessage().error({ content: 'error' })
-              remove((node as any).id)
-            },
-          })
-        "
-      >
-        open message
-      </fn-button>
+      <fn-button @click="handleClick"> open message </fn-button>
     </header>
     <!-- <badge /> -->
     <!-- <avatar-group /> -->
@@ -88,6 +84,9 @@ watch(theme, () => ((window as any).theme = toRaw(theme.value)), {
     <!-- <link-t /> -->
     <!-- <FBA /> -->
     <!-- <Card /> -->
-    <fn-modal v-model="open" />
+    <!-- <fn-modal v-model="open" /> -->
+    <!-- <Popover /> -->
+    <!-- <divider /> -->
+    <list />
   </theme-provider>
 </template>

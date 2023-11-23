@@ -32,6 +32,14 @@ import FnSvgIcon from './svg-icon'
 import FnFba from './fba'
 import FnActionArea from './action-area'
 import FnModal from './modal'
+import FnPopover from './popover'
+import FnDivider from './divider'
+import FnList from './list'
+import FnListItem from './list-item'
+import FnListItemText from './list-item-text'
+import FnListHeader from './list-item-header'
+import FnCollapse from './collapse'
+import FnMenu from './menu'
 export * from './button-base'
 export * from './avatar-group'
 export * from './button'
@@ -66,6 +74,14 @@ export * from './svg-icon'
 export * from './fba'
 export * from './action-area'
 export * from './modal'
+export * from './popover'
+export * from './divider'
+export * from './list'
+export * from './list-item'
+export * from './list-item-text'
+export * from './list-item-header'
+export * from './collapse'
+export * from './menu'
 
 export const components = [
   FnButtonBase,
@@ -102,6 +118,14 @@ export const components = [
   FnFba,
   FnActionArea,
   FnModal,
+  FnPopover,
+  FnDivider,
+  FnList,
+  FnListItem,
+  FnListItemText,
+  FnListHeader,
+  FnCollapse,
+  FnMenu,
 ] as any[]
 
 const CK = {

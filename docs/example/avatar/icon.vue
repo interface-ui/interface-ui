@@ -12,10 +12,10 @@ const { AccessibilityFilled, AutorenewFilled, BookFilled } = pkg
   <fn-avatar>
     <book-filled />
   </fn-avatar>
-  <fn-avatar background-color="#dc3964" color="white">
+  <fn-avatar background="#dc3964" color="white">
     <accessibility-filled />
   </fn-avatar>
-  <fn-avatar background-color="#60ae57" color="white">
+  <fn-avatar background="#60ae57" color="white">
     <autorenew-filled />
   </fn-avatar>
 </template>

@@ -11,7 +11,7 @@ export interface RippleStyle {
 export const rippleProps = buildProps({
   color: {
     type: [String, Function] as PropType<AcceptableColor>,
-    default: 'var(--fn-sys-color-ripple)',
+    default: 'inverseOnSurface',
   },
   center: {
     type: Boolean,

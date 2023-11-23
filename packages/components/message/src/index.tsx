@@ -1,6 +1,6 @@
 import { generateId, isEmpty, singleton } from '@fusion-ui-vue/utils'
 import type { VNode } from 'vue'
-import { render } from 'vue'
+import { mergeProps, render } from 'vue'
 import FnAlert from '../../alert'
 import FnTypography from '../../typography'
 import Notistack from './notistack.vue'
@@ -95,7 +95,7 @@ export class FnMessageClass {
           action: action
             ? (icon: any) => (
                 <Action
-                  {...icon}
+                  {...mergeProps(icon, (action as any).props)}
                   onClick={() =>
                     actionEvent(alertVNode, this._removeMessage.bind(this))
                   }

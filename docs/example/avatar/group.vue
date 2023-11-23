@@ -23,7 +23,7 @@
       />
     </fn-avatar-group>
     <fn-avatar-group
-      :background-color="theme => theme.colors.grey[600]"
+      :background="theme => theme.colors.grey[600]"
       color="white"
     >
       <fn-avatar>A</fn-avatar>

@@ -1,11 +1,12 @@
 <script lang="ts" setup>
 import { debugWarn, useNamespace } from '@fusion-ui-vue/utils'
 import { css, styled, useColor } from '@fusion-ui-vue/theme'
-import { computed } from 'vue'
+import { computed, useSlots } from 'vue'
 import Typography from '../../typography'
 import { badgeProps } from './badge'
 
 const props = defineProps(badgeProps)
+const slots = useSlots()
 const ns = useNamespace('badge')
 const [$color, $onColor] = useColor(props, 'color')
 
@@ -16,16 +17,19 @@ const translate = {
   left: '-50%',
 }
 
-const positionCss = computed(
-  () => css`
-    ${props.xAlign}: 0;
-    ${props.yAlign}: 0;
-    transform: scale(1)
-      translate(
-        ${props.overlap ? '0%' : (translate as any)[props.xAlign]},
-        ${props.overlap ? '0%' : (translate as any)[props.yAlign]}
-      );
-  `
+const positionCss = computed(() =>
+  slots.default
+    ? css`
+        ${props.xAlign}: 0;
+        ${props.yAlign}: 0;
+        position: absolute;
+        transform: scale(1)
+          translate(
+            ${props.overlap ? '0%' : (translate as any)[props.xAlign]},
+            ${props.overlap ? '0%' : (translate as any)[props.yAlign]}
+          );
+      `
+    : ''
 )
 const BadgeTypography = computed(
   () => styled(Typography, { color: $onColor.value })`
@@ -41,7 +45,7 @@ const showTypography = computed(() => {
   const { content, variant } = props
   return variant === 'dot' || ['string', 'number'].includes(typeof content)
 })
-const badegContent = computed(() => {
+const badgeContent = computed(() => {
   const { content, max } = props
   if (!showTypography.value) {
     return null
@@ -71,7 +75,7 @@ const badegContent = computed(() => {
       variant="label.small"
     >
       <template v-if="props.variant !== 'dot'">
-        {{ badegContent }}
+        {{ badgeContent }}
       </template>
     </badge-typography>
     <props.content v-else :class="[ns.m('icon'), positionCss]" />

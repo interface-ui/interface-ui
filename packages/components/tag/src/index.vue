@@ -3,18 +3,18 @@ import { UseTag } from '@fusion-ui-vue/hooks'
 import { tagProps } from '../src/tag'
 
 const props = defineProps(tagProps)
-const emits = defineEmits<{
+const emit = defineEmits<{
   (e: 'click', event: MouseEvent): void
   (e: 'close', event: MouseEvent): void
 }>()
 const { classList, styleList } = UseTag(props)
 
 const handleClose = (event: MouseEvent) => {
-  emits('close', event)
+  emit('close', event)
 }
 
 const handleClick = (event: MouseEvent) => {
-  emits('click', event)
+  emit('click', event)
 }
 </script>
 

@@ -8,7 +8,7 @@ import { textFieldProps } from './text-field'
 import useCss from './index.jss'
 
 const props = defineProps(textFieldProps)
-const emits = defineEmits<{ (e: 'update:modelValue', v: string): void }>()
+const emit = defineEmits<{ (e: 'update:modelValue', v: string): void }>()
 const attrs = useAttrs()
 const slots = useSlots()
 const ns = useNamespace('text-field')
@@ -19,7 +19,7 @@ const value = computed<string>({
     return props.modelValue
   },
   set(newVal) {
-    emits(UPDATE_MODEL_EVENT, newVal)
+    emit(UPDATE_MODEL_EVENT, newVal)
   },
 })
 const id: string = attrs?.id

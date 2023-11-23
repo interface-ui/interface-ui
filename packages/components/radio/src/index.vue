@@ -9,7 +9,7 @@ import FnInputBase from '../../input-base'
 import { radioProps } from './radio'
 
 const props = defineProps(radioProps)
-const emits = defineEmits<{
+const emit = defineEmits<{
   (e: 'update:modelValue', v: string | number | boolean): void
 }>()
 const ns = useNamespace('radio')
@@ -19,7 +19,7 @@ const checked = computed<string | number | boolean>({
     return props.modelValue as any
   },
   set(newVal) {
-    emits(UPDATE_MODEL_EVENT, newVal)
+    emit(UPDATE_MODEL_EVENT, newVal)
   },
 })
 </script>
