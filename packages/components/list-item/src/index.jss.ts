@@ -9,7 +9,8 @@ const useCss: ComponentStylingHook<ListItemProps> = props =>
 
     const listItemStyle = css`
       --fn-list-item-highlight-color: ${$highlightColor.value};
-      padding: 12px 16px 12px ${16 + +props.indent * 24}px;
+      padding: 12px 16px 12px ${16 + +props.indent * 40}px;
+      align-items: ${props.alignItems};
     `
 
     const styleFromCs = props.cs ? css(props.cs) : ''

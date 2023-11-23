@@ -10,7 +10,6 @@ import {
   FnListItem,
   FnDivider,
   FnTypography,
-  FnListItemPlaceholder,
   FnCollapse,
   FnSvgIcon,
   FnListItemHeader,
@@ -49,6 +48,11 @@ const rotate = computed(() => ({
 const handleContextMenu = (e: MouseEvent) => {
   e.preventDefault()
   anchor.value = e
+}
+
+const highlightItem = ref(0)
+const handleClick = (num: number) => {
+  highlightItem.value = num
 }
 </script>
 
@@ -216,5 +220,26 @@ const handleContextMenu = (e: MouseEvent) => {
       <fn-list-item-header> Other actions </fn-list-item-header>
       <fn-list-item @click="anchor = null"> Save </fn-list-item>
     </fn-menu>
+
+    <div style="width: 320px">
+      <fn-list component="nav" highlight-color="tertiaryContainer">
+        <fn-list-item :highlight="highlightItem === 0" @click="handleClick(0)">
+          Getting Started
+        </fn-list-item>
+        <fn-list-item :highlight="highlightItem === 1" @click="handleClick(1)">
+          Components
+        </fn-list-item>
+        <fn-list-item
+          highlight-color="primaryContainer"
+          :highlight="highlightItem === 2"
+          @click="handleClick(2)"
+        >
+          APIs
+        </fn-list-item>
+        <fn-list-item :highlight="highlightItem === 3" @click="handleClick(3)">
+          Customization
+        </fn-list-item>
+      </fn-list>
+    </div>
   </div>
 </template>

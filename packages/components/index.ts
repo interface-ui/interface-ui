@@ -38,7 +38,6 @@ import FnList from './list'
 import FnListItem from './list-item'
 import FnListItemText from './list-item-text'
 import FnListHeader from './list-item-header'
-import FnListItemPlaceholder from './list-item-placeholder'
 import FnCollapse from './collapse'
 import FnMenu from './menu'
 export * from './button-base'
@@ -81,7 +80,6 @@ export * from './list'
 export * from './list-item'
 export * from './list-item-text'
 export * from './list-item-header'
-export * from './list-item-placeholder'
 export * from './collapse'
 export * from './menu'
 
@@ -126,7 +124,6 @@ export const components = [
   FnListItem,
   FnListItemText,
   FnListHeader,
-  FnListItemPlaceholder,
   FnCollapse,
   FnMenu,
 ] as any[]

@@ -10,10 +10,6 @@ export const actionAreaProps = buildProps({
     type: Boolean,
     default: false,
   },
-  highlight: {
-    type: Boolean,
-    default: false,
-  },
   cs: {
     type: [Object, String],
   },

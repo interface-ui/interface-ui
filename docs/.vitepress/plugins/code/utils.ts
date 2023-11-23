@@ -45,7 +45,7 @@ export function getDemoComponent(
   const highlightedPreviewCode = preview
     ? md.options.highlight!(
         getPreviewCodes(code, preview),
-        props.lang || 'vue',
+        props.lang || 'html',
         ''
       )
     : ''

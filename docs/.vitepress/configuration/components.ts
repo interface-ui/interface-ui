@@ -52,13 +52,20 @@ export const enComponents = [
         link: '/langs/en/components/card',
       },
       {
-        collapsible: false,
         text: 'Tag',
         link: '/langs/en/components/tag',
       },
       {
+        text: 'List',
+        link: '/langs/en/components/list',
+      },
+      {
         text: 'Typography',
         link: '/langs/en/components/typography',
+      },
+      {
+        text: 'Divider',
+        link: '/langs/en/components/divider',
       },
     ],
   },
@@ -101,6 +108,27 @@ export const enComponents = [
       {
         text: 'Breadcrumb',
         link: '/langs/en/components/breadcrumb',
+      },
+      {
+        text: 'Menu',
+        link: '/langs/en/components/menu',
+      },
+    ],
+  },
+  {
+    text: 'Utils',
+    items: [
+      {
+        text: 'Popover',
+        link: '/langs/en/components/popover',
+      },
+      {
+        text: 'Collapse',
+        link: '/langs/en/components/drawer',
+      },
+      {
+        text: 'Modal',
+        link: '/langs/en/components/modal',
       },
     ],
   },
@@ -164,13 +192,20 @@ export const zhComponents = [
         link: '/langs/zh/components/progress',
       },
       {
-        collapsible: false,
         text: 'Tag 标签',
         link: '/langs/zh/components/tag',
       },
       {
+        text: 'List 列表',
+        link: '/langs/zh/components/list',
+      },
+      {
         text: 'Typography 板式',
         link: '/langs/zh/components/typography',
+      },
+      {
+        text: 'Divider 分割线',
+        link: '/langs/zh/components/divider',
       },
     ],
   },
@@ -203,12 +238,33 @@ export const zhComponents = [
     text: 'Navigation 导航',
     items: [
       {
-        text: 'Drawer',
+        text: 'Drawer 抽屉',
         link: '/langs/zh/components/drawer',
       },
       {
         text: 'Breadcrumb 面包屑',
         link: '/langs/zh/components/breadcrumb',
+      },
+      {
+        text: 'Menu 菜单',
+        link: '/langs/zh/components/menu',
+      },
+    ],
+  },
+  {
+    text: 'Utils 工具',
+    items: [
+      {
+        text: 'Popover 弹出框',
+        link: '/langs/zh/components/popover',
+      },
+      {
+        text: 'Collapse 折叠面板',
+        link: '/langs/zh/components/drawer',
+      },
+      {
+        text: 'Modal 蒙板',
+        link: '/langs/zh/components/modal',
       },
     ],
   },

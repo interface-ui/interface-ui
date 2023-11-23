@@ -24,13 +24,7 @@ const leadingBind = {
 <template>
   <component
     :is="$props.selectable ? FnActionArea : 'li'"
-    v-bind="
-      $props.selectable && {
-        component: 'li',
-        color: $props.highlight ? 'primaryContainer' : undefined,
-        highlight: $props.highlight,
-      }
-    "
+    v-bind="$props.selectable && { component: 'li' }"
     :class="[ns.b(), $props.highlight ? ns.m('highlight') : '', cssClass]"
   >
     <slot name="leading" v-bind="leadingBind" />

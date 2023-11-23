@@ -1,4 +1,5 @@
-import { defineComponent, mergeProps } from 'vue'
+/* eslint-disable quote-props */
+import { defineComponent } from 'vue'
 import { useNamespace } from '@fusion-ui-vue/utils'
 import { listProps } from './list'
 import useCss from './index.jss'
@@ -9,8 +10,8 @@ export default defineComponent({
     const ns = useNamespace('list')
     const cssClass = useCss(props)
 
-    const slotsVNodes = slots.default?.() || []
     const Comp = props.component as any
+
     return () => (
       <Comp
         class={[
@@ -21,8 +22,16 @@ export default defineComponent({
         ]}
       >
         <ul class={[ns.e('ul')]}>
-          {slotsVNodes.map((VNode: any) => (
-            <VNode {...mergeProps({ indent: props.level }, VNode.props)} />
+          {slots.default?.().map((VNode: any) => (
+            <VNode
+              {...{
+                indent: props.level,
+                selectable: props.selectable,
+                'highlight-color': props.highlightColor,
+                'align-items': props.alignItems,
+                ...VNode.props,
+              }}
+            />
           ))}
         </ul>
       </Comp>

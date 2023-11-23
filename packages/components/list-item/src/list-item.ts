@@ -1,6 +1,8 @@
 import type { AcceptableColor } from '@fusion-ui-vue/theme'
 import { buildProps } from '@fusion-ui-vue/utils'
 import type { ExtractPropTypes, PropType } from 'vue'
+import type { ListAlignItems } from '../../list'
+import { listAlignItems } from '../../list'
 
 export const listItemProps = buildProps({
   cs: {
@@ -14,13 +16,18 @@ export const listItemProps = buildProps({
     type: Boolean,
     default: true,
   },
+  alignItems: {
+    type: String as PropType<ListAlignItems>,
+    values: listAlignItems,
+    default: 'center',
+  },
   highlight: {
     type: Boolean,
     default: false,
   },
   highlightColor: {
     type: [String, Function] as PropType<AcceptableColor>,
-    default: 'primaryContainer',
+    default: 'secondaryContainer',
   },
 })
 
