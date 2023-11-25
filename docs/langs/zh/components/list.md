@@ -29,7 +29,7 @@ lang: zh
 
 将 `selectable=false` 设置为使项目不可选择。此外，您还可以为特定的 `ListItem` 进行设置。
 
-`ListItemText` 组件可用于显示标题和支持文本。
+`HeadlineText` 组件可用于显示标题和支持文本。
 
 <demo src="../../../example/list/text-unselectable.vue" />
 

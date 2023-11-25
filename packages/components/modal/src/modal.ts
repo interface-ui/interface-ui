@@ -11,6 +11,10 @@ export const modalProps = buildProps({
     type: Boolean,
     default: true,
   },
+  keepMounted: {
+    type: Boolean,
+    default: false,
+  },
   cs: {
     type: [Object, String],
   },

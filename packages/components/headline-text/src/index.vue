@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 import FnTypography from '../../typography'
-import { listItemTextProps } from './list-item-text'
+import { headlineTextProps } from './headline-text'
 
-defineProps(listItemTextProps)
+defineProps(headlineTextProps)
 defineOptions({ inheritAttrs: false })
 </script>
 

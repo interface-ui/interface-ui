@@ -10,12 +10,10 @@ const { MoreVertFilled, FavoriteFilled, ShareFilled } = pkg
       <template #avatar>
         <fn-avatar>R</fn-avatar>
       </template>
-      <fn-typography variant="title.medium" component="h1">
-        Health Essentials
-      </fn-typography>
-      <fn-typography component="h2" variant="title.small" cs="opacity: .5;">
-        November 14, 2023
-      </fn-typography>
+      <fn-headline-text
+        headline="Health Essentials"
+        supporting-text="November 14, 2023"
+      />
       <template #action>
         <fn-icon-button color="onSurfaceVariant" cs="opacity: .5;">
           <more-vert-filled />
