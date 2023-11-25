@@ -6,7 +6,12 @@ const anchor = ref<HTMLElement | MouseEvent | null>(null)
 
 <template>
   <fn-button @click="e => (anchor = e.currentTarget)">Show Menu</fn-button>
-  <fn-menu :open="Boolean(anchor)" :anchor="anchor" @close="anchor = null">
+  <fn-menu
+    keep-mounted
+    :open="Boolean(anchor)"
+    :anchor="anchor"
+    @close="anchor = null"
+  >
     <fn-list-item @click="anchor = null"> Copy </fn-list-item>
     <fn-list-item @click="anchor = null"> Cut </fn-list-item>
     <fn-list-item @click="anchor = null" disabled> Paste </fn-list-item>

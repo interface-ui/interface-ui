@@ -32,3 +32,9 @@ The final placement **may not** be the same as the prop passed to the component.
 The `sublist` prop on the `List` used to locate the expanded sublist.
 
 <demo src="../../../example/menu/sublist.vue" />
+
+## Context menu
+
+The `anchor` also can be the `MouseEvent`. This will help to build the custom context menu. (Right click to open)
+
+<demo src="../../../example/menu/context.vue" />

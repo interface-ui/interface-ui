@@ -9,7 +9,12 @@ const showSublist = ref(false)
 
 <template>
   <fn-button @click="e => (anchor = e.currentTarget)">Show Menu</fn-button>
-  <fn-menu :open="Boolean(anchor)" :anchor="anchor" @close="anchor = null">
+  <fn-menu
+    keep-mounted
+    :open="Boolean(anchor)"
+    :anchor="anchor"
+    @close="anchor = null"
+  >
     <fn-list-item> Copy </fn-list-item>
     <fn-list-item
       @mouseenter="showSublist = true"

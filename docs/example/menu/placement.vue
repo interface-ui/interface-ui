@@ -36,6 +36,7 @@ const handleClick = (e: MouseEvent, p: PopoverPlacements) => {
     Bottom left
   </fn-button>
   <fn-menu
+    keep-mounted
     :open="Boolean(anchor)"
     :placement="placement"
     :anchor="anchor"

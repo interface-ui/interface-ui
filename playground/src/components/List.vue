@@ -15,7 +15,7 @@ import {
   FnListItemHeader,
   FnBadge,
   FnAvatar,
-  FnListItemText,
+  FnHeadlineText,
   FnButton,
   FnMenu,
 } from '@fusion-ui-vue/components'
