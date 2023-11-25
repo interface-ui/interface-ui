@@ -24,8 +24,9 @@ export const popoverProps = buildProps({
     type: Boolean,
     default: false,
   },
-  cs: {
-    type: [Object, String],
+  keepMounted: {
+    type: Boolean,
+    default: false,
   },
   placement: {
     type: Object as PropType<Partial<PopoverPlacements>>,
@@ -39,6 +40,9 @@ export const popoverProps = buildProps({
       const yValid = y ? popoverYPlacements.includes(y) : true
       return xValid && yValid
     },
+  },
+  cs: {
+    type: [Object, String],
   },
 })
 

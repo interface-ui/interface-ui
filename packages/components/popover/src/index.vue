@@ -160,6 +160,7 @@ watch(
 
 <template>
   <fn-modal
+    :keep-mounted="$props.keepMounted"
     :model-value="$props.open"
     :backdrop="$props.backdrop"
     @click="$emit('close')"
