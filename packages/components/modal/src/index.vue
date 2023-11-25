@@ -31,6 +31,7 @@ const handleClick = () => {
   <teleport to="body">
     <transition name="fade">
       <div
+        v-if="$props.keepMounted || open"
         v-show="open"
         :class="[ns.b(), open ? ns.m('open') : '']"
         v-bind="$attrs"
