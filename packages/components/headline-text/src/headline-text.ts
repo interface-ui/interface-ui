@@ -1,7 +1,7 @@
 import { buildProps } from '@fusion-ui-vue/utils'
 import type { ExtractPropTypes } from 'vue'
 
-export const listItemTextProps = buildProps({
+export const headlineTextProps = buildProps({
   headline: {
     type: String,
     required: true,
@@ -11,4 +11,4 @@ export const listItemTextProps = buildProps({
   },
 })
 
-export type ListItemTextProps = ExtractPropTypes<typeof listItemTextProps>
+export type HeadlineTextProps = ExtractPropTypes<typeof headlineTextProps>

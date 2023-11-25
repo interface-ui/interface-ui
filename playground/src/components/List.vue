@@ -157,7 +157,7 @@ const handleClick = (num: number) => {
             <template #leading="{ avatar }">
               <fn-avatar cs="margin-bottom: auto;" v-bind="avatar">A</fn-avatar>
             </template>
-            <fn-list-item-text
+            <fn-headline-text
               headline="Brunch this weekend?"
               supporting-text="Ali Connors — I'll be in your neighborhood doing errands this…"
             />
@@ -166,7 +166,7 @@ const handleClick = (num: number) => {
             <template #leading="{ avatar }">
               <fn-avatar v-bind="avatar">A</fn-avatar>
             </template>
-            <fn-list-item-text
+            <fn-headline-text
               headline="Brunch this weekend?"
               supporting-text="Ali Connors"
             />

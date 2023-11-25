@@ -29,7 +29,7 @@ Use `indent` prop enables a list item that does not have a leading icon or avata
 
 Set `selectable=false` to make the items it unselectable. Also, you can set for specific `ListItem`.
 
-The `ListItemText` component help to display the headline and supporting text.
+The `HeadlineText` component help to display the headline and supporting text.
 
 <demo src="../../../example/list/text-unselectable.vue" />
 
