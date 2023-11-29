@@ -21,7 +21,6 @@ import FnAvatarGroup from './avatar-group'
 import FnTag from './tag'
 import FnCheckbox from './checkbox'
 import FnBreadcrumb from './breadcrumb'
-import FnBreadcrumbItem from './breadcrumb-item'
 import FnRipple from './ripple'
 import FnDrawer from './drawer'
 import FnFormLabel from './form-label'
@@ -63,7 +62,6 @@ export * from './tag'
 export * from './avatar'
 export * from './checkbox'
 export * from './breadcrumb'
-export * from './breadcrumb-item'
 export * from './drawer'
 export * from './form-label'
 export * from './typography'
@@ -107,7 +105,6 @@ export const components = [
   FnAvatarGroup,
   FnCheckbox,
   FnBreadcrumb,
-  FnBreadcrumbItem,
   FnRipple,
   FnDrawer,
   FnFormLabel,

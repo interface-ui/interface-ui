@@ -39,17 +39,6 @@ const handleContextMenu = (e: MouseEvent) => {
       Copy
       <template #trailing>
         <fn-typography variant="label.large" cs="opacity: 0.6;">
-          ⌘X
-        </fn-typography>
-      </template>
-    </fn-list-item>
-    <fn-list-item>
-      <template #leading="{ icon }">
-        <content-cut-filled v-bind="icon" />
-      </template>
-      Cut
-      <template #trailing>
-        <fn-typography variant="label.large" cs="opacity: 0.6;">
           ⌘C
         </fn-typography>
       </template>
@@ -62,6 +51,17 @@ const handleContextMenu = (e: MouseEvent) => {
       <template #trailing>
         <fn-typography variant="label.large" cs="opacity: 0.6;">
           ⌘V
+        </fn-typography>
+      </template>
+    </fn-list-item>
+    <fn-list-item>
+      <template #leading="{ icon }">
+        <content-cut-filled v-bind="icon" />
+      </template>
+      Cut
+      <template #trailing>
+        <fn-typography variant="label.large" cs="opacity: 0.6;">
+          ⌘X
         </fn-typography>
       </template>
     </fn-list-item>

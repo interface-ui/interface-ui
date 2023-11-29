@@ -24,7 +24,7 @@ The `placement` passed by prop will be consider first when locate the menu.
 <demo src="../../../example/menu/placement.vue" />
 
 ::: warning Warning
-The final placement **may not** be the same as the prop passed to the component. It will calculate the availabe space when open the menu.
+The final placement **may not** be the same as the prop passed to the component. It will calculate the available space when open the menu.
 :::
 
 ## Sublist

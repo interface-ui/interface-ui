@@ -19,7 +19,8 @@ import createTheme from '@fusion-ui-vue/theme'
 // import Card from './components/Card.vue'
 // import Popover from './components/Popover.vue'
 // import Divider from './components/Divider.vue'
-import List from './components/List.vue'
+// import List from './components/List.vue'
+import Breadcrumb from './components/Breadcrumb.vue'
 import { toRaw, watch, ref, h } from 'vue'
 
 const theme = createTheme()
@@ -87,6 +88,7 @@ const handleClick = () => {
     <!-- <fn-modal v-model="open" /> -->
     <!-- <Popover /> -->
     <!-- <divider /> -->
-    <list />
+    <!-- <list /> -->
+    <breadcrumb />
   </theme-provider>
 </template>
