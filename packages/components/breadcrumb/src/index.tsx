@@ -1,6 +1,6 @@
 /* eslint-disable multiline-ternary */
 import type { VNode } from 'vue'
-import { computed, defineComponent, ref } from 'vue'
+import { computed, defineComponent, mergeProps, ref } from 'vue'
 import { useNamespace } from '@fusion-ui-vue/utils'
 import FnButtonBase from '../../button-base'
 import MoreHorizFilled from '../../svg-icon/internal/MoreHorizFilled.vue'
@@ -19,14 +19,14 @@ export default defineComponent({
     const slotsVNodes = computed(() =>
       (slots.default?.() ?? []).map((VNode: any) => (
         <VNode
-          {...{
-            ...{
+          {...mergeProps(
+            {
               underline: props.underline,
               color: 'inherit',
               cs: { '--fn-link-color-rgb': 'var(--fn-breadcrumb-color-rgb)' },
             },
-            ...VNode.props,
-          }}
+            VNode.props
+          )}
         />
       ))
     )
