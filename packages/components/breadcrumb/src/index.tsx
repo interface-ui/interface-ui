@@ -1,4 +1,3 @@
-/* eslint-disable multiline-ternary */
 import type { VNode } from 'vue'
 import { computed, defineComponent, mergeProps, ref } from 'vue'
 import { useNamespace } from '@fusion-ui-vue/utils'
@@ -13,7 +12,6 @@ export default defineComponent({
     const ns = useNamespace('breadcrumb')
     const slotsCount = computed(() => slots.default?.().length ?? 0)
     const cssClass = useCss(props)
-    const Separator = props.separator as any
     const showAllSlots = ref(!!props.max && +props.max < slotsCount.value)
 
     const slotsVNodes = computed(() =>
@@ -31,21 +29,22 @@ export default defineComponent({
       ))
     )
 
+    const separator = (() => {
+      const Separator = props.separator as any
+      return (
+        <li class={[ns.m('separator')]}>
+          {typeof Separator === 'string' ? Separator : <Separator size={20} />}
+        </li>
+      )
+    })()
+
     const renderSlotsWithoutMaxLimit = () =>
       slotsVNodes.value.map((VNode: any, index: number) => (
         <>
           <li class={[ns.m('item')]}>
             <VNode />
           </li>
-          {index !== slotsCount.value - 1 && (
-            <li class={[ns.m('separator')]}>
-              {typeof Separator === 'string' ? (
-                Separator
-              ) : (
-                <Separator size={20} />
-              )}
-            </li>
-          )}
+          {index !== slotsCount.value - 1 && separator}
         </>
       ))
 
@@ -62,13 +61,7 @@ export default defineComponent({
             <li class={[ns.m('item')]}>
               <VNode />
             </li>
-            <li class={[ns.m('separator')]}>
-              {typeof Separator === 'string' ? (
-                Separator
-              ) : (
-                <Separator size={20} />
-              )}
-            </li>
+            {separator}
           </>
         )
       }
@@ -88,9 +81,7 @@ export default defineComponent({
         <li>
           <MoreButton />
         </li>,
-        <li class={[ns.m('separator')]}>
-          {typeof Separator === 'string' ? Separator : <Separator size={20} />}
-        </li>,
+        separator,
         <li class={[ns.m('item')]}>
           <LastVNode />
         </li>
