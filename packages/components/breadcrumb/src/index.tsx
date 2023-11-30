@@ -14,7 +14,7 @@ export default defineComponent({
     const slotsCount = computed(() => slots.default?.().length ?? 0)
     const cssClass = useCss(props)
     const Separator = props.separator as any
-    const maxValue = ref(props.max)
+    const maxValue = ref(props.max !== undefined ? props.max : 0)
     // const showAllSlots = ref(!!props.max && +props.max < slotsCount.value)
     const showAllSlots = computed(() => !!maxValue.value && +maxValue.value < slotsCount.value)
 
