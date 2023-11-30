@@ -14,7 +14,9 @@ export default defineComponent({
     const slotsCount = computed(() => slots.default?.().length ?? 0)
     const cssClass = useCss(props)
     const Separator = props.separator as any
-    const showAllSlots = ref(!!props.max && +props.max < slotsCount.value)
+    const maxValue = ref(props.max)
+    // const showAllSlots = ref(!!props.max && +props.max < slotsCount.value)
+    const showAllSlots = computed(() => !!maxValue.value && +maxValue.value < slotsCount.value)
 
     const slotsVNodes = computed(() =>
       (slots.default?.() ?? []).map((VNode: any) => (
@@ -74,11 +76,11 @@ export default defineComponent({
       const ButtonBase = FnButtonBase as any
       const MoreButton: any = (
         <ButtonBase
-          class={[ns.em('button', 'more')]}
-          onClick={() => (showAllSlots.value = !showAllSlots.value)}
-        >
-          <MoreHorizFilled />
-        </ButtonBase>
+        class={[ns.em('button', 'more')]}
+        onClick={() => (maxValue.value = showAllSlots.value ? slotsCount.value : +maxValue.value)}
+      >
+        <MoreHorizFilled />
+      </ButtonBase>
       )
 
       VNodes.push(
