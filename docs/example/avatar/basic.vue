@@ -9,7 +9,7 @@
       src="https://mui.com/static/images/avatar/2.jpg"
     />
     <fn-avatar
-      alt="Travis Howard"
+      alt="Cindy Baker"
       src="https://mui.com/static/images/avatar/3.jpg"
     />
   </div>

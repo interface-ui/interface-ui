@@ -24,7 +24,9 @@ const getPreviewCodes = (code: string, preview: string): string => {
       }
     }
   })
-  return previewCodes.join('\n')
+
+  const [_match, spaces] = previewCodes[0].match(/^(\s*)[^\s]+/)
+  return previewCodes.map(code => code.replace(spaces, '')).join('\n')
 }
 
 let index = 1

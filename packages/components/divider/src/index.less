@@ -1,5 +1,4 @@
 .fn-divider {
-  width: 100%;
   border-style: solid;
   border-color: var(--md-sys-color-outline-variant);
 }
@@ -23,12 +22,15 @@
     border-width: 0px 0px thin;
     flex-direction: row;
     margin: 8px 0;
-    &--inset {
-      margin-left: 16px;
+    width: 100%;
+    &.fn-divider--no-margin {
+      margin-top: 0;
+      margin-bottom: 0;
     }
-    &--middle {
+    &.fn-divider--inset {
       margin-left: 16px;
       margin-right: 16px;
+      width: auto;
     }
     &.fn-divider__div--with-slots {
       .fn-divider--text {
@@ -68,12 +70,14 @@
     flex-direction: column;
     height: auto;
     margin: 0 4px;
-    &--inset {
-      margin-top: 8px;
+    align-self: stretch;
+    &.fn-divider--no-margin {
+      margin-left: 0;
+      margin-right: 0;
     }
-    &--middle {
-      margin-top: 16px;
-      margin-right: 16px;
+    &.fn-divider--inset {
+      margin-top: 8px;
+      margin-bottom: 8px;
     }
     &.fn-divider__div--with-slots {
       &::before,

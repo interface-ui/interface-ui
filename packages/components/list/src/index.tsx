@@ -1,3 +1,4 @@
+/* eslint-disable multiline-ternary */
 /* eslint-disable quote-props */
 import { defineComponent } from 'vue'
 import { useNamespace } from '@fusion-ui-vue/utils'
@@ -22,17 +23,21 @@ export default defineComponent({
         ]}
       >
         <ul class={[ns.e('ul')]}>
-          {slots.default?.().map((VNode: any) => (
-            <VNode
-              {...{
-                indent: props.level,
-                selectable: props.selectable,
-                'highlight-color': props.highlightColor,
-                'align-items': props.alignItems,
-                ...VNode.props,
-              }}
-            />
-          ))}
+          {slots.default?.().map((VNode: any) =>
+            VNode.type.name === 'FnListItem' ? (
+              <VNode
+                {...{
+                  indent: props.level,
+                  selectable: props.selectable,
+                  'highlight-color': props.highlightColor,
+                  'align-items': props.alignItems,
+                  ...VNode.props,
+                }}
+              />
+            ) : (
+              <VNode />
+            )
+          )}
         </ul>
       </Comp>
     )
