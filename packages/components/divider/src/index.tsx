@@ -15,7 +15,8 @@ export default defineComponent({
     const Comp = props.component as any
 
     return () =>
-      slotsVNodes ? (
+      // eslint-disable-next-line no-mixed-operators
+      props.orientation === 'horizontal' && slotsVNodes ? (
         <div
           class={[
             ns.b(),
@@ -23,6 +24,7 @@ export default defineComponent({
             ns.m(props.orientation),
             ns.em('div', 'with-slots'),
             ns.em('text', props.textAlign),
+            props.noMargin ? ns.m('no-margin') : '',
             cssClass.value,
           ]}
         >
@@ -40,6 +42,7 @@ export default defineComponent({
             ns.b(),
             ns.m(props.variant),
             ns.m(props.orientation),
+            props.noMargin ? ns.m('no-margin') : '',
             cssClass.value,
           ]}
         />

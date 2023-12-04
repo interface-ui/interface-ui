@@ -1,0 +1,3 @@
+<template>
+  <fn-divider />
+</template>
