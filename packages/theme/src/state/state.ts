@@ -1,3 +1,14 @@
-export type StateType = 'hover' | 'pressed' | 'dragged' | 'focus' | 'disabled'
+import stateCss from '@fusion-ui-vue/theme/styles/state.less?inline'
+import type { States } from './types'
 
-export type States = Record<StateType, number>
+const match = stateCss.matchAll(
+  /--\b(md|fn)\b-sys-state-([a-z]+)-state-layer-opacity: ([\.0-9]+);/g
+)
+
+const states: States = [...match].reduce((pre, cur) => {
+  const [_, _source, state, value] = cur
+  pre[state] = value
+  return pre
+}, {} as any)
+
+export default states

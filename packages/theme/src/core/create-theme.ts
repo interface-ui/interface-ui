@@ -4,7 +4,7 @@ import {
   argbFromHex,
   themeFromSourceColor,
 } from '@material/material-color-utilities'
-import type { ThemeOptions, ThemeSchemes } from './types'
+import type { ThemeOptions, ThemeSchemes } from '../types'
 import Theme from './theme'
 import defaultTheme from './default.theme'
 import {

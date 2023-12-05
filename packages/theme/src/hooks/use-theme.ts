@@ -1,7 +1,8 @@
 import type { Ref } from 'vue'
 import { inject } from 'vue'
-import { type Theme, createTheme } from '../core'
-import type ThemeMode from '../mode'
+import { createTheme } from '../core/create-theme'
+import type Theme from '../core/theme'
+import type { ThemeMode } from '../mode'
 
 /**
  * Get the current theme object

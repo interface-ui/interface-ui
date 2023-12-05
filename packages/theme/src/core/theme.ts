@@ -4,32 +4,32 @@ import elevations from '../elevation'
 import typography from '../typography'
 import motion from '../motion'
 import zIndex from '../z-index'
-import type ThemeMode from '../mode'
+import type { ThemeMode } from '../mode'
 import type {
-  AdditionalSchemes,
-  ParsedSchemes,
   Schemes,
+  SeveritySchemes,
   ThemePalettes,
   ThemeSchemes,
-} from './types'
+} from '../types'
+import type { ParsedSchemes } from './types'
 
 export default class Theme {
   mode: ThemeMode
-  schemes: ThemeSchemes
-  colors = colors
-  states = states
-  elevations = elevations
-  typography = typography
-  zIndex = zIndex
-  motion = motion
-  palettes: ThemePalettes
-  inject?: string
-  target: 'root' | 'host'
+  readonly schemes: ThemeSchemes
+  readonly colors = colors
+  readonly states = states
+  readonly elevations = elevations
+  readonly typography = typography
+  readonly zIndex = zIndex
+  readonly motion = motion
+  readonly palettes: ThemePalettes
+  readonly inject?: string
+  readonly target: 'root' | 'host'
   readonly _lightSchemes: ParsedSchemes
   readonly _darkSchemes: ParsedSchemes
 
   constructor(
-    schemes: Schemes & AdditionalSchemes,
+    schemes: Schemes & SeveritySchemes,
     palettes: ThemePalettes,
     mode: ThemeMode = 'light',
     lightSchemes: ParsedSchemes,
@@ -42,9 +42,5 @@ export default class Theme {
     this._lightSchemes = lightSchemes
     this._darkSchemes = darkSchemes
     this.target = target
-  }
-
-  setMode(mode: ThemeMode) {
-    this.mode = mode
   }
 }

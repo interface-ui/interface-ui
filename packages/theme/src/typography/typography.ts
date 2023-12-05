@@ -14,7 +14,7 @@ const typographyDefaultConfig = {
   },
 }
 
-export const typography: Typography = {
+const typography: Typography = {
   ...typographyDefaultConfig,
   h1: {
     fontFamily: 'Roboto',
@@ -158,3 +158,5 @@ export const typography: Typography = {
     },
   },
 }
+
+export default typography
