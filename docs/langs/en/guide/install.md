@@ -1,6 +1,6 @@
 # Installation & Usage
 
- how to properly install and use an Fusion Ui
+ how to properly install and use an Interface UI
 
 It is recommended to use ```automatic import``` to import components, which is simple and fast.
 

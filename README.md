@@ -3,8 +3,8 @@
 <p align="center">
 <img  width="120px" height="100px"  src="https://img-blog.csdnimg.cn/99f1d53fa0b244809eee1a8a359e3261.png#pic_center" >
 </p>
-<h1 align="center">Fusion Ui</h1>
-<p align="center">Fusion Ui /ˈfjuːʒ(ə)n/ 是一个 Vue3 组件库，简洁、优雅、美观</p>
+<h1 align="center">Interface UI</h1>
+<p align="center">Interface UI /ˈfjuːʒ(ə)n/ 是一个 Vue3 组件库，简洁、优雅、美观</p>
 </p>
 
 ## 简介
@@ -108,7 +108,7 @@ app.use(fusionUi).mount('#app')
     pnpm i
   ```
   - 生成 ```pakages/fusion-ui/dist```
-  
+
   ```
     pnpm run build
   ```
