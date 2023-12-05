@@ -3,12 +3,17 @@ title: Menu
 lang: en
 ---
 
+<script setup lang="ts">
+  import props from "../../../example/menu/description/en-props.ts";
+  import events from "../../../example/menu/description/en-events.ts";
+</script>
+
 # Menu
 
 Menus display a list of choices on a temporary surface.
 
 ::: info Notice
-The `Menu` is build with `Popover` and `List` components
+The `Menu` is build with [`Popover`](./popover.md) and [`List`](./list.md) components
 :::
 
 ## Basic usage
@@ -38,3 +43,11 @@ The `sublist` prop on the `List` used to locate the expanded sublist.
 The `anchor` also can be the `MouseEvent`. This will help to build the custom context menu. (Right click to open)
 
 <demo src="../../../example/menu/context.vue" />
+
+## Attributes
+
+<table-block type="propsEn" :data="props" />
+
+## Events
+
+<table-block type="eventsEn" :data="events" />
