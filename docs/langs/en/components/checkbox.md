@@ -4,8 +4,8 @@ lang: en-US
 ---
 
 <script setup lang="ts">
-  import props from "../../../example/button/description/en-props.ts";
-  import slots from "../../../example/button/description/en-slots.ts";
+  import props from "../../../example/checkbox/description/en-props.ts";
+  import slots from "../../../example/checkbox/description/en-slots.ts";
 </script>
 
 # Checkbox
@@ -43,6 +43,7 @@ You can use build-in theme color `'primary' | 'secondary' | 'tertiary' | 'error'
 Or use a callback funtion to accecc our `theme` object to get the color
 
 Also, simply pass a CSS-Supported color worked
+
 ### Icon
 
 Use customize icon by `named slot`.
@@ -70,3 +71,11 @@ All the `props` and `attrs` can be passed to `FormLabel` and will be applied to 
 Also, `v-model` can work with `value` to accept `array` to implement the function like `CheckboxGroup`
 
 <demo src="../../../example/checkbox/multiple.vue" />
+
+## Attributes
+
+<table-block type="propsEn" :data="props" />
+
+## Slots
+
+<table-block type="slotsEn" :data="slots" />
