@@ -4,8 +4,8 @@ lang: zh
 ---
 
 <script setup lang="ts">
-  import props from "../../../example/button/description/en-props.ts";
-  import slots from "../../../example/button/description/en-slots.ts";
+  import props from "../../../example/checkbox/description/zh-props.ts";
+  import slots from "../../../example/checkbox/description/zh-slots.ts";
 </script>
 
 # Checkbox
@@ -16,7 +16,7 @@ lang: zh
 
 如果在列表中有多个选项可供选择，您可以使用复选框而不是开关按钮来节省空间。如果只有一个选项，请避免使用复选框，而改用开关按钮。
 
-> 我们保留了所有原生  `input` 的`属性`和`事件`。
+> 我们保留了所有原生 `input` 的`属性`和`事件`。
 
 ## 使用
 
@@ -58,7 +58,6 @@ lang: zh
 
 所有的 `props` 和 `attrs` 都可以传递给 `FormLabel`，并将应用于 `Checkbox`。
 
-
 <demo src="../../../example/checkbox/label.vue" />
 
 ## 标签位置
@@ -72,3 +71,11 @@ lang: zh
 此外，`v-model` 可以与 `value` 一起使用，以接受数组来实现类似 `CheckboxGroup` 的功能。
 
 <demo src="../../../example/checkbox/multiple.vue" />
+
+## 属性
+
+<table-block type="propsZh" :data="props" />
+
+## 插槽
+
+<table-block type="slotsZh" :data="slots" />
