@@ -1,6 +1,6 @@
 import type { InjectionKey, Ref } from 'vue'
-import { UPDATE_MODEL_EVENT } from '../../../constants/event'
-import { isBoolean } from '../../../utils/types'
+import { isBoolean } from '@fusion-ui-vue/utils'
+import { UPDATE_MODEL_EVENT } from '@fusion-ui-vue/constants'
 
 export const dialogProps = {
   dialogVisible: {
@@ -25,8 +25,7 @@ export type DialogEmits = typeof dialogEmits
 
 export interface DialogContext {
   dialogRef: Ref<HTMLElement | undefined>
-
 }
 
-export const dialogInjectionKey: InjectionKey<DialogContext>
-  = Symbol('dialogInjectionKey')
+export const dialogInjectionKey: InjectionKey<DialogContext> =
+  Symbol('dialogInjectionKey')

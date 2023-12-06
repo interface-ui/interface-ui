@@ -1,4 +1,4 @@
-const singleton = <T extends {}>(className: T) => {
+export const singleton = <T extends {}>(className: T) => {
   let instance: T
   const proxy = new Proxy(className, {
     construct(_target, args) {
@@ -12,5 +12,3 @@ const singleton = <T extends {}>(className: T) => {
   ;(proxy as any).prototype.constructor = proxy
   return proxy as T
 }
-
-export default singleton
