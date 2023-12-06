@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 import { styled, useTheme } from '@fusion-ui-vue/theme'
-import { FnCard } from 'fusion-ui-vue'
+import { FnCard } from 'interface-ui'
 
 const theme = useTheme()
 const open = ref(false)

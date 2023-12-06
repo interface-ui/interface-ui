@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import * as pkg from 'fusion-ui-iconify'
-import { FnButton, FnMessage } from 'fusion-ui-vue'
+import { FnButton, FnMessage } from 'interface-ui'
 const { Filter3Filled } = pkg
 
 const handleClick = () => {
@@ -13,7 +13,5 @@ const handleClick = () => {
 </script>
 
 <template>
-  <fn-button color="success" @click="handleClick">
-    Success
-  </fn-button>
+  <fn-button color="success" @click="handleClick"> Success </fn-button>
 </template>

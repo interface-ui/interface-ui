@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "packageManager": "pnpm@7.5.2",
   "license": "MIT",
+  "private": true,
   "keywords": [
-    "fusion-ui-vue",
+    "interface-ui-vue",
     "vue",
     "vue3",
     "component",
@@ -12,15 +13,15 @@
   ],
   "workspaces": [
     "packages/*",
-    "example",
-    "docs"
+    "docs",
+    "interface-ui"
   ],
   "scripts": {
     "docs:dev": "pnpm -C docs run dev",
     "docs:preview": "pnpm -C docs run preview",
     "play:dev": "pnpm -C playground run dev",
     "docs:build": "pnpm run build && pnpm -C docs run build",
-    "build": "rimraf ./packages/fusion-ui/dist && gulp --require @esbuild-kit/cjs-loader -f gulpfile.ts && vue-tsc",
+    "build": "rimraf ./interface-ui/dist && gulp --require @esbuild-kit/cjs-loader -f gulpfile.ts && vue-tsc",
     "test": "vitest",
     "deploy": "pnpm run docs:build",
     "lint": "eslint .",
@@ -38,7 +39,7 @@
     "@vue/shared": "^3.2.47",
     "@vueuse/core": "^9.1.1",
     "fusion-ui-iconify": "1.0.46",
-    "fusion-ui-vue": "workspace:*",
+    "interface-ui": "workspace:*",
     "lodash-unified": "^1.0.3",
     "vue": "^3.3.8"
   },

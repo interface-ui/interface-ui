@@ -35,9 +35,9 @@ importers:
       fusion-ui-iconify:
         specifier: 1.0.46
         version: 1.0.46(less@4.1.3)(vue@3.3.8)
-      fusion-ui-vue:
+      interface-ui:
         specifier: workspace:*
-        version: link:packages/fusion-ui
+        version: link:interface-ui
       lodash-unified:
         specifier: ^1.0.3
         version: 1.0.3(@types/lodash-es@4.17.11)(lodash-es@4.17.21)(lodash@4.17.21)
@@ -189,9 +189,9 @@ importers:
       fusion-ui-iconify:
         specifier: ^1.0.46
         version: 1.0.46(less@4.1.3)(vue@3.3.8)
-      fusion-ui-vue:
+      interface-ui:
         specifier: workspace:^
-        version: link:../packages/fusion-ui
+        version: link:../interface-ui
       markdown-it:
         specifier: ^13.0.1
         version: 13.0.1
@@ -209,6 +209,8 @@ importers:
         specifier: ^0.50.0
         version: 0.50.0(rollup@4.4.1)(vite@4.5.0)
 
+  interface-ui: {}
+
   packages/components:
     dependencies:
       vue:
@@ -216,42 +218,6 @@ importers:
         version: 3.3.8(typescript@4.9.3)
 
   packages/constants: {}
-
-  packages/fusion-ui:
-    dependencies:
-      '@fusion-ui-vue/components':
-        specifier: ^0.0.2
-        version: link:../components
-      '@fusion-ui-vue/constants':
-        specifier: ^0.0.2
-        version: link:../constants
-      '@fusion-ui-vue/hooks':
-        specifier: ^0.0.2
-        version: link:../hooks
-      '@fusion-ui-vue/theme':
-        specifier: ^0.0.2
-        version: link:../theme
-      '@fusion-ui-vue/utils':
-        specifier: ^0.0.2
-        version: link:../utils
-      '@pnpm/types':
-        specifier: github:pnpm/types
-        version: github.com/pnpm/types/e85ce6c0831cc56f7dd94c74eaba08101a50efdd
-      '@vue/shared':
-        specifier: ^3.2.47
-        version: 3.2.47
-      '@vueuse/core':
-        specifier: ^9.1.1
-        version: 9.1.1(vue@3.3.8)
-      lodash-unified:
-        specifier: ^1.0.3
-        version: 1.0.3(@types/lodash-es@4.17.11)(lodash-es@4.17.21)(lodash@4.17.21)
-      vite-plugin-progress:
-        specifier: ^0.0.7
-        version: 0.0.7(vite@4.5.0)
-      vue:
-        specifier: ^3.3.8
-        version: 3.3.8(typescript@4.9.3)
 
   packages/hooks:
     dependencies:

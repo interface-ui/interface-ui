@@ -27,7 +27,7 @@ By fully importing FusionUi components, the package size will increase.
 ```main.ts```
 ```ts
 import { createApp } from 'vue'
-import fusionUi from 'fusion-ui-vue'
+import fusionUi from 'interface-ui'
 import 'fusion-ui-vue/dist/styles/index.css'
 import App from './App.vue'
 
@@ -41,7 +41,7 @@ app.mount('#app')
 * You can use the import statement to import the components you use.
 
 ```ts
-import { FnButton } from 'fusion-ui-vue'
+import { FnButton } from 'interface-ui'
 import 'fusion-ui-vue/dist/styles/button.css'
 ```
 

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { FnCheckbox } from 'fusion-ui-vue'
+import { FnCheckbox } from 'interface-ui'
 import { ref } from 'vue'
 const checked = ref<boolean>(true)
 </script>

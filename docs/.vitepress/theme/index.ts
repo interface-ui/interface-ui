@@ -3,7 +3,7 @@ import FusionUi from '@fusion-ui-vue/components'
 import Layout from '../components/Layout'
 
 // 导入本地源码样式--测试
-import 'fusion-ui-vue/dist/styles/index.css' // 全部样式
+import 'interface-ui/dist/styles/index.css' // 全部样式
 
 import DemoBlock from '../components/demo-block'
 import TableBlock from '../components/table-block'
