@@ -1,3 +1,1 @@
-type ThemeMode = 'light' | 'dark'
-
-export default ThemeMode
+export type ThemeMode = 'light' | 'dark'

@@ -1,28 +1,23 @@
-type Color<T extends FusionColorLevel> = Record<T, string>
+import colorCSS from '@fusion-ui-vue/theme/styles/palette.less?inline'
+import type { Colors } from './types'
 
-type FusionColorLevel = 50 | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900
-type FusionColorExtensionLevel = 'A100' | 'A200' | 'A400' | 'A700'
+const match = colorCSS.matchAll(
+  /--\b(md|fn)\b-ref-palette-([a-zA-Z]+)(-variant)?-([A-Z0-9]*): (#[0-9a-z]{6});/g
+)
+const colors: Colors = [...match].reduce((pre, cur) => {
+  const [_, _source, colorName, variant, level, value] = cur
+  if (level) {
+    pre[colorName] = pre[colorName] ?? {}
+    if (variant) {
+      pre[colorName].variant = pre[colorName].variant ?? {}
+      pre[colorName].variant[level] = value
+    } else {
+      pre[colorName][level] = value
+    }
+  } else {
+    pre[colorName] = value
+  }
+  return pre
+}, {} as any)
 
-export interface Colors<F = Color<FusionColorLevel>> {
-  black: string
-  white: string
-  red: F & FusionColorExtensionLevel
-  pink: F & FusionColorExtensionLevel
-  purple: F & FusionColorExtensionLevel
-  deepPurple: F & FusionColorExtensionLevel
-  indigo: F & FusionColorExtensionLevel
-  blue: F & FusionColorExtensionLevel
-  lightBlue: F & FusionColorExtensionLevel
-  cyan: F & FusionColorExtensionLevel
-  teal: F & FusionColorExtensionLevel
-  green: F & FusionColorExtensionLevel
-  lightGreen: F & FusionColorExtensionLevel
-  lime: F & FusionColorExtensionLevel
-  yellow: F & FusionColorExtensionLevel
-  amber: F & FusionColorExtensionLevel
-  orange: F & FusionColorExtensionLevel
-  deepOrange: F & FusionColorExtensionLevel
-  brown: F
-  grey: F
-  blueGrey: F
-}
+export default colors

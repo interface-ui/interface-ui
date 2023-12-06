@@ -11,16 +11,31 @@ import {
   hexFromArgb,
   rgbaFromArgb,
 } from '@material/material-color-utilities'
-import type ThemeMode from '../mode'
-import { themePalettesTones } from './types'
+import type { ThemeMode } from '../mode'
 import type {
-  AdditionalSchemes,
-  ParsedSchemes,
   Schemes,
+  SeveritySchemes,
   ThemePalettes,
   ThemePalettesTones,
-} from './types'
+} from '../types'
+import type { ParsedSchemes } from './types'
 import type Theme from './theme'
+
+const themePalettesTones: ThemePalettesTones[] = [
+  '0',
+  '10',
+  '20',
+  '30',
+  '40',
+  '50',
+  '60',
+  '70',
+  '80',
+  '90',
+  '95',
+  '99',
+  '100',
+]
 
 export const parsePalettes = (
   palette: DynamicTheme['palettes']
@@ -73,8 +88,8 @@ export const parseShcemes = (scheme: Scheme): ParsedSchemes => {
 export const parseCustomSchemes = (
   scheme: CustomColorGroup[],
   mode: ThemeMode
-) => {
-  const schemes: AdditionalSchemes = {} as any
+): ParsedSchemes => {
+  const schemes: SeveritySchemes = {} as any
   const styles: Record<string, string> = {} as any
 
   scheme.forEach(scheme => {
@@ -87,7 +102,7 @@ export const parseCustomSchemes = (
       const token = _key.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase()
       const color = hexFromArgb(value)
       const { r, g, b } = rgbaFromArgb(value)
-      schemes[_key as keyof AdditionalSchemes] = color
+      schemes[_key as keyof SeveritySchemes] = color
       styles[`--md-sys-color-${token}`] = color
       styles[`--md-sys-color-${token}-rgb`] = `${r} ${g} ${b}`
     }
