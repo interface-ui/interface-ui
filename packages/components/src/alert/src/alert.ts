@@ -1,7 +1,7 @@
 import type { Component, ExtractPropTypes, PropType } from 'vue'
 import {
-  type ComponentSeverity,
-  componentSeverity,
+  type ComponentSeverities,
+  componentSeverities,
 } from '@fusion-ui-vue/constants'
 import { buildProps } from '@fusion-ui-vue/utils'
 import SuccessOutlined from '../../svg-icon/internal/SuccessOutlined.vue'
@@ -19,8 +19,8 @@ export const alertProps = buildProps({
     default: 'filled',
   },
   severity: {
-    type: String as PropType<ComponentSeverity>,
-    values: componentSeverity,
+    type: String as PropType<ComponentSeverities>,
+    values: componentSeverities,
     required: true,
     default: 'info',
   },
@@ -33,7 +33,7 @@ export const alertProps = buildProps({
   },
 })
 
-export const alertIcons: Record<ComponentSeverity, Component> = {
+export const alertIcons: Record<ComponentSeverities, Component> = {
   success: SuccessOutlined,
   warning: WarningOutlined,
   error: ErrorOutlined,
