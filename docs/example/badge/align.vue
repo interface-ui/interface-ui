@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { FnRadio } from 'fusion-ui-vue'
+import { FnRadio } from 'interface-ui'
 import { ref } from 'vue'
 import { useTheme } from '@fusion-ui-vue/theme'
 

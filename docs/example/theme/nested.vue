@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 import createTheme, { ThemeProvider } from '@fusion-ui-vue/theme'
-import { FnCheckbox } from 'fusion-ui-vue'
+import { FnCheckbox } from 'interface-ui'
 const checked = ref(true)
 const theme1 = createTheme('#2196F3', { target: 'host' })
 const theme2 = createTheme('#4CAF50', { target: 'host' })

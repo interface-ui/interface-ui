@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { FnTextField } from 'fusion-ui-vue'
+import { FnTextField } from 'interface-ui'
 import { styled } from '@fusion-ui-vue/theme'
 import { ref } from 'vue'
 

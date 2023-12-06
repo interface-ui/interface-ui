@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import '@fusion-ui-vue/components/link/src/index.less' // 开发调试的样式
+import '@fusion-ui-vue/components/src/link/src/index.less' // 开发调试的样式
 import { FnLink } from '@fusion-ui-vue/components'
 </script>
 

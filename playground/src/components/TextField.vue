@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import '@fusion-ui-vue/components/typography/src/index.less' // 开发调试的样式
-import '@fusion-ui-vue/components/text-field/src/index.less' // 开发调试的样式
+import '@fusion-ui-vue/components/src/typography/src/index.less' // 开发调试的样式
+import '@fusion-ui-vue/components/src/text-field/src/index.less' // 开发调试的样式
 
 import { FnTextField } from '@fusion-ui-vue/components'
 import { ref } from 'vue'

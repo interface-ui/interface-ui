@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { FnMessage } from 'fusion-ui-vue'
+import { FnMessage } from 'interface-ui'
 
 const messageIns = ref(new FnMessage())
 </script>

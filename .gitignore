@@ -11,6 +11,7 @@ packages/lucky-design/src/style.css
 
 node_modules
 dist
+interface-ui
 dist-ssr
 *.local
 

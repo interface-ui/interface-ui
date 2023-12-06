@@ -6,7 +6,7 @@
     "baseUrl": "./",
     "emitDeclarationOnly": true,
     "declaration": true,
-    "declarationDir": "./packages/fusion-ui/dist/types",
+    "declarationDir": "./interface-ui/dist/types",
     "types": ["node"],
     "paths": {
       "@fusion-ui-vue/components": [

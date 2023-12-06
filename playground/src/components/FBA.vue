@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import '@fusion-ui-vue/components/fba/src/index.less' // 开发调试的样式
+import '@fusion-ui-vue/components/src/fba/src/index.less' // 开发调试的样式
 import { FnFba } from '@fusion-ui-vue/components'
 import { PaletteOutlined } from 'fusion-ui-iconify'
 </script>

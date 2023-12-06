@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { FnButton, FnMessageClass } from 'fusion-ui-vue'
+import { FnButton, FnMessageClass } from 'interface-ui'
 import { singleton } from '@fusion-ui-vue/utils'
 
 const FnMessageInstances = {

@@ -1,7 +1,7 @@
 import type { HeadConfig } from 'vitepress'
 
 export const head = [
-  ['meta', { property: 'og:title', content: 'Fusion UI' }],
+  ['meta', { property: 'og:title', content: 'Interface UI' }],
   [
     'meta',
     {
