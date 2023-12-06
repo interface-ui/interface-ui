@@ -1,10 +1,10 @@
 <script lang="ts" setup>
-import '@fusion-ui-vue/components/card/src/index.less'
-import '@fusion-ui-vue/components/card-content/src/index.less'
-import '@fusion-ui-vue/components/card-header/src/index.less'
-import '@fusion-ui-vue/components/card-action/src/index.less'
-import '@fusion-ui-vue/components/card-media/src/index.less'
-import '@fusion-ui-vue/components/action-area/src/index.less'
+import '@fusion-ui-vue/components/src/card/src/index.less'
+import '@fusion-ui-vue/components/src/card-content/src/index.less'
+import '@fusion-ui-vue/components/src/card-header/src/index.less'
+import '@fusion-ui-vue/components/src/card-action/src/index.less'
+import '@fusion-ui-vue/components/src/card-media/src/index.less'
+import '@fusion-ui-vue/components/src/action-area/src/index.less'
 import {
   FnCard,
   FnCardContent,

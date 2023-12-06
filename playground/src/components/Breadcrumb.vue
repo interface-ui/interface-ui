@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import '@fusion-ui-vue/components/breadcrumb/src/index.less' // 开发调试的样式
+import '@fusion-ui-vue/components/src/breadcrumb/src/index.less' // 开发调试的样式
 import { FnLink, FnBreadcrumb } from '@fusion-ui-vue/components'
 import {
   NavigateNextFilled,

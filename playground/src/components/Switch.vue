@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import '@fusion-ui-vue/components/switch/src/index.less' // 开发调试的样式
+import '@fusion-ui-vue/components/src/switch/src/index.less' // 开发调试的样式
 import { FnSwitch } from '@fusion-ui-vue/components'
 import { computed, ref } from 'vue'
 

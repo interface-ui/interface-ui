@@ -1,7 +1,7 @@
 import type { CSSProperties, ComputedRef } from 'vue'
 import { computed } from 'vue'
 import { TinyColor } from '@ctrl/tinycolor'
-import type { TagProps } from '../../components/tag/src/tag'
+import type { TagProps } from '../../components/src/tag/src/tag'
 
 export type ClassList = (string | Record<string, unknown>)[]
 
@@ -14,15 +14,9 @@ export const UseTag = (prop: TagProps): UseTagReturn => {
   /** 类名列表 */
   const classList = computed((): ClassList => {
     const arr = []
-    if (prop.round)
-      arr.push('is-round')
+    if (prop.round) arr.push('is-round')
 
-    return [
-      'fn-tag',
-      `fn-tag--${prop.type}`,
-      `fn-tag--${prop.size}`,
-      ...arr,
-    ]
+    return ['fn-tag', `fn-tag--${prop.type}`, `fn-tag--${prop.size}`, ...arr]
   })
 
   /** 样式列表 */

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import '@fusion-ui-vue/components/popover/src/index.less' // 开发调试的样式
+import '@fusion-ui-vue/components/src/popover/src/index.less' // 开发调试的样式
 import { FnPopover, FnButton } from '@fusion-ui-vue/components'
 import { ref } from 'vue'
 

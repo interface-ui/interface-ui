@@ -2,7 +2,7 @@ import type { CSSProperties, ComputedRef } from 'vue'
 import { computed } from 'vue'
 import { isNumber } from '@vueuse/core'
 import { addUnit } from '@fusion-ui-vue/utils'
-import type { ProgressProps } from '../../components/progress/src/progress'
+import type { ProgressProps } from '../../components/src/progress/src/progress'
 
 /** class 类名集合类型 */
 export type ClassList = (string | Record<string, unknown>)[]

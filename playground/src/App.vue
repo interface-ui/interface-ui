@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import '@fusion-ui-vue/components/modal/src/index.less' // 开发调试的样式
-import '@fusion-ui-vue/components/collapse/src/index.less' // 开发调试的样式
+import '@fusion-ui-vue/components/src/modal/src/index.less' // 开发调试的样式
+import '@fusion-ui-vue/components/src/collapse/src/index.less' // 开发调试的样式
 import { ThemeProvider } from '@fusion-ui-vue/theme'
 import { FnButton, FnIconButton, FnMessage } from '@fusion-ui-vue/components'
 import { DeleteFilled, VerifiedRound } from 'fusion-ui-iconify'

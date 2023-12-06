@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import '@fusion-ui-vue/components/divider/src/index.less' // 开发调试的样式
+import '@fusion-ui-vue/components/src/divider/src/index.less' // 开发调试的样式
 import { FnDivider } from '@fusion-ui-vue/components'
 </script>
 

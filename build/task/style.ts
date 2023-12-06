@@ -21,7 +21,7 @@ export async function buildStyle() {
     .pipe(
       rename(path => {
         return {
-          basename: path.dirname.replace('/src', ''),
+          basename: path.dirname.replace(/\/?src\/?/g, ''),
           extname: '.css',
           dirname: '',
         }

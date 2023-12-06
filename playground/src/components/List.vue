@@ -1,10 +1,10 @@
 <script lang="ts" setup>
-import '@fusion-ui-vue/components/divider/src/index.less'
-import '@fusion-ui-vue/components/list/src/index.less'
-import '@fusion-ui-vue/components/list-item/src/index.less'
-import '@fusion-ui-vue/components/list-item-header/src/index.less'
-import '@fusion-ui-vue/components/badge/src/index.less'
-import '@fusion-ui-vue/components/menu/src/index.less'
+import '@fusion-ui-vue/components/src/divider/src/index.less'
+import '@fusion-ui-vue/components/src/list/src/index.less'
+import '@fusion-ui-vue/components/src/list-item/src/index.less'
+import '@fusion-ui-vue/components/src/list-item-header/src/index.less'
+import '@fusion-ui-vue/components/src/badge/src/index.less'
+import '@fusion-ui-vue/components/src/menu/src/index.less'
 import {
   FnList,
   FnListItem,
