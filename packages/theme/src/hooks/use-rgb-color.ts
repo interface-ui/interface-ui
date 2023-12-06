@@ -1,4 +1,3 @@
-import { useTheme } from '@fusion-ui-vue/theme'
 import type { ComputedRef, Ref } from 'vue'
 import { computed, ref } from 'vue'
 import type { Rgba } from '@material/material-color-utilities'
@@ -7,7 +6,9 @@ import {
   argbFromHex,
   rgbaFromArgb,
 } from '@material/material-color-utilities'
-import type { AcceptableColor, Theme } from '../core'
+import type { Theme } from '../core'
+import type { AcceptableColor } from '../types'
+import { useTheme } from './use-theme'
 
 /**
  * The function converts hex color to rgba color

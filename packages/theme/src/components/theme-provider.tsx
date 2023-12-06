@@ -1,10 +1,10 @@
 import type { Component, PropType, Ref } from 'vue'
 import { defineComponent, ref, watch } from 'vue'
-import type { ThemeSchemes } from '../core'
+import type { ThemeSchemes } from '../types'
 import { Theme } from '../core'
 import { injectJSS } from '../core/utils'
 import { useTheme, useThemeProvider } from '../hooks'
-import type ThemeMode from '../mode'
+import type { ThemeMode } from '../mode'
 
 export default defineComponent({
   name: 'ThemeProvider',

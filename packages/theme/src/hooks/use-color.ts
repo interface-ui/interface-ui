@@ -1,4 +1,3 @@
-import { useTheme } from '@fusion-ui-vue/theme'
 import type { ComputedRef, Ref } from 'vue'
 import { computed, ref } from 'vue'
 import {
@@ -6,7 +5,9 @@ import {
   argbFromHex,
   hexFromArgb,
 } from '@material/material-color-utilities'
-import type { AcceptableColor, Theme } from '../core'
+import type { Theme } from '../core'
+import type { AcceptableColor } from '../types'
+import { useTheme } from './use-theme'
 
 /**
  * The function returns a valuable color from props.color

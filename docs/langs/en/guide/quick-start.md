@@ -1,8 +1,8 @@
-# Fusion Ui
+# Interface UI
 
 ## Introduction
 
-Fusion Ui is a Vue3 component library that is simple, elegant, and aesthetically pleasing
+Interface UI is a Vue3 component library that is simple, elegant, and aesthetically pleasing
 
 Due to its initial development and gradual improvement, it is not recommended for use in production environments
 
@@ -16,7 +16,7 @@ If you want to learn how to build the Vue3+Ts+Vite component library, it will be
 
 ## Special Thanks
 
-❤️ Thanks to [everyone](https://github.com/tsinghua-lau/fusion-ui/graphs/contributors)  who has already contributed to ```Fusion Ui```!
+❤️ Thanks to [everyone](https://github.com/tsinghua-lau/fusion-ui/graphs/contributors)  who has already contributed to ```Interface UI```!
 
 <a href="https://github.com/tsinghua-lau/fusion-ui/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=tsinghua-lau/fusion-ui" />

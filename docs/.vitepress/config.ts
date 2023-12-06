@@ -4,7 +4,7 @@ import { applyPlugins } from './plugins/code'
 import { head, nav, sidebar, vite } from './configuration'
 
 export default defineConfig({
-  title: 'Fusion Ui',
+  title: 'Interface UI',
   base: '/fusion-ui/',
   description:
     'A Vue.js prebuilt component library based on Preline design draft',
@@ -36,7 +36,7 @@ export default defineConfig({
     footer: {
       message: 'MIT Licensed',
       copyright:
-        'Copyright © 2023-present tsinghua-lau & Fusion Ui Contributors',
+        'Copyright © 2023-present tsinghua-lau & Interface UI Contributors',
     },
   },
   markdown: {
