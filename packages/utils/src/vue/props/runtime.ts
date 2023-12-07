@@ -3,26 +3,25 @@
 import { warn } from 'vue'
 import { fromPairs } from 'lodash-unified'
 import type { PropType } from 'vue'
-import { hasOwn } from '@vue/shared'
-import { isObject } from '../../javascript'
+import { hasOwn, isObject } from '@vue/shared'
 
 import type {
-  EpProp,
-  EpPropConvert,
-  EpPropFinalized,
-  EpPropInput,
-  EpPropMergeType,
-  IfEpProp,
+  IfInProp,
   IfNativePropType,
+  InProp,
+  InPropConvert,
+  InPropFinalized,
+  InPropInput,
+  InPropMergeType,
   NativePropType,
 } from './types'
 
-export const epPropKey = '__epPropKey'
+export const inPropKey = '__epPropKey'
 
 export const definePropType = <T>(val: any): PropType<T> => val
 
-export const isEpProp = (val: unknown): val is EpProp<any, any, any> =>
-  isObject(val) && !!(val as any)[epPropKey]
+export const isEpProp = (val: unknown): val is InProp<any, any, any> =>
+  isObject(val) && !!(val as any)[inPropKey]
 
 /**
  * @description Build prop. It can better optimize prop types
@@ -48,12 +47,12 @@ export const buildProp = <
   Type = never,
   Value = never,
   Validator = never,
-  Default extends EpPropMergeType<Type, Value, Validator> = never,
+  Default extends InPropMergeType<Type, Value, Validator> = never,
   Required extends boolean = false
 >(
-  prop: EpPropInput<Type, Value, Validator, Default, Required>,
+  prop: InPropInput<Type, Value, Validator, Default, Required>,
   key?: string
-): EpPropFinalized<Type, Value, Validator, Default, Required> => {
+): InPropFinalized<Type, Value, Validator, Default, Required> => {
   // filter native prop type and nested prop, e.g `null`, `undefined` (from `buildProps`)
   if (!isObject(prop) || isEpProp(prop)) {
     return prop as any
@@ -99,7 +98,7 @@ export const buildProp = <
     type,
     required: !!required,
     validator: _validator,
-    [epPropKey]: true,
+    [inPropKey]: true,
   }
   if (hasOwn(prop, 'default')) {
     epProp.default = defaultValue
@@ -110,17 +109,17 @@ export const buildProp = <
 export const buildProps = <
   Props extends Record<
     string,
-    | { [epPropKey]: true }
+    | { [inPropKey]: true }
     | NativePropType
-    | EpPropInput<any, any, any, any, any>
+    | InPropInput<any, any, any, any, any>
   >
 >(
   props: Props
 ): {
-  [K in keyof Props]: IfEpProp<
+  [K in keyof Props]: IfInProp<
     Props[K],
     Props[K],
-    IfNativePropType<Props[K], Props[K], EpPropConvert<Props[K]>>
+    IfNativePropType<Props[K], Props[K], InPropConvert<Props[K]>>
   >
 } =>
   fromPairs(

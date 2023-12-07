@@ -1,4 +1,6 @@
-import { debugWarn, isNumber, isString, isStringNumber } from '../javascript'
+import { isString } from '@vue/shared'
+import { isNumber } from '@vueuse/core'
+import { debugWarn, isStringNumber } from '../javascript'
 
 const SCOPE = 'utils/dom/style'
 

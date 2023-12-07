@@ -1,5 +1,6 @@
+/* eslint-disable @typescript-eslint/indent */
 import type { ExtractPropTypes, PropType } from 'vue'
-import type { epPropKey } from './runtime'
+import type { inPropKey } from './runtime'
 import type { IfNever, UnknownToNever, WritableArray } from './util'
 
 type Value<T> = T[keyof T]
@@ -43,10 +44,10 @@ export type ResolvePropType<T> = IfNever<
  * 合并 Type、Value、Validator 的类型
  *
  * @example
- * EpPropMergeType<StringConstructor, '1', 1> =>  1 | "1" // ignores StringConstructor
- * EpPropMergeType<StringConstructor, never, number> =>  string | number
+ * InPropMergeType<StringConstructor, '1', 1> =>  1 | "1" // ignores StringConstructor
+ * InPropMergeType<StringConstructor, never, number> =>  string | number
  */
-export type EpPropMergeType<Type, Value, Validator> =
+export type InPropMergeType<Type, Value, Validator> =
   | IfNever<UnknownToNever<Value>, ResolvePropType<Type>, never>
   | UnknownToNever<Value>
   | UnknownToNever<Validator>
@@ -56,14 +57,14 @@ export type EpPropMergeType<Type, Value, Validator> =
  *
  * 处理输入参数的默认值（约束）
  */
-export type EpPropInputDefault<
+export type InPropInputDefault<
   Required extends boolean,
-  Default,
+  Default
 > = Required extends true
   ? never
   : Default extends Record<string, unknown> | Array<any>
-    ? () => Default
-    : (() => Default) | Default
+  ? () => Default
+  : (() => Default) | Default
 
 /**
  * Native prop types, e.g: `BooleanConstructor`, `StringConstructor`, `null`, `undefined`, etc.
@@ -83,7 +84,7 @@ export type IfNativePropType<T, Y, N> = [T] extends [NativePropType] ? Y : N
  * prop 输入参数（约束）
  *
  * @example
- * EpPropInput<StringConstructor, 'a', never, never, true>
+ * InPropInput<StringConstructor, 'a', never, never, true>
  * ⬇️
  * {
     type?: StringConstructor | undefined;
@@ -93,18 +94,18 @@ export type IfNativePropType<T, Y, N> = [T] extends [NativePropType] ? Y : N
     default?: undefined;
   }
  */
-export interface EpPropInput<
+export interface InPropInput<
   Type,
   Value,
   Validator,
-  Default extends EpPropMergeType<Type, Value, Validator>,
-  Required extends boolean,
+  Default extends InPropMergeType<Type, Value, Validator>,
+  Required extends boolean
 > {
   type?: Type
   required?: Required
   values?: readonly Value[]
   validator?: ((val: any) => val is Validator) | ((val: any) => boolean)
-  default?: EpPropInputDefault<Required, Default>
+  default?: InPropInputDefault<Required, Default>
 }
 
 /**
@@ -113,7 +114,7 @@ export interface EpPropInput<
  * prop 输出参数。
  *
  * @example
- * EpProp<'a', 'b', true>
+ * InProp<'a', 'b', true>
  * ⬇️
  * {
     readonly type: PropType<"a">;
@@ -123,40 +124,40 @@ export interface EpPropInput<
     __epPropKey: true;
   }
  */
-export type EpProp<Type, Default, Required> = {
+export type InProp<Type, Default, Required> = {
   readonly type: PropType<Type>
   readonly required: [Required] extends [true] ? true : false
   readonly validator: ((val: unknown) => boolean) | undefined
-  [epPropKey]: true
+  [inPropKey]: true
 } & IfNever<Default, unknown, { readonly default: Default }>
 
 /**
- * Determine if it is `EpProp`
+ * Determine if it is `InProp`
  */
-export type IfEpProp<T, Y, N> = T extends { [epPropKey]: true } ? Y : N
+export type IfInProp<T, Y, N> = T extends { [inPropKey]: true } ? Y : N
 
 /**
  * Converting input to output.
  *
  * 将输入转换为输出
  */
-export type EpPropConvert<Input> = Input extends EpPropInput<
+export type InPropConvert<Input> = Input extends InPropInput<
   infer Type,
   infer Value,
   infer Validator,
   any,
   infer Required
 >
-  ? EpPropFinalized<Type, Value, Validator, Input['default'], Required>
+  ? InPropFinalized<Type, Value, Validator, Input['default'], Required>
   : never
 
 /**
  * Finalized conversion output
  *
- * 最终转换 EpProp
+ * 最终转换 InProp
  */
-export type EpPropFinalized<Type, Value, Validator, Default, Required> = EpProp<
-  EpPropMergeType<Type, Value, Validator>,
+export type InPropFinalized<Type, Value, Validator, Default, Required> = InProp<
+  InPropMergeType<Type, Value, Validator>,
   UnknownToNever<Default>,
   Required
 >
