@@ -18,7 +18,6 @@ import FnBadge from './src/badge'
 import FnProgress from './src/progress'
 import FnAvatar from './src/avatar'
 import FnAvatarGroup from './src/avatar-group'
-import FnTag from './src/tag'
 import FnCheckbox from './src/checkbox'
 import FnBreadcrumb from './src/breadcrumb'
 import FnRipple from './src/ripple'
@@ -59,7 +58,6 @@ export * from './src/card-content'
 export * from './src/card-header'
 export * from './src/card-action'
 export * from './src/card-media'
-export * from './src/tag'
 export * from './src/avatar'
 export * from './src/checkbox'
 export * from './src/breadcrumb'
@@ -102,7 +100,6 @@ export const components = [
   FnCardHeader,
   FnCardAction,
   FnCardMedia,
-  FnTag,
   FnAvatar,
   FnAvatarGroup,
   FnCheckbox,
