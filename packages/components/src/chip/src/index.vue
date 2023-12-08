@@ -22,7 +22,7 @@ const cssClass = useCss(props)
     <slot />
     <fn-icon-button
       v-if="$props.deletable"
-      :class="[ns.em('button', 'close')]"
+      :class="[ns.em('button', 'delete')]"
       size="small"
       cs="padding: 4px;"
       @click="$emit('delete')"
