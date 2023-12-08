@@ -46,7 +46,7 @@ export async function buildModule() {
       esbuild({
         keepNames: false,
         sourceMap: false,
-        target: 'es2018',
+        target: 'es2020',
         loaders: {
           '.vue': 'ts',
         },
