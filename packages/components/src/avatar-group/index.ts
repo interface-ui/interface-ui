@@ -1,6 +1,6 @@
 import type { SFCWithInstall } from '@fusion-ui-vue/utils'
 import { withInstall } from '@fusion-ui-vue/utils'
-import AvatarGroup from './src/index.vue'
+import AvatarGroup from './src/index'
 
 export const FnAvatarGroup: SFCWithInstall<typeof AvatarGroup> = withInstall(
   AvatarGroup,

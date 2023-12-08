@@ -1,6 +1,6 @@
 import type { SFCWithInstall } from '@fusion-ui-vue/utils'
 import { withInstall } from '@fusion-ui-vue/utils'
-import SvgIcon from './src/index.vue'
+import SvgIcon from './src/index'
 
 export const FnSvgIcon: SFCWithInstall<typeof SvgIcon> = withInstall(
   SvgIcon,

@@ -1,6 +1,6 @@
 import type { SFCWithInstall } from '@fusion-ui-vue/utils'
 import { withInstall } from '@fusion-ui-vue/utils'
-import Divider from './src/index.vue'
+import Divider from './src/index'
 
 export const FnDivider: SFCWithInstall<typeof Divider> = withInstall(
   Divider,
