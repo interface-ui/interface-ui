@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
-import { isString, useNamespace } from '@fusion-ui-vue/utils'
+import { useNamespace } from '@fusion-ui-vue/utils'
 import { useDrawer } from '@fusion-ui-vue/hooks'
-// import { FnIcon } from '../../icon'
+import { isString } from '@vue/shared'
 import { drawerProps } from './drawer'
 const props = defineProps(drawerProps)
 const { visible, doClose } = useDrawer(props)

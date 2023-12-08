@@ -52,8 +52,8 @@ export const enComponents = [
         link: '/langs/en/components/card',
       },
       {
-        text: 'Tag',
-        link: '/langs/en/components/tag',
+        text: 'Chip',
+        link: '/langs/en/components/chip',
       },
       {
         text: 'List',
@@ -192,8 +192,8 @@ export const zhComponents = [
         link: '/langs/zh/components/progress',
       },
       {
-        text: 'Tag 标签',
-        link: '/langs/zh/components/tag',
+        text: 'Chip 标签',
+        link: '/langs/zh/components/chip',
       },
       {
         text: 'List 列表',

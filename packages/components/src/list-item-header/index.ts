@@ -1,7 +1,9 @@
+import type { SFCWithInstall } from '@fusion-ui-vue/utils'
 import { withInstall } from '@fusion-ui-vue/utils'
 import ListItemHeader from './src/index.vue'
 
-export const FnListItemHeader = withInstall(ListItemHeader, 'FnListItemHeader')
+export const FnListItemHeader: SFCWithInstall<typeof ListItemHeader> =
+  withInstall(ListItemHeader, 'FnListItemHeader')
 FnListItemHeader.name = 'FnListItemHeader'
 export default FnListItemHeader
 export * from './src/list-item-header'

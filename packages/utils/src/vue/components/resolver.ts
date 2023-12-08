@@ -9,10 +9,10 @@ export interface PlayResolverOptions {
 }
 
 export const isSSR = Boolean(
-  process.env.SSR
-    || process.env.SSG
-    || process.env.VITE_SSR
-    || process.env.VITE_SSG,
+  (import.meta as any).env.SSR ||
+    (import.meta as any).env.SSG ||
+    (import.meta as any).env.VITE_SSR ||
+    (import.meta as any).env.VITE_SSG
 )
 
 export function kebabCase(key: string) {
@@ -22,29 +22,34 @@ export function kebabCase(key: string) {
 
 function getSideEffects(
   dirName: string,
-  options: PlayResolverOptions,
+  options: PlayResolverOptions
 ): SideEffectsInfo | undefined {
   const { importStyle = true } = options
 
-  if (!importStyle || isSSR)
+  if (!importStyle || isSSR) {
     return
+  }
 
   const noStyleComps = ['on-click-outside']
 
-  if (noStyleComps.includes(dirName))
+  if (noStyleComps.includes(dirName)) {
     return
+  }
 
   if (importStyle)
-    return ['fusion-ui-vue/dist/styles/base.css', `fusion-ui-vue/dist/styles/${dirName}/src/index.css`]
+    return [
+      'interface-ui/dist/styles/base.css',
+      `interface-ui/dist/styles/${dirName}/src/index.css`,
+    ]
 
-  return [`fusion-ui-vue/dist/lib/components/${dirName}/index.js`]
-  // return [`fusion-ui-vue/dist/styles/${dirName}/src/index.js`]
+  return [`interface-ui/dist/lib/components/${dirName}/index.js`]
+  // return [`interface-ui/dist/styles/${dirName}/src/index.js`]
 }
 
 export function PlayResolver(
-  options: PlayResolverOptions = {},
+  options: PlayResolverOptions = {}
 ): ComponentResolver {
-  const { from = 'fusion-ui-vue' } = options
+  const { from = 'interface-ui' } = options
   return {
     type: 'component',
     resolve: (name: string) => {

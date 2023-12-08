@@ -1,0 +1,51 @@
+.fn-chip {
+  border-radius: var(--md-sys-shape-corner-small-default-size);
+  height: 32px;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 16px;
+  color: var(--fn-chip-on-color);
+  position: relative;
+  overflow: hidden;
+  width: fit-content;
+
+  &--filled {
+    background-color: var(--fn-chip-color);
+    @media (any-hover: hover) {
+      &.fn-action-area:not([disabled], .fn-action-area--disabled) {
+        &:hover {
+          background-color: color-mix(
+            in srgb,
+            var(--fn-chip-color),
+            var(--fn-sys-color-switch-reverse)
+              var(--md-sys-state-hover-state-layer-opacity-percentage)
+          );
+        }
+      }
+    }
+    &[disabled],
+    &.fn-action-area--disabled {
+      background-color: var(--fn-sys-color-disabled-level-1);
+      color: var(--fn-sys-color-disabled-level-0);
+    }
+  }
+  &--outlined {
+    border: 1px solid;
+    &[disabled],
+    &.fn-action-area--disabled {
+      color: var(--fn-sys-color-disabled-level-0);
+      border-color: var(--fn-sys-color-disabled-level-1);
+    }
+  }
+
+  .fn-icon,
+  .fn-svg-icon {
+    font-size: 18px !important;
+  }
+
+  &__button--delete {
+    margin-right: -8px;
+  }
+}

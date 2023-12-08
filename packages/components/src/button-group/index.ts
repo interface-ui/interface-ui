@@ -1,7 +1,11 @@
+import type { SFCWithInstall } from '@fusion-ui-vue/utils'
 import { withInstall } from '@fusion-ui-vue/utils'
-import ButtonGroup from './src/index'
+import ButtonGroup from './src/index.vue'
 
-export const FnButtonGroup = withInstall(ButtonGroup, 'FnButtonGroup')
+export const FnButtonGroup: SFCWithInstall<typeof ButtonGroup> = withInstall(
+  ButtonGroup,
+  'FnButtonGroup'
+)
 FnButtonGroup.name = 'FnButtonGroup'
 export default FnButtonGroup
 export * from './src/button-group'

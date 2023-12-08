@@ -22,7 +22,7 @@ export async function buildBundled() {
     commonjs(),
     esbuild({
       sourceMap: true,
-      target: 'es2018',
+      target: 'es2020',
       loaders: {
         '.vue': 'ts',
       },
@@ -30,7 +30,7 @@ export async function buildBundled() {
       legalComments: 'eof',
     }),
     minifyPlugin({
-      target: 'es2018',
+      target: 'es2020',
       sourceMap: true,
     }),
   ]

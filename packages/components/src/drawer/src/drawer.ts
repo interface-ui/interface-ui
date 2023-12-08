@@ -1,5 +1,6 @@
 import type { ExtractPropTypes } from 'vue'
-import { buildProps, isBoolean } from '@fusion-ui-vue/utils'
+import { buildProps } from '@fusion-ui-vue/utils'
+import { isBoolean } from '@vueuse/core'
 import { UPDATE_MODEL_EVENT } from '@fusion-ui-vue/constants'
 export const drawerProps = buildProps({
   modelValue: Boolean,

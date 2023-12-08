@@ -20,7 +20,8 @@ import createTheme from '@fusion-ui-vue/theme'
 // import Popover from './components/Popover.vue'
 // import Divider from './components/Divider.vue'
 // import List from './components/List.vue'
-import Breadcrumb from './components/Breadcrumb.vue'
+// import Breadcrumb from './components/Breadcrumb.vue'
+import Chip from './components/Chip.vue'
 import { toRaw, watch, ref, h } from 'vue'
 
 const theme = createTheme()
@@ -89,6 +90,7 @@ const handleClick = () => {
     <!-- <Popover /> -->
     <!-- <divider /> -->
     <!-- <list /> -->
-    <breadcrumb />
+    <!-- <breadcrumb /> -->
+    <chip />
   </theme-provider>
 </template>

@@ -1,5 +1,5 @@
 import type { InjectionKey, Ref } from 'vue'
-import { isBoolean } from '@fusion-ui-vue/utils'
+import { isBoolean } from '@vueuse/core'
 import { UPDATE_MODEL_EVENT } from '@fusion-ui-vue/constants'
 
 export const dialogProps = {

@@ -1,5 +1,7 @@
 import type { ExtractPropTypes, PropType } from 'vue'
-import { buildProps, isNumber, isString } from '@fusion-ui-vue/utils'
+import { buildProps } from '@fusion-ui-vue/utils'
+import { isString } from '@vue/shared'
+import { isNumber } from '@vueuse/core'
 
 import type { AcceptableColor } from '@fusion-ui-vue/theme'
 
