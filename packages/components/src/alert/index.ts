@@ -1,8 +1,12 @@
+import type { SFCWithInstall } from '@fusion-ui-vue/utils'
 import { withInstall } from '@fusion-ui-vue/utils'
-import Alert from './src/index.vue'
+import Alter from './src/index.vue'
 
-export const FnAlert = withInstall(Alert, 'FnAlert')
-FnAlert.name = 'FnAlert'
-export default FnAlert
+export const FnAlter: SFCWithInstall<typeof Alter> = withInstall(
+  Alter,
+  'FnAlter'
+)
+FnAlter.name = 'FnAlter'
+export default FnAlter
 export * from './src/alert'
-export type AlertInstance = InstanceType<typeof Alert>
+export type AlterInstance = InstanceType<typeof Alter>

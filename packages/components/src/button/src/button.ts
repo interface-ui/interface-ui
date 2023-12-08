@@ -1,6 +1,7 @@
 import type { AcceptableColor } from '@fusion-ui-vue/theme'
 import type { ExtractPropTypes, PropType } from 'vue'
 import { type ComponentSizes, componentSizes } from '@fusion-ui-vue/constants'
+import { buildProps } from '@fusion-ui-vue/utils'
 
 export const buttonVariants = ['text', 'filled', 'outlined'] as const
 export type ButtonVariants = typeof buttonVariants[number]
@@ -12,7 +13,7 @@ export const buttonHeight: Record<ComponentSizes, number> = {
   large: 48,
 }
 
-export const buttonProps = {
+export const buttonProps = buildProps({
   variant: {
     type: String as PropType<ButtonVariants>,
     values: buttonVariants,
@@ -40,6 +41,6 @@ export const buttonProps = {
     type: Boolean,
     default: false,
   },
-}
+})
 
 export type ButtonProps = ExtractPropTypes<typeof buttonProps>
