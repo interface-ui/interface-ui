@@ -6,8 +6,9 @@ import {
   argbFromHex,
   rgbaFromArgb,
 } from '@material/material-color-utilities'
+import { toCapitalize } from '@fusion-ui-vue/utils'
 import type { Theme } from '../core'
-import type { AcceptableColor } from '../types'
+import type { AcceptableColor, ThemeSchemes } from '../types'
 import { useTheme } from './use-theme'
 
 /**
@@ -77,13 +78,19 @@ const genOnRgbColor = <T extends { [k: string]: AcceptableColor | any }>(
       computedColor = color(theme.value)
     } else if (color in theme.value.schemes) {
       const _color = color.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase()
-      return color.startsWith('on')
-        ? `var(--md-sys-color-${_color}-rgb)`
-        : `var(--md-sys-color-on-${_color}-rgb)`
+      if (color.startsWith('on')) {
+        return `var(--md-sys-color-${_color}-rgb)`
+      }
+
+      if (`on${toCapitalize(color)}` in theme.value.schemes) {
+        return `var(--md-sys-color-on-${_color}-rgb)`
+      }
+
+      computedColor = theme.value.schemes[color as keyof ThemeSchemes]
     } else if (color.startsWith('#')) {
       computedColor = color
     } else {
-      return '#ffffff'
+      return '255 255 255'
     }
 
     const tones = CorePalette.of(argbFromHex(computedColor)).a1
