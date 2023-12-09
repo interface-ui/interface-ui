@@ -1,0 +1,10 @@
+import{u as h,b,a as V,w as $}from"./use-color.1a34fd9f.js";import{g as d,ae as v,d as k,o as C,c as N,k as i,n as u,l as r,H as S,af as F,aq as g,L as z}from"./framework.ab2f636e.js";import{c as B}from"./use-theme.7c5c5ef1.js";import{F as E}from"./index.c7fb0192.js";import{c as _}from"./size.8ff2d27e.js";const x="update:modelValue",L=(a,m)=>{const[o]=h(a,"color"),l=v(),{disabled:s}=(l==null?void 0:l.attrs)||{};return d(()=>{const e=a.modelValue?o.value||"var(--md-sys-color-primary)":"#fff",p=a.modelValue?o.value||"var(--md-sys-color-primary)":"#605959",c=a.modelValue?o.value||"var(--md-sys-color-primary)":"#000";return B`
+      opacity: ${s===""?.5:1};
+      --fn-switch-color: ${o.value||"var(--md-sys-color-primary)"};
+      --fn-switch--track-color: ${c};
+      --fn-switch--dot-color: ${e};
+      --fn-switch--dot-hover-color: ${p};
+      & .${m.e("icon")} {
+        color: ${o.value||"var(--md-sys-color-primary)"};
+      }
+    `})},P=b({modelValue:{type:Boolean,required:!0},color:{type:[String,Function],default:"primary"},size:{type:String,value:_,default:"medium"},enableRipple:{type:Boolean,default:!0}}),D=k({__name:"index",props:P,emits:["update:modelValue"],setup(a,{emit:m}){const o=a,l=m,s=v(),e=V("switch-new"),p=L(o,e),c=d({get(){return o.modelValue},set(t){l(x,t)}}),f=d(()=>{const{size:t}=o,{disabled:n}=(s==null?void 0:s.attrs)||{};return[e.b(),e.m(t),n===""?e.m("disabled"):""]}),w=d(()=>{const{disabled:t}=(s==null?void 0:s.attrs)||{};return[t===""?e.m("disabled"):e.m("enabled"),c.value?e.m("active"):""]});return(t,n)=>(C(),N("span",{class:u([...f.value,r(p)])},[i("div",{class:u([r(e).e(`overlay--${o.size}`),w.value])},[i("div",{class:u([r(e).e(`dot--${o.size}`)])},[S(r(E),{color:o.color,duration:1200,center:""},null,8,["color"])],2),F(i("input",z(t.$attrs,{"onUpdate:modelValue":n[0]||(n[0]=y=>c.value=y),class:[r(e).e("input")],type:"checkbox"}),null,16),[[g,c.value]])],2),i("div",{class:u([r(e).e("track")])},null,2)],2))}}),U=$(D,"FnSwitchNew");U.name="FnSwitchNew";export{U as F,x as U};
