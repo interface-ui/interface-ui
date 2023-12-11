@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { useNamespace } from '@fusion-ui-vue/utils'
-import { nextTick, ref, watch } from 'vue'
+import { off, on, throttle, useNamespace } from '@fusion-ui-vue/utils'
+import { nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import FnModal from '../../modal'
 import type { PopoverPlacements } from './popover'
 import { popoverProps } from './popover'
@@ -26,6 +26,9 @@ const DEFAULT_PLACEMENT: PopoverPlacements = { x: 'left', y: 'bottom' }
 
 const calculateStyleFromAnchor = (anchor: HTMLElement) => {
   if (!popoverRef.value) {
+    return
+  }
+  if (!props.anchor) {
     return
   }
 
@@ -143,6 +146,20 @@ const calculateStyleFromEvent = (e: MouseEvent) => {
     minWidth: `${popoverWidth}px`,
   }
 }
+
+const pageChange = throttle(() => {
+  calculateStyleFromAnchor(props.anchor as HTMLElement)
+}, 10)
+
+onMounted(() => {
+  on(window, 'scroll', pageChange)
+  on(window, 'resize', pageChange)
+})
+
+onBeforeUnmount(() => {
+  off(window, 'scroll', pageChange)
+  off(window, 'resize', pageChange)
+})
 
 watch(
   () => props.open,
