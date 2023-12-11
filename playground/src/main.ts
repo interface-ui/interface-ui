@@ -18,9 +18,17 @@ import App from './App.vue'
 const router = createRouter({
   history: createWebHashHistory(),
   routes: [
-    { path: '/', component: () => import('./components/Home.vue') },
+    {
+      path: '/',
+      name: 'Playground',
+      component: () => import('./components/Home.vue'),
+    },
     ...routes,
   ],
+})
+
+router.beforeResolve(to => {
+  document.title = `${to.name as string} ｜ Interface UI`
 })
 
 createApp(App).use(router).use(fusionUi).mount('#app')
