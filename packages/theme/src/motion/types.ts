@@ -32,7 +32,10 @@ export type TransitionTimingFunction = Record<
 
 export type CreateTransition = (
   attrs: string[],
-  options: { duration?: number; timingFunction?: string }
+  options: {
+    duration?: number
+    timingFunction?: TransitionTimingFunctionKey
+  }
 ) => string
 
 export interface Motion {
