@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import '@fusion-ui-vue/components/src/collapse/src/index.less'
 import { ref } from 'vue'
 
 const anchor = ref<HTMLElement | MouseEvent | null>(null)
