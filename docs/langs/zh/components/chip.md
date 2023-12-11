@@ -25,17 +25,17 @@ lang: zh
 ## 禁用
 
 禁用状态的 `Chip` 无法点击。
-<demo src="../../../example/chip/disabled.vue"  preview="[2, 5]" />
+<demo src="../../../example/chip/disabled.vue"  preview="[2-5]" />
 
 ## 颜色
 
 属性 `color` 可以为 `Chip` 添加不同的颜色。
-<demo src="../../../example/chip/color.vue"  preview="[2, 5]" />
+<demo src="../../../example/chip/color.vue"  preview="[2-5]" />
 
 ## 图标
 
 `chip` 内添加图标。
-<demo src="../../../example/chip/icon.vue"  />
+<demo src="../../../example/chip/icon.vue"  preview="[7-10]"  />
 
 ## 可删除
 

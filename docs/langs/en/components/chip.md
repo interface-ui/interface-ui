@@ -25,17 +25,17 @@ Add the `clickable` attribute to `Chip` so that it can be clicked.
 ## Disabled
 
 The disabled `Chip` cannot be clicked.
-<demo src="../../../example/chip/disabled.vue"  preview="[2, 5]" />
+<demo src="../../../example/chip/disabled.vue"  preview="[2-5]" />
 
 ## Color
 
 The attribute `color` can add different colors to `Chip`.
-<demo src="../../../example/chip/color.vue"  preview="[2, 5]" />
+<demo src="../../../example/chip/color.vue"  preview="[2-5]" />
 
 ## Icon
 
 Add an icon in `chip`.
-<demo src="../../../example/chip/icon.vue"  />
+<demo src="../../../example/chip/icon.vue"  preview="[7-10]"  />
 
 ## Deletable
 
