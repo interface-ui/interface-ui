@@ -12,6 +12,7 @@ header {
   margin-bottom: 20px;
   display: flex;
   justify-content: flex-end;
+  gap: 8px;
 }
 
 .content {
@@ -22,4 +23,23 @@ header {
 
 .content + .content {
   margin-top: 16px;
+}
+
+.grid-item {
+  border: 1px dashed #333;
+  text-align: center;
+  font-size: 30px;
+  display: grid;
+  place-items: center;
+  &:hover {
+    color: #584493;
+    font-weight: bold;
+  }
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 216px);
+  grid-auto-rows: 75px;
+  gap: 14px 14px;
 }
