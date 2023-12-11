@@ -1,31 +1,36 @@
-import type { InjectionKey, Ref } from 'vue'
-import { isBoolean } from '@vueuse/core'
-import { UPDATE_MODEL_EVENT } from '@fusion-ui-vue/constants'
+import { buildProps } from '@fusion-ui-vue/utils'
+import type { ExtractPropTypes, PropType } from 'vue'
 
-export const dialogProps = {
-  dialogVisible: {
+export const dialogVariants = ['basic', 'full-screen'] as const
+export type DialogVariants = typeof dialogVariants[number]
+
+export const dialogProps = buildProps({
+  open: {
+    type: Boolean,
+    required: true,
+    default: false,
+  },
+  backdrop: {
+    type: Boolean,
+    default: true,
+  },
+  keepMounted: {
     type: Boolean,
     default: false,
   },
-}
-export const dialogkEmits = {
-  click: (evt: MouseEvent) => evt instanceof MouseEvent,
+  variant: {
+    type: String as PropType<DialogVariants>,
+    values: dialogVariants,
+    default: 'basic',
+  },
+  cs: {
+    type: [Object, String],
+  },
+})
+
+// eslint-disable-next-line @typescript-eslint/consistent-type-definitions
+export type DialogEmits = {
+  close: []
 }
 
-export const dialogEmits = {
-  open: () => true,
-  opened: () => true,
-  close: () => true,
-  closed: () => true,
-  [UPDATE_MODEL_EVENT]: (value: boolean) => isBoolean(value),
-  openAutoFocus: () => true,
-  closeAutoFocus: () => true,
-}
-export type DialogEmits = typeof dialogEmits
-
-export interface DialogContext {
-  dialogRef: Ref<HTMLElement | undefined>
-}
-
-export const dialogInjectionKey: InjectionKey<DialogContext> =
-  Symbol('dialogInjectionKey')
+export type DialogProps = ExtractPropTypes<typeof dialogProps>

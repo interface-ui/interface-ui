@@ -91,6 +91,11 @@ const routes: RouteRecordRaw[] = [
     name: 'Chip',
     component: () => import('../components/Chip.vue'),
   },
+  {
+    path: '/dialog',
+    name: 'Dialog',
+    component: () => import('../components/Dialog.vue'),
+  },
 ]
 
 export default routes

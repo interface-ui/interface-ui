@@ -6,6 +6,9 @@ import FnAlert from './src/alert'
 import FnLink from './src/link'
 import FnMessage from './src/message'
 import FnDialog from './src/dialog'
+import FnDialogHeader from './src/dialog-header'
+import FnDialogContent from './src/dialog-content'
+import FnDialogAction from './src/dialog-action'
 import FnInputBase from './src/input-base'
 import FnRadio from './src/radio'
 import FnCard from './src/card'
@@ -48,6 +51,9 @@ export * from './src/alert'
 export * from './src/link'
 export * from './src/message'
 export * from './src/dialog'
+export * from './src/dialog-header'
+export * from './src/dialog-content'
+export * from './src/dialog-action'
 export * from './src/input-base'
 export * from './src/radio'
 export * from './src/switch'
@@ -90,6 +96,9 @@ export const components = [
   FnLink,
   FnMessage,
   FnDialog,
+  FnDialogHeader,
+  FnDialogContent,
+  FnDialogAction,
   FnInputBase,
   FnRadio,
   FnSwitch,

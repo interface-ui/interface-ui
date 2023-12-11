@@ -1,0 +1,10 @@
+import { buildProps } from '@fusion-ui-vue/utils'
+import type { ExtractPropTypes } from 'vue'
+
+export const dialogContentProps = buildProps({
+  cs: {
+    type: [Object, String],
+  },
+})
+
+export type DialogContentProps = ExtractPropTypes<typeof dialogContentProps>

@@ -1,84 +1,26 @@
+.fn-dialog {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--md-sys-color-surface-container-high);
+  box-shadow: var(--md-sys-elevation-level-24);
 
-.dialog{
-  --fn-dialog-bg-color:var(--fn-sys-color-switch);
-  font-size: 14px;
-}
+  [class^='fn-dialog'] + [class^='fn-dialog'] {
+    padding-top: 0px;
+  }
 
-.dialog-fade-enter-active{
-  animation: dialog-fade-in .3s;
-}
-.dialog-fade-leave-active {
-  animation: dialog-fade-out .3s;
-}
-@keyframes dialog-fade-in{
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes dialog-fade-out{
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-.dialog {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  overflow: auto;
-  z-index: 100;
-  background: rgba(0, 0, 0, .5);
-  > .fn-overlay{
-    width: var(--fn-dialog-width);
-    height: fit-content;
-    position: absolute;
-    border-radius: 4px;
-    transform: translate(-50%, -50%);
-    left: 50%;
-    top: var(--fn-dialog-top) !important;
-    z-index: 200;
-    background-color: var(--fn-dialog-bg-color) !important;
-  
-    > .header{
-      padding: 20px;
-      justify-content: space-between;
-      display: flex;
-      font-weight: 800;
-       span:hover{
-          cursor: pointer;
-      }
-    }
-
-    >.dialog__content{
-      padding: 20px;
-    }
- 
-    > .footer{
-      >.dialog-footer{
-      padding: 20px;
-      justify-content: flex-end;
-      width: 100%;
-      display: flex;
-      text-align: right;
-      }
-    }
-  }
-  > .is-fullscreen{
-    left: 0;
-    top: 0;
-    transform: translate(0, 0);
-    height: 100%;
+  &--container {
     width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  .is-align-center {
-    top: 50% !important;
+
+  &--basic {
+    border-radius: var(--md-sys-shape-corner-extra-large-default-size);
+  }
+  &--full-screen {
+    width: 100%;
+    height: 100%;
   }
 }
