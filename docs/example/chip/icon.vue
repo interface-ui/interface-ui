@@ -9,7 +9,7 @@ const { TodayFilled } = pkg
     Today
   </fn-chip>
   <fn-chip variant="outlined">
-    <today-filled />
     Today
+    <today-filled />
   </fn-chip>
 </template>
