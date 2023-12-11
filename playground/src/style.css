@@ -40,6 +40,5 @@ header {
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, 216px);
-  grid-auto-rows: 75px;
   gap: 14px 14px;
 }
