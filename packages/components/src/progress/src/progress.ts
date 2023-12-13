@@ -25,10 +25,6 @@ export const progressProps = buildProps({
     type: [String, Function] as PropType<AcceptableColor>,
     default: 'primary',
   },
-  size: {
-    type: [Number, String],
-    default: 48,
-  },
   cs: {
     type: [Object, String],
   },

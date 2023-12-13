@@ -1,8 +1,6 @@
 /* eslint-disable @typescript-eslint/indent */
 import type { ComponentStylingHook } from 'packages/hooks/types'
-import { isStringNumber } from '@fusion-ui-vue/utils'
 import { computed } from 'vue'
-import { isNumber } from '@vueuse/core'
 import { css, cx, useColor } from '@fusion-ui-vue/theme'
 import type { ProgressProps } from './progress'
 
@@ -11,13 +9,7 @@ const useCss: ComponentStylingHook<
   { cssClass: string; radius: number }
 > = props =>
   computed(() => {
-    let radius = 0
-    if (isNumber(props.size) || isStringNumber(props.size)) {
-      radius = +props.size / 2 - 2
-    } else {
-      const [size] = props.size.match(/\d+/g) || [48]
-      radius = +size / 2 - 2
-    }
+    const radius = 48 / 2 - 2
     const perimeter = 2 * Math.PI * radius
     const [$color] = useColor(props, 'color')
 

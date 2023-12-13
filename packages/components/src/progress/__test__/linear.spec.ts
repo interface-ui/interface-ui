@@ -18,7 +18,7 @@ describe('CircleProgressBar', () => {
     expect(wrapper.classes()).toContain('fn-progress__linear')
   })
 
-  it('circle progress status', async () => {
+  it('linear progress status', async () => {
     const wrapper = mount(LinearProgressBar, {
       props: { status: 'indeterminate' },
       global: {

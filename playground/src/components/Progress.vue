@@ -25,7 +25,6 @@ onUnmounted(() => {
   <!-- Circle -->
   <fn-progress status="determinate" :value="progress" />
   <fn-progress status="indeterminate" />
-  <fn-progress status="indeterminate" size="30" />
 
   <!-- Linear -->
   <fn-progress variant="linear" status="determinate" :value="progress" />
