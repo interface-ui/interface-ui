@@ -11,6 +11,9 @@ export const svgIconProps = buildProps({
     type: [String, Function] as PropType<AcceptableColor>,
     default: 'inherit',
   },
+  fill: {
+    type: [String, Function] as PropType<AcceptableColor>,
+  },
   component: {
     type: [Object, String] as PropType<string | Component>,
     default: 'svg',

@@ -11,35 +11,36 @@ lang: zh
 
 `Chip` 可以帮助人们输入信息、进行选择、过滤内容或触发操作
 
-## 基础用法
+## 基本用法
 
-`Chip` 支持 `填充` 和 `轮廓` 两种类型。
+`Chip` 支持两种变体：`filled` 和 `outlined`。
 
-<demo src="../../../example/chip/base.vue" preview="[2, 3]" />
+<demo src="../../../example/chip/basic.vue" preview="[2-5]" />
 
 ## 可点击
 
-为 `Chip` 添加 `clickable` 属性，使其可点击。
-<demo src="../../../example/chip/clickable.vue"  preview="[2, 3]" />
+通过设置 `clickable=true` 使 `Chip` 可点击。
 
-## 禁用
+这将在内部使用 `<ActionArea>` 组件，使用 `component` 属性来渲染其他标签。
 
-禁用状态的 `Chip` 无法点击。
-<demo src="../../../example/chip/disabled.vue"  preview="[2-5]" />
+<demo src="../../../example/chip/clickable.vue" preview="[2, 3]" />
 
 ## 颜色
 
-属性 `color` 可以为 `Chip` 添加不同的颜色。
-<demo src="../../../example/chip/color.vue"  preview="[2-5]" />
+`color` 属性可以为 `Chip` 添加不同的颜色。
+
+<demo src="../../../example/chip/color.vue" preview="[2-6]" />
 
 ## 图标
 
-`chip` 内添加图标。
-<demo src="../../../example/chip/icon.vue"  preview="[7-10]"  />
+您可以直接向默认插槽添加图标。
+
+<demo src="../../../example/chip/icon.vue" preview="[7-14]" />
 
 ## 可删除
 
-属性 `deletable` 为 `true` 时，`Chip` 可删除。
+当属性 `deletable=true` 时，`芯片` 将显示一个关闭图标，并在点击时触发 `close` 方法。
+
 <demo src="../../../example/chip/deletable.vue" />
 
 ## 属性

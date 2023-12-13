@@ -14,7 +14,7 @@ const cssClass = useCss(props)
 
 <template>
   <component
-    v-bind="$props.clickable ? { component: 'span' } : {}"
+    v-bind="$props.clickable ? { component: $props.component } : {}"
     :is="$props.clickable ? FnActionArea : $props.component"
     :class="[ns.b(), ns.m($props.variant), cssClass]"
     class="label-large"

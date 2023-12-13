@@ -30,7 +30,7 @@ export const messageProps = buildProps({
     type: Function as PropType<
       (e: VNode, remove: (c: string | number) => void) => void
     >,
-    default: () => {},
+    default: (_e: VNode, _remove: (c: string | number) => void) => {},
   },
   duration: {
     type: Number,

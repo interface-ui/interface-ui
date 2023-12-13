@@ -13,33 +13,34 @@ Chips help people enter information, make selections, filter content, or trigger
 
 ## Basic usage
 
-`Chip` supports two types of `fill` and `contour`.
+`Chip` supports two variants: `fill` and `outlined`.
 
-<demo src="../../../example/chip/base.vue" preview="[2, 3]" />
+<demo src="../../../example/chip/basic.vue" preview="[2-5]" />
 
 ## Clickable
 
-Add the `clickable` attribute to `Chip` so that it can be clicked.
+Make the `Chip` clickable by setting `clickable=true`.
+
+This will use `<ActionArea>` component enternal, use `component` prop to render to the other tag.
+
 <demo src="../../../example/chip/clickable.vue"  preview="[2, 3]" />
-
-## Disabled
-
-The disabled `Chip` cannot be clicked.
-<demo src="../../../example/chip/disabled.vue"  preview="[2-5]" />
 
 ## Color
 
-The attribute `color` can add different colors to `Chip`.
-<demo src="../../../example/chip/color.vue"  preview="[2-5]" />
+The prop `color` can add different colors to `Chip`.
+
+<demo src="../../../example/chip/color.vue"  preview="[2-6]" />
 
 ## Icon
 
-Add an icon in `chip`.
-<demo src="../../../example/chip/icon.vue"  preview="[7-10]"  />
+You can add the icon to the default slot directly.
+
+<demo src="../../../example/chip/icon.vue"  preview="[7-14]"  />
 
 ## Deletable
 
-When the attribute `deletable` is `true`, `Chip` can be deleted.
+When the attribute `deletable=true`, `Chip` will display a close icon and will emit `close` method when its clicked.
+
 <demo src="../../../example/chip/deletable.vue" />
 
 ## Attributes

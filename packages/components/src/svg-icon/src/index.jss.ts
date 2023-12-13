@@ -9,6 +9,7 @@ const useCss: ComponentStylingHook<SvgIconProps> = props =>
       typography: { pxToRem },
     } = useTheme().value
     const [$color] = useColor(props, 'color')
+    const [$fill] = useColor(props, 'fill')
 
     let fontSize
     const _size = +props.size
@@ -21,16 +22,21 @@ const useCss: ComponentStylingHook<SvgIconProps> = props =>
 
     const styleFromCs = props.cs ? css(props.cs) : ''
     return cx(
-      css`
-        user-select: none;
-        width: 1em;
-        height: 1em;
-        display: inline-block;
-        flex-shrink: 0;
-        transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-        font-size: ${fontSize};
-        color: ${$color.value};
-      `,
+      css([
+        {
+          userSelect: 'none',
+          width: '1em',
+          height: '1em',
+          display: 'inline-block',
+          flexShrink: 0,
+          transition: 'fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms',
+          fontSize,
+          color: $color.value!,
+        },
+        props.fill && {
+          fill: $fill.value!,
+        },
+      ]),
       styleFromCs
     )
   })

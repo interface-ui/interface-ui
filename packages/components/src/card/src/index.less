@@ -4,6 +4,10 @@
   overflow: hidden;
   width: fit-content;
   height: fit-content;
+
+  [class^='fn-card']:not(&-media) + [class^='fn-card'] {
+    padding-top: 0px;
+  }
 }
 
 // variant

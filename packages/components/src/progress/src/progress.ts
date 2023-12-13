@@ -1,67 +1,33 @@
+import type { AcceptableColor } from '@fusion-ui-vue/theme'
+import { buildProps } from '@fusion-ui-vue/utils'
 import type { ExtractPropTypes, PropType } from 'vue'
-export const status = ['success', 'danger', 'warning'] as const
-export type progressStatus = typeof status[number]
-export type ComponentState = 'info' | 'success' | 'warning' | 'danger'
 
-export const progressProps = {
-  percentage: {
-    type: Number,
-    default: 0,
-    validator: (val: number): boolean => val >= 0 && val <= 100,
-  },
-  type: {
-    type: String,
-    default: 'line',
-  },
-  height: {
-    type: String,
-    default: '0.5rem',
-  },
-  intermediate: {
-    type: Boolean,
-    default: false,
-  },
-  duration: {
-    type: Number,
-    default: 2,
-  },
-  width: {
-    type: Number,
-    default: 120,
-  },
-  strokeWidth: {
-    type: Number,
-    default: 6,
-  },
-  textInside: {
-    type: Boolean,
-    default: false,
-  },
-  background: {
-    type: String,
-    default: '#f5f5f6',
-  },
-  barColor: {
-    type: String,
-    default: '#3894ff',
-  },
-  color: {
-    type: String,
-    default: '#4987f8',
+export const progressVariants = ['circular', 'linear'] as const
+export type ProgressVariants = typeof progressVariants[number]
+export const progressStatus = ['determinate', 'indeterminate'] as const
+export type ProgressStatus = typeof progressStatus[number]
+
+export const progressProps = buildProps({
+  variant: {
+    type: String as PropType<ProgressVariants>,
+    values: progressVariants,
+    default: 'circular',
   },
   status: {
-    type: String as PropType<progressStatus>,
-    default: '',
+    type: String as PropType<ProgressStatus>,
+    values: progressStatus,
+    default: 'indeterminate',
+  },
+  value: {
+    type: [Number, String],
+  },
+  color: {
+    type: [String, Function] as PropType<AcceptableColor>,
+    default: 'primary',
+  },
+  cs: {
+    type: [Object, String],
+  },
+})
 
-  },
-  striped: {
-    type: Boolean,
-    default: false,
-  },
-  stripedFlow: {
-    type: Boolean,
-    default: false,
-  },
-
-}
 export type ProgressProps = ExtractPropTypes<typeof progressProps>

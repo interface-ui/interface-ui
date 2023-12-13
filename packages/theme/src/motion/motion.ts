@@ -32,6 +32,17 @@ const timingFunction: TransitionTimingFunction = {
   'easing-emphasized': 'cubic-bezier(0.2, 0, 0, 1)',
 }
 
+/**
+ * Create the css transition string
+ * @param {string[]} attrs The attributes that need to be transitioned
+ * @param {object} option The transition options
+ * @param {number} option.duration The transition duration
+ * @param {string} option.timingFunction The transition timing function
+ *
+ * @return {string} The css transition string
+ *
+ * @example create(['opacity', 'transform'], {duration: 300, timingFunction: 'easing-standard'})
+ */
 const create: CreateTransition = (attrs, option = {}) => {
   const { duration = 300, timingFunction = 'easing-standard' } = option
   return `${attrs

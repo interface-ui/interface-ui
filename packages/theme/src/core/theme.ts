@@ -43,4 +43,8 @@ export default class Theme {
     this._darkSchemes = darkSchemes
     this.target = target
   }
+
+  toggleMode(): void {
+    this.mode = this.mode === 'light' ? 'dark' : 'light'
+  }
 }
