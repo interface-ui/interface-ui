@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { useNamespace } from '@fusion-ui-vue/utils'
 import { progressProps } from './progress'
-import CircleProgressBar from './svg/circle.vue'
+import CircularProgressBar from './svg/circular.vue'
 import LinearProgressBar from './svg/linear.vue'
 import useCss from './index.jss'
 
@@ -12,8 +12,8 @@ const style = useCss(props)
 
 <template>
   <span :class="[ns.b(), style.cssClass]">
-    <circle-progress-bar
-      v-if="$props.variant === 'circle'"
+    <circular-progress-bar
+      v-if="$props.variant === 'circular'"
       :color="$props.color"
       :radius="style.radius"
       :status="$props.status"

@@ -1,28 +1,28 @@
-.fn-progress__circle {
+.fn-progress__circular {
   stroke: currentColor;
   &.fn-progress--determinate {
     transform: rotate(-90deg);
     stroke-dasharray: var(--fn-progress-perimeter);
     stroke-dashoffset: 0;
-    circle {
+    circular {
       transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
     }
   }
   &.fn-progress--indeterminate {
     animation: 5332ms cubic-bezier(0.4, 0, 0.2, 1) 0s infinite normal both
       running rotate-arc;
-    .fn-progress__circle--right-track {
+    .fn-progress__circular--right-track {
       stroke-dasharray: 5, 133.23;
       stroke-dashoffset: 0;
       animation: 1333ms cubic-bezier(0.4, 0, 0.2, 1) 0s infinite normal both
-          running progress-circle-right,
+          running progress-circular-right,
         5332ms;
     }
-    .fn-progress__circle--left-track {
+    .fn-progress__circular--left-track {
       stroke-dasharray: 5, 133.23;
       stroke-dashoffset: 281.46;
       animation: 1333ms cubic-bezier(0.4, 0, 0.2, 1) 0s infinite normal both
-          running progress-circle-left,
+          running progress-circular-left,
         5332ms;
     }
   }

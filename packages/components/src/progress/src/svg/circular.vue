@@ -11,8 +11,8 @@ const ns = useNamespace('progress')
 const size = computed(() => ((props.radius ?? 22) + 2) * 2)
 const circles = computed<string[]>(() =>
   props.status === 'indeterminate'
-    ? [ns.em('circle', 'left-track'), ns.em('circle', 'right-track')]
-    : [ns.em('circle', 'active-track')]
+    ? [ns.em('circular', 'left-track'), ns.em('circular', 'right-track')]
+    : [ns.em('circular', 'active-track')]
 )
 const strokeDashoffset = computed(() => {
   if (props.status === 'indeterminate' || props.value === undefined) {
@@ -24,7 +24,7 @@ const strokeDashoffset = computed(() => {
 
 <template>
   <fn-svg-icon :size="size">
-    <svg viewBox="0 0 48 48" :class="[ns.e('circle'), ns.m($props.status)]">
+    <svg viewBox="0 0 48 48" :class="[ns.e('circular'), ns.m($props.status)]">
       <circle
         v-for="circle in circles"
         :key="circle"
