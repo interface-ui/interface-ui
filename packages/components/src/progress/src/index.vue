@@ -7,15 +7,15 @@ import useCss from './index.jss'
 
 const props = defineProps(progressProps)
 const ns = useNamespace('progress')
-const { cssClass, radius } = useCss(props).value
+const style = useCss(props)
 </script>
 
 <template>
-  <span :class="[ns.b(), cssClass]">
+  <span :class="[ns.b(), style.cssClass]">
     <circle-progress-bar
       v-if="$props.variant === 'circle'"
       :color="$props.color"
-      :radius="radius"
+      :radius="style.radius"
       :status="$props.status"
       :value="$props.value"
     />

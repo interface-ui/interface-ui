@@ -31,6 +31,10 @@ describe('FnProgress', () => {
     expect(wrapper.find('.fn-progress--indeterminate').exists()).toBe(true)
     await wrapper.setProps({ status: 'determinate' })
     expect(wrapper.find('.fn-progress--determinate').exists()).toBe(true)
+
+    expect(wrapper.vm.style.radius).toBe(22)
+    await wrapper.setProps({ size: 30 })
+    expect(wrapper.vm.style.radius).toBe(13)
   })
 
   it('linear progress', async () => {

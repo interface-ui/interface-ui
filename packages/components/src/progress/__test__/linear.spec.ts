@@ -1,13 +1,13 @@
 import { describe, expect, it } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { createTheme } from '@fusion-ui-vue/theme'
-import CircleProgressBar from '../src/svg/circle.vue'
+import LinearProgressBar from '../src/svg/linear.vue'
 
 describe('CircleProgressBar', () => {
   const theme = createTheme()
 
   it('render correctly', () => {
-    const wrapper = mount(CircleProgressBar, {
+    const wrapper = mount(LinearProgressBar, {
       props: { status: 'indeterminate' },
       global: {
         provide: {
@@ -15,11 +15,11 @@ describe('CircleProgressBar', () => {
         },
       },
     })
-    expect(wrapper.classes()).toContain('fn-progress__circle')
+    expect(wrapper.classes()).toContain('fn-progress__linear')
   })
 
   it('circle progress status', async () => {
-    const wrapper = mount(CircleProgressBar, {
+    const wrapper = mount(LinearProgressBar, {
       props: { status: 'indeterminate' },
       global: {
         provide: {
