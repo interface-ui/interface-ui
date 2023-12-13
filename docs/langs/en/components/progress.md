@@ -5,70 +5,41 @@ lang: en
 
 <script setup lang="ts">
   import props from "../../../example/progress/description/en-props.ts";
-  import slots from "../../../example/progress/description/en-slots.ts";
 </script>
-
 
 # Progress
 
-Show the current progress status of the operation.
+Progress indicators show the status of a process in real time.
 
 ## Basic usage
 
-The ```percentage``` attribute of the Progress component controls the percentage of current progress.
+There are two variants of the progress indicators: `circular` and `linear`
 
-<demo src="../../../example/progress/base.vue" />
+### Circular
 
+Circular progress indicators display progress by animating along an invisible circular track in a clockwise direction. They can be applied directly to a surface, such as a button or card.
+<demo src="../../../example/progress/circular.vue" preview="[2]" />
 
-## status
+### Linear
 
+Linear progress indicators display progress by animating along the length of a fixed, visible track. The behavior of the indicator is dependent on whether the progress of a process is known.
+<demo src="../../../example/progress/linear.vue" preview="[2]" />
 
-The status of the progress bar can be controlled through the ```status``` attribute, with optional values of ```success``` , ```danger``` , and ```warning```
-<demo src="../../../example/progress/status.vue" />
+## Status
 
-## Display percentage indicator in the progress bar
+**Determinate indicators** display how long a process will take. They should be used when the process completion rate can be detected.
 
-You can control whether a percentage indicator is displayed in the progress bar through the ```text-insert``` attribute, and the ```heihgt``` attribute controls the height of the progress bar.
-<demo src="../../../example/progress/inner.vue" />
+The `value` prop used to set the percentage of the pregress.
+<demo src="../../../example/progress/determinate.vue" preview="[15, 16]" />
 
+**Indeterminate indicators** express an unspecified amount of wait time. They should be used when progress isn’t detectable, or if it’s not necessary to indicate how long an activity will take.
+<demo src="../../../example/progress/indeterminate.vue" preview="[2, 3]" />
 
-## Custom progress bar color
+## Color
 
-The color of the progress bar can be controlled through the ```background``` attribute, and the ```bar-color``` attribute controls the color of the percentage identification within the progress bar.
-<demo src="../../../example/progress/color.vue" />
+Use `color` to custom the progress
+<demo src="../../../example/progress/color.vue" preview="[2-5]" />
 
-## Circular progress bar
-
-The ```type``` attribute controls whether the progress bar is a ring, and the ```stroke-width``` attribute controls the width of the ring progress bar.
-<demo src="../../../example/progress/circle.vue" />
-
-The size of the ring progress bar can be controlled through the ```width``` property.
-<demo src="../../../example/progress/circle-width.vue" />
-
-You can control the ring progress bar through the ```color``` attribute to activate the color of the background, and the ```background``` attribute controls the color of the unactivated background of the ring progress bar.
-<demo src="../../../example/progress/circle-bg.vue" />
-
-You can customize the content displayed in the circular progress bar through the ```slots``` property.
-<demo src="../../../example/progress/slots.vue" />
-
-## Animation progress bar
-
-Use the ```intermediate``` property to set the uncertain progress, and ```duration``` to control the duration of the animation.
-
-<demo src="../../../example/progress/intermediate.vue" />
-
-
-## Striped progress
-
-The ```striped``` attribute gets the fringe progress bar. You can use the ```striped-flow``` attribute to make the stripe flow, and the ```duration``` attribute controls the speed of the flow.
-
-<demo src="../../../example/progress/striped.vue" />
-
- ## Attribute
+## Attribute
 
 <table-block type="propsZh" :data="props" />
-
-
-## Slots
-
-<table-block type="slotsZh" :data="slots" />
