@@ -17,6 +17,7 @@ onUnmounted(() => {
   <div class="content">
     <fn-progress status="determinate" :value="progress" />
     <fn-progress status="indeterminate" />
+    <fn-progress status="indeterminate" size="30" />
   </div>
   <fn-progress variant="linear" status="determinate" :value="progress" />
   <fn-progress variant="linear" status="indeterminate" />
