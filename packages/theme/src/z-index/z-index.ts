@@ -5,7 +5,8 @@ const match = zIndexCSS.matchAll(/--fn-sys-z-index-(.+): ([0-9]+);/g)
 
 export const zIndex: ZIndex = [...match].reduce((pre, cur) => {
   const [_, key, value] = cur
-  pre[key] = Number(value)
+  const camelCaseKey = key.replace(/-(\w)/g, (_, c) => c.toUpperCase())
+  pre[camelCaseKey] = Number(value)
   return pre
 }, {} as any)
 

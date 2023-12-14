@@ -12,7 +12,7 @@ const theme = createTheme() // create a theme instance
 const open = ref(false)
 
 console.log(
-  `%c [Fusion UI] Tip: you can access the documentation 'theme' object directly in the console.`,
+  `%c [Interface UI] Tip: you can access the documentation 'theme' object directly in the console.`,
   'color: #3894ff; font-weight: bold; font-size: 14px;'
 )
 

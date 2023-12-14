@@ -1,58 +1,46 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
 import { useNamespace } from '@fusion-ui-vue/utils'
-import { useDrawer } from '@fusion-ui-vue/hooks'
-import { isString } from '@vue/shared'
+import { Teleport } from 'vue'
+import FnModal from '../../modal'
+import FnFragment from '../../fragment'
+import type { DrawerEmits } from './drawer'
 import { drawerProps } from './drawer'
-const props = defineProps(drawerProps)
-const { visible, doClose } = useDrawer(props)
+import useCss from './index.jss'
 
-const targetDivRef = ref(null)
+const props = defineProps(drawerProps)
+defineEmits<DrawerEmits>()
+defineOptions({ inheritAttrs: false })
 
 const ns = useNamespace('drawer')
-const drawerOverlay = computed(() => {
-  return `${ns.b()}--overlay`
-})
-const drawerClassList = computed(() => {
-  const { direction } = props
-  const classList = [ns.b()]
-  if (isString(direction)) {
-    classList.push(ns.m(direction))
-  }
-  return classList
-})
-
-const handleClose = (event: MouseEvent) => {
-  const targetDiv = targetDivRef.value as HTMLElement | null
-  if (!targetDiv?.contains(event.target as HTMLElement)) {
-    doClose()
-  }
-}
+const cssClass = useCss(props)
 </script>
 
 <template>
-  <teleport to="body">
-    <div
-      v-if="visible"
-      ref="elRef"
-      :class="drawerOverlay"
-      @click="handleClose"
-    />
-
-    <transition :name="`slide-fade--${props.direction}`">
-      <div v-show="visible" ref="targetDivRef" :class="drawerClassList">
-        <header>
-          <span class="drawer-title">
-            {{ props.title }}
-          </span>
-          <span class="drawer-close" @click="doClose">
-            <!-- <fn-icon icon="ic:round-close" size="25" /> -->
-          </span>
-        </header>
-        <div class="drawer-body">
-          <slot />
-        </div>
+  <component
+    :is="$props.variant === 'temporary' ? Teleport : FnFragment"
+    to="body"
+  >
+    <transition :name="ns.bm('animation', `slide-${$props.placement}`)">
+      <div
+        v-if="$props.keepMounted || $props.open"
+        v-show="$props.open"
+        v-bind="$attrs"
+        :class="[
+          ns.b(),
+          ns.m($props.variant),
+          ns.m($props.placement),
+          cssClass,
+        ]"
+      >
+        <slot />
       </div>
     </transition>
-  </teleport>
+  </component>
+  <fn-modal
+    v-if="$props.variant === 'temporary'"
+    :keep-mounted="$props.keepMounted"
+    :model-value="$props.open"
+    :backdrop="$props.backdrop"
+    @click="$emit('close')"
+  />
 </template>

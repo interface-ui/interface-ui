@@ -14,6 +14,7 @@ const leadingBind = {
   icon: {
     class: [ns.m('leading'), ns.m('icon')],
     size: iconSize.medium,
+    color: 'inherit',
   },
   avatar: {
     class: [ns.m('leading'), ns.m('avatar')],

@@ -72,7 +72,7 @@ const genOnColor = <T extends { [k: string]: AcceptableColor | any }>(
     } else if (color.startsWith('#')) {
       computedColor = color
     } else {
-      return '#ffffff'
+      return 'var(--md-sys-color-on-surface)'
     }
 
     const tones = CorePalette.of(argbFromHex(computedColor)).a1
