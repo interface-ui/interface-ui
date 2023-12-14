@@ -29,6 +29,7 @@
     "dist",
     "test",
     "docs",
+    "scripts",
     "playground",
     "gulpfile.ts",
     "**__/test/__**/*",
