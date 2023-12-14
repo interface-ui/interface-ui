@@ -9,14 +9,11 @@ lang: en
 
 # Drawer
 
-This is a drawer that can slide out of the page from ```left``` | ```right``` | ```top``` or ```bottom```.
-
+This drawer can slide out of the page from `left`, `right`, `top`, and `bottom`.
 
 ## Basic usage
 
-```model-value``` attribute to control the display and hidden state of ```Drawer```
-
-<demo src="../../../example/drawer/base.vue" />
+<demo src="../../../example/drawer/basic.vue" preview="[44-55]" />
 
 
 
