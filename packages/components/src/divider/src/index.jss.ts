@@ -1,6 +1,6 @@
-import type { ComponentStylingHook } from '@fusion-ui-vue/hooks/types'
 import { computed } from 'vue'
 import { css, cx } from '@fusion-ui-vue/theme'
+import type { ComponentStylingHook } from '../../../types'
 import type { DividerProps } from './divider'
 
 const useCss: ComponentStylingHook<DividerProps> = props =>

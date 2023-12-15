@@ -1,8 +1,8 @@
 /* eslint-disable quote-props */
-import type { ComponentStylingHook } from 'packages/hooks/types'
 import { computed, ref } from 'vue'
 import { css, cx, useColor } from '@fusion-ui-vue/theme'
 import { isString } from '@vue/shared'
+import type { ComponentStylingHook } from '../../../types'
 import type { ListProps } from './list'
 
 const useCss: ComponentStylingHook<ListProps> = props =>

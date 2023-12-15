@@ -1,6 +1,6 @@
 import { computed } from 'vue'
 import { css, cx, useTheme } from '@fusion-ui-vue/theme'
-import type { ComponentStylingHook } from 'packages/hooks/types'
+import type { ComponentStylingHook } from '../../../types'
 import type { AlertProps } from './alert'
 
 const useCss: ComponentStylingHook<AlertProps> = props =>

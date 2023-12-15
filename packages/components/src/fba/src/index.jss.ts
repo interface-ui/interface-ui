@@ -1,6 +1,6 @@
-import type { ComponentStylingHook } from '@fusion-ui-vue/hooks/types'
 import { computed } from 'vue'
 import { css, useColor } from '@fusion-ui-vue/theme'
+import type { ComponentStylingHook } from '../../../types'
 import type { FbaProps } from './fba'
 
 const useCss: ComponentStylingHook<FbaProps> = props =>

@@ -17,7 +17,6 @@
         "packages/constants",
         "@fusion-ui-vue/constants"
       ],
-      "@fusion-ui-vue/hooks": ["packages/hooks", "@fusion-ui-vue/hooks"],
       "@fusion-ui-vue/theme": ["packages/theme", "@fusion-ui-vue/theme"],
       "@fusion-ui-vue/utils": ["packages/utils", "@fusion-ui-vue/utils"]
     }

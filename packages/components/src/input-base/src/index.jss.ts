@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/indent */
-import type { ComponentStylingHook } from 'packages/hooks/types'
 import { computed } from 'vue'
 import { css, cx, useTheme } from '@fusion-ui-vue/theme'
+import type { ComponentStylingHook } from '../../../types'
 import type { InputBaseProps } from './input-base'
 
 const useCss: ComponentStylingHook<InputBaseProps> = props =>

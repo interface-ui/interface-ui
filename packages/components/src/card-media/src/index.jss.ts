@@ -1,6 +1,6 @@
-import type { ComponentStylingHook } from 'packages/hooks/types'
 import { computed } from 'vue'
 import { css, cx } from '@fusion-ui-vue/theme'
+import type { ComponentStylingHook } from '../../../types'
 import type { CardMediaProps } from './card-media'
 
 const useCss: ComponentStylingHook<CardMediaProps> = props =>

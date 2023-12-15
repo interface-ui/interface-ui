@@ -1,6 +1,6 @@
-import type { ComponentStylingHook } from 'packages/hooks/types'
 import { computed } from 'vue'
 import { css, cx, useColor } from '@fusion-ui-vue/theme'
+import type { ComponentStylingHook } from '../../../types'
 import type { DrawerProps } from './drawer'
 
 const useCss: ComponentStylingHook<DrawerProps> = props =>

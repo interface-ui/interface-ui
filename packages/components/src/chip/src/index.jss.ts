@@ -1,8 +1,8 @@
 /* eslint-disable no-mixed-operators */
 import { computed } from 'vue'
-import type { ComponentStylingHook } from 'packages/hooks/types'
 import { css, cx, useColor, useRgbColor } from '@fusion-ui-vue/theme'
 import { isString } from '@vue/shared'
+import type { ComponentStylingHook } from '../../../types'
 import type { ChipProps } from './chip'
 
 const useCss: ComponentStylingHook<ChipProps> = props =>

@@ -1,6 +1,6 @@
-import type { ComponentStylingHook } from '@fusion-ui-vue/hooks/types'
 import { computed } from 'vue'
 import { css, cx, useColor, useTheme } from '@fusion-ui-vue/theme'
+import type { ComponentStylingHook } from '../../../types'
 import type { SvgIconProps } from './svg-icon'
 
 const useCss: ComponentStylingHook<SvgIconProps> = props =>
