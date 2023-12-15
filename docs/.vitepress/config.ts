@@ -14,12 +14,12 @@ export default defineConfig({
     logo: '/logo.svg',
     editLink: {
       pattern:
-        'https://github.com/tsinghua-lau/interface-ui/edit/master/docs/:path',
+        'https://github.com/tsinghua-lau/fusion-ui/edit/master/docs/:path',
       text: 'Suggest changes to this page',
     },
     nav,
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/tsinghua-lau/interface-ui' },
+      { icon: 'github', link: 'https://github.com/tsinghua-lau/fusion-ui' },
     ],
     sidebar,
     outline: {

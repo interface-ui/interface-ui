@@ -123,9 +123,9 @@ app.use(fusionUi).mount('#app')
 
 ## 特别感谢
 
-❤️ 感谢所有为 ```FusionUi``` 做出 [贡献的人](https://github.com/tsinghua-lau/interface-ui/graphs/contributors)！
+❤️ 感谢所有为 ```FusionUi``` 做出 [贡献的人](https://github.com/tsinghua-lau/fusion-ui/graphs/contributors)！
 
-<a href="https://github.com/tsinghua-lau/interface-ui/graphs/contributors">
+<a href="https://github.com/tsinghua-lau/fusion-ui/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=tsinghua-lau/interface-ui" />
 </a>
 
@@ -136,14 +136,14 @@ app.use(fusionUi).mount('#app')
 [![release version](https://img.shields.io/npm/v/interface-ui.svg?label=FusionUi&color=blue)](https://www.npmjs.com/package/interface-ui)
 
 
-您可以订阅此提要以获取新版本通知: https://github.com/tsinghua-lau/interface-ui/releases
+您可以订阅此提要以获取新版本通知: https://github.com/tsinghua-lau/fusion-ui/releases
 
 ## 问题
 
-如果有建议欢迎 [issue](https://github.com/tsinghua-lau/interface-ui/issues)。
+如果有建议欢迎 [issue](https://github.com/tsinghua-lau/fusion-ui/issues)。
 
 ## 提交
 
 如果你对这个项目感兴趣，欢迎加入。
 
-- [贡献指南](https://github.com/tsinghua-lau/interface-ui/blob/master/CONTRIBUTING.zh-CN.md)
+- [贡献指南](https://github.com/tsinghua-lau/fusion-ui/blob/master/CONTRIBUTING.zh-CN.md)

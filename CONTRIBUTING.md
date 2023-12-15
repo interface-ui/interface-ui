@@ -15,16 +15,16 @@ One person runs fast, and a group of people run farther. We welcome contribution
 * ...
 
 
-🍉🍉🍉🍉 View [Component development process!](https://github.com/tsinghua-lau/interface-ui/tree/master/playground#readme)
+🍉🍉🍉🍉 View [Component development process!](https://github.com/tsinghua-lau/fusion-ui/tree/master/playground#readme)
 
-🍉🍉🍉🍉 View [Component development process!](https://github.com/tsinghua-lau/interface-ui/tree/master/playground#readme)
+🍉🍉🍉🍉 View [Component development process!](https://github.com/tsinghua-lau/fusion-ui/tree/master/playground#readme)
 
-🍉🍉🍉🍉 View [Component development process!](https://github.com/tsinghua-lau/interface-ui/tree/master/playground#readme)
+🍉🍉🍉🍉 View [Component development process!](https://github.com/tsinghua-lau/fusion-ui/tree/master/playground#readme)
 
 
 ## Submit Pull Request
 
-1. Fork [This warehouse](https://github.com/tsinghua-lau/interface-ui)
+1. Fork [This warehouse](https://github.com/tsinghua-lau/fusion-ui)
 2. Enter the local project root directory and use ```pnpm i``` to install dependencies.
 3.Use ```pnpm run docs:dev``` to start the project and view the document.
 4. Please pull the latest code before submitting to avoid file conflicts.

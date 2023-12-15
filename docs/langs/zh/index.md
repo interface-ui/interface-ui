@@ -24,7 +24,7 @@ hero:
 
     - theme: alt
       text: 源代码
-      link: https://github.com/tsinghua-lau/interface-ui
+      link: https://github.com/tsinghua-lau/fusion-ui
 
 features:
   - icon: 🧜
