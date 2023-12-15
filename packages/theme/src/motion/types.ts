@@ -34,7 +34,7 @@ export type CreateTransition = (
   attrs: string[],
   options: {
     duration?: number
-    timingFunction?: TransitionTimingFunctionKey
+    timingFunction?: string
   }
 ) => string
 

@@ -1,73 +1,37 @@
-.fn-drawer--overlay {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 2000;
-  height: 100%;
-  overflow: hidden;
-  background-color: rgba(0, 0, 0, .5);
-  overflow: auto;
-  transition: all .3s;
-}
-
 .fn-drawer {
-  position: fixed;
-  z-index: 2001;
-  box-sizing: border-box;
-  background-color: var(--fn-sys-color-switch);
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  background-color: var(--fn-drawer-color);
 
-  header {
-    color: #72767b;
-    display: flex;
-    padding: 20px;
-    padding-bottom: 0;
-
-    >.drawer-title {
-      flex: 1;
+  &--temporary {
+    position: fixed;
+    box-shadow: var(--md-sys-elevation-level-16);
+    z-index: var(--fn-sys-z-index-drawer);
+    &.fn-drawer--top {
+      top: 0;
+      left: 0;
+      width: 100%;
+      max-height: 100%;
     }
-
-    >.drawer-close {
-      cursor: pointer;
+    &.fn-drawer--bottom {
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      max-height: 100%;
     }
-  }
-
-  >.drawer-body {
-    padding: 20px;
-    overflow: auto;
-  }
-
-  &--top {
-    top: 0;
-    width: 100%;
-    height: auto;
-  }
-
-  &--left {
-    left: 0;
-    top: 0;
-    width: 250px;
-    height: 100%;
-  }
-
-  &--right {
-    right: 0;
-    top: 0;
-    width: 250px;
-    height: 100%;
-  }
-
-  &--bottom {
-    bottom: 0;
-    width: 100%;
-    height: auto;
+    &.fn-drawer--left {
+      left: 0;
+      top: 0;
+      height: 100%;
+    }
+    &.fn-drawer--right {
+      right: 0;
+      top: 0;
+      height: 100%;
+    }
   }
 }
-
 
 @direction: {
   t: top;
@@ -76,102 +40,40 @@
   l: left;
 };
 
-.slide-fade {
+.fn-drawer-animation--slide {
   each(@direction, .(@v) {
-      &--@{v} {
-        &-enter-active,
-        &-leave-active {
-          transition: all .3s;
-        }
-
-      }
-    });
-}
-
-.slide-fade {
-  each(@direction, .(@v) {
-
-
       &-@{v}-enter-active,
       &-@{v}-leave-active {
-        transform:translate(0%) !important;
+          transition: all .3s;
+          transform: translate(0%) !important;
       }
 
-      & when (@v =top) {
-        &--@{v}-enter-from,
-        &--@{v}-leave-to {
-          transform:translateY(-100%) !important;
+      & when (@v = top) {
+        &-@{v}-enter-from,
+        &-@{v}-leave-to {
+          transform: translateY(-100%) !important;
         }
       }
 
-      & when (@v =left) {
-        &--@{v}-enter-from,
-        &--@{v}-leave-to {
-          transform:translateX(-100%) !important;
+      & when (@v = left) {
+        &-@{v}-enter-from,
+        &-@{v}-leave-to {
+          transform: translateX(-100%) !important;
         }
       }
 
-      & when (@v =right) {
-        &--@{v}-enter-from,
-        &--@{v}-leave-to {
-          transform:translateX(100%) !important;
+      & when (@v = right) {
+        &-@{v}-enter-from,
+        &-@{v}-leave-to {
+          transform: translateX(100%) !important;
         }
       }
 
-      & when (@v =bottom) {
-
-        &--@{v}-enter-from,
-        &--@{v}-leave-to {
-          transform:translateY(100%) !important;
+      & when (@v = bottom) {
+        &-@{v}-enter-from,
+        &-@{v}-leave-to {
+          transform: translateY(100%) !important;
         }
       }
     });
 }
-
-// .slide-fade-top,
-// .slide-fade-bottom,
-// .slide-fade-left,
-// .slide-fade-right{
-//   &-enter-active,
-//   &-leave-active {
-//     transition: all 2s;
-//   }
-// }
-
-
-
-
-
-
-
-
-
-
-
-// .slide-fade-top-enter-active, 
-// .slide-fade-top-leave-active, 
-// .slide-fade-left-enter-active, 
-// .slide-fade-left-leave-active, 
-// .slide-fade-right-enter-active, 
-// .slide-fade-right-leave-active, 
-// .slide-fade-bottom-enter-active, 
-// .slide-fade-bottom-leave-active { 
-//     transform: translate(0%) !important; 
-// } 
-
-// .slide-fade-top-enter-from, 
-// .slide-fade-top-leave-to, 
-// .slide-fade-left-enter-from, 
-// .slide-fade-left-leave-to { 
-//     transform: translateX(-100%) !important; 
-// } 
-
-// .slide-fade-right-enter-from, 
-// .slide-fade-right-leave-to { 
-//     transform: translateX(100%) !important; 
-// } 
-
-// .slide-fade-bottom-enter-from, 
-// .slide-fade-bottom-leave-to { 
-//     transform: translateY(100%) !important; 
-// }

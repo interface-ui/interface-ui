@@ -1,7 +1,7 @@
-import type { ComponentStylingHook } from 'packages/hooks/types'
 import { computed } from 'vue'
 import { css, cx, useColor, useRgbColor } from '@fusion-ui-vue/theme'
 import { iconSize } from '@fusion-ui-vue/constants'
+import type { ComponentStylingHook } from '../../../types'
 import type { IconButtonProps } from './icon-button'
 
 const useCss: ComponentStylingHook<IconButtonProps> = (props, ns) =>

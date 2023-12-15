@@ -101,6 +101,11 @@ const routes: RouteRecordRaw[] = [
     name: 'Progress',
     component: () => import('../components/Progress.vue'),
   },
+  {
+    path: '/drawer',
+    name: 'Drawer',
+    component: () => import('../components/Drawer.vue'),
+  },
 ]
 
 export default routes

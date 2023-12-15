@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/indent */
-import type { ComponentStylingHook } from 'packages/hooks/types'
 import { computed } from 'vue'
 import { css, cx, useColor } from '@fusion-ui-vue/theme'
+import type { ComponentStylingHook } from '../../../types'
 import type { ProgressProps } from './progress'
 
 const useCss: ComponentStylingHook<

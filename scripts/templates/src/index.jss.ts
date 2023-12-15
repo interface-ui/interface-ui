@@ -1,5 +1,5 @@
-import type { ComponentStylingHook } from 'packages/hooks/types'
 import { computed } from 'vue'
+import type { ComponentStylingHook } from '../../../types'
 import { css, cx } from '@fusion-ui-vue/theme'
 import type { __component__PascalCase__Props } from './__component__KebabCase__'
 

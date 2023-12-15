@@ -1,6 +1,6 @@
-import type { ComponentStylingHook } from 'packages/hooks/types'
 import { computed } from 'vue'
 import { css, cx } from '@fusion-ui-vue/theme'
+import type { ComponentStylingHook } from '../../../types'
 import type { DialogHeaderProps } from './dialog-header'
 
 const useCss: ComponentStylingHook<DialogHeaderProps> = props =>

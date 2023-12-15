@@ -89,10 +89,6 @@ export const enComponents = [
         link: '/langs/en/components/switch',
       },
       {
-        text: 'SwitchNew',
-        link: '/langs/en/components/switch-new',
-      },
-      {
         text: 'Progress',
         link: '/langs/en/components/progress',
       },
@@ -227,10 +223,6 @@ export const zhComponents = [
       {
         text: 'Switch 开关',
         link: '/langs/zh/components/switch',
-      },
-      {
-        text: 'Switch new 开关',
-        link: '/langs/zh/components/switch-new',
       },
     ],
   },

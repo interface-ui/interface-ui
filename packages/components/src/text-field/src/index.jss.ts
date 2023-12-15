@@ -1,6 +1,6 @@
-import type { ComponentStylingHook } from 'packages/hooks/types'
 import { computed, ref } from 'vue'
 import { css, cx, useColor } from '@fusion-ui-vue/theme'
+import type { ComponentStylingHook } from '../../../types'
 import type { TextFieldProps } from './text-field'
 
 const useCss: ComponentStylingHook<TextFieldProps> = props =>

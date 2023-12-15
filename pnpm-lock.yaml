@@ -14,9 +14,6 @@ importers:
       '@fusion-ui-vue/constants':
         specifier: workspace:*
         version: link:packages/constants
-      '@fusion-ui-vue/hooks':
-        specifier: workspace:*
-        version: link:packages/hooks
       '@fusion-ui-vue/theme':
         specifier: workspace:*
         version: link:packages/theme
@@ -224,12 +221,6 @@ importers:
         version: 3.3.8(typescript@4.9.3)
 
   packages/constants: {}
-
-  packages/hooks:
-    dependencies:
-      vue:
-        specifier: ^3.3.8
-        version: 3.3.8(typescript@4.9.3)
 
   packages/theme:
     dependencies:
@@ -9153,7 +9144,7 @@ packages:
       minimatch: 6.2.0
       resolve: 1.22.4
       unplugin: 1.4.0
-      vue: 3.3.8(typescript@4.9.3)
+      vue: 3.3.8(typescript@5.0.2)
     transitivePeerDependencies:
       - rollup
       - supports-color

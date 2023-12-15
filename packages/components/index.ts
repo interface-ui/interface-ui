@@ -27,7 +27,6 @@ import FnRipple from './src/ripple'
 import FnDrawer from './src/drawer'
 import FnFormLabel from './src/form-label'
 import FnTypography from './src/typography'
-import FnSwitchNew from './src/switch-new'
 import FnTextField from './src/text-field'
 import FnSvgIcon from './src/svg-icon'
 import FnFba from './src/fba'
@@ -71,7 +70,6 @@ export * from './src/drawer'
 export * from './src/form-label'
 export * from './src/typography'
 export * from './src/ripple'
-export * from './src/switch-new'
 export * from './src/text-field'
 export * from './src/svg-icon'
 export * from './src/fba'
@@ -117,7 +115,6 @@ export const components = [
   FnDrawer,
   FnFormLabel,
   FnTypography,
-  FnSwitchNew,
   FnTextField,
   FnSvgIcon,
   FnFba,
