@@ -13,15 +13,15 @@ lang: zh
 
 ## Roboto 字体
 
-Fusion UI 默认使用 [Roboto](https://fonts.google.com/specimen/Roboto) 字体。欲了解更多信息，请查看 [@fontsource/roboto](https://www.npmjs.com/package/@fontsource/roboto)
+Interface UI 默认使用 [Roboto](https://fonts.google.com/specimen/Roboto) 字体。欲了解更多信息，请查看 [@fontsource/roboto](https://www.npmjs.com/package/@fontsource/roboto)
 
-> Fusion UI 的默认排版配置仅依赖于 300、400、500 和 700 字体粗细。
+> Interface UI 的默认排版配置仅依赖于 300、400、500 和 700 字体粗细。
 
 ## 排版尺度
 
 `Typography` 组件遵循 [Material Design Typography Scale](https://m3.material.io/styles/typography/type-scale-tokens) 指南，以构建到 `html` 的映射。请查看以下映射关系。
 
-| Material Design Typography Type Scale | Fusion UI HTML Tag |
+| Material Design Typography Type Scale | Interface UI HTML Tag |
 |:--------------------------------------|:-------------------|
 | Display Large                         | `h1`               |
 | Display Medium                        | `h2`               |

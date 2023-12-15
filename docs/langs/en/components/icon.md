@@ -10,13 +10,13 @@ lang: en
 
 # Icons
 
-Fusion UI Icons follows [Material Symbols and Icons](https://fonts.google.com/icons?icon.set=Material+Icons) guidance to build the icon system.
+Interface UI Icons follows [Material Symbols and Icons](https://fonts.google.com/icons?icon.set=Material+Icons) guidance to build the icon system.
 
-Fusion UI provides two way to build the icon:
-1. With [Fusion UI Iconify](https://www.npmjs.com/package/fusion-ui-iconify) library as Vue component (SVG Icons)
+Interface UI provides two way to build the icon:
+1. With [Interface UI Iconify](https://www.npmjs.com/package/fusion-ui-iconify) library as Vue component (SVG Icons)
 2. With the [SvgIcon](#svgicon) component, a Vue wrapper for custom SVG icons.
 
-## Fusion UI Iconify
+## Interface UI Iconify
 
 [Material Symbols and Icons](https://fonts.google.com/icons?icon.set=Material+Icons) are available in five styles. The icons are based on the core Material Design principles and metrics.
 
@@ -30,9 +30,9 @@ npm install fusion-ui-iconify
 
 ### Usage
 
-If you are not using this library with `Fusion UI`, then you should import the style file.
+If you are not using this library with `Interface UI`, then you should import the style file.
 
-Otherwise, you don't need to do more configuration. The components in `Fusion UI` already complete the adaptation for it.
+Otherwise, you don't need to do more configuration. The components in `Interface UI` already complete the adaptation for it.
 
 ```js
 // main.js
@@ -70,7 +70,7 @@ It supports `<svg>` element as a child so you can copy and paste your SVG direct
 
 ### Color
 
-The `color` prop of Icons in [Fusion UI Iconify](https://www.npmjs.com/package/fusion-ui-iconify) do not support `ThemeSchemes` and `ThemeCallback` since it was built without any dependencies.
+The `color` prop of Icons in [Interface UI Iconify](https://www.npmjs.com/package/fusion-ui-iconify) do not support `ThemeSchemes` and `ThemeCallback` since it was built without any dependencies.
 
 BUT❗️❗️❗️ You can use the `component` prop of `SvgIcon` to enable this feature.
 
@@ -84,7 +84,7 @@ The `size` prop accept both the String and Number.
 
 ## Attributes
 
-### Fusion UI Iconify
+### Interface UI Iconify
 
 <table-block type="propsEn" :data="iconProps" />
 

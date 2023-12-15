@@ -5,7 +5,7 @@ lang: en
 
 # Theming
 
-Fusion UI is a components library based on Vue 3 that implements [Google’s Material Design](https://m3.material.io/).
+Interface UI is a components library based on Vue 3 that implements [Google’s Material Design](https://m3.material.io/).
 
 The theme design aims to provide a set of development specifications to ensure that components developed by different developers have the same styles.
 
@@ -25,7 +25,7 @@ To provide a flexible way to customize the theme, we use the [dynamic color syst
 
 You can use the nested theme with the `ThemeProvider` component.
 
-All the Fusion UI components inside the `ThemeProvider` will appply the new theme.
+All the Interface UI components inside the `ThemeProvider` will appply the new theme.
 
 <demo src="../../../example/theme/nested.vue" />
 

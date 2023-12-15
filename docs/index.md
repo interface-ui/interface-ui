@@ -29,7 +29,7 @@ hero:
 features:
   - icon: 🧜
     title: Components Design
-    details: Fusion UI provides neat & beautiful crafted UI components.
+    details: Interface UI provides neat & beautiful crafted UI components.
   - icon: 🎡
     title: Introduce on demand
     details: Provide resolver to automatically import only used components.

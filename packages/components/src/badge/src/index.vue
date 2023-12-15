@@ -54,7 +54,7 @@ const badgeContent = computed(() => {
   if (content && max) {
     if (!['string', 'number'].includes(typeof content)) {
       debugWarn(
-        '[Fusion UI]',
+        '[Interface UI]',
         'props.content can only be "string" or "number" when set props.max'
       )
       return null
