@@ -1,4 +1,4 @@
-export * from './shcemes'
-export * from './custom-shcemes'
+export * from './schemes'
+export * from './custom-schemes'
 export * from './palettes'
 export * from './theme'
