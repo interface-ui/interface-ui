@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useTheme } from '@fusion-ui-vue/theme'
+import { useTheme } from '@interface-ui/theme'
 import * as pkg from 'fusion-ui-iconify'
 const { NotificationsFilled } = pkg
 // import { NotificationsFilled } from 'fusion-ui-iconify'
@@ -9,14 +9,14 @@ const theme = useTheme()
 
 <template>
   <div fscw gap-10>
-    <fn-badge variant="dot">
-      <fn-button>Dot</fn-button>
-    </fn-badge>
-    <fn-badge content="10">
-      <fn-button>Hello</fn-button>
-    </fn-badge>
-    <fn-badge content="6">
+    <in-badge variant="dot">
+      <in-button>Dot</in-button>
+    </in-badge>
+    <in-badge content="10">
+      <in-button>Hello</in-button>
+    </in-badge>
+    <in-badge content="6">
       <notifications-filled size="24" :color="theme.colors.grey[500]" />
-    </fn-badge>
+    </in-badge>
   </div>
 </template>

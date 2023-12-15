@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import '@fusion-ui-vue/components/src/progress/src/index.less'
-import { FnProgress } from '@fusion-ui-vue/components'
+import '@interface-ui/components/src/progress/src/index.less'
+import { InProgress } from '@interface-ui/components'
 import { ref, onUnmounted } from 'vue'
 
 const progress = ref(0)
@@ -23,36 +23,36 @@ onUnmounted(() => {
 
 <template>
   <!-- Circle -->
-  <fn-progress status="determinate" :value="progress" />
-  <fn-progress status="indeterminate" />
+  <in-progress status="determinate" :value="progress" />
+  <in-progress status="indeterminate" />
 
   <!-- Linear -->
-  <fn-progress variant="linear" status="determinate" :value="progress" />
-  <fn-progress variant="linear" status="indeterminate" />
+  <in-progress variant="linear" status="determinate" :value="progress" />
+  <in-progress variant="linear" status="indeterminate" />
 
   <!-- Color -->
-  <fn-progress color="error" status="indeterminate" />
-  <fn-progress
+  <in-progress color="error" status="indeterminate" />
+  <in-progress
     :color="theme => theme.colors.cyan[400]"
     status="indeterminate"
   />
-  <fn-progress color="error" variant="linear" status="indeterminate" />
-  <fn-progress
+  <in-progress color="error" variant="linear" status="indeterminate" />
+  <in-progress
     :color="theme => theme.colors.cyan[400]"
     variant="linear"
     status="indeterminate"
   />
 
   <!-- Interactive -->
-  <!-- BUG: FnCollapse needs to be optimized -->
-  <!-- <fn-button @click="onClick" :disabled="isLoading">
-    <fn-collapse>
-      <fn-progress
+  <!-- BUG: InCollapse needs to be optimized -->
+  <!-- <in-button @click="onClick" :disabled="isLoading">
+    <in-collapse>
+      <in-progress
         v-if="isLoading"
         size="32"
         :color="isLoading ? 'primary' : 'inversePrimary'"
       />
-    </fn-collapse>
+    </in-collapse>
     Accept
-  </fn-button> -->
+  </in-button> -->
 </template>

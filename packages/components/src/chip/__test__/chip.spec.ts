@@ -1,13 +1,13 @@
 import { describe, expect, it } from 'vitest'
 import { mount } from '@vue/test-utils'
-import createTheme from '@fusion-ui-vue/theme'
-import { toCapitalize } from '@fusion-ui-vue/utils'
-import { FnChip, chipVariants } from '../index'
+import createTheme from '@interface-ui/theme'
+import { toCapitalize } from '@interface-ui/utils'
+import { InChip, chipVariants } from '../index'
 import type { ChipVariants } from '../src/chip'
 
-describe('FnChip', () => {
+describe('InChip', () => {
   it('render correctly', () => {
-    const wrapper = mount(FnChip as any, {
+    const wrapper = mount(InChip as any, {
       slots: { default: 'Chip' },
       global: {
         provide: {
@@ -15,13 +15,13 @@ describe('FnChip', () => {
         },
       },
     })
-    expect(wrapper.classes()).toContain('fn-chip')
+    expect(wrapper.classes()).toContain('in-chip')
     expect(wrapper.text()).toBe('Chip')
   })
 
   it('variant', () => {
     chipVariants.forEach((item: ChipVariants): void => {
-      const wrapper = mount(FnChip as any, {
+      const wrapper = mount(InChip as any, {
         props: { variant: item },
         slots: { default: toCapitalize(item) },
         global: {
@@ -30,12 +30,12 @@ describe('FnChip', () => {
           },
         },
       })
-      expect(wrapper.classes()).toContain(`fn-chip--${item}`)
+      expect(wrapper.classes()).toContain(`in-chip--${item}`)
     })
   })
 
   it('variant change', async () => {
-    const wrapper = mount(FnChip as any, {
+    const wrapper = mount(InChip as any, {
       props: { variant: 'filled' },
       slots: { default: 'Change variant' },
       global: {
@@ -45,13 +45,13 @@ describe('FnChip', () => {
       },
     })
 
-    expect(wrapper.classes()).toContain('fn-chip--filled')
+    expect(wrapper.classes()).toContain('in-chip--filled')
     await wrapper.setProps({ variant: 'outlined' })
-    expect(wrapper.classes()).toContain('fn-chip--outlined')
+    expect(wrapper.classes()).toContain('in-chip--outlined')
   })
 
   it('component', async () => {
-    const wrapper = mount(FnChip as any, {
+    const wrapper = mount(InChip as any, {
       props: { component: 'div' },
       slots: { default: 'Render div tag' },
       global: {
@@ -66,7 +66,7 @@ describe('FnChip', () => {
   })
 
   it('clickable', () => {
-    const wrapper = mount(FnChip as any, {
+    const wrapper = mount(InChip as any, {
       props: { clickable: true },
       slots: { default: 'Clickable Chip' },
       global: {
@@ -75,11 +75,11 @@ describe('FnChip', () => {
         },
       },
     })
-    expect(wrapper.classes()).toContain('fn-action-area')
+    expect(wrapper.classes()).toContain('in-action-area')
   })
 
   it('deletable', () => {
-    const wrapper = mount(FnChip as any, {
+    const wrapper = mount(InChip as any, {
       props: { deletable: true },
       slots: { default: 'Deletable Chip' },
       global: {
@@ -88,7 +88,7 @@ describe('FnChip', () => {
         },
       },
     })
-    wrapper.find('.fn-chip__button--delete').trigger('click')
+    wrapper.find('.in-chip__button--delete').trigger('click')
     expect(wrapper.emitted()).toHaveProperty('delete')
   })
 })

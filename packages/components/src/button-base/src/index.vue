@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { useNamespace } from '@fusion-ui-vue/utils'
+import { useNamespace } from '@interface-ui/utils'
 import { buttonBaseProps } from './button-base'
 import useCss from './index.jss'
 

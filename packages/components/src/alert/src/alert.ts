@@ -2,8 +2,8 @@ import type { Component, ExtractPropTypes, PropType } from 'vue'
 import {
   type ComponentSeverities,
   componentSeverities,
-} from '@fusion-ui-vue/constants'
-import { buildProps } from '@fusion-ui-vue/utils'
+} from '@interface-ui/constants'
+import { buildProps } from '@interface-ui/utils'
 import SuccessOutlined from '../../svg-icon/internal/SuccessOutlined.vue'
 import WarningOutlined from '../../svg-icon/internal/WarningOutlined.vue'
 import ErrorOutlined from '../../svg-icon/internal/ErrorOutlined.vue'

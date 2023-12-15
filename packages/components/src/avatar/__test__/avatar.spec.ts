@@ -1,11 +1,11 @@
 import { describe, expect, it } from 'vitest'
 import { mount } from '@vue/test-utils'
-import createTheme from '@fusion-ui-vue/theme'
-import FnAvatar from '../src/index.vue'
+import createTheme from '@interface-ui/theme'
+import InAvatar from '../src/index.vue'
 
-describe('FnAvatar', () => {
+describe('InAvatar', () => {
   it('class', () => {
-    const wrapper = mount(FnAvatar as any, {
+    const wrapper = mount(InAvatar as any, {
       slots: { default: 'avatar' },
       global: {
         provide: {
@@ -13,6 +13,6 @@ describe('FnAvatar', () => {
         },
       },
     })
-    expect(wrapper.classes()).toContain('fn-avatar')
+    expect(wrapper.classes()).toContain('in-avatar')
   })
 })

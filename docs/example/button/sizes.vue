@@ -1,19 +1,19 @@
 <template>
   <div space-y-2>
     <div fscw gap-2>
-      <fn-button variant="text" size="small">Small</fn-button>
-      <fn-button variant="text" size="medium">Medium</fn-button>
-      <fn-button variant="text" size="large">Large</fn-button>
+      <in-button variant="text" size="small">Small</in-button>
+      <in-button variant="text" size="medium">Medium</in-button>
+      <in-button variant="text" size="large">Large</in-button>
     </div>
     <div fscw gap-2>
-      <fn-button size="small">Small</fn-button>
-      <fn-button size="medium">Medium</fn-button>
-      <fn-button size="large">Large</fn-button>
+      <in-button size="small">Small</in-button>
+      <in-button size="medium">Medium</in-button>
+      <in-button size="large">Large</in-button>
     </div>
     <div fscw gap-2>
-      <fn-button variant="outlined" size="small">Small</fn-button>
-      <fn-button variant="outlined" size="medium">Medium</fn-button>
-      <fn-button variant="outlined" size="large">Large</fn-button>
+      <in-button variant="outlined" size="small">Small</in-button>
+      <in-button variant="outlined" size="medium">Medium</in-button>
+      <in-button variant="outlined" size="large">Large</in-button>
     </div>
   </div>
 </template>

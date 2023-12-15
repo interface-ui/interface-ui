@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { useNamespace } from '@fusion-ui-vue/utils'
+import { useNamespace } from '@interface-ui/utils'
 import { progressProps } from './progress'
 import CircularProgressBar from './svg/circular.vue'
 import LinearProgressBar from './svg/linear.vue'

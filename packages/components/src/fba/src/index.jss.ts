@@ -1,5 +1,5 @@
 import { computed } from 'vue'
-import { css, useColor } from '@fusion-ui-vue/theme'
+import { css, useColor } from '@interface-ui/theme'
 import type { ComponentStylingHook } from '../../../types'
 import type { FbaProps } from './fba'
 
@@ -8,8 +8,8 @@ const useCss: ComponentStylingHook<FbaProps> = props =>
     const [$color, $onColor] = useColor(props, 'color')
 
     return css`
-      --fn-fba-color: ${$color.value};
-      --fn-fba-on-color: ${$onColor.value};
+      --in-fba-color: ${$color.value};
+      --in-fba-on-color: ${$onColor.value};
     `
   })
 

@@ -1,4 +1,4 @@
-import { css, useColor, useRgbColor } from '@fusion-ui-vue/theme'
+import { css, useColor, useRgbColor } from '@interface-ui/theme'
 import { computed } from 'vue'
 import type { ComponentStylingHook } from '../../../types'
 import type { ButtonProps } from './button'
@@ -10,9 +10,9 @@ const useCss: ComponentStylingHook<ButtonProps> = (props, ns) =>
     const [$colorRgb] = useRgbColor(props, 'color')
 
     return css`
-      --fn-button-color: ${$color.value};
-      --fn-button-color-rgb: ${$colorRgb.value};
-      --fn-button-on-color: ${$onColor.value};
+      --in-button-color: ${$color.value};
+      --in-button-color-rgb: ${$colorRgb.value};
+      --in-button-on-color: ${$onColor.value};
       &.${ns!.m('filled')} {
         box-shadow: ${props.disableElevation
           ? 'var(--md-sys-elevation-level-0)'

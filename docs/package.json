@@ -1,11 +1,11 @@
 {
-  "name": "@fusion-ui/docs",
+  "name": "@interface-ui/docs",
   "type": "module",
   "version": "1.0.0",
   "private": true,
-  "description": "fusion-ui docs",
+  "description": "interface-ui docs",
   "keywords": [
-    "fusion-ui",
+    "interface-ui",
     "components",
     "ui",
     "vue"

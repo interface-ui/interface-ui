@@ -34,8 +34,8 @@ const avatars = ref(
 
 <template>
   <div fscw gap-5>
-    <fn-avatar v-for="item in avatars" :key="item.text" v-bind="item.props">
+    <in-avatar v-for="item in avatars" :key="item.text" v-bind="item.props">
       {{ item.text }}
-    </fn-avatar>
+    </in-avatar>
   </div>
 </template>

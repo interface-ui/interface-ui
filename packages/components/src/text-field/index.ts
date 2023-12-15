@@ -1,12 +1,12 @@
-import type { SFCWithInstall } from '@fusion-ui-vue/utils'
-import { withInstall } from '@fusion-ui-vue/utils'
+import type { SFCWithInstall } from '@interface-ui/utils'
+import { withInstall } from '@interface-ui/utils'
 import TextField from './src/index.vue'
 
-export const FnTextField: SFCWithInstall<typeof TextField> = withInstall(
+export const InTextField: SFCWithInstall<typeof TextField> = withInstall(
   TextField,
-  'FnTextField'
+  'InTextField'
 )
-FnTextField.name = 'FnTextField'
-export default FnTextField
+InTextField.name = 'InTextField'
+export default InTextField
 export * from './src/text-field'
 export type TextFieldInstance = InstanceType<typeof TextField>

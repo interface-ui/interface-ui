@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import { useNamespace } from '@fusion-ui-vue/utils'
-import FnButtonBase from '../../button-base'
-import FnRipple from '../../ripple'
+import { useNamespace } from '@interface-ui/utils'
+import InButtonBase from '../../button-base'
+import InRipple from '../../ripple'
 import { fbaProps } from './fba'
 import useCss from './index.jss'
 
@@ -11,10 +11,10 @@ const cssClass = useCss(props)
 </script>
 
 <template>
-  <fn-button-base
+  <in-button-base
     :class="[ns.b(), ns.m($props.size), `title-${$props.size}`, cssClass]"
   >
     <slot />
-    <fn-ripple color="var(--fn-sys-color-switch-reverse)" />
-  </fn-button-base>
+    <in-ripple color="var(--in-sys-color-switch-reverse)" />
+  </in-button-base>
 </template>

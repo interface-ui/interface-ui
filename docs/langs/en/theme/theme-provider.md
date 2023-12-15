@@ -13,7 +13,7 @@ Passing the theme object created by createTheme allows you to customize the them
 
 ```vue
 <script lang="ts" setup>
-import createTheme, { ThemeProvider } from '@fusion-ui-vue/theme'
+import createTheme, { ThemeProvider } from '@interface-ui/theme'
 const theme = createTheme()
 </script>
 
@@ -39,7 +39,7 @@ It comes with just one source color. To enable the default theme, pass nothing t
 ```vue
 <!-- App.vue -->
 <script lang="ts" setup>
-import createTheme, { ThemeProvider } from '@fusion-ui-vue/theme'
+import createTheme, { ThemeProvider } from '@interface-ui/theme'
 const theme = createTheme('#2196F3')
 </script>
 

@@ -1,11 +1,11 @@
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { useNamespace } from '@fusion-ui-vue/utils'
-import { UPDATE_MODEL_EVENT } from '@fusion-ui-vue/constants'
-import { FnIconButton } from '../../icon-button'
+import { useNamespace } from '@interface-ui/utils'
+import { UPDATE_MODEL_EVENT } from '@interface-ui/constants'
+import { InIconButton } from '../../icon-button'
 import RadioButtonChecked from '../../svg-icon/internal/RadioButtonCheckedFilled.vue'
 import RadioButtonUnchecked from '../../svg-icon/internal/RadioButtonUncheckedFilled.vue'
-import FnInputBase from '../../input-base'
+import InInputBase from '../../input-base'
 import { radioProps } from './radio'
 
 const props = defineProps(radioProps)
@@ -25,19 +25,19 @@ const checked = computed<string | number | boolean>({
 </script>
 
 <template>
-  <fn-icon-button
+  <in-icon-button
     component="span"
     v-bind="{ color: $props.color, size: $props.size, class: [ns.b()] }"
     :class="[ns.b(), ns.m(props.size)]"
   >
     <radio-button-checked v-if="checked === $attrs.value" />
     <radio-button-unchecked v-else />
-    <fn-input-base
+    <in-input-base
       v-bind="$attrs"
       v-model="checked"
       :class="[ns.e('input')]"
       type="radio"
       internal
     />
-  </fn-icon-button>
+  </in-icon-button>
 </template>

@@ -9,19 +9,19 @@
 
 -  将你的组件从```packages/index.ts```导出
 
-```main.ts：``` 
+```main.ts：```
 
 -  导入```packages/components```下的组件样式
 
 例如: button组件
 
-  
+
   ```ts
-import '@fusion-ui/components/button/src/index.less' // 开发调试的样式
+import '@interface-ui/components/button/src/index.less' // 开发调试的样式
   ```
 
 ## 3. 启动开始玩耍 🎊
-  
+
   ```
   pnpm run dev
   ```
@@ -81,7 +81,7 @@ pnpm run build
 
 
 4. 编写```md``` 组件描述
-  
+
 ![example](./public/image/md.png)
 
 
@@ -90,7 +90,7 @@ pnpm run build
 ![example](./public/image/link.png)
 
 ## 启动文档
-  
+
   ```
   pnpm run docs:dev
   ```

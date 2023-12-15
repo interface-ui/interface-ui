@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 import { computed, useAttrs } from 'vue'
-import { UPDATE_MODEL_EVENT } from '@fusion-ui-vue/constants'
-import { useNamespace } from '@fusion-ui-vue/utils'
-import FnIconButton from '../../icon-button'
-import FnInputBase from '../../input-base'
+import { UPDATE_MODEL_EVENT } from '@interface-ui/constants'
+import { useNamespace } from '@interface-ui/utils'
+import InIconButton from '../../icon-button'
+import InInputBase from '../../input-base'
 import { checkboxProps } from '../src/checkbox'
 import CheckBox from '../../svg-icon/internal/CheckBoxFilled.vue'
 import CheckBoxOutlineBlank from '../../svg-icon/internal/CheckBoxOutlineBlankFilled.vue'
@@ -33,7 +33,7 @@ const showCheckedIcon = computed<boolean>(() => {
 </script>
 
 <template>
-  <fn-icon-button
+  <in-icon-button
     v-slot="icon"
     component="span"
     v-bind="{
@@ -46,19 +46,19 @@ const showCheckedIcon = computed<boolean>(() => {
       v-bind="{
         checked,
         size: icon.size,
-        class: ['fn-icon', ns.e('icon')],
+        class: ['in-icon', ns.e('icon')],
       }"
     >
       <check-box v-if="showCheckedIcon" />
       <check-box-outline-blank v-else />
     </slot>
     <!-- eslint-disable vue/html-self-closing -->
-    <fn-input-base
+    <in-input-base
       v-bind="$attrs"
       v-model="checked"
       :class="[ns.e('input')]"
       type="checkbox"
       internal
     />
-  </fn-icon-button>
+  </in-icon-button>
 </template>

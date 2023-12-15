@@ -1,5 +1,5 @@
 import { computed } from 'vue'
-import { css, cx, useTheme } from '@fusion-ui-vue/theme'
+import { css, cx, useTheme } from '@interface-ui/theme'
 import type { ComponentStylingHook } from '../../../types'
 import type { AlertProps } from './alert'
 
@@ -9,18 +9,18 @@ const useCss: ComponentStylingHook<AlertProps> = props =>
     const severityPalette = theme.value.palettes[props.severity]
 
     const lightCss = css`
-      --fn-alert-color: color-mix(
+      --in-alert-color: color-mix(
         in srgb,
         ${severityPalette[80]},
-        var(--fn-sys-color-switch) 50%
+        var(--in-sys-color-switch) 50%
       );
-      --fn-alert-on-color: ${severityPalette[40]};
-      --fn-alert-highlight-color: ${severityPalette[50]};
+      --in-alert-on-color: ${severityPalette[40]};
+      --in-alert-highlight-color: ${severityPalette[50]};
     `
     const darkCss = css`
-      --fn-alert-color: ${severityPalette[10]};
-      --fn-alert-on-color: ${severityPalette[50]};
-      --fn-alert-highlight-color: ${severityPalette[60]};
+      --in-alert-color: ${severityPalette[10]};
+      --in-alert-on-color: ${severityPalette[50]};
+      --in-alert-highlight-color: ${severityPalette[60]};
     `
 
     const styleFromCs = props.cs ? css(props.cs) : ''

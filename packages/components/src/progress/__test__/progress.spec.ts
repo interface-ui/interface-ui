@@ -1,24 +1,24 @@
 import { describe, expect, it } from 'vitest'
 import { mount } from '@vue/test-utils'
-import { createTheme } from '@fusion-ui-vue/theme'
-import { FnProgress } from '../index'
+import { createTheme } from '@interface-ui/theme'
+import { InProgress } from '../index'
 
-describe('FnProgress', () => {
+describe('InProgress', () => {
   const theme = createTheme()
 
   it('render correctly', () => {
-    const wrapper = mount(FnProgress as any, {
+    const wrapper = mount(InProgress as any, {
       global: {
         provide: {
           ThemeContext: theme,
         },
       },
     })
-    expect(wrapper.classes()).toContain('fn-progress')
+    expect(wrapper.classes()).toContain('in-progress')
   })
 
   it('circle progress', async () => {
-    const wrapper = mount(FnProgress as any, {
+    const wrapper = mount(InProgress as any, {
       props: { variant: 'circle', status: 'indeterminate' },
       global: {
         provide: {
@@ -27,14 +27,14 @@ describe('FnProgress', () => {
       },
     })
 
-    expect(wrapper.find('.fn-progress__circle').exists()).toBe(true)
-    expect(wrapper.find('.fn-progress--indeterminate').exists()).toBe(true)
+    expect(wrapper.find('.in-progress__circle').exists()).toBe(true)
+    expect(wrapper.find('.in-progress--indeterminate').exists()).toBe(true)
     await wrapper.setProps({ status: 'determinate' })
-    expect(wrapper.find('.fn-progress--determinate').exists()).toBe(true)
+    expect(wrapper.find('.in-progress--determinate').exists()).toBe(true)
   })
 
   it('linear progress', async () => {
-    const wrapper = mount(FnProgress as any, {
+    const wrapper = mount(InProgress as any, {
       props: { variant: 'linear', status: 'indeterminate' },
       global: {
         provide: {
@@ -43,9 +43,9 @@ describe('FnProgress', () => {
       },
     })
 
-    expect(wrapper.find('.fn-progress__linear').exists()).toBe(true)
-    expect(wrapper.find('.fn-progress--indeterminate').exists()).toBe(true)
+    expect(wrapper.find('.in-progress__linear').exists()).toBe(true)
+    expect(wrapper.find('.in-progress--indeterminate').exists()).toBe(true)
     await wrapper.setProps({ status: 'determinate' })
-    expect(wrapper.find('.fn-progress--determinate').exists()).toBe(true)
+    expect(wrapper.find('.in-progress--determinate').exists()).toBe(true)
   })
 })

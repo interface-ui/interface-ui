@@ -1,9 +1,9 @@
-import type { SFCWithInstall } from '@fusion-ui-vue/utils'
-import { withInstall } from '@fusion-ui-vue/utils'
+import type { SFCWithInstall } from '@interface-ui/utils'
+import { withInstall } from '@interface-ui/utils'
 import Link from './src/index.vue'
 
-export const FnLink: SFCWithInstall<typeof Link> = withInstall(Link, 'FnLink')
-FnLink.name = 'FnLink'
-export default FnLink
+export const InLink: SFCWithInstall<typeof Link> = withInstall(Link, 'InLink')
+InLink.name = 'InLink'
+export default InLink
 export * from './src/link'
 export type LinkInstance = InstanceType<typeof Link>

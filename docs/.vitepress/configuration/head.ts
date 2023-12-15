@@ -14,11 +14,14 @@ export const head = [
     'meta',
     {
       property: 'og:url',
-      content: 'https://github.com/tsinghua-lau/fusion-ui',
+      content: 'https://github.com/tsinghua-lau/interface-ui',
     },
   ],
   ['meta', { name: 'referrer', content: 'no-referrer' }],
-  ['link', { rel: 'icon', href: '/fusion-ui/logo.svg', type: 'image/svg+xml' }],
+  [
+    'link',
+    { rel: 'icon', href: '/interface-ui/logo.svg', type: 'image/svg+xml' },
+  ],
   [
     'link',
     {

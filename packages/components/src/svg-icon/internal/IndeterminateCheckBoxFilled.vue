@@ -1,15 +1,15 @@
 <script>
-import FnSvgIcon from '../src'
+import InSvgIcon from '../src'
 export default {
   name: 'IndeterminateCheckBoxFilled',
-  components: { FnSvgIcon },
+  components: { InSvgIcon },
 }
 </script>
 
 <template>
-  <fn-svg-icon cs="fill: currentcolor;">
+  <in-svg-icon cs="fill: currentcolor;">
     <svg
-      class="fn-icon"
+      class="in-icon"
       xmlns="http://www.w3.org/2000/svg"
       enable-background="new 0 0 24 24"
       height="24"
@@ -27,5 +27,5 @@ export default {
         </g>
       </g>
     </svg>
-  </fn-svg-icon>
+  </in-svg-icon>
 </template>

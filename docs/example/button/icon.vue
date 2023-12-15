@@ -5,12 +5,12 @@ const { DeleteFilled, SaveFilled } = pkg
 </script>
 
 <template>
-  <fn-button variant="outlined">
+  <in-button variant="outlined">
     <delete-filled />
     delete
-  </fn-button>
-  <fn-button>
+  </in-button>
+  <in-button>
     save
     <save-filled />
-  </fn-button>
+  </in-button>
 </template>

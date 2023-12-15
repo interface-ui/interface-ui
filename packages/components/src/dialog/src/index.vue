@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { useNamespace } from '@fusion-ui-vue/utils'
-import FnModal from '../../modal'
+import { useNamespace } from '@interface-ui/utils'
+import InModal from '../../modal'
 import type { DialogEmits } from './dialog'
 import { dialogProps } from './dialog'
 import useCss from './index.jss'
@@ -13,7 +13,7 @@ const cssClass = useCss(props)
 </script>
 
 <template>
-  <fn-modal
+  <in-modal
     :keep-mounted="$props.keepMounted"
     :model-value="$props.open"
     :backdrop="$props.backdrop"
@@ -24,5 +24,5 @@ const cssClass = useCss(props)
         <slot />
       </div>
     </div>
-  </fn-modal>
+  </in-modal>
 </template>

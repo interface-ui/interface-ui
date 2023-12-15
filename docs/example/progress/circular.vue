@@ -1,3 +1,3 @@
 <template>
-  <fn-progress />
+  <in-progress />
 </template>

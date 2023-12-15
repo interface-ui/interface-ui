@@ -1,12 +1,12 @@
-import type { SFCWithInstall } from '@fusion-ui-vue/utils'
-import { withInstall } from '@fusion-ui-vue/utils'
+import type { SFCWithInstall } from '@interface-ui/utils'
+import { withInstall } from '@interface-ui/utils'
 import Ripple from './src/index.vue'
 
-export const FnRipple: SFCWithInstall<typeof Ripple> = withInstall(
+export const InRipple: SFCWithInstall<typeof Ripple> = withInstall(
   Ripple,
-  'FnRipple'
+  'InRipple'
 )
-FnRipple.name = 'FnRipple'
-export default FnRipple
+InRipple.name = 'InRipple'
+export default InRipple
 export * from './src/ripple'
 export type RippleInstance = InstanceType<typeof Ripple>

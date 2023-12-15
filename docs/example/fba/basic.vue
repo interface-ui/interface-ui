@@ -4,12 +4,12 @@ const { PaletteOutlined, EditOutlined } = pkg
 </script>
 
 <template>
-  <fn-fba>
+  <in-fba>
     <palette-outlined />
-  </fn-fba>
+  </in-fba>
 
-  <fn-fba>
+  <in-fba>
     <edit-outlined />
     Edit
-  </fn-fba>
+  </in-fba>
 </template>

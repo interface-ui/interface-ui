@@ -22,20 +22,20 @@ English| [简体中文](./README.md)
 
 ```
 # pnpm
-$ pnpm add fusion-ui-vue
+$ pnpm add interface-ui
 
 # npm
-$ npm install fusion-ui-vue
+$ npm install interface-ui
 
 # yarn
-$ yarn add fusion-ui-vue
+$ yarn add interface-ui
 
 
 ```
 
 ## Documentation
 
-- [DOCS](https://fusion-ui-vue.github.io/fusion-ui/)
+- [DOCS](https://interface-ui.github.io/interface-ui/)
 
 ## Warehouse directory
 ```bash
@@ -86,10 +86,10 @@ $ yarn add fusion-ui-vue
 
 ## Special Thanks
 
-❤️ Thanks to [everyone](https://github.com/tsinghua-lau/fusion-ui/graphs/contributors)  who has already contributed to ```Interface UI```!
+❤️ Thanks to [everyone](https://github.com/tsinghua-lau/interface-ui/graphs/contributors)  who has already contributed to ```Interface UI```!
 
-<a href="https://github.com/tsinghua-lau/fusion-ui/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=tsinghua-lau/fusion-ui" />
+<a href="https://github.com/tsinghua-lau/interface-ui/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=tsinghua-lau/interface-ui" />
 </a>
 
 
@@ -97,23 +97,23 @@ $ yarn add fusion-ui-vue
 
 
 
-[![release version](https://img.shields.io/npm/v/fusion-ui-vue.svg?label=FusionUi&color=blue)](https://www.npmjs.com/package/fusion-ui-vue)
+[![release version](https://img.shields.io/npm/v/interface-ui.svg?label=FusionUi&color=blue)](https://www.npmjs.com/package/interface-ui)
 
 
-You can subscribe to this feed to get notifications about new versions:  https://github.com/tsinghua-lau/fusion-ui/releases
+You can subscribe to this feed to get notifications about new versions:  https://github.com/tsinghua-lau/interface-ui/releases
 
 ## Issues
 
-If you have any suggestions, please feel free to create an  [issue](https://github.com/tsinghua-lau/fusion-ui/issues)。
+If you have any suggestions, please feel free to create an  [issue](https://github.com/tsinghua-lau/interface-ui/issues)。
 
 ## Contributions
 
 If you are interested in this project, you are welcome to contribute.
 
-- [Contribution Guide](https://github.com/tsinghua-lau/fusion-ui/blob/master/CONTRIBUTING.md)
+- [Contribution Guide](https://github.com/tsinghua-lau/interface-ui/blob/master/CONTRIBUTING.md)
 
 ## Contributors
 
-<a href="https://github.com/tsinghua-lau/fusion-ui/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=tsinghua-lau/fusion-ui" />
+<a href="https://github.com/tsinghua-lau/interface-ui/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=tsinghua-lau/interface-ui" />
 </a>

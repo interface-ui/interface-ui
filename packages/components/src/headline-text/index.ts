@@ -1,12 +1,12 @@
-import type { SFCWithInstall } from '@fusion-ui-vue/utils'
-import { withInstall } from '@fusion-ui-vue/utils'
+import type { SFCWithInstall } from '@interface-ui/utils'
+import { withInstall } from '@interface-ui/utils'
 import HeadlineText from './src/index.vue'
 
-export const FnHeadlineText: SFCWithInstall<typeof HeadlineText> = withInstall(
+export const InHeadlineText: SFCWithInstall<typeof HeadlineText> = withInstall(
   HeadlineText,
-  'FnHeadlineText'
+  'InHeadlineText'
 )
-FnHeadlineText.name = 'FnHeadlineText'
-export default FnHeadlineText
+InHeadlineText.name = 'InHeadlineText'
+export default InHeadlineText
 export * from './src/headline-text'
 export type HeadlineTextInstance = InstanceType<typeof HeadlineText>

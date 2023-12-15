@@ -1,33 +1,33 @@
-.fn-alert {
+.in-alert {
   display: flex;
   align-items: center;
   gap: 8px;
   position: relative;
   border-radius: var(--md-sys-shape-corner-extra-small-default-size);
   padding: 6px 16px;
-  color: var(--fn-alert-on-color);
+  color: var(--in-alert-on-color);
 
-  .fn-alert--message {
+  .in-alert--message {
     flex: 1;
     padding: 8px 0;
   }
 
-  .fn-alert--icon,
-  > .fn-icon {
+  .in-alert--icon,
+  > .in-icon {
     font-size: 24px;
-    color: var(--fn-alert-highlight-color);
+    color: var(--in-alert-highlight-color);
     // margin: 6px 0 auto;
   }
 }
 
 // variants
-.fn-alert {
+.in-alert {
   &--filled {
-    background-color: var(--fn-alert-color);
+    background-color: var(--in-alert-color);
   }
 
   &--outlined {
-    border: 1px solid var(--fn-alert-highlight-color);
+    border: 1px solid var(--in-alert-highlight-color);
     background: transparent;
   }
 }

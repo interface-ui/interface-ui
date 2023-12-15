@@ -5,7 +5,7 @@ import { head, nav, sidebar, vite } from './configuration'
 
 export default defineConfig({
   title: 'Interface UI',
-  base: '/fusion-ui/',
+  base: '/interface-ui/',
   description:
     'A Vue.js prebuilt component library based on Preline design draft',
   head,
@@ -14,12 +14,12 @@ export default defineConfig({
     logo: '/logo.svg',
     editLink: {
       pattern:
-        'https://github.com/tsinghua-lau/fusion-ui/edit/master/docs/:path',
+        'https://github.com/tsinghua-lau/interface-ui/edit/master/docs/:path',
       text: 'Suggest changes to this page',
     },
     nav,
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/tsinghua-lau/fusion-ui' },
+      { icon: 'github', link: 'https://github.com/tsinghua-lau/interface-ui' },
     ],
     sidebar,
     outline: {

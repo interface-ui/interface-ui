@@ -9,13 +9,13 @@ const { AccessibilityFilled, AutorenewFilled, BookFilled } = pkg
 </script>
 
 <template>
-  <fn-avatar>
+  <in-avatar>
     <book-filled />
-  </fn-avatar>
-  <fn-avatar background="#dc3964" color="white">
+  </in-avatar>
+  <in-avatar background="#dc3964" color="white">
     <accessibility-filled />
-  </fn-avatar>
-  <fn-avatar background="#60ae57" color="white">
+  </in-avatar>
+  <in-avatar background="#60ae57" color="white">
     <autorenew-filled />
-  </fn-avatar>
+  </in-avatar>
 </template>

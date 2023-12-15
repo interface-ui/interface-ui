@@ -1,155 +1,155 @@
 <script lang="ts" setup>
-import '@fusion-ui-vue/components/src/card/src/index.less'
-import '@fusion-ui-vue/components/src/card-content/src/index.less'
-import '@fusion-ui-vue/components/src/card-header/src/index.less'
-import '@fusion-ui-vue/components/src/card-action/src/index.less'
-import '@fusion-ui-vue/components/src/card-media/src/index.less'
-import '@fusion-ui-vue/components/src/action-area/src/index.less'
+import '@interface-ui/components/src/card/src/index.less'
+import '@interface-ui/components/src/card-content/src/index.less'
+import '@interface-ui/components/src/card-header/src/index.less'
+import '@interface-ui/components/src/card-action/src/index.less'
+import '@interface-ui/components/src/card-media/src/index.less'
+import '@interface-ui/components/src/action-area/src/index.less'
 import {
-  FnCard,
-  FnCardContent,
-  FnTypography,
-  FnIconButton,
-  FnActionArea,
-} from '@fusion-ui-vue/components'
+  InCard,
+  InCardContent,
+  InTypography,
+  InIconButton,
+  InActionArea,
+} from '@interface-ui/components'
 import { MoreVertFilled, FavoriteFilled, ShareFilled } from 'fusion-ui-iconify'
 </script>
 
 <template>
   <div class="content">
-    <fn-card>
-      <fn-card-content>
-        <fn-typography gutter cs="opacity: .5;">
+    <in-card>
+      <in-card-content>
+        <in-typography gutter cs="opacity: .5;">
           Word of the Day
-        </fn-typography>
-        <fn-typography variant="h5" component="div">
+        </in-typography>
+        <in-typography variant="h5" component="div">
           be • nev • o • lent
-        </fn-typography>
-        <fn-typography cs="margin-bottom: 12px;"> adjective </fn-typography>
-        <fn-typography cs="opacity: .5;">
+        </in-typography>
+        <in-typography cs="margin-bottom: 12px;"> adjective </in-typography>
+        <in-typography cs="opacity: .5;">
           well meaning and kindly.
           <br />
           a benevolent smile
-        </fn-typography>
-      </fn-card-content>
-    </fn-card>
-    <fn-card variant="filled">
-      <fn-card-content>
-        <fn-typography gutter cs="opacity: .5;">
+        </in-typography>
+      </in-card-content>
+    </in-card>
+    <in-card variant="filled">
+      <in-card-content>
+        <in-typography gutter cs="opacity: .5;">
           Word of the Day
-        </fn-typography>
-        <fn-typography variant="h5" component="div">
+        </in-typography>
+        <in-typography variant="h5" component="div">
           be • nev • o • lent
-        </fn-typography>
-        <fn-typography cs="margin-bottom: 12px;"> adjective </fn-typography>
-        <fn-typography cs="opacity: .5;">
+        </in-typography>
+        <in-typography cs="margin-bottom: 12px;"> adjective </in-typography>
+        <in-typography cs="opacity: .5;">
           well meaning and kindly.
           <br />
           a benevolent smile
-        </fn-typography>
-      </fn-card-content>
-    </fn-card>
-    <fn-card variant="outlined">
-      <fn-card-content>
-        <fn-typography gutter cs="opacity: .5;">
+        </in-typography>
+      </in-card-content>
+    </in-card>
+    <in-card variant="outlined">
+      <in-card-content>
+        <in-typography gutter cs="opacity: .5;">
           Word of the Day
-        </fn-typography>
-        <fn-typography variant="h5" component="div">
+        </in-typography>
+        <in-typography variant="h5" component="div">
           be • nev • o • lent
-        </fn-typography>
-        <fn-typography cs="margin-bottom: 12px;"> adjective </fn-typography>
-        <fn-typography cs="opacity: .5;">
+        </in-typography>
+        <in-typography cs="margin-bottom: 12px;"> adjective </in-typography>
+        <in-typography cs="opacity: .5;">
           well meaning and kindly.
           <br />
           a benevolent smile
-        </fn-typography>
-      </fn-card-content>
-    </fn-card>
+        </in-typography>
+      </in-card-content>
+    </in-card>
   </div>
   <div class="content">
-    <fn-card cs="max-width: 345px;">
-      <fn-card-header>
+    <in-card cs="max-width: 345px;">
+      <in-card-header>
         <template #avatar>
-          <fn-avatar>R</fn-avatar>
+          <in-avatar>R</in-avatar>
         </template>
-        <fn-typography variant="title.medium" component="h1">
+        <in-typography variant="title.medium" component="h1">
           Health Essentials
-        </fn-typography>
-        <fn-typography component="h2" variant="title.small" cs="opacity: .5;">
+        </in-typography>
+        <in-typography component="h2" variant="title.small" cs="opacity: .5;">
           November 14, 2023
-        </fn-typography>
+        </in-typography>
         <template #action>
-          <fn-icon-button color="onSurfaceVariant" cs="opacity: .5;">
+          <in-icon-button color="onSurfaceVariant" cs="opacity: .5;">
             <more-vert-filled />
-          </fn-icon-button>
+          </in-icon-button>
         </template>
-      </fn-card-header>
-      <fn-card-media
+      </in-card-header>
+      <in-card-media
         art="unsplast food photo"
         src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
       />
-      <fn-card-content>
-        <fn-typography>
+      <in-card-content>
+        <in-typography>
           A concise guide covering key health topics like diet, exercise, and
           mental well-being, designed for a quick yet informative read.
-        </fn-typography>
-      </fn-card-content>
-      <fn-card-action>
-        <fn-icon-button color="onSurfaceVariant" cs="opacity: .5;">
+        </in-typography>
+      </in-card-content>
+      <in-card-action>
+        <in-icon-button color="onSurfaceVariant" cs="opacity: .5;">
           <favorite-filled />
-        </fn-icon-button>
-        <fn-icon-button color="onSurfaceVariant" cs="opacity: .5;">
+        </in-icon-button>
+        <in-icon-button color="onSurfaceVariant" cs="opacity: .5;">
           <share-filled />
-        </fn-icon-button>
-      </fn-card-action>
-    </fn-card>
+        </in-icon-button>
+      </in-card-action>
+    </in-card>
 
-    <fn-card cs="max-width: 345px;">
-      <fn-card-media
+    <in-card cs="max-width: 345px;">
+      <in-card-media
         shape="rounded"
         art="A 3D fantasy virtual reality landscape with pastel blue and violet colors."
         src="https://plus.unsplash.com/premium_photo-1699821958487-083a45450c27?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
       />
-      <fn-card-header>
-        <fn-typography variant="h6" component="h1">
+      <in-card-header>
+        <in-typography variant="h6" component="h1">
           Glass Souls' World Tour
-        </fn-typography>
-        <fn-typography variant="title.small" component="h2" cs="opacity: .5;">
+        </in-typography>
+        <in-typography variant="title.small" component="h2" cs="opacity: .5;">
           From your recent favorites
-        </fn-typography>
-      </fn-card-header>
-      <fn-card-action>
-        <fn-button shape="fullRounded">Buy Tickets</fn-button>
-      </fn-card-action>
-    </fn-card>
+        </in-typography>
+      </in-card-header>
+      <in-card-action>
+        <in-button shape="fullRounded">Buy Tickets</in-button>
+      </in-card-action>
+    </in-card>
   </div>
 
   <div class="content">
-    <fn-card cs="max-width: 400px;">
-      <fn-action-area>
-        <fn-card-header>
-          <fn-typography variant="h6" component="h1">
+    <in-card cs="max-width: 400px;">
+      <in-action-area>
+        <in-card-header>
+          <in-typography variant="h6" component="h1">
             Word of the Day
-          </fn-typography>
-          <fn-typography component="h2" variant="title.small" cs="opacity: .5;">
+          </in-typography>
+          <in-typography component="h2" variant="title.small" cs="opacity: .5;">
             November 14, 2023
-          </fn-typography>
-        </fn-card-header>
-        <fn-card-content>
-          <fn-typography cs="opacity: .5">
+          </in-typography>
+        </in-card-header>
+        <in-card-content>
+          <in-typography cs="opacity: .5">
             An exploration of nature's serene beauty, from lush forests to
             tranquil rivers, highlighting the delicate balance and intricate
             connections within ecosystems.
-          </fn-typography>
-        </fn-card-content>
-        <fn-card-media
+          </in-typography>
+        </in-card-content>
+        <in-card-media
           cs="padding-bottom: 16px;"
           gutter
           shape="rounded"
           art="nature"
           src="https://images.unsplash.com/photo-1698778573682-346d219402b5?q=80&w=2636&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         />
-      </fn-action-area>
-    </fn-card>
+      </in-action-area>
+    </in-card>
   </div>
 </template>

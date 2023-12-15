@@ -1,5 +1,5 @@
 import { computed } from 'vue'
-import { css, cx, useColor } from '@fusion-ui-vue/theme'
+import { css, cx, useColor } from '@interface-ui/theme'
 import type { ComponentStylingHook } from '../../../types'
 import type { ListItemProps } from './list-item'
 
@@ -8,7 +8,7 @@ const useCss: ComponentStylingHook<ListItemProps> = props =>
     const [$highlightColor] = useColor(props, 'highlightColor')
 
     const listItemStyle = css`
-      --fn-list-item-highlight-color: ${$highlightColor.value};
+      --in-list-item-highlight-color: ${$highlightColor.value};
       padding: 12px 16px 12px ${16 + +props.indent * 40}px;
       align-items: ${props.alignItems};
     `

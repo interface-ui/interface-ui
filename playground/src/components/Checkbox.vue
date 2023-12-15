@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { FnCheckbox } from '@fusion-ui-vue/components'
+import { InCheckbox } from '@interface-ui/components'
 import { ref } from 'vue'
 
 const checkedNames = ref<string[]>([])
@@ -9,21 +9,21 @@ const checkedNames = ref<string[]>([])
   <div space-y-2>
     <div>{{ checkedNames }}</div>
     <div fscw gap-2>
-      <fn-form-label
+      <in-form-label
         v-model="checkedNames"
-        :control="FnCheckbox"
+        :control="InCheckbox"
         label="Jack"
         value="Jack"
       />
-      <fn-form-label
+      <in-form-label
         v-model="checkedNames"
-        :control="FnCheckbox"
+        :control="InCheckbox"
         label="John"
         value="John"
       />
-      <fn-form-label
+      <in-form-label
         v-model="checkedNames"
-        :control="FnCheckbox"
+        :control="InCheckbox"
         label="Mike"
         value="Mike"
         disabled

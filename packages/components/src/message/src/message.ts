@@ -1,5 +1,5 @@
 import type { Component, ExtractPropTypes, PropType, VNode } from 'vue'
-import { buildProps } from '@fusion-ui-vue/utils'
+import { buildProps } from '@interface-ui/utils'
 import { alertProps } from '../../alert'
 
 const messageXPlacements = ['left', 'center', 'right'] as const

@@ -1,12 +1,12 @@
-import type { SFCWithInstall } from '@fusion-ui-vue/utils'
-import { withInstall } from '@fusion-ui-vue/utils'
+import type { SFCWithInstall } from '@interface-ui/utils'
+import { withInstall } from '@interface-ui/utils'
 import Breadcrumb from './src/index'
 
-export const FnBreadcrumb: SFCWithInstall<typeof Breadcrumb> = withInstall(
+export const InBreadcrumb: SFCWithInstall<typeof Breadcrumb> = withInstall(
   Breadcrumb,
-  'FnBreadcrumb'
+  'InBreadcrumb'
 )
-FnBreadcrumb.name = 'FnBreadcrumb'
-export default FnBreadcrumb
+InBreadcrumb.name = 'InBreadcrumb'
+export default InBreadcrumb
 export * from './src/breadcrumb'
 export type BreadcrumbInstance = InstanceType<typeof Breadcrumb>

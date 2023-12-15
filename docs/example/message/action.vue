@@ -1,28 +1,28 @@
 <script lang="ts" setup>
 import * as pkg from 'fusion-ui-iconify'
-import { FnButton, FnIconButton, FnMessage } from 'interface-ui'
+import { InButton, InIconButton, InMessage } from 'interface-ui'
 import { h } from 'vue'
 
 const { DeleteFilled, VerifiedRound } = pkg
 const handleClickClose = () => {
-  new FnMessage({
+  new InMessage({
     severity: 'success',
   }).push({
     content: 'this is a success message',
     customIcon: VerifiedRound,
-    action: h(FnIconButton, () => h(DeleteFilled)),
+    action: h(InIconButton, () => h(DeleteFilled)),
   })
 }
 
 const handleClickCloseEvent = () => {
-  new FnMessage({
+  new InMessage({
     severity: 'success',
   }).push({
     content: 'this is a success message',
     customIcon: VerifiedRound,
-    action: h(FnIconButton, () => h(DeleteFilled)),
+    action: h(InIconButton, () => h(DeleteFilled)),
     actionEvent: (node, remove) => {
-      new FnMessage().success({ content: 'Close successfully' })
+      new InMessage().success({ content: 'Close successfully' })
       remove((node as any).id)
     },
   })
@@ -30,10 +30,10 @@ const handleClickCloseEvent = () => {
 </script>
 
 <template>
-  <fn-button color="success" variant="outlined" @click="handleClickClose">
+  <in-button color="success" variant="outlined" @click="handleClickClose">
     Close
-  </fn-button>
-  <fn-button color="success" variant="outlined" @click="handleClickCloseEvent">
+  </in-button>
+  <in-button color="success" variant="outlined" @click="handleClickCloseEvent">
     Close Event
-  </fn-button>
+  </in-button>
 </template>

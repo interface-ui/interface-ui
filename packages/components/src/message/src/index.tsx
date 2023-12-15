@@ -1,13 +1,13 @@
-import { generateId, isEmpty, singleton } from '@fusion-ui-vue/utils'
+import { generateId, isEmpty, singleton } from '@interface-ui/utils'
 import type { VNode } from 'vue'
 import { mergeProps, render } from 'vue'
-import FnAlert from '../../alert'
-import FnTypography from '../../typography'
+import InAlert from '../../alert'
+import InTypography from '../../typography'
 import Notistack from './notistack.vue'
 import type { MessageProps } from './message'
 import useCss from './index.jss'
 
-export class FnMessageClass {
+export class InMessageClass {
   private _rendered = false
   private readonly _body: HTMLElement = document.body
   private _notistack: VNode = (<Notistack />)
@@ -66,7 +66,7 @@ export class FnMessageClass {
     }
     let timer: any = null
 
-    const Alert = FnAlert as any
+    const Alert = InAlert as any
     const Icon = customIcon as any
     const Action = action as any
     const id = generateId()
@@ -81,13 +81,13 @@ export class FnMessageClass {
           default: () => (
             <>
               {!isEmpty(title) && (
-                <FnTypography
+                <InTypography
                   variant="title.medium"
                   component="h1"
                   color="inherit"
                 >
                   {title}
-                </FnTypography>
+                </InTypography>
               )}
               {content}
             </>
@@ -147,8 +147,8 @@ export class FnMessageClass {
   }
 
   static install(app: any) {
-    app.config.globalProperties.$message = singleton(FnMessageClass)
+    app.config.globalProperties.$message = singleton(InMessageClass)
   }
 }
 
-export default singleton(FnMessageClass)
+export default singleton(InMessageClass)

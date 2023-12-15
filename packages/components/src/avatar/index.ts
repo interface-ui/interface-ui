@@ -1,12 +1,12 @@
-import type { SFCWithInstall } from '@fusion-ui-vue/utils'
-import { withInstall } from '@fusion-ui-vue/utils'
+import type { SFCWithInstall } from '@interface-ui/utils'
+import { withInstall } from '@interface-ui/utils'
 import Avatar from './src/index.vue'
 
-export const FnAvatar: SFCWithInstall<typeof Avatar> = withInstall(
+export const InAvatar: SFCWithInstall<typeof Avatar> = withInstall(
   Avatar,
-  'FnAvatar'
+  'InAvatar'
 )
-FnAvatar.name = 'FnAvatar'
-export default FnAvatar
+InAvatar.name = 'InAvatar'
+export default InAvatar
 export * from './src/avatar'
 export type AvatarInstance = InstanceType<typeof Avatar>

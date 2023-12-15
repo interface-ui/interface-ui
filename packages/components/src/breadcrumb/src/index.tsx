@@ -1,7 +1,7 @@
 import type { VNode } from 'vue'
 import { computed, defineComponent, mergeProps, ref } from 'vue'
-import { useNamespace } from '@fusion-ui-vue/utils'
-import FnButtonBase from '../../button-base'
+import { useNamespace } from '@interface-ui/utils'
+import InButtonBase from '../../button-base'
 import MoreHorizFilled from '../../svg-icon/internal/MoreHorizFilled.vue'
 import { breadcrumbProps } from './breadcrumb'
 import useCss from './index.jss'
@@ -21,7 +21,7 @@ export default defineComponent({
             {
               underline: props.underline,
               color: 'inherit',
-              cs: { '--fn-link-color-rgb': 'var(--fn-breadcrumb-color-rgb)' },
+              cs: { '--in-link-color-rgb': 'var(--in-breadcrumb-color-rgb)' },
             },
             VNode.props
           )}
@@ -66,7 +66,7 @@ export default defineComponent({
         )
       }
 
-      const ButtonBase = FnButtonBase as any
+      const ButtonBase = InButtonBase as any
       const MoreButton: any = (
         <ButtonBase
           class={[ns.em('button', 'more')]}

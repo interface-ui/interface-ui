@@ -1,7 +1,7 @@
 <template>
-  <fn-breadcrumb>
-    <fn-link>Interface UI</fn-link>
-    <fn-link>Components</fn-link>
-    <fn-link>Breadcrumb</fn-link>
-  </fn-breadcrumb>
+  <in-breadcrumb>
+    <in-link>Interface UI</in-link>
+    <in-link>Components</in-link>
+    <in-link>Breadcrumb</in-link>
+  </in-breadcrumb>
 </template>

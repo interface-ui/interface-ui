@@ -21,7 +21,7 @@ lang: zh
 
 ## 描述
 
-您可以使用`FnTypography`组件在内容上方显示格式化标题。
+您可以使用`InTypography`组件在内容上方显示格式化标题。
 
 <demo src="../../../example/alert/description.vue" />
 

@@ -1,12 +1,12 @@
-import type { SFCWithInstall } from '@fusion-ui-vue/utils'
-import { withInstall } from '@fusion-ui-vue/utils'
+import type { SFCWithInstall } from '@interface-ui/utils'
+import { withInstall } from '@interface-ui/utils'
 import CardHeader from './src/index.vue'
 
-export const FnCardHeader: SFCWithInstall<typeof CardHeader> = withInstall(
+export const InCardHeader: SFCWithInstall<typeof CardHeader> = withInstall(
   CardHeader,
-  'FnCardHeader'
+  'InCardHeader'
 )
-FnCardHeader.name = 'FnCardHeader'
-export default FnCardHeader
+InCardHeader.name = 'InCardHeader'
+export default InCardHeader
 export * from './src/card-header'
 export type CardHeaderInstance = InstanceType<typeof CardHeader>

@@ -1,6 +1,6 @@
 /* eslint-disable quote-props */
 import { computed, ref } from 'vue'
-import { css, cx, useColor } from '@fusion-ui-vue/theme'
+import { css, cx, useColor } from '@interface-ui/theme'
 import { isString } from '@vue/shared'
 import type { ComponentStylingHook } from '../../../types'
 import type { ListProps } from './list'
@@ -20,7 +20,7 @@ const useCss: ComponentStylingHook<ListProps> = props =>
     const listStyle = css([
       {
         color: $onBackground.value ?? 'var(--md-sys-color-on-surface)',
-        '& .fn-list-item': {
+        '& .in-list-item': {
           color: $onBackground.value ?? 'var(--md-sys-color-on-surface)',
         },
       },

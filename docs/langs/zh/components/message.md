@@ -13,7 +13,7 @@ lang: zh
  `❗️更新中...`
 
 ::: warning
-请注意多次 `new FnMessage` 只会创建一个 `Message` 实例。
+请注意多次 `new InMessage` 只会创建一个 `Message` 实例。
 :::
 
 常用于主动操作后的反馈提示，鼠标悬停时消息不消失，鼠标移出后开始倒计时，倒计时结束后消息自动消失。
@@ -24,7 +24,7 @@ lang: zh
 
 ## 基础用法
 
-调用 `FnMessage` 方法，传入 `message` 参数即可。
+调用 `InMessage` 方法，传入 `message` 参数即可。
 
 <demo src="../../../example/message/basic.vue" />
 

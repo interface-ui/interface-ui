@@ -1,7 +1,7 @@
 /* eslint-disable multiline-ternary */
 /* eslint-disable quote-props */
 import { defineComponent } from 'vue'
-import { useNamespace } from '@fusion-ui-vue/utils'
+import { useNamespace } from '@interface-ui/utils'
 import { listProps } from './list'
 import useCss from './index.jss'
 
@@ -24,7 +24,7 @@ export default defineComponent({
       >
         <ul class={[ns.e('ul')]}>
           {slots.default?.().map((VNode: any) =>
-            VNode.type.name === 'FnListItem' ? (
+            VNode.type.name === 'InListItem' ? (
               <VNode
                 {...{
                   indent: props.level,

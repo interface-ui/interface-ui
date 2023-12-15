@@ -20,27 +20,27 @@ Interface UI 是一个 Vue3 组件库，简洁、优雅、美观
 
 ## 特别感谢
 
-❤️ 感谢所有为 ```FusionUi``` 做出 [贡献的人](https://github.com/tsinghua-lau/fusion-ui/graphs/contributors)！
+❤️ 感谢所有为 ```FusionUi``` 做出 [贡献的人](https://github.com/tsinghua-lau/interface-ui/graphs/contributors)！
 
-<a href="https://github.com/tsinghua-lau/fusion-ui/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=tsinghua-lau/fusion-ui" />
+<a href="https://github.com/tsinghua-lau/interface-ui/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=tsinghua-lau/interface-ui" />
 </a>
 
 
 ## 最新版本
 
-[![release version](https://img.shields.io/npm/v/fusion-ui-vue.svg?label=FusionUi&color=blue)](https://www.npmjs.com/package/fusion-ui-vue)
+[![release version](https://img.shields.io/npm/v/interface-ui.svg?label=FusionUi&color=blue)](https://www.npmjs.com/package/interface-ui)
 
 
-您可以订阅此提要以获取新版本通知: https://github.com/tsinghua-lau/fusion-ui/releases
+您可以订阅此提要以获取新版本通知: https://github.com/tsinghua-lau/interface-ui/releases
 
 ## 问题
 
-如果你发现了 bug, 希望您能打开一个 [issue](https://github.com/tsinghua-lau/fusion-ui/issues), 谢谢。
+如果你发现了 bug, 希望您能打开一个 [issue](https://github.com/tsinghua-lau/interface-ui/issues), 谢谢。
 
 ## 参与
 
 如果你对这个项目感兴趣，欢迎加入。
 
-- [行为公约](https://github.com/tsinghua-lau/fusion-ui/blob/master/CODE_OF_CONDUCT.md)
-- [贡献指南](https://github.com/tsinghua-lau/fusion-ui/blob/master/CONTRIBUTING.zh-CN.md)
+- [行为公约](https://github.com/tsinghua-lau/interface-ui/blob/master/CODE_OF_CONDUCT.md)
+- [贡献指南](https://github.com/tsinghua-lau/interface-ui/blob/master/CONTRIBUTING.zh-CN.md)

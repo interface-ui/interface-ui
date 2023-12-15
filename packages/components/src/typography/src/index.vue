@@ -1,9 +1,9 @@
 <!-- eslint-disable @typescript-eslint/indent -->
 <script lang="ts" setup>
 import { computed } from 'vue'
-import type { TypographyMap } from '@fusion-ui-vue/theme'
-import { typographyMapping } from '@fusion-ui-vue/theme'
-import { useNamespace } from '@fusion-ui-vue/utils'
+import type { TypographyMap } from '@interface-ui/theme'
+import { typographyMapping } from '@interface-ui/theme'
+import { useNamespace } from '@interface-ui/utils'
 import { typographyProps } from './typography'
 import useCss from './index.jss'
 

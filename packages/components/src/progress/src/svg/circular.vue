@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import { useNamespace } from '@fusion-ui-vue/utils'
+import { useNamespace } from '@interface-ui/utils'
 import { computed } from 'vue'
-import FnSvgIcon from '../../../svg-icon'
+import InSvgIcon from '../../../svg-icon'
 import { progressCircleSvgProps } from './props'
 
 const props = defineProps(progressCircleSvgProps)
@@ -23,7 +23,7 @@ const strokeDashoffset = computed(() => {
 </script>
 
 <template>
-  <fn-svg-icon :size="size">
+  <in-svg-icon :size="size">
     <svg viewBox="0 0 48 48" :class="[ns.e('circular'), ns.m($props.status)]">
       <circle
         v-for="circle in circles"
@@ -37,5 +37,5 @@ const strokeDashoffset = computed(() => {
         stroke-width="4"
       />
     </svg>
-  </fn-svg-icon>
+  </in-svg-icon>
 </template>

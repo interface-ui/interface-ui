@@ -5,9 +5,9 @@ const { HomeFilled, FlagFilled, AppsFilled } = pkg
 </script>
 
 <template>
-  <fn-breadcrumb>
-    <fn-link><home-filled /> Interface UI</fn-link>
-    <fn-link><flag-filled /> Components</fn-link>
-    <fn-link><apps-filled /> Breadcrumb</fn-link>
-  </fn-breadcrumb>
+  <in-breadcrumb>
+    <in-link><home-filled /> Interface UI</in-link>
+    <in-link><flag-filled /> Components</in-link>
+    <in-link><apps-filled /> Breadcrumb</in-link>
+  </in-breadcrumb>
 </template>

@@ -1,15 +1,15 @@
 <script lang="ts" setup>
-import '@fusion-ui-vue/components/src/drawer/src/index.less'
+import '@interface-ui/components/src/drawer/src/index.less'
 import {
-  FnDrawer,
-  FnButton,
-  FnTypography,
-  FnIconButton,
-} from '@fusion-ui-vue/components'
+  InDrawer,
+  InButton,
+  InTypography,
+  InIconButton,
+} from '@interface-ui/components'
 import {
   ComponentDirections,
   componentDirections,
-} from '@fusion-ui-vue/constants'
+} from '@interface-ui/constants'
 import { ref, shallowRef } from 'vue'
 import {
   LocalFireDepartmentFilled,
@@ -21,7 +21,7 @@ import {
   StarsFilled,
   MenuFilled,
 } from 'fusion-ui-iconify'
-import { styled } from '@fusion-ui-vue/theme'
+import { styled } from '@interface-ui/theme'
 
 const openTemporary = ref(false)
 const openPersistent = ref(false)
@@ -82,44 +82,44 @@ const MainSection = styled('main')(theme => ({
 <template>
   <!-- Temporary -->
   <div class="content">
-    <fn-button
+    <in-button
       v-for="placement in componentDirections"
       :key="placement"
       variant="text"
       @click="onClick(placement)"
     >
       {{ placement }}
-    </fn-button>
+    </in-button>
   </div>
-  <fn-drawer
+  <in-drawer
     :open="openTemporary"
     :placement="placement"
     @close="openTemporary = false"
     :backdrop="false"
   >
-    <fn-list
+    <in-list
       :cs="{ width: ['top', 'bottom'].includes(placement) ? 'auto' : '250px' }"
     >
-      <fn-list-item v-for="item in list" :key="item.text">
+      <in-list-item v-for="item in list" :key="item.text">
         <template #leading="{ icon }">
           <component :is="item.icon" v-bind="icon" />
         </template>
         {{ item.text }}
-      </fn-list-item>
-    </fn-list>
-  </fn-drawer>
+      </in-list-item>
+    </in-list>
+  </in-drawer>
 
   <!-- Persistent -->
   <box>
     <app-bar>
-      <fn-icon-button @click="openPersistent = !openPersistent">
+      <in-icon-button @click="openPersistent = !openPersistent">
         <menu-filled />
-      </fn-icon-button>
-      <fn-typography variant="title.medium" component="h1">
+      </in-icon-button>
+      <in-typography variant="title.medium" component="h1">
         Ea quis labore qui
-      </fn-typography>
+      </in-typography>
     </app-bar>
-    <fn-drawer
+    <in-drawer
       variant="persistent"
       :open="openPersistent"
       placement="left"
@@ -127,19 +127,19 @@ const MainSection = styled('main')(theme => ({
       cs="flex: 0 0 auto; background-color: transparent"
     >
       <drawer-header />
-      <fn-list
+      <in-list
         :cs="{ width: '250px', borderRadius: 0, background: 'transparent' }"
       >
-        <fn-list-item v-for="item in list" :key="item.text">
+        <in-list-item v-for="item in list" :key="item.text">
           <template #leading="{ icon }">
             <component :is="item.icon" v-bind="icon" />
           </template>
           {{ item.text }}
-        </fn-list-item>
-      </fn-list>
-    </fn-drawer>
+        </in-list-item>
+      </in-list>
+    </in-drawer>
     <main-section>
-      <fn-typography>
+      <in-typography>
         Irure esse consequat nostrud aliqua id aute qui. Aliquip ipsum Lorem
         ipsum fugiat. Consequat fugiat fugiat nulla ullamco consequat do velit
         quis cillum aliquip. Culpa laboris deserunt occaecat ea officia. Nulla
@@ -152,7 +152,7 @@ const MainSection = styled('main')(theme => ({
         deserunt do esse laborum irure adipisicing consequat Lorem. Voluptate
         exercitation minim et deserunt. Irure eiusmod ex et aute do laborum sunt
         ipsum excepteur sint ea deserunt reprehenderit id.
-      </fn-typography>
+      </in-typography>
     </main-section>
   </box>
 </template>

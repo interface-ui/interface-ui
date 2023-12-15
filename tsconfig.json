@@ -9,16 +9,16 @@
     "declarationDir": "./interface-ui/dist/types",
     "types": ["node"],
     "paths": {
-      "@fusion-ui-vue/components": [
+      "@interface-ui/components": [
         "packages/components",
-        "@fusion-ui-vue/components"
+        "@interface-ui/components"
       ],
-      "@fusion-ui-vue/constants": [
+      "@interface-ui/constants": [
         "packages/constants",
-        "@fusion-ui-vue/constants"
+        "@interface-ui/constants"
       ],
-      "@fusion-ui-vue/theme": ["packages/theme", "@fusion-ui-vue/theme"],
-      "@fusion-ui-vue/utils": ["packages/utils", "@fusion-ui-vue/utils"]
+      "@interface-ui/theme": ["packages/theme", "@interface-ui/theme"],
+      "@interface-ui/utils": ["packages/utils", "@interface-ui/utils"]
     }
   },
 

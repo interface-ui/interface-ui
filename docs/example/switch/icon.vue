@@ -7,8 +7,8 @@ const value = ref<boolean>(true)
 </script>
 
 <template>
-  <fn-switch v-model="value" disabled-icon />
-  <fn-switch v-model="value">
+  <in-switch v-model="value" disabled-icon />
+  <in-switch v-model="value">
     <add-filled />
-  </fn-switch>
+  </in-switch>
 </template>

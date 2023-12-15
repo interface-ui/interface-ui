@@ -12,6 +12,6 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <fn-progress :value="progress" status="determinate" />
-  <fn-progress variant="linear" :value="progress" status="determinate" />
+  <in-progress :value="progress" status="determinate" />
+  <in-progress variant="linear" :value="progress" status="determinate" />
 </template>

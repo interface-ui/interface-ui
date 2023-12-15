@@ -1,111 +1,111 @@
 <script lang="ts" setup>
-import { FnAlert } from '@fusion-ui-vue/components'
+import { InAlert } from '@interface-ui/components'
 import { CloseOutlined } from 'fusion-ui-iconify'
 </script>
 
 <template>
   <div class="content">
-    <fn-alert severity="success">
+    <in-alert severity="success">
       This is an success alert — check it out!
-    </fn-alert>
-    <fn-alert severity="warning">
+    </in-alert>
+    <in-alert severity="warning">
       This is an warning alert — check it out!
-    </fn-alert>
-    <fn-alert severity="info"> This is an info alert — check it out! </fn-alert>
-    <fn-alert severity="error">
+    </in-alert>
+    <in-alert severity="info"> This is an info alert — check it out! </in-alert>
+    <in-alert severity="error">
       This is an error alert — check it out!
-    </fn-alert>
+    </in-alert>
   </div>
 
   <div class="content" style="margin-top: 16px">
-    <fn-alert
+    <in-alert
       variant="outlined"
       severity="success"
-      :cs="{ '& .fn-alert--message': { opacity: 0 } }"
+      :cs="{ '& .in-alert--message': { opacity: 0 } }"
     >
       This is an success alert — check it out!
-    </fn-alert>
-    <fn-alert variant="outlined" severity="warning" cs="opacity: 0">
+    </in-alert>
+    <in-alert variant="outlined" severity="warning" cs="opacity: 0">
       This is an warning alert — check it out!
-    </fn-alert>
-    <fn-alert variant="outlined" severity="info">
+    </in-alert>
+    <in-alert variant="outlined" severity="info">
       This is an info alert — check it out!
-    </fn-alert>
-    <fn-alert variant="outlined" severity="error">
+    </in-alert>
+    <in-alert variant="outlined" severity="error">
       This is an error alert — check it out!
-    </fn-alert>
+    </in-alert>
   </div>
 
   <div class="content" style="margin-top: 16px">
-    <fn-alert variant="outlined" severity="success">
-      <fn-typography variant="title.medium" component="h1" color="inherit">
+    <in-alert variant="outlined" severity="success">
+      <in-typography variant="title.medium" component="h1" color="inherit">
         This is a Success Title
-      </fn-typography>
+      </in-typography>
       This is an success alert — check it out!
-    </fn-alert>
-    <fn-alert variant="outlined" severity="warning">
-      <fn-typography variant="title.medium" component="h1" color="inherit">
+    </in-alert>
+    <in-alert variant="outlined" severity="warning">
+      <in-typography variant="title.medium" component="h1" color="inherit">
         This is a Warning Title
-      </fn-typography>
+      </in-typography>
       This is an warning alert — check it out!
-    </fn-alert>
-    <fn-alert variant="outlined" severity="info">
-      <fn-typography variant="title.medium" component="h1" color="inherit">
+    </in-alert>
+    <in-alert variant="outlined" severity="info">
+      <in-typography variant="title.medium" component="h1" color="inherit">
         This is a Info Title
-      </fn-typography>
+      </in-typography>
       This is an info alert — check it out!
-    </fn-alert>
-    <fn-alert variant="outlined" severity="error">
-      <fn-typography variant="title.medium" component="h1" color="inherit">
+    </in-alert>
+    <in-alert variant="outlined" severity="error">
+      <in-typography variant="title.medium" component="h1" color="inherit">
         This is a Error Title
-      </fn-typography>
+      </in-typography>
       This is an error alert — check it out!
-    </fn-alert>
+    </in-alert>
   </div>
 
-  <fn-alert variant="outlined" severity="success" style="margin-top: 16px">
+  <in-alert variant="outlined" severity="success" style="margin-top: 16px">
     This is an success alert — check it out!
     <template #action="btn">
-      <fn-icon-button v-bind="btn">
+      <in-icon-button v-bind="btn">
         <close-outlined />
-      </fn-icon-button>
+      </in-icon-button>
     </template>
-  </fn-alert>
+  </in-alert>
 
-  <fn-alert variant="outlined" severity="warning" style="margin-top: 16px">
+  <in-alert variant="outlined" severity="warning" style="margin-top: 16px">
     This is an warning alert — check it out!
     <template #action="btn">
-      <fn-button v-bind="btn" variant="text">undo</fn-button>
+      <in-button v-bind="btn" variant="text">undo</in-button>
     </template>
-  </fn-alert>
+  </in-alert>
 
-  <fn-alert severity="info" style="margin-top: 16px">
+  <in-alert severity="info" style="margin-top: 16px">
     This is an info alert — check it out!
     <template #action="btn">
-      <fn-icon-button v-bind="btn">
+      <in-icon-button v-bind="btn">
         <close-outlined />
-      </fn-icon-button>
+      </in-icon-button>
     </template>
-  </fn-alert>
+  </in-alert>
 
-  <fn-alert severity="error" style="margin-top: 16px">
+  <in-alert severity="error" style="margin-top: 16px">
     This is an error alert — check it out!
     <template #action="btn">
-      <fn-button v-bind="btn" variant="text">undo</fn-button>
+      <in-button v-bind="btn" variant="text">undo</in-button>
     </template>
-  </fn-alert>
+  </in-alert>
 
-  <fn-alert severity="error" style="margin-top: 16px">
+  <in-alert severity="error" style="margin-top: 16px">
     <template #icon>
       <close-outlined />
     </template>
     This is an error alert — check it out!
-  </fn-alert>
+  </in-alert>
 
-  <fn-alert severity="error" :icon="false" style="margin-top: 16px">
+  <in-alert severity="error" :icon="false" style="margin-top: 16px">
     <template #icon>
       <close-outlined />
     </template>
     This is an error alert — check it out!
-  </fn-alert>
+  </in-alert>
 </template>

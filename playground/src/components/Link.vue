@@ -1,20 +1,20 @@
 <script lang="ts" setup>
-import '@fusion-ui-vue/components/src/link/src/index.less' // 开发调试的样式
-import { FnLink } from '@fusion-ui-vue/components'
+import '@interface-ui/components/src/link/src/index.less' // 开发调试的样式
+import { InLink } from '@interface-ui/components'
 </script>
 
 <template>
   <div class="content">
-    <fn-link href="#">Link</fn-link>
-    <fn-link href="#" underline="none">Link</fn-link>
-    <fn-link href="#" underline="hover">Link</fn-link>
+    <in-link href="#">Link</in-link>
+    <in-link href="#" underline="none">Link</in-link>
+    <in-link href="#" underline="hover">Link</in-link>
   </div>
   <div class="content">
-    <fn-link href="#">Link</fn-link>
-    <fn-link href="#" color="tertiary">Link</fn-link>
-    <fn-link href="#" color="inherit">Link</fn-link>
-    <fn-link href="#" color="error">Link</fn-link>
-    <fn-link href="#" :color="theme => theme.colors.cyan[400]">Link</fn-link>
-    <fn-link href="#" color="#2E7D32">Link</fn-link>
+    <in-link href="#">Link</in-link>
+    <in-link href="#" color="tertiary">Link</in-link>
+    <in-link href="#" color="inherit">Link</in-link>
+    <in-link href="#" color="error">Link</in-link>
+    <in-link href="#" :color="theme => theme.colors.cyan[400]">Link</in-link>
+    <in-link href="#" color="#2E7D32">Link</in-link>
   </div>
 </template>

@@ -1,12 +1,12 @@
-import type { SFCWithInstall } from '@fusion-ui-vue/utils'
-import { withInstall } from '@fusion-ui-vue/utils'
+import type { SFCWithInstall } from '@interface-ui/utils'
+import { withInstall } from '@interface-ui/utils'
 import ActionArea from './src/index.vue'
 
-export const FnActionArea: SFCWithInstall<typeof ActionArea> = withInstall(
+export const InActionArea: SFCWithInstall<typeof ActionArea> = withInstall(
   ActionArea,
-  'FnActionArea'
+  'InActionArea'
 )
-FnActionArea.name = 'FnActionArea'
-export default FnActionArea
+InActionArea.name = 'InActionArea'
+export default InActionArea
 export * from './src/action-area'
 export type ActionAreaInstance = InstanceType<typeof ActionArea>

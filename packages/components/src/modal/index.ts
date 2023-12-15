@@ -1,12 +1,12 @@
-import type { SFCWithInstall } from '@fusion-ui-vue/utils'
-import { withInstall } from '@fusion-ui-vue/utils'
+import type { SFCWithInstall } from '@interface-ui/utils'
+import { withInstall } from '@interface-ui/utils'
 import Modal from './src/index.vue'
 
-export const FnModal: SFCWithInstall<typeof Modal> = withInstall(
+export const InModal: SFCWithInstall<typeof Modal> = withInstall(
   Modal,
-  'FnModal'
+  'InModal'
 )
-FnModal.name = 'FnModal'
-export default FnModal
+InModal.name = 'InModal'
+export default InModal
 export * from './src/modal'
 export type ModalInstance = InstanceType<typeof Modal>

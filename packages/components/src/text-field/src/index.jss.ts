@@ -1,5 +1,5 @@
 import { computed, ref } from 'vue'
-import { css, cx, useColor } from '@fusion-ui-vue/theme'
+import { css, cx, useColor } from '@interface-ui/theme'
 import type { ComponentStylingHook } from '../../../types'
 import type { TextFieldProps } from './text-field'
 
@@ -10,7 +10,7 @@ const useCss: ComponentStylingHook<TextFieldProps> = props =>
       : useColor(props, 'color')
 
     const styleFromCs = props.cs ? css(props.cs) : ''
-    return cx(css({ '--fn-text-field-color': $color.value }), styleFromCs)
+    return cx(css({ '--in-text-field-color': $color.value }), styleFromCs)
   })
 
 export default useCss

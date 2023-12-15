@@ -1,5 +1,5 @@
 {
-  "name": "@fusion-ui-vue/components",
+  "name": "@interface-ui/components",
   "version": "0.0.2",
   "description": "all components are settled here",
   "sideEffects": false,

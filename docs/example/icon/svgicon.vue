@@ -1,9 +1,9 @@
 <script lang="ts" setup>
-import { FnSvgIcon } from '@fusion-ui-vue/components'
+import { InSvgIcon } from '@interface-ui/components'
 </script>
 
 <template>
-  <fn-svg-icon
+  <in-svg-icon
     :color="theme => theme.schemes.primary"
     size="30"
     cs="& polygon {fill: currentColor;}"
@@ -31,9 +31,9 @@ import { FnSvgIcon } from '@fusion-ui-vue/components'
         </g>
       </g>
     </svg>
-  </fn-svg-icon>
+  </in-svg-icon>
 
-  <fn-svg-icon fill="#5cb685" size="30">
+  <in-svg-icon fill="#5cb685" size="30">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 1024 1024"
@@ -43,5 +43,5 @@ import { FnSvgIcon } from '@fusion-ui-vue/components'
         d="M512 504L764.8 68.8h-134.4L512 275.2 393.6 70.4h-134.4L512 504zM819.2 70.4L512 600 204.8 68.8H0l512 886.4L1024 70.4H819.2z"
       />
     </svg>
-  </fn-svg-icon>
+  </in-svg-icon>
 </template>

@@ -6,16 +6,16 @@ const { CheckFilled } = pkg
 
 <template>
   <div style="width: 320px">
-    <fn-list>
-      <fn-list-item>
+    <in-list>
+      <in-list-item>
         <template #leading="{ icon }">
           <check-filled v-bind="icon" />
         </template>
         🍎 Apple
-      </fn-list-item>
-      <fn-list-item indent="1"> 🍌 Banana </fn-list-item>
-      <fn-list-item indent="1" disabled> 🍇 Grape </fn-list-item>
-      <fn-list-item indent="1"> 🍊 Organge </fn-list-item>
-    </fn-list>
+      </in-list-item>
+      <in-list-item indent="1"> 🍌 Banana </in-list-item>
+      <in-list-item indent="1" disabled> 🍇 Grape </in-list-item>
+      <in-list-item indent="1"> 🍊 Organge </in-list-item>
+    </in-list>
   </div>
 </template>

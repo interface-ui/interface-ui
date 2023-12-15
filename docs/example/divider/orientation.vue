@@ -1,6 +1,6 @@
 <!-- eslint-disable quote-props -->
 <script lang="ts" setup>
-import { styled } from '@fusion-ui-vue/theme'
+import { styled } from '@interface-ui/theme'
 import * as pkg from 'fusion-ui-iconify'
 
 const Box = styled('div')({
@@ -11,7 +11,7 @@ const Box = styled('div')({
   borderRadius: '4px',
   backgroundColor: 'var(--md-sys-color-surface-container)',
   color: 'var(--md-sys-color-on-surface)',
-  '& .fn-icon': {
+  '& .in-icon': {
     opacity: 0.75,
     margin: '12px',
     fontSize: '24px',
@@ -32,7 +32,7 @@ const {
     <format-align-left-filled />
     <format-align-center-filled />
     <format-align-right-filled />
-    <fn-divider orientation="vertical" />
+    <in-divider orientation="vertical" />
     <format-bold-filled />
     <format-italic-filled />
   </box>
@@ -41,7 +41,7 @@ const {
     <format-align-left-filled />
     <format-align-center-filled />
     <format-align-right-filled />
-    <fn-divider orientation="vertical" variant="inset" />
+    <in-divider orientation="vertical" variant="inset" />
     <format-bold-filled />
     <format-italic-filled />
   </box>

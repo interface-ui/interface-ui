@@ -1,6 +1,6 @@
 import type { ExtractPropTypes, PropType } from 'vue'
-import type { AcceptableColor } from '@fusion-ui-vue/theme'
-import { buildProps } from '@fusion-ui-vue/utils'
+import type { AcceptableColor } from '@interface-ui/theme'
+import { buildProps } from '@interface-ui/utils'
 
 export interface RippleStyle {
   x: number

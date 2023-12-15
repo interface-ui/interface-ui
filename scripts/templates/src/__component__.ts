@@ -1,5 +1,5 @@
 import type { ExtractPropTypes } from 'vue'
-import { buildProps } from '@fusion-ui-vue/utils'
+import { buildProps } from '@interface-ui/utils'
 
 export const __component__Props = buildProps({
   cs: {
@@ -7,4 +7,6 @@ export const __component__Props = buildProps({
   },
 })
 
-export type __component__PascalCase__Props = ExtractPropTypes<typeof __component__Props>
+export type __component__PascalCase__Props = ExtractPropTypes<
+  typeof __component__Props
+>

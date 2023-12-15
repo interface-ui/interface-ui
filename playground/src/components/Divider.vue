@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-import '@fusion-ui-vue/components/src/divider/src/index.less' // 开发调试的样式
-import { FnDivider } from '@fusion-ui-vue/components'
+import '@interface-ui/components/src/divider/src/index.less' // 开发调试的样式
+import { InDivider } from '@interface-ui/components'
 </script>
 
 <template>
-  <fn-divider />
-  <fn-divider text-align="left"> left </fn-divider>
-  <fn-divider> center </fn-divider>
-  <fn-divider text-align="right"> right </fn-divider>
+  <in-divider />
+  <in-divider text-align="left"> left </in-divider>
+  <in-divider> center </in-divider>
+  <in-divider text-align="right"> right </in-divider>
 </template>

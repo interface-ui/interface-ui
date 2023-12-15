@@ -1,10 +1,10 @@
-import type { SFCWithInstall } from '@fusion-ui-vue/utils'
-import { withInstall } from '@fusion-ui-vue/utils'
+import type { SFCWithInstall } from '@interface-ui/utils'
+import { withInstall } from '@interface-ui/utils'
 import DialogContent from './src/index.vue'
 
-export const FnDialogContent: SFCWithInstall<typeof DialogContent> =
-  withInstall(DialogContent, 'FnDialogContent')
-FnDialogContent.name = 'FnDialogContent'
-export default FnDialogContent
+export const InDialogContent: SFCWithInstall<typeof DialogContent> =
+  withInstall(DialogContent, 'InDialogContent')
+InDialogContent.name = 'InDialogContent'
+export default InDialogContent
 export * from './src/dialog-content'
 export type DialogContentInstance = InstanceType<typeof DialogContent>

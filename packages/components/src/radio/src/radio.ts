@@ -1,6 +1,6 @@
 import type { ExtractPropTypes, PropType } from 'vue'
-import { type ComponentSizes, componentSizes } from '@fusion-ui-vue/constants'
-import type { AcceptableColor } from '@fusion-ui-vue/theme'
+import { type ComponentSizes, componentSizes } from '@interface-ui/constants'
+import type { AcceptableColor } from '@interface-ui/theme'
 
 export const radioProps = {
   modelValue: {

@@ -13,12 +13,12 @@ const checked = ref<boolean>(false)
 </script>
 
 <template>
-  <fn-checkbox v-model="checked" color="#6366f1">
+  <in-checkbox v-model="checked" color="#6366f1">
     <star-filled v-show="checked" />
     <star-outline-filled v-show="!checked" />
-  </fn-checkbox>
-  <fn-checkbox v-model="checked" color="#f59e0b">
+  </in-checkbox>
+  <in-checkbox v-model="checked" color="#f59e0b">
     <bedtime-filled v-show="checked" />
     <bedtime-outlined v-show="!checked" />
-  </fn-checkbox>
+  </in-checkbox>
 </template>

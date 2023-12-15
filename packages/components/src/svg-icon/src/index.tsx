@@ -1,5 +1,5 @@
 import { computed, defineComponent } from 'vue'
-import { useNamespace } from '@fusion-ui-vue/utils'
+import { useNamespace } from '@interface-ui/utils'
 import { svgIconProps } from './svg-icon'
 import useCss from './index.jss'
 

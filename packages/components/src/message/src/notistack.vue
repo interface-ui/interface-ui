@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import createTheme, { ThemeProvider } from '@fusion-ui-vue/theme'
-import { useNamespace } from '@fusion-ui-vue/utils'
+import createTheme, { ThemeProvider } from '@interface-ui/theme'
+import { useNamespace } from '@interface-ui/utils'
 import { isNumber } from '@vueuse/core'
 import type { VNode } from 'vue'
 import { TransitionGroup, reactive, ref } from 'vue'

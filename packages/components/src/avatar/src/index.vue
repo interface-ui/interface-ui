@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { defineComponent, useAttrs } from 'vue'
-import { useNamespace } from '@fusion-ui-vue/utils'
+import { useNamespace } from '@interface-ui/utils'
 import { avatarProps } from './avatar'
 import useCss from './index.jss'
 

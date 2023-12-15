@@ -1,4 +1,4 @@
 <template>
-  <fn-progress />
-  <fn-progress variant="linear" />
+  <in-progress />
+  <in-progress variant="linear" />
 </template>

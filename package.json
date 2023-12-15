@@ -1,5 +1,5 @@
 {
-  "name": "fusion-ui",
+  "name": "interface-ui",
   "version": "1.0.0",
   "packageManager": "pnpm@7.5.2",
   "license": "MIT",
@@ -32,10 +32,10 @@
     "comp": "node ./scripts/generate.js"
   },
   "dependencies": {
-    "@fusion-ui-vue/components": "workspace:*",
-    "@fusion-ui-vue/constants": "workspace:*",
-    "@fusion-ui-vue/theme": "workspace:*",
-    "@fusion-ui-vue/utils": "workspace:*",
+    "@interface-ui/components": "workspace:*",
+    "@interface-ui/constants": "workspace:*",
+    "@interface-ui/theme": "workspace:*",
+    "@interface-ui/utils": "workspace:*",
     "@pnpm/types": "github:pnpm/types",
     "@vue/shared": "^3.2.47",
     "@vueuse/core": "^9.1.1",

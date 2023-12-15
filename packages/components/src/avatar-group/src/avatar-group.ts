@@ -1,5 +1,5 @@
 import type { ExtractPropTypes } from 'vue'
-import { buildProps } from '@fusion-ui-vue/utils'
+import { buildProps } from '@interface-ui/utils'
 import { avatarProps } from '../../avatar'
 
 export const avatarGroupProps = buildProps({

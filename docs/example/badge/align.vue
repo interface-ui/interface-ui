@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import { FnRadio } from 'interface-ui'
+import { InRadio } from 'interface-ui'
 import { ref } from 'vue'
-import { useTheme } from '@fusion-ui-vue/theme'
+import { useTheme } from '@interface-ui/theme'
 
 import * as pkg from 'fusion-ui-iconify'
 const { NotificationsFilled } = pkg
@@ -14,46 +14,46 @@ const yAlign = ref<'top' | 'bottom'>('top')
 
 <template>
   <div>
-    <fn-form-label
+    <in-form-label
       v-model="yAlign"
-      :control="FnRadio"
+      :control="InRadio"
       label="Top"
       value="top"
     />
-    <fn-form-label
+    <in-form-label
       v-model="yAlign"
-      :control="FnRadio"
+      :control="InRadio"
       label="Bottom"
       value="bottom"
     />
-    <fn-form-label
+    <in-form-label
       v-model="xAlign"
-      :control="FnRadio"
+      :control="InRadio"
       label="Left"
       value="left"
     />
-    <fn-form-label
+    <in-form-label
       v-model="xAlign"
-      :control="FnRadio"
+      :control="InRadio"
       label="Right"
       value="right"
     />
   </div>
   <div fscw gap-10>
-    <fn-badge variant="dot" :x-align="xAlign" :y-align="yAlign">
+    <in-badge variant="dot" :x-align="xAlign" :y-align="yAlign">
       <notifications-filled size="24" :color="theme.schemes.secondary" />
-    </fn-badge>
-    <fn-badge content="1" :x-align="xAlign" :y-align="yAlign">
+    </in-badge>
+    <in-badge content="1" :x-align="xAlign" :y-align="yAlign">
       <notifications-filled size="24" :color="theme.schemes.secondary" />
-    </fn-badge>
-    <fn-badge content="10" :x-align="xAlign" :y-align="yAlign">
+    </in-badge>
+    <in-badge content="10" :x-align="xAlign" :y-align="yAlign">
       <notifications-filled size="24" :color="theme.schemes.secondary" />
-    </fn-badge>
-    <fn-badge content="1000" max="99" :x-align="xAlign" :y-align="yAlign">
+    </in-badge>
+    <in-badge content="1000" max="99" :x-align="xAlign" :y-align="yAlign">
       <notifications-filled size="24" :color="theme.schemes.secondary" />
-    </fn-badge>
-    <fn-badge content="1000" max="999" :x-align="xAlign" :y-align="yAlign">
+    </in-badge>
+    <in-badge content="1000" max="999" :x-align="xAlign" :y-align="yAlign">
       <notifications-filled size="24" :color="theme.schemes.secondary" />
-    </fn-badge>
+    </in-badge>
   </div>
 </template>

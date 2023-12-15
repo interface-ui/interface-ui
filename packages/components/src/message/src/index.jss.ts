@@ -1,4 +1,4 @@
-import { css } from '@fusion-ui-vue/theme'
+import { css } from '@interface-ui/theme'
 import type { MessageProps } from './message'
 
 const useCss = (props: MessageProps) => {

@@ -21,7 +21,7 @@ Used to display important reminder information on the page.
 
 ## Description
 
-You can use the 'FnTypography' component to display formatting titles above the content.
+You can use the 'InTypography' component to display formatting titles above the content.
 
 <demo src="../../../example/alert/description.vue" />
 

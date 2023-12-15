@@ -4,12 +4,12 @@ const { TodayFilled } = pkg
 </script>
 
 <template>
-  <fn-chip>
+  <in-chip>
     <today-filled />
     Today
-  </fn-chip>
-  <fn-chip variant="outlined">
+  </in-chip>
+  <in-chip variant="outlined">
     Today
     <today-filled />
-  </fn-chip>
+  </in-chip>
 </template>

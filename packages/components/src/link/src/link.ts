@@ -1,4 +1,4 @@
-import type { AcceptableColor } from '@fusion-ui-vue/theme'
+import type { AcceptableColor } from '@interface-ui/theme'
 import type { Component, ExtractPropTypes, PropType } from 'vue'
 
 export const linkUnderlineStyles = ['none', 'hover', 'always'] as const

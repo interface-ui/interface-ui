@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/indent */
 import { computed } from 'vue'
-import { css, cx, useTheme } from '@fusion-ui-vue/theme'
+import { css, cx, useTheme } from '@interface-ui/theme'
 import type { ComponentStylingHook } from '../../../types'
 import type { InputBaseProps } from './input-base'
 

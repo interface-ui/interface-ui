@@ -1,9 +1,9 @@
 import type { ExtractPropTypes, PropType } from 'vue'
-import { buildProps } from '@fusion-ui-vue/utils'
+import { buildProps } from '@interface-ui/utils'
 import { isString } from '@vue/shared'
 import { isNumber } from '@vueuse/core'
 
-import type { AcceptableColor } from '@fusion-ui-vue/theme'
+import type { AcceptableColor } from '@interface-ui/theme'
 
 export const avatarVariants = ['circle', 'square', 'rounded'] as const
 export type AvatarVariants = typeof avatarVariants[number]

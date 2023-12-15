@@ -1,23 +1,23 @@
 <template>
   <div style="width: 320px">
-    <fn-list :selectable="false">
-      <fn-list-item>
-        <fn-headline-text headline="Ullamco consectetur." />
-      </fn-list-item>
-      <fn-divider component="li" no-margin />
-      <fn-list-item>
-        <fn-headline-text
+    <in-list :selectable="false">
+      <in-list-item>
+        <in-headline-text headline="Ullamco consectetur." />
+      </in-list-item>
+      <in-divider component="li" no-margin />
+      <in-list-item>
+        <in-headline-text
           headline="In officia cupidatat!"
           supporting-text="Officia qui ea ex dolor."
         />
-      </fn-list-item>
-      <fn-divider component="li" no-margin />
-      <fn-list-item align-items="flex-start">
-        <fn-headline-text
+      </in-list-item>
+      <in-divider component="li" no-margin />
+      <in-list-item align-items="flex-start">
+        <in-headline-text
           headline="Brunch this weekend?"
           supporting-text="Ali Connors — I'll be in your neighborhood doing errands this…"
         />
-      </fn-list-item>
-    </fn-list>
+      </in-list-item>
+    </in-list>
   </div>
 </template>

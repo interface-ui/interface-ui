@@ -1,32 +1,32 @@
 <script lang="ts" setup>
-import { FnButton, FnMessageClass } from 'interface-ui'
-import { singleton } from '@fusion-ui-vue/utils'
+import { InButton, InMessageClass } from 'interface-ui'
+import { singleton } from '@interface-ui/utils'
 
-const FnMessageInstances = {
-  'left-top': new (singleton(FnMessageClass))({
+const InMessageInstances = {
+  'left-top': new (singleton(InMessageClass))({
     severity: 'error',
     placement: { x: 'left', y: 'top' },
   }),
-  'left-bottom': new (singleton(FnMessageClass))({
+  'left-bottom': new (singleton(InMessageClass))({
     placement: { x: 'left', y: 'bottom' },
   }),
-  'right-top': new (singleton(FnMessageClass))({
+  'right-top': new (singleton(InMessageClass))({
     placement: { x: 'right', y: 'top' },
   }),
-  'right-bottom': new (singleton(FnMessageClass))({
+  'right-bottom': new (singleton(InMessageClass))({
     placement: { x: 'right', y: 'bottom' },
   }),
-  'center-top': new (singleton(FnMessageClass))({
+  'center-top': new (singleton(InMessageClass))({
     placement: { x: 'center', y: 'top' },
   }),
-  'center-bottom': new (singleton(FnMessageClass))({
+  'center-bottom': new (singleton(InMessageClass))({
     placement: { x: 'center', y: 'bottom' },
   }),
 }
 
 const handleClick = (x, y) => {
   const key = `${x}-${y}`
-  const messageIns = FnMessageInstances[key]
+  const messageIns = InMessageInstances[key]
   messageIns.push({
     content: `The instance's placement is ${x} ${y}`,
   })
@@ -36,29 +36,29 @@ const handleClick = (x, y) => {
 <template>
   <div space-y-2>
     <div fscw gap-2>
-      <fn-button variant="text" @click="handleClick('left', 'top')">
+      <in-button variant="text" @click="handleClick('left', 'top')">
         left top
-      </fn-button>
-      <fn-button variant="text" @click="handleClick('right', 'top')">
+      </in-button>
+      <in-button variant="text" @click="handleClick('right', 'top')">
         right top
-      </fn-button>
+      </in-button>
     </div>
     <div fscw gap-2 flex justify-between>
-      <fn-button variant="text" @click="handleClick('center', 'top')">
+      <in-button variant="text" @click="handleClick('center', 'top')">
         center top
-      </fn-button>
-      <fn-button variant="text" @click="handleClick('center', 'bottom')">
+      </in-button>
+      <in-button variant="text" @click="handleClick('center', 'bottom')">
         center bottom
-      </fn-button>
+      </in-button>
     </div>
     <div fscw gap-2 flex justify-between>
-      <fn-button variant="text" @click="handleClick('left', 'bottom')">
+      <in-button variant="text" @click="handleClick('left', 'bottom')">
         left bottom
-      </fn-button>
+      </in-button>
 
-      <fn-button variant="text" @click="handleClick('right', 'bottom')">
+      <in-button variant="text" @click="handleClick('right', 'bottom')">
         right bottom
-      </fn-button>
+      </in-button>
     </div>
   </div>
 </template>

@@ -1,5 +1,5 @@
-import type { AcceptableColor } from '@fusion-ui-vue/theme'
-import { buildProps } from '@fusion-ui-vue/utils'
+import type { AcceptableColor } from '@interface-ui/theme'
+import { buildProps } from '@interface-ui/utils'
 import type { Component, ExtractPropTypes, PropType } from 'vue'
 
 export const svgIconProps = buildProps({
