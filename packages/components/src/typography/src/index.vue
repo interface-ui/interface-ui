@@ -19,17 +19,16 @@ const parsed = computed(() => {
   return [renderTag, $variant, size]
 })
 
-const is = computed<string>(() => parsed.value[0])
 const cssClass = useCss(props)
 </script>
 
 <template>
   <component
-    :is="is"
+    :is="parsed[0]"
     :class="[
       ns.b(),
-      props.noWarp ? ns.m('nowarp') : '',
-      props.gutter ? ns.m('gutter') : '',
+      $props.noWarp ? ns.m('nowarp') : '',
+      $props.gutter ? ns.m('gutter') : '',
       cssClass,
     ]"
   >

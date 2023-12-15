@@ -11,7 +11,7 @@ const cssClass = useCss(props)
 
 <template>
   <fn-typography
-    component="a"
+    :component="$props.component"
     :class="[ns.b(), ns.m(`underline-${$props.underline}`), cssClass]"
     :color="$props.color"
   >

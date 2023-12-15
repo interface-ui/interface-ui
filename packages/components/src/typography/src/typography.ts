@@ -4,7 +4,7 @@ import type {
   TypographyWithoutSize,
 } from '@fusion-ui-vue/theme'
 import { typographyWithSize, typographyWithoutSize } from '@fusion-ui-vue/theme'
-import type { ExtractPropTypes, PropType } from 'vue'
+import type { Component, ExtractPropTypes, PropType } from 'vue'
 import { componentSizes } from '@fusion-ui-vue/constants'
 
 const $typographyWithSize = typographyWithSize
@@ -30,7 +30,7 @@ export const typographyProps = buildProps({
     default: 'body.large',
   },
   component: {
-    type: String,
+    type: [String, Object] as PropType<string | Component>,
   },
   noWarp: {
     type: Boolean,
