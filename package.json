@@ -2,9 +2,9 @@
   "name": "interface-ui",
   "version": "1.0.0",
   "packageManager": "pnpm@7.5.2",
-  "license": "MIT",
-  "private": true,
   "type": "module",
+  "private": true,
+  "license": "MIT",
   "keywords": [
     "interface-ui-vue",
     "vue",
