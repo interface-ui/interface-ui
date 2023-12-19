@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useNamespace } from '@interface-ui/utils'
-import { Teleport } from 'vue'
+import { Teleport, nextTick, ref, watch } from 'vue'
 import InModal from '../../modal'
 import InFragment from '../../fragment'
 import type { DrawerEmits } from './drawer'
@@ -8,11 +8,32 @@ import { drawerProps } from './drawer'
 import useCss from './index.jss'
 
 const props = defineProps(drawerProps)
-defineEmits<DrawerEmits>()
+const emit = defineEmits<DrawerEmits>()
 defineOptions({ inheritAttrs: false })
 
 const ns = useNamespace('drawer')
 const cssClass = useCss(props)
+const handleWheel = (e: WheelEvent) => {
+  e.preventDefault()
+}
+const drawerRef = ref<HTMLElement | null>(null)
+
+watch(
+  () => props.open,
+  newVal => {
+    nextTick(() => {
+      if (newVal) {
+        drawerRef.value?.focus()
+      }
+    })
+  }
+)
+
+const handleEscKey = (e: KeyboardEvent) => {
+  if (e.key === 'Escape') {
+    emit('close')
+  }
+}
 </script>
 
 <template>
@@ -25,12 +46,16 @@ const cssClass = useCss(props)
         v-if="$props.keepMounted || $props.open"
         v-show="$props.open"
         v-bind="$attrs"
+        ref="drawerRef"
         :class="[
           ns.b(),
           ns.m($props.variant),
           ns.m($props.placement),
           cssClass,
         ]"
+        tabindex="0"
+        @wheel.prevent.stop="handleWheel"
+        @keydown.esc="handleEscKey"
       >
         <slot />
       </div>

@@ -12,6 +12,10 @@ const emit = defineEmits<{
 defineOptions({ inheritAttrs: false })
 const ns = useNamespace('modal')
 
+const handleWheel = (e: WheelEvent) => {
+  e.preventDefault()
+}
+
 const open = computed<boolean>({
   get() {
     return props.modelValue
@@ -35,6 +39,7 @@ const handleClick = () => {
         v-show="open"
         :class="[ns.b(), open ? ns.m('open') : '']"
         v-bind="$attrs"
+        @wheel.prevent.stop="handleWheel"
         @click="handleClick"
       >
         <div
