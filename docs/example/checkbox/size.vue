@@ -6,9 +6,9 @@ const checked = ref<boolean>(true)
 <template>
   <div space-y-2>
     <div fscw gap-2>
-      <fn-checkbox v-model="checked" size="small" />
-      <fn-checkbox v-model="checked" />
-      <fn-checkbox v-model="checked" size="large" />
+      <in-checkbox v-model="checked" size="small" />
+      <in-checkbox v-model="checked" />
+      <in-checkbox v-model="checked" size="large" />
     </div>
   </div>
 </template>

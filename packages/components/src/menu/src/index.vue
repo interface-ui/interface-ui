@@ -1,15 +1,15 @@
 <script lang="ts" setup>
-import { useNamespace } from '@fusion-ui-vue/utils'
-import FnPopover from '../../popover'
-import FnList from '../../list'
+import { useNamespace } from '@interface-ui/utils'
+import InPopover from '../../popover'
+import InList from '../../list'
 
 const ns = useNamespace('menu')
 </script>
 
 <template>
-  <fn-popover :class="[ns.b()]">
-    <fn-list background="surfaceContainer">
+  <in-popover :class="[ns.b()]">
+    <in-list background="surfaceContainer">
       <slot />
-    </fn-list>
-  </fn-popover>
+    </in-list>
+  </in-popover>
 </template>

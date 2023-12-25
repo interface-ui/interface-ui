@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { FnRadio } from 'interface-ui'
+import { InRadio } from 'interface-ui'
 import { ref } from 'vue'
 
 const picked = ref<string>('apple')
@@ -8,27 +8,27 @@ const picked = ref<string>('apple')
 <template>
   <div space-y-2>
     <div fscw gap-2>
-      <fn-form-label
+      <in-form-label
         v-model="picked"
-        :control="FnRadio"
+        :control="InRadio"
         label="🍎 Apple"
         value="apple"
       />
-      <fn-form-label
+      <in-form-label
         v-model="picked"
-        :control="FnRadio"
+        :control="InRadio"
         label="🍌 Banana"
         value="banana"
       />
-      <fn-form-label
+      <in-form-label
         v-model="picked"
-        :control="FnRadio"
+        :control="InRadio"
         label="🍇 Grape"
         value="grape"
       />
-      <fn-form-label
+      <in-form-label
         v-model="picked"
-        :control="FnRadio"
+        :control="InRadio"
         label="🍊 Orange"
         value="orange"
         disabled

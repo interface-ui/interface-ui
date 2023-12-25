@@ -1,5 +1,5 @@
-import type { AcceptableColor } from '@fusion-ui-vue/theme'
-import { type ComponentSizes, componentSizes } from '@fusion-ui-vue/constants'
+import type { AcceptableColor } from '@interface-ui/theme'
+import { type ComponentSizes, componentSizes } from '@interface-ui/constants'
 import type { ExtractPropTypes, PropType } from 'vue'
 
 export type CheckboxStatus = 'blank' | 'checked'

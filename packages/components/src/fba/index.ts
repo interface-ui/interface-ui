@@ -1,9 +1,9 @@
-import type { SFCWithInstall } from '@fusion-ui-vue/utils'
-import { withInstall } from '@fusion-ui-vue/utils'
+import type { SFCWithInstall } from '@interface-ui/utils'
+import { withInstall } from '@interface-ui/utils'
 import Fba from './src/index.vue'
 
-export const FnFba: SFCWithInstall<typeof Fba> = withInstall(Fba, 'FnFba')
-FnFba.name = 'FnFba'
-export default FnFba
+export const InFba: SFCWithInstall<typeof Fba> = withInstall(Fba, 'InFba')
+InFba.name = 'InFba'
+export default InFba
 export * from './src/fba'
 export type FbaInstance = InstanceType<typeof Fba>

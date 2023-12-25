@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import { FnMessage } from 'interface-ui'
+import { InMessage } from 'interface-ui'
 const handleClick = () => {
-  new FnMessage().push({
+  new InMessage().push({
     content: 'this is a message.',
     variant: 'outlined',
   })
@@ -9,5 +9,5 @@ const handleClick = () => {
 </script>
 
 <template>
-  <fn-button variant="outlined" @click="handleClick"> Show message </fn-button>
+  <in-button variant="outlined" @click="handleClick"> Show message </in-button>
 </template>

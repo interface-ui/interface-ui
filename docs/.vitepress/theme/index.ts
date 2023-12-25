@@ -1,5 +1,5 @@
 import theme from 'vitepress/theme'
-import FusionUi from '@fusion-ui-vue/components'
+import FusionUi from '@interface-ui/components'
 import Layout from '../components/Layout'
 
 // 导入本地源码样式--测试

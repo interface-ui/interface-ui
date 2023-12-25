@@ -1,17 +1,17 @@
 import { describe, expect, test } from 'vitest'
 import { mount } from '@vue/test-utils'
-import createTheme from '@fusion-ui-vue/theme'
-import { FnAlert } from '../index'
+import createTheme from '@interface-ui/theme'
+import { InAlert } from '../index'
 
-describe('FnAlert', () => {
+describe('InAlert', () => {
   test('class', () => {
-    const wrapper = mount(FnAlert as any, {
+    const wrapper = mount(InAlert as any, {
       global: {
         provide: {
           ThemeContext: createTheme(),
         },
       },
     })
-    expect(wrapper.classes()).toContain('fn-alert')
+    expect(wrapper.classes()).toContain('in-alert')
   })
 })

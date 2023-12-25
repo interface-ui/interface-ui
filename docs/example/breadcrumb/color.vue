@@ -1,13 +1,13 @@
 <template>
-  <fn-breadcrumb color="primary">
-    <fn-link>Interface UI</fn-link>
-    <fn-link>Components</fn-link>
-    <fn-link>Breadcrumb</fn-link>
-  </fn-breadcrumb>
+  <in-breadcrumb color="primary">
+    <in-link>Interface UI</in-link>
+    <in-link>Components</in-link>
+    <in-link>Breadcrumb</in-link>
+  </in-breadcrumb>
 
-  <fn-breadcrumb :color="theme => theme.colors.cyan[400]">
-    <fn-link>Interface UI</fn-link>
-    <fn-link>Components</fn-link>
-    <fn-link>Breadcrumb</fn-link>
-  </fn-breadcrumb>
+  <in-breadcrumb :color="theme => theme.colors.cyan[400]">
+    <in-link>Interface UI</in-link>
+    <in-link>Components</in-link>
+    <in-link>Breadcrumb</in-link>
+  </in-breadcrumb>
 </template>

@@ -1,44 +1,44 @@
 <script lang="ts" setup>
-import '@fusion-ui-vue/components/src/fba/src/index.less' // 开发调试的样式
-import { FnFba } from '@fusion-ui-vue/components'
+import '@interface-ui/components/src/fba/src/index.less' // 开发调试的样式
+import { InFba } from '@interface-ui/components'
 import { PaletteOutlined } from 'fusion-ui-iconify'
 </script>
 
 <template>
   <div class="content">
-    <fn-fba size="small">
+    <in-fba size="small">
       <palette-outlined />
-    </fn-fba>
-    <fn-fba>
+    </in-fba>
+    <in-fba>
       <palette-outlined />
-    </fn-fba>
-    <fn-fba size="large">
+    </in-fba>
+    <in-fba size="large">
       <palette-outlined />
-    </fn-fba>
+    </in-fba>
   </div>
   <div class="content" style="margin-top: 16px">
-    <fn-fba size="small">
+    <in-fba size="small">
       <palette-outlined />
       Extended
-    </fn-fba>
-    <fn-fba>
+    </in-fba>
+    <in-fba>
       <palette-outlined />
       Extended
-    </fn-fba>
-    <fn-fba size="large">
+    </in-fba>
+    <in-fba size="large">
       <palette-outlined />
       Extended
-    </fn-fba>
+    </in-fba>
   </div>
   <div class="content" style="margin-top: 16px">
-    <fn-fba color="infoContainer">
+    <in-fba color="infoContainer">
       <palette-outlined />
-    </fn-fba>
-    <fn-fba>
+    </in-fba>
+    <in-fba>
       <palette-outlined />
-    </fn-fba>
-    <fn-fba color="tertiaryContainer">
+    </in-fba>
+    <in-fba color="tertiaryContainer">
       <palette-outlined />
-    </fn-fba>
+    </in-fba>
   </div>
 </template>

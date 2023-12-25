@@ -1,11 +1,11 @@
-import { buildProps } from '@fusion-ui-vue/utils'
+import { buildProps } from '@interface-ui/utils'
 import type {
   AcceptableColor,
   TypographyWithoutSize,
-} from '@fusion-ui-vue/theme'
-import { typographyWithSize, typographyWithoutSize } from '@fusion-ui-vue/theme'
-import type { ExtractPropTypes, PropType } from 'vue'
-import { componentSizes } from '@fusion-ui-vue/constants'
+} from '@interface-ui/theme'
+import { typographyWithSize, typographyWithoutSize } from '@interface-ui/theme'
+import type { Component, ExtractPropTypes, PropType } from 'vue'
+import { componentSizes } from '@interface-ui/constants'
 
 const $typographyWithSize = typographyWithSize
   .map(item => componentSizes.map(size => `${item}.${size}`))
@@ -30,7 +30,7 @@ export const typographyProps = buildProps({
     default: 'body.large',
   },
   component: {
-    type: String,
+    type: [String, Object] as PropType<string | Component>,
   },
   noWarp: {
     type: Boolean,

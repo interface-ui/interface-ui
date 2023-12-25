@@ -5,29 +5,29 @@ const { HistoryRound, VerifiedRound, AddShoppingCartRound } = pkg
 
 <template>
   <div space-y-5 w-full>
-    <FnAlert severity="success">
+    <InAlert severity="success">
       <template #icon>
         <history-round />
       </template>
       This is an success alert — check it out!
-    </FnAlert>
-    <FnAlert severity="success">
+    </InAlert>
+    <InAlert severity="success">
       <template #icon>
         <verified-round />
       </template>
       This is an success alert — check it out!
-    </FnAlert>
-    <FnAlert severity="success">
+    </InAlert>
+    <InAlert severity="success">
       <template #icon>
         <add-shopping-cart-round />
       </template>
       This is an success alert — check it out!
-    </FnAlert>
-    <FnAlert severity="success" :icon="false">
+    </InAlert>
+    <InAlert severity="success" :icon="false">
       <template #icon>
         <add-shopping-cart-round />
       </template>
       This is an success alert — check it out!
-    </FnAlert>
+    </InAlert>
   </div>
 </template>

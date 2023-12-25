@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/indent */
 import { defineComponent, h, onMounted, toRaw } from 'vue'
-import { ThemeProvider, createTheme } from '@fusion-ui-vue/theme'
+import { ThemeProvider, createTheme } from '@interface-ui/theme'
 import theme from 'vitepress/theme'
 import TeamMember from '../components/team-member'
 

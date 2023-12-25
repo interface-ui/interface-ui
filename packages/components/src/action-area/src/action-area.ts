@@ -1,4 +1,4 @@
-import { buildProps } from '@fusion-ui-vue/utils'
+import { buildProps } from '@interface-ui/utils'
 import type { Component, ExtractPropTypes, PropType } from 'vue'
 
 export const actionAreaProps = buildProps({

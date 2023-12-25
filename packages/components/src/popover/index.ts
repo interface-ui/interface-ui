@@ -1,12 +1,12 @@
-import type { SFCWithInstall } from '@fusion-ui-vue/utils'
-import { withInstall } from '@fusion-ui-vue/utils'
+import type { SFCWithInstall } from '@interface-ui/utils'
+import { withInstall } from '@interface-ui/utils'
 import Popover from './src/index.vue'
 
-export const FnPopover: SFCWithInstall<typeof Popover> = withInstall(
+export const InPopover: SFCWithInstall<typeof Popover> = withInstall(
   Popover,
-  'FnPopover'
+  'InPopover'
 )
-FnPopover.name = 'FnPopover'
-export default FnPopover
+InPopover.name = 'InPopover'
+export default InPopover
 export * from './src/popover'
 export type PopoverInstance = InstanceType<typeof Popover>

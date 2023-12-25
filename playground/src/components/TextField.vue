@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-import '@fusion-ui-vue/components/src/typography/src/index.less' // 开发调试的样式
-import '@fusion-ui-vue/components/src/text-field/src/index.less' // 开发调试的样式
+import '@interface-ui/components/src/typography/src/index.less' // 开发调试的样式
+import '@interface-ui/components/src/text-field/src/index.less' // 开发调试的样式
 
-import { FnTextField } from '@fusion-ui-vue/components'
+import { InTextField } from '@interface-ui/components'
 import { ref } from 'vue'
 
 const content = ref<string>('')
@@ -10,21 +10,21 @@ const content = ref<string>('')
 
 <template>
   <div class="content">
-    <fn-text-field
+    <in-text-field
       size="small"
       v-model="content"
       variant="outlined"
       label="avb"
       placeholder="placeholder"
     />
-    <fn-text-field
+    <in-text-field
       v-model="content"
       size="small"
       variant="filled"
       label="Filled"
       placeholder="placeholder"
     />
-    <fn-text-field
+    <in-text-field
       v-model="content"
       size="small"
       variant="standard"
@@ -33,7 +33,7 @@ const content = ref<string>('')
     />
   </div>
   <div class="content">
-    <fn-text-field
+    <in-text-field
       v-model="content"
       variant="outlined"
       label="Outlined"
@@ -42,13 +42,13 @@ const content = ref<string>('')
       type="password"
       error
     />
-    <fn-text-field
+    <in-text-field
       v-model="content"
       variant="filled"
       label="Filled"
       placeholder="placeholder"
     />
-    <fn-text-field
+    <in-text-field
       v-model="content"
       variant="standard"
       label="Standard"
@@ -56,7 +56,7 @@ const content = ref<string>('')
     />
   </div>
   <div class="content">
-    <fn-text-field
+    <in-text-field
       v-model="content"
       size="large"
       variant="outlined"
@@ -64,14 +64,14 @@ const content = ref<string>('')
       supporting-text="supporting text"
       placeholder="placeholder"
     />
-    <fn-text-field
+    <in-text-field
       v-model="content"
       size="large"
       variant="filled"
       label="Filled"
       placeholder="placeholder"
     />
-    <fn-text-field
+    <in-text-field
       v-model="content"
       size="large"
       variant="standard"
@@ -80,7 +80,7 @@ const content = ref<string>('')
     />
   </div>
   <!-- <div class="content">
-    <fn-text-field
+    <in-text-field
       size="large"
       v-model="content"
       variant="outlined"
@@ -89,10 +89,10 @@ const content = ref<string>('')
       placeholder="placeholder"
     >
       <template #startAdornment="adornment">
-        <fn-typography v-bind="adornment">kg</fn-typography>
+        <in-typography v-bind="adornment">kg</in-typography>
       </template>
-    </fn-text-field>
-    <fn-text-field
+    </in-text-field>
+    <in-text-field
       size="large"
       v-model="content"
       variant="outlined"
@@ -101,10 +101,10 @@ const content = ref<string>('')
       placeholder="placeholder"
     >
       <template #startAdornment="adornment">
-        <fn-icon icon="mdi:account-circle" v-bind="adornment" />
+        <in-icon icon="mdi:account-circle" v-bind="adornment" />
       </template>
-    </fn-text-field>
-    <fn-text-field
+    </in-text-field>
+    <in-text-field
       size="large"
       v-model="content"
       variant="outlined"
@@ -114,12 +114,12 @@ const content = ref<string>('')
       type="password"
     >
       <template #endAdornment="adornment">
-        <fn-icon-button v-bind="adornment" #default="icon">
-          <fn-icon icon="mdi:eye" v-bind="icon" />
-        </fn-icon-button>
+        <in-icon-button v-bind="adornment" #default="icon">
+          <in-icon icon="mdi:eye" v-bind="icon" />
+        </in-icon-button>
       </template>
-    </fn-text-field>
-    <fn-text-field
+    </in-text-field>
+    <in-text-field
       size="large"
       v-model="content"
       variant="filled"
@@ -129,16 +129,16 @@ const content = ref<string>('')
       type="password"
     >
       <template #startAdornment="adornment">
-        <fn-icon icon="mdi:account-circle" v-bind="adornment" />
+        <in-icon icon="mdi:account-circle" v-bind="adornment" />
       </template>
       <template #endAdornment="adornment">
-        <fn-icon-button v-bind="adornment" #default="icon">
-          <fn-icon icon="mdi:eye" v-bind="icon" />
-        </fn-icon-button>
+        <in-icon-button v-bind="adornment" #default="icon">
+          <in-icon icon="mdi:eye" v-bind="icon" />
+        </in-icon-button>
       </template>
-    </fn-text-field>
+    </in-text-field>
 
-    <fn-text-field
+    <in-text-field
       v-model="content"
       size="large"
       variant="standard"
@@ -147,8 +147,8 @@ const content = ref<string>('')
       placeholder="placeholder"
     >
       <template #startAdornment="adornment">
-        <fn-icon icon="mdi:account-circle" v-bind="adornment" />
+        <in-icon icon="mdi:account-circle" v-bind="adornment" />
       </template>
-    </fn-text-field>
+    </in-text-field>
   </div> -->
 </template>

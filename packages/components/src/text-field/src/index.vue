@@ -1,9 +1,9 @@
 <script lang="ts" setup>
-import { generateId, isEmpty, useNamespace } from '@fusion-ui-vue/utils'
+import { generateId, isEmpty, useNamespace } from '@interface-ui/utils'
 import { computed, useAttrs, useSlots } from 'vue'
-import { UPDATE_MODEL_EVENT } from '@fusion-ui-vue/constants'
+import { UPDATE_MODEL_EVENT } from '@interface-ui/constants'
 import Typography from '../../typography'
-import FnInputBase from '../../input-base'
+import InInputBase from '../../input-base'
 import { textFieldProps } from './text-field'
 import useCss from './index.jss'
 
@@ -60,7 +60,7 @@ const hasContent = computed<boolean>(() => {
         name="startAdornment"
         v-bind="{ class: [ns.m('start-adornment')] }"
       />
-      <fn-input-base
+      <in-input-base
         :id="id"
         v-bind="$attrs"
         v-model="value"

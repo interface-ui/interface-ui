@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-import type { ChipVariants } from '@fusion-ui-vue/components'
-import { FnChip } from '@fusion-ui-vue/components'
+import type { ChipVariants } from '@interface-ui/components'
+import { InChip } from '@interface-ui/components'
 import { ref } from 'vue'
-import type { ThemeCallBack } from '@fusion-ui-vue/theme'
+import type { ThemeCallBack } from '@interface-ui/theme'
 
 const chipArr = ref<
   {
@@ -45,12 +45,12 @@ const onDelete = (index: number) => {
 </script>
 
 <template>
-  <fn-chip
+  <in-chip
     v-for="({ text, ...attrs }, index) in chipArr"
     :key="text"
     v-bind="attrs"
     @delete="onDelete(index)"
   >
     {{ text }}
-  </fn-chip>
+  </in-chip>
 </template>

@@ -6,20 +6,20 @@ const value = ref<string>('')
 
 <template>
   <div fscw gap-5 flex-nowrap>
-    <fn-text-field
+    <in-text-field
       v-model="value"
       error
       label="Outlined"
       supporting-text="Some detail information"
     />
-    <fn-text-field
+    <in-text-field
       v-model="value"
       error
       variant="filled"
       label="Filled"
       supporting-text="Some detail information"
     />
-    <fn-text-field
+    <in-text-field
       v-model="value"
       error
       variant="standard"

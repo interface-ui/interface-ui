@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { styled } from '@fusion-ui-vue/theme'
+import { styled } from '@interface-ui/theme'
 import { ref } from 'vue'
 
 const contentText = ref<string>('Hello World')
@@ -11,7 +11,7 @@ const Box = styled('div')`
   flex-direction: column;
   gap: 10px;
 
-  & .fn-text-field {
+  & .in-text-field {
     width: calc(100% / 3.2);
   }
 
@@ -24,42 +24,42 @@ const Box = styled('div')`
 <template>
   <box flex flex-col gap-10>
     <div v-for="variant in variants" :key="variant" fscw gap-3>
-      <fn-text-field
+      <in-text-field
         v-model="contentText"
         placeholder="Required"
         label="Required"
         :variant="variant"
         required
       />
-      <fn-text-field
+      <in-text-field
         v-model="contentText"
         placeholder="Disabled"
         label="Disabled"
         :variant="variant"
         disabled
       />
-      <fn-text-field
+      <in-text-field
         v-model="emptyText"
         placeholder="Password"
         label="Password"
         type="password"
         :variant="variant"
       />
-      <fn-text-field
+      <in-text-field
         v-model="contentText"
         placeholder="Read Only"
         label="Read Only"
         :variant="variant"
         readonly
       />
-      <fn-text-field
+      <in-text-field
         v-model="emptyText"
         placeholder="Number"
         label="Number"
         type="number"
         :variant="variant"
       />
-      <fn-text-field
+      <in-text-field
         v-model="emptyText"
         placeholder="Search Field"
         label="Search Field"

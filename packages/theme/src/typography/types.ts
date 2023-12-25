@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/indent */
-import type { ComponentSizes } from '@fusion-ui-vue/constants'
+import type { ComponentSizes } from '@interface-ui/constants'
 
 export interface TypographyProp {
   fontFamily: string

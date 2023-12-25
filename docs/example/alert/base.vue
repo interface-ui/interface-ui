@@ -1,17 +1,15 @@
 <template>
   <div space-y-5 w-full>
-    <fn-alert severity="error">
+    <in-alert severity="error">
       This is an error alert — check it out!
-    </fn-alert>
-    <fn-alert severity="warning">
+    </in-alert>
+    <in-alert severity="warning">
       This is an warning alert — check it out!
-    </fn-alert>
-    <fn-alert severity="info">
-      This is an info alert — check it out!
-    </fn-alert>
-    <fn-alert severity="success">
+    </in-alert>
+    <in-alert severity="info"> This is an info alert — check it out! </in-alert>
+    <in-alert severity="success">
       This is an success alert — check it out!
-    </fn-alert>
+    </in-alert>
   </div>
-  <br>
+  <br />
 </template>

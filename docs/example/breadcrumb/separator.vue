@@ -5,15 +5,15 @@ const { NavigateNextFilled } = pkg
 </script>
 
 <template>
-  <fn-breadcrumb separator="-">
-    <fn-link>Interface UI</fn-link>
-    <fn-link>Components</fn-link>
-    <fn-link>Breadcrumb</fn-link>
-  </fn-breadcrumb>
+  <in-breadcrumb separator="-">
+    <in-link>Interface UI</in-link>
+    <in-link>Components</in-link>
+    <in-link>Breadcrumb</in-link>
+  </in-breadcrumb>
 
-  <fn-breadcrumb :separator="NavigateNextFilled">
-    <fn-link>Interface UI</fn-link>
-    <fn-link>Components</fn-link>
-    <fn-link>Breadcrumb</fn-link>
-  </fn-breadcrumb>
+  <in-breadcrumb :separator="NavigateNextFilled">
+    <in-link>Interface UI</in-link>
+    <in-link>Components</in-link>
+    <in-link>Breadcrumb</in-link>
+  </in-breadcrumb>
 </template>

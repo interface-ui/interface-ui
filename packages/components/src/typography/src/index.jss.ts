@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/indent */
-import type { TypographyProp } from '@fusion-ui-vue/theme'
-import { css, cx, useColor, useTheme } from '@fusion-ui-vue/theme'
+import type { TypographyProp } from '@interface-ui/theme'
+import { css, cx, useColor, useTheme } from '@interface-ui/theme'
 import { computed } from 'vue'
 import type { ComponentStylingHook } from '../../../types'
 import type { TypographyProps } from './typography'

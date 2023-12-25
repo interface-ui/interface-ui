@@ -9,23 +9,23 @@ const handleClick = (num: number) => {
 
 <template>
   <div style="width: 320px">
-    <fn-list component="nav">
-      <fn-list-item :highlight="highlightItem === 0" @click="handleClick(0)">
+    <in-list component="nav">
+      <in-list-item :highlight="highlightItem === 0" @click="handleClick(0)">
         Getting Started
-      </fn-list-item>
-      <fn-list-item :highlight="highlightItem === 1" @click="handleClick(1)">
+      </in-list-item>
+      <in-list-item :highlight="highlightItem === 1" @click="handleClick(1)">
         Components
-      </fn-list-item>
-      <fn-list-item :highlight="highlightItem === 2" @click="handleClick(2)">
+      </in-list-item>
+      <in-list-item :highlight="highlightItem === 2" @click="handleClick(2)">
         APIs
-      </fn-list-item>
-      <fn-list-item
+      </in-list-item>
+      <in-list-item
         :highlight="highlightItem === 3"
         highlight-color="tertiaryContainer"
         @click="handleClick(3)"
       >
         Customization
-      </fn-list-item>
-    </fn-list>
+      </in-list-item>
+    </in-list>
   </div>
 </template>

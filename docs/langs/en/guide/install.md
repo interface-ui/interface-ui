@@ -8,15 +8,15 @@ It is recommended to use ```automatic import``` to import components, which is s
 
 ::: code-group
 ```shell [npm]
-npm i fusion-ui-vue
+npm i interface-ui
 ```
 
 ```shell [yarn]
-yarn add fusion-ui-vue
+yarn add interface-ui
 ```
 
 ```shell [pnpm]
-pnpm add fusion-ui-vue
+pnpm add interface-ui
 ```
 :::
 
@@ -28,7 +28,7 @@ By fully importing FusionUi components, the package size will increase.
 ```ts
 import { createApp } from 'vue'
 import fusionUi from 'interface-ui'
-import 'fusion-ui-vue/dist/styles/index.css'
+import 'interface-ui/dist/styles/index.css'
 import App from './App.vue'
 
 const app = createApp(App)
@@ -41,8 +41,8 @@ app.mount('#app')
 * You can use the import statement to import the components you use.
 
 ```ts
-import { FnButton } from 'interface-ui'
-import 'fusion-ui-vue/dist/styles/button.css'
+import { InButton } from 'interface-ui'
+import 'interface-ui/dist/styles/button.css'
 ```
 
 ### Auto import
@@ -60,7 +60,7 @@ Then add the code below into your Vite config file.
 ```ts
 import { defineConfig } from 'vite'
 import Components from 'unplugin-vue-components/vite'
-import { PlayResolver } from 'fusion-ui-vue/dist/lib/components/resolver'
+import { PlayResolver } from 'interface-ui/dist/lib/components/resolver'
 
 export default defineConfig({
   // ...

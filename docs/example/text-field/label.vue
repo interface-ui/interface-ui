@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { FnTextField } from 'interface-ui'
-import { styled } from '@fusion-ui-vue/theme'
+import { InTextField } from 'interface-ui'
+import { styled } from '@interface-ui/theme'
 import { ref } from 'vue'
 
 const value = ref<string>('')
@@ -8,7 +8,7 @@ const Box = styled('div')`
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
-  .fn-typography {
+  .in-typography {
     margin-right: 16px;
     min-width: 80px;
     text-align: right;
@@ -18,22 +18,22 @@ const Box = styled('div')`
 
 <template>
   <box>
-    <fn-form-label
+    <in-form-label
       v-model="value"
-      :control="FnTextField"
+      :control="InTextField"
       label="Outlined"
       label-placement="left"
     />
-    <fn-form-label
+    <in-form-label
       v-model="value"
-      :control="FnTextField"
+      :control="InTextField"
       variant="filled"
       label="Filled"
       label-placement="left"
     />
-    <fn-form-label
+    <in-form-label
       v-model="value"
-      :control="FnTextField"
+      :control="InTextField"
       variant="standard"
       label="Standard"
       label-placement="left"

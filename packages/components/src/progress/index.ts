@@ -1,12 +1,12 @@
-import type { SFCWithInstall } from '@fusion-ui-vue/utils'
-import { withInstall } from '@fusion-ui-vue/utils'
+import type { SFCWithInstall } from '@interface-ui/utils'
+import { withInstall } from '@interface-ui/utils'
 import Progress from './src/index.vue'
 
-export const FnProgress: SFCWithInstall<typeof Progress> = withInstall(
+export const InProgress: SFCWithInstall<typeof Progress> = withInstall(
   Progress,
-  'FnProgress'
+  'InProgress'
 )
-FnProgress.name = 'FnProgress'
-export default FnProgress
+InProgress.name = 'InProgress'
+export default InProgress
 export * from './src/progress'
 export type ProgressInstance = InstanceType<typeof Progress>

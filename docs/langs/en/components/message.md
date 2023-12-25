@@ -13,7 +13,7 @@ lang: en
 `❗️Updating... `
 
 ::: warning
-Please note that calling `new FnMessage` multiple times will only create `one instance`.
+Please note that calling `new InMessage` multiple times will only create `one instance`.
 :::
 It is often used for feedback prompts after active operation. When the mouse hovers, the message does not disappear. After the mouse is moved out, the countdown begins, and the message automatically disappears after the countdown.
 
@@ -21,7 +21,7 @@ The attribute of [`Alert`](./alert.md) can be used for Message, providing a more
 
 ## Basic Usage
 
-Call the `FnMessage` method and pass in the `message` parameter.
+Call the `InMessage` method and pass in the `message` parameter.
 <demo src="../../../example/message/basic.vue" />
 
 ## severity

@@ -1,29 +1,29 @@
 :root {
-  --fn-zero-percentage: 0%;
+  --in-zero-percentage: 0%;
   /* The var that will switch between different theme mode */
-  --fn-sys-color-switch: var(--fn-ref-palette-white);
-  --fn-sys-color-switch-rgb: 255 255 255;
-  --fn-sys-color-switch-reverse: var(--fn-ref-palette-black);
-  --fn-sys-color-switch-reverse-rgb: 0 0 0;
-  --fn-sys-color-disabled-level-0: rgb(
+  --in-sys-color-switch: var(--in-ref-palette-white);
+  --in-sys-color-switch-rgb: 255 255 255;
+  --in-sys-color-switch-reverse: var(--in-ref-palette-black);
+  --in-sys-color-switch-reverse-rgb: 0 0 0;
+  --in-sys-color-disabled-level-0: rgb(
     var(--md-sys-color-on-surface-rgb) /
       var(--md-sys-state-disabled-state-layer-opacity)
   );
-  --fn-sys-color-disabled-level-1: rgb(
+  --in-sys-color-disabled-level-1: rgb(
     var(--md-sys-color-on-surface-rgb) / 0.12
   );
-  --fn-sys-color-ripple: var(--fn-sys-color-switch);
+  --in-sys-color-ripple: var(--in-sys-color-switch);
 }
 
 :root[data-theme='dark'] {
   /* The var that will switch between different theme mode */
-  --fn-sys-color-switch: var(--fn-ref-palette-black);
-  --fn-sys-color-switch-rgb: 0 0 0;
-  --fn-sys-color-switch-reverse: var(--fn-ref-palette-white);
-  --fn-sys-color-switch-reverse-rgb: 255 255 255;
+  --in-sys-color-switch: var(--in-ref-palette-black);
+  --in-sys-color-switch-rgb: 0 0 0;
+  --in-sys-color-switch-reverse: var(--in-ref-palette-white);
+  --in-sys-color-switch-reverse-rgb: 255 255 255;
 }
 
-.fn-icon-material {
+.in-icon-material {
   user-select: none;
   width: 1em;
   height: 1em;
@@ -31,6 +31,6 @@
   fill: currentcolor;
   flex-shrink: 0;
   transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-  font-size: var(--fn-icon-font-size, 'inherit');
-  color: var(--fn-icon-color);
+  font-size: var(--in-icon-font-size, 'inherit');
+  color: var(--in-icon-color);
 }

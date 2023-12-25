@@ -1,38 +1,38 @@
 <script lang="ts" setup>
-import { FnButton, FnButtonGroup } from '@fusion-ui-vue/components'
+import { InButton, InButtonGroup } from '@interface-ui/components'
 </script>
 
 <template>
   <div class="content">
-    <fn-button-group variant="outlined" size="small">
-      <fn-button>one</fn-button>
-      <fn-button>two</fn-button>
-      <fn-button>three</fn-button>
-    </fn-button-group>
-    <fn-button-group variant="outlined" color="tertiary">
-      <fn-button>one</fn-button>
-      <fn-button>two</fn-button>
-      <fn-button>three</fn-button>
-    </fn-button-group>
-    <fn-button-group variant="outlined" size="large">
-      <fn-button>one</fn-button>
-      <fn-button>two</fn-button>
-      <fn-button>three</fn-button>
-    </fn-button-group>
+    <in-button-group variant="outlined" size="small">
+      <in-button>one</in-button>
+      <in-button>two</in-button>
+      <in-button>three</in-button>
+    </in-button-group>
+    <in-button-group variant="outlined" color="tertiary">
+      <in-button>one</in-button>
+      <in-button>two</in-button>
+      <in-button>three</in-button>
+    </in-button-group>
+    <in-button-group variant="outlined" size="large">
+      <in-button>one</in-button>
+      <in-button>two</in-button>
+      <in-button>three</in-button>
+    </in-button-group>
   </div>
   <div fscw gap-2>
-    <fn-button variant="text" size="small">Small</fn-button>
-    <fn-button variant="text" size="medium">Medium</fn-button>
-    <fn-button variant="text" size="large">Large</fn-button>
+    <in-button variant="text" size="small">Small</in-button>
+    <in-button variant="text" size="medium">Medium</in-button>
+    <in-button variant="text" size="large">Large</in-button>
   </div>
   <div fscw gap-2>
-    <fn-button size="small">Small</fn-button>
-    <fn-button size="medium">Medium</fn-button>
-    <fn-button size="large">Large</fn-button>
+    <in-button size="small">Small</in-button>
+    <in-button size="medium">Medium</in-button>
+    <in-button size="large">Large</in-button>
   </div>
   <div fscw gap-2>
-    <fn-button variant="outlined" size="small">Small</fn-button>
-    <fn-button variant="outlined" size="medium">Medium</fn-button>
-    <fn-button variant="outlined" size="large">Large</fn-button>
+    <in-button variant="outlined" size="small">Small</in-button>
+    <in-button variant="outlined" size="medium">Medium</in-button>
+    <in-button variant="outlined" size="large">Large</in-button>
   </div>
 </template>

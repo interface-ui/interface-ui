@@ -1,30 +1,30 @@
 <template>
   <div style="width: 320px">
-    <fn-list :selectable="false">
-      <fn-list-item>
+    <in-list :selectable="false">
+      <in-list-item>
         <template #leading="{ avatar }">
-          <fn-avatar v-bind="avatar">A</fn-avatar>
+          <in-avatar v-bind="avatar">A</in-avatar>
         </template>
-        <fn-headline-text headline="Ullamco consectetur." />
-      </fn-list-item>
-      <fn-list-item selectable>
+        <in-headline-text headline="Ullamco consectetur." />
+      </in-list-item>
+      <in-list-item selectable>
         <template #leading="{ avatar }">
-          <fn-avatar v-bind="avatar">B</fn-avatar>
+          <in-avatar v-bind="avatar">B</in-avatar>
         </template>
-        <fn-headline-text
+        <in-headline-text
           headline="In officia cupidatat!"
           supporting-text="Officia qui ea ex dolor."
         />
-      </fn-list-item>
-      <fn-list-item align-items="flex-start">
+      </in-list-item>
+      <in-list-item align-items="flex-start">
         <template #leading="{ avatar }">
-          <fn-avatar v-bind="avatar">C</fn-avatar>
+          <in-avatar v-bind="avatar">C</in-avatar>
         </template>
-        <fn-headline-text
+        <in-headline-text
           headline="Brunch this weekend?"
           supporting-text="Ali Connors — I'll be in your neighborhood doing errands this…"
         />
-      </fn-list-item>
-    </fn-list>
+      </in-list-item>
+    </in-list>
   </div>
 </template>

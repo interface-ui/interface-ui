@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import '@fusion-ui-vue/components/src/popover/src/index.less' // 开发调试的样式
-import { FnPopover, FnButton } from '@fusion-ui-vue/components'
+import '@interface-ui/components/src/popover/src/index.less' // 开发调试的样式
+import { InPopover, InButton } from '@interface-ui/components'
 import { ref } from 'vue'
 
 const anchor = ref(null)
@@ -8,17 +8,17 @@ const anchor = ref(null)
 
 <template>
   <div class="content">
-    <fn-button @click="e => (anchor = e.currentTarget)">Popover</fn-button>
-    <fn-popover
+    <in-button @click="e => (anchor = e.currentTarget)">Popover</in-button>
+    <in-popover
       :open="Boolean(anchor)"
       :anchor="anchor"
       @close="anchor = null"
       :placement="{ y: 'top' }"
     >
-      <fn-typography no-warp>
+      <in-typography no-warp>
         This is a popover <br />
         This is a popover
-      </fn-typography>
-    </fn-popover>
+      </in-typography>
+    </in-popover>
   </div>
 </template>

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { useNamespace } from '@fusion-ui-vue/utils'
+import { useNamespace } from '@interface-ui/utils'
 import { __component__Props } from './__component__KebabCase__'
 
 defineProps(__component__Props)

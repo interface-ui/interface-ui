@@ -10,10 +10,10 @@ const checked4 = ref<boolean>(false)
 <template>
   <div space-y-2>
     <div fscw gap-2>
-      <fn-checkbox v-model="checked1" />
-      <fn-checkbox v-model="checked2" />
-      <fn-checkbox v-model="checked3" disabled />
-      <fn-checkbox v-model="checked4" disabled />
+      <in-checkbox v-model="checked1" />
+      <in-checkbox v-model="checked2" />
+      <in-checkbox v-model="checked3" disabled />
+      <in-checkbox v-model="checked4" disabled />
     </div>
   </div>
 </template>

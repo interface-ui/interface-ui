@@ -26,7 +26,7 @@
 
 1. Fork [此仓库](https://github.com/tsinghua-lau/fusion-ui)
 2. 进入本地项目根目录，使用 `pnpm i` 安装依赖。
-3. 根目录  `pnpm run build` 生成 ```pakages/fusion-ui/dist``` 目录 
+3. 根目录  `pnpm run build` 生成 ```pakages/interface-ui/dist``` 目录
 4. 根目录  `pnpm run docs:dev` 启动项目， 查看文档。
 5. 根目录  `pnpm run play:dev` 启动项目， 查看文档。
 6. 提交前请先```git pull``` 拉取最新代码，以免提交文件冲突。

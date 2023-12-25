@@ -11,4 +11,4 @@ export const pluginsRoot = resolve(projectRoot, 'plugins')
 export const utilsRoot = resolve(projectRoot, 'utils')
 
 export const buildOutput = resolve(projectPackages, '../interface-ui/dist')
-// export const buildOutput2 = resolve(projectPackages, '../packages/fusion-ui/dist/types')
+// export const buildOutput2 = resolve(projectPackages, '../packages/interface-ui/dist/types')

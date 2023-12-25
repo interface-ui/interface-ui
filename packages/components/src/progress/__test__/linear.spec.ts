@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { mount } from '@vue/test-utils'
-import { createTheme } from '@fusion-ui-vue/theme'
+import { createTheme } from '@interface-ui/theme'
 import LinearProgressBar from '../src/svg/linear.vue'
 
 describe('CircleProgressBar', () => {
@@ -15,7 +15,7 @@ describe('CircleProgressBar', () => {
         },
       },
     })
-    expect(wrapper.classes()).toContain('fn-progress__linear')
+    expect(wrapper.classes()).toContain('in-progress__linear')
   })
 
   it('linear progress status', async () => {
@@ -28,8 +28,8 @@ describe('CircleProgressBar', () => {
       },
     })
 
-    expect(wrapper.find('.fn-progress--indeterminate').exists()).toBe(true)
+    expect(wrapper.find('.in-progress--indeterminate').exists()).toBe(true)
     await wrapper.setProps({ status: 'determinate' })
-    expect(wrapper.find('.fn-progress--determinate').exists()).toBe(true)
+    expect(wrapper.find('.in-progress--determinate').exists()).toBe(true)
   })
 })

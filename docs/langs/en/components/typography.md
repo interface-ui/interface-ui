@@ -13,15 +13,15 @@ Typography helps make writing legible and beautiful
 
 ## Roboto font
 
-Fusion UI uses the [Roboto](https://fonts.google.com/specimen/Roboto) by default. For more information, see [@fontsource/roboto](https://www.npmjs.com/package/@fontsource/roboto)
+Interface UI uses the [Roboto](https://fonts.google.com/specimen/Roboto) by default. For more information, see [@fontsource/roboto](https://www.npmjs.com/package/@fontsource/roboto)
 
-> Fusion UI's default typography configuration relies only on the 300, 400, 500, and 700 font weights.
+> Interface UI's default typography configuration relies only on the 300, 400, 500, and 700 font weights.
 
 ## Typography Scale
 
 The `Typography` component follows the [Material Design Typography Scale](https://m3.material.io/styles/typography/type-scale-tokens) instructions to build a mapping to `html`. Check the mapping relationships below.
 
-| Material Design Typography Type Scale | Fusion UI HTML Tag |
+| Material Design Typography Type Scale | Interface UI HTML Tag |
 |:--------------------------------------|:-------------------|
 | Display Large                         | `h1`               |
 | Display Medium                        | `h2`               |

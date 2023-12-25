@@ -1,4 +1,4 @@
 <template>
-  <fn-link href="#">Link</fn-link>
-  <fn-link href="#" disabled>Disabled Link</fn-link>
+  <in-link href="#">Link</in-link>
+  <in-link href="#" disabled>Disabled Link</in-link>
 </template>

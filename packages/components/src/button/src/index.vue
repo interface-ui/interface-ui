@@ -1,9 +1,9 @@
 <script lang="ts" setup>
-import { useNamespace } from '@fusion-ui-vue/utils'
+import { useNamespace } from '@interface-ui/utils'
 import { computed } from 'vue'
-import { iconSize } from '@fusion-ui-vue/constants'
-import FnButtonBase from '../../button-base'
-import FnRipple from '../../ripple'
+import { iconSize } from '@interface-ui/constants'
+import InButtonBase from '../../button-base'
+import InRipple from '../../ripple'
 import { buttonProps } from './button'
 import useCss from './index.jss'
 
@@ -18,11 +18,11 @@ const classList = computed(() => {
 </script>
 
 <template>
-  <fn-button-base :class="[...classList, `title-${props.size}`, cssClass]">
+  <in-button-base :class="[...classList, `title-${props.size}`, cssClass]">
     <slot v-bind="{ size: iconSize[props.size] }" />
-    <fn-ripple
+    <in-ripple
       v-if="!props.disableRipple"
       :color="props.variant === 'filled' ? undefined : props.color"
     />
-  </fn-button-base>
+  </in-button-base>
 </template>

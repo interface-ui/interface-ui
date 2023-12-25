@@ -9,9 +9,9 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    FnButton: typeof import('fusion-ui-vue/components/index')['FnButton']
-    FnInput: typeof import('fusion-ui-vue/components/index')['FnInput']
-    FnDialog: typeof import('fusion-ui-vue/components/index')['FnDialog']
-    FnRadio: typeof import('fusion-ui-vue/components/index')['FnRadio']
+    InButton: typeof import('interface-ui/components/index')['InButton']
+    InInput: typeof import('interface-ui/components/index')['InInput']
+    InDialog: typeof import('interface-ui/components/index')['InDialog']
+    InRadio: typeof import('interface-ui/components/index')['InRadio']
   }
 }

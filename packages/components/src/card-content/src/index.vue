@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { useNamespace } from '@fusion-ui-vue/utils'
+import { useNamespace } from '@interface-ui/utils'
 import { cardContentProps } from './card-content'
 import useCss from './index.jss'
 

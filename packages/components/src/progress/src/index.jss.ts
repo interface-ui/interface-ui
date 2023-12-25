@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/indent */
 import { computed } from 'vue'
-import { css, cx, useColor } from '@fusion-ui-vue/theme'
+import { css, cx, useColor } from '@interface-ui/theme'
 import type { ComponentStylingHook } from '../../../types'
 import type { ProgressProps } from './progress'
 
@@ -15,8 +15,8 @@ const useCss: ComponentStylingHook<
 
     const progressStyle = css([
       {
-        '--fn-progress-color': $color.value,
-        '--fn-progress-perimeter': perimeter,
+        '--in-progress-color': $color.value,
+        '--in-progress-perimeter': perimeter,
       },
       props.variant === 'circular' &&
         props.status === 'indeterminate' && {

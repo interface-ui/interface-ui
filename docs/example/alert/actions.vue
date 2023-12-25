@@ -6,21 +6,19 @@ const { CloseOutlined } = pkg
 
 <template>
   <div space-y-5 w-full>
-    <fn-alert severity="error">
+    <in-alert severity="error">
       This is an error alert — check it out!
       <template #action="btn">
-        <fn-button v-bind="btn" variant="text">
-          CLOSE
-        </fn-button>
+        <in-button v-bind="btn" variant="text"> CLOSE </in-button>
       </template>
-    </fn-alert>
-    <fn-alert severity="warning">
+    </in-alert>
+    <in-alert severity="warning">
       This is an warning alert — check it out!
       <template #action="btn">
-        <fn-icon-button v-bind="btn">
+        <in-icon-button v-bind="btn">
           <close-outlined />
-        </fn-icon-button>
+        </in-icon-button>
       </template>
-    </fn-alert>
+    </in-alert>
   </div>
 </template>

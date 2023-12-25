@@ -13,7 +13,7 @@ const handleContextMenu = (e: MouseEvent) => {
 
 <template>
   <div @contextmenu="handleContextMenu">
-    <fn-typography>
+    <in-typography>
       Cupidatat Lorem proident esse enim ullamco non dolor fugiat ut. Officia
       cillum sit ut incididunt laborum deserunt cupidatat labore laboris velit
       deserunt eiusmod. Occaecat tempor dolore do ipsum eiusmod eiusmod
@@ -22,9 +22,9 @@ const handleContextMenu = (e: MouseEvent) => {
       fugiat. Sint culpa culpa et consequat pariatur exercitation officia nisi
       esse pariatur ad ipsum. Eiusmod deserunt est ea mollit veniam. Ea proident
       ea duis veniam eu elit commodo voluptate mollit aliquip.
-    </fn-typography>
+    </in-typography>
   </div>
-  <fn-menu
+  <in-menu
     keep-mounted
     :open="Boolean(anchor)"
     :anchor="anchor"
@@ -32,49 +32,49 @@ const handleContextMenu = (e: MouseEvent) => {
     cs="width: 200px;"
     @close="anchor = null"
   >
-    <fn-list-item>
+    <in-list-item>
       <template #leading="{ icon }">
         <content-copy-filled v-bind="icon" />
       </template>
       Copy
       <template #trailing>
-        <fn-typography variant="label.large" cs="opacity: 0.6;">
+        <in-typography variant="label.large" cs="opacity: 0.6;">
           ⌘C
-        </fn-typography>
+        </in-typography>
       </template>
-    </fn-list-item>
-    <fn-list-item disabled>
+    </in-list-item>
+    <in-list-item disabled>
       <template #leading="{ icon }">
         <content-paste-filled v-bind="icon" />
       </template>
       Paste
       <template #trailing>
-        <fn-typography variant="label.large" cs="opacity: 0.6;">
+        <in-typography variant="label.large" cs="opacity: 0.6;">
           ⌘V
-        </fn-typography>
+        </in-typography>
       </template>
-    </fn-list-item>
-    <fn-list-item>
+    </in-list-item>
+    <in-list-item>
       <template #leading="{ icon }">
         <content-cut-filled v-bind="icon" />
       </template>
       Cut
       <template #trailing>
-        <fn-typography variant="label.large" cs="opacity: 0.6;">
+        <in-typography variant="label.large" cs="opacity: 0.6;">
           ⌘X
-        </fn-typography>
+        </in-typography>
       </template>
-    </fn-list-item>
-    <fn-list-item>
+    </in-list-item>
+    <in-list-item>
       <template #leading="{ icon }">
         <undo-filled v-bind="icon" />
       </template>
       Undo
       <template #trailing>
-        <fn-typography variant="label.large" cs="opacity: 0.6;">
+        <in-typography variant="label.large" cs="opacity: 0.6;">
           ⌘Z
-        </fn-typography>
+        </in-typography>
       </template>
-    </fn-list-item>
-  </fn-menu>
+    </in-list-item>
+  </in-menu>
 </template>

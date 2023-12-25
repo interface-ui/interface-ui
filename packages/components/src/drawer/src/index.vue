@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { useNamespace } from '@fusion-ui-vue/utils'
+import { useNamespace } from '@interface-ui/utils'
 import { Teleport, nextTick, ref, watch } from 'vue'
-import FnModal from '../../modal'
-import FnFragment from '../../fragment'
+import InModal from '../../modal'
+import InFragment from '../../fragment'
 import type { DrawerEmits } from './drawer'
 import { drawerProps } from './drawer'
 import useCss from './index.jss'
@@ -38,7 +38,7 @@ const handleEscKey = (e: KeyboardEvent) => {
 
 <template>
   <component
-    :is="$props.variant === 'temporary' ? Teleport : FnFragment"
+    :is="$props.variant === 'temporary' ? Teleport : InFragment"
     to="body"
   >
     <transition :name="ns.bm('animation', `slide-${$props.placement}`)">
@@ -61,7 +61,7 @@ const handleEscKey = (e: KeyboardEvent) => {
       </div>
     </transition>
   </component>
-  <fn-modal
+  <in-modal
     v-if="$props.variant === 'temporary'"
     :keep-mounted="$props.keepMounted"
     :model-value="$props.open"

@@ -53,7 +53,7 @@ export function PlayResolver(
   return {
     type: 'component',
     resolve: (name: string) => {
-      if (name.startsWith('Fn')) {
+      if (name.startsWith('In')) {
         const partialName = name.slice(2)
         return {
           name,

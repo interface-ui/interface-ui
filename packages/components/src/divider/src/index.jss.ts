@@ -1,5 +1,5 @@
 import { computed } from 'vue'
-import { css, cx } from '@fusion-ui-vue/theme'
+import { css, cx } from '@interface-ui/theme'
 import type { ComponentStylingHook } from '../../../types'
 import type { DividerProps } from './divider'
 

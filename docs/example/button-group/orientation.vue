@@ -1,21 +1,21 @@
 <template>
   <div space-y-2>
     <div fscw gap-2>
-      <fn-button-group variant="outlined" orientation="vertical">
-        <fn-button>one</fn-button>
-        <fn-button>two</fn-button>
-        <fn-button>three</fn-button>
-      </fn-button-group>
-      <fn-button-group orientation="vertical">
-        <fn-button>one</fn-button>
-        <fn-button>two</fn-button>
-        <fn-button>three</fn-button>
-      </fn-button-group>
-      <fn-button-group variant="text" orientation="vertical">
-        <fn-button>one</fn-button>
-        <fn-button>two</fn-button>
-        <fn-button>three</fn-button>
-      </fn-button-group>
+      <in-button-group variant="outlined" orientation="vertical">
+        <in-button>one</in-button>
+        <in-button>two</in-button>
+        <in-button>three</in-button>
+      </in-button-group>
+      <in-button-group orientation="vertical">
+        <in-button>one</in-button>
+        <in-button>two</in-button>
+        <in-button>three</in-button>
+      </in-button-group>
+      <in-button-group variant="text" orientation="vertical">
+        <in-button>one</in-button>
+        <in-button>two</in-button>
+        <in-button>three</in-button>
+      </in-button-group>
     </div>
   </div>
 </template>

@@ -10,13 +10,13 @@ lang: zh
 
 # Icon 图标
 
-Fusion UI 图标遵循[Material Symbols and Icons](https://fonts.google.com/icons?icon.set=Material+Icons)指南构建图标系统。
+Interface UI 图标遵循[Material Symbols and Icons](https://fonts.google.com/icons?icon.set=Material+Icons)指南构建图标系统。
 
-Fusion UI 提供两种构建图标的方式：
-1. 使用[Fusion UI Iconify](https://www.npmjs.com/package/fusion-ui-iconify)库作为Vue组件（SVG图标）
+Interface UI 提供两种构建图标的方式：
+1. 使用[Interface UI Iconify](https://www.npmjs.com/package/fusion-ui-iconify)库作为Vue组件（SVG图标）
 2. 使用[SvgIcon](#svgicon)组件，这是自定义SVG图标的Vue组件包装器。
 
-## Fusion UI Iconify
+## Interface UI Iconify
 
 [Material Symbols and Icons](https://fonts.google.com/icons?icon.set=Material+Icons)有五种样式可用。这些图标基于核心Material Design原则和度量标准。
 
@@ -30,9 +30,9 @@ npm install fusion-ui-iconify
 
 ### 使用
 
-如果您未与 `Fusion UI` 一起使用此库，则应导入样式文件。
+如果您未与 `Interface UI` 一起使用此库，则应导入样式文件。
 
-否则，您无需进行更多配置。`Fusion UI` 中的组件已经完成了对其的适配。
+否则，您无需进行更多配置。`Interface UI` 中的组件已经完成了对其的适配。
 
 ```js
 // main.js
@@ -70,7 +70,7 @@ SVG元素应缩放为 `24 x 24像素` 的视口，以便生成的图标可以直
 
 ### 颜色
 
-[Fusion UI Iconify](https://www.npmjs.com/package/fusion-ui-iconify)中的图标的 `color` 属性不支持 `ThemeSchemes` 和 `ThemeCallback`，因为它是没有任何依赖项构建的。
+[Interface UI Iconify](https://www.npmjs.com/package/fusion-ui-iconify)中的图标的 `color` 属性不支持 `ThemeSchemes` 和 `ThemeCallback`，因为它是没有任何依赖项构建的。
 
 但是❗️❗️❗️您可以使用 `SvgIcon` 的 `component` 属性来启用此功能。
 
@@ -84,7 +84,7 @@ SVG元素应缩放为 `24 x 24像素` 的视口，以便生成的图标可以直
 
 ## 属性
 
-### Fusion UI Iconify
+### Interface UI Iconify
 
 <table-block type="propsZh" :data="iconProps" />
 

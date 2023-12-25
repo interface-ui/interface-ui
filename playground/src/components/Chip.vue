@@ -1,9 +1,9 @@
 <script lang="ts" setup>
-import '@fusion-ui-vue/components/src/chip/src/index.less'
-import { ChipVariants, FnChip } from '@fusion-ui-vue/components'
+import '@interface-ui/components/src/chip/src/index.less'
+import { ChipVariants, InChip } from '@interface-ui/components'
 import { TodayFilled } from 'fusion-ui-iconify'
 import { ref } from 'vue'
-import { ThemeCallBack } from '@fusion-ui-vue/theme'
+import { ThemeCallBack } from '@interface-ui/theme'
 
 const chipArr = ref<
   {
@@ -48,53 +48,53 @@ const onDelete = (index: number) => {
 <template>
   <!-- Basic -->
   <div class="content">
-    <fn-chip>filled</fn-chip>
-    <fn-chip variant="outlined">outlined</fn-chip>
+    <in-chip>filled</in-chip>
+    <in-chip variant="outlined">outlined</in-chip>
   </div>
 
   <!-- Clickable -->
   <div class="content">
-    <fn-chip clickable>filled</fn-chip>
-    <fn-chip clickable variant="outlined">outlined</fn-chip>
+    <in-chip clickable>filled</in-chip>
+    <in-chip clickable variant="outlined">outlined</in-chip>
   </div>
 
   <!-- Disabled -->
   <div class="content">
-    <fn-chip disabled>filled</fn-chip>
-    <fn-chip disabled variant="outlined">outlined</fn-chip>
-    <fn-chip disabled clickable>filled</fn-chip>
-    <fn-chip disabled clickable variant="outlined">outlined</fn-chip>
+    <in-chip disabled>filled</in-chip>
+    <in-chip disabled variant="outlined">outlined</in-chip>
+    <in-chip disabled clickable>filled</in-chip>
+    <in-chip disabled clickable variant="outlined">outlined</in-chip>
   </div>
 
   <!-- Color -->
   <div class="content">
-    <fn-chip color="primaryContainer">Primary</fn-chip>
-    <fn-chip color="secondaryContainer">Secondary</fn-chip>
-    <fn-chip color="primary" variant="outlined">Primary</fn-chip>
-    <fn-chip color="secondary" variant="outlined">Secondary</fn-chip>
+    <in-chip color="primaryContainer">Primary</in-chip>
+    <in-chip color="secondaryContainer">Secondary</in-chip>
+    <in-chip color="primary" variant="outlined">Primary</in-chip>
+    <in-chip color="secondary" variant="outlined">Secondary</in-chip>
   </div>
 
   <!-- Icon -->
   <div class="content">
-    <fn-chip>
+    <in-chip>
       <today-filled />
       Today
-    </fn-chip>
-    <fn-chip variant="outlined">
+    </in-chip>
+    <in-chip variant="outlined">
       <today-filled />
       Today
-    </fn-chip>
+    </in-chip>
   </div>
 
   <!-- Deletable -->
   <div class="content">
-    <fn-chip
+    <in-chip
       v-for="({ text, ...attrs }, index) in chipArr"
       :key="text"
       v-bind="attrs"
       @delete="onDelete(index)"
     >
       {{ text }}
-    </fn-chip>
+    </in-chip>
   </div>
 </template>

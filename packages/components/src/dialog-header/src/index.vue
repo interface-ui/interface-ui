@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { useNamespace } from '@fusion-ui-vue/utils'
-import FnTypography from '../../typography'
+import { useNamespace } from '@interface-ui/utils'
+import InTypography from '../../typography'
 import { dialogHeaderProps } from './dialog-header'
 import useCss from './index.jss'
 
@@ -12,9 +12,9 @@ const cssClass = useCss(props)
 <template>
   <div :class="[ns.b(), cssClass]">
     <slot name="leading" />
-    <fn-typography variant="h6" component="h2" :class="[ns.m('title')]">
+    <in-typography variant="h6" component="h2" :class="[ns.m('title')]">
       <slot />
-    </fn-typography>
+    </in-typography>
 
     <slot name="action" />
   </div>

@@ -1,7 +1,7 @@
 import { computed, defineComponent, mergeProps, toRefs } from 'vue'
-import { unRefs, useNamespace } from '@fusion-ui-vue/utils'
-import { css, cx } from '@fusion-ui-vue/theme'
-import { FnAvatar } from '../../avatar'
+import { unRefs, useNamespace } from '@interface-ui/utils'
+import { css, cx } from '@interface-ui/theme'
+import { InAvatar } from '../../avatar'
 import { avatarGroupProps } from './avatar-group'
 
 export default defineComponent({
@@ -16,7 +16,7 @@ export default defineComponent({
       const count = slotsVNodes.length - +max.value
       vNodes = [
         ...(slotsVNodes.slice(0, +max.value) as any),
-        (<FnAvatar>+{count}</FnAvatar>) as any,
+        (<InAvatar>+{count}</InAvatar>) as any,
       ]
     }
 
@@ -30,7 +30,7 @@ export default defineComponent({
       const classes = (attrs?.class as string)?.split(' ') ?? []
       classes.push(ns.b())
       classes.push(css`
-        & .fn-avatar {
+        & .in-avatar {
           border: 2px solid ${avatarBorder.value};
         }
       `)

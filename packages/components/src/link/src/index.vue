@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { useNamespace } from '@fusion-ui-vue/utils'
-import FnTypography from '../../typography'
+import { useNamespace } from '@interface-ui/utils'
+import InTypography from '../../typography'
 import { linkProps } from './link'
 import useCss from './index.jss'
 
@@ -10,11 +10,11 @@ const cssClass = useCss(props)
 </script>
 
 <template>
-  <fn-typography
-    component="a"
+  <in-typography
+    :component="$props.component"
     :class="[ns.b(), ns.m(`underline-${$props.underline}`), cssClass]"
     :color="$props.color"
   >
     <slot />
-  </fn-typography>
+  </in-typography>
 </template>

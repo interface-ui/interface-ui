@@ -1,11 +1,11 @@
-import type { SFCWithInstall } from '@fusion-ui-vue/utils'
-import { withInstall } from '@fusion-ui-vue/utils'
+import type { SFCWithInstall } from '@interface-ui/utils'
+import { withInstall } from '@interface-ui/utils'
 import Fragment from './src/index'
 
-export const FnFragment: SFCWithInstall<typeof Fragment> = withInstall(
+export const InFragment: SFCWithInstall<typeof Fragment> = withInstall(
   Fragment,
-  'FnFragment'
+  'InFragment'
 )
-FnFragment.name = 'FnFragment'
-export default FnFragment
+InFragment.name = 'InFragment'
+export default InFragment
 export type fragmentInstance = InstanceType<typeof Fragment>

@@ -8,16 +8,16 @@ importers:
 
   .:
     dependencies:
-      '@fusion-ui-vue/components':
+      '@interface-ui/components':
         specifier: workspace:*
         version: link:packages/components
-      '@fusion-ui-vue/constants':
+      '@interface-ui/constants':
         specifier: workspace:*
         version: link:packages/constants
-      '@fusion-ui-vue/theme':
+      '@interface-ui/theme':
         specifier: workspace:*
         version: link:packages/theme
-      '@fusion-ui-vue/utils':
+      '@interface-ui/utils':
         specifier: workspace:*
         version: link:packages/utils
       '@pnpm/types':

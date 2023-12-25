@@ -5,42 +5,42 @@ const { MoreVertFilled } = pkg
 </script>
 
 <template>
-  <fn-card>
-    <fn-card-header>
+  <in-card>
+    <in-card-header>
       <template #action>
-        <fn-icon-button color="onSurfaceVariant" cs="opacity: .5;">
+        <in-icon-button color="onSurfaceVariant" cs="opacity: .5;">
           <more-vert-filled />
-        </fn-icon-button>
+        </in-icon-button>
       </template>
-    </fn-card-header>
-    <fn-card-content>
-      <fn-typography cs="opacity: .5;"> Elevated </fn-typography>
-    </fn-card-content>
-  </fn-card>
+    </in-card-header>
+    <in-card-content>
+      <in-typography cs="opacity: .5;"> Elevated </in-typography>
+    </in-card-content>
+  </in-card>
 
-  <fn-card variant="filled">
-    <fn-card-header>
+  <in-card variant="filled">
+    <in-card-header>
       <template #action>
-        <fn-icon-button color="onSurfaceVariant" cs="opacity: .5;">
+        <in-icon-button color="onSurfaceVariant" cs="opacity: .5;">
           <more-vert-filled />
-        </fn-icon-button>
+        </in-icon-button>
       </template>
-    </fn-card-header>
-    <fn-card-content>
-      <fn-typography cs="opacity: .5;"> Filled </fn-typography>
-    </fn-card-content>
-  </fn-card>
+    </in-card-header>
+    <in-card-content>
+      <in-typography cs="opacity: .5;"> Filled </in-typography>
+    </in-card-content>
+  </in-card>
 
-  <fn-card variant="outlined">
-    <fn-card-header>
+  <in-card variant="outlined">
+    <in-card-header>
       <template #action>
-        <fn-icon-button color="onSurfaceVariant" cs="opacity: .5;">
+        <in-icon-button color="onSurfaceVariant" cs="opacity: .5;">
           <more-vert-filled />
-        </fn-icon-button>
+        </in-icon-button>
       </template>
-    </fn-card-header>
-    <fn-card-content>
-      <fn-typography cs="opacity: .5;"> Outlined </fn-typography>
-    </fn-card-content>
-  </fn-card>
+    </in-card-header>
+    <in-card-content>
+      <in-typography cs="opacity: .5;"> Outlined </in-typography>
+    </in-card-content>
+  </in-card>
 </template>

@@ -1,12 +1,12 @@
-import type { SFCWithInstall } from '@fusion-ui-vue/utils'
-import { withInstall } from '@fusion-ui-vue/utils'
+import type { SFCWithInstall } from '@interface-ui/utils'
+import { withInstall } from '@interface-ui/utils'
 import ButtonBase from './src/index.vue'
 
-export const FnButtonBase: SFCWithInstall<typeof ButtonBase> = withInstall(
+export const InButtonBase: SFCWithInstall<typeof ButtonBase> = withInstall(
   ButtonBase,
-  'FnButtonBase'
+  'InButtonBase'
 )
-FnButtonBase.name = 'FnButtonBase'
-export default FnButtonBase
+InButtonBase.name = 'InButtonBase'
+export default InButtonBase
 export * from './src/button-base'
 export type ButtonBaseInstance = InstanceType<typeof ButtonBase>

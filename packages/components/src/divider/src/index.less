@@ -1,9 +1,9 @@
-.fn-divider {
+.in-divider {
   border-style: solid;
   border-color: var(--md-sys-color-outline-variant);
 }
 
-.fn-divider__div--with-slots {
+.in-divider__div--with-slots {
   display: flex;
   flex-wrap: nowrap;
   white-space: nowrap;
@@ -17,23 +17,23 @@
 }
 
 // orientation
-.fn-divider {
+.in-divider {
   &--horizontal {
     border-width: 0px 0px thin;
     flex-direction: row;
     margin: 8px 0;
     width: 100%;
-    &.fn-divider--no-margin {
+    &.in-divider--no-margin {
       margin-top: 0;
       margin-bottom: 0;
     }
-    &.fn-divider--inset {
+    &.in-divider--inset {
       margin-left: 16px;
       margin-right: 16px;
       width: auto;
     }
-    &.fn-divider__div--with-slots {
-      .fn-divider--text {
+    &.in-divider__div--with-slots {
+      .in-divider--text {
         padding: 0 8px;
       }
       &::before,
@@ -41,7 +41,7 @@
         border-top: thin solid var(--md-sys-color-outline-variant);
       }
 
-      &.fn-divider__text--left {
+      &.in-divider__text--left {
         &::before {
           width: 10%;
         }
@@ -49,13 +49,13 @@
           width: 90%;
         }
       }
-      &.fn-divider__text--center {
+      &.in-divider__text--center {
         &::before,
         &::after {
           width: 100%;
         }
       }
-      &.fn-divider__text--right {
+      &.in-divider__text--right {
         &::before {
           width: 90%;
         }
@@ -71,21 +71,21 @@
     height: auto;
     margin: 0 4px;
     align-self: stretch;
-    &.fn-divider--no-margin {
+    &.in-divider--no-margin {
       margin-left: 0;
       margin-right: 0;
     }
-    &.fn-divider--inset {
+    &.in-divider--inset {
       margin-top: 8px;
       margin-bottom: 8px;
     }
-    &.fn-divider__div--with-slots {
+    &.in-divider__div--with-slots {
       &::before,
       &::after {
         border-left: thin solid var(--md-sys-color-outline-variant);
       }
 
-      &.fn-divider__text--left {
+      &.in-divider__text--left {
         &::before {
           height: 10%;
         }
@@ -93,13 +93,13 @@
           height: 90%;
         }
       }
-      &.fn-divider__text--center {
+      &.in-divider__text--center {
         &::before,
         &::after {
           height: 100%;
         }
       }
-      &.fn-divider__text--right {
+      &.in-divider__text--right {
         &::before {
           height: 90%;
         }

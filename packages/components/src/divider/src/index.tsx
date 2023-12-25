@@ -1,7 +1,7 @@
 /* eslint-disable multiline-ternary */
 import { defineComponent } from 'vue'
-import { useNamespace } from '@fusion-ui-vue/utils'
-import FnTypography from '../../typography'
+import { useNamespace } from '@interface-ui/utils'
+import InTypography from '../../typography'
 import { dividerProps } from './divider'
 import useCss from './index.jss'
 
@@ -28,13 +28,13 @@ export default defineComponent({
             cssClass.value,
           ]}
         >
-          <FnTypography
+          <InTypography
             component="span"
             cs={{ opacity: 0.8 }}
             class={[ns.m('text')]}
           >
             {slotsVNodes}
-          </FnTypography>
+          </InTypography>
         </div>
       ) : (
         <Comp

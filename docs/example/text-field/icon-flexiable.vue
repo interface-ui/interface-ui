@@ -15,7 +15,7 @@ const variants = ['outlined', 'filled', 'standard'] as const
 <template>
   <div flex flex-col gap-5>
     <div v-for="variant in variants" :key="variant" flex gap-5>
-      <fn-text-field
+      <in-text-field
         v-model="weight"
         size="large"
         :variant="variant"
@@ -23,10 +23,10 @@ const variants = ['outlined', 'filled', 'standard'] as const
         placeholder="Weight"
       >
         <template #startAdornment="adornment">
-          <fn-typography v-bind="adornment"> kg </fn-typography>
+          <in-typography v-bind="adornment"> kg </in-typography>
         </template>
-      </fn-text-field>
-      <fn-text-field
+      </in-text-field>
+      <in-text-field
         v-model="amount"
         size="large"
         :variant="variant"
@@ -35,10 +35,10 @@ const variants = ['outlined', 'filled', 'standard'] as const
         placeholder="Amount"
       >
         <template #endAdornment="adornment">
-          <fn-typography v-bind="adornment"> $ </fn-typography>
+          <in-typography v-bind="adornment"> $ </in-typography>
         </template>
-      </fn-text-field>
-      <fn-text-field
+      </in-text-field>
+      <in-text-field
         v-model="password"
         size="large"
         :variant="variant"
@@ -48,16 +48,16 @@ const variants = ['outlined', 'filled', 'standard'] as const
         :type="type"
       >
         <template #endAdornment="adornment">
-          <fn-icon-button
+          <in-icon-button
             v-slot="icon"
             v-bind="adornment"
             @click="showPassword = !showPassword"
           >
             <visibility-off-filled v-show="showPassword" v-bind="icon" />
             <visibility-filled v-show="!showPassword" v-bind="icon" />
-          </fn-icon-button>
+          </in-icon-button>
         </template>
-      </fn-text-field>
+      </in-text-field>
     </div>
   </div>
 </template>

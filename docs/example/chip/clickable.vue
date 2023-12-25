@@ -1,4 +1,4 @@
 <template>
-  <fn-chip clickable> filled </fn-chip>
-  <fn-chip clickable variant="outlined"> outlined </fn-chip>
+  <in-chip clickable> filled </in-chip>
+  <in-chip clickable variant="outlined"> outlined </in-chip>
 </template>

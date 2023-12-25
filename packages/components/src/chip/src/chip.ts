@@ -1,6 +1,6 @@
 import type { Component, ExtractPropTypes, PropType } from 'vue'
-import { buildProps } from '@fusion-ui-vue/utils'
-import type { AcceptableColor } from '@fusion-ui-vue/theme'
+import { buildProps } from '@interface-ui/utils'
+import type { AcceptableColor } from '@interface-ui/theme'
 
 export const chipVariants = ['filled', 'outlined'] as const
 export type ChipVariants = typeof chipVariants[number]

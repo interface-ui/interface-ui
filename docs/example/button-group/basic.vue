@@ -1,16 +1,16 @@
 <template>
   <div space-y-2>
     <div fscw gap-2 flex-col>
-      <fn-button-group>
-        <fn-button>one</fn-button>
-        <fn-button>two</fn-button>
-        <fn-button>three</fn-button>
-      </fn-button-group>
-      <fn-button-group disabled>
-        <fn-button>one</fn-button>
-        <fn-button>two</fn-button>
-        <fn-button>three</fn-button>
-      </fn-button-group>
+      <in-button-group>
+        <in-button>one</in-button>
+        <in-button>two</in-button>
+        <in-button>three</in-button>
+      </in-button-group>
+      <in-button-group disabled>
+        <in-button>one</in-button>
+        <in-button>two</in-button>
+        <in-button>three</in-button>
+      </in-button-group>
     </div>
   </div>
 </template>

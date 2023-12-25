@@ -1,3 +1,3 @@
-export { default, default as FnMessage } from './src/index'
+export { default, default as InMessage } from './src/index'
 export * from './src/message'
 export * from './src/index'

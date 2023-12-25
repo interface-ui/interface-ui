@@ -5,14 +5,14 @@ const { EmailFilled, NotificationsFilled } = pkg
 </script>
 
 <template>
-  <fn-badge content="1000" max="999">
-    <fn-icon-button color="secondary">
+  <in-badge content="1000" max="999">
+    <in-icon-button color="secondary">
       <notifications-filled />
-    </fn-icon-button>
-  </fn-badge>
-  <fn-badge :content="1000" :max="99">
-    <fn-icon-button color="tertiary">
+    </in-icon-button>
+  </in-badge>
+  <in-badge :content="1000" :max="99">
+    <in-icon-button color="tertiary">
       <email-filled />
-    </fn-icon-button>
-  </fn-badge>
+    </in-icon-button>
+  </in-badge>
 </template>

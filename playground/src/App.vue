@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { ref, toRaw, watch, h, VNode } from 'vue'
 import { HomeFilled, DarkModeFilled, SunnyFilled } from 'fusion-ui-iconify'
-import { ThemeProvider } from '@fusion-ui-vue/theme'
-import { FnButton, FnIconButton, FnMessage } from '@fusion-ui-vue/components'
+import { ThemeProvider } from '@interface-ui/theme'
+import { InButton, InIconButton, InMessage } from '@interface-ui/components'
 import { DeleteFilled, VerifiedRound } from 'fusion-ui-iconify'
 import { RouterView } from 'vue-router'
 
-import createTheme from '@fusion-ui-vue/theme'
+import createTheme from '@interface-ui/theme'
 
 const theme = createTheme() // create a theme instance
 const open = ref(false)
@@ -25,7 +25,7 @@ watch(theme, () => ((window as any).theme = toRaw(theme.value)), {
 })
 
 const onOpenMessage = () => {
-  new FnMessage({
+  new InMessage({
     /**
      * custom default props
      * Can be override by the props passed in the method
@@ -36,13 +36,13 @@ const onOpenMessage = () => {
   }).push({
     content: 'this is a info message',
     customIcon: VerifiedRound,
-    action: h(FnIconButton, { color: 'primary' }, () => h(DeleteFilled)),
+    action: h(InIconButton, { color: 'primary' }, () => h(DeleteFilled)),
     /**
      * if the actionEvent is not set
      * the default action event is to close the message
      */
     actionEvent: (node: VNode, remove: (c: string | number) => void) => {
-      new FnMessage().error({ content: 'error' })
+      new InMessage().error({ content: 'error' })
       remove((node as any).id)
     },
   })
@@ -52,14 +52,14 @@ const onOpenMessage = () => {
 <template>
   <theme-provider :theme="theme">
     <header>
-      <fn-button @click="$router.replace('/')"><HomeFilled /> Home </fn-button>
-      <fn-button @click="changTheme">
+      <in-button @click="$router.replace('/')"><HomeFilled /> Home </in-button>
+      <in-button @click="changTheme">
         <DarkModeFilled v-show="theme.mode == 'dark'" />
         <SunnyFilled v-show="theme.mode == 'light'" />
         {{ theme.mode }}
-      </fn-button>
-      <fn-button @click="open = !open"> open modal </fn-button>
-      <fn-button @click="onOpenMessage"> open message </fn-button>
+      </in-button>
+      <in-button @click="open = !open"> open modal </in-button>
+      <in-button @click="onOpenMessage"> open message </in-button>
     </header>
 
     <router-view />

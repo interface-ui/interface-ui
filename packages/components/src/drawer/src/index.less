@@ -1,31 +1,31 @@
-.fn-drawer {
+.in-drawer {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  background-color: var(--fn-drawer-color);
+  background-color: var(--in-drawer-color);
 
   &--temporary {
     position: fixed;
     box-shadow: var(--md-sys-elevation-level-16);
-    z-index: var(--fn-sys-z-index-drawer);
-    &.fn-drawer--top {
+    z-index: var(--in-sys-z-index-drawer);
+    &.in-drawer--top {
       top: 0;
       left: 0;
       width: 100%;
       max-height: 100%;
     }
-    &.fn-drawer--bottom {
+    &.in-drawer--bottom {
       left: 0;
       bottom: 0;
       width: 100%;
       max-height: 100%;
     }
-    &.fn-drawer--left {
+    &.in-drawer--left {
       left: 0;
       top: 0;
       height: 100%;
     }
-    &.fn-drawer--right {
+    &.in-drawer--right {
       right: 0;
       top: 0;
       height: 100%;
@@ -40,7 +40,7 @@
   l: left;
 };
 
-.fn-drawer-animation--slide {
+.in-drawer-animation--slide {
   each(@direction, .(@v) {
       &-@{v}-enter-active,
       &-@{v}-leave-active {

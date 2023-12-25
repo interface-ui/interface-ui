@@ -3,7 +3,7 @@ import { computed, inject, ref, unref } from 'vue'
 
 import type { InjectionKey, Ref } from 'vue'
 
-export const defaultNamespace = 'fn'
+export const defaultNamespace = 'in'
 const statePrefix = 'is-'
 
 const _bem = (

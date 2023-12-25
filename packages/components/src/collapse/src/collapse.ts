@@ -1,6 +1,6 @@
-import type { ComponentOrientations } from '@fusion-ui-vue/constants'
-import { componentOrientations } from '@fusion-ui-vue/constants'
-import { buildProps } from '@fusion-ui-vue/utils'
+import type { ComponentOrientations } from '@interface-ui/constants'
+import { componentOrientations } from '@interface-ui/constants'
+import { buildProps } from '@interface-ui/utils'
 import type { ExtractPropTypes, PropType } from 'vue'
 
 export const collapseProps = buildProps({

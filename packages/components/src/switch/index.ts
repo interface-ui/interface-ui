@@ -1,12 +1,12 @@
-import type { SFCWithInstall } from '@fusion-ui-vue/utils'
-import { withInstall } from '@fusion-ui-vue/utils'
+import type { SFCWithInstall } from '@interface-ui/utils'
+import { withInstall } from '@interface-ui/utils'
 import Switch from './src/index.vue'
 
-export const FnSwitch: SFCWithInstall<typeof Switch> = withInstall(
+export const InSwitch: SFCWithInstall<typeof Switch> = withInstall(
   Switch,
-  'FnSwitch'
+  'InSwitch'
 )
-FnSwitch.name = 'FnSwitch'
-export default FnSwitch
+InSwitch.name = 'InSwitch'
+export default InSwitch
 export * from './src/switch'
 export type SwitchInstance = InstanceType<typeof Switch>

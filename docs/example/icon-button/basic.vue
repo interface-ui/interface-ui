@@ -5,10 +5,10 @@ const { CakeFilled } = pkg
 </script>
 
 <template>
-  <fn-icon-button>
+  <in-icon-button>
     <cake-filled />
-  </fn-icon-button>
-  <fn-icon-button disabled>
+  </in-icon-button>
+  <in-icon-button disabled>
     <cake-filled />
-  </fn-icon-button>
+  </in-icon-button>
 </template>

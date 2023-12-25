@@ -5,7 +5,7 @@ import {
   argbFromHex,
   hexFromArgb,
 } from '@material/material-color-utilities'
-import { toCapitalize } from '@fusion-ui-vue/utils'
+import { toCapitalize } from '@interface-ui/utils'
 import type { Theme } from '../core'
 import type { AcceptableColor, ThemeSchemes } from '../types'
 import { useTheme } from './use-theme'

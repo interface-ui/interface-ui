@@ -23,13 +23,13 @@ Interface UI 是一个 Vue3 组件库，简洁、优雅、美观
 ❤️ 感谢所有为 ```FusionUi``` 做出 [贡献的人](https://github.com/tsinghua-lau/fusion-ui/graphs/contributors)！
 
 <a href="https://github.com/tsinghua-lau/fusion-ui/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=tsinghua-lau/fusion-ui" />
+  <img src="https://contrib.rocks/image?repo=tsinghua-lau/interface-ui" />
 </a>
 
 
 ## 最新版本
 
-[![release version](https://img.shields.io/npm/v/fusion-ui-vue.svg?label=FusionUi&color=blue)](https://www.npmjs.com/package/fusion-ui-vue)
+[![release version](https://img.shields.io/npm/v/interface-ui.svg?label=FusionUi&color=blue)](https://www.npmjs.com/package/interface-ui)
 
 
 您可以订阅此提要以获取新版本通知: https://github.com/tsinghua-lau/fusion-ui/releases

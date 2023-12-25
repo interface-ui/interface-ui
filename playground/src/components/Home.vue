@@ -1,12 +1,12 @@
 <script lang="ts" setup>
-import { FnButton } from '@fusion-ui-vue/components'
+import { InButton } from '@interface-ui/components'
 import { RouterLink } from 'vue-router'
 import routes from '../routes'
 </script>
 
 <template>
   <div class="grid-container">
-    <fn-button
+    <in-button
       v-for="item in routes"
       :component="RouterLink"
       :to="item.path"
@@ -14,6 +14,6 @@ import routes from '../routes'
       cs="text-transform: none;"
     >
       {{ item.name }}
-    </fn-button>
+    </in-button>
   </div>
 </template>

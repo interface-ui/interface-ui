@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { useTheme } from '@fusion-ui-vue/theme'
+import { useTheme } from '@interface-ui/theme'
 import { ref } from 'vue'
 import * as pkg from 'fusion-ui-iconify'
 
@@ -11,11 +11,11 @@ const switched = ref([true, false, false])
 
 <template>
   <div style="width: 280px">
-    <fn-list :selectable="false">
-      <fn-list-item-header> Color selection </fn-list-item-header>
-      <fn-list-item>
+    <in-list :selectable="false">
+      <in-list-item-header> Color selection </in-list-item-header>
+      <in-list-item>
         <template #leading="{ avatar }">
-          <fn-avatar
+          <in-avatar
             v-bind="avatar"
             variant="rounded"
             :background="theme.colors.red[400]"
@@ -23,12 +23,12 @@ const switched = ref([true, false, false])
         </template>
         Red
         <template #trailing>
-          <fn-checkbox v-model="checked[0]" />
+          <in-checkbox v-model="checked[0]" />
         </template>
-      </fn-list-item>
-      <fn-list-item>
+      </in-list-item>
+      <in-list-item>
         <template #leading="{ avatar }">
-          <fn-avatar
+          <in-avatar
             v-bind="avatar"
             variant="rounded"
             :background="theme.colors.pink[400]"
@@ -36,12 +36,12 @@ const switched = ref([true, false, false])
         </template>
         Pink
         <template #trailing>
-          <fn-checkbox v-model="checked[1]" />
+          <in-checkbox v-model="checked[1]" />
         </template>
-      </fn-list-item>
-      <fn-list-item>
+      </in-list-item>
+      <in-list-item>
         <template #leading="{ avatar }">
-          <fn-avatar
+          <in-avatar
             v-bind="avatar"
             variant="rounded"
             :background="theme.colors.purple[400]"
@@ -49,41 +49,41 @@ const switched = ref([true, false, false])
         </template>
         Purple
         <template #trailing>
-          <fn-checkbox v-model="checked[2]" />
+          <in-checkbox v-model="checked[2]" />
         </template>
-      </fn-list-item>
-    </fn-list>
+      </in-list-item>
+    </in-list>
   </div>
   <div style="width: 280px">
-    <fn-list :selectable="false">
-      <fn-list-item-header> Settings </fn-list-item-header>
-      <fn-list-item>
+    <in-list :selectable="false">
+      <in-list-item-header> Settings </in-list-item-header>
+      <in-list-item>
         <template #leading="{ icon }">
           <wifi-filled v-bind="icon" />
         </template>
         Wifi
         <template #trailing>
-          <fn-switch v-model="switched[0]" size="small" />
+          <in-switch v-model="switched[0]" size="small" />
         </template>
-      </fn-list-item>
-      <fn-list-item>
+      </in-list-item>
+      <in-list-item>
         <template #leading="{ icon }">
           <signal-cellular-alt-filled v-bind="icon" />
         </template>
         Cellular
         <template #trailing>
-          <fn-switch v-model="switched[1]" size="small" />
+          <in-switch v-model="switched[1]" size="small" />
         </template>
-      </fn-list-item>
-      <fn-list-item>
+      </in-list-item>
+      <in-list-item>
         <template #leading="{ icon }">
           <bluetooth-filled v-bind="icon" />
         </template>
         Bluetooth
         <template #trailing>
-          <fn-switch v-model="switched[2]" size="small" />
+          <in-switch v-model="switched[2]" size="small" />
         </template>
-      </fn-list-item>
-    </fn-list>
+      </in-list-item>
+    </in-list>
   </div>
 </template>

@@ -1,8 +1,8 @@
 import type { ExtractPropTypes, PropType } from 'vue'
-import { buildProps } from '@fusion-ui-vue/utils'
-import type { ComponentDirections } from '@fusion-ui-vue/constants'
-import { componentDirections } from '@fusion-ui-vue/constants'
-import type { AcceptableColor } from '@fusion-ui-vue/theme'
+import { buildProps } from '@interface-ui/utils'
+import type { ComponentDirections } from '@interface-ui/constants'
+import { componentDirections } from '@interface-ui/constants'
+import type { AcceptableColor } from '@interface-ui/theme'
 
 export const drawerVariants = ['persistent', 'temporary'] as const
 export type DrawerVariants = typeof drawerVariants[number]

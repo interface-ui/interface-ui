@@ -1,12 +1,12 @@
-import type { SFCWithInstall } from '@fusion-ui-vue/utils'
-import { withInstall } from '@fusion-ui-vue/utils'
+import type { SFCWithInstall } from '@interface-ui/utils'
+import { withInstall } from '@interface-ui/utils'
 import Radio from './src/index.vue'
 
-export const FnRadio: SFCWithInstall<typeof Radio> = withInstall(
+export const InRadio: SFCWithInstall<typeof Radio> = withInstall(
   Radio,
-  'FnRadio'
+  'InRadio'
 )
-FnRadio.name = 'FnRadio'
-export default FnRadio
+InRadio.name = 'InRadio'
+export default InRadio
 export * from './src/radio'
 export type RadioInstance = InstanceType<typeof Radio>

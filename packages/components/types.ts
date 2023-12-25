@@ -1,4 +1,4 @@
-import type { UseNamespaceReturn } from '@fusion-ui-vue/utils'
+import type { UseNamespaceReturn } from '@interface-ui/utils'
 import type { ComputedRef } from 'vue'
 
 export type ComponentStylingHook<P, R = string> = (

@@ -1,9 +1,9 @@
 <script lang="ts" setup>
-import { FnAvatar, FnBadge } from '@fusion-ui-vue/components'
-import { styled } from '@fusion-ui-vue/theme'
+import { InAvatar, InBadge } from '@interface-ui/components'
+import { styled } from '@interface-ui/theme'
 
-const StyledBadge = styled(FnBadge)(theme => ({
-  '& .fn-badge--icon': {
+const StyledBadge = styled(InBadge)(theme => ({
+  '& .in-badge--icon': {
     backgroundColor: '#44b700',
     color: '#44b700',
     boxShadow: `0 0 0 2px ${theme.schemes.background}`,
@@ -31,7 +31,7 @@ const StyledBadge = styled(FnBadge)(theme => ({
   },
 }))
 
-const SmallAvatar = styled(FnAvatar, {
+const SmallAvatar = styled(InAvatar, {
   src: 'https://mui.com/static/images/avatar/2.jpg',
   size: 22,
 })(theme => ({
@@ -42,20 +42,20 @@ const SmallAvatar = styled(FnAvatar, {
 
 <template>
   <div>
-    <fn-badge variant="dot">
-      <fn-button>Dot</fn-button>
-    </fn-badge>
-    <fn-badge content="10">
-      <fn-button>Hello</fn-button>
-    </fn-badge>
-    <!-- <fn-badge content="6">
-      <fn-icon icon="mdi:bell" :color="theme => theme.colors.grey[500]" />
-    </fn-badge> -->
+    <in-badge variant="dot">
+      <in-button>Dot</in-button>
+    </in-badge>
+    <in-badge content="10">
+      <in-button>Hello</in-button>
+    </in-badge>
+    <!-- <in-badge content="6">
+      <in-icon icon="mdi:bell" :color="theme => theme.colors.grey[500]" />
+    </in-badge> -->
   </div>
   <styled-badge variant="dot" y-align="bottom" overlap>
-    <fn-avatar src="https://mui.com/static/images/avatar/1.jpg" />
+    <in-avatar src="https://mui.com/static/images/avatar/1.jpg" />
   </styled-badge>
-  <fn-badge :content="SmallAvatar" y-align="bottom">
-    <fn-avatar src="https://mui.com/static/images/avatar/1.jpg" />
-  </fn-badge>
+  <in-badge :content="SmallAvatar" y-align="bottom">
+    <in-avatar src="https://mui.com/static/images/avatar/1.jpg" />
+  </in-badge>
 </template>

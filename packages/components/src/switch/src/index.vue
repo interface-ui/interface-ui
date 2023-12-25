@@ -1,10 +1,10 @@
 <script lang="ts" setup>
-import { useNamespace } from '@fusion-ui-vue/utils'
+import { useNamespace } from '@interface-ui/utils'
 import { computed } from 'vue'
-import { UPDATE_MODEL_EVENT } from '@fusion-ui-vue/constants'
+import { UPDATE_MODEL_EVENT } from '@interface-ui/constants'
 import CheckFilled from '../../svg-icon/internal/CheckFilled.vue'
-import FnIconButton from '../../icon-button'
-import FnInputBase from '../../input-base'
+import InIconButton from '../../icon-button'
+import InInputBase from '../../input-base'
 import { switchProps } from './switch'
 import useCss from './index.jss'
 
@@ -25,7 +25,7 @@ const checked = computed<boolean>({
 
 <template>
   <span :class="[ns.b(), checked ? ns.m('checked') : '', cssClass]">
-    <fn-icon-button
+    <in-icon-button
       :class="[ns.e('thumb')]"
       :color="props.color"
       :disabled="$attrs.disabled"
@@ -36,8 +36,8 @@ const checked = computed<boolean>({
           <check-filled v-if="!props.disabledIcon" />
         </slot>
       </span>
-    </fn-icon-button>
-    <fn-input-base
+    </in-icon-button>
+    <in-input-base
       v-bind="$attrs"
       v-model="checked"
       :class="[ns.e('input')]"

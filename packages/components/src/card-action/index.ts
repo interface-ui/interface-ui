@@ -1,12 +1,12 @@
-import type { SFCWithInstall } from '@fusion-ui-vue/utils'
-import { withInstall } from '@fusion-ui-vue/utils'
+import type { SFCWithInstall } from '@interface-ui/utils'
+import { withInstall } from '@interface-ui/utils'
 import CardAction from './src/index.vue'
 
-export const FnCardAction: SFCWithInstall<typeof CardAction> = withInstall(
+export const InCardAction: SFCWithInstall<typeof CardAction> = withInstall(
   CardAction,
-  'FnCardAction'
+  'InCardAction'
 )
-FnCardAction.name = 'FnCardAction'
-export default FnCardAction
+InCardAction.name = 'InCardAction'
+export default InCardAction
 export * from './src/card-action'
 export type CardActionInstance = InstanceType<typeof CardAction>

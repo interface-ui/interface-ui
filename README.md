@@ -27,13 +27,13 @@
 
 ```
 # pnpm
-$ pnpm add fusion-ui-vue
+$ pnpm add interface-ui
 
 # npm
-$ npm install fusion-ui-vue
+$ npm install interface-ui
 
 # yarn
-$ yarn add fusion-ui-vue
+$ yarn add interface-ui
 
 ```
 
@@ -42,7 +42,7 @@ $ yarn add fusion-ui-vue
 ```
 import { createApp } from 'vue'
 import fusionUi from 'interface-ui'
-import 'fusion-ui-vue/dist/styles/index.css'
+import 'interface-ui/dist/styles/index.css'
 import App from './App.vue'
 
 const app = createApp(App)
@@ -52,7 +52,7 @@ app.use(fusionUi).mount('#app')
 
 ## 配套文档
 
-- [DOCS](https://tsinghua-lau.github.io/fusion-ui/)
+- [DOCS](https://tsinghua-lau.github.io/interface-ui/)
 
 ## 仓库目录
 ```bash
@@ -107,7 +107,7 @@ app.use(fusionUi).mount('#app')
   ```
     pnpm i
   ```
-  - 生成 ```pakages/fusion-ui/dist```
+  - 生成 ```pakages/interface-ui/dist```
 
   ```
     pnpm run build
@@ -126,14 +126,14 @@ app.use(fusionUi).mount('#app')
 ❤️ 感谢所有为 ```FusionUi``` 做出 [贡献的人](https://github.com/tsinghua-lau/fusion-ui/graphs/contributors)！
 
 <a href="https://github.com/tsinghua-lau/fusion-ui/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=tsinghua-lau/fusion-ui" />
+  <img src="https://contrib.rocks/image?repo=tsinghua-lau/interface-ui" />
 </a>
 
 ## 版本
 
 
 
-[![release version](https://img.shields.io/npm/v/fusion-ui-vue.svg?label=FusionUi&color=blue)](https://www.npmjs.com/package/fusion-ui-vue)
+[![release version](https://img.shields.io/npm/v/interface-ui.svg?label=FusionUi&color=blue)](https://www.npmjs.com/package/interface-ui)
 
 
 您可以订阅此提要以获取新版本通知: https://github.com/tsinghua-lau/fusion-ui/releases

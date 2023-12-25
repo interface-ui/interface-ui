@@ -1,17 +1,17 @@
-.fn-card {
+.in-card {
   min-width: 275px;
   border-radius: var(--md-sys-shape-corner-medium-default-size);
   overflow: hidden;
   width: fit-content;
   height: fit-content;
 
-  [class^='fn-card']:not(&-media) + [class^='fn-card'] {
+  [class^='in-card']:not(&-media) + [class^='in-card'] {
     padding-top: 0px;
   }
 }
 
 // variant
-.fn-card {
+.in-card {
   &--elevated {
     background-color: var(--md-sys-color-surface-container-low);
     box-shadow: var(--md-sys-elevation-level-1);

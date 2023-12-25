@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import FnTypography from '../../typography'
+import InTypography from '../../typography'
 import { headlineTextProps } from './headline-text'
 
 defineProps(headlineTextProps)
@@ -7,10 +7,10 @@ defineOptions({ inheritAttrs: false })
 </script>
 
 <template>
-  <fn-typography component="h1" variant="body.large" color="inherit">
+  <in-typography component="h1" variant="body.large" color="inherit">
     {{ $props.headline }}
-  </fn-typography>
-  <fn-typography
+  </in-typography>
+  <in-typography
     v-if="$props.supportingText"
     component="p"
     variant="body.medium"
@@ -18,5 +18,5 @@ defineOptions({ inheritAttrs: false })
     cs="opacity: 0.8;"
   >
     {{ $props.supportingText }}
-  </fn-typography>
+  </in-typography>
 </template>

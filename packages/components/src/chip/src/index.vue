@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import { useNamespace } from '@fusion-ui-vue/utils'
-import FnActionArea from '../../action-area'
-import FnIconButton from '../../icon-button'
+import { useNamespace } from '@interface-ui/utils'
+import InActionArea from '../../action-area'
+import InIconButton from '../../icon-button'
 import CloseFilled from '../../svg-icon/internal/CloseFilled.vue'
 import { chipProps } from './chip'
 import useCss from './index.jss'
@@ -15,12 +15,12 @@ const cssClass = useCss(props)
 <template>
   <component
     v-bind="$props.clickable ? { component: $props.component } : {}"
-    :is="$props.clickable ? FnActionArea : $props.component"
+    :is="$props.clickable ? InActionArea : $props.component"
     :class="[ns.b(), ns.m($props.variant), cssClass]"
     class="label-large"
   >
     <slot />
-    <fn-icon-button
+    <in-icon-button
       v-if="$props.deletable"
       :class="[ns.em('button', 'delete')]"
       size="small"
@@ -28,6 +28,6 @@ const cssClass = useCss(props)
       @click="$emit('delete')"
     >
       <close-filled />
-    </fn-icon-button>
+    </in-icon-button>
   </component>
 </template>

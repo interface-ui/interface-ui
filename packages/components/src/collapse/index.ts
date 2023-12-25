@@ -1,11 +1,11 @@
-import type { SFCWithInstall } from '@fusion-ui-vue/utils'
-import { withInstall } from '@fusion-ui-vue/utils'
+import type { SFCWithInstall } from '@interface-ui/utils'
+import { withInstall } from '@interface-ui/utils'
 import Collapse from './src/index.vue'
 
-export const FnCollapse: SFCWithInstall<typeof Collapse> = withInstall(
+export const InCollapse: SFCWithInstall<typeof Collapse> = withInstall(
   Collapse,
-  'FnCollapse'
+  'InCollapse'
 )
-FnCollapse.name = 'FnCollapse'
-export default FnCollapse
+InCollapse.name = 'InCollapse'
+export default InCollapse
 export type CollapseInstance = InstanceType<typeof Collapse>

@@ -1,4 +1,4 @@
-import '@fusion-ui-vue/theme/styles/baseline.less'
+import '@interface-ui/theme/styles/baseline.less'
 
 export { default } from './src/core'
 export * from './src/core'

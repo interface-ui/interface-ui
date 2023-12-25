@@ -11,7 +11,7 @@ hero:
   tagline: Interface UI is a Vue3 component library, which is simple, elegant and beautiful to help you build your website quickly.
   image:
     src: /logo.svg
-    alt: Fusion-Ui
+    alt: Interface UI
 
   actions:
     - theme: brand
@@ -29,7 +29,7 @@ hero:
 features:
   - icon: 🧜
     title: Components Design
-    details: Fusion UI provides neat & beautiful crafted UI components.
+    details: Interface UI provides neat & beautiful crafted UI components.
   - icon: 🎡
     title: Introduce on demand
     details: Provide resolver to automatically import only used components.

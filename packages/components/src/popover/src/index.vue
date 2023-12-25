@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import { off, on, throttle, useNamespace } from '@fusion-ui-vue/utils'
+import { off, on, throttle, useNamespace } from '@interface-ui/utils'
 import { nextTick, onBeforeUnmount, ref, watch } from 'vue'
-import FnModal from '../../modal'
+import InModal from '../../modal'
 import type { PopoverPlacements } from './popover'
 import { popoverProps } from './popover'
 import useCss from './index.jss'
@@ -176,7 +176,7 @@ watch(
 </script>
 
 <template>
-  <fn-modal
+  <in-modal
     :keep-mounted="$props.keepMounted"
     :model-value="$props.open"
     :backdrop="$props.backdrop"
@@ -191,5 +191,5 @@ watch(
     >
       <slot />
     </div>
-  </fn-modal>
+  </in-modal>
 </template>

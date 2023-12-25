@@ -1,9 +1,9 @@
-import type { SFCWithInstall } from '@fusion-ui-vue/utils'
-import { withInstall } from '@fusion-ui-vue/utils'
+import type { SFCWithInstall } from '@interface-ui/utils'
+import { withInstall } from '@interface-ui/utils'
 import List from './src/index'
 
-export const FnList: SFCWithInstall<typeof List> = withInstall(List, 'FnList')
-FnList.name = 'FnList'
-export default FnList
+export const InList: SFCWithInstall<typeof List> = withInstall(List, 'InList')
+InList.name = 'InList'
+export default InList
 export * from './src/list'
 export type ListInstance = InstanceType<typeof List>

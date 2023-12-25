@@ -1,12 +1,12 @@
-import type { SFCWithInstall } from '@fusion-ui-vue/utils'
-import { withInstall } from '@fusion-ui-vue/utils'
+import type { SFCWithInstall } from '@interface-ui/utils'
+import { withInstall } from '@interface-ui/utils'
 import FormLabel from './src/index.vue'
 
-export const FnFormLabel: SFCWithInstall<typeof FormLabel> = withInstall(
+export const InFormLabel: SFCWithInstall<typeof FormLabel> = withInstall(
   FormLabel,
-  'FnFormLabel'
+  'InFormLabel'
 )
-FnFormLabel.name = 'FnFormLabel'
-export default FnFormLabel
+InFormLabel.name = 'InFormLabel'
+export default InFormLabel
 export * from './src/form-label'
 export type FormLabelInstance = InstanceType<typeof FormLabel>

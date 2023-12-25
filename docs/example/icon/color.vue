@@ -8,7 +8,7 @@ const { HomeFilled } = pkg
   <home-filled />
   <home-filled color="red" />
   <home-filled color="green" />
-  <fn-svg-icon
+  <in-svg-icon
     :component="HomeFilled"
     :color="theme => theme.colors.cyan[400]"
   />

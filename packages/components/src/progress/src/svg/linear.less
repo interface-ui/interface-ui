@@ -1,4 +1,4 @@
-.fn-progress__linear {
+.in-progress__linear {
   &--track {
     height: 4px;
     background-color: var(--md-sys-color-surface-container-highest);
@@ -13,21 +13,21 @@
   &::before,
   &--indicator {
     position: absolute;
-    background-color: var(--fn-progress-color);
+    background-color: var(--in-progress-color);
     height: 100%;
     display: block;
   }
-  &.fn-progress--determinate {
-    .fn-progress__linear--indicator {
+  &.in-progress--determinate {
+    .in-progress__linear--indicator {
       transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
     }
   }
-  &.fn-progress--indeterminate {
+  &.in-progress--indeterminate {
     &::before {
       animation: 3500ms cubic-bezier(0.4, 0, 0.2, 1) 1500ms infinite normal both
         running progress-linear-indeterminate;
     }
-    .fn-progress__linear--indicator {
+    .in-progress__linear--indicator {
       animation: 3500ms cubic-bezier(0.4, 0, 0.1, 1) 0s infinite normal both
         running progress-linear-indeterminate;
     }

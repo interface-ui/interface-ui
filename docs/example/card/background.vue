@@ -1,9 +1,9 @@
 <template>
-  <fn-card title="Card Header" background="rgba(98, 172, 250, 0.5)">
+  <in-card title="Card Header" background="rgba(98, 172, 250, 0.5)">
     <div v-for="(item, index) in 4" :key="index" class="item">
       content {{ item }}
     </div>
-  </fn-card>
+  </in-card>
 </template>
 
 <style scoped>

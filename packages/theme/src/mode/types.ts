@@ -1,1 +1,1 @@
-export * from './types'
+export type ThemeMode = 'light' | 'dark'

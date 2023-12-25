@@ -1,6 +1,6 @@
-import type { ComponentSizes } from '@fusion-ui-vue/constants'
-import { componentSizes } from '@fusion-ui-vue/constants'
-import type { AcceptableColor } from '@fusion-ui-vue/theme'
+import type { ComponentSizes } from '@interface-ui/constants'
+import { componentSizes } from '@interface-ui/constants'
+import type { AcceptableColor } from '@interface-ui/theme'
 import type { ExtractPropTypes, PropType } from 'vue'
 
 export const iconButtonProps = {

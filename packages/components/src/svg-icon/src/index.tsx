@@ -1,5 +1,5 @@
 import { computed, defineComponent } from 'vue'
-import { useNamespace } from '@fusion-ui-vue/utils'
+import { useNamespace } from '@interface-ui/utils'
 import { svgIconProps } from './svg-icon'
 import useCss from './index.jss'
 
@@ -10,7 +10,7 @@ export default defineComponent({
     const cssClass = useCss(props)
     const slotsVNodes = computed(() => slots?.default?.() ?? [])
     if (slotsVNodes.value.length > 1) {
-      throw new Error('[Fusion UI]: The SvgIcon can only contain one child.')
+      throw new Error('[Interface UI]: The SvgIcon can only contain one child.')
     }
 
     const Comp = props.component as any

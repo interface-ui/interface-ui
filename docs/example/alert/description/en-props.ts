@@ -8,7 +8,7 @@ const list: PropTableItem[] = [
     default: '---',
   },
   {
-    name: 'fn-typography',
+    name: 'in-typography',
     remark: 'Provide title style',
     type: '--',
     default: '--',

@@ -1,6 +1,6 @@
 import { computed } from 'vue'
-import { css, cx, useColor, useRgbColor } from '@fusion-ui-vue/theme'
-import { iconSize } from '@fusion-ui-vue/constants'
+import { css, cx, useColor, useRgbColor } from '@interface-ui/theme'
+import { iconSize } from '@interface-ui/constants'
 import type { ComponentStylingHook } from '../../../types'
 import type { IconButtonProps } from './icon-button'
 
@@ -10,9 +10,9 @@ const useCss: ComponentStylingHook<IconButtonProps> = (props, ns) =>
     const [$colorRgb] = useRgbColor(props, 'color')
 
     const iconButtonStyle = css`
-      --fn-icon-button-color: ${$color.value};
-      --fn-icon-button-color-rgb: ${$colorRgb.value};
-      &.${ns!.m(props.size)} .fn-icon {
+      --in-icon-button-color: ${$color.value};
+      --in-icon-button-color-rgb: ${$colorRgb.value};
+      &.${ns!.m(props.size)} .in-icon {
         font-size: ${iconSize[props.size]}px;
       }
     `

@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { debugWarn, useNamespace } from '@fusion-ui-vue/utils'
-import { css, styled, useColor } from '@fusion-ui-vue/theme'
+import { debugWarn, useNamespace } from '@interface-ui/utils'
+import { css, styled, useColor } from '@interface-ui/theme'
 import { computed, useSlots } from 'vue'
 import Typography from '../../typography'
 import { badgeProps } from './badge'
@@ -54,7 +54,7 @@ const badgeContent = computed(() => {
   if (content && max) {
     if (!['string', 'number'].includes(typeof content)) {
       debugWarn(
-        '[Fusion UI]',
+        '[Interface UI]',
         'props.content can only be "string" or "number" when set props.max'
       )
       return null

@@ -1,3 +1,3 @@
 <template>
-  <fn-divider />
+  <in-divider />
 </template>

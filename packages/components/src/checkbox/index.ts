@@ -1,12 +1,12 @@
-import type { SFCWithInstall } from '@fusion-ui-vue/utils'
-import { withInstall } from '@fusion-ui-vue/utils'
+import type { SFCWithInstall } from '@interface-ui/utils'
+import { withInstall } from '@interface-ui/utils'
 import Checkbox from './src/index.vue'
 
-export const FnCheckbox: SFCWithInstall<typeof Checkbox> = withInstall(
+export const InCheckbox: SFCWithInstall<typeof Checkbox> = withInstall(
   Checkbox,
-  'FnCheckbox'
+  'InCheckbox'
 )
-FnCheckbox.name = 'FnCheckbox'
-export default FnCheckbox
+InCheckbox.name = 'InCheckbox'
+export default InCheckbox
 export * from './src/checkbox'
 export type CheckboxInstance = InstanceType<typeof Checkbox>

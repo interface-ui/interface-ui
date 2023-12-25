@@ -8,13 +8,13 @@
 
 ```shell
 # npm
-npm i fusion-ui-vue
+npm i interface-ui
 
 # yarn
-yarn add fusion-ui-vue
+yarn add interface-ui
 
 # pnpm
-pnpm add fusion-ui-vue
+pnpm add interface-ui
 ```
 
 ## 完整引入
@@ -26,7 +26,7 @@ pnpm add fusion-ui-vue
 import { createApp } from 'vue'
 
 import fusionUi from 'interface-ui'
-import 'fusion-ui-vue/dist/styles/index.css'
+import 'interface-ui/dist/styles/index.css'
 
 import App from './App.vue'
 const app = createApp(App)
@@ -41,8 +41,8 @@ app.mount('#app')
 
 
 ```ts
-import { FnButton } from 'interface-ui'
-import 'fusion-ui-vue/dist/styles/button.css'
+import { InButton } from 'interface-ui'
+import 'interface-ui/dist/styles/button.css'
 ```
 
 ### 自动导入
@@ -58,7 +58,7 @@ npm install -D unplugin-vue-components
 ```ts
 import { defineConfig } from 'vite'
 import Components from 'unplugin-vue-components/vite'
-import { PlayResolver } from 'fusion-ui-vue/dist/lib/components/resolver'
+import { PlayResolver } from 'interface-ui/dist/lib/components/resolver'
 
 export default defineConfig({
   // ...

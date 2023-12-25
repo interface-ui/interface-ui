@@ -1,7 +1,7 @@
 <template>
   <div space-y-2>
     <div fscw gap-2>
-      <fn-button disable-elevation>disable elevation</fn-button>
+      <in-button disable-elevation>disable elevation</in-button>
     </div>
   </div>
 </template>

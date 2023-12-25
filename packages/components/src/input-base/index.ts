@@ -1,12 +1,12 @@
-import type { SFCWithInstall } from '@fusion-ui-vue/utils'
-import { withInstall } from '@fusion-ui-vue/utils'
+import type { SFCWithInstall } from '@interface-ui/utils'
+import { withInstall } from '@interface-ui/utils'
 import InputBase from './src/index.vue'
 
-export const FnInputBase: SFCWithInstall<typeof InputBase> = withInstall(
+export const InInputBase: SFCWithInstall<typeof InputBase> = withInstall(
   InputBase,
-  'FnInputBase'
+  'InInputBase'
 )
-FnInputBase.name = 'FnInputBase'
-export default FnInputBase
+InInputBase.name = 'InInputBase'
+export default InInputBase
 export * from './src/input-base'
 export type InputBaseInstance = InstanceType<typeof InputBase>

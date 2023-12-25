@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { defineComponent } from 'vue'
-import { useNamespace } from '@fusion-ui-vue/utils'
-import FnTypography from '../../typography'
+import { useNamespace } from '@interface-ui/utils'
+import InTypography from '../../typography'
 import { formLabelProps } from './form-label'
 
 const props = defineProps(formLabelProps)
@@ -17,12 +17,12 @@ export default defineComponent({
 <template>
   <label :class="[ns.b(), ns.m(props.labelPlacement)]">
     <component :is="props.control" v-bind="$attrs" />
-    <fn-typography
+    <in-typography
       variant="body.large"
       component="span"
       :disabled="$attrs.disabled"
     >
       {{ props.label }}
-    </fn-typography>
+    </in-typography>
   </label>
 </template>

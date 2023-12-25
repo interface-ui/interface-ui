@@ -1,4 +1,4 @@
-import { buildProps } from '@fusion-ui-vue/utils'
+import { buildProps } from '@interface-ui/utils'
 import type { ExtractPropTypes, PropType } from 'vue'
 import type { ProgressStatus } from '../progress'
 import { progressStatus } from '../progress'

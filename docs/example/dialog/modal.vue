@@ -4,23 +4,20 @@ const dialogVisible = ref(false)
 </script>
 
 <template>
-  <fn-button @click=" dialogVisible = true">
-    modal
-  </fn-button>
-  <fn-dialog
-    v-model="dialogVisible"
-    title="Tips"
-    :close-on-click-modal="false"
-  >
+  <in-button @click="dialogVisible = true"> modal </in-button>
+  <in-dialog v-model="dialogVisible" title="Tips" :close-on-click-modal="false">
     <span>This is a message</span>
     <template #footer>
       <span class="dialog-footer">
-        <fn-button variant="text" size="small" @click="dialogVisible = false">Cancel</fn-button>
-        <fn-button variant="text" size="small" @click="dialogVisible = false">
+        <in-button variant="text" size="small" @click="dialogVisible = false"
+          >Cancel</in-button
+        >
+        <in-button variant="text" size="small" @click="dialogVisible = false">
           Confirm
-        </fn-button></span>
+        </in-button></span
+      >
     </template>
-  </fn-dialog>
+  </in-dialog>
 </template>
 
 <style scoped>

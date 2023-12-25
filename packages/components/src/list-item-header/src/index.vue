@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { useNamespace } from '@fusion-ui-vue/utils'
-import FnTypography from '../../typography'
+import { useNamespace } from '@interface-ui/utils'
+import InTypography from '../../typography'
 import { listItemHeaderProps } from './list-item-header'
 import useCss from './index.jss'
 
@@ -12,8 +12,8 @@ const cssClass = useCss(props)
 
 <template>
   <li :class="[ns.b(), cssClass]">
-    <fn-typography v-bind="$attrs" variant="label.medium" cs="opacity: 0.8;">
+    <in-typography v-bind="$attrs" variant="label.medium" cs="opacity: 0.8;">
       <slot />
-    </fn-typography>
+    </in-typography>
   </li>
 </template>

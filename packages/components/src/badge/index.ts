@@ -1,12 +1,12 @@
-import type { SFCWithInstall } from '@fusion-ui-vue/utils'
-import { withInstall } from '@fusion-ui-vue/utils'
+import type { SFCWithInstall } from '@interface-ui/utils'
+import { withInstall } from '@interface-ui/utils'
 import Badge from './src/index.vue'
 
-export const FnBadge: SFCWithInstall<typeof Badge> = withInstall(
+export const InBadge: SFCWithInstall<typeof Badge> = withInstall(
   Badge,
-  'FnBadge'
+  'InBadge'
 )
-FnBadge.name = 'FnBadge'
-export default FnBadge
+InBadge.name = 'InBadge'
+export default InBadge
 export * from './src/badge'
 export type BadgeInstance = InstanceType<typeof Badge>

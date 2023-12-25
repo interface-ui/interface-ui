@@ -6,8 +6,8 @@ import {
   reactive,
   watchEffect,
 } from 'vue'
-import { addUnit, useNamespace } from '@fusion-ui-vue/utils'
-import { useColor } from '@fusion-ui-vue/theme'
+import { addUnit, useNamespace } from '@interface-ui/utils'
+import { useColor } from '@interface-ui/theme'
 import type { RippleStyle } from './ripple'
 import { rippleProps } from './ripple'
 

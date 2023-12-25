@@ -4,13 +4,13 @@ const { PaletteOutlined } = pkg
 </script>
 
 <template>
-  <fn-fba size="small">
+  <in-fba size="small">
     <palette-outlined />
-  </fn-fba>
-  <fn-fba>
+  </in-fba>
+  <in-fba>
     <palette-outlined />
-  </fn-fba>
-  <fn-fba size="large">
+  </in-fba>
+  <in-fba size="large">
     <palette-outlined />
-  </fn-fba>
+  </in-fba>
 </template>

@@ -18,7 +18,10 @@ export const head = [
     },
   ],
   ['meta', { name: 'referrer', content: 'no-referrer' }],
-  ['link', { rel: 'icon', href: '/fusion-ui/logo.svg', type: 'image/svg+xml' }],
+  [
+    'link',
+    { rel: 'icon', href: '/interface-ui/logo.svg', type: 'image/svg+xml' },
+  ],
   [
     'link',
     {

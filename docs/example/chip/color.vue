@@ -1,7 +1,7 @@
 <template>
-  <fn-chip color="primaryContainer"> Primary </fn-chip>
-  <fn-chip color="error" variant="outlined"> Error </fn-chip>
-  <fn-chip :color="theme => theme.colors.cyan[400]" variant="outlined">
+  <in-chip color="primaryContainer"> Primary </in-chip>
+  <in-chip color="error" variant="outlined"> Error </in-chip>
+  <in-chip :color="theme => theme.colors.cyan[400]" variant="outlined">
     Success
-  </fn-chip>
+  </in-chip>
 </template>

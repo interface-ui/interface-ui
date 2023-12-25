@@ -1,4 +1,4 @@
-.fn-button {
+.in-button {
   gap: 8px;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
@@ -6,82 +6,82 @@
     color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 
   &--filled {
-    background-color: var(--fn-button-color);
-    color: var(--fn-button-on-color);
+    background-color: var(--in-button-color);
+    color: var(--in-button-on-color);
     @media (any-hover: hover) {
       &:not([disabled]):hover {
         background-color: color-mix(
           in srgb,
-          var(--fn-button-color),
-          var(--fn-sys-color-switch-reverse)
+          var(--in-button-color),
+          var(--in-sys-color-switch-reverse)
             var(--md-sys-state-hover-state-layer-opacity-percentage)
         );
       }
     }
     &[disabled] {
-      background-color: var(--fn-sys-color-disabled-level-1) !important;
-      color: var(--fn-sys-color-disabled-level-0) !important;
+      background-color: var(--in-sys-color-disabled-level-1) !important;
+      color: var(--in-sys-color-disabled-level-0) !important;
       box-shadow: var(--md-sys-elevation-level-0);
     }
   }
   &--text {
-    color: var(--fn-button-color);
+    color: var(--in-button-color);
     background-color: transparent;
     @media (any-hover: hover) {
       &:not([disabled]):hover {
         background-color: rgb(
-          var(--fn-button-color-rgb) /
+          var(--in-button-color-rgb) /
             var(--md-sys-state-hover-state-layer-opacity)
         );
       }
     }
     &[disabled] {
-      color: var(--fn-sys-color-disabled-level-0) !important;
+      color: var(--in-sys-color-disabled-level-0) !important;
     }
   }
   &--outlined {
-    color: var(--fn-button-color);
+    color: var(--in-button-color);
     background-color: transparent;
     border-width: 1px;
     border-style: solid;
     border-color: color-mix(
       in srgb,
-      var(--fn-button-color) 60%,
-      var(--fn-sys-color-switch) 0%
+      var(--in-button-color) 60%,
+      var(--in-sys-color-switch) 0%
     );
     @media (any-hover: hover) {
       &:not([disabled]):hover {
-        border-color: var(--fn-button-color);
+        border-color: var(--in-button-color);
         background-color: rgb(
-          var(--fn-button-color-rgb) /
+          var(--in-button-color-rgb) /
             var(--md-sys-state-hover-state-layer-opacity)
         );
       }
     }
     &[disabled] {
-      color: var(--fn-sys-color-disabled-level-0) !important;
-      border-color: var(--fn-sys-color-disabled-level-1) !important;
+      color: var(--in-sys-color-disabled-level-0) !important;
+      border-color: var(--in-sys-color-disabled-level-1) !important;
     }
   }
 
   &--small {
     padding-left: 12px;
     padding-right: 12px;
-    .fn-icon {
+    .in-icon {
       font-size: 16px;
     }
   }
   &--medium {
     padding-left: 16px;
     padding-right: 16px;
-    .fn-icon {
+    .in-icon {
       font-size: 20px;
     }
   }
   &--large {
     padding-left: 20px;
     padding-right: 20px;
-    .fn-icon {
+    .in-icon {
       font-size: 24px;
     }
   }

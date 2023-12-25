@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { FnCheckbox } from 'interface-ui'
+import { InCheckbox } from 'interface-ui'
 import { ref } from 'vue'
 const checked = ref<boolean>(true)
 </script>
@@ -7,16 +7,16 @@ const checked = ref<boolean>(true)
 <template>
   <div space-y-2>
     <div fscw gap-2>
-      <fn-form-label v-model="checked" :control="FnCheckbox" label="Label" />
-      <fn-form-label
+      <in-form-label v-model="checked" :control="InCheckbox" label="Label" />
+      <in-form-label
         v-model="checked"
-        :control="FnCheckbox"
+        :control="InCheckbox"
         label="Label"
         required
       />
-      <fn-form-label
+      <in-form-label
         v-model="checked"
-        :control="FnCheckbox"
+        :control="InCheckbox"
         label="Label"
         disabled
       />

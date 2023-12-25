@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { useNamespace } from '@fusion-ui-vue/utils'
-import FnRipple from '../../ripple'
+import { useNamespace } from '@interface-ui/utils'
+import InRipple from '../../ripple'
 import { actionAreaProps } from './action-area'
 import useCss from './index.jss'
 
@@ -15,6 +15,6 @@ const cssClass = useCss(props)
     :class="[ns.b(), $props.disabled ? ns.m('disabled') : '', cssClass]"
   >
     <slot />
-    <fn-ripple v-if="!$props.disabled" color="onSurface" />
+    <in-ripple v-if="!$props.disabled" color="onSurface" />
   </component>
 </template>

@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 import * as pkg from 'fusion-ui-iconify'
 // import { AccountCircleFilled } from 'fusion-ui-iconify'
-import { styled, useTheme } from '@fusion-ui-vue/theme'
+import { styled, useTheme } from '@interface-ui/theme'
 const { AccountCircleFilled } = pkg
 
 const value = ref<string>('')
@@ -10,7 +10,7 @@ const theme = useTheme()
 const InputWrapper = styled('div')`
   display: flex;
   align-items: center;
-  & > .fn-icon {
+  & > .in-icon {
     margin-right: 8px;
     display: inline-flex;
   }
@@ -19,7 +19,7 @@ const InputWrapper = styled('div')`
 
 <template>
   <div fscw gap-5>
-    <fn-text-field
+    <in-text-field
       v-model="value"
       size="large"
       variant="standard"
@@ -33,13 +33,13 @@ const InputWrapper = styled('div')`
           :color="theme.schemes.onSurfaceVariant"
         />
       </template>
-    </fn-text-field>
+    </in-text-field>
     <input-wrapper>
       <account-circle-filled
         size="24"
         :color="theme.schemes.onSurfaceVariant"
       />
-      <fn-text-field
+      <in-text-field
         v-model="value"
         size="large"
         variant="standard"

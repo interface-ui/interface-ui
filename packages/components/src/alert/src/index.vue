@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { useNamespace } from '@fusion-ui-vue/utils'
-import { useTheme } from '@fusion-ui-vue/theme'
-import FnTypography from '../../typography'
+import { useNamespace } from '@interface-ui/utils'
+import { useTheme } from '@interface-ui/theme'
+import InTypography from '../../typography'
 import { alertIcons, alertProps } from './alert'
 import useCss from './index.jss'
 
@@ -29,14 +29,14 @@ const actionColor = computed(() => {
     >
       <component :is="alertIcons[$props.severity!]" :class="[ns.m('icon')]" />
     </slot>
-    <fn-typography
+    <in-typography
       component="span"
-      color="var(--fn-alert-on-color)"
+      color="var(--in-alert-on-color)"
       variant="body.medium"
       :class="[ns.m('message')]"
     >
       <slot />
-    </fn-typography>
+    </in-typography>
     <slot name="action" v-bind="{ color: actionColor, size: 'small' }" />
   </div>
 </template>

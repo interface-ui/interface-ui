@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import { useNamespace } from '@fusion-ui-vue/utils'
+import { useNamespace } from '@interface-ui/utils'
 import { computed } from 'vue'
-import { UPDATE_MODEL_EVENT } from '@fusion-ui-vue/constants'
+import { UPDATE_MODEL_EVENT } from '@interface-ui/constants'
 import { modalProps } from './modal'
 
 const props = defineProps(modalProps)

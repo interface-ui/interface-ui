@@ -5,13 +5,13 @@ const { DeleteFilled } = pkg
 </script>
 
 <template>
-  <fn-icon-button size="small">
+  <in-icon-button size="small">
     <delete-filled />
-  </fn-icon-button>
-  <fn-icon-button>
+  </in-icon-button>
+  <in-icon-button>
     <delete-filled />
-  </fn-icon-button>
-  <fn-icon-button size="large">
+  </in-icon-button>
+  <in-icon-button size="large">
     <delete-filled />
-  </fn-icon-button>
+  </in-icon-button>
 </template>

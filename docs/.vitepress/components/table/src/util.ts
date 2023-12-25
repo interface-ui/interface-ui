@@ -17,7 +17,8 @@ export const isString = (data: any): boolean => typeof data === 'string'
  * @param {String} str
  * @returns
  */
-export const trim = (str: any) => (str || '').replace(/^[\s\uFEFF]+|[\s\uFEFF]+$/g, '')
+export const trim = (str: any) =>
+  (str || '').replace(/^[\s\uFEFF]+|[\s\uFEFF]+$/g, '')
 
 /**
  * 将字符串转换成对象格式
@@ -28,8 +29,7 @@ export const strToObject = (str: string): object => {
   let finalObj: object = {}
   try {
     finalObj = JSON.parse(str)
-  }
-  catch (e) {
+  } catch (e) {
     finalObj = {}
   }
 
@@ -39,7 +39,10 @@ export const strToObject = (str: string): object => {
 /**
  * 函数节流
  */
-export const throttle = (fn: { apply: (arg0: any, arg1: IArguments) => void }, delay: number) => {
+export const throttle = (
+  fn: { apply: (arg0: any, arg1: IArguments) => void },
+  delay: number
+) => {
   let lastTime: number
   let timer: any
   delay = delay || 200
@@ -56,8 +59,7 @@ export const throttle = (fn: { apply: (arg0: any, arg1: IArguments) => void }, d
         // 修正this指向问题
         fn.apply(this, args)
       }, delay)
-    }
-    else {
+    } else {
       lastTime = nowTime
       fn.apply(this, args)
     }
@@ -75,7 +77,7 @@ export const on = function (
   element: { addEventListener: (arg0: any, arg1: any, arg2: boolean) => void },
   event: any,
   handler: any,
-  useCapture: any = false,
+  useCapture: any = false
 ) {
   if (element && event && handler)
     element.addEventListener(event, handler, useCapture)
@@ -89,10 +91,12 @@ export const on = function (
  * @param {*} useCapture
  */
 export const off = function (
-  element: { removeEventListener: (arg0: any, arg1: any, arg2: boolean) => void },
+  element: {
+    removeEventListener: (arg0: any, arg1: any, arg2: boolean) => void
+  },
   event: any,
   handler: any,
-  useCapture: any = false,
+  useCapture: any = false
 ) {
   if (element && event && handler)
     element.removeEventListener(event, handler, useCapture)
@@ -121,7 +125,7 @@ export const beInteger = (v: string) => {
  */
 export const warn = (module: any, info: string) => {
   // eslint-disable-next-line no-console
-  console.warn(`[ A warning of fusion-ui ] - ${module}: ${info}`)
+  console.warn(`[ A warning of interface-ui ] - ${module}: ${info}`)
 }
 
 /**

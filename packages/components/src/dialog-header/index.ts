@@ -1,12 +1,12 @@
-import type { SFCWithInstall } from '@fusion-ui-vue/utils'
-import { withInstall } from '@fusion-ui-vue/utils'
+import type { SFCWithInstall } from '@interface-ui/utils'
+import { withInstall } from '@interface-ui/utils'
 import DialogHeader from './src/index.vue'
 
-export const FnDialogHeader: SFCWithInstall<typeof DialogHeader> = withInstall(
+export const InDialogHeader: SFCWithInstall<typeof DialogHeader> = withInstall(
   DialogHeader,
-  'FnDialogHeader'
+  'InDialogHeader'
 )
-FnDialogHeader.name = 'FnDialogHeader'
-export default FnDialogHeader
+InDialogHeader.name = 'InDialogHeader'
+export default InDialogHeader
 export * from './src/dialog-header'
 export type DialogHeaderInstance = InstanceType<typeof DialogHeader>
