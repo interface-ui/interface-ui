@@ -1,15 +1,13 @@
 <script setup lang="ts">
-import { ref, toRaw, watch, h, VNode } from 'vue'
-import { HomeFilled, DarkModeFilled, SunnyFilled } from 'fusion-ui-iconify'
+import { toRaw, watch, h, VNode } from 'vue'
 import { ThemeProvider } from '@interface-ui/theme'
 import { InButton, InIconButton, InMessage } from '@interface-ui/core'
-import { DeleteFilled, VerifiedRound } from 'fusion-ui-iconify'
+import { DeleteFilled, VerifiedRound, HomeFilled, DarkModeFilled, SunnyFilled } from 'fusion-ui-iconify'
 import { RouterView } from 'vue-router'
 
 import createTheme from '@interface-ui/theme'
 
 const theme = createTheme() // create a theme instance
-const open = ref(false)
 
 console.log(
   `%c [Interface UI] Tip: you can access the documentation 'theme' object directly in the console.`,
@@ -58,7 +56,6 @@ const onOpenMessage = () => {
         <SunnyFilled v-show="theme.mode == 'light'" />
         {{ theme.mode }}
       </in-button>
-      <in-button @click="open = !open"> open modal </in-button>
       <in-button @click="onOpenMessage"> open message </in-button>
     </header>
 

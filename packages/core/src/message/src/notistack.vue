@@ -1,10 +1,9 @@
 <script lang="ts" setup>
-import createTheme from '@interface-ui/theme'
+import createTheme, { ThemeProvider } from '@interface-ui/theme'
 import { isNumber, useNamespace } from '@interface-ui/utils'
 import type { VNode } from 'vue'
-import { TransitionGroup, reactive, ref } from 'vue'
+import { TransitionGroup, reactive } from 'vue'
 
-const themeProvider = ref<HTMLElement | null>(null)
 const children = reactive<VNode[]>([])
 const html = document.documentElement
 const theme = createTheme(undefined, {
@@ -57,7 +56,6 @@ defineExpose({ add, remove, removeAll })
 
 <template>
   <theme-provider
-    ref="themeProvider"
     v-model:theme="theme"
     :watcher="watcher"
     :component="TransitionGroup"

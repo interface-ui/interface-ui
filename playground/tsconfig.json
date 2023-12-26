@@ -20,10 +20,10 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "paths": {
-      "@interface-ui/core": ["../core/src/index.ts"],
-      "@interface-ui/theme": ["../theme/src/index.ts"],
-      "@interface-ui/constants": ["../constants/src/index.ts"],
-      "@interface-ui/utils": ["../utils/src/index.ts"]
+      "@interface-ui/core": ["../packages/core/src/index.ts"],
+      "@interface-ui/theme": ["../packages/theme/src/index.ts"],
+      "@interface-ui/constants": ["../packages/constants/src/index.ts"],
+      "@interface-ui/utils": ["../packages/utils/src/index.ts"]
     }
   },
   "include": [
