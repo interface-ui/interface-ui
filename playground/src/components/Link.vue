@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import '@interface-ui/core/src/link/src/index.less' // 开发调试的样式
+import '@interface-ui/core/link/src/index.less' // 开发调试的样式
 import { InLink } from '@interface-ui/core'
 </script>
 

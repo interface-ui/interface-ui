@@ -1,13 +1,15 @@
 <script lang="ts" setup>
-import '@interface-ui/core/src/drawer/src/index.less'
+import '@interface-ui/core/drawer/src/index.less'
 import {
   InDrawer,
   InButton,
   InTypography,
   InIconButton,
+} from '@interface-ui/core'
+import {
   ComponentDirections,
   componentDirections,
-} from '@interface-ui/core'
+} from '@interface-ui/constants'
 import { ref, shallowRef } from 'vue'
 import {
   LocalFireDepartmentFilled,

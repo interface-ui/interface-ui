@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import '@interface-ui/core/src/chip/src/index.less'
+import '@interface-ui/core/chip/src/index.less'
 import { ChipVariants, InChip } from '@interface-ui/core'
 import { TodayFilled } from 'fusion-ui-iconify'
 import { ref } from 'vue'

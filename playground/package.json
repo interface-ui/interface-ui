@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "build": "vite build"
+    "build": "vite build",
+    "serve": "vite serve"
   },
   "peerDependencies": {
     "vue": "^3.3.8"

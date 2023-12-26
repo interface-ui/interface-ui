@@ -1,10 +1,10 @@
 <script lang="ts" setup>
-import '@interface-ui/core/src/card/src/index.less'
-import '@interface-ui/core/src/card-content/src/index.less'
-import '@interface-ui/core/src/card-header/src/index.less'
-import '@interface-ui/core/src/card-action/src/index.less'
-import '@interface-ui/core/src/card-media/src/index.less'
-import '@interface-ui/core/src/action-area/src/index.less'
+import '@interface-ui/core/card/src/index.less'
+import '@interface-ui/core/card-content/src/index.less'
+import '@interface-ui/core/card-header/src/index.less'
+import '@interface-ui/core/card-action/src/index.less'
+import '@interface-ui/core/card-media/src/index.less'
+import '@interface-ui/core/action-area/src/index.less'
 import {
   InCard,
   InCardContent,
