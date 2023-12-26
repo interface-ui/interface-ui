@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 import { styled, useTheme } from '@interface-ui/theme'
-import { InCard } from 'interface-ui'
+import { InCard } from '@interface-ui/core'
 
 const theme = useTheme()
 const open = ref(false)

@@ -1,14 +1,14 @@
 <script lang="ts" setup>
-import '@interface-ui/components/src/dialog/src/index.less'
-import '@interface-ui/components/src/dialog-header/src/index.less'
-import '@interface-ui/components/src/dialog-content/src/index.less'
-import '@interface-ui/components/src/dialog-action/src/index.less'
+import '@interface-ui/core/src/dialog/src/index.less'
+import '@interface-ui/core/src/dialog-header/src/index.less'
+import '@interface-ui/core/src/dialog-content/src/index.less'
+import '@interface-ui/core/src/dialog-action/src/index.less'
 import {
   InDialog,
   InDialogHeader,
   InDialogContent,
   InDialogAction,
-} from '@interface-ui/components'
+} from '@interface-ui/core'
 import { ref } from 'vue'
 
 const openBasic = ref(false)

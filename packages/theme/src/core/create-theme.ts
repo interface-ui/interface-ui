@@ -13,14 +13,14 @@ import {
   newSchemes,
   parseCustomSchemes,
   parsePalettes,
-  parseShcemes,
+  parseSchemes,
   parsedNewSchemes,
 } from './utils'
 
 /**
  * The hook to create the theme
  * @param {string} source The source color of the theme, the value should be "Hex"
- * @param {ThemeConfig} config The object to customize the theme
+ * @param {ThemeOptions} options The object to customize the theme
  * @returns {Ref<Theme> } Theme object
  */
 export const createTheme = (
@@ -49,12 +49,12 @@ export const createTheme = (
    */
   const additionalSchemes = newSchemes(dynamicTheme)
   const lightSchemes = mergeParsedSchemes(
-    parseShcemes(dynamicTheme.schemes.light),
+    parseSchemes(dynamicTheme.schemes.light),
     parsedNewSchemes(additionalSchemes.light) as any,
     parseCustomSchemes(dynamicTheme.customColors, 'light')
   )
   const darkSchemes = mergeParsedSchemes(
-    parseShcemes(dynamicTheme.schemes.dark),
+    parseSchemes(dynamicTheme.schemes.dark),
     parsedNewSchemes(additionalSchemes.dark) as any,
     parseCustomSchemes(dynamicTheme.customColors, 'dark')
   )

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { InTextField } from 'interface-ui'
+import { InTextField } from '@interface-ui/core'
 import { styled } from '@interface-ui/theme'
 import { ref } from 'vue'
 

@@ -2,4 +2,3 @@ packages:
   - packages/**
   - docs/
   - playground/
-  - interface-ui/

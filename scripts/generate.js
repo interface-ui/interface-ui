@@ -17,7 +17,7 @@ const generateTemplateFiles = async componentName => {
       },
       dynamicReplacers: [{ slot: '__component__', slotValue: component }],
       output: {
-        path: './packages/components/src/__component__/',
+        path: './packages/core/src/__component__/',
         pathAndFileNameDefaultCase: '(kebabCase)',
       },
       onComplete: res => {

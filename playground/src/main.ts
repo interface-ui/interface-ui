@@ -1,18 +1,11 @@
 import { createApp } from 'vue'
-import fusionUi from '@interface-ui/components'
+import InterfaceUI from '@interface-ui/core'
 import { createRouter, createWebHashHistory } from 'vue-router'
 import routes from './routes'
 
 import './style.css'
-import 'interface-ui/dist/styles/index.css'
-import '@interface-ui/components/src/ripple/src/index.less'
-import '@interface-ui/components/src/button-base/src/index.less'
-import '@interface-ui/components/src/button/src/index.less'
-import '@interface-ui/components/src/message/src/index.less'
-import '@interface-ui/components/src/modal/src/index.less'
-
-import 'virtual:uno.css'
-import 'uno.css'
+import '@interface-ui/theme/styles'
+import '@interface-ui/core/styles'
 import App from './App.vue'
 
 const router = createRouter({
@@ -31,4 +24,4 @@ router.beforeResolve(to => {
   document.title = `${to.name as string} ｜ Interface UI`
 })
 
-createApp(App).use(router).use(fusionUi).mount('#app')
+createApp(App).use(router).use(InterfaceUI).mount('#app')

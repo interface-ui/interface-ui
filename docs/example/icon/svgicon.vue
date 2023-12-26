@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { InSvgIcon } from '@interface-ui/components'
+import { InSvgIcon } from '@interface-ui/core'
 </script>
 
 <template>

@@ -1,7 +1,34 @@
 {
   "name": "@interface-ui/constants",
-  "version": "0.0.2",
-  "description": "constants",
-  "main": "index.ts",
-  "types": "./dist/types/packages/constants/index.d.ts"
+  "version": "0.0.1-alpha.0",
+  "private": false,
+  "description": "Interface UI constants definitions",
+  "author": "Interface UI",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsinghua-lau/fusion-ui",
+    "directory": "packages/constants"
+  },
+  "bugs": {
+    "url": "https://github.com/tsinghua-lau/fusion-ui/issues"
+  },
+  "keywords": [
+    "constants",
+    "vue",
+    "interface-ui"
+  ],
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "types": "es/index.d.ts",
+  "files": [
+    "es",
+    "lib"
+  ],
+  "scripts": {
+    "build": "rimraf lib es && vite build"
+  },
+  "peerDependencies": {
+    "vue": "^3.3.8"
+  }
 }

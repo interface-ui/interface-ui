@@ -1,4 +1,6 @@
 dist
+lib
+es
 node_modules
 coverage
 CHANGELOG.en-US.md

@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { ThemeProvider } from '@interface-ui/theme'
-import { InButton, InIconButton } from '@interface-ui/components'
+import { InButton, InIconButton } from '@interface-ui/core'
 import Checkbox from './Checkbox.vue'
 import createTheme from '@interface-ui/theme'
 import { DeleteFilled } from 'fusion-ui-iconify'

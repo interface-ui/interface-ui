@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import * as pkg from 'fusion-ui-iconify'
-import { InButton, InIconButton, InMessage } from 'interface-ui'
+import { InButton, InIconButton, InMessage } from '@interface-ui/core'
 import { h } from 'vue'
 
 const { DeleteFilled, VerifiedRound } = pkg

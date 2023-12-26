@@ -3,12 +3,12 @@ import {
   argbFromHex,
 } from '@material/material-color-utilities'
 
-interface DeafultTheme {
+interface DefaultTheme {
   source: string
   customColors: CustomColor[]
 }
 
-const defaultTheme: DeafultTheme = {
+const defaultTheme: DefaultTheme = {
   source: '#6750A4',
   customColors: [
     {

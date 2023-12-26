@@ -1,5 +1,5 @@
 import { computed } from 'vue'
-import type { ComponentStylingHook } from '../../../types'
+import type { ComponentStylingHook } from '@interface-ui/utils'
 import { css, cx } from '@interface-ui/theme'
 import type { __component__PascalCase__Props } from './__component__KebabCase__'
 

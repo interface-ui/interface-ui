@@ -1,10 +1,39 @@
 {
   "name": "@interface-ui/utils",
-  "version": "0.0.2",
+  "version": "0.0.1-alpha.0",
+  "private": false,
+  "description": "Utils for Interface UI",
+  "author": "Interface UI",
   "license": "MIT",
-  "main": "index.ts",
-  "types": "./dist/types/packages/utils/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsinghua-lau/fusion-ui",
+    "directory": "packages/utils"
+  },
+  "bugs": {
+    "url": "https://github.com/tsinghua-lau/fusion-ui/issues"
+  },
+  "keywords": [
+    "utils",
+    "vue",
+    "interface-ui"
+  ],
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "types": "es/index.d.ts",
+  "files": [
+    "es",
+    "lib"
+  ],
+  "scripts": {
+    "build": "rimraf lib es && vite build"
+  },
   "peerDependencies": {
     "vue": "^3.3.8"
+  },
+  "dependencies": {
+    "lodash-unified": "^1.0.3",
+    "@vue/shared": "^3.2.47",
+    "@vueuse/core": "^9.1.1"
   }
 }

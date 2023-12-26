@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import '@interface-ui/components/src/chip/src/index.less'
-import { ChipVariants, InChip } from '@interface-ui/components'
+import '@interface-ui/core/src/chip/src/index.less'
+import { ChipVariants, InChip } from '@interface-ui/core'
 import { TodayFilled } from 'fusion-ui-iconify'
 import { ref } from 'vue'
 import { ThemeCallBack } from '@interface-ui/theme'

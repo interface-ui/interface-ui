@@ -1,5 +1,7 @@
 node_modules
 dist
+lib
+es
 playground/*
 pnpm-lock.yaml
 CHANGELOG.en-US.md

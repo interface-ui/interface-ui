@@ -1,0 +1,19 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "composite": true,
+    "outDir": "es",
+    "rootDir": "src",
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "paths": {
+      "@interface-ui/theme": ["../theme/src/index.ts"],
+      "@interface-ui/constants": ["../constants/src/index.ts"],
+      "@interface-ui/utils": ["../utils/src/index.ts"]
+    }
+  },
+  "references": [{ "path": "./tsconfig.build.json" }],
+  "include": ["src/**/*"],
+  "exclude": ["src/**/__test__/*"]
+}

@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import '@interface-ui/components/src/divider/src/index.less' // 开发调试的样式
-import { InDivider } from '@interface-ui/components'
+import '@interface-ui/core/src/divider/src/index.less' // 开发调试的样式
+import { InDivider } from '@interface-ui/core'
 </script>
 
 <template>

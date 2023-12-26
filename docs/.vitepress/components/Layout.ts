@@ -2,6 +2,7 @@
 import { defineComponent, h, onMounted, toRaw } from 'vue'
 import { ThemeProvider, createTheme } from '@interface-ui/theme'
 import theme from 'vitepress/theme'
+import { inBrowser } from 'vitepress'
 import TeamMember from '../components/team-member'
 
 export default defineComponent({
@@ -9,7 +10,8 @@ export default defineComponent({
   setup() {
     const uiTheme = createTheme()
     onMounted(() => {
-      window.theme = toRaw(uiTheme.value)
+      // eslint-disable-next-line @typescript-eslint/no-extra-semi
+      ;(window as any).theme = toRaw(uiTheme.value)
 
       const html = document.documentElement
       const toggleTheme = () => {
@@ -35,12 +37,12 @@ export default defineComponent({
     })
 
     return () =>
-      typeof window === 'undefined'
-        ? null
-        : h(ThemeProvider, { theme: uiTheme.value }, () =>
+      inBrowser
+        ? h(ThemeProvider, { theme: uiTheme.value }, () =>
             h(theme.Layout, null, {
               'home-features-after': () => h(TeamMember),
-            })
+            }),
           )
+        : null
   },
 })

@@ -1,38 +1,28 @@
 {
-  "extends": "./tsconfig.base.json",
   "compilerOptions": {
+    "target": "ES5",
+    "module": "ESNext",
+    "baseUrl": ".",
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "noImplicitThis": true,
+    "allowJs": false,
     "jsx": "preserve",
-    "allowJs": true,
-    "baseUrl": "./",
-    "emitDeclarationOnly": true,
+    "strict": true,
+    "noUnusedLocals": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "removeComments": false,
+    "downlevelIteration": true,
+    "composite": true,
+    "outDir": "es",
     "declaration": true,
-    "declarationDir": "./interface-ui/dist/types",
-    "types": ["node"],
-    "paths": {
-      "@interface-ui/components": [
-        "packages/components",
-        "@interface-ui/components"
-      ],
-      "@interface-ui/constants": [
-        "packages/constants",
-        "@interface-ui/constants"
-      ],
-      "@interface-ui/theme": ["packages/theme", "@interface-ui/theme"],
-      "@interface-ui/utils": ["packages/utils", "@interface-ui/utils"]
-    }
+    "emitDeclarationOnly": true,
+    "lib": ["ES2020", "DOM"],
+    "types": [],
+    "noImplicitAny": true
   },
-
-  "exclude": [
-    "node_modules",
-    "build",
-    "dist",
-    "test",
-    "docs",
-    "scripts/templates",
-    "playground",
-    "gulpfile.ts",
-    "**__/test/__**/*",
-    "**/style/**/*",
-    "**/*.md"
-  ]
+  "exclude": ["node_modules", "lib", "es"]
 }

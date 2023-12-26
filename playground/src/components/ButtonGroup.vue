@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { InButton, InButtonGroup } from '@interface-ui/components'
+import { InButton, InButtonGroup } from '@interface-ui/core'
 </script>
 
 <template>

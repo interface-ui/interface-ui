@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { InButton, InMessageClass } from 'interface-ui'
+import { InButton, InMessageClass } from '@interface-ui/core'
 import { singleton } from '@interface-ui/utils'
 
 const InMessageInstances = {

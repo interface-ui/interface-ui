@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import '@interface-ui/components/src/switch/src/index.less' // 开发调试的样式
-import { InSwitch } from '@interface-ui/components'
+import '@interface-ui/core/src/switch/src/index.less' // 开发调试的样式
+import { InSwitch } from '@interface-ui/core'
 import { computed, ref } from 'vue'
 
 const value = ref(false)

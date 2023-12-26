@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/indent */
-import type { ComponentSizes } from '@interface-ui/constants'
+type ComponentSizes = 'small' | 'medium' | 'large'
 
 export interface TypographyProp {
   fontFamily: string
@@ -12,7 +12,7 @@ export interface TypographyProp {
 }
 
 export const typographyWithSize = ['title', 'body', 'label'] as const
-export type TypographyWithSize = typeof typographyWithSize[number]
+export type TypographyWithSize = (typeof typographyWithSize)[number]
 export const typographyWithoutSize = [
   'h1',
   'h2',
@@ -21,7 +21,7 @@ export const typographyWithoutSize = [
   'h5',
   'h6',
 ] as const
-export type TypographyWithoutSize = typeof typographyWithoutSize[number]
+export type TypographyWithoutSize = (typeof typographyWithoutSize)[number]
 
 export type TypographyType = TypographyWithoutSize | TypographyWithSize
 

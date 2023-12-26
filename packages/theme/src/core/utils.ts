@@ -70,7 +70,7 @@ export const createCustomPalettes = (customColors: CustomColor[]) => {
   return palettes
 }
 
-export const parseShcemes = (scheme: Scheme): ParsedSchemes => {
+export const parseSchemes = (scheme: Scheme): ParsedSchemes => {
   const schemes: Schemes = {} as any
   const styles: Record<string, string> = {} as any
   for (const [key, value] of Object.entries(scheme.toJSON())) {

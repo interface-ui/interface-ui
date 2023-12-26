@@ -1,8 +1,8 @@
-import createTheme from './create-theme'
+export * from '@emotion/css'
 export * from './create-theme'
 export * from './types'
-export * from '@emotion/css'
 export * from './styled'
+export * from './utils'
 export { default as Theme } from './theme'
 
-export default createTheme
+export { default } from './create-theme'

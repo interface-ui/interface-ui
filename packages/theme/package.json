@@ -1,16 +1,53 @@
 {
   "name": "@interface-ui/theme",
-  "version": "0.0.2",
-  "description": "Interface UI Theme",
+  "type": "module",
+  "version": "0.0.1-alpha.0",
+  "private": false,
+  "description": "Interface UI theme package",
+  "author": "Interface UI",
   "license": "MIT",
-  "main": "index.ts",
-  "module": "index.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsinghua-lau/fusion-ui",
+    "directory": "packages/theme"
+  },
+  "bugs": {
+    "url": "https://github.com/tsinghua-lau/fusion-ui/issues"
+  },
+  "keywords": [
+    "theme",
+    "material design",
+    "vue",
+    "interface-ui"
+  ],
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "types": "es/index.d.ts",
+  "files": [
+    "es",
+    "lib",
+    "/styles"
+  ],
+  "exports": {
+    ".": {
+      "import": "./es/index.js",
+      "require": "./lib/index.js"
+    },
+    "./styles": "./styles/index.css"
+  },
+  "scripts": {
+    "extract": "tsx script/extract.ts",
+    "build": "rimraf lib es styles && gulp -f build/gulpfile.ts"
+  },
   "peerDependencies": {
+    "@interface-ui/utils": "workspace:*",
     "vue": "^3.3.8"
   },
   "dependencies": {
     "@emotion/css": "^11.11.2",
-    "@fontsource/roboto": "^5.0.8",
     "@material/material-color-utilities": "^0.2.7"
+  },
+  "devDependencies": {
+    "@interface-ui/utils": "workspace:*"
   }
 }
