@@ -1,6 +1,5 @@
 import type { Component, PropType } from 'vue'
 import { defineComponent, ref, watch } from 'vue'
-import { themeProviderEmits } from './theme-provider'
 import { Theme, injectJSS } from '@/core'
 import { useTheme, useThemeProvider } from '@/hooks'
 import type { ThemeMode } from '@/mode'
@@ -8,7 +7,6 @@ import type { ThemeSchemes } from '@/types'
 
 export default defineComponent({
   name: 'ThemeProvider',
-  // TIPS: Needs to optimized buildProps
   props: {
     theme: {
       type: Object as PropType<Theme>,
@@ -22,7 +20,7 @@ export default defineComponent({
       type: Function,
     },
   },
-  emits: themeProviderEmits,
+  emits: ['update:theme'],
   setup(props, { slots, emit }) {
     const html = document.documentElement
     const theme = ref(props.theme)
