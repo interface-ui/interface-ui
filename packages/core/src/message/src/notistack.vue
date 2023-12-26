@@ -68,4 +68,3 @@ defineExpose({ add, remove, removeAll })
     <component :is="child" v-for="child in children" :key="(child as any).id" />
   </theme-provider>
 </template>
-@interface-ui/theme

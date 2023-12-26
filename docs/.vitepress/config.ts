@@ -6,8 +6,7 @@ import { head, nav, sidebar, vite } from './configuration'
 export default defineConfig({
   title: 'Interface UI',
   base: '/interface-ui/',
-  description:
-    'A Vue.js prebuilt component library based on Preline design draft',
+  description: 'A Vue.js prebuilt component library based on Material Design.',
   head,
   // darkMode: true,
   themeConfig: {

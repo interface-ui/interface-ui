@@ -1,6 +1,6 @@
 import type { Component, ExtractPropTypes, PropType } from 'vue'
 import { buildProps } from '@interface-ui/utils'
-import type { Theme } from '@interface-ui/theme'
+import type { Theme } from '@/core'
 
 export const themeProviderProps = buildProps({
   theme: {
