@@ -37,7 +37,7 @@
   },
   "scripts": {
     "extract": "tsx script/extract.ts",
-    "build": "rimraf lib es styles && gulp -f build/gulpfile.ts"
+    "build": "rimraf lib es styles && pnpm run extract && gulp -f build/gulpfile.ts"
   },
   "peerDependencies": {
     "@interface-ui/utils": "workspace:*",
