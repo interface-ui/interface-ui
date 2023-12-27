@@ -17,7 +17,7 @@ export default defineConfig({
     minify: true,
     rollupOptions: {
       input: 'src/index.ts',
-      external: ['vue', '@interface-ui/utils'],
+      external: ['vue', '@interface-ui/utils', '@emotion/css'],
       output: [
         {
           format: 'es',
