@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { InMessage } from 'interface-ui'
+import { InMessage } from '@interface-ui/core'
 
 const handleClick = (duration: number) => {
   new InMessage().push({

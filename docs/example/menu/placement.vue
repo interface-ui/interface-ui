@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
-import type { PopoverPlacements } from 'interface-ui'
+import type { PopoverPlacements } from '@interface-ui/core'
 
 const anchor = ref<HTMLElement | MouseEvent | null>(null)
 const placement = ref<PopoverPlacements>({ x: 'right', y: 'top' })

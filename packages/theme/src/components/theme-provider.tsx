@@ -1,10 +1,9 @@
-import type { Component, PropType, Ref } from 'vue'
+import type { Component, PropType } from 'vue'
 import { defineComponent, ref, watch } from 'vue'
-import type { ThemeSchemes } from '../types'
-import { Theme } from '../core'
-import { injectJSS } from '../core/utils'
-import { useTheme, useThemeProvider } from '../hooks'
-import type { ThemeMode } from '../mode'
+import { Theme, injectJSS } from '@/core'
+import { useTheme, useThemeProvider } from '@/hooks'
+import type { ThemeMode } from '@/mode'
+import type { ThemeSchemes } from '@/types'
 
 export default defineComponent({
   name: 'ThemeProvider',
@@ -35,7 +34,7 @@ export default defineComponent({
       theme.value.target,
       lightSchemes,
       darkSchemes,
-      theme.value as Theme
+      theme.value as Theme,
     )
 
     const toggleTheme = (mode: ThemeMode) => {
@@ -56,7 +55,7 @@ export default defineComponent({
         mode,
         lightSchemes,
         darkSchemes,
-        target
+        target,
       )
       emit('update:theme', theme.value)
     }
@@ -67,7 +66,7 @@ export default defineComponent({
         : () => parentTheme.value?.mode ?? props.theme.mode
     props.watcher ? props.watcher() : watch(watchTarget, toggleTheme)
 
-    useThemeProvider(theme as Ref<Theme>)
+    useThemeProvider(theme)
 
     const Comp = props.component as any
     return () =>

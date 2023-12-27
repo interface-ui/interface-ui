@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-import '@interface-ui/components/src/drawer/src/index.less'
+import '@interface-ui/core/drawer/src/index.less'
 import {
   InDrawer,
   InButton,
   InTypography,
   InIconButton,
-} from '@interface-ui/components'
+} from '@interface-ui/core'
 import {
   ComponentDirections,
   componentDirections,

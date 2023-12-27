@@ -1,6 +1,9 @@
 import { isArray, isObject, isString } from '@vue/shared'
 import { isNil } from 'lodash-unified'
 
+export { isString } from '@vue/shared'
+export { isNumber } from '@vueuse/core'
+
 export const isUndefined = (val: any): val is undefined => val === undefined
 
 export const isEmpty = (val: unknown) =>

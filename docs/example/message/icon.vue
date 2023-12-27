@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import * as pkg from 'fusion-ui-iconify'
-import { InButton, InMessage } from 'interface-ui'
+import { InButton, InMessage } from '@interface-ui/core'
 const { Filter3Filled } = pkg
 
 const handleClick = () => {

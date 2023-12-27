@@ -17,10 +17,15 @@
     "serve": "vitepress serve"
   },
   "dependencies": {
+    "@fontsource/roboto": "^5.0.8",
+    "@interface-ui/constants": "workspace:*",
+    "@interface-ui/core": "workspace:*",
+    "@interface-ui/theme": "workspace:*",
+    "@interface-ui/utils": "workspace:*",
+    "@vueuse/core": "^9.1.1",
     "fusion-ui-iconify": "^1.0.46",
-    "interface-ui": "workspace:^",
     "markdown-it": "^13.0.1",
-    "vite-plugin-progress": "^0.0.7"
+    "vitepress": "1.0.0-rc.33"
   },
   "devDependencies": {
     "@types/markdown-it": "^12.2.3",

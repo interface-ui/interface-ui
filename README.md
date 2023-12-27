@@ -41,7 +41,7 @@ $ yarn add interface-ui
 
 ```
 import { createApp } from 'vue'
-import fusionUi from 'interface-ui'
+import fusionUi from '@interface-ui/core'
 import 'interface-ui/dist/styles/index.css'
 import App from './App.vue'
 

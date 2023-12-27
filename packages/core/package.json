@@ -1,0 +1,61 @@
+{
+  "name": "@interface-ui/core",
+  "type": "module",
+  "version": "0.0.1-alpha.0",
+  "private": false,
+  "description": "Interface UI core package (includes components)",
+  "author": "Interface UI",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsinghua-lau/fusion-ui",
+    "directory": "packages/core"
+  },
+  "bugs": {
+    "url": "https://github.com/tsinghua-lau/fusion-ui/issues"
+  },
+  "keywords": [
+    "components",
+    "material design",
+    "vue",
+    "interface-ui"
+  ],
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "types": "es/index.d.ts",
+  "files": [
+    "es",
+    "lib",
+    "/styles"
+  ],
+  "exports": {
+    ".": {
+      "import": "./es/index.js",
+      "require": "./lib/index.js"
+    },
+    "./styles": "./styles/index.css",
+    "./*": "./src/*"
+  },
+  "scripts": {
+    "build": "rimraf lib es styles && gulp -f build/gulpfile.ts"
+  },
+  "peerDependencies": {
+    "vue": "^3.3.8"
+  },
+  "dependencies": {
+    "@interface-ui/constants": "workspace:*",
+    "@interface-ui/theme": "workspace:*",
+    "@interface-ui/utils": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/gulp-autoprefixer": "^0.0.37",
+    "@types/gulp-clean-css": "^4.3.4",
+    "@types/gulp-less": "^0.0.36",
+    "@types/gulp-rename": "^2.0.6",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-less": "^5.0.0",
+    "gulp-rename": "^2.0.0",
+    "vitest": "^0.28.5"
+  }
+}

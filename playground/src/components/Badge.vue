@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { InAvatar, InBadge } from '@interface-ui/components'
+import { InAvatar, InBadge } from '@interface-ui/core'
 import { styled } from '@interface-ui/theme'
 
 const StyledBadge = styled(InBadge)(theme => ({

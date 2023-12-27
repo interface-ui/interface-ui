@@ -1,17 +1,17 @@
 <script lang="ts" setup>
-import '@interface-ui/components/src/card/src/index.less'
-import '@interface-ui/components/src/card-content/src/index.less'
-import '@interface-ui/components/src/card-header/src/index.less'
-import '@interface-ui/components/src/card-action/src/index.less'
-import '@interface-ui/components/src/card-media/src/index.less'
-import '@interface-ui/components/src/action-area/src/index.less'
+import '@interface-ui/core/card/src/index.less'
+import '@interface-ui/core/card-content/src/index.less'
+import '@interface-ui/core/card-header/src/index.less'
+import '@interface-ui/core/card-action/src/index.less'
+import '@interface-ui/core/card-media/src/index.less'
+import '@interface-ui/core/action-area/src/index.less'
 import {
   InCard,
   InCardContent,
   InTypography,
   InIconButton,
   InActionArea,
-} from '@interface-ui/components'
+} from '@interface-ui/core'
 import { MoreVertFilled, FavoriteFilled, ShareFilled } from 'fusion-ui-iconify'
 </script>
 

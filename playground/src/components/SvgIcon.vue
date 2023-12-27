@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { InSvgIcon } from '@interface-ui/components'
+import { InSvgIcon } from '@interface-ui/core'
 import * as pkg from 'fusion-ui-iconify'
 const { DeleteFilled } = pkg
 // import { DeleteFilled } from 'fusion-ui-iconify'

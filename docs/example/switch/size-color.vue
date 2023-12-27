@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { componentSizes } from '@interface-ui/constants'
+import type { componentSizes } from '@interface-ui/core'
 import { ref } from 'vue'
 
 const value = ref<boolean[]>([true, false, true])

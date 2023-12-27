@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { InAlert } from '@interface-ui/components'
+import { InAlert } from '@interface-ui/core'
 import { CloseOutlined } from 'fusion-ui-iconify'
 </script>
 

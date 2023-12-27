@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-import '@interface-ui/components/src/typography/src/index.less' // 开发调试的样式
-import '@interface-ui/components/src/text-field/src/index.less' // 开发调试的样式
+import '@interface-ui/core/typography/src/index.less'
+import '@interface-ui/core/text-field/src/index.less'
 
-import { InTextField } from '@interface-ui/components'
+import { InTextField } from '@interface-ui/core'
 import { ref } from 'vue'
 
 const content = ref<string>('')

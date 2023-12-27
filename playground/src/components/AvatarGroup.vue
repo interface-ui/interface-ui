@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { InAvatar, InAvatarGroup } from '@interface-ui/components'
+import { InAvatar, InAvatarGroup } from '@interface-ui/core'
 </script>
 
 <template>

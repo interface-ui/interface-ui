@@ -25,7 +25,7 @@ pnpm add interface-ui
 ```ts
 import { createApp } from 'vue'
 
-import fusionUi from 'interface-ui'
+import fusionUi from '@interface-ui/core'
 import 'interface-ui/dist/styles/index.css'
 
 import App from './App.vue'
@@ -41,7 +41,7 @@ app.mount('#app')
 
 
 ```ts
-import { InButton } from 'interface-ui'
+import { InButton } from '@interface-ui/core'
 import 'interface-ui/dist/styles/button.css'
 ```
 

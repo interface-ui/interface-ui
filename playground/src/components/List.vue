@@ -1,10 +1,10 @@
 <script lang="ts" setup>
-import '@interface-ui/components/src/divider/src/index.less'
-import '@interface-ui/components/src/list/src/index.less'
-import '@interface-ui/components/src/list-item/src/index.less'
-import '@interface-ui/components/src/list-item-header/src/index.less'
-import '@interface-ui/components/src/badge/src/index.less'
-import '@interface-ui/components/src/menu/src/index.less'
+import '@interface-ui/core/divider/src/index.less'
+import '@interface-ui/core/list/src/index.less'
+import '@interface-ui/core/list-item/src/index.less'
+import '@interface-ui/core/list-item-header/src/index.less'
+import '@interface-ui/core/badge/src/index.less'
+import '@interface-ui/core/menu/src/index.less'
 import {
   InList,
   InListItem,
@@ -18,7 +18,7 @@ import {
   InHeadlineText,
   InButton,
   InMenu,
-} from '@interface-ui/components'
+} from '@interface-ui/core'
 import {
   ContentCopyFilled,
   MoreOutlined,

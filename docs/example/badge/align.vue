@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { InRadio } from 'interface-ui'
+import { InRadio } from '@interface-ui/core'
 import { ref } from 'vue'
 import { useTheme } from '@interface-ui/theme'
 

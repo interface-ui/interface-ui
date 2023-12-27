@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { InCheckbox } from 'interface-ui'
+import { InCheckbox } from '@interface-ui/core'
 import { ref } from 'vue'
 
 const checkedNames = ref<string[]>([])

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { InButton } from '@interface-ui/components'
+import { InButton } from '@interface-ui/core'
 import { RouterLink } from 'vue-router'
 import routes from '../routes'
 </script>

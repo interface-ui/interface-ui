@@ -12,9 +12,9 @@ const scriptClientRE = /<\s*script[^>]*\bclient\b[^>]*/
 
 const getPreviewCodes = (code: string, preview: string): string => {
   const codeArr = code.trim().split('\n')
-  const previewCodes = []
-  const [_, preivewLines] = preview.match(/\[([\s\S]+)\]/) ?? []
-  preivewLines.split(', ').forEach(lineNumber => {
+  const previewCodes: string[] = []
+  const [_, previewLines] = preview.match(/\[([\s\S]+)\]/) ?? []
+  previewLines.split(', ').forEach(lineNumber => {
     if (!isNaN(Number(lineNumber))) {
       previewCodes.push(codeArr[+lineNumber - 1])
     } else {
@@ -25,7 +25,7 @@ const getPreviewCodes = (code: string, preview: string): string => {
     }
   })
 
-  const [_match, spaces] = previewCodes[0].match(/^(\s*)[^\s]+/)
+  const [_match, spaces] = previewCodes[0].match(/^(\s*)[^\s]+/)!
   return previewCodes.map(code => code.replace(spaces, '')).join('\n')
 }
 
@@ -33,7 +33,7 @@ let index = 1
 export function getDemoComponent(
   md: MarkdownRenderer,
   env: any,
-  { title, desc, path, preview, code, ...props }: DemoInfos
+  { title, desc, path, preview, code, ...props }: DemoInfos,
 ) {
   const componentName = `DemoComponent${index++}`
   path = normalizePath(path)
@@ -48,7 +48,7 @@ export function getDemoComponent(
     ? md.options.highlight!(
         getPreviewCodes(code, preview),
         props.lang || 'html',
-        ''
+        '',
       )
     : ''
 
@@ -73,7 +73,7 @@ export function genDemoByCode(
   md: MarkdownRenderer,
   env: any,
   path: string,
-  code: string
+  code: string,
 ) {
   let demoName = ''
   let demoPath = ''
@@ -123,7 +123,7 @@ function injectImportStatement(env: any, componentName: string, path: string) {
       scriptRE,
       `${componentRegistStatement}
 
-      </script>`
+      </script>`,
     )
   } else {
     tags.unshift({

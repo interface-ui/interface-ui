@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import type { ChipVariants } from '@interface-ui/components'
-import { InChip } from '@interface-ui/components'
+import type { ChipVariants } from '@interface-ui/core'
+import { InChip } from '@interface-ui/core'
 import { ref } from 'vue'
 import type { ThemeCallBack } from '@interface-ui/theme'
 

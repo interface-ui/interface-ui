@@ -11,6 +11,8 @@ packages/lucky-design/src/style.css
 
 node_modules
 dist
+lib
+es
 dist-ssr
 *.local
 

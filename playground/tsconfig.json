@@ -18,8 +18,23 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "paths": {
+      "@interface-ui/core": ["../packages/core/src/index.ts"],
+      "@interface-ui/theme": ["../packages/theme/src/index.ts"],
+      "@interface-ui/constants": ["../packages/constants/src/index.ts"],
+      "@interface-ui/utils": ["../packages/utils/src/index.ts"]
+    }
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "src/**/*", "src/**/*.vue", "config/**/*", "./components.d.ts"],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "src/**/*",
+    "src/**/*.vue",
+    "config/**/*",
+    "./components.d.ts"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

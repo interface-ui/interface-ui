@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { InMessage } from 'interface-ui'
+import { InMessage } from '@interface-ui/core'
 
 const messageIns = ref(new InMessage())
 </script>

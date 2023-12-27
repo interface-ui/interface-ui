@@ -17,7 +17,7 @@
 
 
   ```ts
-import '@interface-ui/components/button/src/index.less' // 开发调试的样式
+import '@interface-ui/core/button/src/index.less' // 开发调试的样式
   ```
 
 ## 3. 启动开始玩耍 🎊

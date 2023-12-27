@@ -1,9 +1,8 @@
 import theme from 'vitepress/theme'
-import FusionUi from '@interface-ui/components'
+import InterfaceUI from '@interface-ui/core'
 import Layout from '../components/Layout'
-
-// 导入本地源码样式--测试
-import 'interface-ui/dist/styles/index.css' // 全部样式
+import '@interface-ui/theme/styles' // Theme styles
+import '@interface-ui/core/styles' // All components styles
 
 import DemoBlock from '../components/demo-block'
 import TableBlock from '../components/table-block'
@@ -17,7 +16,7 @@ import './style/scrollbar.less'
 export default {
   ...theme,
   enhanceApp({ app }) {
-    app.use(FusionUi)
+    app.use(InterfaceUI)
     app.component('Demo', DemoBlock)
     app.component('BpTable', BpTable)
     app.component('TableBlock', TableBlock)
