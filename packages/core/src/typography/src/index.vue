@@ -35,4 +35,3 @@ const cssClass = useCss(props)
     <slot />
   </component>
 </template>
-@interface-ui/theme@interface-ui/theme

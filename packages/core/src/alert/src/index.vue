@@ -40,4 +40,3 @@ const actionColor = computed(() => {
     <slot name="action" v-bind="{ color: actionColor, size: 'small' }" />
   </div>
 </template>
-@interface-ui/theme

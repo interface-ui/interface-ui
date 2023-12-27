@@ -29,7 +29,7 @@ const positionCss = computed(() =>
             ${props.overlap ? '0%' : (translate as any)[props.yAlign]}
           );
       `
-    : ''
+    : '',
 )
 const BadgeTypography = computed(
   () => styled(Typography, { color: $onColor.value })`
@@ -38,7 +38,7 @@ const BadgeTypography = computed(
     min-width: ${props.variant === 'dot' ? '8px' : '20px'};
     border-radius: 10px;
     padding: ${props.variant === 'dot' ? '0' : '6px'} !important;
-  `
+  `,
 )
 
 const showTypography = computed(() => {
@@ -55,7 +55,7 @@ const badgeContent = computed(() => {
     if (!['string', 'number'].includes(typeof content)) {
       debugWarn(
         '[Interface UI]',
-        'props.content can only be "string" or "number" when set props.max'
+        'props.content can only be "string" or "number" when set props.max',
       )
       return null
     }
@@ -81,4 +81,3 @@ const badgeContent = computed(() => {
     <props.content v-else :class="[ns.m('icon'), positionCss]" />
   </span>
 </template>
-@interface-ui/theme

@@ -85,4 +85,3 @@ defineExpose({ addRipple })
     />
   </span>
 </template>
-@interface-ui/theme
