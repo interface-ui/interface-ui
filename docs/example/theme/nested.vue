@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
-import createTheme, { ThemeProvider } from '@interface-ui/theme'
+import { ThemeProvider, createTheme } from '@interface-ui/theme'
 import { InCheckbox } from '@interface-ui/core'
 const checked = ref(true)
 const theme1 = createTheme('#2196F3', { target: 'host' })
