@@ -54,6 +54,7 @@ export function demoBlockPlugin(md: MarkdownRenderer) {
         preview: props.preview,
         code,
         ...props,
+        col: 'col' in props,
       })
       return demoScripts
     }

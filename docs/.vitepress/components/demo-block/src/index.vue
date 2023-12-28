@@ -6,7 +6,7 @@ import { demoProps } from './index'
 const props = defineProps(demoProps)
 
 const decodedHighlightedCode = computed(() =>
-  decodeURIComponent(props.highlightedCode)
+  decodeURIComponent(props.highlightedCode),
 )
 
 const { copy, copied } = useClipboard({
@@ -18,7 +18,10 @@ const [value, toggle] = useToggle()
 <template>
   <ClientOnly>
     <div v-bind="$attrs" class="mt-6 demo-block">
-      <div class="o-demo_wrapper vp-raw bg">
+      <div
+        class="o-demo_wrapper vp-raw bg"
+        :class="[$props.col ? 'flex-col' : '']"
+      >
         <slot />
       </div>
       <div class="relative">
