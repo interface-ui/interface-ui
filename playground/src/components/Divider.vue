@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import '@css/divider/src/index.less' // 开发调试的样式
+import '@core/divider/src/index.less' // 开发调试的样式
 import { InDivider } from '@interface-ui/core'
 </script>
 

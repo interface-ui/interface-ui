@@ -7,8 +7,7 @@ export default defineConfig({
   plugins: [vue(), vueJsx()],
   resolve: {
     alias: {
-      '@css': '../../../packages/core/src',
-      '@interface-ui/core/dev': '../../../packages/core/src',
+      '@core': '../../../packages/core/src',
     },
   },
 })

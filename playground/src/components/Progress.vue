@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import '@css/progress/src/index.less'
+import '@core/progress/src/index.less'
 import { InProgress } from '@interface-ui/core'
 import { ref, onUnmounted } from 'vue'
 

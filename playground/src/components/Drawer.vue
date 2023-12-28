@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import '@css/drawer/src/index.less'
+import '@core/drawer/src/index.less'
 import {
   InDrawer,
   InButton,

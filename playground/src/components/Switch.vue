@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import '@css/switch/src/index.less'
+import '@core/switch/src/index.less'
 import { InSwitch } from '@interface-ui/core'
 import { computed, ref } from 'vue'
 
