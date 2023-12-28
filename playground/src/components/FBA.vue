@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import '@interface-ui/core/fba/src/index.less' // 开发调试的样式
+import '@css/fba/src/index.less' // 开发调试的样式
 import { InFba } from '@interface-ui/core'
 import { PaletteOutlined } from 'fusion-ui-iconify'
 </script>

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import '@interface-ui/core/breadcrumb/src/index.less' // 开发调试的样式
+import '@css/breadcrumb/src/index.less' // 开发调试的样式
 import { InLink, InBreadcrumb } from '@interface-ui/core'
 import {
   NavigateNextFilled,

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import '@interface-ui/core/popover/src/index.less' // 开发调试的样式
+import '@css/popover/src/index.less' // 开发调试的样式
 import { InPopover, InButton } from '@interface-ui/core'
 import { ref } from 'vue'
 

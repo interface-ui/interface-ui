@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import '@interface-ui/core/typography/src/index.less'
-import '@interface-ui/core/text-field/src/index.less'
+import '@css/src/typography/src/index.less'
+import '@css/src/text-field/src/index.less'
 
 import { InTextField } from '@interface-ui/core'
 import { ref } from 'vue'
