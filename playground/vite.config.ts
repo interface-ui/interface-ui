@@ -8,6 +8,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@css': '../../../packages/core/src',
+      '@interface-ui/core/dev': '../../../packages/core/src',
     },
   },
 })
