@@ -61,7 +61,7 @@ Button 有五种变体：elevated, filled（默认）, tonal, outlined, and text
 
 ### 结合图标使用
 
-带图标和标签的按钮
+带图标和标签的按钮。为 icon 添加 `leading` 或 `trailing` 属性有助于优化样式。
 <demo src="../../../example/button/icon.vue" preview="[7, 8]" />
 
 ## 属性

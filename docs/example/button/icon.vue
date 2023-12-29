@@ -4,6 +4,6 @@ import Save from '@interface-ui/icons/SaveFilled'
 </script>
 
 <template>
-  <in-button variant="outlined"><delete /> Delete </in-button>
-  <in-button> Save <save /></in-button>
+  <in-button variant="outlined"><delete leading /> Delete </in-button>
+  <in-button> Save <save trailing /></in-button>
 </template>

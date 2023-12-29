@@ -63,7 +63,7 @@ These are three shapes can be used: arc (default), rounded, and square
 
 ### Use with icon
 
-Button with icon and label
+Button with icon and label. The `leading` and `trailing` attributes help to optimize the style.
 <demo src="../../../example/button/icon.vue" preview="[7, 8]" />
 
 
