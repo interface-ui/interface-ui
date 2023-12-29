@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import '@interface-ui/core/switch/src/index.less' // 开发调试的样式
+import '@core/switch/src/index.less'
 import { InSwitch } from '@interface-ui/core'
 import { computed, ref } from 'vue'
 

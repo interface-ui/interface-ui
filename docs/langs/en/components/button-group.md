@@ -20,7 +20,7 @@ The `Button` components can be grouped by the `ButtonGroup` as its immediate chi
 
 You can set all the button props via `ButtonGroup` instead of set through the `Button` one by one.
 
-<demo src="../../../example/button-group/basic.vue" />
+<demo col src="../../../example/button-group/basic.vue" />
 
 ### Variants
 

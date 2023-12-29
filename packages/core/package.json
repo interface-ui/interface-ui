@@ -33,8 +33,7 @@
       "import": "./es/index.js",
       "require": "./lib/index.js"
     },
-    "./styles": "./styles/index.css",
-    "./*": "./src/*"
+    "./styles": "./styles/index.css"
   },
   "scripts": {
     "build": "rimraf lib es styles && gulp -f build/gulpfile.ts"

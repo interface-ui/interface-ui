@@ -4,7 +4,7 @@ type FusionColorLevel = 50 | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900
 type FusionColorExtensionLevel = 'A100' | 'A200' | 'A400' | 'A700'
 
 type ColorWithoutExtension = Color<FusionColorLevel>
-type ColorWithExtension = Color<FusionColorLevel & FusionColorExtensionLevel>
+type ColorWithExtension = Color<FusionColorLevel | FusionColorExtensionLevel>
 
 export interface Colors {
   red: ColorWithExtension

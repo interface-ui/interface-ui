@@ -1,10 +1,10 @@
 <script lang="ts" setup>
-import '@interface-ui/core/divider/src/index.less'
-import '@interface-ui/core/list/src/index.less'
-import '@interface-ui/core/list-item/src/index.less'
-import '@interface-ui/core/list-item-header/src/index.less'
-import '@interface-ui/core/badge/src/index.less'
-import '@interface-ui/core/menu/src/index.less'
+import '@core/divider/src/index.less'
+import '@core/list/src/index.less'
+import '@core/list-item/src/index.less'
+import '@core/list-item-header/src/index.less'
+import '@core/badge/src/index.less'
+import '@core/menu/src/index.less'
 import {
   InList,
   InListItem,

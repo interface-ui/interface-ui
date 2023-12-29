@@ -138,6 +138,9 @@ importers:
       '@interface-ui/core':
         specifier: workspace:*
         version: link:../packages/core
+      '@interface-ui/icons':
+        specifier: 0.0.1-alpha.1
+        version: 0.0.1-alpha.1(vue@3.3.13)
       '@interface-ui/theme':
         specifier: workspace:*
         version: link:../packages/theme
@@ -258,6 +261,9 @@ importers:
       '@interface-ui/core':
         specifier: workspace:*
         version: link:../packages/core
+      '@interface-ui/icons':
+        specifier: 0.0.1-alpha.1
+        version: 0.0.1-alpha.1(vue@3.3.13)
       '@interface-ui/theme':
         specifier: workspace:*
         version: link:../packages/theme
@@ -266,7 +272,7 @@ importers:
         version: link:../packages/utils
       fusion-ui-iconify:
         specifier: ^1.0.46
-        version: 1.0.49(less@4.2.0)(vue@3.3.13)
+        version: 1.0.46(less@4.2.0)(vue@3.3.13)
       vue:
         specifier: ^3.3.8
         version: 3.3.13(typescript@4.9.5)
@@ -1583,6 +1589,14 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /@interface-ui/icons@0.0.1-alpha.1(vue@3.3.13):
+    resolution: {integrity: sha512-heIEM9Nu+JC/w1cKCSfHAnr9XbhvSMXnK+ocHe4hvusq8dT6E87WQ1hSjLpiJXYs0GNnW/FWJOFJiJMr2MEm4Q==}
+    peerDependencies:
+      vue: ^3.3.8
+    dependencies:
+      vue: 3.3.13(typescript@4.9.5)
+    dev: false
 
   /@isaacs/cliui@8.0.2:
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}
@@ -5264,25 +5278,6 @@ packages:
 
   /fusion-ui-iconify@1.0.46(less@4.2.0)(vue@3.3.13):
     resolution: {integrity: sha512-F5NxZtCLz9bpAfcE1H5fIZyNwjR9h1XZOuvmps3/YhD1EYr7tagfHkoHrDDiP/CreHNK29ouZ7LOQA6KsgJd7g==}
-    peerDependencies:
-      vue: ^3.2.47
-    dependencies:
-      '@types/node': 18.19.3
-      vite: 4.5.1(@types/node@18.19.3)(less@4.2.0)
-      vue: 3.3.13(typescript@4.9.5)
-      vue-types: 5.1.1(vue@3.3.13)
-    transitivePeerDependencies:
-      - less
-      - lightningcss
-      - sass
-      - stylus
-      - sugarss
-      - terser
-    dev: false
-
-  /fusion-ui-iconify@1.0.49(less@4.2.0)(vue@3.3.13):
-    resolution: {integrity: sha512-SatsNeRCcOiNWkNn7BsflG3clIYrXE1c6XaE17jxo5IgYPLB1PHLW69zA4fWkHg9OUhiZsy4oDQEeAZaPH6+uA==}
-    deprecated: this package has been deprecated
     peerDependencies:
       vue: ^3.2.47
     dependencies:
