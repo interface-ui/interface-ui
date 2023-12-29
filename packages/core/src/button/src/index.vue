@@ -4,7 +4,7 @@ import { computed } from 'vue'
 import { iconSize } from '@interface-ui/constants'
 import InButtonBase from '../../button-base'
 import InRipple from '../../ripple'
-import { buttonProps } from './button'
+import { buttonProps, textMapping } from './button'
 import useCss from './index.jss'
 
 const props = defineProps(buttonProps)
@@ -18,7 +18,7 @@ const classList = computed(() => {
 </script>
 
 <template>
-  <in-button-base :class="[...classList, `title-${props.size}`, cssClass]">
+  <in-button-base :class="[...classList, textMapping[$props.size!], cssClass]">
     <slot v-bind="{ size: iconSize[props.size] }" />
     <in-ripple
       v-if="!props.disableRipple"
