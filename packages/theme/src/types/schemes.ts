@@ -24,7 +24,6 @@ export class ComponentSchemes {
       const core: CorePalette = CorePalette.of(argbFromHex(color))
 
       return new ComponentSchemes({
-        source: color,
         primary: core.a1.tone(40),
         onPrimary: core.a1.tone(100),
         primaryContainer: core.a1.tone(90),
@@ -62,7 +61,6 @@ export class ComponentSchemes {
       const core: CorePalette = CorePalette.of(argbFromHex(color))
 
       return new ComponentSchemes({
-        source: color,
         primary: core.a1.tone(80),
         onPrimary: core.a1.tone(20),
         primaryContainer: core.a1.tone(30),
@@ -106,7 +104,6 @@ export class ComponentSchemes {
     const tertiarySet = ComponentSchemes.colorSet('tertiary', theme, 'tertiary')
 
     return new ComponentSchemes({
-      source: color,
       ...primarySet,
       ...secondarySet,
       ...tertiarySet,
@@ -160,7 +157,6 @@ export class ComponentSchemes {
 
   private constructor(
     private readonly props: {
-      source: string
       primary: number | string
       onPrimary: number | string
       primaryContainer: number | string

@@ -13,14 +13,15 @@ import type { ThemeMode } from '@/mode'
  */
 export const useDynamicColor = (
   color: AcceptableColor,
-): Record<ThemeMode, ComponentSchemes> => {
+): Record<ThemeMode, ComponentSchemes> & { source: string } => {
   if (!color) {
-    return shallowReactive({ light: null, dark: null } as any)
+    return shallowReactive({ light: null, dark: null, source: color } as any)
   }
 
   const theme = useTheme()
   const computedColor = typeof color === 'function' ? color(theme.value) : color
   return shallowReactive({
+    source: computedColor,
     light: ComponentSchemes.light(computedColor, theme.value),
     dark: ComponentSchemes.dark(computedColor, theme.value),
   })
