@@ -1,7 +1,7 @@
 /* eslint-disable no-mixed-operators */
 import { computed, inject, ref, unref } from 'vue'
-
 import type { InjectionKey, Ref } from 'vue'
+import { toKebabCase } from '../javascript'
 
 export const defaultNamespace = 'in'
 const statePrefix = 'is-'
@@ -11,7 +11,7 @@ const _bem = (
   block: string,
   blockSuffix: string,
   element: string,
-  modifier: string
+  modifier: string,
 ) => {
   let cls = `${namespace}-${block}`
   if (blockSuffix) {
@@ -33,7 +33,7 @@ export const namespaceContextKey: InjectionKey<Ref<string | undefined>> =
   Symbol('namespaceContextKey')
 
 export const useGetDerivedNamespace = (
-  namespaceOverrides?: Ref<string | undefined>
+  namespaceOverrides?: Ref<string | undefined>,
 ) => {
   const derivedNamespace =
     namespaceOverrides || inject(namespaceContextKey, ref(defaultNamespace))
@@ -45,7 +45,7 @@ export const useGetDerivedNamespace = (
 
 export const useNamespace = (
   block: string,
-  namespaceOverrides?: Ref<string | undefined>
+  namespaceOverrides?: Ref<string | undefined>,
 ) => {
   const namespace = useGetDerivedNamespace(namespaceOverrides)
   const b = (blockSuffix = '') =>
@@ -95,7 +95,7 @@ export const useNamespace = (
     const styles: Record<string, string> = {}
     for (const key in object) {
       if (object[key]) {
-        styles[`--${namespace.value}-${key}`] = object[key]
+        styles[`--${namespace.value}-${toKebabCase(key)}`] = object[key]
       }
     }
     return styles
@@ -105,7 +105,8 @@ export const useNamespace = (
     const styles: Record<string, string | number> = {}
     for (const key in object) {
       if (object[key])
-        styles[`--${namespace.value}-${block}-${key}`] = object[key]
+        styles[`--${namespace.value}-${block}-${toKebabCase(key)}`] =
+          object[key]
     }
     return styles
   }
