@@ -3,6 +3,7 @@ import { useTheme } from './use-theme'
 import { ComponentSchemes } from '@/types'
 import type { AcceptableColor } from '@/types'
 import { rgbaFromHex } from '@/core'
+import type { ThemeMode } from '@/mode'
 
 /**
  * The function to generate the dynamic color for the component according to input color.
@@ -12,7 +13,7 @@ import { rgbaFromHex } from '@/core'
  */
 export const useDynamicColor = (
   color: AcceptableColor,
-): { light: ComponentSchemes; dark: ComponentSchemes } => {
+): Record<ThemeMode, ComponentSchemes> => {
   if (!color) {
     return shallowReactive({ light: null, dark: null } as any)
   }

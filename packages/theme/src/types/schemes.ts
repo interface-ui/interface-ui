@@ -98,8 +98,12 @@ export class ComponentSchemes {
     theme: Theme,
   ): ComponentSchemes {
     const primarySet = ComponentSchemes.colorSet(color, theme, 'primary')
-    const secondarySet = ComponentSchemes.colorSet(color, theme, 'secondary')
-    const tertiarySet = ComponentSchemes.colorSet(color, theme, 'tertiary')
+    const secondarySet = ComponentSchemes.colorSet(
+      'secondary',
+      theme,
+      'secondary',
+    )
+    const tertiarySet = ComponentSchemes.colorSet('tertiary', theme, 'tertiary')
 
     return new ComponentSchemes({
       source: color,
@@ -126,22 +130,31 @@ export class ComponentSchemes {
     theme: Theme,
     key: T,
   ): GenerateCustomSchemes<T> {
-    let color: string = source
-
-    if (source in theme.schemes) {
-      color = `var(--md-sys-color-${toKebabCase(source)})`
-    }
+    const color =
+      source in theme.schemes
+        ? `var(--md-sys-color-${toKebabCase(source)})`
+        : source
 
     const onColor =
       `on${toCapitalize(source)}` in theme.schemes
         ? `var(--md-sys-color-on-${toKebabCase(source)})`
         : `var(--md-sys-color-on-${toKebabCase(key)})`
 
+    const colorContainer =
+      `${key}Container` in theme.schemes
+        ? `var(--md-sys-color-${toKebabCase(source)}-container)`
+        : `var(--md-sys-color-${toKebabCase(key)}-container)`
+
+    const onColorContainer =
+      `on${toCapitalize(key)}Container` in theme.schemes
+        ? `var(--md-sys-color-on-${toKebabCase(source)}-container)`
+        : `var(--md-sys-color-on-${toKebabCase(key)}-container)`
+
     return {
       [key]: color,
       [`on${toCapitalize(key)}`]: onColor,
-      [`${key}Container`]: '',
-      [`on${toCapitalize(key)}Container`]: '',
+      [`${key}Container`]: colorContainer,
+      [`on${toCapitalize(key)}Container`]: onColorContainer,
     } as GenerateCustomSchemes<T>
   }
 
