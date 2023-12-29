@@ -15,3 +15,8 @@ declare module '@vue/runtime-core' {
     InRadio: typeof import('interface-ui/components/index')['InRadio']
   }
 }
+
+declare module '@interface-ui/icons/*' {
+  import Icon from '@interface-ui/icons/components/*'
+  export default Icon
+}

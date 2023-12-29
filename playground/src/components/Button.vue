@@ -2,6 +2,8 @@
 import '@core/button/src/index.less'
 import { InButton } from '@core'
 import { ref } from 'vue'
+import Delete from '@interface-ui/icons/DeleteFilled'
+import Save from '@interface-ui/icons/SaveFilled'
 
 const color = ref('primary')
 </script>
@@ -34,7 +36,8 @@ const color = ref('primary')
     <in-button size="large" variant="outlined">Button</in-button>
     <in-button size="large" variant="text" disabled>Button</in-button>
   </div>
-  <in-button size="large" variant="filled" color="rgb(0, 0, 0)">
-    Button
-  </in-button>
+  <div class="content">
+    <in-button variant="outlined"><delete leading /> Delete </in-button>
+    <in-button> Save <save trailing /></in-button>
+  </div>
 </template>
