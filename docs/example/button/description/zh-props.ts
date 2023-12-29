@@ -34,12 +34,6 @@ const list: PropTableItem[] = [
     type: 'Boolean',
     default: 'false',
   },
-  {
-    name: 'disableElevation',
-    remark: '禁用阴影',
-    type: 'Boolean',
-    default: 'false',
-  },
 ]
 
 export default list

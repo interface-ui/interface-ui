@@ -1,4 +1,4 @@
 <template>
-  <in-button variant="text">text</in-button>
-  <in-button variant="text" disabled>disabled</in-button>
+  <in-button variant="text">Text</in-button>
+  <in-button variant="text" disabled>Disabled</in-button>
 </template>

@@ -1,15 +1,9 @@
 <script lang="ts" setup>
-import * as pkg from 'fusion-ui-iconify'
-const { DeleteFilled, SaveFilled } = pkg
+import Delete from '@interface-ui/icons/DeleteFilled'
+import Save from '@interface-ui/icons/SaveFilled'
 </script>
 
 <template>
-  <in-button variant="outlined">
-    <delete-filled />
-    delete
-  </in-button>
-  <in-button>
-    save
-    <save-filled />
-  </in-button>
+  <in-button variant="outlined"><delete /> Delete </in-button>
+  <in-button> Save <save /></in-button>
 </template>

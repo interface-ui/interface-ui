@@ -1,4 +1,4 @@
 <template>
-  <in-button>filled</in-button>
-  <in-button disabled>disabled</in-button>
+  <in-button>Filled</in-button>
+  <in-button disabled>Disabled</in-button>
 </template>
