@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import Delete from '@interface-ui/icons/DeleteFilled'
-import Save from '@interface-ui/icons/SaveFilled'
+import Delete from '@interface-ui/icons/DeleteFilled.js'
+import Save from '@interface-ui/icons/SaveFilled.js'
 </script>
 
 <template>

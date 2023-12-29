@@ -17,6 +17,6 @@ declare module '@vue/runtime-core' {
 }
 
 declare module '@interface-ui/icons/*' {
-  import Icon from '@interface-ui/icons/components/*'
+  import Icon from '@interface-ui/icons/components/*.js'
   export default Icon
 }
