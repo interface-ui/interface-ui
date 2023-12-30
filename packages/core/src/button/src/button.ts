@@ -48,6 +48,9 @@ export const buttonProps = buildProps({
     type: Boolean,
     default: false,
   },
+  cs: {
+    type: [Object, String],
+  },
 })
 
 export type ButtonProps = ExtractPropTypes<typeof buttonProps>

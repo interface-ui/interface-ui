@@ -12,7 +12,7 @@ import type { ButtonProps } from './button'
 import { buttonHeight } from './button'
 
 const useCss: ComponentStylingHook<ButtonProps> = (props, ns) => {
-  const buttonVars = computed(() => {
+  const buttonTokens = computed(() => {
     const theme = useTheme()
     let dynamicColor = inject(
       BUTTON_GROUP_PROVIDE_KEY,
@@ -45,7 +45,11 @@ const useCss: ComponentStylingHook<ButtonProps> = (props, ns) => {
     `,
   )
 
-  return computed(() => cx(buttonVars.value, buttonSize.value))
+  const styleFromCs = computed(() => (props.cs ? css(props.cs) : ''))
+
+  return computed(() =>
+    cx(buttonTokens.value, buttonSize.value, styleFromCs.value),
+  )
 }
 
 export default useCss
