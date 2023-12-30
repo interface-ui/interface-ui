@@ -1,6 +1,8 @@
 .in-button {
   gap: 8px;
-  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition:
+    background 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   .in-icon,
   .in-icon-material {
     &[leading] {
@@ -19,7 +21,7 @@
     background-color: var(--in-button-surface-container-low);
     box-shadow: var(--md-sys-elevation-level-2);
     @media (any-hover: hover) {
-      &:not([disabled]):hover {
+      &:hover {
         box-shadow: var(--md-sys-elevation-level-4);
         background-color: color-mix(
           in srgb,
@@ -48,7 +50,7 @@
     background-color: var(--in-button-primary);
     color: var(--in-button-on-primary);
     @media (any-hover: hover) {
-      &:not([disabled]):hover {
+      &:hover {
         box-shadow: var(--md-sys-elevation-level-2);
         background-color: color-mix(
           in srgb,
@@ -76,7 +78,7 @@
     background-color: var(--in-button-secondary-container);
     color: var(--md-sys-color-on-secondary-container);
     @media (any-hover: hover) {
-      &:not([disabled]):hover {
+      &:hover {
         box-shadow: var(--md-sys-elevation-level-2);
         background-color: color-mix(
           in srgb,
@@ -105,7 +107,7 @@
     background-color: transparent;
     border: 1px solid var(--in-button-outline);
     @media (any-hover: hover) {
-      &:not([disabled]):hover {
+      &:hover {
         background-color: rgb(
           var(--in-button-primary-rgb) /
             var(--md-sys-state-hover-state-layer-opacity)
@@ -116,6 +118,7 @@
       border-color: var(--in-button-primary);
     }
     &[disabled] {
+      background-color: transparent;
       color: var(--in-sys-color-disabled-level-0) !important;
       border-color: var(--in-sys-color-disabled-level-1) !important;
     }
@@ -124,7 +127,7 @@
     color: var(--in-button-primary);
     background-color: transparent;
     @media (any-hover: hover) {
-      &:not([disabled]):hover {
+      &:hover {
         background-color: rgb(
           var(--in-button-primary-rgb) /
             var(--md-sys-state-hover-state-layer-opacity)
@@ -138,6 +141,7 @@
       );
     }
     &[disabled] {
+      background-color: transparent;
       color: var(--in-sys-color-disabled-level-0) !important;
     }
   }

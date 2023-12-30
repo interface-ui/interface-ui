@@ -5,23 +5,27 @@ import {
   useDynamicRgb,
   useTheme,
 } from '@interface-ui/theme'
-import { computed, inject } from 'vue'
+import type { Ref } from 'vue'
+import { computed, inject, ref } from 'vue'
 import type { ComponentStylingHook } from '@interface-ui/utils'
 import { BUTTON_GROUP_PROVIDE_KEY } from '../../button-group'
 import type { ButtonProps } from './button'
 import { buttonHeight } from './button'
 
 const useCss: ComponentStylingHook<ButtonProps> = (props, ns) => {
+  let dynamicColor = inject<Ref<ReturnType<typeof useDynamicColor>>>(
+    BUTTON_GROUP_PROVIDE_KEY,
+    () => ref(useDynamicColor(props.color)),
+    true,
+  )
+
   const buttonTokens = computed(() => {
     const theme = useTheme()
-    let dynamicColor = inject(
-      BUTTON_GROUP_PROVIDE_KEY,
-      useDynamicColor(props.color),
-    )
-    if (dynamicColor.source !== props.color) {
-      dynamicColor = useDynamicColor(props.color)
+    if (dynamicColor.value?.source !== props.color) {
+      dynamicColor = ref(useDynamicColor(props.color))
     }
-    const { [theme.value.mode]: schemes } = dynamicColor
+
+    const { [theme.value.mode]: schemes } = dynamicColor.value
 
     return css(
       schemes &&
