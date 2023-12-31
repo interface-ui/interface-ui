@@ -1,26 +1,21 @@
 <script lang="ts" setup>
-import * as pkg from 'fusion-ui-iconify'
-const { FingerprintFilled } = pkg
-// import { FingerprintFilled } from 'fusion-ui-iconify'
+import Fingerprint from '@interface-ui/icons/FingerprintFilled'
 </script>
 
 <template>
   <in-icon-button>
-    <fingerprint-filled />
-  </in-icon-button>
-  <in-icon-button color="secondary">
-    <fingerprint-filled />
+    <fingerprint />
   </in-icon-button>
   <in-icon-button color="tertiary">
-    <fingerprint-filled />
+    <fingerprint />
   </in-icon-button>
   <in-icon-button color="error">
-    <fingerprint-filled />
+    <fingerprint />
   </in-icon-button>
   <in-icon-button :color="theme => theme.colors.cyan[400]">
-    <fingerprint-filled />
+    <fingerprint />
   </in-icon-button>
   <in-icon-button color="#2E7D32">
-    <fingerprint-filled />
+    <fingerprint />
   </in-icon-button>
 </template>
