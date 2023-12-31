@@ -26,7 +26,7 @@ lang: zh
 
 ### 形状
 
-还支持所有标准[按钮形状]('./button.md#形状')。
+还支持所有标准[按钮形状](./button.md#形状)。
 <demo col src="../../../example/button-group/shape.vue" Preview="[2-6, 12-16]" />
 
 ### 方向
