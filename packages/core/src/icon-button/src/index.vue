@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { iconSize } from '@interface-ui/constants'
 import { useNamespace } from '@interface-ui/utils'
 import InButtonBase from '../../button-base'
 import InRipple from '../../ripple'
@@ -14,12 +13,7 @@ const cssClass = useCss(props, ns)
 
 <template>
   <in-button-base :class="[ns.b(), ns.m($props.size), cssClass]">
-    <slot
-      v-bind="{
-        size: iconSize[$props.size!],
-        color: $props.color,
-      }"
-    />
+    <slot />
     <in-ripple :color="$props.color" center />
   </in-button-base>
 </template>

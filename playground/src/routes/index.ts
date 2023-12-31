@@ -106,6 +106,11 @@ const routes: RouteRecordRaw[] = [
     name: 'Drawer',
     component: () => import('../components/Drawer.vue'),
   },
+  {
+    path: '/radio',
+    name: 'Radio',
+    component: () => import('../components/Radio.vue'),
+  },
 ]
 
 export default routes

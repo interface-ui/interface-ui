@@ -13,6 +13,7 @@ import type { ButtonProps } from './button'
 import { buttonHeight } from './button'
 
 const useCss: ComponentStylingHook<ButtonProps> = (props, ns) => {
+  const theme = useTheme()
   let dynamicColor = inject<Ref<ReturnType<typeof useDynamicColor>>>(
     BUTTON_GROUP_PROVIDE_KEY,
     () => ref(useDynamicColor(props.color)),
@@ -20,7 +21,6 @@ const useCss: ComponentStylingHook<ButtonProps> = (props, ns) => {
   )
 
   const buttonTokens = computed(() => {
-    const theme = useTheme()
     if (dynamicColor.value?.source !== props.color) {
       dynamicColor = ref(useDynamicColor(props.color))
     }
