@@ -32,6 +32,11 @@ const list: PropTableItem[] = [
     type: 'Boolean',
     default: 'false',
   },
+  {
+    name: 'cs',
+    remark: '覆盖组件默认样式的prop',
+    type: 'TemplateStringsArray',
+  },
 ]
 
 export default list

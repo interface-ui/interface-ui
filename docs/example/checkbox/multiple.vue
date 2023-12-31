@@ -6,27 +6,25 @@ const checkedNames = ref<string[]>([])
 </script>
 
 <template>
-  <div space-y-2>
-    <div>{{ checkedNames }}</div>
-    <div fscw gap-2>
-      <in-form-label
-        v-model="checkedNames"
-        :control="InCheckbox"
-        label="Jack"
-        value="Jack"
-      />
-      <in-form-label
-        v-model="checkedNames"
-        :control="InCheckbox"
-        label="John"
-        value="John"
-      />
-      <in-form-label
-        v-model="checkedNames"
-        :control="InCheckbox"
-        label="Mike"
-        value="Mike"
-      />
-    </div>
-  </div>
+  <in-typography cs="flex-basis: 100%; text-align: center;">
+    {{ checkedNames }}
+  </in-typography>
+  <in-form-label
+    v-model="checkedNames"
+    :control="InCheckbox"
+    label="Jack"
+    value="Jack"
+  />
+  <in-form-label
+    v-model="checkedNames"
+    :control="InCheckbox"
+    label="John"
+    value="John"
+  />
+  <in-form-label
+    v-model="checkedNames"
+    :control="InCheckbox"
+    label="Mike"
+    value="Mike"
+  />
 </template>

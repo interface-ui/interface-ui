@@ -14,67 +14,59 @@ Checkboxes allow the user to select one or more items from a set.
 
 Checkboxes can be used to turn an option on or off.
 
-If you have multiple options appearing in a list, you can preserve space by using checkboxes instead of on/off switches. If you have a single option, avoid using a checkbox and use an on/off switch instead.
+If multiple options appear in a list, you can preserve space by using checkboxes instead of on/off switches. If you have a single option, avoid using a checkbox and an on/off switch instead.
 
 > We retain all `attributes` and `events` of native `input`
 
 ## Usage
 
-### Basic checkboxs
+### Basic checkbox
 
-`Checkbox` is a controlled component, use `v-model` to switch the checked status.
-
-<demo src="../../../example/checkbox/basic.vue" />
+`<Checkbox />` is a controlled component; use `v-model` to switch the checked status.
+<demo src="../../../example/checkbox/basic.vue" preview="[8-11]" />
 
 ### Size
 
-Use the `size` prop or customize the font size of the svg icons to change the size of the checkboxes.
-
-<demo src="../../../example/checkbox/size.vue" />
+Use the `size` prop or customize the font size of the SVG icons to change the size of the checkboxes.
+<demo src="../../../example/checkbox/size.vue" preview="[8-10]" />
 
 ### Color
 
-The `color` prop makes you can customize the color of component.
-
+The `color` prop allows you to customize the color of the component.
 <demo src="../../../example/checkbox/color.vue" />
 
-You can use build-in theme color `'primary' | 'secondary' | 'tertiary' | 'error'`
+You can use build-in `ThemeSchemes` from the theme
 
-Or use a callback funtion to accecc our `theme` object to get the color
+Or use a callback function to access our `theme` object to get the color
 
-Also, simply pass a CSS-Supported color worked
+Also, simply passing a CSS-Supported color worked
 
 ### Icon
 
-Use customize icon by `named slot`.
-
-Use the data from the slot to make the icon more compatible.
-
-<demo src="../../../example/checkbox/icon.vue" />
+<demo src="../../../example/checkbox/icon.vue" preview="[12-15]" />
 
 ### Lable
 
 You can provide a label to the `Checkbox` thanks to the `FormLabel` component.
 
 All the `props` and `attrs` can be passed to `FormLabel` and will be applied to the `Checkbox`
-
 <demo src="../../../example/checkbox/label.vue" />
 
 ### Label Placement
 
-`label-placement` prop provide the ability to change the placement of the label
-
+The `label-placement` prop provides the ability to change the placement of the label
 <demo src="../../../example/checkbox/label-placement.vue" />
 
-## Use with array
+### Use with array
 
-Also, `v-model` can work with `value` to accept `array` to implement the function like `CheckboxGroup`
-
+Also, the `v-model` can work with `value` to accept an `array` to implement the function like `CheckboxGroup`
 <demo src="../../../example/checkbox/multiple.vue" />
+
 
 ## Attributes
 
 <table-block type="propsEn" :data="props" />
+
 
 ## Slots
 
