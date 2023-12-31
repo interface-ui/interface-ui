@@ -3,9 +3,9 @@ import { computed } from 'vue'
 import { useNamespace } from '@interface-ui/utils'
 import { UPDATE_MODEL_EVENT } from '@interface-ui/constants'
 import { InIconButton } from '../../icon-button'
+import InInputBase from '../../input-base'
 import RadioButtonChecked from '../../svg-icon/internal/RadioButtonCheckedFilled.vue'
 import RadioButtonUnchecked from '../../svg-icon/internal/RadioButtonUncheckedFilled.vue'
-import InInputBase from '../../input-base'
 import { radioProps } from './radio'
 
 const props = defineProps(radioProps)
