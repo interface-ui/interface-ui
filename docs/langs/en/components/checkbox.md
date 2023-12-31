@@ -18,6 +18,7 @@ If multiple options appear in a list, you can preserve space by using checkboxes
 
 > We retain all `attributes` and `events` of native `input`
 
+
 ## Usage
 
 ### Basic checkbox
