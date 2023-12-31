@@ -6,7 +6,7 @@ lang: zh
 <script setup lang="ts">
   import props from "../../../example/button/description/zh-props.ts";
   import slots from "../../../example/button/description/zh-slots.ts";
-    import iconButtonProps from "../../../example/icon-button/description/zh-props.ts";
+  import iconButtonProps from "../../../example/icon-button/description/zh-props.ts";
   import iconButtonSlots from "../../../example/icon-button/description/zh-slots.ts";
 </script>
 
@@ -28,7 +28,7 @@ Button 有五种变体：elevated, filled（默认）, tonal, outlined, and text
 
 ### 填充按钮
 
-填充按钮在 [`<Fab />`](./fba.md) 之后具有最大的视觉冲击力，应用于完成流程所需的必要最终操作，如保存、现在加入或确认。
+填充按钮在 [`<Fab />`](./fab.ms) 之后具有最大的视觉冲击力，应用于完成流程所需的必要最终操作，如保存、现在加入或确认。
 <demo src="../../../example/button/filled.vue" preview="[2, 3]" />
 
 ### 填充色调按钮

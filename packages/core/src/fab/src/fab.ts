@@ -4,10 +4,10 @@ import type { AcceptableColor } from '@interface-ui/theme'
 import { buildProps } from '@interface-ui/utils'
 import type { ExtractPropTypes, PropType } from 'vue'
 
-export const fbaVariants = ['circle', 'extended'] as const
-export type FbaVariants = (typeof fbaVariants)[number]
+export const fabVariants = ['circle', 'extended'] as const
+export type FbaVariants = (typeof fabVariants)[number]
 
-export const fbaProps = buildProps({
+export const fabProps = buildProps({
   size: {
     type: String as PropType<ComponentSizes>,
     values: componentSizes,
@@ -22,4 +22,4 @@ export const fbaProps = buildProps({
   },
 })
 
-export type FbaProps = ExtractPropTypes<typeof fbaProps>
+export type FabProps = ExtractPropTypes<typeof fabProps>

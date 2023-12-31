@@ -6,39 +6,39 @@ import Palette from '@interface-ui/icons/PaletteOutlined'
 
 <template>
   <div class="content">
-    <in-fba size="small">
+    <in-fab size="small">
       <palette />
-    </in-fba>
-    <in-fba>
+    </in-fab>
+    <in-fab>
       <palette />
-    </in-fba>
-    <in-fba size="large">
+    </in-fab>
+    <in-fab size="large">
       <palette />
-    </in-fba>
+    </in-fab>
   </div>
   <div class="content" style="margin-top: 16px">
-    <in-fba size="small">
+    <in-fab size="small">
       <palette />
       Extended
-    </in-fba>
-    <in-fba>
+    </in-fab>
+    <in-fab>
       <palette />
       Extended
-    </in-fba>
-    <in-fba size="large">
+    </in-fab>
+    <in-fab size="large">
       <palette />
       Extended
-    </in-fba>
+    </in-fab>
   </div>
   <div class="content" style="margin-top: 16px">
-    <in-fba color="infoContainer">
+    <in-fab color="infoContainer">
       <palette />
-    </in-fba>
-    <in-fba>
+    </in-fab>
+    <in-fab>
       <palette />
-    </in-fba>
-    <in-fba color="tertiaryContainer">
+    </in-fab>
+    <in-fab color="tertiaryContainer">
       <palette />
-    </in-fba>
+    </in-fab>
   </div>
 </template>

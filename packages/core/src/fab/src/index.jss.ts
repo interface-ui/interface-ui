@@ -1,7 +1,7 @@
 import { computed } from 'vue'
 import { css, cx, useDynamicColor, useTheme } from '@interface-ui/theme'
 import type { ComponentStylingHook } from '@interface-ui/utils'
-import type { FbaProps } from './fba'
+import type { FbaProps } from './f'
 
 const useCss: ComponentStylingHook<FbaProps> = (props, ns) => {
   const theme = useTheme()
