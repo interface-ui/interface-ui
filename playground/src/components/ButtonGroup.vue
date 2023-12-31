@@ -4,10 +4,19 @@ import '@core/button-group/src/index.less'
 import { InButton, InButtonGroup } from '@core'
 import { ref } from 'vue'
 
-const color = ref('tertiary')
+const color = ref('error')
+const color2 = ref('info')
 </script>
 
 <template>
+  <div class="content">
+    <in-button-group variant="elevated" color="info">
+      <in-button>Info Color</in-button>
+      <in-button :color="color2" @click="color2 = 'error'">
+        Click to Error
+      </in-button>
+    </in-button-group>
+  </div>
   <div class="content">
     <in-button-group
       variant="elevated"

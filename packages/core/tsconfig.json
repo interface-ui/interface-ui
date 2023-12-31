@@ -6,12 +6,7 @@
     "outDir": "es",
     "rootDir": "src",
     "declaration": true,
-    "emitDeclarationOnly": true,
-    "paths": {
-      "@interface-ui/theme": ["../theme/src/index.ts"],
-      "@interface-ui/constants": ["../constants/src/index.ts"],
-      "@interface-ui/utils": ["../utils/src/index.ts"]
-    }
+    "emitDeclarationOnly": true
   },
   "references": [{ "path": "./tsconfig.build.json" }],
   "include": ["src/**/*"],
