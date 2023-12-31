@@ -7,7 +7,7 @@ import useCss from './index.jss'
 
 const props = defineProps(fbaProps)
 const ns = useNamespace('fba')
-const cssClass = useCss(props)
+const cssClass = useCss(props, ns)
 </script>
 
 <template>

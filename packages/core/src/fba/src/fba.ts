@@ -17,6 +17,9 @@ export const fbaProps = buildProps({
     type: [String, Function] as PropType<AcceptableColor>,
     default: 'primaryContainer',
   },
+  cs: {
+    type: [Object, String],
+  },
 })
 
 export type FbaProps = ExtractPropTypes<typeof fbaProps>
