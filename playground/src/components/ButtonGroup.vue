@@ -1,38 +1,172 @@
 <script lang="ts" setup>
-import { InButton, InButtonGroup } from '@interface-ui/core'
+import '@core/button/src/index.less'
+import '@core/button-group/src/index.less'
+import { InButton, InButtonGroup } from '@core'
+import { ref } from 'vue'
+
+const color = ref('tertiary')
 </script>
 
 <template>
   <div class="content">
-    <in-button-group variant="outlined" size="small">
-      <in-button>one</in-button>
-      <in-button>two</in-button>
-      <in-button>three</in-button>
+    <in-button-group
+      variant="elevated"
+      :color="theme => theme.colors.green[400]"
+    >
+      <in-button>One</in-button>
+      <in-button :color="color">Two</in-button>
+      <in-button>Three</in-button>
     </in-button-group>
+    <in-button-group variant="elevated" color="tertiary" disabled>
+      <in-button>One</in-button>
+      <in-button>Two</in-button>
+      <in-button>Three</in-button>
+    </in-button-group>
+  </div>
+  <div class="content">
+    <in-button-group variant="filled">
+      <in-button @click="color = 'error'">One</in-button>
+      <in-button>Two</in-button>
+      <in-button>Three</in-button>
+    </in-button-group>
+    <in-button-group variant="filled" disabled>
+      <in-button>One</in-button>
+      <in-button>Two</in-button>
+      <in-button>Three</in-button>
+    </in-button-group>
+  </div>
+  <div class="content">
+    <in-button-group variant="tonal">
+      <in-button>One</in-button>
+      <in-button>Two</in-button>
+      <in-button>Three</in-button>
+    </in-button-group>
+    <in-button-group variant="tonal" disabled>
+      <in-button>One</in-button>
+      <in-button>Two</in-button>
+      <in-button>Three</in-button>
+    </in-button-group>
+  </div>
+  <div class="content">
     <in-button-group variant="outlined" color="tertiary">
-      <in-button>one</in-button>
-      <in-button>two</in-button>
-      <in-button>three</in-button>
+      <in-button>One</in-button>
+      <in-button>Two</in-button>
+      <in-button>Three</in-button>
     </in-button-group>
-    <in-button-group variant="outlined" size="large">
-      <in-button>one</in-button>
-      <in-button>two</in-button>
-      <in-button>three</in-button>
+    <in-button-group variant="outlined" color="tertiary" disabled>
+      <in-button>One</in-button>
+      <in-button>Two</in-button>
+      <in-button>Three</in-button>
     </in-button-group>
   </div>
-  <div fscw gap-2>
-    <in-button variant="text" size="small">Small</in-button>
-    <in-button variant="text" size="medium">Medium</in-button>
-    <in-button variant="text" size="large">Large</in-button>
+  <div class="content">
+    <in-button-group variant="text">
+      <in-button>One</in-button>
+      <in-button>Two</in-button>
+      <in-button>Three</in-button>
+    </in-button-group>
+    <in-button-group variant="text" disabled>
+      <in-button>One</in-button>
+      <in-button>Two</in-button>
+      <in-button>Three</in-button>
+    </in-button-group>
   </div>
-  <div fscw gap-2>
-    <in-button size="small">Small</in-button>
-    <in-button size="medium">Medium</in-button>
-    <in-button size="large">Large</in-button>
+
+  <div class="content">
+    <in-button-group
+      orientation="vertical"
+      shape="rounded"
+      variant="elevated"
+      color="tertiary"
+    >
+      <in-button>One</in-button>
+      <in-button>Two</in-button>
+      <in-button>Three</in-button>
+    </in-button-group>
+    <in-button-group
+      orientation="vertical"
+      shape="rounded"
+      variant="elevated"
+      color="tertiary"
+      disabled
+    >
+      <in-button>One</in-button>
+      <in-button>Two</in-button>
+      <in-button>Three</in-button>
+    </in-button-group>
   </div>
-  <div fscw gap-2>
-    <in-button variant="outlined" size="small">Small</in-button>
-    <in-button variant="outlined" size="medium">Medium</in-button>
-    <in-button variant="outlined" size="large">Large</in-button>
+  <div class="content">
+    <in-button-group orientation="vertical" shape="rounded" variant="filled">
+      <in-button>One</in-button>
+      <in-button>Two</in-button>
+      <in-button>Three</in-button>
+    </in-button-group>
+    <in-button-group
+      orientation="vertical"
+      shape="rounded"
+      variant="filled"
+      disabled
+    >
+      <in-button>One</in-button>
+      <in-button>Two</in-button>
+      <in-button>Three</in-button>
+    </in-button-group>
+  </div>
+  <div class="content">
+    <in-button-group orientation="vertical" shape="rounded" variant="tonal">
+      <in-button>One</in-button>
+      <in-button>Two</in-button>
+      <in-button>Three</in-button>
+    </in-button-group>
+    <in-button-group
+      orientation="vertical"
+      shape="rounded"
+      variant="tonal"
+      disabled
+    >
+      <in-button>One</in-button>
+      <in-button>Two</in-button>
+      <in-button>Three</in-button>
+    </in-button-group>
+  </div>
+  <div class="content">
+    <in-button-group
+      orientation="vertical"
+      shape="rounded"
+      variant="outlined"
+      color="tertiary"
+    >
+      <in-button>One</in-button>
+      <in-button>Two</in-button>
+      <in-button>Three</in-button>
+    </in-button-group>
+    <in-button-group
+      orientation="vertical"
+      shape="rounded"
+      variant="outlined"
+      color="tertiary"
+      disabled
+    >
+      <in-button>One</in-button>
+      <in-button>Two</in-button>
+      <in-button>Three</in-button>
+    </in-button-group>
+  </div>
+  <div class="content">
+    <in-button-group orientation="vertical" shape="rounded" variant="text">
+      <in-button>One</in-button>
+      <in-button>Two</in-button>
+      <in-button>Three</in-button>
+    </in-button-group>
+    <in-button-group
+      orientation="vertical"
+      shape="rounded"
+      variant="text"
+      disabled
+    >
+      <in-button>One</in-button>
+      <in-button>Two</in-button>
+      <in-button>Three</in-button>
+    </in-button-group>
   </div>
 </template>

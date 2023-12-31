@@ -17,7 +17,7 @@ const color = ref('primary')
     <in-button size="small" variant="text">Button</in-button>
   </div>
   <div class="content">
-    <in-button variant="elevated">Button</in-button>
+    <in-button variant="elevated" disabled>Button</in-button>
     <in-button variant="filled" :color="color">Button</in-button>
     <in-button variant="tonal">Button</in-button>
     <in-button variant="outlined" color="error" @click="color = 'error'">

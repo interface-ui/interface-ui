@@ -1,21 +1,17 @@
 <template>
-  <div space-y-2>
-    <div fscw gap-2 flex-col>
-      <in-button-group variant="outlined" size="small">
-        <in-button>one</in-button>
-        <in-button>two</in-button>
-        <in-button>three</in-button>
-      </in-button-group>
-      <in-button-group variant="outlined" color="tertiary">
-        <in-button>one</in-button>
-        <in-button>two</in-button>
-        <in-button>three</in-button>
-      </in-button-group>
-      <in-button-group variant="outlined" size="large">
-        <in-button>one</in-button>
-        <in-button>two</in-button>
-        <in-button>three</in-button>
-      </in-button-group>
-    </div>
-  </div>
+  <in-button-group variant="elevated" color="error" size="small">
+    <in-button>Left</in-button>
+    <in-button>Error</in-button>
+    <in-button>Right</in-button>
+  </in-button-group>
+  <in-button-group variant="elevated" :color="theme => theme.colors.green[400]">
+    <in-button>Left</in-button>
+    <in-button>Green</in-button>
+    <in-button>Right</in-button>
+  </in-button-group>
+  <in-button-group variant="elevated" color="info" size="large">
+    <in-button>Left</in-button>
+    <in-button>Info</in-button>
+    <in-button>Right</in-button>
+  </in-button-group>
 </template>
