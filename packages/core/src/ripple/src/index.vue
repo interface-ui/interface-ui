@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import {
+  computed,
   getCurrentInstance,
   onMounted,
   onUnmounted,
@@ -7,7 +8,7 @@ import {
   watchEffect,
 } from 'vue'
 import { addUnit, useNamespace } from '@interface-ui/utils'
-import { useColor } from '@interface-ui/theme'
+import { useDynamicColor, useTheme } from '@interface-ui/theme'
 import type { RippleStyle } from './ripple'
 import { rippleProps } from './ripple'
 
@@ -18,7 +19,11 @@ const ns = useNamespace('ripple')
 let bounce: NodeJS.Timeout | null = null
 let listener: EventListener | null = null
 
-const $color = useColor(props, 'color')[0].value!
+const theme = useTheme()
+const $color = computed<string>(() => {
+  const { [theme.value.mode]: schemes } = useDynamicColor(props.color)
+  return schemes?.primary
+})
 const addRipple = (event: MouseEvent) => {
   const target = event.currentTarget as HTMLElement
   const rect = target.getBoundingClientRect()

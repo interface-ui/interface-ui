@@ -1,9 +1,6 @@
-<script>
+<script lang="ts" setup>
 import InSvgIcon from '../src'
-export default {
-  name: 'CheckBoxFilled',
-  components: { InSvgIcon },
-}
+defineOptions({ name: 'CheckBoxFilled' })
 </script>
 
 <template>

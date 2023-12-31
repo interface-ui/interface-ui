@@ -1,9 +1,6 @@
-<script>
+<script lang="ts" setup>
 import InSvgIcon from '../src'
-export default {
-  name: 'RadioButtonCheckedFilled',
-  components: { InSvgIcon },
-}
+defineOptions({ name: 'RadioButtonCheckedFilled' })
 </script>
 
 <template>

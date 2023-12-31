@@ -1,9 +1,6 @@
-<script>
+<script lang="ts" setup>
 import InSvgIcon from '../src'
-export default {
-  name: 'CloseFilled',
-  components: { InSvgIcon },
-}
+defineOptions({ name: 'CloseFilled' })
 </script>
 
 <template>

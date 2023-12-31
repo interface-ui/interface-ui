@@ -6,6 +6,8 @@ lang: zh
 <script setup lang="ts">
   import props from "../../../example/button/description/zh-props.ts";
   import slots from "../../../example/button/description/zh-slots.ts";
+  import iconButtonProps from "../../../example/icon-button/description/zh-props.ts";
+  import iconButtonSlots from "../../../example/icon-button/description/zh-slots.ts";
 </script>
 
 # Button 按钮
@@ -26,7 +28,7 @@ Button 有五种变体：elevated, filled（默认）, tonal, outlined, and text
 
 ### 填充按钮
 
-填充按钮在 [`<Fab />`](./fba.md) 之后具有最大的视觉冲击力，应用于完成流程所需的必要最终操作，如保存、现在加入或确认。
+填充按钮在 [`<Fab />`](./fab.ms) 之后具有最大的视觉冲击力，应用于完成流程所需的必要最终操作，如保存、现在加入或确认。
 <demo src="../../../example/button/filled.vue" preview="[2, 3]" />
 
 ### 填充色调按钮
@@ -72,3 +74,28 @@ Button 有五种变体：elevated, filled（默认）, tonal, outlined, and text
 ## 插槽
 
 <table-block type="slotsZh" :data="slots" />
+
+
+## 图标按钮
+
+图标也适用于允许选择或取消选择单个选项的切换按钮，例如向项目添加或删除星号。
+<demo src="../../../example/icon-button/basic.vue" preview="[6-11]" />
+
+### 尺寸
+
+提供三种尺寸：small、medium（默认）和 large
+<demo src="../../../example/icon-button/size.vue" preview="[6-14]" />
+
+### 颜色
+
+<demo src="../../../example/icon-button/color.vue" />
+
+
+## 属性
+
+<table-block type="propsEn" :data="iconButtonProps" />
+
+
+## 插槽
+
+<table-block type="slotsEn" :data="iconButtonSlots" />

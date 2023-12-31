@@ -1,24 +1,20 @@
 <script lang="ts" setup>
-import { ref } from 'vue'
-import * as pkg from 'fusion-ui-iconify'
-const { BedtimeFilled, BedtimeOutlined, StarFilled, StarOutlineFilled } = pkg
-// import {
-//   BedtimeFilled,
-//   BedtimeOutlined,
-//   StarFilled,
-//   StarOutlineFilled,
-// } from 'fusion-ui-iconify'
+import { reactive } from 'vue'
+import Star from '@interface-ui/icons/StarFilled.js'
+import StarOutline from '@interface-ui/icons/StarOutlineFilled.js'
+import Bedtime from '@interface-ui/icons/BedtimeFilled.js'
+import BedtimeOutlined from '@interface-ui/icons/BedtimeOutlined.js'
 
-const checked = ref<boolean>(false)
+const checked = reactive<boolean[]>([false, false])
 </script>
 
 <template>
-  <in-checkbox v-model="checked" color="#6366f1">
-    <star-filled v-show="checked" />
-    <star-outline-filled v-show="!checked" />
+  <in-checkbox v-model="checked[0]" color="#6366f1">
+    <star v-show="checked[0]" />
+    <star-outline v-show="!checked[0]" />
   </in-checkbox>
-  <in-checkbox v-model="checked" color="#f59e0b">
-    <bedtime-filled v-show="checked" />
-    <bedtime-outlined v-show="!checked" />
+  <in-checkbox v-model="checked[1]" :color="theme => theme.colors.yellow[900]">
+    <bedtime v-show="checked[1]" />
+    <bedtime-outlined v-show="!checked[1]" />
   </in-checkbox>
 </template>

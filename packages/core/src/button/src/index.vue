@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import { useNamespace } from '@interface-ui/utils'
-import { iconSize } from '@interface-ui/constants'
 import InButtonBase from '../../button-base'
 import InRipple from '../../ripple'
 import { buttonProps, textMapping } from './button'
@@ -22,7 +21,7 @@ const cssClass = useCss(props, ns)
       cssClass,
     ]"
   >
-    <slot v-bind="{ size: iconSize[$props.size!] }" />
+    <slot />
     <in-ripple
       v-if="!$props.disableRipple"
       :color="$props.variant === 'filled' ? undefined : $props.color"

@@ -1,18 +1,13 @@
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { reactive } from 'vue'
 
-const checked = ref<boolean>(false)
+const checked = reactive<boolean[]>([false, false, false, false, false])
 </script>
 
 <template>
-  <div space-y-2>
-    <div fscw gap-2>
-      <in-checkbox v-model="checked" />
-      <in-checkbox v-model="checked" color="secondary" />
-      <in-checkbox v-model="checked" color="tertiary" />
-      <in-checkbox v-model="checked" color="error" />
-      <in-checkbox v-model="checked" :color="theme => theme.colors.cyan[400]" />
-      <in-checkbox v-model="checked" color="#2E7D32" />
-    </div>
-  </div>
+  <in-checkbox v-model="checked[0]" />
+  <in-checkbox v-model="checked[1]" color="tertiary" />
+  <in-checkbox v-model="checked[2]" color="error" />
+  <in-checkbox v-model="checked[3]" :color="theme => theme.colors.cyan[400]" />
+  <in-checkbox v-model="checked[4]" color="#2E7D32" />
 </template>

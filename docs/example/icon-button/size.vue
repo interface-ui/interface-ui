@@ -1,17 +1,15 @@
 <script lang="ts" setup>
-import * as pkg from 'fusion-ui-iconify'
-const { DeleteFilled } = pkg
-// import { DeleteFilled } from 'fusion-ui-iconify'
+import Delete from '@interface-ui/icons/DeleteFilled.js'
 </script>
 
 <template>
   <in-icon-button size="small">
-    <delete-filled />
+    <delete />
   </in-icon-button>
   <in-icon-button>
-    <delete-filled />
+    <delete />
   </in-icon-button>
   <in-icon-button size="large">
-    <delete-filled />
+    <delete />
   </in-icon-button>
 </template>

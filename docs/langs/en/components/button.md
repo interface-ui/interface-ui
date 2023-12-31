@@ -6,6 +6,8 @@ lang: en-US
 <script setup lang="ts">
   import props from "../../../example/button/description/en-props.ts";
   import slots from "../../../example/button/description/en-slots.ts";
+  import iconButtonProps from "../../../example/icon-button/description/en-props.ts";
+  import iconButtonSlots from "../../../example/icon-button/description/en-slots.ts";
 </script>
 
 # Button
@@ -80,12 +82,12 @@ Button with icon and label. The `leading` and `trailing` attributes help to opti
 ## Icon Button
 
 Icons are also appropriate for toggle buttons that allow a single choice to be selected or deselected, such as adding or removing a star to an item.
-<demo src="../../../example/icon-button/basic.vue" />
+<demo src="../../../example/icon-button/basic.vue" preview="[6-11]" />
 
 ### Size
 
 There are three sizes provided: small, medium (default), and large
-<demo src="../../../example/icon-button/size.vue" />
+<demo src="../../../example/icon-button/size.vue" preview="[6-14]" />
 
 ### color
 
@@ -94,8 +96,8 @@ There are three sizes provided: small, medium (default), and large
 
 ## Attributes
 
-<table-block type="propsEn" :data="props" />
+<table-block type="propsEn" :data="iconButtonProps" />
 
 ## Slots
 
-<table-block type="slotsEn" :data="slots" />
+<table-block type="slotsEn" :data="iconButtonSlots" />

@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import { computed, useAttrs } from 'vue'
-import { UPDATE_MODEL_EVENT } from '@interface-ui/constants'
 import { useNamespace } from '@interface-ui/utils'
 import InIconButton from '../../icon-button'
 import InInputBase from '../../input-base'
@@ -8,21 +7,11 @@ import { checkboxProps } from '../src/checkbox'
 import CheckBox from '../../svg-icon/internal/CheckBoxFilled.vue'
 import CheckBoxOutlineBlank from '../../svg-icon/internal/CheckBoxOutlineBlankFilled.vue'
 
-const props = defineProps(checkboxProps)
-const emit = defineEmits<{
-  (e: 'update:modelValue', v: boolean | string[]): void
-}>()
+defineProps(checkboxProps)
 const ns = useNamespace('checkbox')
 const attrs = useAttrs()
+const checked = defineModel()
 
-const checked = computed<boolean | string[]>({
-  get() {
-    return props.modelValue as any
-  },
-  set(newVal) {
-    emit(UPDATE_MODEL_EVENT, newVal)
-  },
-})
 const showCheckedIcon = computed<boolean>(() => {
   if (typeof checked.value === 'boolean') {
     return checked.value
@@ -34,21 +23,12 @@ const showCheckedIcon = computed<boolean>(() => {
 
 <template>
   <in-icon-button
-    v-slot="icon"
     component="span"
-    v-bind="{
-      color: $props.color,
-      size: $props.size,
-      class: [ns.b(), ns.m(props.size)],
-    }"
+    :color="$props.color"
+    :size="$props.size"
+    :class="[ns.b(), ns.m($props.size)]"
   >
-    <slot
-      v-bind="{
-        checked,
-        size: icon.size,
-        class: ['in-icon', ns.e('icon')],
-      }"
-    >
+    <slot>
       <check-box v-if="showCheckedIcon" />
       <check-box-outline-blank v-else />
     </slot>
@@ -62,5 +42,4 @@ const showCheckedIcon = computed<boolean>(() => {
     />
   </in-icon-button>
 </template>
-./checkbox ./checkbox
-./checkbox
+./checkbox ./checkbox ./checkbox

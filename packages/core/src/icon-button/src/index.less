@@ -4,16 +4,17 @@
   padding: 8px;
   border-radius: 50%;
   height: fit-content;
-  color: var(--in-icon-button-color);
-  &[disabled] {
-    color: var(--in-sys-color-disabled-level-0);
-  }
+  color: var(--in-icon-button-primary);
   @media (any-hover: hover) {
-    &:not([disabled]):hover {
+    &:hover {
       background-color: rgb(
-        var(--in-icon-button-color-rgb) /
+        var(--in-icon-button-primary-rgb) /
           var(--md-sys-state-hover-state-layer-opacity)
       );
     }
+  }
+  &[disabled] {
+    background-color: transparent;
+    color: var(--in-sys-color-disabled-level-0);
   }
 }

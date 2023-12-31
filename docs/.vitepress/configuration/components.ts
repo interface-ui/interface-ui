@@ -11,8 +11,8 @@ export const enComponents = [
         link: '/langs/en/components/button-group',
       },
       {
-        text: 'FBA',
-        link: '/langs/en/components/fba',
+        text: 'FAB',
+        link: '/langs/en/components/fab',
       },
       {
         text: 'Icons',
@@ -143,7 +143,7 @@ export const zhComponents = [
         link: '/langs/zh/components/button-group',
       },
       {
-        text: 'FBA 悬浮按钮',
+        text: 'FAB 悬浮按钮',
         link: '/langs/zh/components/fba',
       },
       {

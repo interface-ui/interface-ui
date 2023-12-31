@@ -2,12 +2,12 @@
 import { useNamespace } from '@interface-ui/utils'
 import InButtonBase from '../../button-base'
 import InRipple from '../../ripple'
-import { fbaProps } from './fba'
+import { fabProps } from './fab'
 import useCss from './index.jss'
 
-const props = defineProps(fbaProps)
-const ns = useNamespace('fba')
-const cssClass = useCss(props)
+const props = defineProps(fabProps)
+const ns = useNamespace('fab')
+const cssClass = useCss(props, ns)
 </script>
 
 <template>
@@ -18,3 +18,4 @@ const cssClass = useCss(props)
     <in-ripple color="var(--in-sys-color-switch-reverse)" />
   </in-button-base>
 </template>
+./f

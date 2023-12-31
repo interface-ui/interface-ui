@@ -1,4 +1,3 @@
-import { shallowReactive } from 'vue'
 import { useTheme } from './use-theme'
 import { ComponentSchemes } from '@/types'
 import type { AcceptableColor } from '@/types'
@@ -13,18 +12,18 @@ import type { ThemeMode } from '@/mode'
  */
 export const useDynamicColor = (
   color: AcceptableColor,
-): Record<ThemeMode, ComponentSchemes> & { source: string } => {
+): Record<ThemeMode, Omit<ComponentSchemes, 'props'>> & { source: string } => {
   if (!color) {
-    return shallowReactive({ light: null, dark: null, source: color } as any)
+    return { light: null, dark: null, source: color } as any
   }
 
   const theme = useTheme()
   const computedColor = typeof color === 'function' ? color(theme.value) : color
-  return shallowReactive({
+  return {
     source: computedColor,
     light: ComponentSchemes.light(computedColor, theme.value),
     dark: ComponentSchemes.dark(computedColor, theme.value),
-  })
+  }
 }
 
 /**
