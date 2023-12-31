@@ -3,17 +3,18 @@ import '@core/button/src/index.less'
 import '@core/button-group/src/index.less'
 import { InButton, InButtonGroup } from '@core'
 import { ref } from 'vue'
-import { useTheme } from '@interface-ui/theme'
 
 const color = ref('tertiary')
-const theme = useTheme()
 </script>
 
 <template>
   <div class="content">
-    <in-button-group variant="elevated" :color="color">
+    <in-button-group
+      variant="elevated"
+      :color="theme => theme.colors.green[400]"
+    >
       <in-button>One</in-button>
-      <in-button color="error">Two</in-button>
+      <in-button :color="color">Two</in-button>
       <in-button>Three</in-button>
     </in-button-group>
     <in-button-group variant="elevated" color="tertiary" disabled>
@@ -24,7 +25,7 @@ const theme = useTheme()
   </div>
   <div class="content">
     <in-button-group variant="filled">
-      <in-button @click="color = theme.colors.yellow[400]">One</in-button>
+      <in-button @click="color = 'error'">One</in-button>
       <in-button>Two</in-button>
       <in-button>Three</in-button>
     </in-button-group>

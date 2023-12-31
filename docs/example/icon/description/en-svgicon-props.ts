@@ -15,7 +15,7 @@ const list: PropTableItem[] = [
   },
   {
     name: 'cs',
-    remark: 'Prop to overwite the default style',
+    remark: 'Prop to overwrite the default style',
     type: 'TemplateStringsArray',
   },
   {

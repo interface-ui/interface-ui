@@ -6,6 +6,13 @@ import useCss from './index.jss'
 export default defineComponent({
   props: buttonGroupProps,
   setup(props, { slots, attrs }) {
+    const slotVNodes = slots.default?.() ?? []
+    if (!slotVNodes.every((VNode: any) => VNode.type.name === 'InButton')) {
+      throw new Error(
+        '<InButtonGroup /> only accepts <InButton /> as children.',
+      )
+    }
+
     const ns = useNamespace('button-group')
     const { orientation: _, ...buttonProps } = toRefs(props)
     const cssStyles = useCss(props, ns)

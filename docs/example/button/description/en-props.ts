@@ -34,6 +34,11 @@ const list: PropTableItem[] = [
     type: 'Boolean',
     default: 'false',
   },
+  {
+    name: 'cs',
+    remark: 'Prop to overwrite the default style',
+    type: 'TemplateStringsArray',
+  },
 ]
 
 export default list

@@ -35,6 +35,13 @@ const list: PropTableItem[] = [
     default: 'false',
   },
   {
+    name: 'orientation',
+    remark: '按钮的排列方向',
+    type: 'Enum',
+    optional: ['horizontal', 'vertical'],
+    default: 'horizontal',
+  },
+  {
     name: 'cs',
     remark: '覆盖组件默认样式的prop',
     type: 'TemplateStringsArray',

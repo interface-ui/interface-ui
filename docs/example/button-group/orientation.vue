@@ -1,21 +1,27 @@
 <template>
-  <div space-y-2>
-    <div fscw gap-2>
-      <in-button-group variant="outlined" orientation="vertical">
-        <in-button>one</in-button>
-        <in-button>two</in-button>
-        <in-button>three</in-button>
-      </in-button-group>
-      <in-button-group orientation="vertical">
-        <in-button>one</in-button>
-        <in-button>two</in-button>
-        <in-button>three</in-button>
-      </in-button-group>
-      <in-button-group variant="text" orientation="vertical">
-        <in-button>one</in-button>
-        <in-button>two</in-button>
-        <in-button>three</in-button>
-      </in-button-group>
-    </div>
-  </div>
+  <in-button-group shape="rounded" variant="elevated" orientation="vertical">
+    <in-button>One</in-button>
+    <in-button>Two</in-button>
+    <in-button>Three</in-button>
+  </in-button-group>
+  <in-button-group shape="rounded" variant="filled" orientation="vertical">
+    <in-button>One</in-button>
+    <in-button>Two</in-button>
+    <in-button>Three</in-button>
+  </in-button-group>
+  <in-button-group shape="rounded" variant="tonal" orientation="vertical">
+    <in-button>One</in-button>
+    <in-button>Two</in-button>
+    <in-button>Three</in-button>
+  </in-button-group>
+  <in-button-group shape="rounded" variant="outlined" orientation="vertical">
+    <in-button>One</in-button>
+    <in-button>Two</in-button>
+    <in-button>Three</in-button>
+  </in-button-group>
+  <in-button-group shape="rounded" variant="text" orientation="vertical">
+    <in-button>One</in-button>
+    <in-button>Two</in-button>
+    <in-button>Three</in-button>
+  </in-button-group>
 </template>
