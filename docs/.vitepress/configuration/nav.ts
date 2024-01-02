@@ -8,6 +8,7 @@ export const nav = {
     { text: 'Guide', items: enGuides },
     { text: 'Components', items: enComponents },
     { text: 'Theme', items: enTheme },
+    { text: 'Playground', link: '/playground', target: '_blank', },
     // {
     //   text: `v${version}`,
     //   items: [
@@ -21,6 +22,7 @@ export const nav = {
   zh: [
     { text: '指南', items: zhGuides },
     { text: '组件', items: zhComponents },
+    { text: '游乐场', link: '/playground', target: '_blank' },
     // {
     //   text: `v${version}`,
     //   items: [
