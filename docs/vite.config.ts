@@ -4,5 +4,11 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 export default defineConfig(() => {
   return {
     plugins: [vueJsx()],
+    ssr: {
+      noExternal: [
+        '@vue/repl'
+      ]
+    }
+
   }
 })
