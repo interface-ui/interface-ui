@@ -14,12 +14,12 @@ const useCss: ComponentStylingHook<
   ButtonGroupProps,
   { cssClass: string; dynamicColor: Ref<ReturnType<typeof useDynamicColor>> }
 > = (props, ns) => {
+  const theme = useTheme()
   const dynamicColor = computed<ReturnType<typeof useDynamicColor>>(() => {
     return useDynamicColor(props.color)
   })
 
   const buttonGroupTokens = computed(() => {
-    const theme = useTheme()
     const { [theme.value.mode]: schemes } = dynamicColor.value
 
     return css(
@@ -36,14 +36,10 @@ const useCss: ComponentStylingHook<
 
   const styleFromCs = computed(() => (props.cs ? css(props.cs) : ''))
 
-  return computed(() => {
-    // console.log(cx(buttonGroupTokens.value, styleFromCs.value))
-
-    return {
-      cssClass: cx(buttonGroupTokens.value, styleFromCs.value),
-      dynamicColor,
-    }
-  })
+  return computed(() => ({
+    cssClass: cx(buttonGroupTokens.value, styleFromCs.value),
+    dynamicColor,
+  }))
 }
 
 export default useCss

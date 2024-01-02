@@ -1,18 +1,19 @@
 import { computed } from 'vue'
 import { css, cx, useDynamicColor, useTheme } from '@interface-ui/theme'
 import type { ComponentStylingHook } from '@interface-ui/utils'
-import type { FbaProps } from './f'
+import type { FabProps } from './fab'
 
-const useCss: ComponentStylingHook<FbaProps> = (props, ns) => {
+const useCss: ComponentStylingHook<FabProps> = (props, ns) => {
   const theme = useTheme()
+  const dynamicColor = computed(() => useDynamicColor(props.color))
   const fbaTokens = computed(() => {
-    const { [theme.value.mode]: schemes } = useDynamicColor(props.color)
+    const { [theme.value.mode]: schemes } = dynamicColor.value
 
     return css(
       schemes &&
         ns!.cssVarBlock({
-          primary: schemes.primary,
-          onPrimary: schemes.onPrimary,
+          primaryContainer: schemes.primaryContainer,
+          onPrimaryContainer: schemes.onPrimaryContainer,
         }),
     )
   })

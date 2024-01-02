@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import '@core/fba/src/index.less' // 开发调试的样式
-import { InFba } from '@core'
+import '@core/fab/src/index.less'
+import { InFab } from '@core'
 import Palette from '@interface-ui/icons/PaletteOutlined'
 </script>
 
