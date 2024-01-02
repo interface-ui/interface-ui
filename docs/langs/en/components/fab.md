@@ -27,7 +27,7 @@ The FAB can be aligned left, center, or right. It can be positioned above the na
 ### Size
 
 The size of `<Fab />` can be small, medium (default), and large. Use the `size` prop to change it.
-<demo src="../../../example/fab/size.vue" preview="[7-15]" />
+<demo src="../../../example/fab/size.vue" preview="[6-14]" />
 
 ### Color
 

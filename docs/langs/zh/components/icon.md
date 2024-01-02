@@ -12,9 +12,10 @@ lang: zh
 
 Interface UI 图标遵循[Material Symbols and Icons](https://fonts.google.com/icons?icon.set=Material+Icons)指南构建图标系统。
 
-Interface UI 提供两种构建图标的方式：
-1. 使用[Interface UI Iconify](https://www.npmjs.com/package/fusion-ui-iconify)库作为Vue组件（SVG图标）
+Interface UI 提供三种构建图标的方式：
+1. 使用[@interface-ui/icons](https://www.npmjs.com/package/@interface-ui/icons)库作为Vue组件（SVG图标）
 2. 使用[SvgIcon](#svgicon)组件，这是自定义SVG图标的Vue组件包装器。
+3. 使用其他的图标库
 
 ## Interface UI Iconify
 
@@ -22,35 +23,54 @@ Interface UI 提供两种构建图标的方式：
 
 我们将所有这些图标转化为单独的组件（每种样式有2.1k+个，总共有1w+个图标）
 
+[这里](https://interface-ui.github.io/interface-ui-icons/)能找到我们提供的所有图标。
+
+
 ### 安装
 
-```shell
-npm install fusion-ui-iconify
+::: code-group
+```shell [npm]
+npm i @interface-ui/icons
 ```
+
+```shell [yarn]
+yarn add @interface-ui/icons
+```
+
+```shell [pnpm]
+pnpm add @interface-ui/icons
+```
+:::
 
 ### 使用
 
-如果您未与 `Interface UI` 一起使用此库，则应导入样式文件。
+我们提供以下两种方式来导入图标：
 
-否则，您无需进行更多配置。`Interface UI` 中的组件已经完成了对其的适配。
+* 方法1:
+  ```js
+  import { DeleteFilled, SaveFilled } from '@interface-ui/icons'
+  ```
+* 方法2:
+  ```js
+  import DeleteFilled from '@interface-ui/icons/DeleteFilled'
+  import SaveFilled from '@interface-ui/icons/SaveFilled'
+  ```
 
-```js
-// main.js
-import 'fusion-ui-iconify/dist/style.css'
-```
+::: warning
+**选项 1** 对捆绑包大小不友好。
 
-使用以下方式导入图标
-```js
-import { DeleteFilled, SaveFilled } from 'fusion-ui-iconify'
-```
+我们建议使用**第二个选项**。
 
-每个Material图标还具有“style”：Filled，Outlined，Rounded，Two-tone和Sharp。要导入带有默认主题以外的主题的图标组件，请在图标名称后附加样式名称。
+在使用第二种方法之前，请确保遵循**最小化捆绑包大小**指南。
+:::
 
-- Filled样式导出为`fusion-ui-iconify/dist/component/material-icons/DeleteFilled`,
-- Outlined样式导出为`fusion-ui-iconify/dist/component/material-icons/DeleteOutlined`,
-- Rounded样式导出为`fusion-ui-iconify/dist/component/material-icons/DeleteRounded`,
-- Twotone样式导出为`fusion-ui-iconify/dist/component/material-icons/DeleteTwoTone`,
-- Sharp样式导出为`fusion-ui-iconify/dist/component/material-icons/DeleteSharp`。
+每个Material图标还具有“style”：Filled，Outlined，Rounded，Two-tone和Sharp。要导入图标组件，请在图标名称后附加样式名称。
+
+- Filled样式导出为 `@interface-ui/icons/DeleteFilled`,
+- Outlined样式导出为 `@interface-ui/icons/DeleteOutlined`,
+- Rounded样式导出为 `@interface-ui/icons/DeleteRounded`,
+- Sharp样式导出为 `@interface-ui/icons/DeleteSharp`,
+- Twotone样式导出为 `@interface-ui/icons/DeleteTwoTone`。
 
 <demo src="../../../example/icon/basic.vue" />
 
@@ -64,30 +84,22 @@ SVG元素应缩放为 `24 x 24像素` 的视口，以便生成的图标可以直
 
 默认情况下，该组件**继承**当前颜色和字体大小。可选地，您可以使用`color`属性和`size`属性来更改其中一个主题颜色。
 
-它支持 `<svg>` 元素作为子元素，因此您可以将您的SVG直接复制粘贴到SvgIcon组件中。
-
+它支持 `<svg>` 元素作为子元素，因此您可以将您的SVG直接复制粘贴到 `<SvgIcon />` 组件中。
 <demo src="../../../example/icon/svgicon.vue" />
 
 ### 颜色
 
-[Interface UI Iconify](https://www.npmjs.com/package/fusion-ui-iconify)中的图标的 `color` 属性不支持 `ThemeSchemes` 和 `ThemeCallback`，因为它是没有任何依赖项构建的。
+[@interface-ui/icons](https://www.npmjs.com/package/@interface-ui/icons)中的图标不支持 `ThemeSchemes` 和 `ThemeCallback`，因为它是没有任何依赖项构建的。
 
-但是❗️❗️❗️您可以使用 `SvgIcon` 的 `component` 属性来启用此功能。
-
-<demo src="../../../example/icon/color.vue" />
+但是❗️❗️❗️您可以使用 `<SvgIcon />` 的 `component` 属性来启用此功能。
+<demo src="../../../example/icon/color.vue" preview="[6-9]" />
 
 ### 大小
 
-`size` 属性接受字符串和数字两种格式。
+直接使用图标上的 `font-size` 来更改大小。
+<demo src="../../../example/icon/size.vue" preview="[6-9]" />
 
-<demo src="../../../example/icon/size.vue" />
 
-## 属性
-
-### Interface UI Iconify
-
-<table-block type="propsZh" :data="iconProps" />
-
-### SvgIcon
+## SvgIcon 属性
 
 <table-block type="propsZh" :data="svgIconProps" />
