@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { nextTick, onMounted, reactive, ref } from 'vue'
 import { Repl, ReplStore } from '@vue/repl'
-import '@vue/repl/style.css'
+// import '@vue/repl/style.css'
 import headers from './header.vue'
 import { APP_CODE, COMPONENT_CODE } from './index'
 
