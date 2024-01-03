@@ -20,7 +20,7 @@ import {
   AddCircleFilled,
   StarsFilled,
   MenuFilled,
-} from 'fusion-ui-iconify'
+} from '@interface-ui/icons'
 import { styled } from '@interface-ui/theme'
 
 const openTemporary = ref(false)

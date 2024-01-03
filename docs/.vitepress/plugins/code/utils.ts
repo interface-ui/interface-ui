@@ -13,7 +13,7 @@ const scriptClientRE = /<\s*script[^>]*\bclient\b[^>]*/
 const getPreviewCodes = (code: string, preview: string): string => {
   const codeArr = code.trim().split('\n')
   const previewCodes: string[] = []
-  const [_, previewLines] = preview.match(/\[([\s\S]+)\]/) ?? []
+    const [_, previewLines] = preview.match(/\[([\s\S]+)\]/) ?? []
   previewLines.split(', ').forEach(lineNumber => {
     if (!isNaN(Number(lineNumber))) {
       previewCodes.push(codeArr[+lineNumber - 1])

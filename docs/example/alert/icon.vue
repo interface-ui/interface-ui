@@ -1,6 +1,9 @@
 <script setup lang="ts">
-import * as pkg from 'fusion-ui-iconify'
-const { HistoryRound, VerifiedRound, AddShoppingCartRound } = pkg
+import {
+  AddShoppingCartRound,
+  HistoryRound,
+  VerifiedRound,
+} from '@interface-ui/icons'
 </script>
 
 <template>

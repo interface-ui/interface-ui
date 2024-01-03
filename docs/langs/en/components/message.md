@@ -26,7 +26,7 @@ Call the `InMessage` method and pass in the `message` parameter.
 
 ## severity
 
-It is used to display `success`, `error`, `warning`, `info`  operation feedback.
+It is used to display `success`, `error`, `warning`, `info` operation feedback.
 
 <demo src="../../../example/message/severity.vue" />
 
@@ -47,7 +47,6 @@ The `customIcon` attribute is used to customize the icon.
 `Duration` The delay for automatic closing of the attribute, in milliseconds, defaults to 2000.
 
 <demo src="../../../example/message/time.vue" />
-
 
 ## Manual shutdown
 

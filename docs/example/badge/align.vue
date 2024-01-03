@@ -3,9 +3,7 @@ import { InRadio } from '@interface-ui/core'
 import { ref } from 'vue'
 import { useTheme } from '@interface-ui/theme'
 
-import * as pkg from 'fusion-ui-iconify'
-const { NotificationsFilled } = pkg
-// import { NotificationsFilled } from 'fusion-ui-iconify'
+import { NotificationsFilled } from '@interface-ui/icons'
 
 const theme = useTheme()
 const xAlign = ref<'left' | 'right'>('right')

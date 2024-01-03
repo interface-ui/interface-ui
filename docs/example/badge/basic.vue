@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import { useTheme } from '@interface-ui/theme'
-import * as pkg from 'fusion-ui-iconify'
-const { NotificationsFilled } = pkg
-// import { NotificationsFilled } from 'fusion-ui-iconify'
+import { NotificationsFilled } from '@interface-ui/icons'
 
 const theme = useTheme()
 </script>

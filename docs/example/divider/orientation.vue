@@ -1,7 +1,14 @@
 <!-- eslint-disable quote-props -->
 <script lang="ts" setup>
 import { styled } from '@interface-ui/theme'
-import * as pkg from 'fusion-ui-iconify'
+
+import {
+  FormatAlignCenterFilled,
+  FormatAlignLeftFilled,
+  FormatAlignRightFilled,
+  FormatBoldFilled,
+  FormatItalicFilled,
+} from '@interface-ui/icons'
 
 const Box = styled('div')({
   display: 'flex',
@@ -17,14 +24,6 @@ const Box = styled('div')({
     fontSize: '24px',
   },
 })
-
-const {
-  FormatAlignLeftFilled,
-  FormatAlignCenterFilled,
-  FormatAlignRightFilled,
-  FormatBoldFilled,
-  FormatItalicFilled,
-} = pkg
 </script>
 
 <template>

@@ -22,24 +22,22 @@ The FAB can be aligned left, center, or right. It can be positioned above the na
 
 ### Basic floating action button
 
-<demo src="../../../example/fab/basic.vue" preview="[7-14]" />
+<demo src="../../../example/fab/basic.vue"  preview="[9-16]" />
 
 ### Size
 
 The size of `<Fab />` can be small, medium (default), and large. Use the `size` prop to change it.
-<demo src="../../../example/fab/size.vue" preview="[6-14]" />
+<demo src="../../../example/fab/size.vue"  preview="[7-15]" />
 
 ### Color
 
 Use `color` to style the `<Fab />` component
-<demo src="../../../example/fab/color.vue" preview="[7-16]" />
-
+<demo src="../../../example/fab/color.vue" preview="[9-18]" />
 
 ## Attributes
 
-<data-table type="props" lang="en" :data="props" />
-
+<table-block type="propsEn" :data="props" />
 
 ## Slots
 
-<data-table type="slots" lang="en" :data="slots" />
+<table-block type="slotsEn" :data="slots" />

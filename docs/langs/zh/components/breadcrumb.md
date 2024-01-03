@@ -19,13 +19,13 @@ lang: zh
 
 分隔符可以接受字符串或组件（SVG 图标）。
 
-<demo src="../../../example/breadcrumb/separator.vue" preview="[8-18]" />
+<demo src="../../../example/breadcrumb/separator.vue" preview="[6-16]" />
 
 ## 下划线
 
 设置 `underline` 属性以为所有链接设置样式。您还可以为特定链接设置它。
 
-<demo src="../../../example/breadcrumb/underline.vue" preview="[2-19]" />
+<demo src="../../../example/breadcrumb/underline.vue" preview="[2-18]" />
 
 ## 折叠面包屑
 
@@ -41,7 +41,7 @@ lang: zh
 
 ## 带图标的链接
 
-<demo src="../../../example/breadcrumb/icon.vue" preview="[8-12]" />
+<demo src="../../../example/breadcrumb/icon.vue"  preview="[6-10]" />
 
 ## 辅助功能
 
@@ -51,9 +51,9 @@ lang: zh
 
 此组件的可访问性依赖于以下因素：
 
-* 链接集合使用有序列表（`<ol>` 元素）进行结构化。
-* 为了防止屏幕阅读器在链接之间的可视分隔符上进行公告，它们被隐藏为 `aria-hidden`。
-* 使用带有 `aria-label` 标签的 nav 元素标识结构为面包屑路径，并将其作为导航地标，以便轻松定位。
+- 链接集合使用有序列表（`<ol>` 元素）进行结构化。
+- 为了防止屏幕阅读器在链接之间的可视分隔符上进行公告，它们被隐藏为 `aria-hidden`。
+- 使用带有 `aria-label` 标签的 nav 元素标识结构为面包屑路径，并将其作为导航地标，以便轻松定位。
 
 ## 属性
 

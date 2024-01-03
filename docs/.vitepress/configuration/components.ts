@@ -144,7 +144,7 @@ export const zhComponents = [
       },
       {
         text: 'FAB 悬浮按钮',
-        link: '/langs/zh/components/fba',
+        link: '/langs/zh/components/fab',
       },
       {
         text: 'Icons 图标',

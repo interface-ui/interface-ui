@@ -1,9 +1,12 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
-import * as pkg from 'fusion-ui-iconify'
 
-const { ContentCopyFilled, ContentCutFilled, ContentPasteFilled, UndoFilled } =
-  pkg
+import {
+  ContentCopyFilled,
+  ContentCutFilled,
+  ContentPasteFilled,
+  UndoFilled,
+} from '@interface-ui/icons'
 const anchor = ref<HTMLElement | MouseEvent | null>(null)
 const handleContextMenu = (e: MouseEvent) => {
   e.preventDefault()

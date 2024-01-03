@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { defineEmits, defineExpose, reactive, ref, watch } from 'vue'
 
+import { DarkModeFilled, LightModeFilled } from '@interface-ui/icons'
+import { InIconButton } from '@interface-ui/core'
 const props = defineProps({
   store: {
     type: Object,
@@ -8,12 +10,27 @@ const props = defineProps({
   },
 })
 
-const emit = defineEmits(['changeUiVersion'])
+const emit = defineEmits(['changeUiVersion', 'changeEidtTheme'])
 
 const previewOptions = reactive({})
-
+const theme = ref(
+  document.documentElement.classList.contains('dark') ? 'dark' : 'light',
+)
 const uiVersion = ref('latest')
 const uiVersions = ref<string[]>([])
+
+const changeTheme = () => {
+  const cls = document.documentElement.classList
+  if (theme.value === 'light') {
+    theme.value = 'dark'
+    cls.add('dark')
+    emit('changeEidtTheme', 'dark')
+  } else {
+    theme.value = 'light'
+    cls.remove('dark')
+    emit('changeEidtTheme', 'light')
+  }
+}
 
 watch(
   uiVersion,
@@ -109,13 +126,13 @@ defineExpose({
       <div class="font-extrabold">InterfaceUi Playground</div>
     </div>
     <div>
-      <label class="playground-label">interface-ui/core: </label>
+      <!-- <label class="playground-label">interface-ui/core: </label>
       <select v-model="uiVersion" class="playground-select">
         <option value="latest">latest</option>
         <option v-for="item in uiVersions" :key="item" :value="item">
           {{ item }}
         </option>
-      </select>
+      </select> -->
       <label class="playground-label">Vue: </label>
       <select
         v-model="vueVersion"
@@ -137,6 +154,10 @@ defineExpose({
           {{ item }}
         </option>
       </select>
+      <in-icon-button class="m-l-10px m-t--5px" @click="changeTheme">
+        <light-mode-filled v-if="theme === 'light'" />
+        <dark-mode-filled v-else />
+      </in-icon-button>
     </div>
   </div>
 </template>
@@ -152,5 +173,36 @@ defineExpose({
   margin-left: 8px;
   appearance: auto;
   border: 1px solid #ccc;
+}
+
+nav {
+  --bg: #fff;
+  --bg-light: #fff;
+  --border: #ddd;
+  --btn: #666;
+  --highlight: #333;
+  --green: #3ca877;
+  --purple: #904cbc;
+  --btn-bg: #eee;
+  color: var(--base);
+  height: var(--nav-height);
+  box-sizing: border-box;
+  padding: 0 1em;
+  background-color: var(--bg);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.33);
+  position: relative;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+}
+.dark nav {
+  --base: #ddd;
+  --bg: #1a1a1a;
+  --bg-light: #242424;
+  --border: #383838;
+  --highlight: #fff;
+  --btn-bg: #333;
+  box-shadow: none;
+  border-bottom: 1px solid var(--border);
 }
 </style>

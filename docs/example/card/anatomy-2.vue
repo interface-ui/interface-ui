@@ -1,7 +1,9 @@
 <script lang="ts" setup>
-import * as pkg from 'fusion-ui-iconify'
-
-const { MoreVertFilled, FavoriteFilled, ShareFilled } = pkg
+import {
+  FavoriteFilled,
+  MoreVertFilled,
+  ShareFilled,
+} from '@interface-ui/icons'
 </script>
 
 <template>

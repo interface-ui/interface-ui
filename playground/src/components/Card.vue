@@ -12,7 +12,11 @@ import {
   InIconButton,
   InActionArea,
 } from '@interface-ui/core'
-import { MoreVertFilled, FavoriteFilled, ShareFilled } from 'fusion-ui-iconify'
+import {
+  MoreVertFilled,
+  FavoriteFilled,
+  ShareFilled,
+} from '@interface-ui/icons'
 </script>
 
 <template>

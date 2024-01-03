@@ -1,9 +1,8 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import * as pkg from 'fusion-ui-iconify'
-// import { AccountCircleFilled } from 'fusion-ui-iconify'
+
 import { styled, useTheme } from '@interface-ui/theme'
-const { AccountCircleFilled } = pkg
+import { AccountCircleFilled } from '@interface-ui/icons'
 
 const value = ref<string>('')
 const theme = useTheme()

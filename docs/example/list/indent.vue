@@ -1,7 +1,5 @@
 <script lang="ts" setup>
-import * as pkg from 'fusion-ui-iconify'
-
-const { CheckFilled } = pkg
+import { CheckFilled } from '@interface-ui/icons'
 </script>
 
 <template>

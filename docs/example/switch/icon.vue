@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import * as pkg from 'fusion-ui-iconify'
-const { AddFilled } = pkg
-
+import { AddFilled } from '@interface-ui/icons'
 const value = ref<boolean>(true)
 </script>
 

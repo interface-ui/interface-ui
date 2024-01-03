@@ -3,6 +3,8 @@ export const APP_CODE = `<script setup lang="ts">
   import Component from './component.vue';
   import { ThemeProvider, createTheme } from '@interface-ui/theme'
   const uiTheme = createTheme()
+  import {setupInterfaceUi } from './mainFile.js';
+  setupInterfaceUi()
 </script>
 
 <template>
@@ -21,3 +23,11 @@ export const COMPONENT_CODE = `<script setup lang="ts">
   <in-button>filled</in-button>
   <in-button variant="outlined">outlined</in-button>
 </template>`
+export const COMPONENT_CODE2 = `
+import InterfaceUI from '@interface-ui/core';
+import { getCurrentInstance } from 'vue';
+export function setupInterfaceUi() {
+    const instance = getCurrentInstance()
+    instance.appContext.app.use(InterfaceUI);
+}
+`

@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
-import ArrowDropDown from '@interface-ui/icons/ArrowDropDownFilled.js'
+// import ArrowDropDown from '@interface-ui/icons/ArrowDropDownFilled.js'
+import { ArrowDropDownFilled } from '@interface-ui/icons'
 
 const anchor = ref<HTMLElement | MouseEvent | null>(null)
 const selected = ref<string>('')
@@ -12,7 +13,7 @@ const selected = ref<string>('')
       {{ selected || 'Expand All Options' }}
     </in-button>
     <in-button @click="e => (anchor = e.currentTarget)">
-      <arrow-drop-down />
+      <arrow-drop-down-filled />
     </in-button>
   </in-button-group>
   <in-menu

@@ -1,7 +1,5 @@
 <script lang="ts" setup>
-import * as pkg from 'fusion-ui-iconify'
-
-const { InfoOutlined } = pkg
+import { InfoOutlined } from '@interface-ui/icons'
 </script>
 
 <template>

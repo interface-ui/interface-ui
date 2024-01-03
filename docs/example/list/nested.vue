@@ -1,17 +1,16 @@
 <script lang="ts" setup>
 import { useTheme } from '@interface-ui/theme'
-import * as pkg from 'fusion-ui-iconify'
 import { computed, ref } from 'vue'
 
-const {
+import {
   ContentCopyFilled,
-  MoreOutlined,
   ContentCutFilled,
-  ExpandMoreFilled,
   ContentPasteFilled,
-  UndoFilled,
+  ExpandMoreFilled,
+  MoreOutlined,
   StarBorderOutlined,
-} = pkg
+  UndoFilled,
+} from '@interface-ui/icons'
 
 const collapse = ref(false)
 const theme = useTheme()

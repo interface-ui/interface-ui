@@ -1,9 +1,11 @@
 <script lang="ts" setup>
 import { useTheme } from '@interface-ui/theme'
 import { ref } from 'vue'
-import * as pkg from 'fusion-ui-iconify'
-
-const { WifiFilled, BluetoothFilled, SignalCellularAltFilled } = pkg
+import {
+  BluetoothFilled,
+  SignalCellularAltFilled,
+  WifiFilled,
+} from '@interface-ui/icons'
 const theme = useTheme()
 const checked = ref([true, false, false])
 const switched = ref([true, false, false])

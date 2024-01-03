@@ -13,19 +13,19 @@ A breadcrumbs is a list of links that help visualize a page's location within a 
 
 ## Basic usage
 
-<demo src="../../../example/breadcrumb/basic.vue" preview="[2-6]" />
+<demo src="../../../example/breadcrumb/basic.vue" preview="[2-6]"  />
 
 ## Custom separator
 
 The separator accept the string or component (SVG icon).
 
-<demo src="../../../example/breadcrumb/separator.vue" preview="[8-18]" />
+<demo src="../../../example/breadcrumb/separator.vue" preview="[6-16]" />
 
 ## Underline
 
 Set the `underline` prop to style all the links. Also you can set it for specific link.
 
-<demo src="../../../example/breadcrumb/underline.vue" preview="[2-19]" />
+<demo src="../../../example/breadcrumb/underline.vue" preview="[2-18]" />
 
 ## Collapsed breadcrumb
 
@@ -41,7 +41,7 @@ Use `color` to set the color of the link.
 
 ## Link with icon
 
-<demo src="../../../example/breadcrumb/icon.vue" preview="[8-12]" />
+<demo src="../../../example/breadcrumb/icon.vue"  preview="[6-10]"  />
 
 ## Accessibility
 
@@ -51,9 +51,9 @@ Be sure to add a `aria-label` description on the Breadcrumbs component.
 
 The accessibility of this component relies on:
 
-* The set of links is structured using an ordered list (`<ol>` element).
-* To prevent screen reader announcement of the visual separators between links, they are hidden with `aria-hidden`.
-* A nav element labeled with `aria-label` identifies the structure as a breadcrumb trail and makes it a navigation landmark so that it is easy to locate.
+- The set of links is structured using an ordered list (`<ol>` element).
+- To prevent screen reader announcement of the visual separators between links, they are hidden with `aria-hidden`.
+- A nav element labeled with `aria-label` identifies the structure as a breadcrumb trail and makes it a navigation landmark so that it is easy to locate.
 
 ## Attributes
 

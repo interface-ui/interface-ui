@@ -1,12 +1,12 @@
 <script lang="ts" setup>
-import Cake from '@interface-ui/icons/CakeFilled.js'
+import { CakeFilled } from '@interface-ui/icons'
 </script>
 
 <template>
   <in-icon-button>
-    <cake />
+    <cake-filled />
   </in-icon-button>
   <in-icon-button disabled>
-    <cake />
+    <cake-filled />
   </in-icon-button>
 </template>

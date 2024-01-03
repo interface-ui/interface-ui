@@ -1,9 +1,8 @@
 <script lang="ts" setup>
-import * as pkg from 'fusion-ui-iconify'
 import { InButton, InIconButton, InMessage } from '@interface-ui/core'
 import { h } from 'vue'
 
-const { DeleteFilled, VerifiedRound } = pkg
+import { DeleteFilled, VerifiedRound } from '@interface-ui/icons'
 const handleClickClose = () => {
   new InMessage({
     severity: 'success',

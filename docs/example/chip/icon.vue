@@ -1,6 +1,5 @@
 <script lang="ts" setup>
-import * as pkg from 'fusion-ui-iconify'
-const { TodayFilled } = pkg
+import { TodayFilled } from '@interface-ui/icons'
 </script>
 
 <template>

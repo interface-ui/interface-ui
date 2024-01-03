@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import * as pkg from 'fusion-ui-iconify'
-const { EmailFilled, NotificationsFilled } = pkg
-// import { EmailFilled, NotificationsFilled } from 'fusion-ui-iconify'
+import { EmailFilled, NotificationsFilled } from '@interface-ui/icons'
 </script>
 
 <template>

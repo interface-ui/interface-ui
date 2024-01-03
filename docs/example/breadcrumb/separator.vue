@@ -1,7 +1,5 @@
 <script lang="ts" setup>
-import * as pkg from 'fusion-ui-iconify'
-
-const { NavigateNextFilled } = pkg
+import { NavigateNextFilled } from '@interface-ui/icons'
 </script>
 
 <template>

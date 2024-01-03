@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import * as pkg from 'fusion-ui-iconify'
-const { CloseOutlined } = pkg
-// import { CloseOutlined } from 'fusion-ui-iconify'
+import { CloseOutlined } from '@interface-ui/icons'
 </script>
 
 <template>

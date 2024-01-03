@@ -1,7 +1,5 @@
 <script lang="ts" setup>
-import * as pkg from 'fusion-ui-iconify'
-
-const { MoreVertFilled } = pkg
+import { MoreVertFilled } from '@interface-ui/icons'
 </script>
 
 <template>
@@ -14,7 +12,9 @@ const { MoreVertFilled } = pkg
       </template>
     </in-card-header>
     <in-card-content>
-      <in-typography cs="opacity: .5;"> Elevated </in-typography>
+      <in-typography cs="opacity: .5;">
+        Elevated
+      </in-typography>
     </in-card-content>
   </in-card>
 
@@ -27,7 +27,9 @@ const { MoreVertFilled } = pkg
       </template>
     </in-card-header>
     <in-card-content>
-      <in-typography cs="opacity: .5;"> Filled </in-typography>
+      <in-typography cs="opacity: .5;">
+        Filled
+      </in-typography>
     </in-card-content>
   </in-card>
 
@@ -40,7 +42,9 @@ const { MoreVertFilled } = pkg
       </template>
     </in-card-header>
     <in-card-content>
-      <in-typography cs="opacity: .5;"> Outlined </in-typography>
+      <in-typography cs="opacity: .5;">
+        Outlined
+      </in-typography>
     </in-card-content>
   </in-card>
 </template>

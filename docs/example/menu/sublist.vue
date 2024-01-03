@@ -1,8 +1,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
-import * as pkg from 'fusion-ui-iconify'
 
-const { ArrowRightFilled } = pkg
+import { ArrowRightFilled } from '@interface-ui/icons'
 const anchor = ref<HTMLElement | MouseEvent | null>(null)
 const showSublist = ref(false)
 </script>

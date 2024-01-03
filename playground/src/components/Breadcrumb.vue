@@ -6,7 +6,7 @@ import {
   HomeFilled,
   FlagFilled,
   AppsFilled,
-} from 'fusion-ui-iconify'
+} from '@interface-ui/icons'
 </script>
 
 <template>

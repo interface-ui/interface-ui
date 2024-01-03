@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-import Add from '@interface-ui/icons/AddFilled.js'
+import { AddFilled } from '@interface-ui/icons'
 </script>
 
 <template>
-  <in-button variant="elevated"><add leading />Elevated</in-button>
+  <in-button variant="elevated"> <add-filled />Elevated </in-button>
   <in-button>Filled</in-button>
-  <in-button variant="tonal">Tonal</in-button>
-  <in-button variant="outlined">Outlined</in-button>
-  <in-button variant="text">Text</in-button>
+  <in-button variant="tonal"> Tonal </in-button>
+  <in-button variant="outlined"> Outlined </in-button>
+  <in-button variant="text"> Text </in-button>
 </template>

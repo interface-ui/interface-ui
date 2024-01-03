@@ -30,7 +30,7 @@ import {
   SendFilled,
   InboxFilled,
   ArrowRightFilled,
-} from 'fusion-ui-iconify'
+} from '@interface-ui/icons'
 import { computed, ref } from 'vue'
 import { useTheme } from '@interface-ui/theme'
 
