@@ -1,16 +1,15 @@
 <script lang="ts" setup>
-// import Delete from '@interface-ui/icons/DeleteFilled.js'
-import { DeleteFilled } from '@interface-ui/icons'
+import Delete from '@interface-ui/icons/DeleteFilled.js'
 </script>
 
 <template>
   <in-icon-button size="small">
-    <DeleteFilled />
+    <delete />
   </in-icon-button>
   <in-icon-button>
-    <DeleteFilled />
+    <delete />
   </in-icon-button>
   <in-icon-button size="large">
-    <DeleteFilled />
+    <delete />
   </in-icon-button>
 </template>

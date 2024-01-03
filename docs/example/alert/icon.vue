@@ -1,34 +1,32 @@
 <script setup lang="ts">
-import {
-  AddShoppingCartRound,
-  HistoryRound,
-  VerifiedRound,
-} from '@interface-ui/icons'
+import AddShoppingCart from '@interface-ui/icons/AddShoppingCartRound.js'
+import History from '@interface-ui/icons/HistoryRound.js'
+import Verified from '@interface-ui/icons/VerifiedRound.js'
 </script>
 
 <template>
   <div space-y-5 w-full>
     <InAlert severity="success">
       <template #icon>
-        <history-round />
+        <history />
       </template>
       This is an success alert — check it out!
     </InAlert>
     <InAlert severity="success">
       <template #icon>
-        <verified-round />
+        <verified />
       </template>
       This is an success alert — check it out!
     </InAlert>
     <InAlert severity="success">
       <template #icon>
-        <add-shopping-cart-round />
+        <add-shopping-cart />
       </template>
       This is an success alert — check it out!
     </InAlert>
     <InAlert severity="success" :icon="false">
       <template #icon>
-        <add-shopping-cart-round />
+        <add-shopping-cart />
       </template>
       This is an success alert — check it out!
     </InAlert>

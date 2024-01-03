@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import '@core/chip/src/index.less'
 import { ChipVariants, InChip } from '@interface-ui/core'
-import { TodayFilled } from '@interface-ui/icons'
+import Today from '@interface-ui/icons/TodayFilled'
 import { ref } from 'vue'
 import { ThemeCallBack } from '@interface-ui/theme'
 
@@ -77,11 +77,11 @@ const onDelete = (index: number) => {
   <!-- Icon -->
   <div class="content">
     <in-chip>
-      <today-filled />
+      <today />
       Today
     </in-chip>
     <in-chip variant="outlined">
-      <today-filled />
+      <today />
       Today
     </in-chip>
   </div>

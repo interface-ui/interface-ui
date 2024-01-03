@@ -1,14 +1,11 @@
 <!-- eslint-disable quote-props -->
 <script lang="ts" setup>
 import { styled } from '@interface-ui/theme'
-
-import {
-  FormatAlignCenterFilled,
-  FormatAlignLeftFilled,
-  FormatAlignRightFilled,
-  FormatBoldFilled,
-  FormatItalicFilled,
-} from '@interface-ui/icons'
+import FormatAlignCenter from '@interface-ui/icons/FormatAlignCenterFilled.js'
+import FormatAlignLeft from '@interface-ui/icons/FormatAlignLeftFilled.js'
+import FormatAlignRight from '@interface-ui/icons/FormatAlignRightFilled.js'
+import FormatBold from '@interface-ui/icons/FormatBoldFilled.js'
+import FormatItalic from '@interface-ui/icons/FormatItalicFilled.js'
 
 const Box = styled('div')({
   display: 'flex',
@@ -28,20 +25,20 @@ const Box = styled('div')({
 
 <template>
   <box>
-    <format-align-left-filled />
-    <format-align-center-filled />
-    <format-align-right-filled />
+    <format-align-left />
+    <format-align-center />
+    <format-align-right />
     <in-divider orientation="vertical" />
-    <format-bold-filled />
-    <format-italic-filled />
+    <format-bold />
+    <format-italic />
   </box>
 
   <box>
-    <format-align-left-filled />
-    <format-align-center-filled />
-    <format-align-right-filled />
+    <format-align-left />
+    <format-align-center />
+    <format-align-right />
     <in-divider orientation="vertical" variant="inset" />
-    <format-bold-filled />
-    <format-italic-filled />
+    <format-bold />
+    <format-italic />
   </box>
 </template>

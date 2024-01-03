@@ -1,16 +1,15 @@
 <script lang="ts" setup>
-// import Palette from '@interface-ui/icons/PaletteOutlined.js'
-import { PaletteOutlined } from '@interface-ui/icons'
+import Palette from '@interface-ui/icons/PaletteOutlined.js'
 </script>
 
 <template>
   <in-fab size="small">
-    <palette-outlined />
+    <palette />
   </in-fab>
   <in-fab>
-    <palette-outlined />
+    <palette />
   </in-fab>
   <in-fab size="large">
-    <palette-outlined />
+    <palette />
   </in-fab>
 </template>

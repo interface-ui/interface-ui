@@ -1,16 +1,17 @@
 <script setup lang="ts">
-import { EmailFilled, NotificationsFilled } from '@interface-ui/icons'
+import Notifications from '@interface-ui/icons/NotificationsFilled.js'
+import Email from '@interface-ui/icons/EmailFilled.js'
 </script>
 
 <template>
   <in-badge content="1000" max="999">
     <in-icon-button color="secondary">
-      <notifications-filled />
+      <notifications />
     </in-icon-button>
   </in-badge>
   <in-badge :content="1000" :max="99">
     <in-icon-button color="tertiary">
-      <email-filled />
+      <email />
     </in-icon-button>
   </in-badge>
 </template>

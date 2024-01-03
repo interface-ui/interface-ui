@@ -1,12 +1,12 @@
 <script lang="ts" setup>
 import { InButton, InMessage } from '@interface-ui/core'
-import { FilterThreeFilled } from '@interface-ui/icons'
+import FilterThree from '@interface-ui/icons/FilterThreeFilled.js'
 
 const handleClick = () => {
   new InMessage({}).push({
     content: 'this is a success message',
     severity: 'success',
-    customIcon: FilterThreeFilled,
+    customIcon: FilterThree,
   })
 }
 </script>

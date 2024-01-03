@@ -2,16 +2,13 @@
 import { ref, shallowRef } from 'vue'
 import type { ComponentDirections } from '@interface-ui/constants'
 import { componentDirections } from '@interface-ui/constants'
-
-import {
-  AddCircleFilled,
-  AppsFilled,
-  CodeFilled,
-  FoundationFilled,
-  LocalFireDepartmentFilled,
-  PaletteFilled,
-  StarsFilled,
-} from '@interface-ui/icons'
+import AddCircleFilled from '@interface-ui/icons/AddCircleFilled'
+import AppsFilled from '@interface-ui/icons/AppsFilled.js'
+import CodeFilled from '@interface-ui/icons/CodeFilled.js'
+import FoundationFilled from '@interface-ui/icons/FoundationFilled.js'
+import LocalFireDepartmentFilled from '@interface-ui/icons/LocalFireDepartmentFilled.js'
+import PaletteFilled from '@interface-ui/icons/PaletteFilled.js'
+import StarsFilled from '@interface-ui/icons/StarsFilled.js'
 
 const list = shallowRef([
   { icon: LocalFireDepartmentFilled, text: 'Home' },

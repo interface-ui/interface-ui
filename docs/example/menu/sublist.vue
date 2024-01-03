@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
+import ArrowRight from '@interface-ui/icons/ArrowRightFilled.js'
 
-import { ArrowRightFilled } from '@interface-ui/icons'
 const anchor = ref<HTMLElement | MouseEvent | null>(null)
 const showSublist = ref(false)
 </script>
@@ -21,7 +21,7 @@ const showSublist = ref(false)
     >
       More
       <template #trailing="icon">
-        <arrow-right-filled v-bind="icon" />
+        <arrow-right v-bind="icon" />
       </template>
       <in-list v-if="showSublist" cs="width: 100px;" sublist>
         <in-list-item> Cut </in-list-item>

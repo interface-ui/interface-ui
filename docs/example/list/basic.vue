@@ -1,5 +1,6 @@
 <script lang="ts" setup>
-import { InboxFilled, SendFilled } from '@interface-ui/icons'
+import Inbox from '@interface-ui/icons/es/InboxFilled.js'
+import Send from '@interface-ui/icons/es/SendFilled.js'
 </script>
 
 <template>
@@ -8,13 +9,13 @@ import { InboxFilled, SendFilled } from '@interface-ui/icons'
       <in-list-item-header> Basic List </in-list-item-header>
       <in-list-item>
         <template #leading="{ icon }">
-          <send-filled v-bind="icon" />
+          <send v-bind="icon" />
         </template>
         Send
       </in-list-item>
       <in-list-item>
         <template #leading="{ icon }">
-          <inbox-filled v-bind="icon" />
+          <inbox v-bind="icon" />
         </template>
         Inbox
         <template #trailing>

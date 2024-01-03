@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useTheme } from '@interface-ui/theme'
-import { NotificationsFilled } from '@interface-ui/icons'
+import Notifications from '@interface-ui/icons/NotificationsFilled.js'
 
 const theme = useTheme()
 </script>
@@ -14,7 +14,7 @@ const theme = useTheme()
       <in-button>Hello</in-button>
     </in-badge>
     <in-badge content="6">
-      <notifications-filled size="24" :color="theme.colors.grey[500]" />
+      <notifications size="24" :color="theme.colors.grey[500]" />
     </in-badge>
   </div>
 </template>

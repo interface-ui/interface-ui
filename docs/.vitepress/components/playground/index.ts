@@ -2,13 +2,13 @@ export const APP_CODE = `<script setup lang="ts">
   import App from './App.vue';
   import Component from './component.vue';
   import { ThemeProvider, createTheme } from '@interface-ui/theme'
-  const uiTheme = createTheme()
+  const theme = createTheme()
   import {setupInterfaceUi } from './mainFile.js';
   setupInterfaceUi()
 </script>
 
 <template>
-  <theme-provider :theme="uiTheme">
+  <theme-provider :theme="theme">
     <Component />
  </theme-provider>
 </template>`

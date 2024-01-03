@@ -12,11 +12,9 @@ import {
   InIconButton,
   InActionArea,
 } from '@interface-ui/core'
-import {
-  MoreVertFilled,
-  FavoriteFilled,
-  ShareFilled,
-} from '@interface-ui/icons'
+import MoreVert from '@interface-ui/icons/MoreVertFilled'
+import Favorite from '@interface-ui/icons/FavoriteFilled'
+import Share from '@interface-ui/icons/ShareFilled'
 </script>
 
 <template>
@@ -84,7 +82,7 @@ import {
         </in-typography>
         <template #action>
           <in-icon-button color="onSurfaceVariant" cs="opacity: .5;">
-            <more-vert-filled />
+            <more-vert />
           </in-icon-button>
         </template>
       </in-card-header>
@@ -100,10 +98,10 @@ import {
       </in-card-content>
       <in-card-action>
         <in-icon-button color="onSurfaceVariant" cs="opacity: .5;">
-          <favorite-filled />
+          <favorite />
         </in-icon-button>
         <in-icon-button color="onSurfaceVariant" cs="opacity: .5;">
-          <share-filled />
+          <share />
         </in-icon-button>
       </in-card-action>
     </in-card>

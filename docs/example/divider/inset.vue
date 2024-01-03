@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { InfoOutlined } from '@interface-ui/icons'
+import Info from '@interface-ui/icons/InfoOutlined.js'
 </script>
 
 <template>
@@ -16,7 +16,7 @@ import { InfoOutlined } from '@interface-ui/icons'
         <in-headline-text headline="Remy Sharp" supporting-text="He/Him" />
         <template #trailing>
           <in-icon-button>
-            <info-outlined />
+            <info />
           </in-icon-button>
         </template>
       </in-list-item>
@@ -32,7 +32,7 @@ import { InfoOutlined } from '@interface-ui/icons'
         <in-headline-text headline="Travis Howard" supporting-text="He/Him" />
         <template #trailing>
           <in-icon-button>
-            <info-outlined />
+            <info />
           </in-icon-button>
         </template>
       </in-list-item>
@@ -48,7 +48,7 @@ import { InfoOutlined } from '@interface-ui/icons'
         <in-headline-text headline="Cindy Baker" supporting-text="She/Her" />
         <template #trailing>
           <in-icon-button>
-            <info-outlined />
+            <info />
           </in-icon-button>
         </template>
       </in-list-item>

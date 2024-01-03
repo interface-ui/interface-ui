@@ -1,10 +1,9 @@
 <script lang="ts" setup>
-// import Delete from '@interface-ui/icons/DeleteFilled.js'
-// import Save from '@interface-ui/icons/SaveFilled.js'
-import { DeleteFilled, SaveFilled } from '@interface-ui/icons'
+import Delete from '@interface-ui/icons/DeleteFilled.js'
+import Save from '@interface-ui/icons/SaveFilled.js'
 </script>
 
 <template>
-  <in-button variant="outlined"> <delete-filled /> Delete </in-button>
-  <in-button> Save <save-filled /></in-button>
+  <in-button variant="outlined"> <delete /> Delete </in-button>
+  <in-button> Save <save /></in-button>
 </template>

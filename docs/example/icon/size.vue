@@ -1,10 +1,10 @@
 <script lang="ts" setup>
-import { HomeFilled } from '@interface-ui/icons'
+import Home from '@interface-ui/icons/HomeFilled.js'
 </script>
 
 <template>
-  <home-filled />
-  <home-filled font-size="24" />
-  <home-filled font-size="36" />
-  <home-filled font-size="3em" />
+  <home />
+  <home font-size="24" />
+  <home font-size="36" />
+  <home font-size="3em" />
 </template>

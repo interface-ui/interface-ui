@@ -1,19 +1,17 @@
 <script lang="ts" setup>
-// import Palette from '@interface-ui/icons/PaletteOutlined.js'
-// import Edit from '@interface-ui/icons/EditOutlined.js'
-
-import { EditOutlined, PaletteOutlined } from '@interface-ui/icons'
+import Palette from '@interface-ui/icons/PaletteOutlined.js'
+import Edit from '@interface-ui/icons/EditOutlined.js'
 </script>
 
 <template>
   <in-fab color="infoContainer">
-    <palette-outlined />
+    <palette />
   </in-fab>
   <in-fab>
-    <palette-outlined />
+    <PaletteOutlined />
   </in-fab>
   <in-fab color="tertiaryContainer">
-    <edit-outlined />
+    <edit />
     Edit
   </in-fab>
 </template>

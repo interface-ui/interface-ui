@@ -19,18 +19,15 @@ import {
   InButton,
   InMenu,
 } from '@interface-ui/core'
-import {
-  ContentCopyFilled,
-  MoreOutlined,
-  // ContentCutFilled,
-  ExpandMoreFilled,
-  ContentPasteFilled,
-  UndoFilled,
-  StarBorderOutlined,
-  SendFilled,
-  InboxFilled,
-  ArrowRightFilled,
-} from '@interface-ui/icons'
+import ContentCopy from '@interface-ui/icons/ContentCopyFilled'
+import ContentPaste from '@interface-ui/icons/ContentPasteFilled'
+import More from '@interface-ui/icons/MoreOutlined'
+import ArrowRight from '@interface-ui/icons/ArrowRightFilled'
+import Undo from '@interface-ui/icons/UndoFilled'
+import StarBorder from '@interface-ui/icons/StarBorderOutlined'
+import Send from '@interface-ui/icons/SendFilled'
+import Inbox from '@interface-ui/icons/InboxFilled'
+import ExpandMore from '@interface-ui/icons/ExpandMoreFilled'
 import { computed, ref } from 'vue'
 import { useTheme } from '@interface-ui/theme'
 
@@ -63,7 +60,7 @@ const handleClick = (num: number) => {
         <in-list>
           <in-list-item>
             <template #leading="{ icon }">
-              <content-copy-filled v-bind="icon" />
+              <content-copy v-bind="icon" />
             </template>
             Copy
             <template #trailing>
@@ -85,7 +82,7 @@ const handleClick = (num: number) => {
           </in-list-item>
           <in-list-item disabled>
             <template #leading="{ icon }">
-              <content-paste-filled v-bind="icon" />
+              <content-paste v-bind="icon" />
             </template>
             Paste
             <template #trailing>
@@ -96,18 +93,18 @@ const handleClick = (num: number) => {
           </in-list-item>
           <in-list-item @click="collapse = !collapse">
             <template #leading="{ icon }">
-              <more-outlined v-bind="icon" />
+              <more v-bind="icon" />
             </template>
             More
             <template #trailing>
-              <in-svg-icon :cs="rotate" :component="ExpandMoreFilled" />
+              <in-svg-icon :cs="rotate" :component="ExpandMore" />
             </template>
           </in-list-item>
           <in-collapse>
             <in-list component="li" level="1" v-show="collapse">
               <in-list-item>
                 <template #leading="{ icon }">
-                  <undo-filled v-bind="icon" />
+                  <undo v-bind="icon" />
                 </template>
                 Undo
                 <template #trailing>
@@ -122,7 +119,7 @@ const handleClick = (num: number) => {
           <in-list-item-header> Other actions </in-list-item-header>
           <in-list-item>
             <template #leading="{ icon }">
-              <star-border-outlined v-bind="icon" />
+              <star-border v-bind="icon" />
             </template>
             Save
           </in-list-item>
@@ -133,13 +130,13 @@ const handleClick = (num: number) => {
           <in-list-item-header> Basic List </in-list-item-header>
           <in-list-item>
             <template #leading="{ icon }">
-              <send-filled v-bind="icon" />
+              <send v-bind="icon" />
             </template>
             Send
           </in-list-item>
           <in-list-item>
             <template #leading="{ icon }">
-              <inbox-filled v-bind="icon" />
+              <inbox v-bind="icon" />
             </template>
             Inbox
             <template #trailing>
@@ -193,18 +190,18 @@ const handleClick = (num: number) => {
       >
         More
         <template #trailing="icon">
-          <arrow-right-filled v-bind="icon" />
+          <arrow-right v-bind="icon" />
         </template>
         <in-list v-if="showSublist" sublist>
           <in-list-item>
             <template #leading="{ icon }">
-              <send-filled v-bind="icon" />
+              <send v-bind="icon" />
             </template>
             Send
           </in-list-item>
           <in-list-item>
             <template #leading="{ icon }">
-              <inbox-filled v-bind="icon" />
+              <inbox v-bind="icon" />
             </template>
             Inbox
             <template #trailing>

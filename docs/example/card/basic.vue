@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { MoreVertFilled } from '@interface-ui/icons'
+import MoreVert from '@interface-ui/icons/MoreVertFilled.js'
 </script>
 
 <template>
@@ -7,14 +7,12 @@ import { MoreVertFilled } from '@interface-ui/icons'
     <in-card-header>
       <template #action>
         <in-icon-button color="onSurfaceVariant" cs="opacity: .5;">
-          <more-vert-filled />
+          <more-vert />
         </in-icon-button>
       </template>
     </in-card-header>
     <in-card-content>
-      <in-typography cs="opacity: .5;">
-        Elevated
-      </in-typography>
+      <in-typography cs="opacity: .5;"> Elevated </in-typography>
     </in-card-content>
   </in-card>
 
@@ -22,14 +20,12 @@ import { MoreVertFilled } from '@interface-ui/icons'
     <in-card-header>
       <template #action>
         <in-icon-button color="onSurfaceVariant" cs="opacity: .5;">
-          <more-vert-filled />
+          <more-vert />
         </in-icon-button>
       </template>
     </in-card-header>
     <in-card-content>
-      <in-typography cs="opacity: .5;">
-        Filled
-      </in-typography>
+      <in-typography cs="opacity: .5;"> Filled </in-typography>
     </in-card-content>
   </in-card>
 
@@ -37,14 +33,12 @@ import { MoreVertFilled } from '@interface-ui/icons'
     <in-card-header>
       <template #action>
         <in-icon-button color="onSurfaceVariant" cs="opacity: .5;">
-          <more-vert-filled />
+          <more-vert />
         </in-icon-button>
       </template>
     </in-card-header>
     <in-card-content>
-      <in-typography cs="opacity: .5;">
-        Outlined
-      </in-typography>
+      <in-typography cs="opacity: .5;"> Outlined </in-typography>
     </in-card-content>
   </in-card>
 </template>
