@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import Palette from '@interface-ui/icons/PaletteOutlined.js'
+import Palette from '@interface-ui/icons/PaletteOutlined'
 </script>
 
 <template>

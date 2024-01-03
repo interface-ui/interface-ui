@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import Inbox from '@interface-ui/icons/es/InboxFilled.js'
-import Send from '@interface-ui/icons/es/SendFilled.js'
+import Inbox from '@interface-ui/icons/InboxFilled'
+import Send from '@interface-ui/icons/SendFilled'
 </script>
 
 <template>

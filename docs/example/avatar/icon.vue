@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import Accessibility from '@interface-ui/icons/AccessibilityFilled.js'
-import Autorenew from '@interface-ui/icons/AutorenewFilled.js'
-import Book from '@interface-ui/icons/BookFilled.js'
+import Accessibility from '@interface-ui/icons/AccessibilityFilled'
+import Autorenew from '@interface-ui/icons/AutorenewFilled'
+import Book from '@interface-ui/icons/BookFilled'
 </script>
 
 <template>

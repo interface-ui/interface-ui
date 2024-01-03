@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import Notifications from '@interface-ui/icons/NotificationsFilled.js'
-import Email from '@interface-ui/icons/EmailFilled.js'
+import Notifications from '@interface-ui/icons/NotificationsFilled'
+import Email from '@interface-ui/icons/EmailFilled'
 </script>
 
 <template>

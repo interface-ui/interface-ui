@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import Delete from '@interface-ui/icons/DeleteFilled.js'
+import Delete from '@interface-ui/icons/DeleteFilled'
 </script>
 
 <template>

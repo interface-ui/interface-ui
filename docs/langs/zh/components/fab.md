@@ -22,22 +22,22 @@ lang: zh
 
 ### 基本悬浮操作按钮
 
-<demo src="../../../example/fab/basic.vue"   preview="[9-16]" />
+<demo src="../../../example/fab/basic.vue"   preview="[7-14]" />
 
 ### 大小
 
 悬浮操作按钮的大小可以是小、中（默认）和大。使用 `size` 属性来更改大小。
-<demo src="../../../example/fab/size.vue"  preview="[7-15]" />
+<demo src="../../../example/fab/size.vue"  preview="[6-14]" />
 
 ### 颜色
 
 使用 `color` 来为悬浮操作按钮组件设置样式
-<demo src="../../../example/fab/color.vue"  preview="[9-18]" />
+<demo src="../../../example/fab/color.vue"  preview="[7-16]" />
 
 ## 属性
 
-<data-table type="props" lang="en" :data="props" />
+<data-table type="props" lang="zh" :data="props" />
 
 ## 插槽
 
-<data-table type="slots" lang="en" :data="slots" />
+<data-table type="slots" lang="zh" :data="slots" />

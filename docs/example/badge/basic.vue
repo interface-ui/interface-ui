@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useTheme } from '@interface-ui/theme'
-import Notifications from '@interface-ui/icons/NotificationsFilled.js'
+import Notifications from '@interface-ui/icons/NotificationsFilled'
 
 const theme = useTheme()
 </script>

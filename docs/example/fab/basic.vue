@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import Palette from '@interface-ui/icons/PaletteOutlined.js'
-import Edit from '@interface-ui/icons/EditOutlined.js'
+import Palette from '@interface-ui/icons/PaletteOutlined'
+import Edit from '@interface-ui/icons/EditOutlined'
 </script>
 
 <template>

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import Add from '@interface-ui/icons/AddFilled.js'
+import Add from '@interface-ui/icons/AddFilled'
 </script>
 
 <template>

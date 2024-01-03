@@ -13,7 +13,7 @@ This drawer can slide out of the page from `left`, `right`, `top`, and `bottom`.
 
 ## Basic usage
 
-<demo src="../../../example/drawer/basic.vue" preview="[44-55]" />
+<demo src="../../../example/drawer/basic.vue" preview="[40-51]" />
 
 
 

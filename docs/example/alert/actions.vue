@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Close from '@interface-ui/icons/CloseOutlined.js'
+import Close from '@interface-ui/icons/CloseOutlined'
 </script>
 
 <template>

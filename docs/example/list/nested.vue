@@ -1,13 +1,13 @@
 <script lang="ts" setup>
 import { useTheme } from '@interface-ui/theme'
 import { computed, ref } from 'vue'
-import ContentCopy from '@interface-ui/icons/ContentCopyFilled.js'
-import ContentCut from '@interface-ui/icons/ContentCutFilled.js'
-import ContentPaste from '@interface-ui/icons/ContentPasteFilled.js'
-import ExpandMore from '@interface-ui/icons/ExpandMoreFilled.js'
-import More from '@interface-ui/icons/MoreOutlined.js'
-import StarBorder from '@interface-ui/icons/StarBorderOutlined.js'
-import Undo from '@interface-ui/icons/UndoFilled.js'
+import ContentCopy from '@interface-ui/icons/ContentCopyFilled'
+import ContentCut from '@interface-ui/icons/ContentCutFilled'
+import ContentPaste from '@interface-ui/icons/ContentPasteFilled'
+import ExpandMore from '@interface-ui/icons/ExpandMoreFilled'
+import More from '@interface-ui/icons/MoreOutlined'
+import StarBorder from '@interface-ui/icons/StarBorderOutlined'
+import Undo from '@interface-ui/icons/UndoFilled'
 
 const collapse = ref(false)
 const theme = useTheme()

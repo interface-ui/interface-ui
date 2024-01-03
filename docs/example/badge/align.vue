@@ -2,7 +2,7 @@
 import { InRadio } from '@interface-ui/core'
 import { ref } from 'vue'
 import { useTheme } from '@interface-ui/theme'
-import Notifications from '@interface-ui/icons/NotificationsFilled.js'
+import Notifications from '@interface-ui/icons/NotificationsFilled'
 
 const theme = useTheme()
 const xAlign = ref<'left' | 'right'>('right')

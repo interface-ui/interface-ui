@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
-import ArrowDropDown from '@interface-ui/icons/ArrowDropDownFilled.js'
+import ArrowDropDown from '@interface-ui/icons/ArrowDropDownFilled'
 
 const anchor = ref<HTMLElement | MouseEvent | null>(null)
 const selected = ref<string>('')

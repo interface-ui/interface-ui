@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 import { InButton, InIconButton, InMessage } from '@interface-ui/core'
 import { h } from 'vue'
-import Delete from '@interface-ui/icons/DeleteFilled.js'
-import Verified from '@interface-ui/icons/VerifiedRound.js'
+import Delete from '@interface-ui/icons/DeleteFilled'
+import Verified from '@interface-ui/icons/VerifiedRound'
 
 const handleClickClose = () => {
   new InMessage({

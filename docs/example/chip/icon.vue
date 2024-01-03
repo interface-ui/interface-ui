@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import Today from '@interface-ui/icons/TodayFilled.js'
+import Today from '@interface-ui/icons/TodayFilled'
 </script>
 
 <template>

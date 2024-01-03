@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import Check from '@interface-ui/icons/CheckFilled.js'
+import Check from '@interface-ui/icons/CheckFilled'
 </script>
 
 <template>

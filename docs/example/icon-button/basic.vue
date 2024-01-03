@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import Cake from '@interface-ui/icons/CakeFilled.js'
+import Cake from '@interface-ui/icons/CakeFilled'
 </script>
 
 <template>

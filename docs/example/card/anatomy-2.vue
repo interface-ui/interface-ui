@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import Favorite from '@interface-ui/icons/FavoriteFilled.js'
-import MoreVert from '@interface-ui/icons/MoreVertFilled.js'
-import Share from '@interface-ui/icons/ShareFilled.js'
+import Favorite from '@interface-ui/icons/FavoriteFilled'
+import MoreVert from '@interface-ui/icons/MoreVertFilled'
+import Share from '@interface-ui/icons/ShareFilled'
 </script>
 
 <template>

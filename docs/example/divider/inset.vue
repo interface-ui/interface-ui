@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import Info from '@interface-ui/icons/InfoOutlined.js'
+import Info from '@interface-ui/icons/InfoOutlined'
 </script>
 
 <template>

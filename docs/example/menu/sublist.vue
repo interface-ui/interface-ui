@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
-import ArrowRight from '@interface-ui/icons/ArrowRightFilled.js'
+import ArrowRight from '@interface-ui/icons/ArrowRightFilled'
 
 const anchor = ref<HTMLElement | MouseEvent | null>(null)
 const showSublist = ref(false)

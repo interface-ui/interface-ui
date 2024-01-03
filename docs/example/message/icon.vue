@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { InButton, InMessage } from '@interface-ui/core'
-import FilterThree from '@interface-ui/icons/FilterThreeFilled.js'
+import FilterThree from '@interface-ui/icons/FilterThreeFilled'
 
 const handleClick = () => {
   new InMessage({}).push({

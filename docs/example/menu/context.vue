@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
-import ContentCopy from '@interface-ui/icons/ContentCopyFilled.js'
-import ContentCut from '@interface-ui/icons/ContentCutFilled.js'
-import ContentPaste from '@interface-ui/icons/ContentPasteFilled.js'
-import Undo from '@interface-ui/icons/UndoFilled.js'
+import ContentCopy from '@interface-ui/icons/ContentCopyFilled'
+import ContentCut from '@interface-ui/icons/ContentCutFilled'
+import ContentPaste from '@interface-ui/icons/ContentPasteFilled'
+import Undo from '@interface-ui/icons/UndoFilled'
 const anchor = ref<HTMLElement | MouseEvent | null>(null)
 const handleContextMenu = (e: MouseEvent) => {
   e.preventDefault()

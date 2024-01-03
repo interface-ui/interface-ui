@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 import { useTheme } from '@interface-ui/theme'
 import { ref } from 'vue'
-import Bluetooth from '@interface-ui/icons/es/BluetoothFilled.js'
-import SignalCellularAlt from '@interface-ui/icons/es/SignalCellularAltFilled.js'
-import Wifi from '@interface-ui/icons/es/WifiFilled.js'
+import Bluetooth from '@interface-ui/icons/BluetoothFilled'
+import SignalCellularAlt from '@interface-ui/icons/SignalCellularAltFilled'
+import Wifi from '@interface-ui/icons/WifiFilled'
 const theme = useTheme()
 const checked = ref([true, false, false])
 const switched = ref([true, false, false])

@@ -41,7 +41,7 @@ lang: zh
 
 ## 带图标的链接
 
-<demo src="../../../example/breadcrumb/icon.vue"  preview="[6-10]" />
+<demo src="../../../example/breadcrumb/icon.vue"  preview="[8-12]" />
 
 ## 辅助功能
 

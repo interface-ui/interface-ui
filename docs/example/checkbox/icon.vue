@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 import { reactive } from 'vue'
-import Star from '@interface-ui/icons/StarFilled.js'
-import StarOutline from '@interface-ui/icons/StarOutlineFilled.js'
-import Bedtime from '@interface-ui/icons/BedtimeFilled.js'
-import BedtimeOutlined from '@interface-ui/icons/BedtimeOutlined.js'
+import Star from '@interface-ui/icons/StarFilled'
+import StarOutline from '@interface-ui/icons/StarOutlineFilled'
+import Bedtime from '@interface-ui/icons/BedtimeFilled'
+import BedtimeOutlined from '@interface-ui/icons/BedtimeOutlined'
 const checked = reactive<boolean[]>([false, false])
 </script>
 

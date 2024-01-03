@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import AccountCircle from '@interface-ui/icons/AccountCircleFilled.js'
+import AccountCircle from '@interface-ui/icons/AccountCircleFilled'
 import { styled, useTheme } from '@interface-ui/theme'
 
 const value = ref<string>('')

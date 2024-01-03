@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import Apps from '@interface-ui/icons/AppsFilled.js'
-import Flag from '@interface-ui/icons/FlagFilled.js'
-import Home from '@interface-ui/icons/HomeFilled.js'
+import Apps from '@interface-ui/icons/AppsFilled'
+import Flag from '@interface-ui/icons/FlagFilled'
+import Home from '@interface-ui/icons/HomeFilled'
 </script>
 
 <template>

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import MoreVert from '@interface-ui/icons/MoreVertFilled.js'
+import MoreVert from '@interface-ui/icons/MoreVertFilled'
 </script>
 
 <template>

@@ -1,11 +1,11 @@
 <!-- eslint-disable quote-props -->
 <script lang="ts" setup>
 import { styled } from '@interface-ui/theme'
-import FormatAlignCenter from '@interface-ui/icons/FormatAlignCenterFilled.js'
-import FormatAlignLeft from '@interface-ui/icons/FormatAlignLeftFilled.js'
-import FormatAlignRight from '@interface-ui/icons/FormatAlignRightFilled.js'
-import FormatBold from '@interface-ui/icons/FormatBoldFilled.js'
-import FormatItalic from '@interface-ui/icons/FormatItalicFilled.js'
+import FormatAlignCenter from '@interface-ui/icons/FormatAlignCenterFilled'
+import FormatAlignLeft from '@interface-ui/icons/FormatAlignLeftFilled'
+import FormatAlignRight from '@interface-ui/icons/FormatAlignRightFilled'
+import FormatBold from '@interface-ui/icons/FormatBoldFilled'
+import FormatItalic from '@interface-ui/icons/FormatItalicFilled'
 
 const Box = styled('div')({
   display: 'flex',

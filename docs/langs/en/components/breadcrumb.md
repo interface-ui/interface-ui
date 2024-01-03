@@ -41,7 +41,7 @@ Use `color` to set the color of the link.
 
 ## Link with icon
 
-<demo src="../../../example/breadcrumb/icon.vue"  preview="[6-10]"  />
+<demo src="../../../example/breadcrumb/icon.vue"  preview="[8-12]"  />
 
 ## Accessibility
 

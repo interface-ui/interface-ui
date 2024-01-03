@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
-import Visibility from '@interface-ui/icons/VisibilityFilled.js'
-import VisibilityOff from '@interface-ui/icons/VisibilityOffFilled.js'
+import Visibility from '@interface-ui/icons/VisibilityFilled'
+import VisibilityOff from '@interface-ui/icons/VisibilityOffFilled'
 
 const weight = ref<string>('')
 const amount = ref<string>('')

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import Add from '@interface-ui/icons/AddFilled.js'
+import Add from '@interface-ui/icons/AddFilled'
 
 const value = ref<boolean>(true)
 </script>

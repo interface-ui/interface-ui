@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { defineEmits, defineExpose, reactive, ref, watch } from 'vue'
-import DarkModeFilled from '@interface-ui/icons/DarkModeFilled.js'
-import LightModeFilled from '@interface-ui/icons/LightModeFilled.js'
+import DarkModeFilled from '@interface-ui/icons/DarkModeFilled'
+import LightModeFilled from '@interface-ui/icons/LightModeFilled'
 import { InIconButton } from '@interface-ui/core'
 const props = defineProps({
   store: {

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import NavigateNext from '@interface-ui/icons/NavigateNextFilled.js'
+import NavigateNext from '@interface-ui/icons/NavigateNextFilled'
 </script>
 
 <template>

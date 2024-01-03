@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import AddShoppingCart from '@interface-ui/icons/AddShoppingCartRound.js'
-import History from '@interface-ui/icons/HistoryRound.js'
-import Verified from '@interface-ui/icons/VerifiedRound.js'
+import AddShoppingCart from '@interface-ui/icons/AddShoppingCartRound'
+import History from '@interface-ui/icons/HistoryRound'
+import Verified from '@interface-ui/icons/VerifiedRound'
 </script>
 
 <template>
