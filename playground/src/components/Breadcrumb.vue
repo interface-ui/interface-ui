@@ -1,12 +1,10 @@
 <script lang="ts" setup>
 import '@core/breadcrumb/src/index.less' // 开发调试的样式
 import { InLink, InBreadcrumb } from '@interface-ui/core'
-import {
-  NavigateNextFilled,
-  HomeFilled,
-  FlagFilled,
-  AppsFilled,
-} from '@interface-ui/icons'
+import NavigateNext from '@interface-ui/icons/NavigateNextFilled'
+import Home from '@interface-ui/icons/HomeFilled'
+import Flag from '@interface-ui/icons/FlagFilled'
+import Apps from '@interface-ui/icons/AppsFilled'
 </script>
 
 <template>
@@ -24,7 +22,7 @@ import {
     <in-link>Breadcrumb</in-link>
   </in-breadcrumb>
 
-  <in-breadcrumb :separator="NavigateNextFilled">
+  <in-breadcrumb :separator="NavigateNext">
     <in-link>Interface UI</in-link>
     <in-link>Components</in-link>
     <in-link>Breadcrumb</in-link>
@@ -44,7 +42,7 @@ import {
   </in-breadcrumb>
 
   <!-- Collapsed -->
-  <in-breadcrumb max="2" :separator="NavigateNextFilled">
+  <in-breadcrumb max="2" :separator="NavigateNext">
     <in-link>Interface UI</in-link>
     <in-link>Components</in-link>
     <in-link>Breadcrumb</in-link>
@@ -64,8 +62,8 @@ import {
 
   <!-- Icon -->
   <in-breadcrumb>
-    <in-link><home-filled /> Interface UI</in-link>
-    <in-link><flag-filled /> Components</in-link>
-    <in-link><apps-filled /> Breadcrumb</in-link>
+    <in-link><home /> Interface UI</in-link>
+    <in-link><flag /> Components</in-link>
+    <in-link><apps /> Breadcrumb</in-link>
   </in-breadcrumb>
 </template>

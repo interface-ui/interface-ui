@@ -1,9 +1,8 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { InfoOutlined } from '@interface-ui/icons'
 import { tableHeadersEn, tableHeadersZh } from './data-table'
 import type { TableProps } from './types'
-// import Info from '@interface-ui/icons/InfoOutlined.js'
+import Info from '@interface-ui/icons/InfoOutlined'
 import './table.less'
 
 const props = defineProps<TableProps>()
@@ -45,7 +44,7 @@ const onClick = (e, type) => {
                   cs="margin-left: 8px"
                   @click="onClick($event, data.options)"
                 >
-                  <info-outlined />
+                  <info />
                 </in-icon-button>
               </template>
               <template v-else>

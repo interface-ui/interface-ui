@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { AddFilled } from '@interface-ui/icons'
+import Add from '@interface-ui/icons/AddFilled'
+
 const value = ref<boolean>(true)
 </script>
 
 <template>
   <in-switch v-model="value" disabled-icon />
   <in-switch v-model="value">
-    <add-filled />
+    <add />
   </in-switch>
 </template>

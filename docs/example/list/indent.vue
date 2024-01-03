@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { CheckFilled } from '@interface-ui/icons'
+import Check from '@interface-ui/icons/CheckFilled'
 </script>
 
 <template>
@@ -7,7 +7,7 @@ import { CheckFilled } from '@interface-ui/icons'
     <in-list>
       <in-list-item>
         <template #leading="{ icon }">
-          <check-filled v-bind="icon" />
+          <check v-bind="icon" />
         </template>
         🍎 Apple
       </in-list-item>

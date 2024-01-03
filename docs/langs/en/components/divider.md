@@ -35,7 +35,7 @@ Use inset dividers to separate related content within a section.
 
 Inset dividers are equally indented from both sides of the screen by default.
 
-<demo src="../../../example/divider/inset.vue" preview="[25]" />
+<demo src="../../../example/divider/inset.vue" preview="[23]" />
 
 ## With text
 
@@ -47,4 +47,4 @@ You can add the content to the divider when orientation is horizontal.
 
 The default orientation is horizontal, set `orientation=vertical` to use the vertical divider.
 
-<demo src="../../../example/divider/orientation.vue" preview="[31-47]" />
+<demo src="../../../example/divider/orientation.vue" preview="[27-43]" />

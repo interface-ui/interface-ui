@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { CloseOutlined } from '@interface-ui/icons'
+import Close from '@interface-ui/icons/CloseOutlined'
 </script>
 
 <template>
@@ -14,7 +14,7 @@ import { CloseOutlined } from '@interface-ui/icons'
       This is an warning alert — check it out!
       <template #action="btn">
         <in-icon-button v-bind="btn">
-          <close-outlined />
+          <close />
         </in-icon-button>
       </template>
     </in-alert>

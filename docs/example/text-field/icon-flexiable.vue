@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
-import { VisibilityFilled, VisibilityOffFilled } from '@interface-ui/icons'
+import Visibility from '@interface-ui/icons/VisibilityFilled'
+import VisibilityOff from '@interface-ui/icons/VisibilityOffFilled'
+
 const weight = ref<string>('')
 const amount = ref<string>('')
 const password = ref<string>('')
@@ -51,8 +53,8 @@ const variants = ['outlined', 'filled', 'standard'] as const
             v-bind="adornment"
             @click="showPassword = !showPassword"
           >
-            <visibility-off-filled v-show="showPassword" v-bind="icon" />
-            <visibility-filled v-show="!showPassword" v-bind="icon" />
+            <visibility-off v-show="showPassword" v-bind="icon" />
+            <visibility v-show="!showPassword" v-bind="icon" />
           </in-icon-button>
         </template>
       </in-text-field>

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { NavigateNextFilled } from '@interface-ui/icons'
+import NavigateNext from '@interface-ui/icons/NavigateNextFilled'
 </script>
 
 <template>
@@ -9,7 +9,7 @@ import { NavigateNextFilled } from '@interface-ui/icons'
     <in-link>Breadcrumb</in-link>
   </in-breadcrumb>
 
-  <in-breadcrumb :separator="NavigateNextFilled">
+  <in-breadcrumb :separator="NavigateNext">
     <in-link>Interface UI</in-link>
     <in-link>Components</in-link>
     <in-link>Breadcrumb</in-link>

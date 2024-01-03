@@ -1,12 +1,9 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
-
-import {
-  ContentCopyFilled,
-  ContentCutFilled,
-  ContentPasteFilled,
-  UndoFilled,
-} from '@interface-ui/icons'
+import ContentCopy from '@interface-ui/icons/ContentCopyFilled'
+import ContentCut from '@interface-ui/icons/ContentCutFilled'
+import ContentPaste from '@interface-ui/icons/ContentPasteFilled'
+import Undo from '@interface-ui/icons/UndoFilled'
 const anchor = ref<HTMLElement | MouseEvent | null>(null)
 const handleContextMenu = (e: MouseEvent) => {
   e.preventDefault()
@@ -37,7 +34,7 @@ const handleContextMenu = (e: MouseEvent) => {
   >
     <in-list-item>
       <template #leading="{ icon }">
-        <content-copy-filled v-bind="icon" />
+        <content-copy v-bind="icon" />
       </template>
       Copy
       <template #trailing>
@@ -48,7 +45,7 @@ const handleContextMenu = (e: MouseEvent) => {
     </in-list-item>
     <in-list-item disabled>
       <template #leading="{ icon }">
-        <content-paste-filled v-bind="icon" />
+        <content-paste v-bind="icon" />
       </template>
       Paste
       <template #trailing>
@@ -59,7 +56,7 @@ const handleContextMenu = (e: MouseEvent) => {
     </in-list-item>
     <in-list-item>
       <template #leading="{ icon }">
-        <content-cut-filled v-bind="icon" />
+        <content-cut v-bind="icon" />
       </template>
       Cut
       <template #trailing>
@@ -70,7 +67,7 @@ const handleContextMenu = (e: MouseEvent) => {
     </in-list-item>
     <in-list-item>
       <template #leading="{ icon }">
-        <undo-filled v-bind="icon" />
+        <undo v-bind="icon" />
       </template>
       Undo
       <template #trailing>

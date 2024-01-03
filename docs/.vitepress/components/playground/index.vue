@@ -4,6 +4,7 @@ import { Repl, ReplStore } from '@vue/repl'
 import '@vue/repl/style.css'
 import headers from './header.vue'
 import { APP_CODE, COMPONENT_CODE, COMPONENT_CODE2 } from './index'
+import { format } from 'prettier'
 
 let Monaco: any
 const isMounted = ref(false)
@@ -77,7 +78,11 @@ nextTick(() => {
   const hashCode = window.location.hash.slice(1)
   if (hashCode) {
     const code = decodeSourceHash(hashCode)
-    const componentCode = code['component.vue']
+    const componentCode = code['component.vue'].replace(
+      /import ([a-zA-Z]+) from '@interface-ui\/icons\/([a-zA-Z]+)(\.js)?'/g,
+      (_, m2, m3) => `import { ${m3} as ${m2} } from '@interface-ui/icons'`,
+    )
+
     updateExample(componentCode)
   } else updateExample(COMPONENT_CODE)
 })

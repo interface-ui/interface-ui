@@ -1,14 +1,14 @@
 <script lang="ts" setup>
-import { TodayFilled } from '@interface-ui/icons'
+import Today from '@interface-ui/icons/TodayFilled'
 </script>
 
 <template>
   <in-chip>
-    <today-filled />
+    <today />
     Today
   </in-chip>
   <in-chip variant="outlined">
     Today
-    <today-filled />
+    <today />
   </in-chip>
 </template>

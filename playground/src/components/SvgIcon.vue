@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import { InSvgIcon } from '@interface-ui/core'
-
-import { DeleteFilled } from '@interface-ui/icons'
+import Delete from '@interface-ui/icons/DeleteFilled'
 </script>
 
 <template>
@@ -20,5 +19,5 @@ import { DeleteFilled } from '@interface-ui/icons'
       />
     </svg>
   </in-svg-icon>
-  <in-svg-icon :component="DeleteFilled" />
+  <in-svg-icon :component="Delete" />
 </template>

@@ -1,11 +1,9 @@
 <script lang="ts" setup>
 import { useTheme } from '@interface-ui/theme'
 import { ref } from 'vue'
-import {
-  BluetoothFilled,
-  SignalCellularAltFilled,
-  WifiFilled,
-} from '@interface-ui/icons'
+import Bluetooth from '@interface-ui/icons/BluetoothFilled'
+import SignalCellularAlt from '@interface-ui/icons/SignalCellularAltFilled'
+import Wifi from '@interface-ui/icons/WifiFilled'
 const theme = useTheme()
 const checked = ref([true, false, false])
 const switched = ref([true, false, false])
@@ -61,7 +59,7 @@ const switched = ref([true, false, false])
       <in-list-item-header> Settings </in-list-item-header>
       <in-list-item>
         <template #leading="{ icon }">
-          <wifi-filled v-bind="icon" />
+          <wifi v-bind="icon" />
         </template>
         Wifi
         <template #trailing>
@@ -70,7 +68,7 @@ const switched = ref([true, false, false])
       </in-list-item>
       <in-list-item>
         <template #leading="{ icon }">
-          <signal-cellular-alt-filled v-bind="icon" />
+          <signal-cellular-alt v-bind="icon" />
         </template>
         Cellular
         <template #trailing>
@@ -79,7 +77,7 @@ const switched = ref([true, false, false])
       </in-list-item>
       <in-list-item>
         <template #leading="{ icon }">
-          <bluetooth-filled v-bind="icon" />
+          <bluetooth v-bind="icon" />
         </template>
         Bluetooth
         <template #trailing>

@@ -47,4 +47,4 @@ lang: zh
 
 默认方向为水平，将 `orientation=vertical` 设置为使用垂直分割线。
 
-<demo src="../../../example/divider/orientation.vue" preview="[31-47]" />
+<demo src="../../../example/divider/orientation.vue" preview="[27-43]" />

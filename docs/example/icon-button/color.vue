@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import Fingerprint from '@interface-ui/icons/FingerprintFilled.js'
+import Fingerprint from '@interface-ui/icons/FingerprintFilled'
 </script>
 
 <template>
