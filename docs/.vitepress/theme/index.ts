@@ -8,17 +8,19 @@ import DemoBlock from '../components/demo-block'
 import TableBlock from '../components/table-block'
 import TeamMember from '../components/team-member'
 import BpTable from '../components/table'
+import DataTable from '../components/data-table'
 import 'uno.css'
 import './main.css'
 import './style/table-block.less'
 import './style/scrollbar.less'
 
 export default {
-  ...theme,
+  extends: theme,
   enhanceApp({ app }) {
     app.use(InterfaceUI)
     app.component('Demo', DemoBlock)
     app.component('BpTable', BpTable)
+    app.component('DataTable', DataTable)
     app.component('TableBlock', TableBlock)
     app.component('TeamMember', TeamMember)
   },

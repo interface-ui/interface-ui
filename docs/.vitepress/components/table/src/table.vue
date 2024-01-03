@@ -29,7 +29,8 @@ const bodyAreaStyle = computed(() => {
 })
 
 const innerClass = computed(() => {
-  const name = ['bp-table-inner',
+  const name = [
+    'bp-table-inner',
     { 'bp-table-border': hasBorder.value },
     { 'bp-table-stripe': isStripe.value },
     { 'bp-table-fixed-header': fixedHeight.value },
@@ -37,7 +38,7 @@ const innerClass = computed(() => {
   return name
 })
 
-const tdClass = (v) => {
+const tdClass = v => {
   const align = `text-${v.align || 'left'}`
 
   const name = [align]
@@ -60,7 +61,10 @@ const tdClass = (v) => {
             <table-empty v-if="isEmpty" :colspan="columns.length" />
 
             <template v-else>
-              <tr v-for="(item, index) in dataSource" :key="`bp-table-tbody-tr-${index}`">
+              <tr
+                v-for="(item, index) in dataSource"
+                :key="`bp-table-tbody-tr-${index}`"
+              >
                 <td
                   v-for="(v, k) in columns"
                   :key="`bp-table-tbody-td-${index}-${k}`"

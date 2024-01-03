@@ -4,14 +4,14 @@ const list: PropTableItem[] = [
     name: 'size',
     remark: 'Button size',
     type: 'Enum',
-    optional: ['small', 'medium', 'large'],
+    options: ['small', 'medium', 'large'],
     default: 'medium',
   },
   {
     name: 'color',
     remark: 'Customize the color of buttons',
     type: 'Enum',
-    optional: ['ThemeSchemes', 'ThemeCallBack', 'String'],
+    options: ['ThemeSchemes', 'ThemeCallBack', 'String'],
     default: 'primary',
   },
   {

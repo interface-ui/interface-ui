@@ -96,7 +96,7 @@ There are three sizes provided: small, medium (default), and large
 
 ## Attributes
 
-<table-block type="propsEn" :data="iconButtonProps" />
+<data-table type="props" lang="en" :data="iconButtonProps" />
 
 ## Slots
 
