@@ -66,9 +66,9 @@ Also, the `v-model` can work with `value` to accept an `array` to implement the 
 
 ## Attributes
 
-<table-block type="propsEn" :data="props" />
+<data-table type="props" lang="en" :data="props" />
 
 
 ## Slots
 
-<table-block type="slotsEn" :data="slots" />
+<data-table type="slots" lang="en" :data="slots" />

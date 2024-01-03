@@ -68,12 +68,12 @@ Button 有五种变体：elevated, filled（默认）, tonal, outlined, and text
 
 ## 属性
 
-<table-block type="propsZh" :data="props" />
+<data-table type="props" lang="zh" :data="props" />
 
 
 ## 插槽
 
-<table-block type="slotsZh" :data="slots" />
+<data-table type="slots" lang="zh" :data="slots" />
 
 
 ## 图标按钮
@@ -93,9 +93,9 @@ Button 有五种变体：elevated, filled（默认）, tonal, outlined, and text
 
 ## 属性
 
-<table-block type="propsEn" :data="iconButtonProps" />
+<data-table type="props" lang="en" :data="iconButtonProps" />
 
 
 ## 插槽
 
-<table-block type="slotsEn" :data="iconButtonSlots" />
+<data-table type="slots" lang="en" :data="iconButtonSlots" />

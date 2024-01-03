@@ -1,26 +1,27 @@
-import type { PropTableItem } from '../../../.vitepress/components/table-block/src/table'
-const list: PropTableItem[] = [
+import type { PropDataItem } from '@comp/data-table'
+const list: PropDataItem[] = [
   {
     name: 'value',
-    remark: 'display value.',
+    description: 'display value.',
     type: 'String/Number',
     default: '---',
   },
   {
     name: 'max',
-    remark: 'The maximum value displayed, when the value exceeds max, display max+',
+    description:
+      'The maximum value displayed, when the value exceeds max, display max+',
     type: '---',
     default: 'false',
   },
   {
     name: 'dot',
-    remark: 'Show small dots',
+    description: 'Show small dots',
     type: 'Boolean',
     default: 'false',
   },
   {
     name: 'flashing',
-    remark: 'Flashing',
+    description: 'Flashing',
     type: 'Boolean',
     default: 'false',
   },

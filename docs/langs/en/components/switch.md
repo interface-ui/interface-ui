@@ -33,4 +33,4 @@ There is a confirm icon in checked state by default, use `disabled-icon` to hide
 <demo src="../../../example/switch/icon.vue" />
 
 ## Attributes
-<table-block type="propsZh" :data="props" />
+<data-table type="props" lang="zh" :data="props" />

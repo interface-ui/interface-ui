@@ -1,14 +1,10 @@
 <script lang="ts" setup>
-import * as pkg from 'fusion-ui-iconify'
-const { HomeFilled } = pkg
-// import { HomeFilled } from 'fusion-ui-iconify'
+import Home from '@interface-ui/icons/HomeFilled.js'
 </script>
 
 <template>
-  <div flex gap-5 style="align-items: flex-end">
-    <home-filled />
-    <home-filled :size="24" />
-    <home-filled size="36" />
-    <home-filled size="3em" />
-  </div>
+  <home />
+  <home font-size="24" />
+  <home font-size="36" />
+  <home font-size="3em" />
 </template>

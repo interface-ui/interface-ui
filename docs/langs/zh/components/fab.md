@@ -27,7 +27,7 @@ lang: zh
 ### 大小
 
 悬浮操作按钮的大小可以是小、中（默认）和大。使用 `size` 属性来更改大小。
-<demo src="../../../example/fab/size.vue" preview="[7-15]" />
+<demo src="../../../example/fab/size.vue" preview="[6-14]" />
 
 ### 颜色
 
@@ -37,9 +37,9 @@ lang: zh
 
 ## 属性
 
-<table-block type="propsEn" :data="props" />
+<data-table type="props" lang="en" :data="props" />
 
 
 ## 插槽
 
-<table-block type="slotsEn" :data="slots" />
+<data-table type="slots" lang="en" :data="slots" />

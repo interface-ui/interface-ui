@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "guide": ["./guide/*"]
+      "@comp/*": ["./.vitepress/components/*"]
     }
   },
   "exclude": ["**/dist/**"],

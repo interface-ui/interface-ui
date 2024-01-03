@@ -1,40 +1,40 @@
-import type { PropTableItem } from '../../../.vitepress/components/table-block/src/table'
-const list: PropTableItem[] = [
+import type { PropDataItem } from '@comp/data-table'
+const list: PropDataItem[] = [
   {
     name: 'v-model',
-    remark: 'Binding value',
+    description: 'Binding value',
     type: 'Boolean|Array',
     default: '---',
   },
   {
     name: 'size',
-    remark: 'checkBox size',
+    description: 'checkBox size',
     type: 'Enum',
-    optional: ['small', 'medium', 'large'],
+    options: ['small', 'medium', 'large'],
     default: 'medium',
   },
   {
     name: 'color',
-    remark: 'checkBox Color',
+    description: 'checkBox Color',
     type: 'Enum',
-    optional: ['ThemeSchemes', 'ThemeCallBack', 'String'],
+    options: ['ThemeSchemes', 'ThemeCallBack', 'String'],
     default: 'primary',
   },
   {
     name: 'label',
-    remark: 'Label',
+    description: 'Label',
     type: 'string',
     default: '---',
   },
   {
     name: 'disabled',
-    remark: 'Disabled state',
+    description: 'Disabled state',
     type: 'Boolean',
     default: 'false',
   },
   {
     name: 'cs',
-    remark: 'Prop to overwrite the default style',
+    description: 'Prop to overwrite the default style',
     type: 'TemplateStringsArray',
   },
 ]

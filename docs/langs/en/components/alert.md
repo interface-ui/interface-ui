@@ -52,8 +52,8 @@ The `cs` attribute is provided to flexibly configure the desired color.
 
 ## Attribute
 
-<table-block type="propsEn" :data="props" />
+<data-table type="props" lang="en" :data="props" />
 
 
 ## Slots
-<table-block type="slotsEn" :data="slots" />
+<data-table type="slots" lang="en" :data="slots" />

@@ -54,4 +54,4 @@ Interface UI 默认使用 [Roboto](https://fonts.google.com/specimen/Roboto) 字
 
 ## 属性
 
-<table-block type="propsZh" :data="props" />
+<data-table type="props" lang="zh" :data="props" />

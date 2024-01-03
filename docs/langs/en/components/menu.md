@@ -46,7 +46,7 @@ The `anchor` also can be the `MouseEvent`. This will help to build the custom co
 
 ## Attributes
 
-<table-block type="propsEn" :data="props" />
+<data-table type="props" lang="en" :data="props" />
 
 ## Events
 

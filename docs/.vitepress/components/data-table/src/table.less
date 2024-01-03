@@ -1,0 +1,35 @@
+.data-table {
+  width: 100%;
+  display: table !important;
+
+  thead,
+  tbody,
+  tr,
+  th {
+    background: none !important;
+  }
+
+  th {
+    font-weight: bolder;
+  }
+
+  tr {
+    border-top: 1px solid var(--vp-c-divider);
+    border-bottom: 1px solid var(--vp-c-divider);
+  }
+
+  th,
+  td {
+    border: none !important;
+    position: relative;
+  }
+}
+
+.type-code {
+  font-size: var(--vp-code-font-size);
+  color: var(--vp-code-color);
+  background-color: var(--vp-code-bg);
+  border-radius: 4px;
+  padding: 3px 6px;
+  white-space: nowrap;
+}

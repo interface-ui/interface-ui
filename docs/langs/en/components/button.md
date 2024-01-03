@@ -71,12 +71,12 @@ Button with icon and label. The `leading` and `trailing` attributes help to opti
 
 ## Props
 
-<table-block type="propsEn" :data="props" />
+<data-table type="props" lang="en" :data="props" />
 
 
 ## Slots
 
-<table-block type="slotsEn" :data="slots" />
+<data-table type="slots" lang="en" :data="slots" />
 
 
 ## Icon Button
@@ -96,8 +96,9 @@ There are three sizes provided: small, medium (default), and large
 
 ## Attributes
 
-<table-block type="propsEn" :data="iconButtonProps" />
+<data-table type="props" lang="en" :data="iconButtonProps" />
+
 
 ## Slots
 
-<table-block type="slotsEn" :data="iconButtonSlots" />
+<data-table type="slots" lang="en" :data="iconButtonSlots" />

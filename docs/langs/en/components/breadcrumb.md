@@ -57,4 +57,4 @@ The accessibility of this component relies on:
 
 ## Attributes
 
-<table-block type="propsEn" :data="props" />
+<data-table type="props" lang="en" :data="props" />

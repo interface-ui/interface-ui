@@ -1,28 +1,28 @@
-import type { PropTableItem } from '../../../.vitepress/components/table-block/src/table'
-const list: PropTableItem[] = [
+import type { PropDataItem } from '@comp/data-table'
+const list: PropDataItem[] = [
   {
     name: 'modelValue',
-    remark: 'Binding value',
+    description: 'Binding value',
     type: 'Boolean',
     default: '---',
   },
   {
     name: 'size',
-    remark: 'Switch size',
+    description: 'Switch size',
     type: 'Enum',
-    optional: ['small', 'medium', 'large'],
+    options: ['small', 'medium', 'large'],
     default: 'medium',
   },
   {
     name: 'color',
-    remark: 'Customize the color of switches',
+    description: 'Customize the color of switches',
     type: 'Enum',
-    optional: ['ThemeSchemes', 'ThemeCallBack', 'String'],
+    options: ['ThemeSchemes', 'ThemeCallBack', 'String'],
     default: 'primary',
   },
   {
     name: 'disabledIcon',
-    remark: 'Hide the icon in checked state',
+    description: 'Hide the icon in checked state',
     type: 'Boolean',
     default: 'false',
   },

@@ -52,8 +52,8 @@ Variant 提供了两种填充状态`Filled` 与 `Outlined`，默认`Filled`。
 
 ## Attribute
 
-<table-block type="propsZh" :data="props" />
+<data-table type="props" lang="zh" :data="props" />
 
 
 ## Slots
-<table-block type="slotsZh" :data="slots" />
+<data-table type="slots" lang="zh" :data="slots" />

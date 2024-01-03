@@ -59,4 +59,4 @@ The `action` attribute can be used to customize the close button for manual clos
 
 The properties of the [`Alert`](./alert.md) component are applicable to the Message component; no further details are provided here.
 
-<table-block type="propsEn" :data="props" />
+<data-table type="props" lang="en" :data="props" />

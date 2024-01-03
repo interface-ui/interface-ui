@@ -1,42 +1,42 @@
-import type { PropTableItem } from '../../../.vitepress/components/table-block/src/table'
-const list: PropTableItem[] = [
+import type { PropDataItem } from '@comp/data-table'
+const list: PropDataItem[] = [
   {
     name: 'variant',
-    remark: '按钮变体',
+    description: '按钮变体',
     type: 'Enum',
-    optional: ['text', 'filled', 'outlined'],
+    options: ['text', 'filled', 'outlined'],
     default: 'filled',
   },
   {
     name: 'size',
-    remark: '按钮大小',
+    description: '按钮大小',
     type: 'Enum',
-    optional: ['small', 'medium', 'large'],
+    options: ['small', 'medium', 'large'],
     default: 'medium',
   },
   {
     name: 'shape',
-    remark: '按钮形状',
+    description: '按钮形状',
     type: 'Enum',
-    optional: ['rounded', 'fullRounded', 'square'],
+    options: ['rounded', 'fullRounded', 'square'],
     default: 'rounded',
   },
   {
     name: 'color',
-    remark: '自定义按钮颜色',
+    description: '自定义按钮颜色',
     type: 'Enum',
-    optional: ['ThemeSchemes', 'ThemeCallBack', 'String'],
+    options: ['ThemeSchemes', 'ThemeCallBack', 'String'],
     default: 'primary',
   },
   {
     name: 'disableRipple',
-    remark: '禁用涟漪效果',
+    description: '禁用涟漪效果',
     type: 'Boolean',
     default: 'false',
   },
   {
     name: 'cs',
-    remark: '覆盖组件默认样式的prop',
+    description: '覆盖组件默认样式的prop',
     type: 'TemplateStringsArray',
   },
 ]

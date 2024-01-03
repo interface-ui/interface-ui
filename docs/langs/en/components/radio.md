@@ -45,4 +45,4 @@ You can change the placement of the label with the `<FormLabel />` component's `
 
 ## Attributes
 
-<table-block type="propsEn" :data="props" />
+<data-table type="props" lang="en" :data="props" />

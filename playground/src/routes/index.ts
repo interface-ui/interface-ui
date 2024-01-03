@@ -57,9 +57,9 @@ const routes: RouteRecordRaw[] = [
     component: () => import('../components/Link.vue'),
   },
   {
-    path: '/fba',
-    name: 'FBA',
-    component: () => import('../components/FBA.vue'),
+    path: '/fab',
+    name: 'FAB',
+    component: () => import('../components/FAB.vue'),
   },
   {
     path: '/card',

@@ -56,7 +56,7 @@ Use `AvatarGroup` to combine multiple avatars together, and the `max` attribute 
 
 
 ## Attributes
-<table-block type="propsZh" :data="props" />
+<data-table type="props" lang="zh" :data="props" />
 
 
 ## Events
@@ -64,4 +64,4 @@ Use `AvatarGroup` to combine multiple avatars together, and the `max` attribute 
 
 
 ## Slots
-<table-block type="slotsZh" :data="slots" />
+<data-table type="slots" lang="zh" :data="slots" />

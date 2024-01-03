@@ -1,34 +1,34 @@
-import type { PropTableItem } from '../../../.vitepress/components/table-block/src/table'
-const list: PropTableItem[] = [
+import type { PropDataItem } from '@comp/data-table'
+const list: PropDataItem[] = [
   {
     name: 'separator',
-    remark: 'separator',
+    description: 'separator',
     type: 'String | Component',
     default: '/',
   },
   {
     name: 'color',
-    remark: 'link color',
+    description: 'link color',
     type: 'Enum',
-    optional: ['ThemeSchemes', 'ThemeCallBack', 'String'],
+    options: ['ThemeSchemes', 'ThemeCallBack', 'String'],
     default: 'primary',
   },
   {
     name: 'underline',
-    remark: 'underline style',
+    description: 'underline style',
     type: 'Enum',
-    optional: ['none', 'hover', 'always'],
+    options: ['none', 'hover', 'always'],
     default: 'hover',
   },
   {
     name: 'max',
-    remark: 'max cound to show',
+    description: 'max cound to show',
     type: 'String | Number',
     default: '--',
   },
   {
     name: 'cs',
-    remark: 'Flexible css configuration',
+    description: 'Flexible css configuration',
     type: 'String | Object',
     default: '--',
   },

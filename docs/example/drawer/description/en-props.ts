@@ -1,41 +1,41 @@
-import type { PropTableItem } from '../../../.vitepress/components/table-block/src/table'
-const list: PropTableItem[] = [
+import type { PropDataItem } from '@comp/data-table'
+const list: PropDataItem[] = [
   {
     name: 'model-value / v-model',
-    remark: 'Enter box values',
+    description: 'Enter box values',
     type: 'Enum',
-    optional: ['String', 'Number'],
+    options: ['String', 'Number'],
     default: '---',
   },
   {
     name: 'disabled',
-    remark: 'Disabled state',
+    description: 'Disabled state',
     type: 'Boolean',
     default: 'false',
   },
   {
     name: 'clearable',
-    remark: 'Empty with one click',
+    description: 'Empty with one click',
     type: 'String',
     default: '---',
   },
   {
     name: 'prefixIcon',
-    remark: 'Prefix icon',
+    description: 'Prefix icon',
     type: 'String',
     default: '---',
   },
   {
     name: 'suffixIcon',
-    remark: 'Suffix icon',
+    description: 'Suffix icon',
     type: 'String',
     default: '---',
   },
   {
     name: 'type',
-    remark: 'Type of input box',
+    description: 'Type of input box',
     type: 'Enum',
-    optional: ['text', 'password', 'textarea', 'number'],
+    options: ['text', 'password', 'textarea', 'number'],
     default: 'text',
   },
 ]

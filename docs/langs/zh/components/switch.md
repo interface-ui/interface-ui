@@ -33,4 +33,4 @@ lang: zh
 <demo src="../../../example/switch/icon.vue" />
 
 ## 属性
-<table-block type="propsZh" :data="props" />
+<data-table type="props" lang="zh" :data="props" />

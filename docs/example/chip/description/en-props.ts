@@ -1,38 +1,37 @@
-import type { PropTableItem } from '../../../.vitepress/components/table-block/src/table'
-const list: PropTableItem[] = [
+import type { PropDataItem } from '@comp/data-table'
+const list: PropDataItem[] = [
   {
     name: 'variant',
-    remark: 'Chip variant',
+    description: 'Chip variant',
     type: 'Enum',
-    optional: ['filled', 'outlined'],
+    options: ['filled', 'outlined'],
     default: 'filled',
   },
   {
     name: 'clickable',
-    remark: 'clickable status',
+    description: 'clickable status',
     type: 'Boolean',
     default: 'false',
   },
   {
     name: 'disabled',
-    remark: 'disabled status',
+    description: 'disabled status',
     type: 'Boolean',
     default: 'false%',
   },
   {
     name: 'color',
-    remark: 'color',
+    description: 'color',
     type: 'Enum',
-    optional: ['ThemeSchemes', 'ThemeCallBack', 'string'],
+    options: ['ThemeSchemes', 'ThemeCallBack', 'string'],
     default: '---',
   },
   {
     name: 'deletable',
-    remark: 'deletable status',
+    description: 'deletable status',
     type: 'Boolean',
     default: 'false',
   },
-
 ]
 
 export default list

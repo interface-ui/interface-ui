@@ -1,47 +1,47 @@
-import type { PropTableItem } from '../../../.vitepress/components/table-block/src/table'
-const list: PropTableItem[] = [
+import type { PropDataItem } from '@comp/data-table'
+const list: PropDataItem[] = [
   {
     name: 'modelValue',
-    remark: 'Binding value',
+    description: 'Binding value',
     type: 'String',
     default: '---',
   },
   {
     name: 'variant',
-    remark: 'Component variant',
+    description: 'Component variant',
     type: 'Enum',
-    optional: ['outlined', 'filled', 'standard'],
+    options: ['outlined', 'filled', 'standard'],
     default: 'outlined',
   },
   {
     name: 'Label',
-    remark: 'Form control label',
+    description: 'Form control label',
     type: 'String',
     default: '---',
   },
   {
     name: 'color',
-    remark: 'Customize the color of buttons',
+    description: 'Customize the color of buttons',
     type: 'Enum',
-    optional: ['ThemeSchemes', 'ThemeCallBack', 'String'],
+    options: ['ThemeSchemes', 'ThemeCallBack', 'String'],
     default: 'primary',
   },
   {
     name: 'size',
-    remark: 'Button size',
+    description: 'Button size',
     type: 'Enum',
-    optional: ['small', 'medium', 'large'],
+    options: ['small', 'medium', 'large'],
     default: 'medium',
   },
   {
     name: 'error',
-    remark: 'Error state',
+    description: 'Error state',
     type: 'Boolean',
     default: 'false',
   },
   {
     name: 'supporting-text',
-    remark: 'Supporting text',
+    description: 'Supporting text',
     type: 'String',
     default: '---',
   },

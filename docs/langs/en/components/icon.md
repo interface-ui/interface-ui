@@ -4,59 +4,78 @@ lang: en
 ---
 
 <script setup lang="ts">
-  import iconProps from "../../../example/icon/description/en-icon-props.ts";
   import svgIconProps from "../../../example/icon/description/en-svgicon-props.ts";
 </script>
 
 # Icons
 
-Interface UI Icons follows [Material Symbols and Icons](https://fonts.google.com/icons?icon.set=Material+Icons) guidance to build the icon system.
+Interface UI Icons follow [Material Symbols and Icons](https://fonts.google.com/icons?icon.set=Material+Icons) guidance to build the icon system.
 
-Interface UI provides two way to build the icon:
-1. With [Interface UI Iconify](https://www.npmjs.com/package/fusion-ui-iconify) library as Vue component (SVG Icons)
+Interface UI provides three ways to build the icon:
+1. With [@interface-ui/icons](https://www.npmjs.com/package/@interface-ui/icons) library as a Vue component (SVG Icons)
 2. With the [SvgIcon](#svgicon) component, a Vue wrapper for custom SVG icons.
+3. Use the other icon library.
 
-## Interface UI Iconify
+
+## @interface-ui/icons
 
 [Material Symbols and Icons](https://fonts.google.com/icons?icon.set=Material+Icons) are available in five styles. The icons are based on the core Material Design principles and metrics.
 
-We transfer all these icons into the separate components (2.1k+ for each style, total in 1w+ icons)
+We transfer all these icons into separate components (2.1k+ for each style, total in 1w+ icons)
+
+All icons can be found [here](https://interface-ui.github.io/interface-ui-icons/).
 
 ### Installation
 
-```shell
-npm install fusion-ui-iconify
+::: code-group
+```shell [npm]
+npm i @interface-ui/icons
 ```
+
+```shell [yarn]
+yarn add @interface-ui/icons
+```
+
+```shell [pnpm]
+pnpm add @interface-ui/icons
+```
+:::
 
 ### Usage
 
-If you are not using this library with `Interface UI`, then you should import the style file.
+There are two ways to import icons:
 
-Otherwise, you don't need to do more configuration. The components in `Interface UI` already complete the adaptation for it.
+* Option 1:
+  ```js
+  import { DeleteFilled, SaveFilled } from '@interface-ui/icons'
+  ```
+* Option 2:
+  ```js
+  import DeleteFilled from '@interface-ui/icons/DeleteFilled'
+  import SaveFilled from '@interface-ui/icons/SaveFilled'
+  ```
 
-```js
-// main.js
-import 'fusion-ui-iconify/dist/style.css'
-```
+::: warning
+**Option 1** is not friendly to the bundle size.
 
-Import icons using the following way (❗️Needs to be optimized)
-```js
-import { DeleteFilled, SaveFilled } from 'fusion-ui-iconify'
-```
+We recommend using the **second option**.
 
-Each Material icon also has a "style": Filled, Outlined, Rounded, Two-tone, and Sharp. To import the icon component with a theme other than the default, append the style name to the icon name.
+Make sure you follow the **minimizing bundle size** guide before using the second approach.
+:::
 
-- Filled style is exported as `fusion-ui-iconify/dist/component/material-icons/DeleteFilled`,
-- Outlined style is exported as `fusion-ui-iconify/dist/component/material-icons/DeleteOutlined`,
-- Rounded style is exported as `fusion-ui-iconify/dist/component/material-icons/DeleteRounded`,
-- Twotone style is exported as `fusion-ui-iconify/dist/component/material-icons/DeleteTwoTone`,
-- Sharp style is exported as `fusion-ui-iconify/dist/component/material-icons/DeleteSharp`.
+Each Material icon has a "style": Filled, Outlined, Rounded, Two-tone, and Sharp. To import the icon component with a theme, append the style name to the icon name.
+
+- Filled style is exported as `@interface-ui/icons/DeleteFilled`,
+- Outlined style is exported as `@interface-ui/icons/DeleteOutlined`,
+- Rounded style is exported as `@interface-ui/icons/DeleteRounded`,
+- Sharp style is exported as `@interface-ui/icons/DeleteSharp`,
+- Twotone style is exported as `@interface-ui/icons/DeleteTwoTone`.
 
 <demo src="../../../example/icon/basic.vue" />
 
 ## SvgIcon
 
-If you need a custom SVG icon (not available in the Material Icons) you can use the SvgIcon wrapper. This component extends the native `<svg> ` element:
+If you need a custom SVG icon (not available in the Material Icons), you can use the SvgIcon wrapper. This component extends the native `<svg> ` element:
 
 It comes with built-in accessibility.
 
@@ -64,30 +83,22 @@ SVG elements should be scaled for a `24 x 24 px` viewport so that the resulting 
 
 By default, the component **inherits** the current color and font size. Optionally, you can apply one of the theme colors using the `color` prop and `size` prop to change it.
 
-It supports `<svg>` element as a child so you can copy and paste your SVG directly to SvgIcon component.
-
-<demo src="../../../example/icon/svgicon.vue" />
+It supports `<svg>` element as a child, so you can copy and paste your SVG directly to the `<SvgIcon />` component.
+<demo src="../../../example/icon/svgicon.vue"/>
 
 ### Color
+The [@interface-ui/icons](https://www.npmjs.com/package/@interface-ui/icons) do not support `ThemeSchemes` and `ThemeCallback` since they were built without dependencies.
 
-The `color` prop of Icons in [Interface UI Iconify](https://www.npmjs.com/package/fusion-ui-iconify) do not support `ThemeSchemes` and `ThemeCallback` since it was built without any dependencies.
-
-BUT❗️❗️❗️ You can use the `component` prop of `SvgIcon` to enable this feature.
-
-<demo src="../../../example/icon/color.vue" />
+BUT❗️❗️❗️ You can use the `component` prop of `<SvgIcon />` to enable this feature.
+<demo src="../../../example/icon/color.vue" preview="[6-9]" />
 
 ### Size
 
-The `size` prop accept both the String and Number.
+Use the `font-size` on the icon directly to change the size.
+<demo src="../../../example/icon/size.vue" preview="[6-9]" />
 
-<demo src="../../../example/icon/size.vue" />
 
-## Attributes
+## SvgIcon Attributes
 
-### Interface UI Iconify
+<data-table type="props" lang="en" :data="svgIconProps" />
 
-<table-block type="propsEn" :data="iconProps" />
-
-### SvgIcon
-
-<table-block type="propsEn" :data="svgIconProps" />

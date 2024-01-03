@@ -1,38 +1,37 @@
-import type { PropTableItem } from '../../../.vitepress/components/table-block/src/table'
-const list: PropTableItem[] = [
+import type { PropDataItem } from '@comp/data-table'
+const list: PropDataItem[] = [
   {
     name: 'variant',
-    remark: '变体',
+    description: '变体',
     type: 'Enum',
-    optional: ['filled', 'outlined'],
+    options: ['filled', 'outlined'],
     default: 'filled',
   },
   {
     name: 'clickable',
-    remark: '可点击状态',
+    description: '可点击状态',
     type: 'Boolean',
     default: 'false',
   },
   {
     name: 'disabled',
-    remark: '禁用状态',
+    description: '禁用状态',
     type: 'Boolean',
     default: 'false%',
   },
   {
     name: 'color',
-    remark: '颜色',
+    description: '颜色',
     type: 'Enum',
-    optional: ['ThemeSchemes', 'ThemeCallBack', 'string'],
+    options: ['ThemeSchemes', 'ThemeCallBack', 'string'],
     default: '---',
   },
   {
     name: 'deletable',
-    remark: '颜色',
+    description: '颜色',
     type: 'Boolean',
     default: 'false',
   },
-
 ]
 
 export default list

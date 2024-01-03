@@ -32,4 +32,4 @@ Link 组件允许您使用主题颜色和版式样式轻松自定义锚元素。
 
 # 属性
 
-<table-block type="propsZh" :data="props" />
+<data-table type="props" lang="zh" :data="props" />

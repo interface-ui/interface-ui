@@ -132,20 +132,25 @@ export class ComponentSchemes {
         ? `var(--md-sys-color-${toKebabCase(source)})`
         : source
 
+    const onKey = toCapitalize(source).replace(/^on/, '')
     const onColor =
-      `on${toCapitalize(source)}` in theme.schemes
-        ? `var(--md-sys-color-on-${toKebabCase(source)})`
-        : `var(--md-sys-color-on-${toKebabCase(key)})`
+      `on${onKey}` in theme.schemes
+        ? `var(--md-sys-color-on-${toKebabCase(onKey)})`
+        : source
 
+    const containerKey = source.replace(/Container$/, '')
     const colorContainer =
-      `${key}Container` in theme.schemes
-        ? `var(--md-sys-color-${toKebabCase(source)}-container)`
-        : `var(--md-sys-color-${toKebabCase(key)}-container)`
+      `${containerKey}Container` in theme.schemes
+        ? `var(--md-sys-color-${toKebabCase(containerKey)}-container)`
+        : source
 
+    const onContainerKey = toCapitalize(source)
+      .replace(/^on/, '')
+      .replace(/Container$/, '')
     const onColorContainer =
-      `on${toCapitalize(key)}Container` in theme.schemes
-        ? `var(--md-sys-color-on-${toKebabCase(source)}-container)`
-        : `var(--md-sys-color-on-${toKebabCase(key)}-container)`
+      `on${onContainerKey}Container` in theme.schemes
+        ? `var(--md-sys-color-on-${toKebabCase(onContainerKey)}-container)`
+        : source
 
     return {
       [key]: color,
