@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import Home from '@interface-ui/icons/HomeFilled'
+import Home from '@interface-ui/icons/HomeFilled.js'
 </script>
 
 <template>

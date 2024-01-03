@@ -18,52 +18,55 @@ const onClick = (e, type) => {
 </script>
 
 <template>
-  <table class="data-table">
-    <thead>
-      <tr>
-        <th v-for="tableHead in header" :key="tableHead.prop">
-          {{ tableHead.label }}
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr v-for="data in $props.data" :key="data.name">
-        <template v-for="tableHead in header" :key="tableHead.prop">
-          <th v-if="tableHead.prop === 'name'">
-            {{ data[tableHead.prop] || '-' }}
+  <div style="overflow-x: auto">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th v-for="tableHead in header" :key="tableHead.prop">
+            {{ tableHead.label }}
           </th>
-          <td v-else>
-            <template v-if="tableHead.prop === 'type'">
-              <code>
-                {{ data[tableHead.prop] || '-' }}
-              </code>
-              <in-icon-button
-                v-if="data.options?.length"
-                size="small"
-                cs="margin-left: 8px"
-                @click="onClick($event, data.options)"
-              >
-                <info />
-              </in-icon-button>
-            </template>
-            <template v-else>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="data in $props.data" :key="data.name">
+          <template v-for="tableHead in header" :key="tableHead.prop">
+            <th v-if="tableHead.prop === 'name'">
               {{ data[tableHead.prop] || '-' }}
-            </template>
-          </td>
-        </template>
-      </tr>
-    </tbody>
-  </table>
-  <in-popover
-    keep-mounted
-    :anchor="anchor"
-    :open="Boolean(anchor)"
-    :placement="{ x: 'center' }"
-    cs="padding: 8px 16px"
-    @close="anchor = null"
-  >
-    <code class="type-code">
-      {{ typeData?.join(' | ') }}
-    </code>
-  </in-popover>
+            </th>
+            <td v-else>
+              <template v-if="tableHead.prop === 'type'">
+                <code>
+                  {{ data[tableHead.prop] || '-' }}
+                </code>
+                <in-icon-button
+                  v-if="data.options?.length"
+                  size="small"
+                  cs="margin-left: 8px"
+                  @click="onClick($event, data.options)"
+                >
+                  <info />
+                </in-icon-button>
+              </template>
+              <template v-else>
+                {{ data[tableHead.prop] || '-' }}
+              </template>
+            </td>
+          </template>
+        </tr>
+      </tbody>
+    </table>
+
+    <in-popover
+      keep-mounted
+      :anchor="anchor"
+      :open="Boolean(anchor)"
+      :placement="{ x: 'center' }"
+      cs="padding: 8px 16px"
+      @close="anchor = null"
+    >
+      <code class="type-code">
+        {{ typeData?.join(' | ') }}
+      </code>
+    </in-popover>
+  </div>
 </template>
