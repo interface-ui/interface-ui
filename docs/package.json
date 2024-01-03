@@ -26,7 +26,6 @@
     "@interface-ui/utils": "workspace:*",
     "@vue/repl": "3.2.0",
     "@vueuse/core": "^9.1.1",
-    "fusion-ui-iconify": "^1.0.46",
     "markdown-it": "^13.0.1"
   },
   "devDependencies": {
