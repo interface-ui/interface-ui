@@ -9,5 +9,8 @@ export default defineConfig(() => {
         '@comp': './.vitepress/components',
       },
     },
+    ssr: {
+      noExternal: ['@vue/repl'],
+    },
   }
 })

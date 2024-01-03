@@ -147,6 +147,9 @@ importers:
       '@interface-ui/utils':
         specifier: workspace:*
         version: link:../packages/utils
+      '@vue/repl':
+        specifier: ^3.1.0
+        version: 3.1.0
       '@vueuse/core':
         specifier: ^9.1.1
         version: 9.13.0(vue@3.3.13)
@@ -2697,6 +2700,10 @@ packages:
     dependencies:
       '@vue/shared': 3.4.0-rc.3
     dev: true
+
+  /@vue/repl@3.1.0:
+    resolution: {integrity: sha512-lnR010NTkysg71Z0TVsFCTfiF5ARZbyohqymGpOxOrSuSI4o9RlSvWH6YmJdv9OHm5j69HKLVVUhXlCScMCQrg==}
+    dev: false
 
   /@vue/runtime-core@3.3.13:
     resolution: {integrity: sha512-1TzA5TvGuh2zUwMJgdfvrBABWZ7y8kBwBhm7BXk8rvdx2SsgcGfz2ruv2GzuGZNvL1aKnK8CQMV/jFOrxNQUMA==}

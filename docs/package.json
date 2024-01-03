@@ -17,6 +17,7 @@
     "serve": "vitepress serve"
   },
   "dependencies": {
+    "@vue/repl": "^3.1.0",
     "@emotion/css": "^11.11.2",
     "@fontsource/roboto": "^5.0.8",
     "@interface-ui/constants": "workspace:*",
