@@ -54,4 +54,4 @@ Key factors to follow for an accessible typography:
 
 ## Attributes
 
-<table-block type="propsEn" :data="props" />
+<data-table type="props" lang="en" :data="props" />

@@ -45,4 +45,4 @@ When the attribute `deletable=true`, `Chip` will display a close icon and will e
 
 ## Attributes
 
-<table-block type="propsEn" :data="props" />
+<data-table type="props" lang="en" :data="props" />

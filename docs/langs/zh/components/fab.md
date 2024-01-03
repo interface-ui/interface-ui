@@ -37,9 +37,9 @@ lang: zh
 
 ## 属性
 
-<table-block type="propsEn" :data="props" />
+<data-table type="props" lang="en" :data="props" />
 
 
 ## 插槽
 
-<table-block type="slotsEn" :data="slots" />
+<data-table type="slots" lang="en" :data="slots" />

@@ -54,7 +54,7 @@ Avatar 组件可以用来代表人物或对象, 支持图片文字或者图标�
 <demo src="../../../example/avatar/group.vue" />
 
 ## 属性
-<table-block type="propsZh" :data="props" />
+<data-table type="props" lang="zh" :data="props" />
 
 
 ## 事件
@@ -62,4 +62,4 @@ Avatar 组件可以用来代表人物或对象, 支持图片文字或者图标�
 
 
 ## 插槽
-<table-block type="slotsZh" :data="slots" />
+<data-table type="slots" lang="zh" :data="slots" />

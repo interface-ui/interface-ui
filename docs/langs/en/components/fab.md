@@ -37,9 +37,9 @@ Use `color` to style the `<Fab />` component
 
 ## Attributes
 
-<table-block type="propsEn" :data="props" />
+<data-table type="props" lang="en" :data="props" />
 
 
 ## Slots
 
-<table-block type="slotsEn" :data="slots" />
+<data-table type="slots" lang="en" :data="slots" />

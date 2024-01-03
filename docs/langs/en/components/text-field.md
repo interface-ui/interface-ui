@@ -67,4 +67,4 @@ Also, the `supporting-text` can be set to provider more information.
 
 ## Attributes
 
-<table-block type="propsEn" :data="props" />
+<data-table type="props" lang="en" :data="props" />

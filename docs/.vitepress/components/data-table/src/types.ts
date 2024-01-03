@@ -40,8 +40,11 @@ export interface TableDataItem {
 
 type Optional<T, K extends keyof T> = Omit<T, K> & Partial<Pick<T, K>>
 
-type PropDataItem = Optional<TableDataItem, 'options' | 'version'>
-type SlotDataItem = Optional<
+export type PropDataItem = Optional<
+  TableDataItem,
+  'options' | 'version' | 'default'
+>
+export type SlotDataItem = Optional<
   TableDataItem,
   'type' | 'options' | 'default' | 'version'
 >

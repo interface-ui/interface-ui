@@ -1,32 +1,37 @@
-import type { PropTableItem } from '../../../.vitepress/components/table-block/src/table'
-const list: PropTableItem[] = [
+import type { PropDataItem } from '@comp/data-table'
+const list: PropDataItem[] = [
   {
     name: 'color',
-    remark: 'color',
+    description: 'color',
     default: '--',
     type: 'Enum',
-    optional: ['ThemeSchemes', 'ThemeCallBack', 'String'],
+    options: ['ThemeSchemes', 'ThemeCallBack', 'String'],
   },
   {
     name: 'underline',
-    remark: 'underline',
+    description: 'underline',
     default: 'hover',
     type: 'Enum',
-    optional: ['hover', 'none', 'always'],
+    options: ['hover', 'none', 'always'],
   },
   {
     name: 'href',
-    remark: 'Native href attribute',
+    description: 'Native href attribute',
     type: 'String',
     default: '---',
   },
   {
     name: 'icon',
-    remark: 'Icon component',
+    description: 'Icon component',
     type: 'String',
     default: '---',
   },
-  { name: 'underline', remark: 'underline', type: 'Boolean', default: 'false' },
+  {
+    name: 'underline',
+    description: 'underline',
+    type: 'Boolean',
+    default: 'false',
+  },
 ]
 
 export default list

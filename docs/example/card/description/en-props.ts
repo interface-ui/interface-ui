@@ -1,32 +1,32 @@
-import type { PropTableItem } from '../../../.vitepress/components/table-block/src/table'
-const list: PropTableItem[] = [
+import type { PropDataItem } from '@comp/data-table'
+const list: PropDataItem[] = [
   {
     name: 'header',
-    remark: 'card header content',
+    description: 'card header content',
     type: 'string',
     default: '"card-header"',
   },
   {
     name: 'border',
-    remark: 'card border',
+    description: 'card border',
     type: 'boolean',
     default: 'true',
   },
   {
     name: 'hover',
-    remark: 'hover effect',
+    description: 'hover effect',
     type: 'boolean',
     default: 'false',
   },
   {
     name: 'background',
-    remark: 'card background',
+    description: 'card background',
     type: 'string',
     default: '',
   },
   {
     name: 'width',
-    remark: 'card width',
+    description: 'card width',
     type: 'number',
     default: '300',
   },

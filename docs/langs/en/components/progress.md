@@ -42,4 +42,4 @@ Use `color` to custom the progress
 
 ## Attribute
 
-<table-block type="propsZh" :data="props" />
+<data-table type="props" lang="zh" :data="props" />

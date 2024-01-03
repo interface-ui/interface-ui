@@ -1,24 +1,24 @@
-import type { PropTableItem } from '../../../.vitepress/components/table-block/src/table'
-const list: PropTableItem[] = [
+import type { PropDataItem } from '@comp/data-table'
+const list: PropDataItem[] = [
   {
     name: 'v-model',
-    remark: '绑定的值',
+    description: '绑定的值',
     type: 'Enum',
-    optional: ['string', 'number'],
+    options: ['string', 'number'],
     default: 'default',
   },
   {
     name: 'size',
-    remark: '单选框尺寸',
+    description: '单选框尺寸',
     type: 'Enum',
-    optional: ['small', 'medium', 'large'],
+    options: ['small', 'medium', 'large'],
     default: 'medium',
   },
   {
     name: 'color',
-    remark: '自定义单选框颜色',
+    description: '自定义单选框颜色',
     type: 'Enum',
-    optional: ['ThemeSchemes', 'ThemeCallBack', 'String'],
+    options: ['ThemeSchemes', 'ThemeCallBack', 'String'],
     default: 'primary',
   },
 ]

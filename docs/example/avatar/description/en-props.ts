@@ -1,58 +1,58 @@
-import type { PropTableItem } from '../../../.vitepress/components/table-block/src/table'
-const list: PropTableItem[] = [
+import type { PropDataItem } from '@comp/data-table'
+const list: PropDataItem[] = [
   {
     name: 'src',
-    remark: 'The source address of the picture',
+    description: 'The source address of the picture',
     type: 'String',
     default: '---',
   },
   {
     name: 'size',
-    remark: 'size',
+    description: 'size',
     type: 'Enum',
-    optional: ['small', 'default', 'large'],
+    options: ['small', 'default', 'large'],
     default: '---',
   },
   {
     name: 'width',
-    remark: 'width',
+    description: 'width',
     type: 'String/Number',
     default: '40',
   },
   {
     name: 'height',
-    remark: 'height',
+    description: 'height',
     type: 'String/Number',
     default: '40',
   },
   {
     name: 'color',
-    remark: 'Text color',
+    description: 'Text color',
     type: 'String',
     default: 'white',
   },
   {
     name: 'background',
-    remark: 'background color',
+    description: 'background color',
     type: 'String',
     default: '---',
   },
   {
     name: 'shape',
-    remark: 'shape',
+    description: 'shape',
     type: 'Enum',
-    optional: ['circle', 'square', 'rounded'],
+    options: ['circle', 'square', 'rounded'],
     default: 'circle',
   },
   {
     name: 'max',
-    remark: 'Limit the number of avatars',
+    description: 'Limit the number of avatars',
     type: 'String/Number',
     default: '5',
   },
   {
     name: 'total',
-    remark: 'Control the number of avatars that are not displayed',
+    description: 'Control the number of avatars that are not displayed',
     type: 'String/Number',
     default: '0',
   },

@@ -102,4 +102,4 @@ SVG元素应缩放为 `24 x 24像素` 的视口，以便生成的图标可以直
 
 ## SvgIcon 属性
 
-<table-block type="propsZh" :data="svgIconProps" />
+<data-table type="props" lang="zh" :data="svgIconProps" />

@@ -1,36 +1,55 @@
-import type { PropTableItem } from '../../../.vitepress/components/table-block/src/table'
-const list: PropTableItem[] = [
+import type { PropDataItem } from '@comp/data-table'
+const list: PropDataItem[] = [
   {
     name: 'component',
-    remark: '颜色',
+    description: '颜色',
     default: '--',
     type: 'Enum',
-    optional: ['ThemeSchemes', 'ThemeCallBack', 'String'],
+    options: ['ThemeSchemes', 'ThemeCallBack', 'String'],
   },
   {
     name: 'background',
-    remark: '背景颜色',
+    description: '背景颜色',
     default: 'surface',
     type: 'String｜Function',
-
   },
   {
     name: 'level',
-    remark: '原生 href 属性',
+    description: '原生 href 属性',
     type: 'String',
     default: '---',
   },
   {
     name: 'sublist',
-    remark: '图标按钮',
+    description: '图标按钮',
     type: 'String',
     default: '---',
   },
-  { name: 'selectable', remark: '下划线', type: 'Boolean', default: 'false' },
-  { name: 'alignItems', remark: '下划线', type: 'Boolean', default: 'false' },
-  { name: 'highlightColor', remark: '下划线', type: 'Boolean', default: 'false' },
-  { name: 'disablePadding', remark: '下划线', type: 'Boolean', default: 'false' },
-  { name: 'cs', remark: '下划线', type: 'Boolean', default: 'false' },
+  {
+    name: 'selectable',
+    description: '下划线',
+    type: 'Boolean',
+    default: 'false',
+  },
+  {
+    name: 'alignItems',
+    description: '下划线',
+    type: 'Boolean',
+    default: 'false',
+  },
+  {
+    name: 'highlightColor',
+    description: '下划线',
+    type: 'Boolean',
+    default: 'false',
+  },
+  {
+    name: 'disablePadding',
+    description: '下划线',
+    type: 'Boolean',
+    default: 'false',
+  },
+  { name: 'cs', description: '下划线', type: 'Boolean', default: 'false' },
 ]
 
 export default list

@@ -46,6 +46,6 @@ With the help of `styled` function, the `Badge` becomes more flexiable.
 
 ## Attribute
 
-<table-block type="propsZh" :data="props" />
+<data-table type="props" lang="zh" :data="props" />
 
 

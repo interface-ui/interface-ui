@@ -100,5 +100,5 @@ Use the `font-size` on the icon directly to change the size.
 
 ## SvgIcon Attributes
 
-<table-block type="propsEn" :data="svgIconProps" />
+<data-table type="props" lang="en" :data="svgIconProps" />
 

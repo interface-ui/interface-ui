@@ -57,14 +57,22 @@ export const header = {
   slotsEn: slotHeaderEn,
 }
 /** Props 属性类型 */
-export type PropType = 'String' | 'Number' | 'Boolean' | 'Array' | 'Enum' | 'Object' | 'Function' | String
+export type PropType =
+  | 'String'
+  | 'Number'
+  | 'Boolean'
+  | 'Array'
+  | 'Enum'
+  | 'Object'
+  | 'Function'
+  | String
 
 /** Props 属性 */
 export interface PropTableItem {
   /** 属性名 */
   name: string
   /** 说明 */
-  remark: string
+  description: string
   /** 类型 */
   type: PropType | PropType[]
   /** 可选值，type 为 enum 时可用 */
@@ -82,7 +90,7 @@ export interface EventTableItem {
   /** 事件名 */
   name: string
   /** 说明 */
-  remark: string
+  description: string
   /** 类型 */
   type?: string
   /** 参数 */
@@ -98,7 +106,7 @@ export interface MethodTableItem {
   /** 方法名 */
   name: string
   /** 说明 */
-  remark: string
+  description: string
   /** 参数 */
   params?: string
   /** 返回值 */
@@ -114,7 +122,7 @@ export interface SlotTableItem {
   /** 方法名 */
   name: string
   /** 说明 */
-  remark: string
+  description: string
   /** 参数 */
   params?: string
   /** 版本号 */

@@ -31,4 +31,4 @@ Underline for text links.
 
 ## Attributes
 
-<table-block type="propsEn" :data="props" />
+<data-table type="props" lang="en" :data="props" />

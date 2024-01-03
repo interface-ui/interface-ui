@@ -1,22 +1,22 @@
-import type { PropTableItem } from '../../../.vitepress/components/table-block/src/table'
-const list: PropTableItem[] = [
+import type { PropDataItem } from '@comp/data-table'
+const list: PropDataItem[] = [
   {
     name: 'size',
-    remark: 'Button size',
-    type: 'Enum',
+    description: 'Button size',
+    type: 'string',
     options: ['small', 'medium', 'large'],
     default: 'medium',
   },
   {
     name: 'color',
-    remark: 'Customize the color of buttons',
-    type: 'Enum',
+    description: 'Customize the color of buttons',
+    type: 'AcceptableColor',
     options: ['ThemeSchemes', 'ThemeCallBack', 'String'],
     default: 'primary',
   },
   {
     name: 'cs',
-    remark: 'Prop to overwrite the default style',
+    description: 'Prop to overwrite the default style',
     type: 'TemplateStringsArray',
   },
 ]

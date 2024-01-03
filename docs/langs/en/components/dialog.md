@@ -47,4 +47,4 @@ The ```close-on-click-modal``` prop controls whether the Dialog can be closed by
 
 ## Attributes
 
-<table-block type="propsEn" :data="props" />
+<data-table type="props" lang="en" :data="props" />

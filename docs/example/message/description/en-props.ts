@@ -1,50 +1,50 @@
-import type { PropTableItem } from '../../../.vitepress/components/table-block/src/table'
-const list: PropTableItem[] = [
+import type { PropDataItem } from '@comp/data-table'
+const list: PropDataItem[] = [
   {
     name: 'title',
-    remark: 'title',
+    description: 'title',
     type: 'String',
     default: '--',
   },
   {
     name: 'content',
-    remark: 'content',
+    description: 'content',
     type: 'String',
     default: '--',
   },
   {
     name: 'duration',
-    remark: 'Close the delay(ms)',
+    description: 'Close the delay(ms)',
     type: 'Number',
     default: '2000',
   },
   {
     name: 'customIcon',
-    remark: 'Front icon',
+    description: 'Front icon',
     type: 'Object',
     default: '--',
   },
   {
     name: 'action',
-    remark: 'Tail icon',
+    description: 'Tail icon',
     type: 'Object',
     default: '--',
   },
   {
     name: 'actionEvent',
-    remark: 'Tail icon callback event',
+    description: 'Tail icon callback event',
     type: 'Function',
     default: '--',
   },
   {
     name: 'transition',
-    remark: 'Animation transition effect',
+    description: 'Animation transition effect',
     type: 'String',
     default: 'all 0.5s ease',
   },
   {
     name: 'placement',
-    remark: 'Message placement',
+    description: 'Message placement',
     type: 'Object',
     default: `{
       x: 'center',
