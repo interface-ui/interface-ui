@@ -120,7 +120,7 @@ defineExpose({
     <div class="flex">
       <img
         class="w-24px mr-10px"
-        src="https://github.com/interface-ui/interface-ui/raw/master/docs/public/logo.svg"
+        src="https://interface-ui.oss-cn-hongkong.aliyuncs.com/logo.svg"
         alt=""
       />
       <div class="font-extrabold">InterfaceUi Playground</div>
