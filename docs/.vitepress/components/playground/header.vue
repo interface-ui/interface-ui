@@ -1,8 +1,10 @@
 <script setup lang="ts">
-import { defineEmits, defineExpose, reactive, ref, watch } from 'vue'
+import { defineEmits, ref, watch } from 'vue'
 import DarkModeFilled from '@interface-ui/icons/DarkModeFilled'
 import LightModeFilled from '@interface-ui/icons/LightModeFilled'
+import ShareFilled from '@interface-ui/icons/ShareFilled'
 import { InIconButton } from '@interface-ui/core'
+
 const props = defineProps({
   store: {
     type: Object,
@@ -12,10 +14,10 @@ const props = defineProps({
 
 const emit = defineEmits(['changeUiVersion', 'changeEidtTheme'])
 
-const previewOptions = reactive({})
 const theme = ref(
   document.documentElement.classList.contains('dark') ? 'dark' : 'light',
 )
+
 const uiVersion = ref('latest')
 const uiVersions = ref<string[]>([])
 
@@ -32,6 +34,11 @@ const changeTheme = () => {
   }
 }
 
+const copyLink = async () => {
+  await navigator.clipboard.writeText(location.href)
+  alert('Sharable URL has been copied to clipboard.')
+}
+
 watch(
   uiVersion,
   v => {
@@ -39,6 +46,7 @@ watch(
   },
   { immediate: true },
 )
+
 /**
  * 获取所有的组件库版本
  */
@@ -48,6 +56,7 @@ async function fetchUiVersions() {
   uiVersions.value = versions
 }
 fetchUiVersions()
+
 const isVueLoading = ref(false)
 
 // vue 版本切换相关
@@ -107,10 +116,6 @@ async function fetchTsVersions() {
   )
 }
 fetchTsVersions()
-
-defineExpose({
-  previewOptions,
-})
 </script>
 
 <template>
@@ -154,9 +159,16 @@ defineExpose({
           {{ item }}
         </option>
       </select>
-      <in-icon-button class="m-l-10px m-t--5px" @click="changeTheme">
+      <in-icon-button
+        size="small"
+        class="m-l-10px m-t--5px"
+        @click="changeTheme"
+      >
         <light-mode-filled v-if="theme === 'light'" />
         <dark-mode-filled v-else />
+      </in-icon-button>
+      <in-icon-button size="small" class="m-t--5px" @click="copyLink">
+        <share-filled />
       </in-icon-button>
     </div>
   </div>
