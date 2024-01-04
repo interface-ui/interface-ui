@@ -4,7 +4,6 @@ import { Repl, ReplStore } from '@vue/repl'
 import '@vue/repl/style.css'
 import headers from './header.vue'
 import { APP_CODE, COMPONENT_CODE, COMPONENT_CODE2 } from './index'
-import { format } from 'prettier'
 
 let Monaco: any
 const isMounted = ref(false)
@@ -109,7 +108,7 @@ function setUiVersion(version: string) {
       '@interface-ui/core':
         'https://cdn.jsdelivr.net/npm/temp-core@0.0.1-alpha.2/es/index.js',
       '@interface-ui/icons':
-        'https://cdn.jsdelivr.net/npm/@interface-ui/icons@0.0.1-alpha.1/es/index.js',
+        'https://cdn.jsdelivr.net/npm/@interface-ui/icons@0.0.1-alpha.2/es/index.js',
     },
   })
 }
