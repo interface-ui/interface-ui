@@ -52,8 +52,8 @@ const onOpenMessage = () => {
 <template>
   <theme-provider :theme="theme">
     <header>
-      <in-button @click="$router.replace('/')"
-        ><Home leading /> Home
+      <in-button @click="$router.replace('/')">
+        <Home leading /> Home
       </in-button>
       <in-button @click="changTheme">
         <DarkMode leading v-show="theme.mode == 'dark'" />
