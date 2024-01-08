@@ -20,10 +20,6 @@ export const avatarProps = buildProps({
   },
   color: {
     type: [String, Function] as PropType<AcceptableColor>,
-    default: 'onSurface',
-  },
-  background: {
-    type: [String, Function] as PropType<AcceptableColor>,
     default: 'surfaceVariant',
   },
   cs: {

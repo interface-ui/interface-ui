@@ -6,7 +6,7 @@ import useCss from './index.jss'
 
 const props = defineProps(avatarProps)
 const ns = useNamespace('avatar')
-const cssClass = useCss(props)
+const cssClass = useCss(props, ns)
 const { class: classAttr, ...restAttrs } = useAttrs()
 </script>
 

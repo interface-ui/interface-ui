@@ -1,9 +1,20 @@
 <script lang="ts" setup>
-import { InAvatar, InAvatarGroup } from '@interface-ui/core'
+import '@core/avatar/src/index.less'
+import '@core/avatar-group/src/index.less'
+import { InAvatar } from '@core'
 </script>
 
 <template>
-  <in-avatar-group max="3" size="50">
+  <div class="content">
+    <in-avatar>A</in-avatar>
+    <in-avatar :color="theme => theme.colors.cyan[200]"> B </in-avatar>
+    <in-avatar color="#6435b4">OK</in-avatar>
+    <in-avatar
+      alt="Remy Sharp"
+      src="https://mui.com/static/images/avatar/1.jpg"
+    />
+  </div>
+  <!-- <in-avatar-group max="3" size="50">
     <in-avatar
       alt="Remy Sharp"
       src="https://mui.com/static/images/avatar/1.jpg"
@@ -25,5 +36,5 @@ import { InAvatar, InAvatarGroup } from '@interface-ui/core'
       alt="Trevor Henderson"
       src="https://mui.com/static/images/avatar/5.jpg"
     />
-  </in-avatar-group>
+  </in-avatar-group> -->
 </template>

@@ -4,9 +4,10 @@ import { css, cx, useTheme } from '@interface-ui/theme'
 import type { ComponentStylingHook } from '@interface-ui/utils'
 import type { InputBaseProps } from './input-base'
 
-const useCss: ComponentStylingHook<InputBaseProps> = props =>
-  computed(() => {
-    const theme = useTheme()
+const useCss: ComponentStylingHook<InputBaseProps> = props => {
+  const theme = useTheme()
+
+  return computed(() => {
     const inputBaseStyle = css([
       {
         background: 'none',
@@ -32,5 +33,6 @@ const useCss: ComponentStylingHook<InputBaseProps> = props =>
     const styleFromCs = props.cs ? css(props.cs) : ''
     return cx(inputBaseStyle, { [internalStyle]: props.internal }, styleFromCs)
   })
+}
 
 export default useCss

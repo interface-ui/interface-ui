@@ -3,9 +3,10 @@ import { css, cx, useTheme } from '@interface-ui/theme'
 import type { ComponentStylingHook } from '@interface-ui/utils'
 import type { AlertProps } from './alert'
 
-const useCss: ComponentStylingHook<AlertProps> = props =>
-  computed(() => {
-    const theme = useTheme()
+const useCss: ComponentStylingHook<AlertProps> = props => {
+  const theme = useTheme()
+
+  return computed(() => {
     const severityPalette = theme.value.palettes[props.severity]
 
     const lightCss = css`
@@ -30,5 +31,6 @@ const useCss: ComponentStylingHook<AlertProps> = props =>
       styleFromCs,
     )
   })
+}
 
 export default useCss
