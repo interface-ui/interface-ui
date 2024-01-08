@@ -1,6 +1,7 @@
-import { useTheme } from './use-theme'
+import type { Ref } from 'vue'
 import { ComponentSchemes } from '@/types'
 import type { AcceptableColor } from '@/types'
+import type { Theme } from '@/core'
 import { rgbaFromHex } from '@/core'
 import type { ThemeMode } from '@/mode'
 
@@ -20,6 +21,7 @@ type UseDynamicColorReturn = Record<
  */
 export const useDynamicColor = (
   color: AcceptableColor,
+  theme: Ref<Theme>,
 ): UseDynamicColorReturn => {
   if (!color) {
     return {
@@ -30,7 +32,6 @@ export const useDynamicColor = (
     } as any
   }
 
-  const theme = useTheme()
   const computedColor = typeof color === 'function' ? color(theme.value) : color
   return {
     source: color,

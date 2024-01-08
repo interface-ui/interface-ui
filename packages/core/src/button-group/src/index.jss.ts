@@ -16,7 +16,7 @@ const useCss: ComponentStylingHook<
 > = (props, ns) => {
   const theme = useTheme()
   const dynamicColor = computed<ReturnType<typeof useDynamicColor>>(() => {
-    return useDynamicColor(props.color)
+    return useDynamicColor(props.color, theme)
   })
 
   const buttonGroupTokens = computed(() => {

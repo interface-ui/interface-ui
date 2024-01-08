@@ -20,7 +20,7 @@ let bounce: NodeJS.Timeout | null = null
 let listener: EventListener | null = null
 
 const theme = useTheme()
-const dynamicColor = computed(() => useDynamicColor(props.color))
+const dynamicColor = computed(() => useDynamicColor(props.color, theme))
 const $color = computed<string>(() => {
   const { [theme.value.mode]: schemes } = dynamicColor.value
   return schemes?.primary
