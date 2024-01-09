@@ -3,19 +3,19 @@ const list: PropDataItem[] = [
   {
     name: 'title',
     description: 'title',
-    type: 'String',
+    type: 'string',
     default: '--',
   },
   {
     name: 'content',
     description: 'content',
-    type: 'String',
+    type: 'string',
     default: '--',
   },
   {
     name: 'duration',
     description: 'Close the delay(ms)',
-    type: 'Number',
+    type: 'number',
     default: '2000',
   },
   {
@@ -39,7 +39,7 @@ const list: PropDataItem[] = [
   {
     name: 'transition',
     description: 'Animation transition effect',
-    type: 'String',
+    type: 'string',
     default: 'all 0.5s ease',
   },
   {

@@ -1,9 +1,9 @@
 .in-breadcrumb {
   width: fit-content;
-  color: rgb(var(--in-breadcrumb-color-rgb) / 0.6);
+  color: rgb(var(--in-breadcrumb-primary-rgb) / 0.6);
 
   &--item:last-child {
-    color: var(--in-breadcrumb-color);
+    color: var(--in-breadcrumb-primary);
   }
 
   &--container {
@@ -22,11 +22,12 @@
   }
   &__button--more {
     border-radius: 2px;
-    background-color: rgb(var(--in-breadcrumb-color-rgb) / 0.1);
-    font-size: 20px;
+    background-color: rgb(var(--in-breadcrumb-primary-rgb) / 0.1);
     height: fit-content;
-    .in-svg-icon {
+    .in-svg-icon,
+    .in-icon {
       width: 24px;
+      font-size: 20px;
       height: 16px;
     }
   }

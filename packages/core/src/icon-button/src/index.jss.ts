@@ -11,10 +11,9 @@ import { type IconButtonProps, iconSizeMapping } from './icon-button'
 
 const useCss: ComponentStylingHook<IconButtonProps> = (props, ns) => {
   const theme = useTheme()
-  const dynamicColor = computed(() => useDynamicColor(props.color, theme))
 
   const iconButtonTokens = computed(() => {
-    const { [theme.value.mode]: schemes } = dynamicColor.value
+    const { schemes } = useDynamicColor(props.color, theme)
 
     return css(
       schemes &&

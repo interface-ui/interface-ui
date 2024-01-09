@@ -31,13 +31,13 @@ const list: PropDataItem[] = [
   {
     name: 'noWarp',
     description: 'Make the text no wrap',
-    type: 'Boolean',
+    type: 'boolean',
     default: 'false',
   },
   {
     name: 'gutter',
     description: 'The margin of top and bottom',
-    type: 'Boolean',
+    type: 'boolean',
     default: 'false',
   },
 ]

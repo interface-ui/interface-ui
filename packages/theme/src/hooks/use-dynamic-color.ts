@@ -3,14 +3,19 @@ import { ComponentSchemes } from '@/types'
 import type { AcceptableColor } from '@/types'
 import type { Theme } from '@/core'
 import { rgbaFromHex } from '@/core'
-import type { ThemeMode } from '@/mode'
 
-type UseDynamicColorReturn = Record<
-  ThemeMode,
-  Omit<ComponentSchemes, 'props'>
-> & {
+// type UseDynamicColorReturn = Record<
+//   ThemeMode,
+//   Omit<ComponentSchemes, 'props'>
+// > & {
+//   source: AcceptableColor
+//   computedColor: string
+// }
+
+interface UseDynamicColorReturn {
   source: AcceptableColor
   computedColor: string
+  schemes: Omit<ComponentSchemes, 'props'>
 }
 
 /**
@@ -25,8 +30,7 @@ export const useDynamicColor = (
 ): UseDynamicColorReturn => {
   if (!color) {
     return {
-      light: null,
-      dark: null,
+      scheme: null,
       source: color,
       computedColor: color,
     } as any
@@ -36,8 +40,7 @@ export const useDynamicColor = (
   return {
     source: color,
     computedColor,
-    light: ComponentSchemes.light(computedColor, theme.value),
-    dark: ComponentSchemes.dark(computedColor, theme.value),
+    schemes: ComponentSchemes[theme.value.mode](computedColor, theme.value),
   }
 }
 

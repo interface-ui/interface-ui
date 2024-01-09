@@ -3,8 +3,7 @@ const list: PropDataItem[] = [
   {
     name: 'title',
     description: 'Alert 标题',
-    type: 'String',
-    default: '---',
+    type: 'string',
   },
   {
     name: 'type',
@@ -16,19 +15,19 @@ const list: PropDataItem[] = [
   {
     name: 'closable',
     description: '是否可以关闭',
-    type: 'Boolean',
+    type: 'boolean',
     default: 'false',
   },
   {
     name: 'center',
     description: '文字是否居中',
-    type: 'Boolean',
+    type: 'boolean',
     default: 'false',
   },
   {
     name: 'scrollable',
     description: '开启滚动',
-    type: 'Boolean',
+    type: 'boolean',
     default: 'false',
   },
   {

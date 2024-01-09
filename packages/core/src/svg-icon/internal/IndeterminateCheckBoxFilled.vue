@@ -7,12 +7,12 @@ defineOptions({ name: 'IndeterminateCheckBoxFilled' })
     class="in-icon"
     xmlns="http://www.w3.org/2000/svg"
     enable-background="new 0 0 24 24"
-    height="24"
+    height="1em"
     viewBox="0 0 24 24"
-    width="24"
+    width="1em"
     fill="currentcolor"
   >
-    <g><rect fill="none" height="24" width="24" /></g>
+    <g><rect fill="none" height="1em" width="1em" /></g>
     <g>
       <g>
         <g>

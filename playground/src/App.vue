@@ -8,6 +8,7 @@ import Home from '@interface-ui/icons/HomeFilled'
 import DarkMode from '@interface-ui/icons/DarkModeFilled'
 import Sunny from '@interface-ui/icons/SunnyFilled'
 import { RouterView } from 'vue-router'
+import { toCapitalize } from '@interface-ui/utils'
 
 const theme = createTheme() // create a theme instance
 
@@ -55,12 +56,14 @@ const onOpenMessage = () => {
       <in-button @click="$router.replace('/')">
         <Home leading /> Home
       </in-button>
+
       <in-button @click="changTheme">
         <DarkMode leading v-show="theme.mode == 'dark'" />
         <Sunny leading v-show="theme.mode == 'light'" />
-        {{ theme.mode }}
+        {{ toCapitalize(theme.mode) }}
       </in-button>
-      <in-button @click="onOpenMessage"> open message </in-button>
+
+      <in-button @click="onOpenMessage"> Open Message </in-button>
     </header>
 
     <router-view />

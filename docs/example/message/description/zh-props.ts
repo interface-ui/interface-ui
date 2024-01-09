@@ -3,19 +3,19 @@ const list: PropDataItem[] = [
   {
     name: 'title',
     description: '标题',
-    type: 'String',
+    type: 'string',
     default: '--',
   },
   {
     name: 'content',
     description: '内容',
-    type: 'String',
+    type: 'string',
     default: '--',
   },
   {
     name: 'duration',
     description: '关闭延时(ms)',
-    type: 'Number',
+    type: 'number',
     default: '2000',
   },
   {
@@ -39,7 +39,7 @@ const list: PropDataItem[] = [
   {
     name: 'transition',
     description: '动画过渡效果',
-    type: 'String',
+    type: 'string',
     default: 'all 0.5s ease',
   },
   {

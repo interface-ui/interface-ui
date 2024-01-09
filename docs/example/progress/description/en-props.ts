@@ -18,7 +18,6 @@ const list: PropDataItem[] = [
     name: 'value',
     description: 'Percentage of the progress indicator',
     type: 'Number | String',
-    default: '---',
   },
   {
     name: 'color',

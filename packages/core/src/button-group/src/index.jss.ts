@@ -15,12 +15,13 @@ const useCss: ComponentStylingHook<
   { cssClass: string; dynamicColor: Ref<ReturnType<typeof useDynamicColor>> }
 > = (props, ns) => {
   const theme = useTheme()
+
   const dynamicColor = computed<ReturnType<typeof useDynamicColor>>(() => {
     return useDynamicColor(props.color, theme)
   })
 
   const buttonGroupTokens = computed(() => {
-    const { [theme.value.mode]: schemes } = dynamicColor.value
+    const { schemes } = dynamicColor.value
 
     return css(
       schemes &&

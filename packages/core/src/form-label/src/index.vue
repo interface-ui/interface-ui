@@ -16,7 +16,7 @@ export default defineComponent({
 
 <template>
   <label :class="[ns.b(), ns.m(props.labelPlacement)]">
-    <component :is="props.control" v-bind="$attrs" />
+    <props.control v-bind="$attrs" />
     <in-typography
       variant="body.large"
       component="span"

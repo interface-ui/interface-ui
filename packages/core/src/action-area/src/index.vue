@@ -10,11 +10,10 @@ const cssClass = useCss(props)
 </script>
 
 <template>
-  <component
-    :is="$props.component"
+  <props.component
     :class="[ns.b(), $props.disabled ? ns.m('disabled') : '', cssClass]"
   >
     <slot />
     <in-ripple v-if="!$props.disabled" color="onSurface" />
-  </component>
+  </props.component>
 </template>

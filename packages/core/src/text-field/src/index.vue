@@ -1,37 +1,26 @@
 <script lang="ts" setup>
 import { generateId, isEmpty, useNamespace } from '@interface-ui/utils'
 import { computed, useAttrs, useSlots } from 'vue'
-import { UPDATE_MODEL_EVENT } from '@interface-ui/constants'
 import Typography from '../../typography'
 import InInputBase from '../../input-base'
 import { textFieldProps } from './text-field'
 import useCss from './index.jss'
 
 const props = defineProps(textFieldProps)
-const emit = defineEmits<{ (e: 'update:modelValue', v: string): void }>()
 const attrs = useAttrs()
 const slots = useSlots()
 const ns = useNamespace('text-field')
-const cssClass = useCss(props)
+const cssClass = useCss(props, ns)
+const value = defineModel()
 
-const value = computed<string>({
-  get() {
-    return props.modelValue
-  },
-  set(newVal) {
-    emit(UPDATE_MODEL_EVENT, newVal)
-  },
-})
 const id: string = attrs?.id
   ? (attrs.id as string)
   : `text-field-${generateId()}`
 const label = computed(() => props?.label ?? '')
 
-const hasContent = computed<boolean>(() => {
-  const startAdornment = slots?.startAdornment?.()
-
-  return !isEmpty(props.modelValue) || !!startAdornment
-})
+const hasContent = computed<boolean>(
+  () => !isEmpty(props.modelValue) || !!slots?.leading?.(),
+)
 </script>
 
 <template>
@@ -57,8 +46,8 @@ const hasContent = computed<boolean>(() => {
     </typography>
     <div :class="[ns.m('input-wrapper')]">
       <slot
-        name="startAdornment"
-        v-bind="{ class: [ns.m('start-adornment')] }"
+        name="leading"
+        v-bind="{ class: [ns.m('leading')], color: 'onSurfaceVariant' }"
       />
       <in-input-base
         :id="id"
@@ -66,7 +55,10 @@ const hasContent = computed<boolean>(() => {
         v-model="value"
         :class="[ns.e('input')]"
       />
-      <slot name="endAdornment" v-bind="{ class: [ns.m('end-adornment')] }" />
+      <slot
+        name="trailing"
+        v-bind="{ class: [ns.m('trailing')], color: 'onSurfaceVariant' }"
+      />
       <fieldset
         v-if="$props.variant === 'outlined' && $props?.label"
         :class="[ns.m('border')]"

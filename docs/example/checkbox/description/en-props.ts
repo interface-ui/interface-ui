@@ -4,7 +4,6 @@ const list: PropDataItem[] = [
     name: 'v-model',
     description: 'Binding value',
     type: 'Boolean|Array',
-    default: '---',
   },
   {
     name: 'size',
@@ -16,7 +15,7 @@ const list: PropDataItem[] = [
   {
     name: 'color',
     description: 'checkBox Color',
-    type: 'Enum',
+    type: 'AcceptableColor',
     options: ['ThemeSchemes', 'ThemeCallBack', 'String'],
     default: 'primary',
   },
@@ -24,12 +23,11 @@ const list: PropDataItem[] = [
     name: 'label',
     description: 'Label',
     type: 'string',
-    default: '---',
   },
   {
     name: 'disabled',
     description: 'Disabled state',
-    type: 'Boolean',
+    type: 'boolean',
     default: 'false',
   },
   {

@@ -31,7 +31,7 @@ const list: PropDataItem[] = [
   {
     name: 'disableRipple',
     description: 'Disable the ripple effect',
-    type: 'Boolean',
+    type: 'boolean',
     default: 'false',
   },
   {

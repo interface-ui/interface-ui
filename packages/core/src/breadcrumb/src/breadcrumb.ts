@@ -4,6 +4,8 @@ import type { AcceptableColor } from '@interface-ui/theme'
 import type { LinkUnderlineStyles } from '../../link'
 import { linkUnderlineStyles } from '../../link'
 
+export const BREADCRUMB_PROVIDE_KEY = Symbol('breadcrumb')
+
 export const breadcrumbProps = buildProps({
   underline: {
     type: String as PropType<LinkUnderlineStyles>,

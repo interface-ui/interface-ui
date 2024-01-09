@@ -4,7 +4,6 @@ const list: PropDataItem[] = [
     name: 'value',
     description: '显示的值',
     type: 'String/Number',
-    default: '---',
   },
   {
     name: 'max',
@@ -15,13 +14,13 @@ const list: PropDataItem[] = [
   {
     name: 'dot',
     description: '显示小圆点',
-    type: 'Boolean',
+    type: 'boolean',
     default: 'false',
   },
   {
     name: 'flashing',
     description: '闪烁',
-    type: 'Boolean',
+    type: 'boolean',
     default: 'false',
   },
 ]

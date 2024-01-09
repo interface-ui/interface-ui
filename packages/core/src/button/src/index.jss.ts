@@ -19,14 +19,12 @@ const useCss: ComponentStylingHook<ButtonProps> = (props, ns) => {
     true,
   )
 
-  const dynamicColor = computed(() =>
-    injection.source === props.color
-      ? injection
-      : useDynamicColor(props.color, theme),
-  )
-
   const buttonTokens = computed(() => {
-    const { [theme.value.mode]: schemes } = dynamicColor.value
+    const dynamicColor =
+      injection.source === props.color
+        ? injection
+        : useDynamicColor(props.color, theme)
+    const { schemes } = dynamicColor
 
     return css(
       schemes &&
