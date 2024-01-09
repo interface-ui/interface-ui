@@ -10,7 +10,7 @@ export const avatarGroupProps = buildProps({
   },
   avatarBorder: {
     type: String,
-    default: 'var(--md-sys-color-background)',
+    default: 'background',
   },
 })
 
