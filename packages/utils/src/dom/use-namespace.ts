@@ -111,13 +111,16 @@ export const useNamespace = (
     return styles
   }
 
-  const cssVarName = (name: string) => `--${namespace.value}-${name}`
+  const cssVarName = (name: string) =>
+    `--${namespace.value}-${toKebabCase(name)}`
   const cssVarBlockName = (name: string) =>
-    `--${namespace.value}-${block}-${name}`
+    `--${namespace.value}-${block}-${toKebabCase(name)}`
 
   const getCssVar = (name: string) => `var(--${namespace.value}-${name})`
   const getCssVarBlock = (name: string, blockOverrides: string = block) =>
-    `var(--${namespace.value}-${blockOverrides}-${name})`
+    `var(--${namespace.value}-${toKebabCase(blockOverrides)}-${toKebabCase(
+      name,
+    )})`
 
   return {
     namespace,

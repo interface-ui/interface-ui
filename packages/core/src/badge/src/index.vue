@@ -1,45 +1,14 @@
 <script lang="ts" setup>
 import { debugWarn, useNamespace } from '@interface-ui/utils'
-import { css, styled, useColor } from '@interface-ui/theme'
 import { computed, useSlots } from 'vue'
-import Typography from '../../typography'
+import InTypography from '../../typography'
 import { badgeProps } from './badge'
+import useCss from './index.jss'
 
 const props = defineProps(badgeProps)
 const slots = useSlots()
 const ns = useNamespace('badge')
-const [$color, $onColor] = useColor(props, 'color')
-
-const translate = {
-  top: '-50%',
-  bottom: '50%',
-  right: '50%',
-  left: '-50%',
-}
-
-const positionCss = computed(() =>
-  slots.default
-    ? css`
-        ${props.xAlign}: 0;
-        ${props.yAlign}: 0;
-        position: absolute;
-        transform: scale(1)
-          translate(
-            ${props.overlap ? '0%' : (translate as any)[props.xAlign]},
-            ${props.overlap ? '0%' : (translate as any)[props.yAlign]}
-          );
-      `
-    : '',
-)
-const BadgeTypography = computed(
-  () => styled(Typography, { color: $onColor.value })`
-    background-color: ${$color.value};
-    height: ${props.variant === 'dot' ? '8px' : '20px'};
-    min-width: ${props.variant === 'dot' ? '8px' : '20px'};
-    border-radius: 10px;
-    padding: ${props.variant === 'dot' ? '0' : '6px'} !important;
-  `,
-)
+const cssStyles = useCss(props, ns, slots.default)
 
 const showTypography = computed(() => {
   const { content, variant } = props
@@ -69,15 +38,16 @@ const badgeContent = computed(() => {
 <template>
   <span :class="ns.b()">
     <slot />
-    <badge-typography
+    <in-typography
       v-if="showTypography"
-      :class="[ns.m('icon'), positionCss]"
+      :class="[ns.m('content'), cssStyles.cssClass]"
+      :color="ns!.getCssVarBlock('onPrimary')"
       variant="label.small"
     >
       <template v-if="props.variant !== 'dot'">
         {{ badgeContent }}
       </template>
-    </badge-typography>
-    <props.content v-else :class="[ns.m('icon'), positionCss]" />
+    </in-typography>
+    <props.content v-else :class="[ns.m('content'), cssStyles.badgePosition]" />
   </span>
 </template>

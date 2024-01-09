@@ -1,9 +1,11 @@
 <script lang="ts" setup>
-import { InAvatar, InBadge } from '@interface-ui/core'
+// import '@core/avatar/src/index.less'
+import '@core/badge/src/index.less'
+import { InAvatar, InBadge, InButton } from '@core'
 import { styled } from '@interface-ui/theme'
 
 const StyledBadge = styled(InBadge)(theme => ({
-  '& .in-badge--icon': {
+  '& .in-badge--content': {
     backgroundColor: '#44b700',
     color: '#44b700',
     boxShadow: `0 0 0 2px ${theme.schemes.background}`,
@@ -41,21 +43,23 @@ const SmallAvatar = styled(InAvatar, {
 </script>
 
 <template>
-  <div>
+  <div class="content">
     <in-badge variant="dot">
-      <in-button>Dot</in-button>
+      <in-button shape="rounded">Dot</in-button>
     </in-badge>
     <in-badge content="10">
-      <in-button>Hello</in-button>
+      <in-button shape="rounded">Hello</in-button>
     </in-badge>
     <!-- <in-badge content="6">
       <in-icon icon="mdi:bell" :color="theme => theme.colors.grey[500]" />
     </in-badge> -->
   </div>
-  <styled-badge variant="dot" y-align="bottom" overlap>
-    <in-avatar src="https://mui.com/static/images/avatar/1.jpg" />
-  </styled-badge>
-  <in-badge :content="SmallAvatar" y-align="bottom">
-    <in-avatar src="https://mui.com/static/images/avatar/1.jpg" />
-  </in-badge>
+  <div class="content">
+    <styled-badge variant="dot" y-align="bottom" overlap>
+      <in-avatar src="https://mui.com/static/images/avatar/1.jpg" />
+    </styled-badge>
+    <in-badge :content="SmallAvatar" y-align="bottom">
+      <in-avatar src="https://mui.com/static/images/avatar/1.jpg" />
+    </in-badge>
+  </div>
 </template>

@@ -36,6 +36,9 @@ export const badgeProps = buildProps({
     values: ['top', 'bottom'],
     default: 'top',
   },
+  cs: {
+    type: [Object, String],
+  },
 })
 
 export type BadgeProps = ExtractPropTypes<typeof badgeProps>
