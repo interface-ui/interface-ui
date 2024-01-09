@@ -55,17 +55,13 @@ const useCss: ComponentStylingHook<
 
   const styleFromCs = computed(() => (props.cs ? css(props.cs) : ''))
 
-  const cssClass = computed(() =>
-    cx(
+  return computed(() => ({
+    cssClass: cx(
       badgeTokens.value,
       badgePosition.value,
       badgeSize.value,
       styleFromCs.value,
     ),
-  )
-
-  return computed(() => ({
-    cssClass: cssClass.value,
     badgePosition: badgePosition.value,
   }))
 }
