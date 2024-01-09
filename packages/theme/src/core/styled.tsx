@@ -6,12 +6,13 @@ import { useTheme } from '../hooks/use-theme'
 import type Theme from './theme'
 
 type RenderTypes = Parameters<typeof h>
+type CssTypes =
+  | TemplateStringsArray
+  | CSSInterpolation
+  | ((theme: Theme) => CSSInterpolation)
 
 export const styled = (comp: Component | string, props?: RenderTypes[1]) => {
-  return (
-    style: TemplateStringsArray | ((theme: Theme) => CSSInterpolation),
-    ...args: CSSInterpolation[]
-  ) => {
+  return (style: CssTypes, ...args: CSSInterpolation[]) => {
     const theme = useTheme()
 
     return defineComponent({
@@ -19,7 +20,7 @@ export const styled = (comp: Component | string, props?: RenderTypes[1]) => {
         const cssClass = computed(() =>
           style instanceof Function
             ? css(style(theme?.value))
-            : css(style, ...args)
+            : css(style, ...args),
         )
 
         return () => {

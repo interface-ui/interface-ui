@@ -1,8 +1,17 @@
-import { useTheme } from './use-theme'
+import type { Ref } from 'vue'
 import { ComponentSchemes } from '@/types'
 import type { AcceptableColor } from '@/types'
+import type { Theme } from '@/core'
 import { rgbaFromHex } from '@/core'
 import type { ThemeMode } from '@/mode'
+
+type UseDynamicColorReturn = Record<
+  ThemeMode,
+  Omit<ComponentSchemes, 'props'>
+> & {
+  source: AcceptableColor
+  computedColor: string
+}
 
 /**
  * The function to generate the dynamic color for the component according to input color.
@@ -12,15 +21,21 @@ import type { ThemeMode } from '@/mode'
  */
 export const useDynamicColor = (
   color: AcceptableColor,
-): Record<ThemeMode, Omit<ComponentSchemes, 'props'>> & { source: string } => {
+  theme: Ref<Theme>,
+): UseDynamicColorReturn => {
   if (!color) {
-    return { light: null, dark: null, source: color } as any
+    return {
+      light: null,
+      dark: null,
+      source: color,
+      computedColor: color,
+    } as any
   }
 
-  const theme = useTheme()
   const computedColor = typeof color === 'function' ? color(theme.value) : color
   return {
-    source: computedColor,
+    source: color,
+    computedColor,
     light: ComponentSchemes.light(computedColor, theme.value),
     dark: ComponentSchemes.dark(computedColor, theme.value),
   }

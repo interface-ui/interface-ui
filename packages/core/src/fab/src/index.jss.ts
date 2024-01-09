@@ -5,7 +5,7 @@ import type { FabProps } from './fab'
 
 const useCss: ComponentStylingHook<FabProps> = (props, ns) => {
   const theme = useTheme()
-  const dynamicColor = computed(() => useDynamicColor(props.color))
+  const dynamicColor = computed(() => useDynamicColor(props.color, theme))
   const fbaTokens = computed(() => {
     const { [theme.value.mode]: schemes } = dynamicColor.value
 

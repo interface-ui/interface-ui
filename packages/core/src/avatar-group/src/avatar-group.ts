@@ -6,10 +6,11 @@ export const avatarGroupProps = buildProps({
   ...avatarProps,
   max: {
     type: [String, Number],
+    default: Infinity,
   },
   avatarBorder: {
     type: String,
-    default: 'var(--md-sys-color-background)',
+    default: 'background',
   },
 })
 
