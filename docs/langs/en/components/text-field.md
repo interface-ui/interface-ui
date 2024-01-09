@@ -23,7 +23,7 @@ The component supports three variants: outlined (default), filled, and standard.
 
 ### Form props
 
-Standard form attributes are supported, e.g., `required``, `disabled`, `type`, `placeholder` etc.
+Standard form attributes are supported, e.g., `required`, `disabled`, `type, `placeholder`, etc.
 <demo col src="../../../example/text-field/form-props.vue" />
 
 ### Size
