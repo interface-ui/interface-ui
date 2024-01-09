@@ -27,8 +27,18 @@ export default defineComponent({
             pre.push(
               <VNode {...mergeProps(unRefs(avatarProps), VNode.props ?? {})} />,
             )
-            if (index === Math.min(+max.value, slotVNodes.length)) {
-              pre.push(<InAvatar>+{slotVNodes.length - +max.value}</InAvatar>)
+
+            if (
+              index === Math.min(+max.value, slotVNodes.length) - 1 &&
+              +max.value < slotVNodes.length
+            ) {
+              pre.push(
+                <InAvatar
+                  {...mergeProps(unRefs(avatarProps), VNode.props ?? {})}
+                >
+                  +{slotVNodes.length - +max.value}
+                </InAvatar>,
+              )
             }
 
             return pre

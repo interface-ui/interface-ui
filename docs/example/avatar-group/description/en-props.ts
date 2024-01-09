@@ -25,6 +25,18 @@ const list: PropDataItem[] = [
     default: 'circle',
   },
   {
+    name: 'max',
+    description: 'The maximum number of avatars to display',
+    type: 'string | number',
+    default: 'Infinity',
+  },
+  {
+    name: 'avatar-border',
+    description: 'The border color of the avatar',
+    type: 'string',
+    default: 'background',
+  },
+  {
     name: 'cs',
     description: 'Prop to overwrite the default style',
     type: 'TemplateStringsArray',

@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import '@core/avatar/src/index.less'
 import '@core/avatar-group/src/index.less'
-import { InAvatar } from '@core'
+import { InAvatar, InAvatarGroup } from '@core'
 import Accessibility from '@interface-ui/icons/AccessibilityFilled'
 import Autorenew from '@interface-ui/icons/AutorenewFilled'
 import Book from '@interface-ui/icons/BookFilled'
@@ -50,7 +50,7 @@ import Book from '@interface-ui/icons/BookFilled'
       src="https://mui.com/static/images/avatar/5.jpg"
     />
   </in-avatar-group>
-  <in-avatar-group>
+  <!-- <in-avatar-group>
     <in-avatar
       alt="Remy Sharp"
       src="https://mui.com/static/images/avatar/1.jpg"
@@ -72,4 +72,9 @@ import Book from '@interface-ui/icons/BookFilled'
       src="https://mui.com/static/images/avatar/5.jpg"
     />
   </in-avatar-group>
+  <in-avatar-group>
+    <in-avatar>A</in-avatar>
+    <in-avatar>B</in-avatar>
+    <in-avatar>C</in-avatar>
+  </in-avatar-group> -->
 </template>

@@ -8,10 +8,10 @@ import Book from '@interface-ui/icons/BookFilled'
   <in-avatar>
     <book />
   </in-avatar>
-  <in-avatar background="#dc3964" color="white">
+  <in-avatar :color="theme => theme.colors.pink[400]">
     <accessibility />
   </in-avatar>
-  <in-avatar background="#60ae57" color="white">
+  <in-avatar color="#60ae57">
     <autorenew />
   </in-avatar>
 </template>
