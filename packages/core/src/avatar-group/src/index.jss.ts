@@ -6,10 +6,8 @@ import type { AvatarGroupProps } from './avatar-group'
 const useCss: ComponentStylingHook<AvatarGroupProps> = (props, ns) => {
   const theme = useTheme()
   const avatarGroupTokens = computed(() => {
-    const { [theme.value.mode]: schemes } = useDynamicColor(
-      props.avatarBorder,
-      theme,
-    )
+    const { schemes } = useDynamicColor(props.avatarBorder, theme)
+
     return css(
       schemes &&
         ns!.cssVarBlock({

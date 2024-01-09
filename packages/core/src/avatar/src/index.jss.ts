@@ -5,7 +5,6 @@ import type { AvatarProps } from './avatar'
 
 const useCss: ComponentStylingHook<AvatarProps> = (props, ns) => {
   const theme = useTheme()
-  const dynamicColor = computed(() => useDynamicColor(props.color, theme))
 
   const avatarSize = computed(
     () => css`
@@ -15,7 +14,7 @@ const useCss: ComponentStylingHook<AvatarProps> = (props, ns) => {
     `,
   )
   const avatarTokens = computed(() => {
-    const { [theme.value.mode]: schemes } = dynamicColor.value
+    const { schemes } = useDynamicColor(props.color, theme)
 
     return css(
       schemes &&

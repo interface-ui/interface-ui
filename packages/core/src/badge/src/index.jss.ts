@@ -18,7 +18,7 @@ const useCss: ComponentStylingHook<
   const theme = useTheme()
 
   const badgeTokens = computed(() => {
-    const { [theme.value.mode]: schemes } = useDynamicColor(props.color, theme)
+    const { schemes } = useDynamicColor(props.color, theme)
 
     return css(
       schemes &&
