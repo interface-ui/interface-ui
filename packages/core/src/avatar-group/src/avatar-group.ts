@@ -6,6 +6,7 @@ export const avatarGroupProps = buildProps({
   ...avatarProps,
   max: {
     type: [String, Number],
+    default: Infinity,
   },
   avatarBorder: {
     type: String,
