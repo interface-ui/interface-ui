@@ -3,8 +3,7 @@ const list: PropDataItem[] = [
   {
     name: 'modelValue',
     description: 'Binding value',
-    type: 'Boolean',
-    default: '---',
+    type: 'boolean',
   },
   {
     name: 'size',
@@ -23,7 +22,7 @@ const list: PropDataItem[] = [
   {
     name: 'disabledIcon',
     description: '隐藏在选中状态下的图标',
-    type: 'Boolean',
+    type: 'boolean',
     default: 'false',
   },
 ]

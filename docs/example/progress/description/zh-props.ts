@@ -18,7 +18,6 @@ const list: PropDataItem[] = [
     name: 'value',
     description: '进度条百分比',
     type: 'Number | String',
-    default: '---',
   },
   {
     name: 'color',

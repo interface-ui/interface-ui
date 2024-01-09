@@ -4,8 +4,8 @@ import type { AcceptableColor } from '@interface-ui/theme'
 import { buildProps } from '@interface-ui/utils'
 import type { ExtractPropTypes, PropType } from 'vue'
 
-export const textFiedlVariants = ['outlined', 'filled', 'standard'] as const
-export type TextFieldVariants = (typeof textFiedlVariants)[number]
+export const textFieldVariants = ['outlined', 'filled', 'standard'] as const
+export type TextFieldVariants = (typeof textFieldVariants)[number]
 
 export const textFieldProps = buildProps({
   modelValue: {
@@ -15,7 +15,7 @@ export const textFieldProps = buildProps({
   },
   variant: {
     type: String as PropType<TextFieldVariants>,
-    values: textFiedlVariants,
+    values: textFieldVariants,
     default: 'outlined',
   },
   label: {
@@ -30,15 +30,15 @@ export const textFieldProps = buildProps({
     values: componentSizes,
     default: 'large',
   },
-  cs: {
-    type: [String, Array, Object] as PropType<TemplateStringsArray>,
-  },
   error: {
     type: Boolean,
     default: false,
   },
   supportingText: {
     type: String,
+  },
+  cs: {
+    type: [String, Array, Object] as PropType<TemplateStringsArray>,
   },
 })
 

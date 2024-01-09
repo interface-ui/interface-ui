@@ -10,13 +10,13 @@ const list: PropDataItem[] = [
   {
     name: 'clickable',
     description: '可点击状态',
-    type: 'Boolean',
+    type: 'boolean',
     default: 'false',
   },
   {
     name: 'disabled',
     description: '禁用状态',
-    type: 'Boolean',
+    type: 'boolean',
     default: 'false%',
   },
   {
@@ -24,12 +24,11 @@ const list: PropDataItem[] = [
     description: '颜色',
     type: 'Enum',
     options: ['ThemeSchemes', 'ThemeCallBack', 'string'],
-    default: '---',
   },
   {
     name: 'deletable',
     description: '颜色',
-    type: 'Boolean',
+    type: 'boolean',
     default: 'false',
   },
 ]

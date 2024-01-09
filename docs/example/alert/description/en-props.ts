@@ -5,7 +5,6 @@ const list: PropDataItem[] = [
     description: 'Alert Severe level',
     type: 'Enum',
     options: ['error', 'warning', 'info', 'success'],
-    default: '---',
   },
   {
     name: 'in-typography',
@@ -17,8 +16,7 @@ const list: PropDataItem[] = [
   {
     name: 'variant',
     description: ' outlined & filled ',
-    type: 'String',
-    default: '---',
+    type: 'string',
   },
   {
     name: 'cs',

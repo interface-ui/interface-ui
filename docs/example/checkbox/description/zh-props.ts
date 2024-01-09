@@ -4,7 +4,6 @@ const list: PropDataItem[] = [
     name: 'v-model',
     description: '绑定的值',
     type: 'Boolean|Array',
-    default: '---',
   },
   {
     name: 'size',
@@ -24,12 +23,11 @@ const list: PropDataItem[] = [
     name: 'label',
     description: '标签',
     type: 'string',
-    default: '---',
   },
   {
     name: 'disabled',
     description: '禁用',
-    type: 'Boolean',
+    type: 'boolean',
     default: 'false',
   },
   {

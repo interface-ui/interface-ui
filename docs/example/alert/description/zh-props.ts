@@ -17,7 +17,7 @@ const list: PropDataItem[] = [
   {
     name: 'variant',
     description: '提供 filled 与 outlined 样式',
-    type: 'String',
+    type: 'string',
     default: 'filled',
   },
   {

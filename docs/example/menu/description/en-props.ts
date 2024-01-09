@@ -3,7 +3,7 @@ const list: PropDataItem[] = [
   {
     name: 'open',
     description: 'show',
-    type: 'Boolean',
+    type: 'boolean',
     default: 'false',
   },
   {

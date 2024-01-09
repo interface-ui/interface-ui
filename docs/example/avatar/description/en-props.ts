@@ -15,6 +15,7 @@ const list: PropDataItem[] = [
     name: 'color',
     description: 'The background color of the avatar',
     type: 'AcceptableColor',
+    options: ['ThemeSchemes', 'ThemeCallBack', 'string'],
     default: 'surfaceVariant',
   },
   {

@@ -17,19 +17,17 @@ const list: PropDataItem[] = [
   {
     name: 'href',
     description: '原生 href 属性',
-    type: 'String',
-    default: '---',
+    type: 'string',
   },
   {
     name: 'icon',
     description: '图标按钮',
-    type: 'String',
-    default: '---',
+    type: 'string',
   },
   {
     name: 'underline',
     description: '下划线',
-    type: 'Boolean',
+    type: 'boolean',
     default: 'false',
   },
 ]

@@ -4,7 +4,6 @@ const list: PropDataItem[] = [
     name: 'value',
     description: 'display value.',
     type: 'String/Number',
-    default: '---',
   },
   {
     name: 'max',
@@ -16,13 +15,13 @@ const list: PropDataItem[] = [
   {
     name: 'dot',
     description: 'Show small dots',
-    type: 'Boolean',
+    type: 'boolean',
     default: 'false',
   },
   {
     name: 'flashing',
     description: 'Flashing',
-    type: 'Boolean',
+    type: 'boolean',
     default: 'false',
   },
 ]

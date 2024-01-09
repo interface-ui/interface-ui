@@ -31,13 +31,13 @@ const list: PropDataItem[] = [
   {
     name: 'noWarp',
     description: '字体不换行',
-    type: 'Boolean',
+    type: 'boolean',
     default: 'false',
   },
   {
     name: 'gutter',
     description: '上下边距',
-    type: 'Boolean',
+    type: 'boolean',
     default: 'false',
   },
 ]
