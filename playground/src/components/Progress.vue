@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import '@core/progress/src/index.less'
-import { InProgress } from '@interface-ui/core'
+import { InProgress } from '@core'
 import { ref, onUnmounted } from 'vue'
 
 const progress = ref(0)
