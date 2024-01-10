@@ -12,7 +12,7 @@ const emit = defineEmits<DrawerEmits>()
 defineOptions({ inheritAttrs: false })
 
 const ns = useNamespace('drawer')
-const cssClass = useCss(props)
+const cssClass = useCss(props, ns)
 const handleWheel = (e: WheelEvent) => {
   e.preventDefault()
 }
@@ -26,7 +26,7 @@ watch(
         drawerRef.value?.focus()
       }
     })
-  }
+  },
 )
 
 const handleEscKey = (e: KeyboardEvent) => {

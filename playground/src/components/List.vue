@@ -18,7 +18,7 @@ import {
   InHeadlineText,
   InButton,
   InMenu,
-} from '@interface-ui/core'
+} from '@core'
 import ContentCopy from '@interface-ui/icons/ContentCopyFilled'
 import ContentPaste from '@interface-ui/icons/ContentPasteFilled'
 import More from '@interface-ui/icons/MoreOutlined'
@@ -69,10 +69,7 @@ const handleClick = (num: number) => {
               </in-typography>
             </template>
           </in-list-item>
-          <in-list-item>
-            <template #leading="{ icon }">
-              <in-list-item-placeholder v-bind="icon" />
-            </template>
+          <in-list-item indent="1">
             Cut
             <template #trailing>
               <in-typography variant="label.large" cs="opacity: 0.6;">

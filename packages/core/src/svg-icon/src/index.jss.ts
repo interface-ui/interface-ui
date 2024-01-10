@@ -1,15 +1,15 @@
 import { computed } from 'vue'
-import { css, cx, useColor, useTheme } from '@interface-ui/theme'
+import { css, cx, useDynamicColor, useTheme } from '@interface-ui/theme'
 import type { ComponentStylingHook } from '@interface-ui/utils'
 import type { SvgIconProps } from './svg-icon'
 
-const useCss: ComponentStylingHook<SvgIconProps> = props =>
-  computed(() => {
+const useCss: ComponentStylingHook<SvgIconProps> = props => {
+  const theme = useTheme()
+
+  const svgIconStyles = computed(() => {
     const {
       typography: { pxToRem },
-    } = useTheme().value
-    const [$color] = useColor(props, 'color')
-    const [$fill] = useColor(props, 'fill')
+    } = theme.value
 
     let fontSize
     const _size = +props.size
@@ -20,25 +20,26 @@ const useCss: ComponentStylingHook<SvgIconProps> = props =>
       fontSize = pxToRem(_size)
     }
 
-    const styleFromCs = props.cs ? css(props.cs) : ''
-    return cx(
-      css([
-        {
-          userSelect: 'none',
-          width: '1em',
-          height: '1em',
-          display: 'inline-block',
-          flexShrink: 0,
-          transition: 'fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms',
-          fontSize,
-          color: $color.value!,
-        },
-        props.fill && {
-          fill: $fill.value!,
-        },
-      ]),
-      styleFromCs,
-    )
+    return css([
+      {
+        userSelect: 'none',
+        width: '1em',
+        height: '1em',
+        display: 'inline-block',
+        flexShrink: 0,
+        transition: 'fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms',
+        fontSize,
+        color: useDynamicColor(props.color, theme).schemes.primary,
+      },
+      props.fill && {
+        fill: useDynamicColor(props.fill, theme).schemes.primary,
+      },
+    ])
   })
+
+  const styleFromCs = computed(() => (props.cs ? css(props.cs) : ''))
+
+  return computed(() => cx(svgIconStyles.value, styleFromCs.value))
+}
 
 export default useCss

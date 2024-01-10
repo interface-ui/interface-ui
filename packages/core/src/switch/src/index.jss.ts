@@ -1,22 +1,40 @@
 import { computed } from 'vue'
-import { css, cx, useColor, useRgbColor } from '@interface-ui/theme'
+import {
+  css,
+  cx,
+  useDynamicColor,
+  useDynamicRgb,
+  useTheme,
+} from '@interface-ui/theme'
 import type { ComponentStylingHook } from '@interface-ui/utils'
 import type { SwitchProps } from './switch'
 import { switchHeight } from './switch'
 
-const useCss: ComponentStylingHook<SwitchProps> = props =>
-  computed(() => {
-    const [$color, $onColor] = useColor(props, 'color')
-    const [$colorRgb] = useRgbColor(props, 'color')
+const useCss: ComponentStylingHook<SwitchProps> = (props, ns) => {
+  const theme = useTheme()
 
-    const switchStyle = css`
-      --in-switch-color: ${$color.value};
-      --in-switch-color-rgb: ${$colorRgb.value};
-      --in-switch-on-color: ${$onColor.value};
-      --in-switch-height: ${switchHeight[props.size]}px;
-    `
-    const styleFromCs = props.cs ? css(props.cs) : ''
-    return cx(switchStyle, styleFromCs)
+  const switchTokens = computed(() => {
+    const { schemes } = useDynamicColor(props.color, theme)
+
+    return css(
+      schemes &&
+        ns!.cssVarBlock({
+          primary: schemes.primary,
+          primaryRgb: useDynamicRgb(schemes.primary),
+          onPrimary: schemes.onPrimary,
+        }),
+    )
   })
+
+  const switchSize = computed(() =>
+    css(ns!.cssVarBlock({ height: `${switchHeight[props.size]}px` })),
+  )
+
+  const styleFromCs = computed(() => (props.cs ? css(props.cs) : ''))
+
+  return computed(() =>
+    cx(switchTokens.value, switchSize.value, styleFromCs.value),
+  )
+}
 
 export default useCss

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/indent */
 /* eslint-disable no-mixed-operators */
 import { computed, inject, ref, unref } from 'vue'
 import type { InjectionKey, Ref } from 'vue'
@@ -90,12 +91,12 @@ export const useNamespace = (
   }
 
   // for css var
-  // --md-xxx: value;
+  // --in-xxx: value;
   const cssVar = (object: Record<string, string>) => {
     const styles: Record<string, string> = {}
     for (const key in object) {
       if (object[key]) {
-        styles[`--${namespace.value}-${toKebabCase(key)}`] = object[key]
+        styles[`--${namespace.value}-sys-${toKebabCase(key)}`] = object[key]
       }
     }
     return styles
@@ -122,6 +123,18 @@ export const useNamespace = (
       name,
     )})`
 
+  const getGlobalTokens = (
+    scope:
+      | 'color'
+      | 'elevation'
+      | 'zIndex'
+      | 'state'
+      | 'shape'
+      | 'motion'
+      | 'typescale',
+    name: string,
+  ) => `var(--md-syt-${toKebabCase(scope)}-${toKebabCase(name)})`
+
   return {
     namespace,
     b,
@@ -140,6 +153,7 @@ export const useNamespace = (
     cssVarBlockName,
     getCssVar,
     getCssVarBlock,
+    getGlobalTokens,
   }
 }
 

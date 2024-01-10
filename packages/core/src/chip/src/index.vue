@@ -1,5 +1,6 @@
+<!-- eslint-disable no-mixed-operators -->
 <script lang="ts" setup>
-import { useNamespace } from '@interface-ui/utils'
+import { isString, useNamespace } from '@interface-ui/utils'
 import InActionArea from '../../action-area'
 import InIconButton from '../../icon-button'
 import CloseFilled from '../../svg-icon/internal/CloseFilled.vue'
@@ -9,7 +10,12 @@ import useCss from './index.jss'
 const props = defineProps(chipProps)
 defineEmits<{ delete: [] }>()
 const ns = useNamespace('chip')
-const cssClass = useCss(props)
+
+const isSurfaceColor =
+  isString(props.color) && typeof props.color !== 'function'
+    ? props.color.toLowerCase().includes('surface')
+    : false
+const cssClass = useCss(props, ns, isSurfaceColor)
 </script>
 
 <template>

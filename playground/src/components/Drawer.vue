@@ -1,11 +1,6 @@
 <script lang="ts" setup>
 import '@core/drawer/src/index.less'
-import {
-  InDrawer,
-  InButton,
-  InTypography,
-  InIconButton,
-} from '@interface-ui/core'
+import { InDrawer, InButton, InTypography, InIconButton } from '@core'
 import {
   ComponentDirections,
   componentDirections,

@@ -19,7 +19,7 @@ const parsed = computed(() => {
   return [renderTag, $variant, size]
 })
 
-const cssClass = useCss(props)
+const cssClass = useCss(props, ns)
 </script>
 
 <template>
