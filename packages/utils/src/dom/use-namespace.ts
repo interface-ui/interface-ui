@@ -133,7 +133,7 @@ export const useNamespace = (
       | 'motion'
       | 'typescale',
     name: string,
-  ) => `var(--md-syt-${toKebabCase(scope)}-${toKebabCase(name)})`
+  ) => `var(--md-sys-${toKebabCase(scope)}-${toKebabCase(name)})`
 
   return {
     namespace,
