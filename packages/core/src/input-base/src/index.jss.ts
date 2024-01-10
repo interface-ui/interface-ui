@@ -1,20 +1,13 @@
 /* eslint-disable @typescript-eslint/indent */
 import { computed } from 'vue'
-import { css, cx, useTheme } from '@interface-ui/theme'
+import { css, cx } from '@interface-ui/theme'
 import type { ComponentStylingHook } from '@interface-ui/utils'
 import type { InputBaseProps } from './input-base'
 
 const useCss: ComponentStylingHook<InputBaseProps> = props => {
-  const theme = useTheme()
+  const styleFromCs = computed(() => (props.cs ? css(props.cs) : ''))
 
   return computed(() => {
-    const inputBaseStyle = css([
-      {
-        background: 'none',
-        color: 'inherit',
-      },
-      theme.value.typography.body.large as any,
-    ])
     const internalStyle = props.internal
       ? css({
           cursor: 'inherit',
@@ -30,8 +23,7 @@ const useCss: ComponentStylingHook<InputBaseProps> = props => {
         })
       : ''
 
-    const styleFromCs = props.cs ? css(props.cs) : ''
-    return cx(inputBaseStyle, { [internalStyle]: props.internal }, styleFromCs)
+    return cx({ [internalStyle]: props.internal }, styleFromCs.value)
   })
 }
 
