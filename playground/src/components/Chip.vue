@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import '@core/chip/src/index.less'
-import { ChipVariants, InChip } from '@interface-ui/core'
+import { ChipVariants, InChip } from '@core'
 import Today from '@interface-ui/icons/TodayFilled'
 import { ref } from 'vue'
 import { ThemeCallBack } from '@interface-ui/theme'
