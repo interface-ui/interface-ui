@@ -11,7 +11,7 @@ import useCss from './index.jss'
 const props = defineProps(switchProps)
 const emit = defineEmits<{ (e: 'update:modelValue', v: boolean): void }>()
 const ns = useNamespace('switch')
-const cssClass = useCss(props)
+const cssClass = useCss(props, ns)
 
 const checked = computed<boolean>({
   get() {
