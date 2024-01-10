@@ -8,7 +8,7 @@ import useCss from './index.jss'
 
 const props = defineProps(listItemProps)
 const ns = useNamespace('list-item')
-const cssClass = useCss(props)
+const cssClass = useCss(props, ns)
 
 const leadingBind = {
   icon: {

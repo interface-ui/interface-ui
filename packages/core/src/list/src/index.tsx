@@ -9,7 +9,7 @@ export default defineComponent({
   props: listProps,
   setup(props, { slots }) {
     const ns = useNamespace('list')
-    const cssClass = useCss(props)
+    const cssClass = useCss(props, ns)
 
     const Comp = props.component as any
 
@@ -36,7 +36,7 @@ export default defineComponent({
               />
             ) : (
               <VNode />
-            )
+            ),
           )}
         </ul>
       </Comp>
