@@ -14,7 +14,7 @@
       </in-typography>
     </in-card-header>
     <in-card-action>
-      <in-button shape="fullRounded">Buy Tickets</in-button>
+      <in-button>Buy Tickets</in-button>
     </in-card-action>
   </in-card>
 </template>
