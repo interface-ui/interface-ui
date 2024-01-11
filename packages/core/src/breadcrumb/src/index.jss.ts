@@ -1,5 +1,6 @@
 import type { Ref } from 'vue'
 import { computed } from 'vue'
+import type { UseDynamicColorReturn } from '@interface-ui/theme'
 import {
   css,
   cx,
@@ -12,10 +13,10 @@ import type { BreadcrumbProps } from './breadcrumb'
 
 const useCss: ComponentStylingHook<
   BreadcrumbProps,
-  { cssClass: string; dynamicColor: Ref<ReturnType<typeof useDynamicColor>> }
+  { cssClass: string; dynamicColor: Ref<UseDynamicColorReturn> }
 > = (props, ns) => {
   const theme = useTheme()
-  const dynamicColor = computed<ReturnType<typeof useDynamicColor>>(() => {
+  const dynamicColor = computed<UseDynamicColorReturn>(() => {
     return useDynamicColor(props.color, theme)
   })
 

@@ -1,15 +1,17 @@
 <script lang="ts" setup>
 import '@core/button/src/index.less'
 import { InButton } from '@core'
-import { ref } from 'vue'
-import Delete from '@interface-ui/icons/DeleteFilled'
-import Save from '@interface-ui/icons/SaveFilled'
+// import { ref } from 'vue'
+// import Delete from '@interface-ui/icons/DeleteFilled'
+// import Save from '@interface-ui/icons/SaveFilled'
 
-const color = ref('primary')
+// const color = ref('primary')
 </script>
 
 <template>
-  <div class="content">
+  <in-button :color="theme => theme.colors.cyan[400]">Cyan</in-button>
+  <in-button color="#2E7D32">#2E7D32</in-button>
+  <!-- <div class="content">
     <in-button size="small" variant="elevated">Button</in-button>
     <in-button size="small" variant="filled">Button</in-button>
     <in-button size="small" variant="tonal">Button</in-button>
@@ -39,5 +41,5 @@ const color = ref('primary')
   <div class="content">
     <in-button variant="outlined"><delete leading /> Delete </in-button>
     <in-button> Save <save trailing /></in-button>
-  </div>
+  </div> -->
 </template>

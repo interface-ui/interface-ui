@@ -1,4 +1,6 @@
-import { computed, inject } from 'vue'
+import type { Ref } from 'vue'
+import { computed, inject, ref } from 'vue'
+import type { UseDynamicColorReturn } from '@interface-ui/theme'
 import {
   css,
   cx,
@@ -12,17 +14,17 @@ import type { LinkProps } from './link'
 
 const useCss: ComponentStylingHook<LinkProps> = (props, ns) => {
   const theme = useTheme()
-  const injection = inject<ReturnType<typeof useDynamicColor>>(
+  const injection = inject<Ref<UseDynamicColorReturn | null>>(
     BREADCRUMB_PROVIDE_KEY,
-    () => useDynamicColor(props.color, theme),
-    true,
+    ref(null),
   )
 
   const linkTokens = computed(() => {
     const dynamicColor =
-      injection.source === props.color
-        ? injection
+      injection?.value?.source === props.color
+        ? injection.value
         : useDynamicColor(props.color, theme)
+
     const { schemes } = dynamicColor
 
     return css(

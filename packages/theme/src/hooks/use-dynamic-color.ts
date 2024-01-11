@@ -4,15 +4,7 @@ import type { AcceptableColor } from '@/types'
 import type { Theme } from '@/core'
 import { rgbaFromHex } from '@/core'
 
-// type UseDynamicColorReturn = Record<
-//   ThemeMode,
-//   Omit<ComponentSchemes, 'props'>
-// > & {
-//   source: AcceptableColor
-//   computedColor: string
-// }
-
-interface UseDynamicColorReturn {
+export interface UseDynamicColorReturn {
   source: AcceptableColor
   computedColor: string
   schemes: Omit<ComponentSchemes, 'props'>
