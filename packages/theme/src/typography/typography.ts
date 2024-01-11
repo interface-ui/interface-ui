@@ -5,7 +5,7 @@ import type { Typography } from './types'
  */
 const typographyDefaultConfig = {
   fontFamily:
-    '"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"',
+    'Roboto,"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"',
   htmlFontSize: 16,
   fontSize: 14,
   pxToRem: (size: number): string => {

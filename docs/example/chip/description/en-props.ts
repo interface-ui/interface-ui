@@ -22,7 +22,7 @@ const list: PropDataItem[] = [
   {
     name: 'color',
     description: 'color',
-    type: 'Enum',
+    type: 'AcceptableColor',
     options: ['ThemeSchemes', 'ThemeCallBack', 'string'],
   },
   {
@@ -30,6 +30,11 @@ const list: PropDataItem[] = [
     description: 'deletable status',
     type: 'boolean',
     default: 'false',
+  },
+  {
+    name: 'cs',
+    description: 'Prop to overwrite the default style',
+    type: 'string | object',
   },
 ]
 

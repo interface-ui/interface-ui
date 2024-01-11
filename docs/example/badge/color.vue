@@ -7,9 +7,9 @@ const theme = useTheme()
 
 <template>
   <in-badge variant="dot" color="tertiary">
-    <notifications size="24" :color="theme.colors.grey[500]" />
+    <notifications font-size="24" :color="theme.colors.grey[500]" />
   </in-badge>
   <in-badge content="10" :color="theme => theme.colors.cyan[400]">
-    <in-button>Hello</in-button>
+    <in-button shape="rounded">Hello</in-button>
   </in-badge>
 </template>

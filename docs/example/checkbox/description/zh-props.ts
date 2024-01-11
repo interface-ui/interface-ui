@@ -1,22 +1,22 @@
 import type { PropDataItem } from '@comp/data-table'
 const list: PropDataItem[] = [
   {
-    name: 'v-model',
+    name: 'v-model / modelValue',
     description: '绑定的值',
-    type: 'Boolean|Array',
+    type: 'boolean | string | Set<string>',
   },
   {
     name: 'size',
     description: '尺寸',
-    type: 'Enum',
+    type: 'string',
     options: ['small', 'medium', 'large'],
     default: 'medium',
   },
   {
     name: 'color',
     description: '颜色',
-    type: 'Enum',
-    options: ['ThemeSchemes', 'ThemeCallBack', 'String'],
+    type: 'AcceptableColor',
+    options: ['ThemeSchemes', 'ThemeCallBack', 'string'],
     default: 'primary',
   },
   {
@@ -32,8 +32,8 @@ const list: PropDataItem[] = [
   },
   {
     name: 'cs',
-    description: '覆盖组件默认样式的prop',
-    type: 'TemplateStringsArray',
+    description: '覆盖组件默认样式的 prop',
+    type: 'string | object',
   },
 ]
 

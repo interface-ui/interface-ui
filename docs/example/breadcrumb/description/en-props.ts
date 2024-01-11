@@ -9,8 +9,8 @@ const list: PropDataItem[] = [
   {
     name: 'color',
     description: 'link color',
-    type: 'Enum',
-    options: ['ThemeSchemes', 'ThemeCallBack', 'String'],
+    type: 'AcceptableColor',
+    options: ['ThemeSchemes', 'ThemeCallBack', 'string'],
     default: 'primary',
   },
   {
@@ -24,13 +24,13 @@ const list: PropDataItem[] = [
     name: 'max',
     description: 'max cound to show',
     type: 'String | Number',
-    default: '--',
+    default: '-',
   },
   {
     name: 'cs',
     description: 'Flexible css configuration',
     type: 'String | Object',
-    default: '--',
+    default: '-',
   },
 ]
 

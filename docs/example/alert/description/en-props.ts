@@ -10,7 +10,7 @@ const list: PropDataItem[] = [
     name: 'in-typography',
     description: 'Provide title style',
     type: '--',
-    default: '--',
+    default: '-',
   },
 
   {
@@ -23,7 +23,7 @@ const list: PropDataItem[] = [
     description: 'Flexible css configuration',
     type: 'Enum',
     options: ['String', 'Object'],
-    default: '--',
+    default: '-',
   },
 ]
 

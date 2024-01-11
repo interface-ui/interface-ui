@@ -11,7 +11,7 @@ const list: PropDataItem[] = [
     name: 'in-typography',
     description: '提供标题样式',
     type: '--',
-    default: '--',
+    default: '-',
   },
 
   {
@@ -25,7 +25,7 @@ const list: PropDataItem[] = [
     description: '灵活的css配置',
     type: 'Enum',
     options: ['String', 'Object'],
-    default: '--',
+    default: '-',
   },
 ]
 

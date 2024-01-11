@@ -3,26 +3,26 @@ const list: PropDataItem[] = [
   {
     name: 'size',
     description: 'Icon size',
-    type: 'String | Number',
+    type: 'string | number',
     default: 'inherit',
   },
   {
     name: 'color',
     description: 'Customize the color of buttons',
-    type: 'Enum',
-    options: ['ThemeSchemes', 'ThemeCallBack', 'String'],
+    type: 'AcceptableColor',
+    options: ['ThemeSchemes', 'ThemeCallBack', 'string'],
     default: 'inherit',
-  },
-  {
-    name: 'cs',
-    description: 'Prop to overwrite the default style',
-    type: 'TemplateStringsArray',
   },
   {
     name: 'component',
     description: 'The component to render the icon',
-    type: 'String | Component',
+    type: 'string | Component',
     default: 'svg',
+  },
+  {
+    name: 'cs',
+    description: 'Prop to overwrite the default style',
+    type: 'string | object',
   },
 ]
 

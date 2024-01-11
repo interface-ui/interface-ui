@@ -4,13 +4,13 @@ const list: PropDataItem[] = [
     name: 'title',
     description: '标题',
     type: 'string',
-    default: '--',
+    default: '-',
   },
   {
     name: 'content',
     description: '内容',
     type: 'string',
-    default: '--',
+    default: '-',
   },
   {
     name: 'duration',
@@ -22,19 +22,19 @@ const list: PropDataItem[] = [
     name: 'customIcon',
     description: '前部图标',
     type: 'Object',
-    default: '--',
+    default: '-',
   },
   {
     name: 'action',
     description: '尾部图标',
     type: 'Object',
-    default: '--',
+    default: '-',
   },
   {
     name: 'actionEvent',
     description: '尾部图标回调事件',
     type: 'Function',
-    default: '--',
+    default: '-',
   },
   {
     name: 'transition',

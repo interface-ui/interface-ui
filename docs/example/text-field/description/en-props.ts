@@ -21,7 +21,7 @@ const list: PropDataItem[] = [
     name: 'color',
     description: 'Customize the color of buttons',
     type: 'AcceptableColor',
-    options: ['ThemeSchemes', 'ThemeCallBack', 'String'],
+    options: ['ThemeSchemes', 'ThemeCallBack', 'string'],
     default: 'primary',
   },
   {
@@ -41,6 +41,11 @@ const list: PropDataItem[] = [
     name: 'supporting-text',
     description: 'Supporting text',
     type: 'string',
+  },
+  {
+    name: 'cs',
+    description: 'Prop to overwrite the default style',
+    type: 'string | object',
   },
 ]
 

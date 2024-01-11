@@ -38,19 +38,19 @@ const yAlign = ref<'top' | 'bottom'>('top')
   </div>
   <div fscw gap-10>
     <in-badge variant="dot" :x-align="xAlign" :y-align="yAlign">
-      <notifications size="24" :color="theme.schemes.secondary" />
+      <notifications font-size="24" :color="theme.schemes.secondary" />
     </in-badge>
     <in-badge content="1" :x-align="xAlign" :y-align="yAlign">
-      <notifications size="24" :color="theme.schemes.secondary" />
+      <notifications font-size="24" :color="theme.schemes.secondary" />
     </in-badge>
     <in-badge content="10" :x-align="xAlign" :y-align="yAlign">
-      <notifications size="24" :color="theme.schemes.secondary" />
+      <notifications font-size="24" :color="theme.schemes.secondary" />
     </in-badge>
     <in-badge content="1000" max="99" :x-align="xAlign" :y-align="yAlign">
-      <notifications size="24" :color="theme.schemes.secondary" />
+      <notifications font-size="24" :color="theme.schemes.secondary" />
     </in-badge>
     <in-badge content="1000" max="999" :x-align="xAlign" :y-align="yAlign">
-      <notifications size="24" :color="theme.schemes.secondary" />
+      <notifications font-size="24" :color="theme.schemes.secondary" />
     </in-badge>
   </div>
 </template>

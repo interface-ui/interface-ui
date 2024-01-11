@@ -21,7 +21,7 @@ const list: PropDataItem[] = [
     name: 'color',
     description: '自定义文本输入focus状态的颜色',
     type: 'AcceptableColor',
-    options: ['ThemeSchemes', 'ThemeCallBack', 'String'],
+    options: ['ThemeSchemes', 'ThemeCallBack', 'string'],
     default: 'primary',
   },
   {
@@ -41,6 +41,11 @@ const list: PropDataItem[] = [
     name: 'supporting-text',
     description: '描述文字',
     type: 'string',
+  },
+  {
+    name: 'cs',
+    description: '覆盖组件默认样式的 prop',
+    type: 'string | object',
   },
 ]
 

@@ -22,8 +22,8 @@ const list: PropDataItem[] = [
   {
     name: 'color',
     description: 'Customize the color of indicator',
-    type: 'Enum',
-    options: ['ThemeSchemes', 'ThemeCallBack', 'String'],
+    type: 'AcceptableColor',
+    options: ['ThemeSchemes', 'ThemeCallBack', 'string'],
     default: 'primary',
   },
   {
@@ -31,7 +31,7 @@ const list: PropDataItem[] = [
     description: 'Flexible css configuration',
     type: 'Enum',
     options: ['String', 'Object'],
-    default: '--',
+    default: '-',
   },
 ]
 

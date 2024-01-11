@@ -15,8 +15,8 @@ const list: PropDataItem[] = [
   {
     name: 'color',
     description: '自定义开关的颜色',
-    type: 'Enum',
-    options: ['ThemeSchemes', 'ThemeCallBack', 'String'],
+    type: 'AcceptableColor',
+    options: ['ThemeSchemes', 'ThemeCallBack', 'string'],
     default: 'primary',
   },
   {

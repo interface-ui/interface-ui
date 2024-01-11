@@ -1,14 +1,14 @@
 import type { PropDataItem } from '@comp/data-table'
 const list: PropDataItem[] = [
   {
-    name: 'v-model',
+    name: 'v-model / modelValue',
     description: 'Binding value',
-    type: 'Boolean|Array',
+    type: 'boolean | string | Set<string>',
   },
   {
     name: 'size',
     description: 'checkBox size',
-    type: 'Enum',
+    type: 'string',
     options: ['small', 'medium', 'large'],
     default: 'medium',
   },
@@ -16,7 +16,7 @@ const list: PropDataItem[] = [
     name: 'color',
     description: 'checkBox Color',
     type: 'AcceptableColor',
-    options: ['ThemeSchemes', 'ThemeCallBack', 'String'],
+    options: ['ThemeSchemes', 'ThemeCallBack', 'string'],
     default: 'primary',
   },
   {
@@ -33,7 +33,7 @@ const list: PropDataItem[] = [
   {
     name: 'cs',
     description: 'Prop to overwrite the default style',
-    type: 'TemplateStringsArray',
+    type: 'string | object',
   },
 ]
 

@@ -3,9 +3,9 @@ const list: PropDataItem[] = [
   {
     name: 'color',
     description: 'color',
-    default: '--',
-    type: 'Enum',
-    options: ['ThemeSchemes', 'ThemeCallBack', 'String'],
+    default: '-',
+    type: 'AcceptableColor',
+    options: ['ThemeSchemes', 'ThemeCallBack', 'string'],
   },
   {
     name: 'underline',
