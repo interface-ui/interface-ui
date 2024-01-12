@@ -11,23 +11,24 @@ lang: en
 
 The Link component allows you to easily customize anchor elements with your theme colors and typography styles.
 
-## Basic Usage
 
-The `Link` component is built on top of the `Typography` component, meaning that you can use its props
+## Usage
 
+### Basic link
+
+The `<Link />` component is built on top of the [`<Typography />`](./typography.md) component, meaning that you can use its props
 <demo src="../../../example/link/basic.vue" preview="[2-3]" />
 
-## Color
+### Color
 
 Text links with different colors.
-
 <demo src="../../../example/link/color.vue" />
 
-## Underline
+### Underline
 
 Underline for text links.
-
 <demo src="../../../example/link/underline.vue" />
+
 
 ## Attributes
 

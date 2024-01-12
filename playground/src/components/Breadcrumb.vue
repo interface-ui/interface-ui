@@ -10,14 +10,14 @@ import Apps from '@interface-ui/icons/AppsFilled'
 
 <template>
   <!-- Basic -->
-  <in-breadcrumb>
+  <!-- <in-breadcrumb>
     <in-link>Interface UI</in-link>
     <in-link>Components</in-link>
     <in-link>Breadcrumb</in-link>
-  </in-breadcrumb>
+  </in-breadcrumb> -->
 
   <!-- Separator -->
-  <in-breadcrumb separator="-">
+  <!-- <in-breadcrumb separator="-">
     <in-link>Interface UI</in-link>
     <in-link>Components</in-link>
     <in-link>Breadcrumb</in-link>
@@ -27,27 +27,27 @@ import Apps from '@interface-ui/icons/AppsFilled'
     <in-link>Interface UI</in-link>
     <in-link>Components</in-link>
     <in-link>Breadcrumb</in-link>
-  </in-breadcrumb>
+  </in-breadcrumb> -->
 
   <!-- underline -->
-  <in-breadcrumb underline="none">
+  <!-- <in-breadcrumb underline="none">
     <in-link>Interface UI</in-link>
     <in-link>Components</in-link>
     <in-link>Breadcrumb</in-link>
-  </in-breadcrumb>
+  </in-breadcrumb> -->
 
-  <in-breadcrumb underline="always">
+  <!-- <in-breadcrumb underline="always">
     <in-link>Interface UI</in-link>
     <in-link>Components</in-link>
     <in-link>Breadcrumb</in-link>
-  </in-breadcrumb>
+  </in-breadcrumb> -->
 
   <!-- Collapsed -->
-  <in-breadcrumb max="2" :separator="NavigateNext">
+  <!-- <in-breadcrumb max="2" :separator="NavigateNext">
     <in-link>Interface UI</in-link>
     <in-link>Components</in-link>
     <in-link>Breadcrumb</in-link>
-  </in-breadcrumb>
+  </in-breadcrumb> -->
 
   <!-- Color -->
   <in-breadcrumb color="primary">
@@ -62,9 +62,9 @@ import Apps from '@interface-ui/icons/AppsFilled'
   </in-breadcrumb>
 
   <!-- Icon -->
-  <in-breadcrumb>
+  <!-- <in-breadcrumb>
     <in-link><home /> Interface UI</in-link>
     <in-link><flag /> Components</in-link>
     <in-link><apps /> Breadcrumb</in-link>
-  </in-breadcrumb>
+  </in-breadcrumb> -->
 </template>

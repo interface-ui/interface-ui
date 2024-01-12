@@ -117,7 +117,8 @@ export const useNamespace = (
   const cssVarBlockName = (name: string) =>
     `--${namespace.value}-${block}-${toKebabCase(name)}`
 
-  const getCssVar = (name: string) => `var(--${namespace.value}-${name})`
+  const getCssVar = (name: string) =>
+    `var(--${namespace.value}-${toKebabCase(name)})`
   const getCssVarBlock = (name: string, blockOverrides: string = block) =>
     `var(--${namespace.value}-${toKebabCase(blockOverrides)}-${toKebabCase(
       name,
@@ -133,7 +134,7 @@ export const useNamespace = (
       | 'motion'
       | 'typescale',
     name: string,
-  ) => `var(--md-syt-${toKebabCase(scope)}-${toKebabCase(name)})`
+  ) => `var(--md-sys-${toKebabCase(scope)}-${toKebabCase(name)})`
 
   return {
     namespace,

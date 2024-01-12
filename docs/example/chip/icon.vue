@@ -4,11 +4,11 @@ import Today from '@interface-ui/icons/TodayFilled'
 
 <template>
   <in-chip>
-    <today />
+    <today leading />
     Today
   </in-chip>
   <in-chip variant="outlined">
     Today
-    <today />
+    <today trailing />
   </in-chip>
 </template>

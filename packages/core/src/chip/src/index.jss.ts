@@ -9,11 +9,7 @@ import {
 import { type ComponentStylingHook, useNamespace } from '@interface-ui/utils'
 import type { ChipProps } from './chip'
 
-const useCss: ComponentStylingHook<ChipProps> = (
-  props,
-  ns,
-  isSurfaceColor: boolean,
-) => {
+const useCss: ComponentStylingHook<ChipProps> = (props, ns) => {
   const theme = useTheme()
   const iconButtonNs = useNamespace('icon-button')
 
@@ -24,47 +20,23 @@ const useCss: ComponentStylingHook<ChipProps> = (
       schemes &&
         ns!.cssVarBlock({
           primary: schemes.primary,
-          onPrimary: isSurfaceColor
-            ? ns!.getGlobalTokens('color', 'onSurfaceVariant')
-            : schemes.onPrimary,
+          primaryRgb: useDynamicRgb(schemes.primary),
+          onPrimary: schemes.onPrimary,
+          primaryContainer: schemes.primaryContainer,
+          onPrimaryContainer: schemes.onPrimaryContainer,
+          onPrimaryContainerRgb: useDynamicRgb(schemes.onPrimaryContainer),
         }),
       {
-        '&.in-chip--filled': {
-          ...ns!.cssVarBlock({
-            onPrimary: isSurfaceColor
-              ? ns!.getGlobalTokens('color', 'onSurfaceVariant')
-              : schemes.onPrimary,
-          }),
-          '& .in-icon-button': iconButtonNs!.cssVarBlock({
-            primary: isSurfaceColor
-              ? ns!.getGlobalTokens('color', 'onSurfaceVariant')
-              : schemes.onPrimary,
-            primaryRgb: isSurfaceColor
-              ? ns!.getGlobalTokens('color', 'onSurfaceVariantRgb')
-              : useDynamicRgb(schemes.onPrimary),
-          }),
-        },
+        '&.in-chip--filled .in-icon-button': iconButtonNs!.cssVarBlock({
+          primary: ns!.getCssVarBlock('onPrimaryContainer'),
+          primaryRgb: ns!.getCssVarBlock('onPrimaryContainerRgb'),
+        }),
       },
       {
-        '&.in-chip--outlined': {
-          ...ns!.cssVarBlock({
-            onPrimary: isSurfaceColor
-              ? ns!.getGlobalTokens('color', 'onSurfaceVariant')
-              : schemes.primary,
-          }),
-          // eslint-disable-next-line quote-props
-          borderColor: isSurfaceColor
-            ? 'var(--md-sys-color-outline)'
-            : schemes.primary,
-          '& .in-icon-button': iconButtonNs!.cssVarBlock({
-            primary: isSurfaceColor
-              ? ns!.getGlobalTokens('color', 'onSurfaceVariant')
-              : schemes.primary,
-            primaryRgb: isSurfaceColor
-              ? ns!.getGlobalTokens('color', 'onSurfaceVariantRgb')
-              : useDynamicRgb(schemes.primary),
-          }),
-        },
+        '&.in-chip--outlined .in-icon-button': iconButtonNs!.cssVarBlock({
+          primary: ns!.getCssVarBlock('primary'),
+          primaryRgb: ns!.getCssVarBlock('primaryRgb'),
+        }),
       },
     ])
   })

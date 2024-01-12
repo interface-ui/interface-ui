@@ -6,15 +6,13 @@ const theme = useTheme()
 </script>
 
 <template>
-  <div fscw gap-10>
-    <in-badge variant="dot">
-      <in-button>Dot</in-button>
-    </in-badge>
-    <in-badge content="10">
-      <in-button>Hello</in-button>
-    </in-badge>
-    <in-badge content="6">
-      <notifications size="24" :color="theme.colors.grey[500]" />
-    </in-badge>
-  </div>
+  <in-badge variant="dot">
+    <in-button shape="rounded">Dot</in-button>
+  </in-badge>
+  <in-badge content="10">
+    <in-button shape="rounded">Hello</in-button>
+  </in-badge>
+  <in-badge content="6">
+    <notifications font-size="24" :color="theme.colors.grey[500]" />
+  </in-badge>
 </template>

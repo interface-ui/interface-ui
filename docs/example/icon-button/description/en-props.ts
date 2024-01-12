@@ -11,13 +11,13 @@ const list: PropDataItem[] = [
     name: 'color',
     description: 'Customize the color of buttons',
     type: 'AcceptableColor',
-    options: ['ThemeSchemes', 'ThemeCallBack', 'String'],
+    options: ['ThemeSchemes', 'ThemeCallBack', 'string'],
     default: 'primary',
   },
   {
     name: 'cs',
     description: 'Prop to overwrite the default style',
-    type: 'TemplateStringsArray',
+    type: 'string | object',
   },
 ]
 

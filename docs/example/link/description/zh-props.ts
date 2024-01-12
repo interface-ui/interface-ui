@@ -1,23 +1,23 @@
 import type { PropDataItem } from '@comp/data-table'
 const list: PropDataItem[] = [
   {
+    name: 'link attrs',
+    description: '所有 <a /> 标签的属性 (href, target, 等等)',
+    type: '-',
+  },
+  {
     name: 'color',
     description: '颜色',
-    default: '--',
-    type: 'Enum',
-    options: ['ThemeSchemes', 'ThemeCallBack', 'String'],
+    type: 'AcceptableColor',
+    options: ['ThemeSchemes', 'ThemeCallBack', 'string'],
+    default: '-',
   },
   {
     name: 'underline',
     description: '下划线',
     default: 'hover',
-    type: 'Enum',
-    options: ['hover', 'none', 'always'],
-  },
-  {
-    name: 'href',
-    description: '原生 href 属性',
     type: 'string',
+    options: ['hover', 'none', 'always'],
   },
   {
     name: 'icon',
@@ -29,6 +29,11 @@ const list: PropDataItem[] = [
     description: '下划线',
     type: 'boolean',
     default: 'false',
+  },
+  {
+    name: 'cs',
+    description: '覆盖组件默认样式的 prop',
+    type: 'string | object',
   },
 ]
 

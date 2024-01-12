@@ -26,7 +26,7 @@ export default defineComponent({
           {...mergeProps(
             {
               underline: props.underline,
-              color: 'inherit',
+              color: props.color,
             },
             VNode.props,
           )}

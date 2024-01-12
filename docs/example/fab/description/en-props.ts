@@ -10,16 +10,14 @@ const list: PropDataItem[] = [
   {
     name: 'color',
     description: 'Customize the color of FBAs',
-    type: 'Enum',
-    options: ['ThemeSchemes', 'ThemeCallBack', 'String'],
+    type: 'AcceptableColor',
+    options: ['ThemeSchemes', 'ThemeCallBack', 'string'],
     default: 'primaryContainer',
   },
   {
     name: 'cs',
-    description: 'Flexible css configuration',
-    type: 'Enum',
-    options: ['String', 'Object'],
-    default: '--',
+    description: 'Prop to overwrite the default style',
+    type: 'string | object',
   },
 ]
 

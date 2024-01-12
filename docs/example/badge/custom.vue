@@ -4,7 +4,7 @@ import { InAvatar, InBadge } from '@interface-ui/core'
 import { styled } from '@interface-ui/theme'
 
 const StyledBadge = styled(InBadge)(theme => ({
-  '& .in-badge--icon': {
+  '& .in-badge--content': {
     backgroundColor: '#44b700',
     color: '#44b700',
     boxShadow: `0 0 0 2px ${theme.schemes.background}`,
@@ -42,12 +42,10 @@ const SmallAvatar = styled(InAvatar, {
 </script>
 
 <template>
-  <div fscw gap-10>
-    <styled-badge variant="dot" y-align="bottom" overlap>
-      <in-avatar src="https://mui.com/static/images/avatar/1.jpg" />
-    </styled-badge>
-    <in-badge :content="SmallAvatar" y-align="bottom">
-      <in-avatar src="https://mui.com/static/images/avatar/1.jpg" />
-    </in-badge>
-  </div>
+  <styled-badge variant="dot" y-align="bottom" overlap>
+    <in-avatar src="https://mui.com/static/images/avatar/1.jpg" />
+  </styled-badge>
+  <in-badge :content="SmallAvatar" y-align="bottom">
+    <in-avatar src="https://mui.com/static/images/avatar/1.jpg" />
+  </in-badge>
 </template>

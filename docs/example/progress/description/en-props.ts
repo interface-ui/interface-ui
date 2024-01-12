@@ -3,35 +3,33 @@ const list: PropDataItem[] = [
   {
     name: 'variant',
     description: 'Progress variants',
-    type: 'Enum',
+    type: 'string',
     options: ['circular', 'linear'],
     default: 'circular',
   },
   {
     name: 'status',
     description: 'Progress bar status representation',
-    type: 'Enum',
+    type: 'string',
     options: ['determinate', 'indeterminate'],
     default: 'indeterminate',
   },
   {
     name: 'value',
     description: 'Percentage of the progress indicator',
-    type: 'Number | String',
+    type: 'string | number',
   },
   {
     name: 'color',
     description: 'Customize the color of indicator',
-    type: 'Enum',
-    options: ['ThemeSchemes', 'ThemeCallBack', 'String'],
+    type: 'AcceptableColor',
+    options: ['ThemeSchemes', 'ThemeCallBack', 'string'],
     default: 'primary',
   },
   {
     name: 'cs',
-    description: 'Flexible css configuration',
-    type: 'Enum',
-    options: ['String', 'Object'],
-    default: '--',
+    description: 'Prop to overwrite the default style',
+    type: 'string | object',
   },
 ]
 

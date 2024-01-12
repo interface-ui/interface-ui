@@ -4,13 +4,13 @@ const list: PropDataItem[] = [
     name: 'title',
     description: 'title',
     type: 'string',
-    default: '--',
+    default: '-',
   },
   {
     name: 'content',
     description: 'content',
     type: 'string',
-    default: '--',
+    default: '-',
   },
   {
     name: 'duration',
@@ -22,19 +22,19 @@ const list: PropDataItem[] = [
     name: 'customIcon',
     description: 'Front icon',
     type: 'Object',
-    default: '--',
+    default: '-',
   },
   {
     name: 'action',
     description: 'Tail icon',
     type: 'Object',
-    default: '--',
+    default: '-',
   },
   {
     name: 'actionEvent',
     description: 'Tail icon callback event',
     type: 'Function',
-    default: '--',
+    default: '-',
   },
   {
     name: 'transition',

@@ -3,7 +3,7 @@ const list: PropDataItem[] = [
   {
     name: 'variant',
     description: 'Typography variant',
-    type: 'Enum',
+    type: 'string',
     options: [
       'h1',
       'h2',
@@ -26,10 +26,10 @@ const list: PropDataItem[] = [
   {
     name: 'component',
     description: 'The tag rendered in the html',
-    type: 'ElementType',
+    type: 'string | Component',
   },
   {
-    name: 'noWarp',
+    name: 'no-warp',
     description: 'Make the text no wrap',
     type: 'boolean',
     default: 'false',

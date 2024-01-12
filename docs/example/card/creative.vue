@@ -25,7 +25,7 @@ const Box = styled('div')`
         </in-typography>
       </in-card-content>
       <in-card-action cs="justify-content: flex-end;">
-        <in-button variant="text" shape="fullRounded">Buy Tickets</in-button>
+        <in-button variant="text">Buy Tickets</in-button>
       </in-card-action>
     </box>
   </in-card>

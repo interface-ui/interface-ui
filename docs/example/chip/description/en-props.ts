@@ -8,6 +8,19 @@ const list: PropDataItem[] = [
     default: 'filled',
   },
   {
+    name: 'color',
+    description: 'color',
+    type: 'AcceptableColor',
+    options: ['ThemeSchemes', 'ThemeCallBack', 'string'],
+    default: 'secondary',
+  },
+  {
+    name: 'component',
+    description: 'The component/html tag to render the chip as',
+    type: 'string | Component',
+    default: 'span',
+  },
+  {
     name: 'clickable',
     description: 'clickable status',
     type: 'boolean',
@@ -17,19 +30,18 @@ const list: PropDataItem[] = [
     name: 'disabled',
     description: 'disabled status',
     type: 'boolean',
-    default: 'false%',
-  },
-  {
-    name: 'color',
-    description: 'color',
-    type: 'Enum',
-    options: ['ThemeSchemes', 'ThemeCallBack', 'string'],
+    default: 'false',
   },
   {
     name: 'deletable',
     description: 'deletable status',
     type: 'boolean',
     default: 'false',
+  },
+  {
+    name: 'cs',
+    description: 'Prop to overwrite the default style',
+    type: 'string | object',
   },
 ]
 

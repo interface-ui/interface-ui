@@ -10,14 +10,14 @@ const list: PropDataItem[] = [
   {
     name: 'color',
     description: '自定义按钮颜色',
-    type: 'Enum',
-    options: ['ThemeSchemes', 'ThemeCallBack', 'String'],
+    type: 'AcceptableColor',
+    options: ['ThemeSchemes', 'ThemeCallBack', 'string'],
     default: 'primary',
   },
   {
     name: 'cs',
-    description: '覆盖组件默认样式的prop',
-    type: 'TemplateStringsArray',
+    description: '覆盖组件默认样式的 prop',
+    type: 'string | object',
   },
 ]
 

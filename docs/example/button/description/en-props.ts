@@ -3,29 +3,29 @@ const list: PropDataItem[] = [
   {
     name: 'variant',
     description: 'Button variant',
-    type: 'Enum',
+    type: 'string',
     options: ['text', 'filled', 'outlined'],
     default: 'filled',
   },
   {
     name: 'size',
     description: 'Button size',
-    type: 'Enum',
+    type: 'string',
     options: ['small', 'medium', 'large'],
     default: 'medium',
   },
   {
     name: 'shape',
     description: 'Button shape',
-    type: 'Enum',
+    type: 'string',
     options: ['rounded', 'fullRounded', 'square'],
     default: 'rounded',
   },
   {
     name: 'color',
     description: 'Customize the color of buttons',
-    type: 'Enum',
-    options: ['ThemeSchemes', 'ThemeCallBack', 'String'],
+    type: 'AcceptableColor',
+    options: ['ThemeSchemes', 'ThemeCallBack', 'string'],
     default: 'primary',
   },
   {
@@ -37,7 +37,7 @@ const list: PropDataItem[] = [
   {
     name: 'cs',
     description: 'Prop to overwrite the default style',
-    type: 'TemplateStringsArray',
+    type: 'string | object',
   },
 ]
 

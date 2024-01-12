@@ -15,8 +15,8 @@ const list: PropDataItem[] = [
   {
     name: 'color',
     description: 'Customize the color of switches',
-    type: 'Enum',
-    options: ['ThemeSchemes', 'ThemeCallBack', 'String'],
+    type: 'AcceptableColor',
+    options: ['ThemeSchemes', 'ThemeCallBack', 'string'],
     default: 'primary',
   },
   {

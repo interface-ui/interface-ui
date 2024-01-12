@@ -58,19 +58,19 @@ Use `AvatarGroup` to combine multiple avatars and the `max` attribute to limit t
 
 ### Avatar Attributes
 
-<data-table type="props" lang="zh" :data="props" />
+<data-table type="props" lang="en" :data="props" />
 
 ### Avatar Group Attributes
 
-<data-table type="props" lang="zh" :data="avatarGroupProps" />
+<data-table type="props" lang="en" :data="avatarGroupProps" />
 
 
 ## Slots
 
 ### Avatar Slots
 
-<data-table type="slots" lang="zh" :data="slots" />
+<data-table type="slots" lang="en" :data="slots" />
 
 ### Avatar Group Slots
 
-<data-table type="slots" lang="zh" :data="avatarGroupSlots" />
+<data-table type="slots" lang="en" :data="avatarGroupSlots" />

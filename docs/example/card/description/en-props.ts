@@ -1,34 +1,16 @@
 import type { PropDataItem } from '@comp/data-table'
 const list: PropDataItem[] = [
   {
-    name: 'header',
-    description: 'card header content',
+    name: 'variant',
+    description: 'Card variant',
     type: 'string',
-    default: '"card-header"',
+    options: ['elevated', 'filled', 'outlined'],
+    default: 'elevated',
   },
   {
-    name: 'border',
-    description: 'card border',
-    type: 'boolean',
-    default: 'true',
-  },
-  {
-    name: 'hover',
-    description: 'hover effect',
-    type: 'boolean',
-    default: 'false',
-  },
-  {
-    name: 'background',
-    description: 'card background',
-    type: 'string',
-    default: '',
-  },
-  {
-    name: 'width',
-    description: 'card width',
-    type: 'number',
-    default: '300',
+    name: 'cs',
+    description: 'Prop to overwrite the default style',
+    type: 'string | object',
   },
 ]
 

@@ -39,7 +39,7 @@ const list: PropDataItem[] = [
   {
     name: 'cs',
     description: 'Prop to overwrite the default style',
-    type: 'TemplateStringsArray',
+    type: 'string | object',
   },
 ]
 

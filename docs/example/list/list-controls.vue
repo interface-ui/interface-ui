@@ -18,7 +18,7 @@ const switched = ref([true, false, false])
           <in-avatar
             v-bind="avatar"
             variant="rounded"
-            :background="theme.colors.red[400]"
+            :color="theme.colors.red[400]"
           />
         </template>
         Red
@@ -31,7 +31,7 @@ const switched = ref([true, false, false])
           <in-avatar
             v-bind="avatar"
             variant="rounded"
-            :background="theme.colors.pink[400]"
+            :color="theme.colors.pink[400]"
           />
         </template>
         Pink
@@ -44,7 +44,7 @@ const switched = ref([true, false, false])
           <in-avatar
             v-bind="avatar"
             variant="rounded"
-            :background="theme.colors.purple[400]"
+            :color="theme.colors.purple[400]"
           />
         </template>
         Purple
