@@ -24,10 +24,11 @@ const list: PropDataItem[] = [
     description: '颜色',
     type: 'AcceptableColor',
     options: ['ThemeSchemes', 'ThemeCallBack', 'string'],
+    default: 'secondary',
   },
   {
     name: 'deletable',
-    description: '颜色',
+    description: '可删除，启用后显示删除按钮',
     type: 'boolean',
     default: 'false',
   },

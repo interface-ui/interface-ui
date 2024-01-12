@@ -24,6 +24,7 @@ const list: PropDataItem[] = [
     description: 'color',
     type: 'AcceptableColor',
     options: ['ThemeSchemes', 'ThemeCallBack', 'string'],
+    default: 'secondary',
   },
   {
     name: 'deletable',
