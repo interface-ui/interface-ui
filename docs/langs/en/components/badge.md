@@ -45,6 +45,6 @@ With the help of the `styled` function, the `<Badge />` becomes more flexible.
 
 ## Attribute
 
-<data-table type="props" lang="zh" :data="props" />
+<data-table type="props" lang="en" :data="props" />
 
 
