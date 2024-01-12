@@ -13,7 +13,7 @@ export const chipProps = buildProps({
   },
   color: {
     type: [String, Function] as PropType<AcceptableColor>,
-    default: 'surfaceContainerLow',
+    default: 'secondary',
   },
   component: {
     type: [String, Object] as PropType<string | Component>,

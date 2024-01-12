@@ -6,10 +6,10 @@
   align-items: center;
   gap: 8px;
   padding: 0 16px;
-  color: var(--in-chip-on-primary);
   position: relative;
   overflow: hidden;
   width: fit-content;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 
   .in-icon,
   .in-svg-icon,
@@ -31,16 +31,18 @@
 // variants
 .in-chip {
   &--filled {
-    background-color: var(--in-chip-primary);
+    background-color: var(--in-chip-primary-container);
+    color: var(--in-chip-on-primary-container);
     @media (any-hover: hover) {
       &.in-action-area:not([disabled], .in-action-area--disabled) {
         &:hover {
           background-color: color-mix(
             in srgb,
-            var(--in-chip-primary),
-            var(--in-chip-on-primary)
+            var(--in-chip-primary-container),
+            var(--in-chip-on-primary-container)
               var(--md-sys-state-hover-state-layer-opacity-percentage)
           );
+          box-shadow: var(--md-sys-elevation-level-2);
         }
       }
     }
@@ -51,7 +53,8 @@
     }
   }
   &--outlined {
-    border: 1px solid;
+    color: var(--in-chip-primary);
+    border: 1px solid var(--md-sys-color-outline);
     &[disabled],
     &.in-action-area--disabled {
       color: var(--in-sys-color-disabled-level-0);
