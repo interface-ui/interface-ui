@@ -3,7 +3,7 @@ const list: PropDataItem[] = [
   {
     name: 'variant',
     description: '排版变体',
-    type: 'Enum',
+    type: 'string',
     options: [
       'h1',
       'h2',
@@ -26,10 +26,10 @@ const list: PropDataItem[] = [
   {
     name: 'component',
     description: '渲染在html中的tag',
-    type: 'ElementType',
+    type: 'string | Component',
   },
   {
-    name: 'noWarp',
+    name: 'no-warp',
     description: '字体不换行',
     type: 'boolean',
     default: 'false',

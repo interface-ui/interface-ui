@@ -8,6 +8,19 @@ const list: PropDataItem[] = [
     default: 'filled',
   },
   {
+    name: 'color',
+    description: '颜色',
+    type: 'AcceptableColor',
+    options: ['ThemeSchemes', 'ThemeCallBack', 'string'],
+    default: 'secondary',
+  },
+  {
+    name: 'component',
+    description: '渲染为的组件/HTML 标签',
+    type: 'string | Component',
+    default: 'span',
+  },
+  {
     name: 'clickable',
     description: '可点击状态',
     type: 'boolean',
@@ -17,14 +30,7 @@ const list: PropDataItem[] = [
     name: 'disabled',
     description: '禁用状态',
     type: 'boolean',
-    default: 'false%',
-  },
-  {
-    name: 'color',
-    description: '颜色',
-    type: 'AcceptableColor',
-    options: ['ThemeSchemes', 'ThemeCallBack', 'string'],
-    default: 'secondary',
+    default: 'false',
   },
   {
     name: 'deletable',

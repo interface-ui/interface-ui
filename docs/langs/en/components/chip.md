@@ -28,7 +28,7 @@ This will use the `<ActionArea />` component internally; use the `component` pro
 ### Color
 
 The prop `color` can add different colors to `<Chip />`.
-<demo src="../../../example/chip/color.vue"  preview="[2-6]" />
+<demo src="../../../example/chip/color.vue" />
 
 ### Icon
 

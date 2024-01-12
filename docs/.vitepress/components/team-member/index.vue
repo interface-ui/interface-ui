@@ -52,9 +52,7 @@ const teamMembers = [
     <div class="content-container">
       <main class="main">
         <div class="vp-doc" flex flex-col items-center mt-10>
-          <h2 id="meet-the-team" op50 font-normal p="t-10 b-2">
-            贡献者
-          </h2>
+          <h2 id="meet-the-team" op50 font-normal p="t-10 b-2">Contributors</h2>
         </div>
         <div p-10>
           <v-p-team-members size="small" :members="teamMembers" />

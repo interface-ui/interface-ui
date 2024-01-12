@@ -29,7 +29,7 @@ lang: zh
 ### 颜色
 
 `color` 属性可以为 `<Chip />` 添加不同的颜色。
-<demo src="../../../example/chip/color.vue" preview="[2-6]" />
+<demo src="../../../example/chip/color.vue" />
 
 ### 图标
 
