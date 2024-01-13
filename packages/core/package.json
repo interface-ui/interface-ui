@@ -36,6 +36,7 @@
     "./styles": "./styles/index.css"
   },
   "scripts": {
+    "test": "vitest",
     "build": "rimraf lib es styles && gulp -f build/gulpfile.ts"
   },
   "peerDependencies": {
