@@ -12,7 +12,8 @@ describe('InDrawer', () => {
       template: '<in-drawer open="true"  />',
     })
     await nextTick()
-    expect(wrapper.find('in-drawer').exists()).toBe(true)
+    console.log('class', wrapper.classes()) // []
+    expect(wrapper.find('in-drawer').exists()).toBe(true) // true
   })
 
   it('InDrawer placement', async () => {
@@ -27,8 +28,6 @@ describe('InDrawer', () => {
       template: '<in-drawer open="true" >123</in-drawer>',
     })
     await nextTick()
-    consola.log('👵')
-
     expect(wrapper.text()).toContain('123')
   })
 })
