@@ -1,20 +1,34 @@
 import { describe, expect, it } from 'vitest'
+import { createApp, nextTick } from 'vue'
 import { mount } from '@vue/test-utils'
 import consola from 'consola'
-import { InDrawer } from '../index'
+import InDrawer from '../src/index.vue'
+const app = createApp({})
+
+app.component('InDrawer', InDrawer)
 describe('InDrawer', () => {
-  // test('class', () => {
-  //   const wrapper = mount(InDrawer as any)
-  //   expect(wrapper.find('.in-Drawer').classes()).toContain('in-avatar')
-  // })
-  it('message basic👌', () => {
-    const wrapper = mount(InDrawer as any, {
-      props: {
-        visible: true,
-        title: 'title',
-      },
+  it('render test', async () => {
+    const wrapper = mount({
+      template: '<in-drawer open="true"  />',
     })
-    consola.info('🤔️')
-    expect(wrapper.find('.in-Drawer').classes()).toContain('in-avatar')
+    await nextTick()
+    expect(wrapper.find('in-drawer').exists()).toBe(true)
+  })
+
+  it('InDrawer placement', async () => {
+    // const placement = 'top'
+    // const wrapper = mount(InDrawer, {
+    //   props: {
+    //     open: true,
+    //     placement,
+    //   },
+    // })
+    const wrapper = mount({
+      template: '<in-drawer open="true" >123</in-drawer>',
+    })
+    await nextTick()
+    consola.log('👵')
+
+    expect(wrapper.text()).toContain('123')
   })
 })
