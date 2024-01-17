@@ -16,7 +16,7 @@ export default defineConfig({
       web: [/\.[jt]sx$/],
     },
 
-    include: ['src/**/__test__/*.spec.ts'],
+    include: ['src/**/__test__/*.spec.ts', 'src/**/__test__/*.spec.tsx'],
     deps: {
       inline: ['@vue', '@vueuse', 'vue-demi', '@vue/composition-api'],
     },
