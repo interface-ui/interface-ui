@@ -19,7 +19,7 @@ describe('InProgress', () => {
 
   it('circle progress', async () => {
     const wrapper = mount(InProgress as any, {
-      props: { variant: 'circle', status: 'indeterminate' },
+      props: { variant: 'circular', status: 'indeterminate' },
       global: {
         provide: {
           ThemeContext: theme,
@@ -27,7 +27,7 @@ describe('InProgress', () => {
       },
     })
 
-    expect(wrapper.find('.in-progress__circle').exists()).toBe(true)
+    expect(wrapper.find('.in-progress__circular').exists()).toBe(true)
     expect(wrapper.find('.in-progress--indeterminate').exists()).toBe(true)
     await wrapper.setProps({ status: 'determinate' })
     expect(wrapper.find('.in-progress--determinate').exists()).toBe(true)
