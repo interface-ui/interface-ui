@@ -40,6 +40,7 @@ const handleEscKey = (e: KeyboardEvent) => {
   <component
     :is="$props.variant === 'temporary' ? Teleport : InFragment"
     to="body"
+    :disabled="!appendToBody"
   >
     <transition :name="ns.bm('animation', `slide-${$props.placement}`)">
       <div
@@ -66,6 +67,7 @@ const handleEscKey = (e: KeyboardEvent) => {
     :keep-mounted="$props.keepMounted"
     :model-value="$props.open"
     :backdrop="$props.backdrop"
+    :append-to-body="$props.appendToBody"
     @click="$emit('close')"
   />
 </template>

@@ -13,6 +13,10 @@ export const drawerProps = buildProps({
     required: true,
     default: false,
   },
+  appendToBody: {
+    type: Boolean,
+    default: false,
+  },
   backdrop: {
     type: Boolean,
     default: true,

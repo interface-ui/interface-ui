@@ -1,34 +1,43 @@
-import { describe, expect, it } from 'vitest'
-import { createApp, nextTick } from 'vue'
+import { describe, expect, it, test } from 'vitest'
 import { mount } from '@vue/test-utils'
-import consola from 'consola'
+import { componentDirections } from '@interface-ui/constants'
 import InDrawer from '../src/index.vue'
-const app = createApp({})
 
-app.component('InDrawer', InDrawer)
 describe('InDrawer', () => {
-  it('render test', async () => {
-    const wrapper = mount({
-      template: '<in-drawer open="true"  />',
+  test('render', () => {
+    const wrapper = mount(InDrawer, {
+      props: {
+        open: true,
+      }
     })
-    await nextTick()
-    expect(wrapper.find('in-drawer').exists()).toBe(true)
+
+    // expect(wrapper.find('div').classes()).toContain('in-drawer')
+    expect(wrapper.find('.in-drawer').exists()).toBe(true)
   })
 
-  it('InDrawer placement', async () => {
-    // const placement = 'top'
-    // const wrapper = mount(InDrawer, {
-    //   props: {
-    //     open: true,
-    //     placement,
-    //   },
-    // })
-    const wrapper = mount({
-      template: '<in-drawer open="true" >123</in-drawer>',
+  test('directions', () => {
+    componentDirections.forEach((item) => {
+      const wrapper = mount(InDrawer, {
+        props: {
+          open: true,
+          placement: item,
+        }
+      })
+      expect(wrapper.find(`.in-drawer--${item}`).exists()).toBe(true)
     })
-    await nextTick()
-    consola.log('👵')
+  })
 
-    expect(wrapper.text()).toContain('123')
+  it('slots', async () => {
+    const wrapper = mount(InDrawer, {
+      slots: {
+        default: 'hello world',
+      },
+      props: {
+        open: false,
+        keepMounted: true,
+      },
+    })
+
+    expect(wrapper.text()).toContain('hello world')
   })
 })
