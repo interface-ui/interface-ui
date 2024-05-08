@@ -25,9 +25,9 @@ export default defineConfig({
       level: 'deep',
     },
     algolia: {
-      appId: 'G9YJQIU3F0',
-      apiKey: '648079ba68cded490d9b86ac10ef5691',
-      indexName: 'fusion-ui2',
+      appId: 'TFYJWXKDHM',
+      apiKey: '51d561bc4082437c0557017cbb8c9733',
+      indexName: 'interface-uiio',
       insights: true,
       container: '### REPLACE ME WITH A CONTAINER (e.g. div) ###',
       debug: false, // Set debug to true if you want to inspect the modal
