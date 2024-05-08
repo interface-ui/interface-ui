@@ -20,6 +20,14 @@
     "vue",
     "interface-ui"
   ],
+  "exports": {
+    ".": {
+      "require": "./lib/index.js",
+      "import": "./es/index.js"
+    },
+    "./styles": "./styles/index.css",
+    "./*": "./src/*"
+  },
   "main": "lib/index.js",
   "module": "es/index.js",
   "types": "es/index.d.ts",
@@ -28,16 +36,8 @@
     "lib",
     "/styles"
   ],
-  "exports": {
-    ".": {
-      "import": "./es/index.js",
-      "require": "./lib/index.js"
-    },
-    "./styles": "./styles/index.css"
-  },
   "scripts": {
-    "test": "vitest",
-    "build": "rimraf lib es styles && gulp -f build/gulpfile.ts"
+    "build": "gulp -f build/gulpfile.ts"
   },
   "peerDependencies": {
     "vue": "^3.3.8"
