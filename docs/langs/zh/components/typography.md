@@ -11,11 +11,13 @@ lang: zh
 
 排版有助于使文字更加清晰和美观
 
+
 ## Roboto 字体
 
 Interface UI 默认使用 [Roboto](https://fonts.google.com/specimen/Roboto) 字体。欲了解更多信息，请查看 [@fontsource/roboto](https://www.npmjs.com/package/@fontsource/roboto)
 
 > Interface UI 的默认排版配置仅依赖于 300、400、500 和 700 字体粗细。
+
 
 ## 排版尺度
 
@@ -33,17 +35,18 @@ Interface UI 默认使用 [Roboto](https://fonts.google.com/specimen/Roboto) 字
 | Body Small/Medium/Large               | `p`                |
 | Label Small/Medium/Large              | `span`             |
 
+
 ## 使用方法
 
 <demo src="../../../example/typography/basic.vue" />
 
-## 自定义
+### 自定义
 
 通过设置 `component` 属性，您可以控制在 HTML 中呈现哪个 `Tag`。
 
 使用 `variant` 来样式化组件。`body.large` 作为默认变体。
-
 <demo src="../../../example/typography/customization.vue" />
+
 
 ## 辅助功能
 
@@ -52,6 +55,7 @@ Interface UI 默认使用 [Roboto](https://fonts.google.com/specimen/Roboto) 字
 * **颜色**: `Typography` 的默认颜色为 `onSurface`。
 * **字体大小**: 使用 `rem` 而不是 `px`。
 
+
 ## 属性
 
-<table-block type="propsZh" :data="props" />
+<data-table type="props" lang="zh" :data="props" />

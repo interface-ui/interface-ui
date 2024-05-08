@@ -20,22 +20,19 @@ const stringToColor = (string: string) => {
   return color
 }
 
-const names = ['HG', '胡歌', '霆锋', 'TF', 'ZQ', '紫琪']
+const names = ['X', '胡', 'TF', '紫琪']
 const avatars = ref(
   names.map(name => ({
     props: {
-      background: stringToColor(name),
-      color: 'white',
+      color: stringToColor(name),
     },
     text: name,
-  }))
+  })),
 )
 </script>
 
 <template>
-  <div fscw gap-5>
-    <in-avatar v-for="item in avatars" :key="item.text" v-bind="item.props">
-      {{ item.text }}
-    </in-avatar>
-  </div>
+  <in-avatar v-for="item in avatars" :key="item.text" v-bind="item.props">
+    {{ item.text }}
+  </in-avatar>
 </template>

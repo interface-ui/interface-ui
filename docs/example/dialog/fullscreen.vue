@@ -5,18 +5,21 @@ const dialogVisible = ref(false)
 
 <template>
   <in-button @click="dialogVisible = true"> fullscreen </in-button>
-  <in-dialog v-model="dialogVisible" title="Tips" fullscreen center>
-    <span>This is a message</span>
-    <template #footer>
-      <span class="dialog-footer">
-        <in-button variant="text" size="small" @click="dialogVisible = false"
-          >Cancel</in-button
-        >
-        <in-button variant="text" size="small" @click="dialogVisible = false">
-          Confirm
-        </in-button></span
-      >
-    </template>
+  <in-dialog :open="dialogVisible" variant="full-screen">
+    <in-dialog-header>Dialog Header</in-dialog-header>
+    <in-dialog-content>
+      Tempor deserunt consequat Lorem veniam reprehenderit nulla. Eu anim ipsum
+      incididunt commodo do nisi eu cupidatat non. Ullamco nulla aliqua do
+      mollit. Cupidatat excepteur tempor excepteur ea. Excepteur deserunt elit
+      proident id do consectetur et irure esse proident nulla sint in. Aute sit
+      id amet incididunt velit anim exercitation exercitation amet est.
+    </in-dialog-content>
+    <in-dialog-action>
+      <in-button variant="text" @click="dialogVisible = false">
+        Cancel
+      </in-button>
+      <in-button @click="dialogVisible = false"> Submit </in-button>
+    </in-dialog-action>
   </in-dialog>
 </template>
 

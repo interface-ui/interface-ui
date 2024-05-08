@@ -1,13 +1,13 @@
 <script lang="ts" setup>
-import * as pkg from 'fusion-ui-iconify'
-
-const { HomeFilled, FlagFilled, AppsFilled } = pkg
+import Apps from '@interface-ui/icons/AppsFilled'
+import Flag from '@interface-ui/icons/FlagFilled'
+import Home from '@interface-ui/icons/HomeFilled'
 </script>
 
 <template>
   <in-breadcrumb>
-    <in-link><home-filled /> Interface UI</in-link>
-    <in-link><flag-filled /> Components</in-link>
-    <in-link><apps-filled /> Breadcrumb</in-link>
+    <in-link><home /> Interface UI</in-link>
+    <in-link><flag /> Components</in-link>
+    <in-link><apps /> Breadcrumb</in-link>
   </in-breadcrumb>
 </template>

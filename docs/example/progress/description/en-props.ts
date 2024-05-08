@@ -1,38 +1,35 @@
-import type { PropTableItem } from '../../../.vitepress/components/table-block/src/table'
-const list: PropTableItem[] = [
+import type { PropDataItem } from '@comp/data-table'
+const list: PropDataItem[] = [
   {
     name: 'variant',
-    remark: 'Progress variants',
-    type: 'Enum',
-    optional: ['circular', 'linear'],
+    description: 'Progress variants',
+    type: 'string',
+    options: ['circular', 'linear'],
     default: 'circular',
   },
   {
     name: 'status',
-    remark: 'Progress bar status representation',
-    type: 'Enum',
-    optional: ['determinate', 'indeterminate'],
+    description: 'Progress bar status representation',
+    type: 'string',
+    options: ['determinate', 'indeterminate'],
     default: 'indeterminate',
   },
   {
     name: 'value',
-    remark: 'Percentage of the progress indicator',
-    type: 'Number | String',
-    default: '---',
+    description: 'Percentage of the progress indicator',
+    type: 'string | number',
   },
   {
     name: 'color',
-    remark: 'Customize the color of indicator',
-    type: 'Enum',
-    optional: ['ThemeSchemes', 'ThemeCallBack', 'String'],
+    description: 'Customize the color of indicator',
+    type: 'AcceptableColor',
+    options: ['ThemeSchemes', 'ThemeCallBack', 'string'],
     default: 'primary',
   },
   {
     name: 'cs',
-    remark: 'Flexible css configuration',
-    type: 'Enum',
-    optional: ['String', 'Object'],
-    default: '--',
+    description: 'Prop to overwrite the default style',
+    type: 'string | object',
   },
 ]
 

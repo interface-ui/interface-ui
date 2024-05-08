@@ -12,7 +12,7 @@ lang: zh
 
 进度指示器实时显示了一个过程的状态。
 
-## 基本用法
+## 用法
 
 有两种进度指示器的变体：`circular`（圆形）和`linear`（线性）
 
@@ -26,7 +26,7 @@ lang: zh
 线性进度指示器通过沿着固定可见轨道的长度进行动画显示进度。指示器的行为取决于进程的进度是否已知。
 <demo src="../../../example/progress/linear.vue" preview="[2]" />
 
-## 状态
+### 状态
 
 **确定指示器（determinate）** 显示了一个过程需要多长时间。当可以检测到过程完成率时，应使用它们。
 
@@ -36,13 +36,13 @@ lang: zh
 **不确定指示器（indeterminate）** 表示未指定的等待时间。当进度不可检测时，或者不需要指示活动需要多长时间时，应使用它们。
 <demo src="../../../example/progress/indeterminate.vue" preview="[2, 3]" />
 
-## 颜色
+### 颜色
 
 使用 `color` 来自定义进度
-
 <demo src="../../../example/progress/color.vue" preview="[2-5]" />
+
 
 ## 属性
 
-<table-block type="propsZh" :data="props" />
+<data-table type="props" lang="zh" :data="props" />
 

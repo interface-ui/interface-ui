@@ -1,6 +1,8 @@
-import type { SlotTableItem } from '../../../.vitepress/components/table-block/src/table'
+import type { SlotDataItem } from '@comp/data-table'
 
-const list: SlotTableItem[] = [{ name: 'fixedArea', remark: '自定义前部内容' },
-  { name: 'closeArea', remark: '自定义关闭内容' }]
+const list: SlotDataItem[] = [
+  { name: 'fixedArea', description: '自定义前部内容' },
+  { name: 'closeArea', description: '自定义关闭内容' },
+]
 
 export default list

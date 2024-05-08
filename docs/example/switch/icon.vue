@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import * as pkg from 'fusion-ui-iconify'
-const { AddFilled } = pkg
+import Add from '@interface-ui/icons/AddFilled'
 
 const value = ref<boolean>(true)
 </script>
@@ -9,6 +8,6 @@ const value = ref<boolean>(true)
 <template>
   <in-switch v-model="value" disabled-icon />
   <in-switch v-model="value">
-    <add-filled />
+    <add />
   </in-switch>
 </template>

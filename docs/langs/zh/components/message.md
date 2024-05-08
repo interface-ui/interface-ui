@@ -63,4 +63,4 @@ lang: zh
 
 [`Alert`](./alert.md)组件属性适用于 `Message`，此处不再赘述。[❗️ TODO]
 
-<table-block type="propsZh" :data="props" />
+<data-table type="props" lang="zh" :data="props" />

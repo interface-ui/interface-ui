@@ -55,4 +55,4 @@ A card can be very creative and used in many situations.
 
 ## Attributes
 
-<table-block type="propsEn" :data="props" />
+<data-table type="props" lang="en" :data="props" />

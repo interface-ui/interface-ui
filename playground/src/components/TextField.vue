@@ -1,11 +1,24 @@
 <script lang="ts" setup>
-import '@interface-ui/core/typography/src/index.less'
-import '@interface-ui/core/text-field/src/index.less'
-
-import { InTextField } from '@interface-ui/core'
+import '@core/typography/src/index.less'
+import '@core/text-field/src/index.less'
+import AccountCircle from '@interface-ui/icons/AccountCircleFilled'
+import Visibility from '@interface-ui/icons/VisibilityFilled'
+import VisibilityOff from '@interface-ui/icons/VisibilityOffFilled'
+import { InTextField } from '@core'
 import { ref } from 'vue'
+import { styled } from '@interface-ui/theme'
 
 const content = ref<string>('')
+const showPassword = ref<boolean>(false)
+
+const InputWrapper = styled('div')`
+  display: flex;
+  align-items: center;
+  & > .in-icon {
+    margin-right: 8px;
+    display: inline-flex;
+  }
+`
 </script>
 
 <template>
@@ -79,76 +92,47 @@ const content = ref<string>('')
       placeholder="placeholder"
     />
   </div>
-  <!-- <div class="content">
-    <in-text-field
-      size="large"
-      v-model="content"
-      variant="outlined"
-      label="Outlined"
-      supporting-text="supporting text"
-      placeholder="placeholder"
-    >
-      <template #startAdornment="adornment">
-        <in-typography v-bind="adornment">kg</in-typography>
-      </template>
-    </in-text-field>
-    <in-text-field
-      size="large"
-      v-model="content"
-      variant="outlined"
-      label="Outlined"
-      supporting-text="supporting text"
-      placeholder="placeholder"
-    >
-      <template #startAdornment="adornment">
-        <in-icon icon="mdi:account-circle" v-bind="adornment" />
-      </template>
-    </in-text-field>
-    <in-text-field
-      size="large"
-      v-model="content"
-      variant="outlined"
-      label="Password"
-      supporting-text="Input your password"
-      placeholder="Password"
-      type="password"
-    >
-      <template #endAdornment="adornment">
-        <in-icon-button v-bind="adornment" #default="icon">
-          <in-icon icon="mdi:eye" v-bind="icon" />
-        </in-icon-button>
-      </template>
-    </in-text-field>
-    <in-text-field
-      size="large"
-      v-model="content"
-      variant="filled"
-      label="Password"
-      supporting-text="Input your password"
-      placeholder="Password"
-      type="password"
-    >
-      <template #startAdornment="adornment">
-        <in-icon icon="mdi:account-circle" v-bind="adornment" />
-      </template>
-      <template #endAdornment="adornment">
-        <in-icon-button v-bind="adornment" #default="icon">
-          <in-icon icon="mdi:eye" v-bind="icon" />
-        </in-icon-button>
-      </template>
-    </in-text-field>
-
+  <div class="content">
     <in-text-field
       v-model="content"
       size="large"
       variant="standard"
       label="Standard"
-      supporting-text="supporting text"
-      placeholder="placeholder"
+      placeholder="Internal Icon"
     >
-      <template #startAdornment="adornment">
-        <in-icon icon="mdi:account-circle" v-bind="adornment" />
+      <template #leading>
+        <account-circle leading />
       </template>
     </in-text-field>
-  </div> -->
+
+    <input-wrapper>
+      <account-circle font-size="24" />
+      <in-text-field
+        v-model="content"
+        size="large"
+        variant="standard"
+        label="Standard"
+        placeholder="External Icon"
+      />
+    </input-wrapper>
+
+    <in-text-field
+      v-model="content"
+      size="large"
+      label="Password"
+      supporting-text="Input your password"
+      placeholder="Password"
+      type="password"
+    >
+      <template #trailing="adornment">
+        <in-icon-button
+          v-bind="adornment"
+          @click="showPassword = !showPassword"
+        >
+          <visibility-off v-show="showPassword" />
+          <visibility v-show="!showPassword" />
+        </in-icon-button>
+      </template>
+    </in-text-field>
+  </div>
 </template>

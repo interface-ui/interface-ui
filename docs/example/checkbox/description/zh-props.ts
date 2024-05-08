@@ -1,36 +1,39 @@
-import type { PropTableItem } from '../../../.vitepress/components/table-block/src/table'
-const list: PropTableItem[] = [
+import type { PropDataItem } from '@comp/data-table'
+const list: PropDataItem[] = [
   {
-    name: 'v-model',
-    remark: '绑定的值',
-    type: 'Boolean|Array',
-    default: '---',
+    name: 'v-model / modelValue',
+    description: '绑定的值',
+    type: 'boolean | string | Set<string>',
   },
   {
     name: 'size',
-    remark: '尺寸',
-    type: 'Enum',
-    optional: ['small', 'medium', 'large'],
+    description: '尺寸',
+    type: 'string',
+    options: ['small', 'medium', 'large'],
     default: 'medium',
   },
   {
     name: 'color',
-    remark: '颜色',
-    type: 'Enum',
-    optional: ['ThemeSchemes', 'ThemeCallBack', 'String'],
+    description: '颜色',
+    type: 'AcceptableColor',
+    options: ['ThemeSchemes', 'ThemeCallBack', 'string'],
     default: 'primary',
   },
   {
     name: 'label',
-    remark: '标签',
+    description: '标签',
     type: 'string',
-    default: '---',
   },
   {
     name: 'disabled',
-    remark: '禁用',
-    type: 'Boolean',
+    description: '禁用',
+    type: 'boolean',
     default: 'false',
+  },
+  {
+    name: 'cs',
+    description: '覆盖组件默认样式的 prop',
+    type: 'string | object',
   },
 ]
 

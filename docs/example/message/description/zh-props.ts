@@ -1,58 +1,56 @@
-import type { PropTableItem } from '../../../.vitepress/components/table-block/src/table'
-const list: PropTableItem[] = [
-
+import type { PropDataItem } from '@comp/data-table'
+const list: PropDataItem[] = [
   {
     name: 'title',
-    remark: '标题',
-    type: 'String',
-    default: '--',
+    description: '标题',
+    type: 'string',
+    default: '-',
   },
   {
     name: 'content',
-    remark: '内容',
-    type: 'String',
-    default: '--',
+    description: '内容',
+    type: 'string',
+    default: '-',
   },
   {
     name: 'duration',
-    remark: '关闭延时(ms)',
-    type: 'Number',
+    description: '关闭延时(ms)',
+    type: 'number',
     default: '2000',
   },
   {
     name: 'customIcon',
-    remark: '前部图标',
+    description: '前部图标',
     type: 'Object',
-    default: '--',
+    default: '-',
   },
   {
     name: 'action',
-    remark: '尾部图标',
+    description: '尾部图标',
     type: 'Object',
-    default: '--',
+    default: '-',
   },
   {
     name: 'actionEvent',
-    remark: '尾部图标回调事件',
+    description: '尾部图标回调事件',
     type: 'Function',
-    default: '--',
+    default: '-',
   },
   {
     name: 'transition',
-    remark: '动画过渡效果',
-    type: 'String',
+    description: '动画过渡效果',
+    type: 'string',
     default: 'all 0.5s ease',
   },
   {
     name: 'placement',
-    remark: '消息位置',
+    description: '消息位置',
     type: 'Object',
     default: `{
       x: 'center',
       y: 'top',
     }`,
   },
-
 ]
 
 export default list

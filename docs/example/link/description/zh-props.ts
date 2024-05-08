@@ -1,32 +1,40 @@
-import type { PropTableItem } from '../../../.vitepress/components/table-block/src/table'
-const list: PropTableItem[] = [
+import type { PropDataItem } from '@comp/data-table'
+const list: PropDataItem[] = [
+  {
+    name: 'link attrs',
+    description: '所有 <a /> 标签的属性 (href, target, 等等)',
+    type: '-',
+  },
   {
     name: 'color',
-    remark: '颜色',
-    default: '--',
-    type: 'Enum',
-    optional: ['ThemeSchemes', 'ThemeCallBack', 'String'],
+    description: '颜色',
+    type: 'AcceptableColor',
+    options: ['ThemeSchemes', 'ThemeCallBack', 'string'],
+    default: '-',
   },
   {
     name: 'underline',
-    remark: '下划线',
+    description: '下划线',
     default: 'hover',
-    type: 'Enum',
-    optional: ['hover', 'none', 'always'],
-  },
-  {
-    name: 'href',
-    remark: '原生 href 属性',
-    type: 'String',
-    default: '---',
+    type: 'string',
+    options: ['hover', 'none', 'always'],
   },
   {
     name: 'icon',
-    remark: '图标按钮',
-    type: 'String',
-    default: '---',
+    description: '图标按钮',
+    type: 'string',
   },
-  { name: 'underline', remark: '下划线', type: 'Boolean', default: 'false' },
+  {
+    name: 'underline',
+    description: '下划线',
+    type: 'boolean',
+    default: 'false',
+  },
+  {
+    name: 'cs',
+    description: '覆盖组件默认样式的 prop',
+    type: 'string | object',
+  },
 ]
 
 export default list

@@ -1,49 +1,51 @@
-import type { PropTableItem } from '../../../.vitepress/components/table-block/src/table'
-const list: PropTableItem[] = [
+import type { PropDataItem } from '@comp/data-table'
+const list: PropDataItem[] = [
   {
     name: 'modelValue',
-    remark: 'Binding value',
-    type: 'String',
-    default: '---',
+    description: 'Binding value',
+    type: 'string',
   },
   {
     name: 'variant',
-    remark: 'Component variant',
-    type: 'Enum',
-    optional: ['outlined', 'filled', 'standard'],
+    description: 'Component variant',
+    type: 'string',
+    options: ['outlined', 'filled', 'standard'],
     default: 'outlined',
   },
   {
     name: 'Label',
-    remark: 'Form control label',
-    type: 'String',
-    default: '---',
+    description: 'Form control label',
+    type: 'string',
   },
   {
     name: 'color',
-    remark: 'Customize the color of buttons',
-    type: 'Enum',
-    optional: ['ThemeSchemes', 'ThemeCallBack', 'String'],
+    description: 'Customize the color of buttons',
+    type: 'AcceptableColor',
+    options: ['ThemeSchemes', 'ThemeCallBack', 'string'],
     default: 'primary',
   },
   {
     name: 'size',
-    remark: 'Button size',
-    type: 'Enum',
-    optional: ['small', 'medium', 'large'],
+    description: 'Button size',
+    type: 'string',
+    options: ['small', 'medium', 'large'],
     default: 'medium',
   },
   {
     name: 'error',
-    remark: 'Error state',
-    type: 'Boolean',
+    description: 'Error state',
+    type: 'boolean',
     default: 'false',
   },
   {
     name: 'supporting-text',
-    remark: 'Supporting text',
-    type: 'String',
-    default: '---',
+    description: 'Supporting text',
+    type: 'string',
+  },
+  {
+    name: 'cs',
+    description: 'Prop to overwrite the default style',
+    type: 'string | object',
   },
 ]
 

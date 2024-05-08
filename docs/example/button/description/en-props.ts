@@ -1,44 +1,43 @@
-import type { PropTableItem } from '../../../.vitepress/components/table-block/src/table'
-const list: PropTableItem[] = [
+import type { PropDataItem } from '@comp/data-table'
+const list: PropDataItem[] = [
   {
     name: 'variant',
-    remark: 'Button variant',
-    type: 'Enum',
-    optional: ['text', 'filled', 'outlined'],
+    description: 'Button variant',
+    type: 'string',
+    options: ['text', 'filled', 'outlined'],
     default: 'filled',
   },
   {
     name: 'size',
-    remark: 'Button size',
-    type: 'Enum',
-    optional: ['small', 'medium', 'large'],
+    description: 'Button size',
+    type: 'string',
+    options: ['small', 'medium', 'large'],
     default: 'medium',
   },
   {
     name: 'shape',
-    remark: 'Button shape',
-    type: 'Enum',
-    optional: ['rounded', 'fullRounded', 'square'],
+    description: 'Button shape',
+    type: 'string',
+    options: ['rounded', 'fullRounded', 'square'],
     default: 'rounded',
   },
   {
     name: 'color',
-    remark: 'Customize the color of buttons',
-    type: 'Enum',
-    optional: ['ThemeSchemes', 'ThemeCallBack', 'String'],
+    description: 'Customize the color of buttons',
+    type: 'AcceptableColor',
+    options: ['ThemeSchemes', 'ThemeCallBack', 'string'],
     default: 'primary',
   },
   {
     name: 'disableRipple',
-    remark: 'Disable the ripple effect',
-    type: 'Boolean',
+    description: 'Disable the ripple effect',
+    type: 'boolean',
     default: 'false',
   },
   {
-    name: 'disableElevation',
-    remark: 'Disable the elevation',
-    type: 'Boolean',
-    default: 'false',
+    name: 'cs',
+    description: 'Prop to overwrite the default style',
+    type: 'string | object',
   },
 ]
 

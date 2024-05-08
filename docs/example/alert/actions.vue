@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import * as pkg from 'fusion-ui-iconify'
-const { CloseOutlined } = pkg
-// import { CloseOutlined } from 'fusion-ui-iconify'
+import Close from '@interface-ui/icons/CloseOutlined'
 </script>
 
 <template>
@@ -16,7 +14,7 @@ const { CloseOutlined } = pkg
       This is an warning alert — check it out!
       <template #action="btn">
         <in-icon-button v-bind="btn">
-          <close-outlined />
+          <close />
         </in-icon-button>
       </template>
     </in-alert>

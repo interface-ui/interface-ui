@@ -1,9 +1,5 @@
 <template>
-  <div space-y-2>
-    <div fscw gap-2>
-      <in-button>rounded</in-button>
-      <in-button shape="fullRounded">full rounded</in-button>
-      <in-button shape="square">square</in-button>
-    </div>
-  </div>
+  <in-button shape="rounded">Rounded</in-button>
+  <in-button shape="arc">Arc</in-button>
+  <in-button shape="square">Square</in-button>
 </template>

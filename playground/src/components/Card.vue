@@ -1,10 +1,10 @@
 <script lang="ts" setup>
-import '@interface-ui/core/card/src/index.less'
-import '@interface-ui/core/card-content/src/index.less'
-import '@interface-ui/core/card-header/src/index.less'
-import '@interface-ui/core/card-action/src/index.less'
-import '@interface-ui/core/card-media/src/index.less'
-import '@interface-ui/core/action-area/src/index.less'
+import '@core/card/src/index.less'
+import '@core/card-content/src/index.less'
+import '@core/card-header/src/index.less'
+import '@core/card-action/src/index.less'
+import '@core/card-media/src/index.less'
+import '@core/action-area/src/index.less'
 import {
   InCard,
   InCardContent,
@@ -12,7 +12,9 @@ import {
   InIconButton,
   InActionArea,
 } from '@interface-ui/core'
-import { MoreVertFilled, FavoriteFilled, ShareFilled } from 'fusion-ui-iconify'
+import MoreVert from '@interface-ui/icons/MoreVertFilled'
+import Favorite from '@interface-ui/icons/FavoriteFilled'
+import Share from '@interface-ui/icons/ShareFilled'
 </script>
 
 <template>
@@ -80,7 +82,7 @@ import { MoreVertFilled, FavoriteFilled, ShareFilled } from 'fusion-ui-iconify'
         </in-typography>
         <template #action>
           <in-icon-button color="onSurfaceVariant" cs="opacity: .5;">
-            <more-vert-filled />
+            <more-vert />
           </in-icon-button>
         </template>
       </in-card-header>
@@ -96,10 +98,10 @@ import { MoreVertFilled, FavoriteFilled, ShareFilled } from 'fusion-ui-iconify'
       </in-card-content>
       <in-card-action>
         <in-icon-button color="onSurfaceVariant" cs="opacity: .5;">
-          <favorite-filled />
+          <favorite />
         </in-icon-button>
         <in-icon-button color="onSurfaceVariant" cs="opacity: .5;">
-          <share-filled />
+          <share />
         </in-icon-button>
       </in-card-action>
     </in-card>
@@ -119,7 +121,7 @@ import { MoreVertFilled, FavoriteFilled, ShareFilled } from 'fusion-ui-iconify'
         </in-typography>
       </in-card-header>
       <in-card-action>
-        <in-button shape="fullRounded">Buy Tickets</in-button>
+        <in-button>Buy Tickets</in-button>
       </in-card-action>
     </in-card>
   </div>

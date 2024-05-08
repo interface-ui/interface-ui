@@ -3,14 +3,25 @@ import type { ExtractPropTypes, PropType } from 'vue'
 import { type ComponentSizes, componentSizes } from '@interface-ui/constants'
 import { buildProps } from '@interface-ui/utils'
 
-export const buttonVariants = ['text', 'filled', 'outlined'] as const
+export const buttonVariants = [
+  'elevated',
+  'filled',
+  'tonal',
+  'outlined',
+  'text',
+] as const
 export type ButtonVariants = (typeof buttonVariants)[number]
-export const buttonShapes = ['rounded', 'fullRounded', 'square'] as const
+export const buttonShapes = ['rounded', 'arc', 'square'] as const
 export type ButtonShapes = (typeof buttonShapes)[number]
 export const buttonHeight: Record<ComponentSizes, number> = {
   small: 32,
   medium: 40,
   large: 48,
+}
+export const textMapping: Record<ComponentSizes, string> = {
+  small: 'label-medium',
+  medium: 'label-large',
+  large: 'title-medium',
 }
 
 export const buttonProps = buildProps({
@@ -22,7 +33,7 @@ export const buttonProps = buildProps({
   shape: {
     type: String as PropType<ButtonShapes>,
     values: buttonShapes,
-    default: 'rounded',
+    default: 'arc',
   },
   size: {
     type: String as PropType<ComponentSizes>,
@@ -37,9 +48,8 @@ export const buttonProps = buildProps({
     type: Boolean,
     default: false,
   },
-  disableElevation: {
-    type: Boolean,
-    default: false,
+  cs: {
+    type: [Object, String],
   },
 })
 

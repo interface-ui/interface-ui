@@ -7,7 +7,7 @@ import useCss from './index.jss'
 
 const props = defineProps(progressProps)
 const ns = useNamespace('progress')
-const style = useCss(props)
+const style = useCss(props, ns)
 </script>
 
 <template>

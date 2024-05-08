@@ -1,28 +1,28 @@
-import type { PropTableItem } from '../../../.vitepress/components/table-block/src/table'
-const list: PropTableItem[] = [
+import type { PropDataItem } from '@comp/data-table'
+const list: PropDataItem[] = [
   {
     name: 'size',
-    remark: '图标尺寸',
-    type: 'String | Number',
+    description: '图标尺寸',
+    type: 'string | number',
     default: 'inherit',
   },
   {
     name: 'color',
-    remark: '图标颜色',
-    type: 'Enum',
-    optional: ['ThemeSchemes', 'ThemeCallBack', 'String'],
+    description: '图标颜色',
+    type: 'AcceptableColor',
+    options: ['ThemeSchemes', 'ThemeCallBack', 'string'],
     default: 'inherit',
   },
   {
-    name: 'cs',
-    remark: '覆盖组件默认样式的prop',
-    type: 'TemplateStringsArray',
+    name: 'component',
+    description: '渲染的组件',
+    type: 'string | Component',
+    default: 'svg',
   },
   {
-    name: 'component',
-    remark: '渲染的组件',
-    type: 'String | Component',
-    default: 'svg',
+    name: 'cs',
+    description: '覆盖组件默认样式的 prop',
+    type: 'string | object',
   },
 ]
 

@@ -1,11 +1,14 @@
 <script setup lang="ts">
 import { toRaw, watch, h, VNode } from 'vue'
-import { ThemeProvider } from '@interface-ui/theme'
+import { ThemeProvider, createTheme } from '@interface-ui/theme'
 import { InButton, InIconButton, InMessage } from '@interface-ui/core'
-import { DeleteFilled, VerifiedRound, HomeFilled, DarkModeFilled, SunnyFilled } from 'fusion-ui-iconify'
+import Delete from '@interface-ui/icons/DeleteFilled'
+import Verified from '@interface-ui/icons/VerifiedRound'
+import Home from '@interface-ui/icons/HomeFilled'
+import DarkMode from '@interface-ui/icons/DarkModeFilled'
+import Sunny from '@interface-ui/icons/SunnyFilled'
 import { RouterView } from 'vue-router'
-
-import createTheme from '@interface-ui/theme'
+import { toCapitalize } from '@interface-ui/utils'
 
 const theme = createTheme() // create a theme instance
 
@@ -33,8 +36,8 @@ const onOpenMessage = () => {
     placement: { x: 'center' },
   }).push({
     content: 'this is a info message',
-    customIcon: VerifiedRound,
-    action: h(InIconButton, { color: 'primary' }, () => h(DeleteFilled)),
+    customIcon: Verified,
+    action: h(InIconButton, { color: 'primary' }, () => h(Delete)),
     /**
      * if the actionEvent is not set
      * the default action event is to close the message
@@ -50,13 +53,17 @@ const onOpenMessage = () => {
 <template>
   <theme-provider :theme="theme">
     <header>
-      <in-button @click="$router.replace('/')"><HomeFilled /> Home </in-button>
-      <in-button @click="changTheme">
-        <DarkModeFilled v-show="theme.mode == 'dark'" />
-        <SunnyFilled v-show="theme.mode == 'light'" />
-        {{ theme.mode }}
+      <in-button @click="$router.replace('/')">
+        <Home leading /> Home
       </in-button>
-      <in-button @click="onOpenMessage"> open message </in-button>
+
+      <in-button @click="changTheme">
+        <DarkMode leading v-show="theme.mode == 'dark'" />
+        <Sunny leading v-show="theme.mode == 'light'" />
+        {{ toCapitalize(theme.mode) }}
+      </in-button>
+
+      <in-button @click="onOpenMessage"> Open Message </in-button>
     </header>
 
     <router-view />

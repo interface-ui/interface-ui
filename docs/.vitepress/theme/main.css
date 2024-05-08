@@ -12,6 +12,10 @@
 @import '@fontsource/roboto/500.css';
 @import '@fontsource/roboto/700.css';
 
+#app {
+  overflow-x: hidden;
+}
+
 :root {
   --vp-c-brand: #6750a4;
   --vp-c-brand-light: #7d65bb;

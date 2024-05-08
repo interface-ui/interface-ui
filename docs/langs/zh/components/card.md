@@ -47,12 +47,13 @@ lang: zh
 
 <demo src="../../../example/card/action-partial.vue" />
 
-## 创意
+
+### 创意
 
 卡片可以非常有创意，并在许多情况下使用。
-
 <demo src="../../../example/card/creative.vue" />
+
 
 ## 属性
 
-<table-block type="propsZh" :data="props" />
+<data-table type="props" lang="zh" :data="props" />

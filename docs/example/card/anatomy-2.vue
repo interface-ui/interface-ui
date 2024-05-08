@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import * as pkg from 'fusion-ui-iconify'
-
-const { MoreVertFilled, FavoriteFilled, ShareFilled } = pkg
+import Favorite from '@interface-ui/icons/FavoriteFilled'
+import MoreVert from '@interface-ui/icons/MoreVertFilled'
+import Share from '@interface-ui/icons/ShareFilled'
 </script>
 
 <template>
@@ -16,7 +16,7 @@ const { MoreVertFilled, FavoriteFilled, ShareFilled } = pkg
       />
       <template #action>
         <in-icon-button color="onSurfaceVariant" cs="opacity: .5;">
-          <more-vert-filled />
+          <more-vert />
         </in-icon-button>
       </template>
     </in-card-header>
@@ -32,10 +32,10 @@ const { MoreVertFilled, FavoriteFilled, ShareFilled } = pkg
     </in-card-content>
     <in-card-action>
       <in-icon-button color="onSurfaceVariant" cs="opacity: .5;">
-        <favorite-filled />
+        <favorite />
       </in-icon-button>
       <in-icon-button color="onSurfaceVariant" cs="opacity: .5;">
-        <share-filled />
+        <share />
       </in-icon-button>
     </in-card-action>
   </in-card>

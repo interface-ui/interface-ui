@@ -1,41 +1,40 @@
-import type { PropTableItem } from '../../../.vitepress/components/table-block/src/table'
-const list: PropTableItem[] = [
+import type { PropDataItem } from '@comp/data-table'
+const list: PropDataItem[] = [
   {
     name: 'title',
-    remark: 'Alert 标题',
-    type: 'String',
-    default: '---',
+    description: 'Alert 标题',
+    type: 'string',
   },
   {
     name: 'type',
-    remark: 'Alert 类型',
+    description: 'Alert 类型',
     type: 'Enum',
-    optional: ['info', 'success', 'danger', 'warning'],
+    options: ['info', 'success', 'danger', 'warning'],
     default: 'info',
   },
   {
     name: 'closable',
-    remark: '是否可以关闭',
-    type: 'Boolean',
+    description: '是否可以关闭',
+    type: 'boolean',
     default: 'false',
   },
   {
     name: 'center',
-    remark: '文字是否居中',
-    type: 'Boolean',
+    description: '文字是否居中',
+    type: 'boolean',
     default: 'false',
   },
   {
     name: 'scrollable',
-    remark: '开启滚动',
-    type: 'Boolean',
+    description: '开启滚动',
+    type: 'boolean',
     default: 'false',
   },
   {
     name: 'direction',
-    remark: '滚动方向',
+    description: '滚动方向',
     type: 'Enum',
-    optional: ['left', 'top'],
+    options: ['left', 'top'],
     default: 'left',
   },
 ]

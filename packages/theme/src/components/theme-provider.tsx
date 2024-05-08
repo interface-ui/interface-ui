@@ -1,5 +1,5 @@
 import type { Component, PropType } from 'vue'
-import { defineComponent, ref, watch } from 'vue'
+import { defineComponent, nextTick, ref, watch } from 'vue'
 import { Theme, injectJSS } from '@/core'
 import { useTheme, useThemeProvider } from '@/hooks'
 import type { ThemeMode } from '@/mode'
@@ -38,33 +38,37 @@ export default defineComponent({
     )
 
     const toggleTheme = (mode: ThemeMode) => {
-      const dom = props.theme.target === 'root' ? html : element.value!
-      const { schemes } = mode === 'dark' ? darkSchemes! : lightSchemes!
+      nextTick(() => {
+        const dom = props.theme.target === 'root' ? html : element.value!
+        const { schemes } = mode === 'dark' ? darkSchemes! : lightSchemes!
 
-      if (mode === 'dark') {
-        dom.setAttribute('data-theme', 'dark')
-      } else {
-        dom.removeAttribute('data-theme')
-      }
+        if (mode === 'dark') {
+          dom.setAttribute('data-theme', 'dark')
+        } else {
+          dom.removeAttribute('data-theme')
+        }
 
-      const { palettes, target, schemes: $schemes } = theme.value
+        const { palettes, target, schemes: $schemes } = theme.value
 
-      theme.value = new Theme(
-        { ...$schemes, ...schemes } as ThemeSchemes,
-        palettes,
-        mode,
-        lightSchemes,
-        darkSchemes,
-        target,
-      )
-      emit('update:theme', theme.value)
+        theme.value = new Theme(
+          { ...$schemes, ...schemes } as ThemeSchemes,
+          palettes,
+          mode,
+          lightSchemes,
+          darkSchemes,
+          target,
+        )
+        emit('update:theme', theme.value)
+      })
     }
 
     const watchTarget =
       props.theme.target === 'root'
         ? () => props.theme.mode
         : () => parentTheme.value?.mode ?? props.theme.mode
-    props.watcher ? props.watcher() : watch(watchTarget, toggleTheme)
+    props.watcher
+      ? props.watcher()
+      : watch(watchTarget, toggleTheme, { immediate: true })
 
     useThemeProvider(theme)
 

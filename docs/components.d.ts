@@ -15,3 +15,4 @@ declare module '@vue/runtime-core' {
     InRadio: typeof import('interface-ui/components/index')['InRadio']
   }
 }
+

@@ -5,12 +5,7 @@ import typography from '../typography'
 import motion from '../motion'
 import zIndex from '../z-index'
 import type { ThemeMode } from '../mode'
-import type {
-  Schemes,
-  SeveritySchemes,
-  ThemePalettes,
-  ThemeSchemes,
-} from '../types'
+import type { ThemePalettes, ThemeSchemes } from '../types'
 import type { ParsedSchemes } from './types'
 
 export default class Theme {
@@ -29,12 +24,12 @@ export default class Theme {
   readonly _darkSchemes: ParsedSchemes
 
   constructor(
-    schemes: Schemes & SeveritySchemes,
+    schemes: ThemeSchemes,
     palettes: ThemePalettes,
     mode: ThemeMode = 'light',
     lightSchemes: ParsedSchemes,
     darkSchemes: ParsedSchemes,
-    target: 'root' | 'host'
+    target: 'root' | 'host',
   ) {
     this.schemes = schemes
     this.mode = mode

@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import '@interface-ui/core/chip/src/index.less'
-import { ChipVariants, InChip } from '@interface-ui/core'
-import { TodayFilled } from 'fusion-ui-iconify'
+import '@core/chip/src/index.less'
+import { ChipVariants, InChip } from '@core'
+import Today from '@interface-ui/icons/TodayFilled'
 import { ref } from 'vue'
 import { ThemeCallBack } from '@interface-ui/theme'
 
@@ -19,7 +19,7 @@ const chipArr = ref<
   },
   {
     text: 'React',
-    color: 'secondaryContainer',
+    color: 'primary',
     variant: 'filled',
     deletable: true,
   },
@@ -30,6 +30,7 @@ const chipArr = ref<
   {
     text: 'jQuary',
     variant: 'outlined',
+    color: 'error',
     deletable: true,
   },
   {
@@ -68,20 +69,36 @@ const onDelete = (index: number) => {
 
   <!-- Color -->
   <div class="content">
-    <in-chip color="primaryContainer">Primary</in-chip>
-    <in-chip color="secondaryContainer">Secondary</in-chip>
+    <in-chip color="primary">Primary</in-chip>
+    <in-chip color="secondary">Secondary</in-chip>
+    <in-chip color="info">info</in-chip>
+    <in-chip color="success">success</in-chip>
+    <in-chip color="error">error</in-chip>
+    <in-chip color="warning">warning</in-chip>
+    <in-chip :color="theme => theme.colors.cyan[400]">Cyan</in-chip>
+    <in-chip color="#2E7D32">#2E7D32</in-chip>
+  </div>
+  <div class="content">
     <in-chip color="primary" variant="outlined">Primary</in-chip>
     <in-chip color="secondary" variant="outlined">Secondary</in-chip>
+    <in-chip color="info" variant="outlined">info</in-chip>
+    <in-chip color="success" variant="outlined">success</in-chip>
+    <in-chip color="error" variant="outlined">error</in-chip>
+    <in-chip color="warning" variant="outlined">warning</in-chip>
+    <in-chip :color="theme => theme.colors.cyan[400]" variant="outlined"
+      >Cyan</in-chip
+    >
+    <in-chip color="#2E7D32" variant="outlined">#2E7D32</in-chip>
   </div>
 
   <!-- Icon -->
   <div class="content">
     <in-chip>
-      <today-filled />
+      <today />
       Today
     </in-chip>
     <in-chip variant="outlined">
-      <today-filled />
+      <today />
       Today
     </in-chip>
   </div>

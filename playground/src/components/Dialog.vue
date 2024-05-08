@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-import '@interface-ui/core/dialog/src/index.less'
-import '@interface-ui/core/dialog-header/src/index.less'
-import '@interface-ui/core/dialog-content/src/index.less'
-import '@interface-ui/core/dialog-action/src/index.less'
+import '@core/dialog/src/index.less'
+import '@core/dialog-header/src/index.less'
+import '@core/dialog-content/src/index.less'
+import '@core/dialog-action/src/index.less'
 import {
   InDialog,
   InDialogHeader,

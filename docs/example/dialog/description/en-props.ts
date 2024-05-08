@@ -1,32 +1,30 @@
-import type { PropTableItem } from '../../../.vitepress/components/table-block/src/table'
-const list: PropTableItem[] = [
+import type { PropDataItem } from '@comp/data-table'
+const list: PropDataItem[] = [
   {
-    name: 'model-value / v-model',
-    remark: 'Controls the visibility of the Dialog.',
-    type: 'Boolean',
-    default: '---',
+    name: 'open',
+    description: 'Controls the visibility of the Dialog.',
+    type: 'boolean',
+  },
+
+  {
+    name: 'variant',
+    description: 'The variant to use.',
+    type: 'Enum',
+    options: ['base', 'full-screen'],
+    default: 'base',
   },
   {
-    name: 'title',
-    remark: 'The title of the Dialog.',
-    type: 'Boolean',
-    default: '---',
-  },
-  {
-    name: 'width',
-    remark: 'The width of the Dialog.',
-    type: 'String|Number',
-    default: '30%',
-  },
-  {
-    name: 'fullscreen',
-    remark: 'Displays the Dialog in fullscreen mode.',
+    name: 'backdrop',
+    description: 'Component mask.',
     type: 'Boolean',
     default: 'false',
   },
-  { name: 'top', remark: 'The distance of the Dialog from the top.', type: 'String|Number', default: '30vh' },
-  { name: 'center', remark: 'Centers the Dialog on the screen.', type: 'Boolean', default: '---' },
-  { name: 'close-on-click-modal', remark: 'Determines if clicking the overlay closes the Dialog.', type: 'Boolean', default: 'true' },
+
+  {
+    name: 'cs',
+    description: 'Prop to overwrite the default style',
+    type: 'string | object',
+  },
 ]
 
 export default list

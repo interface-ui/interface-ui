@@ -11,7 +11,6 @@ import routes from '../routes'
       :component="RouterLink"
       :to="item.path"
       variant="text"
-      cs="text-transform: none;"
     >
       {{ item.name }}
     </in-button>

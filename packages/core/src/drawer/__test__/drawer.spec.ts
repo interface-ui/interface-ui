@@ -1,20 +1,43 @@
-import { describe, expect, it } from 'vitest'
+import { describe, expect, it, test } from 'vitest'
 import { mount } from '@vue/test-utils'
-import consola from 'consola'
-import { InDrawer } from '../index'
+import { componentDirections } from '@interface-ui/constants'
+import InDrawer from '../src/index.vue'
+
 describe('InDrawer', () => {
-  // test('class', () => {
-  //   const wrapper = mount(InDrawer as any)
-  //   expect(wrapper.find('.in-Drawer').classes()).toContain('in-avatar')
-  // })
-  it('message basic👌', () => {
-    const wrapper = mount(InDrawer as any, {
+  test('render', () => {
+    const wrapper = mount(InDrawer, {
       props: {
-        visible: true,
-        title: 'title',
+        open: true,
+      }
+    })
+
+    // expect(wrapper.find('div').classes()).toContain('in-drawer')
+    expect(wrapper.find('.in-drawer').exists()).toBe(true)
+  })
+
+  test('directions', () => {
+    componentDirections.forEach((item) => {
+      const wrapper = mount(InDrawer, {
+        props: {
+          open: true,
+          placement: item,
+        }
+      })
+      expect(wrapper.find(`.in-drawer--${item}`).exists()).toBe(true)
+    })
+  })
+
+  it('slots', async () => {
+    const wrapper = mount(InDrawer, {
+      slots: {
+        default: 'hello world',
+      },
+      props: {
+        open: false,
+        keepMounted: true,
       },
     })
-    consola.info('🤔️')
-    expect(wrapper.find('.in-Drawer').classes()).toContain('in-avatar')
+
+    expect(wrapper.text()).toContain('hello world')
   })
 })

@@ -4,10 +4,12 @@ import type {
   CustomColor,
   CustomColorGroup,
   Theme as DynamicTheme,
+  Rgba,
   Scheme,
 } from '@material/material-color-utilities'
 import {
   CorePalette,
+  argbFromHex,
   hexFromArgb,
   rgbaFromArgb,
 } from '@material/material-color-utilities'
@@ -38,14 +40,16 @@ const themePalettesTones: ThemePalettesTones[] = [
 ]
 
 export const parsePalettes = (
-  palette: DynamicTheme['palettes']
+  palette: DynamicTheme['palettes'],
 ): ThemePalettes => {
   const palettes = {} as ThemePalettes
   for (const [color, tones] of Object.entries(palette)) {
     const obj = {} as Record<ThemePalettesTones, string>
     themePalettesTones.forEach(
       toneKey =>
-        (obj[toneKey as ThemePalettesTones] = hexFromArgb(tones.tone(+toneKey)))
+        (obj[toneKey as ThemePalettesTones] = hexFromArgb(
+          tones.tone(+toneKey),
+        )),
     )
     palettes[color as keyof DynamicTheme['palettes']] = obj
   }
@@ -62,7 +66,9 @@ export const createCustomPalettes = (customColors: CustomColor[]) => {
     const obj = {} as Record<ThemePalettesTones, string>
     themePalettesTones.forEach(
       toneKey =>
-        (obj[toneKey as ThemePalettesTones] = hexFromArgb(tones.tone(+toneKey)))
+        (obj[toneKey as ThemePalettesTones] = hexFromArgb(
+          tones.tone(+toneKey),
+        )),
     )
     palettes[name.toLowerCase()] = obj
   })
@@ -87,7 +93,7 @@ export const parseSchemes = (scheme: Scheme): ParsedSchemes => {
 
 export const parseCustomSchemes = (
   scheme: CustomColorGroup[],
-  mode: ThemeMode
+  mode: ThemeMode,
 ): ParsedSchemes => {
   const schemes: SeveritySchemes = {} as any
   const styles: Record<string, string> = {} as any
@@ -141,7 +147,7 @@ export const injectJSS = (
   target: 'root' | 'host',
   lightSchemes: ParsedSchemes,
   darkSchemes: ParsedSchemes,
-  theme: Theme
+  theme: Theme,
 ) => {
   const { fontFamily, htmlFontSize } = theme.typography
 
@@ -206,7 +212,7 @@ export interface ParsedNewSchemes {
  * @param {DynamicTheme} dynamicTheme The dynamic theme object
  */
 export const newSchemes = (
-  dynamicTheme: DynamicTheme
+  dynamicTheme: DynamicTheme,
 ): AdditionalThemeSchemes => {
   const {
     palettes: { neutral, neutralVariant },
@@ -256,4 +262,16 @@ export const parsedNewSchemes = (scheme: NewSchemes): ParsedNewSchemes => {
   }
 
   return { schemes, styles }
+}
+
+/**
+ * The function converts hex color to rgba color
+ * @param {string} hex The hex color
+ * @return {Rgba} The rgba color obj
+ */
+export const rgbaFromHex = (hex: string): Rgba => {
+  if (!hex.startsWith('#')) {
+    throw new Error('The color must be the hex color')
+  }
+  return rgbaFromArgb(argbFromHex(hex))
 }

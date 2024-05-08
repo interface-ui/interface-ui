@@ -1,10 +1,10 @@
-import type { PropTableItem } from '../../../.vitepress/components/table-block/src/table'
-const list: PropTableItem[] = [
+import type { PropDataItem } from '@comp/data-table'
+const list: PropDataItem[] = [
   {
     name: 'variant',
-    remark: '排版变体',
-    type: 'Enum',
-    optional: [
+    description: '排版变体',
+    type: 'string',
+    options: [
       'h1',
       'h2',
       'h3',
@@ -25,19 +25,19 @@ const list: PropTableItem[] = [
   },
   {
     name: 'component',
-    remark: '渲染在html中的tag',
-    type: 'ElementType',
+    description: '渲染在html中的tag',
+    type: 'string | Component',
   },
   {
-    name: 'noWarp',
-    remark: '字体不换行',
-    type: 'Boolean',
+    name: 'no-warp',
+    description: '字体不换行',
+    type: 'boolean',
     default: 'false',
   },
   {
     name: 'gutter',
-    remark: '上下边距',
-    type: 'Boolean',
+    description: '上下边距',
+    type: 'boolean',
     default: 'false',
   },
 ]

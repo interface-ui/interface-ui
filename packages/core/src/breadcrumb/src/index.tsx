@@ -1,18 +1,24 @@
 import type { VNode } from 'vue'
-import { computed, defineComponent, mergeProps, ref } from 'vue'
+import { computed, defineComponent, mergeProps, provide, ref } from 'vue'
 import { useNamespace } from '@interface-ui/utils'
 import InButtonBase from '../../button-base'
 import MoreHorizFilled from '../../svg-icon/internal/MoreHorizFilled.vue'
-import { breadcrumbProps } from './breadcrumb'
+import { BREADCRUMB_PROVIDE_KEY, breadcrumbProps } from './breadcrumb'
 import useCss from './index.jss'
 
 export default defineComponent({
   props: breadcrumbProps,
   setup(props, { slots }) {
+    const slotVNodes = slots.default?.() ?? []
+    if (!slotVNodes.every((VNode: any) => VNode.type.name === 'InLink')) {
+      throw new Error('<InBreadcrumb /> only accepts <InLink /> as children.')
+    }
+
     const ns = useNamespace('breadcrumb')
     const slotsCount = computed(() => slots.default?.().length ?? 0)
-    const cssClass = useCss(props)
+    const cssStyles = useCss(props, ns)
     const showAllSlots = ref(!!props.max && +props.max < slotsCount.value)
+    provide(BREADCRUMB_PROVIDE_KEY, cssStyles.value.dynamicColor)
 
     const slotsVNodes = computed(() =>
       (slots.default?.() ?? []).map((VNode: any) => (
@@ -20,13 +26,12 @@ export default defineComponent({
           {...mergeProps(
             {
               underline: props.underline,
-              color: 'inherit',
-              cs: { '--in-link-color-rgb': 'var(--in-breadcrumb-color-rgb)' },
+              color: props.color,
             },
-            VNode.props
+            VNode.props,
           )}
         />
-      ))
+      )),
     )
 
     const separator = (() => {
@@ -62,7 +67,7 @@ export default defineComponent({
               <VNode />
             </li>
             {separator}
-          </>
+          </>,
         )
       }
 
@@ -84,14 +89,14 @@ export default defineComponent({
         separator,
         <li class={[ns.m('item')]}>
           <LastVNode />
-        </li>
+        </li>,
       )
 
       return VNodes
     }
 
     return () => (
-      <nav class={[ns.b(), cssClass.value]}>
+      <nav class={[ns.b(), cssStyles.value.cssClass]}>
         <ol class={[ns.m('container')]}>
           {showAllSlots.value
             ? renderSlotsWithMaxLimit()

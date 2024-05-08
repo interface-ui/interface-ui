@@ -16,33 +16,33 @@ Use radio buttons when the user needs to see all available options. If available
 
 Radio buttons should have the most commonly used option selected by default.
 
-## Basic usage
 
-Usually, `Radio` works with `FormLabel` component to display the lable.
+## Usage
 
-Using `v-model` binding variable, and `value` as the selected value.
+### Basic radio
 
+Usually, `<Radio />` works with `<FormLabel />` component to display the label.
+
+We use the `v-model` binding variable and `value` as the selected value.
 <demo src="../../../example/radio/basic.vue" />
 
+### Standalone radio buttons
 
-## Standalone radio buttons
+`<Radio />` can also be used standalone, without the `<FormLabel />` component.
+<demo src="../../../example/radio/standalone.vue" preview="[8, 9]" />
 
-`Radio` can also be used standalone, without the `FormLabel` component.
+### Size and Color
 
-<demo src="../../../example/radio/standalone.vue" />
+The `size` and `color` props can be used to control the appearance of the `<Radio />`.
+<demo col src="../../../example/radio/size-color.vue" />
 
-## Size and Color
+### Label placement
 
-The `size` and `color` props can be used to control the appearance of the `Radio`.
-
-<demo src="../../../example/radio/size-color.vue" />
-
-## Label placement
-
-You can change the placement of the label with the `FormLabel` component's `label-placement` prop:
+You can change the placement of the label with the `<FormLabel />` component's `label-placement` prop:
 
 <demo src="../../../example/radio/label-placement.vue" />
 
+
 ## Attributes
 
-<table-block type="propsEn" :data="props" />
+<data-table type="props" lang="en" :data="props" />

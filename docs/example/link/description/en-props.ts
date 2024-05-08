@@ -1,32 +1,40 @@
-import type { PropTableItem } from '../../../.vitepress/components/table-block/src/table'
-const list: PropTableItem[] = [
+import type { PropDataItem } from '@comp/data-table'
+const list: PropDataItem[] = [
+  {
+    name: 'link attrs',
+    description: 'All the attributes of the <a /> tag (href, target, etc.)',
+    type: '-',
+  },
   {
     name: 'color',
-    remark: 'color',
-    default: '--',
-    type: 'Enum',
-    optional: ['ThemeSchemes', 'ThemeCallBack', 'String'],
+    description: 'color',
+    type: 'AcceptableColor',
+    options: ['ThemeSchemes', 'ThemeCallBack', 'string'],
+    default: '-',
   },
   {
     name: 'underline',
-    remark: 'underline',
+    description: 'underline',
     default: 'hover',
-    type: 'Enum',
-    optional: ['hover', 'none', 'always'],
-  },
-  {
-    name: 'href',
-    remark: 'Native href attribute',
-    type: 'String',
-    default: '---',
+    type: 'string',
+    options: ['hover', 'none', 'always'],
   },
   {
     name: 'icon',
-    remark: 'Icon component',
-    type: 'String',
-    default: '---',
+    description: 'Icon component',
+    type: 'string',
   },
-  { name: 'underline', remark: 'underline', type: 'Boolean', default: 'false' },
+  {
+    name: 'underline',
+    description: 'underline',
+    type: 'boolean',
+    default: 'false',
+  },
+  {
+    name: 'cs',
+    description: 'Prop to overwrite the default style',
+    type: 'string | object',
+  },
 ]
 
 export default list

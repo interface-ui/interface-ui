@@ -1,17 +1,13 @@
 <script lang="ts" setup>
 import { useTheme } from '@interface-ui/theme'
-import * as pkg from 'fusion-ui-iconify'
 import { computed, ref } from 'vue'
-
-const {
-  ContentCopyFilled,
-  MoreOutlined,
-  ContentCutFilled,
-  ExpandMoreFilled,
-  ContentPasteFilled,
-  UndoFilled,
-  StarBorderOutlined,
-} = pkg
+import ContentCopy from '@interface-ui/icons/ContentCopyFilled'
+import ContentCut from '@interface-ui/icons/ContentCutFilled'
+import ContentPaste from '@interface-ui/icons/ContentPasteFilled'
+import ExpandMore from '@interface-ui/icons/ExpandMoreFilled'
+import More from '@interface-ui/icons/MoreOutlined'
+import StarBorder from '@interface-ui/icons/StarBorderOutlined'
+import Undo from '@interface-ui/icons/UndoFilled'
 
 const collapse = ref(false)
 const theme = useTheme()
@@ -29,7 +25,7 @@ const rotate = computed(() => ({
     <in-list>
       <in-list-item>
         <template #leading="{ icon }">
-          <content-copy-filled v-bind="icon" />
+          <content-copy v-bind="icon" />
         </template>
         Copy
         <template #trailing>
@@ -40,7 +36,7 @@ const rotate = computed(() => ({
       </in-list-item>
       <in-list-item>
         <template #leading="{ icon }">
-          <content-cut-filled v-bind="icon" />
+          <content-cut v-bind="icon" />
         </template>
         Cut
         <template #trailing>
@@ -51,7 +47,7 @@ const rotate = computed(() => ({
       </in-list-item>
       <in-list-item disabled>
         <template #leading="{ icon }">
-          <content-paste-filled v-bind="icon" />
+          <content-paste v-bind="icon" />
         </template>
         Paste
         <template #trailing>
@@ -62,18 +58,18 @@ const rotate = computed(() => ({
       </in-list-item>
       <in-list-item @click="collapse = !collapse">
         <template #leading="{ icon }">
-          <more-outlined v-bind="icon" />
+          <more v-bind="icon" />
         </template>
         More
         <template #trailing>
-          <in-svg-icon :cs="rotate" :component="ExpandMoreFilled" />
+          <in-svg-icon :cs="rotate" :component="ExpandMore" />
         </template>
       </in-list-item>
       <in-collapse>
         <in-list v-show="collapse" component="li" level="1">
           <in-list-item>
             <template #leading="{ icon }">
-              <undo-filled v-bind="icon" />
+              <undo v-bind="icon" />
             </template>
             Undo
             <template #trailing>
@@ -88,7 +84,7 @@ const rotate = computed(() => ({
       <in-list-item-header> Other actions </in-list-item-header>
       <in-list-item>
         <template #leading="{ icon }">
-          <star-border-outlined v-bind="icon" />
+          <star-border v-bind="icon" />
         </template>
         Save
       </in-list-item>

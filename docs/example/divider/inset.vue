@@ -1,7 +1,5 @@
 <script lang="ts" setup>
-import * as pkg from 'fusion-ui-iconify'
-
-const { InfoOutlined } = pkg
+import Info from '@interface-ui/icons/InfoOutlined'
 </script>
 
 <template>
@@ -18,7 +16,7 @@ const { InfoOutlined } = pkg
         <in-headline-text headline="Remy Sharp" supporting-text="He/Him" />
         <template #trailing>
           <in-icon-button>
-            <info-outlined />
+            <info />
           </in-icon-button>
         </template>
       </in-list-item>
@@ -34,7 +32,7 @@ const { InfoOutlined } = pkg
         <in-headline-text headline="Travis Howard" supporting-text="He/Him" />
         <template #trailing>
           <in-icon-button>
-            <info-outlined />
+            <info />
           </in-icon-button>
         </template>
       </in-list-item>
@@ -50,7 +48,7 @@ const { InfoOutlined } = pkg
         <in-headline-text headline="Cindy Baker" supporting-text="She/Her" />
         <template #trailing>
           <in-icon-button>
-            <info-outlined />
+            <info />
           </in-icon-button>
         </template>
       </in-list-item>

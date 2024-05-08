@@ -5,4 +5,5 @@ export interface DemoInfos {
   code: string
   preview?: string
   lang?: string
+  col?: boolean
 }

@@ -1,38 +1,48 @@
-import type { PropTableItem } from '../../../.vitepress/components/table-block/src/table'
-const list: PropTableItem[] = [
+import type { PropDataItem } from '@comp/data-table'
+const list: PropDataItem[] = [
   {
     name: 'variant',
-    remark: '变体',
+    description: '变体',
     type: 'Enum',
-    optional: ['filled', 'outlined'],
+    options: ['filled', 'outlined'],
     default: 'filled',
   },
   {
+    name: 'color',
+    description: '颜色',
+    type: 'AcceptableColor',
+    options: ['ThemeSchemes', 'ThemeCallBack', 'string'],
+    default: 'secondary',
+  },
+  {
+    name: 'component',
+    description: '渲染为的组件/HTML 标签',
+    type: 'string | Component',
+    default: 'span',
+  },
+  {
     name: 'clickable',
-    remark: '可点击状态',
-    type: 'Boolean',
+    description: '可点击状态',
+    type: 'boolean',
     default: 'false',
   },
   {
     name: 'disabled',
-    remark: '禁用状态',
-    type: 'Boolean',
-    default: 'false%',
-  },
-  {
-    name: 'color',
-    remark: '颜色',
-    type: 'Enum',
-    optional: ['ThemeSchemes', 'ThemeCallBack', 'string'],
-    default: '---',
+    description: '禁用状态',
+    type: 'boolean',
+    default: 'false',
   },
   {
     name: 'deletable',
-    remark: '颜色',
-    type: 'Boolean',
+    description: '可删除，启用后显示删除按钮',
+    type: 'boolean',
     default: 'false',
   },
-
+  {
+    name: 'cs',
+    description: '覆盖组件默认样式的 prop',
+    type: 'string | object',
+  },
 ]
 
 export default list

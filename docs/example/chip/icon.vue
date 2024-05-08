@@ -1,15 +1,14 @@
 <script lang="ts" setup>
-import * as pkg from 'fusion-ui-iconify'
-const { TodayFilled } = pkg
+import Today from '@interface-ui/icons/TodayFilled'
 </script>
 
 <template>
   <in-chip>
-    <today-filled />
+    <today leading />
     Today
   </in-chip>
   <in-chip variant="outlined">
     Today
-    <today-filled />
+    <today trailing />
   </in-chip>
 </template>

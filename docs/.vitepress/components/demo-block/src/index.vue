@@ -1,24 +1,51 @@
 <script lang="ts" setup name="demo-block">
 import { computed } from 'vue'
 import { useClipboard, useToggle } from '@vueuse/core'
+import { useData } from 'vitepress'
 import { demoProps } from './index'
 
 const props = defineProps(demoProps)
 
+const { site } = useData()
 const decodedHighlightedCode = computed(() =>
-  decodeURIComponent(props.highlightedCode)
+  decodeURIComponent(props.highlightedCode),
 )
 
 const { copy, copied } = useClipboard({
   source: decodeURIComponent(props.code),
 })
 const [value, toggle] = useToggle()
+
+const MAIN_FILE_NAME = 'component.vue'
+
+/**
+ *  Base64 编码
+ */
+const sourceHash = computed(() => {
+  const originCode = {
+    [MAIN_FILE_NAME]: decodeURIComponent(props.code),
+  }
+  return btoa(unescape(encodeURIComponent(JSON.stringify(originCode))))
+})
+
+/**
+ * 跳转到 Playground
+ */
+function toPlayground() {
+  window.open(
+    `${window.location.origin}${site.value.base}playground.html#${sourceHash.value}`,
+    '_blank',
+  )
+}
 </script>
 
 <template>
   <ClientOnly>
     <div v-bind="$attrs" class="mt-6 demo-block">
-      <div class="o-demo_wrapper vp-raw bg">
+      <div
+        class="o-demo_wrapper vp-raw bg"
+        :class="[$props.col ? 'flex-col' : '']"
+      >
         <slot />
       </div>
       <div class="relative">
@@ -26,8 +53,8 @@ const [value, toggle] = useToggle()
           <a
             class="o-demo_action_item"
             group
-            :href="codeSandBox"
             target="_blank"
+            @click="toPlayground"
           >
             <div class="o-demo_action_icon i-carbon:chemistry" />
             <div class="o-demo_tooltip" group-hover:opacity-100>

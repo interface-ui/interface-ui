@@ -1,7 +1,5 @@
 <script lang="ts" setup>
-import * as pkg from 'fusion-ui-iconify'
-
-const { CheckFilled } = pkg
+import Check from '@interface-ui/icons/CheckFilled'
 </script>
 
 <template>
@@ -9,7 +7,7 @@ const { CheckFilled } = pkg
     <in-list>
       <in-list-item>
         <template #leading="{ icon }">
-          <check-filled v-bind="icon" />
+          <check v-bind="icon" />
         </template>
         🍎 Apple
       </in-list-item>

@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { InAlert } from '@interface-ui/core'
-import { CloseOutlined } from 'fusion-ui-iconify'
+import Close from '@interface-ui/icons/CloseFilled'
 </script>
 
 <template>
@@ -67,7 +67,7 @@ import { CloseOutlined } from 'fusion-ui-iconify'
     This is an success alert — check it out!
     <template #action="btn">
       <in-icon-button v-bind="btn">
-        <close-outlined />
+        <close />
       </in-icon-button>
     </template>
   </in-alert>
@@ -83,7 +83,7 @@ import { CloseOutlined } from 'fusion-ui-iconify'
     This is an info alert — check it out!
     <template #action="btn">
       <in-icon-button v-bind="btn">
-        <close-outlined />
+        <close />
       </in-icon-button>
     </template>
   </in-alert>
@@ -97,14 +97,14 @@ import { CloseOutlined } from 'fusion-ui-iconify'
 
   <in-alert severity="error" style="margin-top: 16px">
     <template #icon>
-      <close-outlined />
+      <close />
     </template>
     This is an error alert — check it out!
   </in-alert>
 
   <in-alert severity="error" :icon="false" style="margin-top: 16px">
     <template #icon>
-      <close-outlined />
+      <close />
     </template>
     This is an error alert — check it out!
   </in-alert>

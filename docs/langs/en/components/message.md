@@ -26,7 +26,7 @@ Call the `InMessage` method and pass in the `message` parameter.
 
 ## severity
 
-It is used to display `success`, `error`, `warning`, `info`  operation feedback.
+It is used to display `success`, `error`, `warning`, `info` operation feedback.
 
 <demo src="../../../example/message/severity.vue" />
 
@@ -48,7 +48,6 @@ The `customIcon` attribute is used to customize the icon.
 
 <demo src="../../../example/message/time.vue" />
 
-
 ## Manual shutdown
 
 The `action` attribute can be used to customize the close button for manual closure, and `actionEvent` is the callback event for the close button.
@@ -59,4 +58,4 @@ The `action` attribute can be used to customize the close button for manual clos
 
 The properties of the [`Alert`](./alert.md) component are applicable to the Message component; no further details are provided here.
 
-<table-block type="propsEn" :data="props" />
+<data-table type="props" lang="en" :data="props" />

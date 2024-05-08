@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 import { useTheme } from '@interface-ui/theme'
 import { ref } from 'vue'
-import * as pkg from 'fusion-ui-iconify'
-
-const { WifiFilled, BluetoothFilled, SignalCellularAltFilled } = pkg
+import Bluetooth from '@interface-ui/icons/BluetoothFilled'
+import SignalCellularAlt from '@interface-ui/icons/SignalCellularAltFilled'
+import Wifi from '@interface-ui/icons/WifiFilled'
 const theme = useTheme()
 const checked = ref([true, false, false])
 const switched = ref([true, false, false])
@@ -18,7 +18,7 @@ const switched = ref([true, false, false])
           <in-avatar
             v-bind="avatar"
             variant="rounded"
-            :background="theme.colors.red[400]"
+            :color="theme.colors.red[400]"
           />
         </template>
         Red
@@ -31,7 +31,7 @@ const switched = ref([true, false, false])
           <in-avatar
             v-bind="avatar"
             variant="rounded"
-            :background="theme.colors.pink[400]"
+            :color="theme.colors.pink[400]"
           />
         </template>
         Pink
@@ -44,7 +44,7 @@ const switched = ref([true, false, false])
           <in-avatar
             v-bind="avatar"
             variant="rounded"
-            :background="theme.colors.purple[400]"
+            :color="theme.colors.purple[400]"
           />
         </template>
         Purple
@@ -59,7 +59,7 @@ const switched = ref([true, false, false])
       <in-list-item-header> Settings </in-list-item-header>
       <in-list-item>
         <template #leading="{ icon }">
-          <wifi-filled v-bind="icon" />
+          <wifi v-bind="icon" />
         </template>
         Wifi
         <template #trailing>
@@ -68,7 +68,7 @@ const switched = ref([true, false, false])
       </in-list-item>
       <in-list-item>
         <template #leading="{ icon }">
-          <signal-cellular-alt-filled v-bind="icon" />
+          <signal-cellular-alt v-bind="icon" />
         </template>
         Cellular
         <template #trailing>
@@ -77,7 +77,7 @@ const switched = ref([true, false, false])
       </in-list-item>
       <in-list-item>
         <template #leading="{ icon }">
-          <bluetooth-filled v-bind="icon" />
+          <bluetooth v-bind="icon" />
         </template>
         Bluetooth
         <template #trailing>

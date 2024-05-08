@@ -1,36 +1,61 @@
-import type { PropTableItem } from '../../../.vitepress/components/table-block/src/table'
-const list: PropTableItem[] = [
+import type { PropDataItem } from '@comp/data-table'
+const list: PropDataItem[] = [
   {
     name: 'component',
-    remark: '颜色',
-    default: '--',
-    type: 'Enum',
-    optional: ['ThemeSchemes', 'ThemeCallBack', 'String'],
+    description: '渲染列表的组件/HTML标签',
+    type: 'string | Component',
+    default: 'div',
   },
   {
     name: 'background',
-    remark: '背景颜色',
+    description: '列表的背景颜色',
+    type: 'AcceptableColor',
+    options: ['ThemeSchemes', 'ThemeCallBack', 'string'],
     default: 'surface',
-    type: 'String｜Function',
-
   },
   {
     name: 'level',
-    remark: '原生 href 属性',
-    type: 'String',
-    default: '---',
+    description: '设置列表的缩进级别',
+    type: 'string | number',
+    default: '0',
   },
   {
     name: 'sublist',
-    remark: '图标按钮',
-    type: 'String',
-    default: '---',
+    description: '列表是否为子列表',
+    type: 'boolean',
+    default: 'false',
   },
-  { name: 'selectable', remark: '下划线', type: 'Boolean', default: 'false' },
-  { name: 'alignItems', remark: '下划线', type: 'Boolean', default: 'false' },
-  { name: 'highlightColor', remark: '下划线', type: 'Boolean', default: 'false' },
-  { name: 'disablePadding', remark: '下划线', type: 'Boolean', default: 'false' },
-  { name: 'cs', remark: '下划线', type: 'Boolean', default: 'false' },
+  {
+    name: 'selectable',
+    description: '列表是否可选择',
+    type: 'boolean',
+    default: 'true',
+  },
+  {
+    name: 'align-items',
+    description: '列表项的flexbox对齐方式',
+    type: 'boolean',
+    options: ['flex-start', 'center', 'flex-end', 'stretch', 'baseline'],
+    default: 'center',
+  },
+  {
+    name: 'highlight-color',
+    description: '列表项被选中时的高亮颜色',
+    type: 'AcceptableColor',
+    options: ['ThemeSchemes', 'ThemeCallBack', 'string'],
+    default: 'secondaryContainer',
+  },
+  {
+    name: 'disable-padding',
+    description: '是否禁用列表项的内边距',
+    type: 'boolean',
+    default: 'false',
+  },
+  {
+    name: 'cs',
+    description: '覆盖默认样式的 prop',
+    type: 'string | object',
+  },
 ]
 
 export default list

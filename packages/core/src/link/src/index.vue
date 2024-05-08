@@ -6,7 +6,7 @@ import useCss from './index.jss'
 
 const props = defineProps(linkProps)
 const ns = useNamespace('link')
-const cssClass = useCss(props)
+const cssClass = useCss(props, ns)
 </script>
 
 <template>

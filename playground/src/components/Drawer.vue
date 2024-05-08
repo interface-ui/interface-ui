@@ -1,26 +1,19 @@
 <script lang="ts" setup>
-import '@interface-ui/core/drawer/src/index.less'
-import {
-  InDrawer,
-  InButton,
-  InTypography,
-  InIconButton,
-} from '@interface-ui/core'
+import '@core/drawer/src/index.less'
+import { InDrawer, InButton, InTypography, InIconButton } from '@core'
 import {
   ComponentDirections,
   componentDirections,
 } from '@interface-ui/constants'
 import { ref, shallowRef } from 'vue'
-import {
-  LocalFireDepartmentFilled,
-  AppsFilled,
-  CodeFilled,
-  FoundationFilled,
-  PaletteFilled,
-  AddCircleFilled,
-  StarsFilled,
-  MenuFilled,
-} from 'fusion-ui-iconify'
+import LocalFireDepartment from '@interface-ui/icons/LocalFireDepartmentFilled'
+import Apps from '@interface-ui/icons/AppsFilled'
+import Code from '@interface-ui/icons/CodeFilled'
+import Foundation from '@interface-ui/icons/FoundationFilled'
+import Palette from '@interface-ui/icons/PaletteFilled'
+import AddCircle from '@interface-ui/icons/AddCircleFilled'
+import Stars from '@interface-ui/icons/StarsFilled'
+import Menu from '@interface-ui/icons/MenuFilled'
 import { styled } from '@interface-ui/theme'
 
 const openTemporary = ref(false)
@@ -32,13 +25,13 @@ const onClick = (p: ComponentDirections) => {
   openTemporary.value = true
 }
 const list = shallowRef([
-  { icon: LocalFireDepartmentFilled, text: 'Home' },
-  { icon: AppsFilled, text: 'Get Started' },
-  { icon: CodeFilled, text: 'Develop' },
-  { icon: FoundationFilled, text: 'Foundations' },
-  { icon: PaletteFilled, text: 'Styles' },
-  { icon: AddCircleFilled, text: 'Components' },
-  { icon: StarsFilled, text: 'Blogs' },
+  { icon: LocalFireDepartment, text: 'Home' },
+  { icon: Apps, text: 'Get Started' },
+  { icon: Code, text: 'Develop' },
+  { icon: Foundation, text: 'Foundations' },
+  { icon: Palette, text: 'Styles' },
+  { icon: AddCircle, text: 'Components' },
+  { icon: Stars, text: 'Blogs' },
 ])
 
 const Box = styled('div')`
@@ -113,7 +106,7 @@ const MainSection = styled('main')(theme => ({
   <box>
     <app-bar>
       <in-icon-button @click="openPersistent = !openPersistent">
-        <menu-filled />
+        <menu />
       </in-icon-button>
       <in-typography variant="title.medium" component="h1">
         Ea quis labore qui

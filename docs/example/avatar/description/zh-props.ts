@@ -1,60 +1,33 @@
-import type { PropTableItem } from '../../../.vitepress/components/table-block/src/table'
-const list: PropTableItem[] = [
+import type { PropDataItem } from '@comp/data-table'
+const list: PropDataItem[] = [
   {
-    name: 'src',
-    remark: '图片的源地址',
-    type: 'String',
-    default: '---',
+    name: 'img attrs',
+    description: '支持所有 img 标签的属性',
+    type: '-',
   },
   {
     name: 'size',
-    remark: '尺寸',
-    type: 'Enum',
-    optional: ['small', 'default', 'large'],
-    default: '---',
-  },
-  {
-    name: 'width',
-    remark: '宽度',
-    type: 'String/Number',
-    default: '40',
-  },
-  {
-    name: 'height',
-    remark: '高度',
-    type: 'String/Number',
+    description: '头像的大小',
+    type: 'string | number',
     default: '40',
   },
   {
     name: 'color',
-    remark: '文字颜色',
-    type: 'String',
-    default: 'white',
+    description: '头像的背景色',
+    type: 'AcceptableColor',
+    default: 'surfaceVariant',
   },
   {
-    name: 'background',
-    remark: '背景颜色',
-    type: 'String',
-    default: '---',
-  },
-  {
-    name: 'shape',
-    remark: '形状',
-    type: 'Enum',
-    optional: ['circle', 'square', 'rounded'],
+    name: 'variant',
+    description: '头像的形状',
+    type: 'string',
+    options: ['circle', 'square', 'rounded'],
     default: 'circle',
   },
   {
-    name: 'max',
-    remark: '限制头像的数量',
-    type: 'String/Number',
-    default: '5',
-  },
-  {
-    name: 'total',
-    remark: '控制未显示头像的数量',
-    type: 'String/Number',
-    default: '0',
+    name: 'cs',
+    description: '覆盖组件默认样式的 prop',
+    type: 'string | object',
   },
 ]
 

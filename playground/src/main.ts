@@ -13,7 +13,7 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'Playground',
+      name: 'Home',
       component: () => import('./components/Home.vue'),
     },
     ...routes,
@@ -21,7 +21,7 @@ const router = createRouter({
 })
 
 router.beforeResolve(to => {
-  document.title = `${to.name as string} ｜ Interface UI`
+  document.title = `${to.name as string} ｜ Playground`
 })
 
 createApp(App).use(router).use(InterfaceUI).mount('#app')

@@ -1,32 +1,30 @@
-import type { PropTableItem } from '../../../.vitepress/components/table-block/src/table'
-const list: PropTableItem[] = [
+import type { PropDataItem } from '@comp/data-table'
+const list: PropDataItem[] = [
   {
-    name: 'model-value / v-model',
-    remark: '是否显示Dialog',
-    type: 'Boolean',
-    default: '---',
+    name: 'open',
+    description: '控制对话框的可见性',
+    type: 'boolean',
+  },
+
+  {
+    name: 'variant',
+    description: '提供的变体',
+    type: 'Enum',
+    options: ['base', 'full-screen'],
+    default: 'base',
   },
   {
-    name: 'title',
-    remark: 'Dialog标题',
-    type: 'Boolean',
-    default: '---',
-  },
-  {
-    name: 'width',
-    remark: 'Dialog宽度',
-    type: 'String|Number',
-    default: '30%',
-  },
-  {
-    name: 'fullscreen',
-    remark: '按钮状态',
+    name: 'backdrop',
+    description: '组件蒙层',
     type: 'Boolean',
     default: 'false',
   },
-  { name: 'top', remark: '距离上部的距离', type: 'String|Number', default: '30vh' },
-  { name: 'center', remark: 'Dialog居中显示', type: 'Boolean', default: '---' },
-  { name: 'close-on-click-modal', remark: '点击蒙层关闭', type: 'Boolean', default: 'true' },
+
+  {
+    name: 'cs',
+    description: '覆盖组件默认样式的prop',
+    type: 'string | object',
+  },
 ]
 
 export default list

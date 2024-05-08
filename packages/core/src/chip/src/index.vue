@@ -1,3 +1,4 @@
+<!-- eslint-disable no-mixed-operators -->
 <script lang="ts" setup>
 import { useNamespace } from '@interface-ui/utils'
 import InActionArea from '../../action-area'
@@ -9,7 +10,7 @@ import useCss from './index.jss'
 const props = defineProps(chipProps)
 defineEmits<{ delete: [] }>()
 const ns = useNamespace('chip')
-const cssClass = useCss(props)
+const cssClass = useCss(props, ns)
 </script>
 
 <template>

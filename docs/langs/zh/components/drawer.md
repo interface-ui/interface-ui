@@ -13,4 +13,4 @@ lang: zh
 
 ## 基础用法
 
-<demo src="../../../example/drawer/basic.vue" preview="[44-55]" />
+<demo src="../../../example/drawer/basic.vue" preview="[40-51]" />

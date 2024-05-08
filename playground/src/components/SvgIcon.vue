@@ -1,8 +1,6 @@
 <script lang="ts" setup>
 import { InSvgIcon } from '@interface-ui/core'
-import * as pkg from 'fusion-ui-iconify'
-const { DeleteFilled } = pkg
-// import { DeleteFilled } from 'fusion-ui-iconify'
+import Delete from '@interface-ui/icons/DeleteFilled'
 </script>
 
 <template>
@@ -21,5 +19,5 @@ const { DeleteFilled } = pkg
       />
     </svg>
   </in-svg-icon>
-  <in-svg-icon :component="DeleteFilled" />
+  <in-svg-icon :component="Delete" />
 </template>

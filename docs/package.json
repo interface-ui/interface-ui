@@ -21,16 +21,17 @@
     "@fontsource/roboto": "^5.0.8",
     "@interface-ui/constants": "workspace:*",
     "@interface-ui/core": "workspace:*",
+    "@interface-ui/icons": "0.0.1-alpha.2",
     "@interface-ui/theme": "workspace:*",
     "@interface-ui/utils": "workspace:*",
+    "@vue/repl": "3.2.0",
     "@vueuse/core": "^9.1.1",
-    "fusion-ui-iconify": "^1.0.46",
     "markdown-it": "^13.0.1"
   },
   "devDependencies": {
     "@types/markdown-it": "^12.2.3",
     "postcss": "^8.4.31",
     "unocss": "^0.50.0",
-    "vitepress": "1.0.0-rc.33"
+    "vitepress": "1.0.0-rc.36"
   }
 }

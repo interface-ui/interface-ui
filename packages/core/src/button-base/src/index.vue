@@ -9,7 +9,7 @@ const cssClass = useCss(props)
 </script>
 
 <template>
-  <component :is="$props.component" :class="[ns.b(), cssClass]">
+  <props.component :class="[ns.b(), cssClass]">
     <slot />
-  </component>
+  </props.component>
 </template>

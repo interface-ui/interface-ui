@@ -57,9 +57,9 @@ const routes: RouteRecordRaw[] = [
     component: () => import('../components/Link.vue'),
   },
   {
-    path: '/fba',
-    name: 'FBA',
-    component: () => import('../components/FBA.vue'),
+    path: '/fab',
+    name: 'FAB',
+    component: () => import('../components/FAB.vue'),
   },
   {
     path: '/card',
@@ -105,6 +105,11 @@ const routes: RouteRecordRaw[] = [
     path: '/drawer',
     name: 'Drawer',
     component: () => import('../components/Drawer.vue'),
+  },
+  {
+    path: '/radio',
+    name: 'Radio',
+    component: () => import('../components/Radio.vue'),
   },
 ]
 

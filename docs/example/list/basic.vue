@@ -1,7 +1,6 @@
 <script lang="ts" setup>
-import * as pkg from 'fusion-ui-iconify'
-
-const { SendFilled, InboxFilled } = pkg
+import Inbox from '@interface-ui/icons/InboxFilled'
+import Send from '@interface-ui/icons/SendFilled'
 </script>
 
 <template>
@@ -10,13 +9,13 @@ const { SendFilled, InboxFilled } = pkg
       <in-list-item-header> Basic List </in-list-item-header>
       <in-list-item>
         <template #leading="{ icon }">
-          <send-filled v-bind="icon" />
+          <send v-bind="icon" />
         </template>
         Send
       </in-list-item>
       <in-list-item>
         <template #leading="{ icon }">
-          <inbox-filled v-bind="icon" />
+          <inbox v-bind="icon" />
         </template>
         Inbox
         <template #trailing>

@@ -1,60 +1,34 @@
-import type { PropTableItem } from '../../../.vitepress/components/table-block/src/table'
-const list: PropTableItem[] = [
+import type { PropDataItem } from '@comp/data-table'
+const list: PropDataItem[] = [
   {
-    name: 'src',
-    remark: 'The source address of the picture',
-    type: 'String',
-    default: '---',
+    name: 'img attrs',
+    description: 'All attributes of the img tag',
+    type: '-',
   },
   {
     name: 'size',
-    remark: 'size',
-    type: 'Enum',
-    optional: ['small', 'default', 'large'],
-    default: '---',
-  },
-  {
-    name: 'width',
-    remark: 'width',
-    type: 'String/Number',
-    default: '40',
-  },
-  {
-    name: 'height',
-    remark: 'height',
-    type: 'String/Number',
+    description: 'The size of the avatar',
+    type: 'string | number',
     default: '40',
   },
   {
     name: 'color',
-    remark: 'Text color',
-    type: 'String',
-    default: 'white',
+    description: 'The background color of the avatar',
+    type: 'AcceptableColor',
+    options: ['ThemeSchemes', 'ThemeCallBack', 'string'],
+    default: 'surfaceVariant',
   },
   {
-    name: 'background',
-    remark: 'background color',
-    type: 'String',
-    default: '---',
-  },
-  {
-    name: 'shape',
-    remark: 'shape',
-    type: 'Enum',
-    optional: ['circle', 'square', 'rounded'],
+    name: 'variant',
+    description: 'The shape of the avatar',
+    type: 'string',
+    options: ['circle', 'square', 'rounded'],
     default: 'circle',
   },
   {
-    name: 'max',
-    remark: 'Limit the number of avatars',
-    type: 'String/Number',
-    default: '5',
-  },
-  {
-    name: 'total',
-    remark: 'Control the number of avatars that are not displayed',
-    type: 'String/Number',
-    default: '0',
+    name: 'cs',
+    description: 'Prop to overwrite the default style',
+    type: 'string | object',
   },
 ]
 

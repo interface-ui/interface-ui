@@ -1,55 +1,49 @@
-/* eslint-disable no-mixed-operators */
 import { computed } from 'vue'
-import { css, cx, useColor, useRgbColor } from '@interface-ui/theme'
-import { isString } from '@interface-ui/utils'
-import type { ComponentStylingHook } from '@interface-ui/utils'
+import {
+  css,
+  cx,
+  useDynamicColor,
+  useDynamicRgb,
+  useTheme,
+} from '@interface-ui/theme'
+import { type ComponentStylingHook, useNamespace } from '@interface-ui/utils'
 import type { ChipProps } from './chip'
 
-const useCss: ComponentStylingHook<ChipProps> = props =>
-  computed(() => {
-    const [$color, $onColor] = useColor(props, 'color')
-    const [$rgbColor, $onRgbColor] = useRgbColor(props, 'color')
+const useCss: ComponentStylingHook<ChipProps> = (props, ns) => {
+  const theme = useTheme()
+  const iconButtonNs = useNamespace('icon-button')
 
-    const isSurfaceColor =
-      isString(props.color) && typeof props.color !== 'function'
-        ? props.color.toLowerCase().includes('surface')
-        : false
+  const chipTokens = computed(() => {
+    const { schemes } = useDynamicColor(props.color, theme)
 
-    const chipStyle = css`
-      --in-chip-color: ${$color.value};
-      &.in-chip--filled {
-        --in-chip-on-color: ${isSurfaceColor
-          ? 'var(--md-sys-color-on-surface-variant)'
-          : $onColor.value};
-        & .in-icon-button {
-          --in-icon-button-color: ${isSurfaceColor
-            ? 'var(--md-sys-color-on-surface-variant)'
-            : $onColor.value};
-          --in-icon-button-color-rgb: ${isSurfaceColor
-            ? 'var(--md-sys-color-on-surface-variant-rgb)'
-            : $onRgbColor.value};
-        }
-      }
-      &.in-chip--outlined {
-        --in-chip-on-color: ${isSurfaceColor
-          ? 'var(--md-sys-color-on-surface-variant)'
-          : $color.value};
-        border-color: ${isSurfaceColor
-          ? 'var(--md-sys-color-outline)'
-          : $color.value};
-        & .in-icon-button {
-          --in-icon-button-color: ${isSurfaceColor
-            ? 'var(--md-sys-color-on-surface-variant)'
-            : $color.value};
-          --in-icon-button-color-rgb: ${isSurfaceColor
-            ? 'var(--md-sys-color-on-surface-variant-rgb)'
-            : $rgbColor.value};
-        }
-      }
-    `
-
-    const styleFromCs = props.cs ? css(props.cs) : ''
-    return cx(chipStyle, styleFromCs)
+    return css([
+      schemes &&
+        ns!.cssVarBlock({
+          primary: schemes.primary,
+          primaryRgb: useDynamicRgb(schemes.primary),
+          onPrimary: schemes.onPrimary,
+          primaryContainer: schemes.primaryContainer,
+          onPrimaryContainer: schemes.onPrimaryContainer,
+          onPrimaryContainerRgb: useDynamicRgb(schemes.onPrimaryContainer),
+        }),
+      {
+        '&.in-chip--filled .in-icon-button': iconButtonNs!.cssVarBlock({
+          primary: ns!.getCssVarBlock('onPrimaryContainer'),
+          primaryRgb: ns!.getCssVarBlock('onPrimaryContainerRgb'),
+        }),
+      },
+      {
+        '&.in-chip--outlined .in-icon-button': iconButtonNs!.cssVarBlock({
+          primary: ns!.getCssVarBlock('primary'),
+          primaryRgb: ns!.getCssVarBlock('primaryRgb'),
+        }),
+      },
+    ])
   })
+
+  const styleFromCs = computed(() => (props.cs ? css(props.cs) : ''))
+
+  return computed(() => cx(chipTokens.value, styleFromCs.value))
+}
 
 export default useCss

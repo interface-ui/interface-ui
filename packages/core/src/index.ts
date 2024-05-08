@@ -30,7 +30,7 @@ import InFormLabel from './form-label'
 import InTypography from './typography'
 import InTextField from './text-field'
 import InSvgIcon from './svg-icon'
-import InFba from './fba'
+import InFab from './fab'
 import InActionArea from './action-area'
 import InModal from './modal'
 import InPopover from './popover'
@@ -73,7 +73,7 @@ export * from './typography'
 export * from './ripple'
 export * from './text-field'
 export * from './svg-icon'
-export * from './fba'
+export * from './fab'
 export * from './action-area'
 export * from './modal'
 export * from './popover'
@@ -118,7 +118,7 @@ export const components = [
   InTypography,
   InTextField,
   InSvgIcon,
-  InFba,
+  InFab,
   InActionArea,
   InModal,
   InPopover,

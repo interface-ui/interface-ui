@@ -1,49 +1,51 @@
-import type { PropTableItem } from '../../../.vitepress/components/table-block/src/table'
-const list: PropTableItem[] = [
+import type { PropDataItem } from '@comp/data-table'
+const list: PropDataItem[] = [
   {
     name: 'modelValue',
-    remark: '绑定值',
-    type: 'String',
-    default: '---',
+    description: '绑定值',
+    type: 'string',
   },
   {
     name: 'variant',
-    remark: '文本输入变体',
-    type: 'Enum',
-    optional: ['outlined', 'filled', 'standard'],
+    description: '文本输入变体',
+    type: 'string',
+    options: ['outlined', 'filled', 'standard'],
     default: 'outlined',
   },
   {
     name: 'label',
-    remark: '表单标签',
-    type: 'String',
-    default: '---',
+    description: '表单标签',
+    type: 'string',
   },
   {
     name: 'color',
-    remark: '自定义文本输入focus状态的颜色',
-    type: 'Enum',
-    optional: ['ThemeSchemes', 'ThemeCallBack', 'String'],
+    description: '自定义文本输入focus状态的颜色',
+    type: 'AcceptableColor',
+    options: ['ThemeSchemes', 'ThemeCallBack', 'string'],
     default: 'primary',
   },
   {
     name: 'size',
-    remark: '组件大小',
-    type: 'Enum',
-    optional: ['small', 'medium', 'large'],
+    description: '组件大小',
+    type: 'string',
+    options: ['small', 'medium', 'large'],
     default: 'medium',
   },
   {
     name: 'error',
-    remark: '错误状态',
-    type: 'Boolean',
+    description: '错误状态',
+    type: 'boolean',
     default: 'false',
   },
   {
     name: 'supporting-text',
-    remark: '描述文字',
-    type: 'String',
-    default: '---',
+    description: '描述文字',
+    type: 'string',
+  },
+  {
+    name: 'cs',
+    description: '覆盖组件默认样式的 prop',
+    type: 'string | object',
   },
 ]
 

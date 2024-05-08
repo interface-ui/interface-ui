@@ -1,34 +1,16 @@
-import type { PropTableItem } from '../../../.vitepress/components/table-block/src/table'
-const list: PropTableItem[] = [
+import type { PropDataItem } from '@comp/data-table'
+const list: PropDataItem[] = [
   {
-    name: 'header',
-    remark: 'card header content',
+    name: 'variant',
+    description: 'Card variant',
     type: 'string',
-    default: '"card-header"',
+    options: ['elevated', 'filled', 'outlined'],
+    default: 'elevated',
   },
   {
-    name: 'border',
-    remark: 'card border',
-    type: 'boolean',
-    default: 'true',
-  },
-  {
-    name: 'hover',
-    remark: 'hover effect',
-    type: 'boolean',
-    default: 'false',
-  },
-  {
-    name: 'background',
-    remark: 'card background',
-    type: 'string',
-    default: '',
-  },
-  {
-    name: 'width',
-    remark: 'card width',
-    type: 'number',
-    default: '300',
+    name: 'cs',
+    description: 'Prop to overwrite the default style',
+    type: 'string | object',
   },
 ]
 

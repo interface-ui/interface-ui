@@ -1,22 +1,74 @@
 .in-button {
   gap: 8px;
-  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition:
+    background 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  .in-icon,
+  .in-svg-icon,
+  .in-icon-material {
+    &[leading] {
+      margin-left: -8px;
+    }
+    &[trailing] {
+      margin-right: -8px;
+    }
+  }
+}
 
-  &--filled {
-    background-color: var(--in-button-color);
-    color: var(--in-button-on-color);
+// variant
+.in-button {
+  &--elevated {
+    color: var(--in-button-primary);
+    background-color: var(--in-button-surface-container-low);
+    box-shadow: var(--md-sys-elevation-level-2);
     @media (any-hover: hover) {
-      &:not([disabled]):hover {
+      &:hover {
+        box-shadow: var(--md-sys-elevation-level-4);
         background-color: color-mix(
           in srgb,
-          var(--in-button-color),
-          var(--in-sys-color-switch-reverse)
+          var(--in-button-surface-container-low),
+          var(--in-button-primary)
             var(--md-sys-state-hover-state-layer-opacity-percentage)
         );
       }
+    }
+    &:active {
+      box-shadow: var(--md-sys-elevation-level-2);
+      background-color: color-mix(
+        in srgb,
+        var(--in-button-surface-container-low),
+        var(--in-button-primary)
+          var(--md-sys-state-focus-state-layer-opacity-percentage)
+      );
+    }
+    &[disabled] {
+      color: var(--in-sys-color-disabled-level-0) !important;
+      background-color: var(--in-sys-color-disabled-level-1) !important;
+      box-shadow: var(--md-sys-elevation-level-0);
+    }
+  }
+  &--filled {
+    background-color: var(--in-button-primary);
+    color: var(--in-button-on-primary);
+    @media (any-hover: hover) {
+      &:hover {
+        box-shadow: var(--md-sys-elevation-level-2);
+        background-color: color-mix(
+          in srgb,
+          var(--in-button-primary),
+          var(--in-button-on-primary)
+            var(--md-sys-state-hover-state-layer-opacity-percentage)
+        );
+      }
+    }
+    &:active {
+      box-shadow: var(--md-sys-elevation-level-0);
+      background-color: color-mix(
+        in srgb,
+        var(--in-button-primary),
+        var(--in-button-on-primary)
+          var(--md-sys-state-focus-state-layer-opacity-percentage)
+      );
     }
     &[disabled] {
       background-color: var(--in-sys-color-disabled-level-1) !important;
@@ -24,75 +76,120 @@
       box-shadow: var(--md-sys-elevation-level-0);
     }
   }
-  &--text {
-    color: var(--in-button-color);
-    background-color: transparent;
+  &--tonal {
+    background-color: var(--in-button-secondary-container);
+    color: var(--md-sys-color-on-secondary-container);
     @media (any-hover: hover) {
-      &:not([disabled]):hover {
-        background-color: rgb(
-          var(--in-button-color-rgb) /
-            var(--md-sys-state-hover-state-layer-opacity)
+      &:hover {
+        box-shadow: var(--md-sys-elevation-level-2);
+        background-color: color-mix(
+          in srgb,
+          var(--in-button-secondary-container),
+          var(--md-sys-color-on-secondary-container)
+            var(--md-sys-state-hover-state-layer-opacity-percentage)
         );
       }
+    }
+    &:active {
+      box-shadow: var(--md-sys-elevation-level-0);
+      background-color: color-mix(
+        in srgb,
+        var(--in-button-secondary-container),
+        var(--md-sys-color-on-secondary-container)
+          var(--md-sys-state-focus-state-layer-opacity-percentage)
+      );
     }
     &[disabled] {
       color: var(--in-sys-color-disabled-level-0) !important;
+      background-color: var(--in-sys-color-disabled-level-1) !important;
+      box-shadow: var(--md-sys-elevation-level-0);
     }
   }
   &--outlined {
-    color: var(--in-button-color);
+    color: var(--in-button-primary);
     background-color: transparent;
-    border-width: 1px;
-    border-style: solid;
-    border-color: color-mix(
-      in srgb,
-      var(--in-button-color) 60%,
-      var(--in-sys-color-switch) 0%
-    );
+    border: 1px solid var(--in-button-outline);
     @media (any-hover: hover) {
-      &:not([disabled]):hover {
-        border-color: var(--in-button-color);
+      &:hover {
         background-color: rgb(
-          var(--in-button-color-rgb) /
+          var(--in-button-primary-rgb) /
             var(--md-sys-state-hover-state-layer-opacity)
         );
       }
     }
+    &:active {
+      border-color: var(--in-button-primary);
+    }
     &[disabled] {
+      background-color: transparent;
       color: var(--in-sys-color-disabled-level-0) !important;
       border-color: var(--in-sys-color-disabled-level-1) !important;
     }
   }
+  &--text {
+    color: var(--in-button-primary);
+    background-color: transparent;
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: rgb(
+          var(--in-button-primary-rgb) /
+            var(--md-sys-state-hover-state-layer-opacity)
+        );
+      }
+    }
+    &:active {
+      background-color: rgb(
+        var(--in-button-primary-rgb) /
+          var(--md-sys-state-focus-state-layer-opacity)
+      );
+    }
+    &[disabled] {
+      background-color: transparent;
+      color: var(--in-sys-color-disabled-level-0) !important;
+    }
+  }
+}
 
+// size
+.in-button {
   &--small {
-    padding-left: 12px;
-    padding-right: 12px;
-    .in-icon {
+    padding-left: 16px;
+    padding-right: 16px;
+    .in-icon,
+    .in-svg-icon,
+    .in-icon-material {
       font-size: 16px;
     }
   }
   &--medium {
-    padding-left: 16px;
-    padding-right: 16px;
-    .in-icon {
-      font-size: 20px;
+    padding-left: 24px;
+    padding-right: 24px;
+    .in-icon,
+    .in-svg-icon,
+    .in-icon-material {
+      font-size: 18px;
     }
   }
   &--large {
-    padding-left: 20px;
-    padding-right: 20px;
-    .in-icon {
-      font-size: 24px;
+    padding-left: 32px;
+    padding-right: 32px;
+    .in-icon,
+    .in-svg-icon,
+    .in-icon-material {
+      font-size: 20px;
     }
   }
+}
 
+// shape
+.in-button {
   &--rounded {
     border-radius: var(--md-sys-shape-corner-extra-small-default-size);
   }
   &--square {
     border-radius: var(--md-sys-shape-corner-none-default-size);
   }
-  &--fullRounded {
+  &--arc {
     border-radius: var(--md-sys-shape-corner-extra-large-default-size);
   }
 }

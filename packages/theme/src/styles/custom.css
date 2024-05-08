@@ -22,15 +22,3 @@
   --in-sys-color-switch-reverse: var(--in-ref-palette-white);
   --in-sys-color-switch-reverse-rgb: 255 255 255;
 }
-
-.in-icon-material {
-  user-select: none;
-  width: 1em;
-  height: 1em;
-  display: inline-block;
-  fill: currentcolor;
-  flex-shrink: 0;
-  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-  font-size: var(--in-icon-font-size, 'inherit');
-  color: var(--in-icon-color);
-}

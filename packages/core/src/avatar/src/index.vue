@@ -1,19 +1,14 @@
 <script setup lang="ts">
-import { defineComponent, useAttrs } from 'vue'
+import { useAttrs } from 'vue'
 import { useNamespace } from '@interface-ui/utils'
 import { avatarProps } from './avatar'
 import useCss from './index.jss'
 
 const props = defineProps(avatarProps)
+defineOptions({ inheritAttrs: false })
 const ns = useNamespace('avatar')
-const cssClass = useCss(props)
+const cssClass = useCss(props, ns)
 const { class: classAttr, ...restAttrs } = useAttrs()
-</script>
-
-<script lang="ts">
-export default defineComponent({
-  inheritAttrs: false,
-})
 </script>
 
 <template>

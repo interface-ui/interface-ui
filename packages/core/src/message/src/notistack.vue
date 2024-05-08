@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import createTheme, { ThemeProvider } from '@interface-ui/theme'
+import { ThemeProvider, createTheme } from '@interface-ui/theme'
 import { isNumber, useNamespace } from '@interface-ui/utils'
 import type { VNode } from 'vue'
 import { TransitionGroup, reactive } from 'vue'

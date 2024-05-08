@@ -1,14 +1,14 @@
-import type { PropTableItem } from '../../../.vitepress/components/table-block/src/table'
-const list: PropTableItem[] = [
+import type { PropDataItem } from '@comp/data-table'
+const list: PropDataItem[] = [
   {
     name: 'open',
-    remark: '是否显示',
-    type: 'Boolean',
+    description: '是否显示',
+    type: 'boolean',
     default: 'false',
   },
   {
     name: 'placement',
-    remark: '菜单位置',
+    description: '菜单位置',
     type: 'Object',
     default: `
       {

@@ -1,18 +1,14 @@
 <script lang="ts" setup>
 import { ref, shallowRef } from 'vue'
-import * as pkg from 'fusion-ui-iconify'
 import type { ComponentDirections } from '@interface-ui/constants'
 import { componentDirections } from '@interface-ui/constants'
-
-const {
-  LocalFireDepartmentFilled,
-  AppsFilled,
-  CodeFilled,
-  FoundationFilled,
-  PaletteFilled,
-  AddCircleFilled,
-  StarsFilled,
-} = pkg
+import AddCircleFilled from '@interface-ui/icons/AddCircleFilled'
+import AppsFilled from '@interface-ui/icons/AppsFilled'
+import CodeFilled from '@interface-ui/icons/CodeFilled'
+import FoundationFilled from '@interface-ui/icons/FoundationFilled'
+import LocalFireDepartmentFilled from '@interface-ui/icons/LocalFireDepartmentFilled'
+import PaletteFilled from '@interface-ui/icons/PaletteFilled'
+import StarsFilled from '@interface-ui/icons/StarsFilled'
 
 const list = shallowRef([
   { icon: LocalFireDepartmentFilled, text: 'Home' },

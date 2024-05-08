@@ -1,14 +1,12 @@
 <script lang="ts" setup>
-import * as pkg from 'fusion-ui-iconify'
-const { CakeFilled } = pkg
-// import { CakeFilled } from 'fusion-ui-iconify'
+import Cake from '@interface-ui/icons/CakeFilled'
 </script>
 
 <template>
   <in-icon-button>
-    <cake-filled />
+    <cake />
   </in-icon-button>
   <in-icon-button disabled>
-    <cake-filled />
+    <cake />
   </in-icon-button>
 </template>

@@ -1,44 +1,43 @@
-import type { PropTableItem } from '../../../.vitepress/components/table-block/src/table'
-const list: PropTableItem[] = [
+import type { PropDataItem } from '@comp/data-table'
+const list: PropDataItem[] = [
   {
     name: 'variant',
-    remark: '按钮变体',
-    type: 'Enum',
-    optional: ['text', 'filled', 'outlined'],
+    description: '按钮变体',
+    type: 'string',
+    options: ['text', 'filled', 'outlined'],
     default: 'filled',
   },
   {
     name: 'size',
-    remark: '按钮大小',
-    type: 'Enum',
-    optional: ['small', 'medium', 'large'],
+    description: '按钮大小',
+    type: 'string',
+    options: ['small', 'medium', 'large'],
     default: 'medium',
   },
   {
     name: 'shape',
-    remark: '按钮形状',
-    type: 'Enum',
-    optional: ['rounded', 'fullRounded', 'square'],
+    description: '按钮形状',
+    type: 'string',
+    options: ['rounded', 'fullRounded', 'square'],
     default: 'rounded',
   },
   {
     name: 'color',
-    remark: '自定义按钮颜色',
-    type: 'Enum',
-    optional: ['ThemeSchemes', 'ThemeCallBack', 'String'],
+    description: '自定义按钮颜色',
+    type: 'AcceptableColor',
+    options: ['ThemeSchemes', 'ThemeCallBack', 'string'],
     default: 'primary',
   },
   {
     name: 'disableRipple',
-    remark: '禁用涟漪效果',
-    type: 'Boolean',
+    description: '禁用涟漪效果',
+    type: 'boolean',
     default: 'false',
   },
   {
-    name: 'disableElevation',
-    remark: '禁用阴影',
-    type: 'Boolean',
-    default: 'false',
+    name: 'cs',
+    description: '覆盖组件默认样式的 prop',
+    type: 'string | object',
   },
 ]
 

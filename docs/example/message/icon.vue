@@ -1,13 +1,12 @@
 <script lang="ts" setup>
-import * as pkg from 'fusion-ui-iconify'
 import { InButton, InMessage } from '@interface-ui/core'
-const { Filter3Filled } = pkg
+import FilterThree from '@interface-ui/icons/FilterThreeFilled'
 
 const handleClick = () => {
   new InMessage({}).push({
     content: 'this is a success message',
     severity: 'success',
-    customIcon: Filter3Filled,
+    customIcon: FilterThree,
   })
 }
 </script>

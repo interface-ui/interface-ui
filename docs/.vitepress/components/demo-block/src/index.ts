@@ -37,6 +37,10 @@ export const demoProps = {
     type: String,
     default: '',
   },
+  col: {
+    type: Boolean,
+    default: false,
+  },
 } as const
 
 export type ODemoProps = ExtractPropTypes<typeof demoProps>

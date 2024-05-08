@@ -11,11 +11,13 @@ lang: en-US
 
 Typography helps make writing legible and beautiful
 
+
 ## Roboto font
 
 Interface UI uses the [Roboto](https://fonts.google.com/specimen/Roboto) by default. For more information, see [@fontsource/roboto](https://www.npmjs.com/package/@fontsource/roboto)
 
 > Interface UI's default typography configuration relies only on the 300, 400, 500, and 700 font weights.
+
 
 ## Typography Scale
 
@@ -33,17 +35,18 @@ The `Typography` component follows the [Material Design Typography Scale](https:
 | Body Small/Medium/Large               | `p`                |
 | Label Small/Medium/Large              | `span`             |
 
+
 ## Usage
 
 <demo src="../../../example/typography/basic.vue" />
 
-## Customization
+### Customization
 
-By setting `component` prop, you can control which `Tag` be rendered in the HTML.
+By setting the `component` prop, you can control which `Tag` is rendered in the HTML.
 
-Using `variant` to style the component. The `body.large` is used as defalut variant.
-
+Using the `variant` to style the component. The `body.large` is used as the default variant.
 <demo src="../../../example/typography/customization.vue" />
+
 
 ## Accessibility
 
@@ -52,6 +55,7 @@ Key factors to follow for an accessible typography:
 * **Color**: The default color for `Typography` is `onSurface`.
 * **Font Size**: Use `rem` instead of pixels.
 
+
 ## Attributes
 
-<table-block type="propsEn" :data="props" />
+<data-table type="props" lang="en" :data="props" />

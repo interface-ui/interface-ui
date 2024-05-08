@@ -1,21 +1,17 @@
 <script lang="ts" setup>
-import * as pkg from 'fusion-ui-iconify'
-const { AccessibilityFilled, AutorenewFilled, BookFilled } = pkg
-// import {
-//   AccessibilityFilled,
-//   AutorenewFilled,
-//   BookFilled,
-// } from 'fusion-ui-iconify'
+import Accessibility from '@interface-ui/icons/AccessibilityFilled'
+import Autorenew from '@interface-ui/icons/AutorenewFilled'
+import Book from '@interface-ui/icons/BookFilled'
 </script>
 
 <template>
   <in-avatar>
-    <book-filled />
+    <book />
   </in-avatar>
-  <in-avatar background="#dc3964" color="white">
-    <accessibility-filled />
+  <in-avatar :color="theme => theme.colors.pink[400]">
+    <accessibility />
   </in-avatar>
-  <in-avatar background="#60ae57" color="white">
-    <autorenew-filled />
+  <in-avatar color="#60ae57">
+    <autorenew />
   </in-avatar>
 </template>

@@ -1,31 +1,29 @@
-import type { PropTableItem } from '../../../.vitepress/components/table-block/src/table'
-const list: PropTableItem[] = [
+import type { PropDataItem } from '@comp/data-table'
+const list: PropDataItem[] = [
   {
     name: 'severity',
-    remark: 'Alert Severe level',
+    description: 'Alert Severe level',
     type: 'Enum',
-    optional: ['error', 'warning', 'info', 'success'],
-    default: '---',
+    options: ['error', 'warning', 'info', 'success'],
   },
   {
     name: 'in-typography',
-    remark: 'Provide title style',
+    description: 'Provide title style',
     type: '--',
-    default: '--',
+    default: '-',
   },
 
   {
     name: 'variant',
-    remark: ' outlined & filled ',
-    type: 'String',
-    default: '---',
+    description: ' outlined & filled ',
+    type: 'string',
   },
   {
     name: 'cs',
-    remark: 'Flexible css configuration',
+    description: 'Flexible css configuration',
     type: 'Enum',
-    optional: ['String', 'Object'],
-    default: '--',
+    options: ['String', 'Object'],
+    default: '-',
   },
 ]
 

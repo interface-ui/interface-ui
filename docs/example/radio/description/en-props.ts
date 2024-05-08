@@ -1,25 +1,28 @@
-import type { PropTableItem } from '../../../.vitepress/components/table-block/src/table'
-const list: PropTableItem[] = [
+import type { PropDataItem } from '@comp/data-table'
+const list: PropDataItem[] = [
   {
-    name: 'v-model',
-    remark: 'Enter box values',
-    type: 'Enum',
-    optional: ['string', 'number'],
-    default: 'default',
+    name: 'v-model / modelValue',
+    description: 'Binding value',
+    type: 'string | number | boolean',
   },
   {
     name: 'size',
-    remark: 'Radio size',
-    type: 'Enum',
-    optional: ['small', 'medium', 'large'],
+    description: 'Radio size',
+    type: 'string',
+    options: ['small', 'medium', 'large'],
     default: 'medium',
   },
   {
     name: 'color',
-    remark: 'Customize the color of radios',
-    type: 'Enum',
-    optional: ['ThemeSchemes', 'ThemeCallBack', 'String'],
+    description: 'Customize the color of radios',
+    type: 'AcceptableColor',
+    options: ['ThemeSchemes', 'ThemeCallBack', 'string'],
     default: 'primary',
+  },
+  {
+    name: 'cs',
+    description: 'Prop to overwrite the default style',
+    type: 'string | object',
   },
 ]
 

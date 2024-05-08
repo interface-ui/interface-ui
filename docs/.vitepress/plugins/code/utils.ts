@@ -13,7 +13,7 @@ const scriptClientRE = /<\s*script[^>]*\bclient\b[^>]*/
 const getPreviewCodes = (code: string, preview: string): string => {
   const codeArr = code.trim().split('\n')
   const previewCodes: string[] = []
-  const [_, previewLines] = preview.match(/\[([\s\S]+)\]/) ?? []
+    const [_, previewLines] = preview.match(/\[([\s\S]+)\]/) ?? []
   previewLines.split(', ').forEach(lineNumber => {
     if (!isNaN(Number(lineNumber))) {
       previewCodes.push(codeArr[+lineNumber - 1])
@@ -33,7 +33,7 @@ let index = 1
 export function getDemoComponent(
   md: MarkdownRenderer,
   env: any,
-  { title, desc, path, preview, code, ...props }: DemoInfos,
+  { title, desc, path, preview, code, col, ...props }: DemoInfos,
 ) {
   const componentName = `DemoComponent${index++}`
   path = normalizePath(path)
@@ -53,6 +53,7 @@ export function getDemoComponent(
     : ''
 
   const highlightedCode = md.options.highlight!(code, props.lang || 'vue', '')
+
   return `
     <${DemoTag}
       code="${encodeURIComponent(code)}"
@@ -62,6 +63,7 @@ export function getDemoComponent(
       title="${title ?? ''}"
       desc="${desc ?? ''}"
       github="${github}"
+      :col="${col}"
     >
       <${componentName}></${componentName}>
     </${DemoTag}>
