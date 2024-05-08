@@ -15,7 +15,7 @@ jobs:
           node-version: 18
 
       - name: Install pnpm
-        run: npm i -g pnpm
+        run: npm i -g pnpm@7.5.2
       - name: install & Build
         run: pnpm i && pnpm docs:build
 
