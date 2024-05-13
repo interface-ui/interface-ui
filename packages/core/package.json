@@ -37,7 +37,8 @@
     "/styles"
   ],
   "scripts": {
-    "build": "gulp -f build/gulpfile.ts"
+    "test": "vitest",
+    "build": "rimraf lib es styles && gulp -f build/gulpfile.ts"
   },
   "peerDependencies": {
     "vue": "^3.3.8"

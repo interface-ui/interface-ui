@@ -26,7 +26,7 @@ export default defineConfig({
     },
     algolia: {
       appId: 'TFYJWXKDHM',
-      apiKey: '51d561bc4082437c0557017cbb8c9733',
+      apiKey: 'df8fd271826d160a29b67a17b64279fb',
       indexName: 'interface-uiio',
       insights: true,
       container: '### REPLACE ME WITH A CONTAINER (e.g. div) ###',
