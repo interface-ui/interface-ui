@@ -22,7 +22,7 @@
     "docs:preview": "pnpm -C docs run preview",
     "play:dev": "pnpm -C playground run dev",
     "docs:build": "pnpm run build && pnpm -C docs run build",
-    "build": "pnpm -F './packages/*' -r --stream build",
+    "build": "pnpm -F ./packages/* -r --stream build",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "release": "npx esno ./scripts/release.ts",
